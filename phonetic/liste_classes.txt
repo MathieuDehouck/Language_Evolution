@@ -1,0 +1,85 @@
+LIST OF NATURAL CLASSES  
+['syllabic' 'consonantal' 'height' 'backness' 'round' 'voice' 'plosive'
+ 'nasal' 'fricative' 'lateral' 'trill' 'aspiration']
+ 
+sound  :   [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['i', 'y', 'ɨ', 'ʉ', 'ɯ', 'u', 'e', 'ø', 'ɘ', 'ɵ', 'ɤ', 'o', 'ɛ', 'œ', 'ɜ', 'ɞ', 'ʌ', 'ɔ', 'a', 'ɶ', 'ɑ', 'h', 'ʕ', 'p', 'b', 'm', 'ɸ', 'β', 'f', 'v', 'ɱ', 's', 'z', 'θ', 'ð', 't', 'd', 'n', 'ʂ', 'ʐ', 'ʈ', 'ɖ', 'ɳ', 'ç', 'ʝ', 'c', 'ɟ', 'ɲ', 'x', 'ɣ', 'k', 'ɡ', 'g', 'ŋ', 'χ', 'ʁ', 'q', 'ɢ', 'ɴ', 'l', 'ɭ', 'ʎ', 'ʟ', 'ʙ', 'r', 'ɽ', 'ⱱ', 'j', 'w', 'ʋ', 'ɻ', 'ɰ', 'ʍ'] 
+ 
+vowells  :   [1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['i', 'y', 'ɨ', 'ʉ', 'ɯ', 'u', 'e', 'ø', 'ɘ', 'ɵ', 'ɤ', 'o', 'ɛ', 'œ', 'ɜ', 'ɞ', 'ʌ', 'ɔ', 'a', 'ɶ', 'ɑ'] 
+ 
+consonnes  :   [-1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['h', 'ʕ', 'p', 'b', 'm', 'ɸ', 'β', 'f', 'v', 'ɱ', 's', 'z', 'θ', 'ð', 't', 'd', 'n', 'ʂ', 'ʐ', 'ʈ', 'ɖ', 'ɳ', 'ç', 'ʝ', 'c', 'ɟ', 'ɲ', 'x', 'ɣ', 'k', 'ɡ', 'g', 'ŋ', 'χ', 'ʁ', 'q', 'ɢ', 'ɴ', 'l', 'ɭ', 'ʎ', 'ʟ', 'ʙ', 'r', 'ɽ', 'ⱱ', 'j', 'w', 'ʋ', 'ɻ', 'ɰ', 'ʍ'] 
+ 
+phonemes_sonores  :   [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['i', 'y', 'ɨ', 'ʉ', 'ɯ', 'u', 'e', 'ø', 'ɘ', 'ɵ', 'ɤ', 'o', 'ɛ', 'œ', 'ɜ', 'ɞ', 'ʌ', 'ɔ', 'a', 'ɶ', 'ɑ', 'b', 'm', 'β', 'z', 'ð', 'd', 'n', 'ʐ', 'ɖ', 'ɳ', 'ʝ', 'ɟ', 'ɲ', 'ɣ', 'ɡ', 'g', 'ŋ', 'ʁ', 'ɢ', 'ɴ', 'l', 'ɭ', 'ʎ', 'ʟ', 'ʙ', 'r', 'ɽ', 'ⱱ', 'j', 'w', 'ʋ', 'ɻ', 'ɰ'] 
+ 
+phonemes_sourds  :   [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['h', 'ʕ', 'p', 'ɸ', 'f', 'v', 'ɱ', 's', 'θ', 't', 'ʂ', 'ʈ', 'ç', 'c', 'x', 'k', 'χ', 'q', 'ʍ'] 
+ 
+nasales  :   [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] 
+ contains following phonems : ['m', 'ɱ', 'n', 'ɳ', 'ɲ', 'ŋ', 'ɴ'] 
+ 
+aspirated  :   [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1] 
+ contains following phonems : ['h', 'ʕ'] 
+ 
+lateral  :   [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1] 
+ contains following phonems : ['l', 'ɭ', 'ʎ', 'ʟ'] 
+ 
+sibilant  :   [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['p', 'f', 'v', 't', 'd', 'ʈ', 'ɖ', 'c', 'ɟ', 'ɲ', 'k', 'ɡ', 'g', 'q', 'ɢ', 'l', 'ʎ', 'ʟ', 'ʍ'] 
+ 
+rounded_vowells  :   [1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['y', 'ʉ', 'u', 'ø', 'ɵ', 'o', 'œ', 'ɞ', 'ɔ', 'ɶ', 'w', 'ʍ'] 
+ 
+trill  :   [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] 
+ contains following phonems : ['ʙ', 'r', 'ɽ', 'ⱱ'] 
+ 
+glides  :   [0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : [] 
+ 
+bilabial  :   [0, -1, 0, 3, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['p', 'b', 'm', 'ɸ', 'β'] 
+ 
+labiodental  :   [0, -1, 1, 3, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['f', 'v', 'ɱ', 'ʙ', 'ⱱ'] 
+ 
+dental  :   [0, -1, 1, 2, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['s', 'z', 'θ', 'ð', 't', 'd', 'n', 'l', 'r'] 
+ 
+retroflex  :   [0, -1, 2, 2, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['ʂ', 'ʐ', 'ʈ', 'ɖ', 'ɳ', 'ɭ', 'ɽ'] 
+ 
+palatal  :   [0, -1, 2, 1, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['ç', 'ʝ', 'c', 'ɟ', 'ɲ', 'ʎ'] 
+ 
+velar  :   [0, -1, 1, 0, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['x', 'ɣ', 'k', 'ɡ', 'g', 'ŋ', 'ʟ'] 
+ 
+uvular  :   [0, -1, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['χ', 'ʁ', 'q', 'ɢ', 'ɴ'] 
+ 
+unrounded_vowells  :   [1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['i', 'ɨ', 'ɯ', 'e', 'ɘ', 'ɤ', 'ɛ', 'ɜ', 'ʌ', 'a', 'ɑ', 'j', 'ʋ', 'ɻ', 'ɰ'] 
+ 
+advanced_vowells  :   [1, -1, -1, 2, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['i', 'y', 'e', 'ø', 'ɛ', 'œ', 'ɻ'] 
+ 
+mid_vowells  :   [1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['ɨ', 'ʉ', 'ɘ', 'ɵ', 'ɜ', 'ɞ', 'a', 'ɶ', 'ɑ', 'j'] 
+ 
+back_vowells  :   [1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['ɯ', 'u', 'ɤ', 'o', 'ʌ', 'ɔ', 'ɰ', 'ʍ'] 
+ 
+closed_vowells  :   [1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['i', 'y', 'ɨ', 'ʉ', 'ɯ', 'u'] 
+ 
+open_vowells  :   [1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['a', 'ɶ', 'ɑ', 'w'] 
+ 
+diphtongues  :   [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] 
+ contains following phonems : [] 
+ 
+plosives  :   [0, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] 
+ contains following phonems : ['p', 'f', 'v', 't', 'd', 'ʈ', 'ɖ', 'c', 'ɟ', 'ɲ', 'k', 'ɡ', 'g', 'q', 'ɢ', 'l', 'ʎ', 'ʟ'] 
+ 
