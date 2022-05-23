@@ -75,14 +75,36 @@ def encode_p_change(change) :
         s+= "Condition:"+"rp"+str(condition.rel_pos) +encode_f(condition.template) + " "
     return s
 
-def encoded_changes2log(changes, rewind = False ):
+def encoded_changes2log(changes, path, rewind = False ):
     rew = "a"
     if rewind: rew = "w"
-    f = open("log_changes.txt", rew, encoding = "utf8")
+    f = open(path + "_encoded.txt", rew, encoding = "utf8")
     for change in changes :
         f.write(encode_p_change(change))
         f.write("\n")
     f.close()
+    
+def decode_log(path, copy_back = False) :
+    
+    f = open(path + "_encoded.txt", "r", encoding = "utf8") 
+    
+    copych = []
+    j= 0
+    for line in f : 
+        print(j)
+        j = j+1
+        chan =  decode_change(line)
+        copych.append(chan)
+    f.close()
+    if copy_back : return 
+    
+    f2 = open(path + "_encoded_decoded.txt", "w", encoding = "utf8")
+
+    for chain in copych :
+        string = encode_p_change(chain) 
+        f2.write(string)
+        f2.write("\n")
+    f2.close()
 
 def decode_change(string) :
     string = string.split()
