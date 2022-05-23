@@ -37,24 +37,22 @@ class archetype(object) :
         the constructor, that takes the ipa and features as attributes
     """
     
-    
-    
-    
-    def __init__(self, string, liste):
-        self.ipa = string 
-        self.features = tuple(liste)
-        self.description = UNICODE_TO_IPA[string] ._IPAChar__canonical_string
-        
-        
-        
-        
+    def __init__(self, string, feats):
+        self.ipa = string
+        self.features = feats
+        try:
+            self.description = UNICODE_TO_IPA[string]._IPAChar__canonical_string
+        except:
+            self.description = 'No description'
+            
+
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
 
 
 
-class  IPA :
+class IPA() :
     """
     A class to represent the IPA viewed as a set of archetypal phonemes.
 
@@ -83,90 +81,152 @@ class  IPA :
     
     
     def __init__(self) :
-        
-        
-        phonemes = [] 
-        alphabet = {}
-        
-        folder = Path("phonetic/")
-        path = folder / "PHONETIQUE.csv"
-        
-        # opening of the csv file 
-        data = np.genfromtxt(path, delimiter = ',', dtype = str, encoding = "utf8")
-        f = open(folder / "liste_sons.txt", 'w',   encoding = "utf8")
-        f.write ("LIST OF THE IPA PHONEMS \n")
-        
-        # extraction of the feature list :
-        features = data[0][1:]
-        f.write(str(features))
-        f.write('\n')
-        
-        #extraction of the features themselves
-        for sound in data[1:]  :
-            fts =  [int(x) for x in sound[1:] ]
+        self.features = ['Syllabic', 'COnsonant', 'Height', 'Backness',
+                         'Round',    'Voiced',    'Nasal',
+                         'Plosive',  'Fricative', 'Lateral', 'Trill', 'Aspirated']
+        self.phonemes = [] 
+        self.alphabet = {}
+        self.feat2ipa = {}
 
-            f.write (sound[0])
-            f.write ( '  :   ')
-            f.write(str(fts))
-            f.write (" \n")
+        # reading consonants
+        consonants = np.loadtxt('phonetic/consonants.tsv', delimiter='\t', dtype=str)
+        arts = [int(x) for x in consonants[0][1:]]
+        for line in consonants[1:]:
+            manner = line[0]
+            base = [0, 1, 0, 0,    # Syllabic Cons   Height Backness
+                    0, 0, 0,       # Round    Voiced Nasal 
+                    0, 0, 0, 0, 0] # Plosive  Fricat Later  Trill/flap Aspirated
+            if 'v' in manner:
+                base[5] = 1
+                manner = manner[:-1]
+
+            if manner == 'N':
+                base[6] = 1
+            elif manner == 'P':
+                base[7] = 1
+            elif manner == 'S':
+                base[8] = 1 # fricative, high
+                base[3] = 2
+            elif manner == 'F':
+                base[8] = 1 # fricative, not so heigh
+                base[3] = 1
+            elif manner == 'A':
+                base[8] = 1 # fricative, low = approximant
+                base[3] = 0
+            elif manner == 'Fl':
+                base[10] = 1 # flap
+            elif manner == 'T':
+                base[10] = 2 # trill
+            elif manner == 'Lf':
+                base[9] = 1
+                base[8] = 1
+            elif manner == 'L':
+                base[9] = 1
+            elif manner == 'Lt':
+                base[9] = 1
+                base[10] = 1
+                
+                
+            for i, ch in enumerate(line[1:]):
+                if ch == '-':
+                    continue
+                feats = base.copy()
+                feats[3] = arts[i]
+
+                fts = tuple(feats)
+                phon = archetype(ch, fts)
+
+                self.phonemes.append(phon)
+                self.alphabet[ch] = phon
+                self.feat2ipa[fts] = ch
+
+        # reading vowels
+        consonants = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str)
+        arts = [int(x) for x in consonants[0][1:]]
+        for line in consonants[1:]:
+            manner = line[0]
+            base = [1, 0, 0, 0,    # Syllabic Cons   Height Backness
+                    0, 1, 0,       # Round    Voiced Nasal 
+                    0, 0, 0, 0, 0] # Plosive  Fricat Later  Trill/flap Aspirated
+            if 'r' in manner:
+                base[4] = 1
+                manner = manner[:-1]
+
+            base[2] = int(manner) # height
+                
+            for i, ch in enumerate(line[1:]):
+                if ch == '-':
+                    continue
+                feats = base.copy()
+                feats[3] = arts[i]
+
+                fts = tuple(feats)
+                phon = archetype(ch, fts)
+
+                self.phonemes.append(phon)
+                self.alphabet[ch] = phon
+                self.feat2ipa[fts] = ch
             
-            phon = archetype( sound[0], fts)
-            phonemes.append(phon)
-            alphabet[sound[0]]= phon
-    
         
-        self.features = features
-        self.alphabet = alphabet
-        self.phonemes = phonemes
-        
-        
-        #creation of the utilitary dictionnaries
-        f2ipa = {}
-        for ar in self.alphabet :
-            arch = self.alphabet[ar]
-            f2ipa[arch.features ] = arch.ipa
-        self.f2ipa = f2ipa
-        #nasalisation_voy(self)
         dic_class, classes = create_classes(self.alphabet)
         
         self.classes = classes
         self.dic_class = dic_class
-        
-    
-    
-
-"""
-How to deal with diacritics ? Double the phonemes and add them with new ipa form in the phoneme list ? 
-Maybe easier , or add checkers when we modify the corresponding features
 
 
-"""
-def nasalisation_voy(ipa) :
-    dic = ipa.alphabet
-    for phon in ipa.alphabet.copy() :
-        feat = list(dic[phon].features).copy()
-        if feat[0] == 1 and feat [9] == 0 :
-            vnas = str(phon)+ "~"
-            fnas = feat
-            fnas[9] = 1
-            dic [vnas] =  archetype(vnas, fnas)
-            f = open("liste_sons.txt", 'a', encoding = "utf8")
-            f.write (vnas)
-            f.write ( '  :   ')
-            f.write(str(fnas))
-            f.write (" \n")
+
+    def get_char(self, phon, verbose=False):
+        """
+        returns a string representing the input phoneme's features
+
+        Parameters
+        ----------
+        phon : 
+            A phoneme
+        verbose : bool, optional
+            As usual. Verbose with me means verry verbose. The default is False.
+
+        Returns 
+        -------
+        string
+
+        """
+
+        # We look directly in the dict of features to ipa if we find something
+        if phon.features in self.feat2ipa:
+            return self.feat2ipa[phon.features]
+
+        # we did not find a perfect match, so we build it
+        if phon.isVowel():
+            # a basic vowel is voiced and unnasalised
+            base = [x if i < 5 else 0 for i, x in enumerate(phon.features)]
+            base[5] = 1
+            base = tuple(base)
+            out = self.feat2ipa[base]
             
-            ipa.phonemes.append(fnas)
+            if phon.features[6] == 1: # nasal
+                out += u'\u0303'
+
+            if phon.features[5] == 0: # unvoiced
+                out += u'\u0325'
 
 
+        elif phon.isCons():
+            base = [x for x in phon.features]
+            base[11] = 0
+            base[4] = 0
+            if base[6] == 1:
+                base[7] = 0
+                base[8] = 0
 
+            base = tuple(base)
+            out = self.feat2ipa[base]            
 
-
-
-
-
-
-
-
-
-
+            if phon.features[4] == 1: # round w
+                out += 'ʷ'
+            
+            if phon.features[11] == 1: # aspirated
+                out += 'ʰ'
+            
+        return out
+    
