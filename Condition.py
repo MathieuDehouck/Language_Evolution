@@ -183,7 +183,7 @@ class P_condition (Condition) :
     
          
     def __str__(self) :
-        return "C:   rel pos : " + str(self.rel_pos) + "\n    template :" + str(self.template)
+        return "C:   Rel pos :  " + str(self.rel_pos) + "  Continu : "+ str(self.continu) +  "  Template :" + str(self.template)
           
     
     

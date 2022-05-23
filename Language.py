@@ -72,11 +72,28 @@ class Language() :
         for phoneme in phonemes :
             dic_phonemes[phoneme.ipa] = phoneme        
         self.dic_phonemes = dic_phonemes
-
+        self.subclasses = self.get_subclasses()
 
 
     def __str__(self) :
         return self.name + str(self.phonemes)
+    
+    
+    
+    def get_subclasses(self) :
+        
+        subclasses = {} 
+        for phoneme in self.phonemes :
+            subclass = []
+            for i, ft in enumerate(phoneme.features) :
+                classe = [] 
+                for phoneme2 in self.phonemes :
+                    if phoneme2.features[i] == ft :
+                        classe.append(phoneme2)
+                subclass.append(classe)
+            subclasses[phoneme] = subclass
+        return subclasses
+    
     
     
     

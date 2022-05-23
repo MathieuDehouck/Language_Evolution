@@ -330,11 +330,11 @@ class P_change(Change) :
     
     
     def __str__(self) :
-        s = "Target :   \n   "
-        s += str(self.target)
-        s+= "Conditions : \n  "
+        s = "Target :   \n"
+        s += str(self.target) + " \n"
+        s+= "Conditions : \n"
         for i, condition in enumerate(self.conditions) :
-            s+= str(i) + "  " +str(condition) 
+            s+= str(i) + "  " +str(condition) + " \n"
         return s
     
     

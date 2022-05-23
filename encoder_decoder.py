@@ -69,7 +69,7 @@ def decode_f (string) :
     
 def encode_p_change(change) :
     s = ""
-    s+= "Target:" + encode_f(change.target.template) +" "
+    s+= "Target:" + encode_f(change.target) +" "
     s+= "Effect:" + encode_f(change.config_initiale.state)+">"+encode_f(change.config_finale.state) + " "
     for condition in change.conditions :
         s+= "Condition:"+"rp"+str(condition.rel_pos) +encode_f(condition.template) + " "
@@ -91,6 +91,7 @@ def decode_log(path, copy_back = False) :
     copych = []
     j= 0
     for line in f : 
+        print(line)
         print(j)
         j = j+1
         chan =  decode_change(line)
@@ -161,6 +162,6 @@ def decode_change(string) :
       
             return change
         
-    return None
+    return change
     
     

@@ -86,8 +86,10 @@ def cond2str(cond) :
     return s
 
 def change2str(change) : 
+    print(change)
     s = "Change :  \n "
-    s+= target2str(change.target.template) +" " +effect2str(change.config_initiale, change.config_finale) 
+    # avant target.template
+    s+= target2str(change.target) +" " +effect2str(change.config_initiale, change.config_finale) 
     if len(change.conditions)>1 :
         for j in range (1, len(change.conditions))  :
             s+= cond2str (change.conditions[j])
@@ -182,10 +184,10 @@ def change2log (change, path,lang,  print_phons = False) :
         f.write("\n")
         
         
-        phons = set( tpl2phons(change.target.template, lang.phonemes))
+        phons = set( tpl2phons(change.target, lang.phonemes))
         
         
-        cphons = set(tpl2phons(change.target.template , lang.phonemes) )
+        cphons = set(tpl2phons(change.target , lang.phonemes) )
         phons = phons & cphons
         
         """

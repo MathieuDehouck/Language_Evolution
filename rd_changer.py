@@ -8,6 +8,8 @@ Created on Tue May 17 13:04:22 2022
 from Change  import P_change
 from Tree import Root, L_tree, L_node
 from encoder_decoder import decode_change
+from Generator import Change_Generator
+
 import copy
 
 
@@ -15,7 +17,7 @@ import copy
 class Changer () :
     
    def  __init__(self) :
-        return 
+        self.generator = Change_Generator() 
     
    def change_u (self, lang) :
        
@@ -56,7 +58,7 @@ class Changer () :
 class Tree_changer(Changer) :
     
     def __init__(self, lang) :
-        super
+        super().__init__()
         rt = Root(lang)
         tree = L_tree(rt)
         self.tree = tree
@@ -67,7 +69,7 @@ class Tree_changer(Changer) :
         
         
         lang = copy.deepcopy(lang)
-        change = P_change.rd_change(lang, False)
+        change = self.generator.generate_p_change(lang)
         while change.applicable(lang) != True :
             change = None
             change = P_change.rd_change(lang, False)
@@ -102,8 +104,10 @@ class Log_changer(Changer) :
         
     
     def change_u (self, lang, index ) :
+        
         lang = copy.deepcopy(lang)
         change = decode_change(self.file[index])
+        print(self.file[index])
         nl = change.apply_language(lang)
         return nl, change
     

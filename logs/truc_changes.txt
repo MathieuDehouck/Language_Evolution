@@ -1,0 +1,12 @@
+A change has occured 
+
+
+The feature back switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ???????n?l?? Effect : back : +1
+Impacted phonems :ɸ  ç  ɣ  ɑ  χ  q  ʋ  ɜ  ɽ  β  ɞ  a  ʕ  ɘ  ð  k  θ  r  ʍ  o  h  ɖ  ʝ  i  ʈ  j  ɯ  d  ʉ  e  ɤ  v  c  ɵ  x  ɻ  ɰ  ⱱ  f  ʙ  ʌ  ɨ  z  t  ɛ  ɶ  p  ʂ  ɡ  g  ʁ  ɢ  w  ø  s  y  b  u  œ  ʐ  ɟ  ɔ  
+
+
+

@@ -1,0 +1,12 @@
+A change has occured 
+
+
+The feature voice switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ????????f?t? Effect : voice : +1
+Impacted phonems :u  ʌ  f  ɭ  ð  d  w  c  e  ɞ  ʎ  ɢ  ʍ  ɰ  ɑ  i  ɵ  y  k  ɛ  o  ɤ  ɜ  m  l  ʉ  ʟ  ʋ  ɳ  ɨ  n  ɔ  a  ɡ  t  ɲ  q  h  b  ɟ  ɯ  j  v  ɖ  ɴ  ɱ  g  ɻ  ø  ɘ  ɶ  p  ʈ  θ  œ  ŋ  
+
+
+

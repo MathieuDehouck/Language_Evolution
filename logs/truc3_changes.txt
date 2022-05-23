@@ -1,0 +1,144 @@
+A change has occured 
+
+
+The feature aspiration switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ?C???V?????a Effect : aspiration : +1cond : ScH2b????????cond : sC???V???l??
+Impacted phonems :d  ŋ  l  ʐ  ɢ  ⱱ  ð  ɣ  ɖ  r  ɳ  ɴ  ɰ  ʁ  ʟ  β  ɟ  ɻ  g  w  n  ɽ  ʝ  b  ʙ  m  ʎ  ɲ  j  ʋ  ɭ  ɡ  l  z  
+
+
+
+A change has occured 
+
+
+The feature height switched values from 2 to 0
+
+following phonemes were transformed :
+Change :  
+ Target : sChB3rvPnflta Effect : height : -1
+Impacted phonems :p  
+
+
+
+A change has occured 
+
+
+The feature trill switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : Sc???Vpnflt? Effect : trill : +1
+Impacted phonems :ɞ  ɑ  ɨ  y  u  ø  ɘ  a  ɶ  o  i  ʉ  œ  ɛ  ɯ  e  ɔ  ɵ  ɤ  ɜ  ʌ  
+
+
+
+A change has occured 
+
+
+The feature voice switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ??????????T? Effect : voice : +1
+Impacted phonems :ⱱ  ɽ  r  ʙ  
+
+
+
+A change has occured 
+
+
+The feature nasal switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : sCHB3rvPnflta Effect : nasal : +1cond : Sc??????????
+Impacted phonems :f  v  
+
+
+
+A change has occured 
+
+
+The feature nasal switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ScH3B2rVpnflta Effect : nasal : +1
+Impacted phonems :i  
+
+
+
+A change has occured 
+
+
+The feature aspiration switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : sCHB3rVPNflta Effect : aspiration : +1
+Impacted phonems :
+
+
+
+A change has occured 
+
+
+The feature voice switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ???????n???? Effect : voice : +1
+Impacted phonems :s  ɞ  d  ɑ  l  ɨ  y  u  p  ɸ  ø  ʐ  ð  x  ɣ  ɢ  ⱱ  ɖ  ç  h  r  ɘ  ɰ  ʁ  v  a  t  ʟ  β  ɟ  χ  ɻ  k  ɶ  g  o  w  i  c  ʉ  ʝ  b  œ  ʙ  ɛ  ʎ  ɽ  ʈ  q  ʍ  ɯ  e  j  ʋ  ʕ  ɭ  ɔ  ɡ  θ  ɵ  ɤ  ɜ  l  f  l  z  ʌ  ʂ  
+
+
+
+A change has occured 
+
+
+The feature fricative switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ?????????l?? Effect : fricative : +1
+Impacted phonems :s  ɞ  d  ɑ  ŋ  ɨ  y  u  p  ɸ  ø  ʐ  ð  x  ɣ  ɢ  ⱱ  ɖ  ç  h  ɳ  ɘ  ɴ  r  ɰ  ʁ  v  a  t  β  ɱ  ɟ  χ  ɻ  k  ɶ  g  o  w  i  n  c  ʉ  ʝ  b  œ  ʙ  ɛ  m  ɽ  ʈ  q  ʍ  ɯ  e  ɲ  j  ʕ  ʋ  ɔ  ɡ  θ  ɵ  ɤ  ɜ  f  z  ʌ  ʂ  
+
+
+
+A change has occured 
+
+
+The feature aspiration switched values from 1 to 0
+
+following phonemes were transformed :
+Change :  
+ Target : ????r???F??? Effect : aspiration : -1cond : Sc??????F???
+Impacted phonems :s  ʐ  x  ɸ  ⱱ  ɣ  ç  r  ʁ  β  χ  ɽ  ʝ  ʙ  ʕ  l  l  z  ʂ  
+
+
+
+A change has occured 
+
+
+The feature aspiration switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ????r??NF??? Effect : aspiration : +1cond : Sc??????????cond : Sc??????????
+Impacted phonems :
+
+
+
+A change has occured 
+
+
+The feature lateral switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : sCHB2rvpnFlta Effect : lateral : +1cond : sC?????n??T?
+Impacted phonems :s  
+
+
+
