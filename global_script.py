@@ -5,7 +5,7 @@ Created on Wed May  4 11:09:46 2022
 @author: 3b13j
 """
 from wiki_utilities import get_language
-from log_utilities import change2log, langcomp2log, lgs2log
+from log_utilities import change2log, langcomp2log, lgs2log, samples2log
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, decode_change, encode_p_change, encode_f , decode_log
 import argparse
@@ -31,17 +31,22 @@ path = args.output_file
 
 # We create an instance of a tree changer that's going to store the changes it applies to the language
 time = Tree_changer(latin) 
-nlp , changes = time.change(latin, nc ,True)
+nlp , changes, wc = time.change(latin, nc ,True)
 latin.compare(nlp)
 # The changes are printed in a readable fashion on a document.
-for ch in changes  :
-    change2log(ch, path+"_changes.txt" ,nlp,  True)
+f=open(path+"_changes.txt", 'w')
+f.write("")
+f.close()
+for i in range(len(changes))  :
+
+    change2log(changes[i], path+"_changes.txt" ,nlp,  True)
+    samples2log(path+"_changes.txt", wc[i])
 langcomp2log (latin, nlp, path + "_dic.txt")
 evolution = time.tree.languages
 lgs2log(evolution)
 if args.verbose : latin.print_both(nlp)
 
-
+#TODO impacted phonemes liste la nouvelle version des phonemes
 
 # We encode the changes in our not so readable format. 
 

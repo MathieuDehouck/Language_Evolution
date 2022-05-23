@@ -1,0 +1,284 @@
+A change has occured 
+
+
+The feature voice switched values from 0 to 1
+
+Target :   
+[0, 1, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 0] 
+
+Impacted phonems :c  
+
+
+
+EXAMPLES 
+  
+arri:pa:re  >  arri:ba:re 
+arri:po:  >  arri:bo: 
+kontra:fakio:  >  kontra:ʙakio: 
+kra:pulor  >  kra:bulor 
+kra:pulo:sus  >  kra:bulo:sus 
+deri:pa:re  >  deri:ba:re 
+deri:po:  >  deri:bo: 
+frappo:  >  frabbo: 
+harpa  >  harba 
+horripilo:  >  horribilo: 
+A change has occured 
+
+
+The feature voice switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 3, 0, 1, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  5  Continu : 1  Template :[0, 1, 1, -1, -1, -1, 1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -2  Continu : 0  Template :[1, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  1  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :
+
+
+
+EXAMPLES 
+  
+atpa:ka:re  >  atba:ka:re 
+affi:da:wit  >  afʙi:da:wit 
+affu:ma:re  >  afʙu:ma:re 
+affunda:re  >  afʙunda:re 
+appa:ka:re  >  apba:ka:re 
+apparikula:re  >  apbarikula:re 
+apparikulo:  >  apbarikulo: 
+appodia:re  >  apbodia:re 
+kappellus  >  kapbellus 
+A change has occured 
+
+
+The feature nasal switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, -1] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :θ  m  i  n  c  p  ɑ  k  ʋ  ʈ  ɰ  a  ɔ  t  ʌ  ɟ  ɛ  h  d  ɢ  ɘ  ø  ɡ  ʉ  e  ɞ  œ  v  ɤ  ɶ  f  ɱ  q  y  o  ɴ  ɵ  g  ɯ  ɳ  ŋ  ʍ  j  ɨ  ɖ  u  ɲ  ɻ  ɜ  w  ð  b  
+
+
+
+EXAMPLES 
+  
+apsedium  >  apsediup 
+abyssimus  >  abyssipus 
+akkomple:sko:  >  akkopple:sko: 
+akkompli:re  >  akkoppli:re 
+appressum  >  appressup 
+aeta:tikum  >  aeta:tikup 
+afʙu:ma:re  >  afʙu:pa:re 
+affu:mo:  >  affu:po: 
+allu:mina:re  >  allu:pina:re 
+allu:mino:  >  allu:pino: 
+A change has occured 
+
+
+The feature plosive switched values from 1 to 0
+
+Target :   
+[0, 1, 1, 2, 0, 1, 0, 0, 1, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] 
+1  C:   Rel pos :  3  Continu : 1  Template :[1, 0, -1, 1, -1, -1, -1, -1, -1, -1, -1, 0] 
+2  C:   Rel pos :  -1  Continu : 0  Template :[0, 1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :r  
+
+
+
+EXAMPLES 
+  
+appa:ko:  >  apba:ko: 
+ekspawenta:re  >  eksbawenta:re 
+ekspawento:  >  eksbawento: 
+hispa:niolus  >  hisba:niolus 
+infa:kundus  >  inɱa:kundus 
+spia:re  >  sbia:re 
+A change has occured 
+
+
+The feature trill switched values from 0 to 1
+
+Target :   
+[0, 1, 1, 2, 0, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+
+Impacted phonems :ð  
+
+
+
+EXAMPLES 
+  
+abante  >  aʙante 
+abanteo:  >  aʙarteo: 
+abbato:  >  aʙʙato: 
+abbatuo:  >  aʙʙatuo: 
+abbibero:  >  aʙʙiʙero: 
+apsedii:  >  aʙredii: 
+apsediup  >  aʙreriup 
+abyssipus  >  aʙyrripus 
+akkapo:  >  arrapo: 
+akkaptio:  >  arraʙtio: 
+A change has occured 
+
+
+The feature height switched values from 1 to 0
+
+Target :   
+[-1, -1, 2, -1, -1, -1, -1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :t  s  χ  n  l  d  r  p  z  χ  
+
+
+
+EXAMPLES 
+  
+akka  >  akχa 
+akkapo:  >  akχapo: 
+akkaptio:  >  akχaptio: 
+akkapto:  >  akχapto: 
+akkoɡnito:  >  akχoɡnito: 
+akkolliɡo:  >  akχolliɡo: 
+akkollo:  >  akχollo: 
+akkomple:sko:  >  akχomple:sχo: 
+akkompli:re  >  akχompli:re 
+akkorda:re  >  akχorda:re 
+A change has occured 
+
+
+The feature lateral switched values from 0 to 1
+
+Target :   
+[0, 1, 1, 3, 0, 0, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0] 
+1  C:   Rel pos :  2  Continu : 0  Template :[0, 1, -1, -1, 0, -1, -1, -1, -1, 1, 0, -1] 
+
+Impacted phonems :o  l  u  e  a  i  l  y  l  ʟ  l  
+
+
+
+EXAMPLES 
+  
+akχomple:sχo:  >  akχolple:sχo: 
+akχompli:re  >  akχolpli:re 
+asχla  >  alχla 
+asχle:  >  alχle: 
+komple:sχo:  >  kolple:sχo: 
+kompli:re  >  kolpli:re 
+implio:  >  ilplio: 
+impli:re  >  ilpli:re 
+inχlaɡo:  >  ilχlaɡo: 
+mu:sχlus  >  mu:lχlus 
+A change has occured 
+
+
+The feature trill switched values from 0 to 1
+
+Target :   
+[0, 1, 1, -1, 0, -1, -1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+0  C:   Rel pos :  -4  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  2  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1] 
+
+Impacted phonems :r  ʙ  a  r  u  o  e  i  r  r  r  
+
+
+
+EXAMPLES 
+  
+akχolliɡo:  >  akχorliɡo: 
+akχollo:  >  akχorlo: 
+akχolple:sχo:  >  akχoʙple:sχo: 
+akχolpli:re  >  akχoʙpli:re 
+aku:klae  >  aku:krae 
+adbelle:sχo:  >  adberle:sχo: 
+adokla:re  >  adokra:re 
+arbalista  >  arbarista 
+arbaliste:  >  arbariste: 
+assalto:  >  assarto: 
+A change has occured 
+
+
+The feature nasal switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :n  p  n  p  p  l  
+
+
+
+EXAMPLES 
+  
+apsedium  >  apsediup 
+abyssimus  >  abyssipus 
+akχoʙple:sχo:  >  akχopple:sχo: 
+akχoʙpli:re  >  akχoppli:re 
+admina:kia:re  >  adpina:kia:re 
+admina:kio:  >  adpina:kio: 
+admorte:sχo:  >  adporte:sχo: 
+admorti:re  >  adporti:re 
+appressum  >  appressup 
+aeta:tikum  >  aeta:tikup 
+A change has occured 
+
+
+The feature plosive switched values from 1 to 0
+
+Target :   
+[0, 1, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :t  t  b  d  k  χ  ɡ  r  l  d  l  r  ɱ  χ  c  ʟ  χ  r  
+
+
+
+EXAMPLES 
+  
+apsedii:  >  absedii: 
+apsediup  >  absediup 
+akχapo:  >  akχabo: 
+akχaptio:  >  akχabtio: 
+akχapto:  >  akχabto: 
+akχopple:sχo:  >  akχopble:sχo: 
+akχoppli:re  >  akχopbli:re 
+atpa:ka:re  >  atba:ka:re 
+appressup  >  abbressup 
+afpi:da:wit  >  aɱbi:da:wit 
+A change has occured 
+
+
+The feature lateral switched values from 0 to 1
+

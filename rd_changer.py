@@ -31,29 +31,32 @@ class Changer () :
        
            
        
-       nl = change.apply_language(lang)
+       nl , changed_words = change.apply_language(lang)
        
       
        #change = None 
        dif = nl.compare(lang)
        if len(dif) == 0 :
            nl, change = self.change_u( lang)
-           return nl, change
+           return nl, change, changed_words
        else :
-           return nl, change
+           return nl, change, changed_words
     
    def change(self,lang, n, verbose = False) :
        
+       
        changes = []
+       wc = []
        lang = copy.deepcopy(lang)
        # we program n aleatory changes
        for i in range(n):
-           if verbose : print("currently generatin chane", i)
-           lang , change  = self.change_u ( lang)
+           if verbose : print("currently generating change", i)
+           lang , change , changed_words = self.change_u ( lang)
            changes.append(change) 
+           wc.append(changed_words)
            
     
-       return lang, changes
+       return lang, changes, wc
        
 class Tree_changer(Changer) :
     
@@ -72,21 +75,21 @@ class Tree_changer(Changer) :
         change = self.generator.generate_p_change(lang)
         while change.applicable(lang) != True :
             change = None
-            change = P_change.rd_change(lang, False)
+            change = self.generator.generate_p_change(lang)
             
             
         
-        nl = change.apply_language(lang)
+        nl, wc = change.apply_language(lang)
         
        
         #change = None 
         dif = nl.compare(lang)
         if len(dif) == 0 :
-            nl, change = self.change_u( lang)
+            nl, change, wc = self.change_u( lang)
         node = L_node(self.tree.last, nl)
         self.tree.graft(self.tree.last, node)
             
-        return nl, change
+        return nl, change, wc
       
 class Log_changer(Changer) :
     
@@ -108,8 +111,8 @@ class Log_changer(Changer) :
         lang = copy.deepcopy(lang)
         change = decode_change(self.file[index])
         print(self.file[index])
-        nl = change.apply_language(lang)
-        return nl, change
+        nl, wc  = change.apply_language(lang)
+        return nl, change, wc
     
     def change(self,lang, n, verbose = False) :
         lang = copy.deepcopy(lang)
@@ -117,7 +120,7 @@ class Log_changer(Changer) :
         i = 0 
         for i in range(n):
             if verbose : print(" Retro engeneering change ", i)
-            lang , change  = self.change_u ( lang, i)
+            lang , change, wc  = self.change_u ( lang, i)
             changes.append(change) 
             i+=1
         return lang, changes

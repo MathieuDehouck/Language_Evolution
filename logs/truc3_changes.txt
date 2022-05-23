@@ -142,3 +142,327 @@ Impacted phonems :s
 
 
 
+A change has occured 
+
+
+The feature plosive switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ????????flt? Effect : plosive : +1
+Impacted phonems :ɞ  ʍ  ɨ  ɟ  g  w  a  m  f  θ  ɔ  b  ɡ  ɖ  p  j  ɴ  ø  ɯ  k  ɢ  ɵ  ʈ  h  ɤ  ɘ  ʌ  ɑ  ɱ  œ  ɜ  c  ŋ  n  q  u  ʉ  o  y  ɰ  ɛ  d  i  ɻ  ð  t  ʋ  ɶ  v  e  ɲ  ɳ  
+
+
+
+A change has occured 
+
+
+The feature trill switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : sChB3rVpNflta Effect : trill : +1
+Impacted phonems :m  
+
+
+
+A change has occured 
+
+
+The feature plosive switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : sCHB2rvPnflta Effect : plosive : +1
+Impacted phonems :t  
+
+
+
+A change has occured 
+
+
+The feature plosive switched values from 1 to 0
+
+following phonemes were transformed :
+Change :  
+ Target : ?C???????l?? Effect : plosive : -1cond : sC??????????
+Impacted phonems :ʕ  ç  ʁ  ʐ  x  p  w  r  ʝ  g  ɢ  ɖ  q  ɽ  χ  t  c  ɸ  s  h  k  j  θ  ɟ  ɰ  ʂ  d  b  ʋ  m  β  n  ʈ  ɳ  ŋ  f  ⱱ  ɡ  ɲ  ʙ  z  v  ɻ  ð  ʍ  ɱ  ɣ  ɴ  
+
+
+
+A change has occured 
+
+
+The feature fricative switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : sCHB2rVpnflta Effect : fricative : +1cond : Sc????????t?cond : sC???V?N????
+Impacted phonems :ð  
+
+
+
+A change has occured 
+
+
+The feature height switched values from 3 to 0
+
+following phonemes were transformed :
+Change :  
+ Target : ScH3B2RVpnflta Effect : height : -1cond : Sc?bR???????
+Impacted phonems :y  
+
+
+
+EXAMPLES 
+  
+abante  >  abante
+syllabation : a/ban/te/
+structure : #V/CVC/CV# 
+abanteo  >  abanteo:
+syllabation : a/ban/te/o:/
+structure : #V/CVC/CV/V:# 
+abbato  >  abbato:
+syllabation : ab/ba/to:/
+structure : #vC/CV/CV:# 
+abbatuo  >  abbatuo:
+syllabation : ab/ba/tu/o:/
+structure : #VC/CV/CV/V:# 
+abbibero  >  abbibero:
+syllabation : ab/bi/be/ro:/
+structure : #VC/CV/CV/CV:# 
+absedii  >  apsedii:
+syllabation : ap/se/di/i:/
+structure : #VC/CV/CV/V:# 
+absedium  >  apsedium
+syllabation : ap/se/di/um/
+structure : #VC/CV/CV/VC# 
+abyssimus  >  abyssimus
+syllabation : a/bys/si/mus/
+structure : #V/CVC/CV/CVC# 
+acca  >  akka
+syllabation : ak/ka/
+structure : #vC/CV# 
+accapo  >  akkapo:
+syllabation : ak/ka/po:/
+structure : #vC/CV/CV:# 
+A change has occured 
+
+
+The feature aspiration switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ???????n???? Effect : aspiration : +1cond : Sc??????????cond : sC????p?fl??
+Impacted phonems :ɑ  ʈ  ʙ  ʋ  ɔ  h  o  ɣ  w  i  ʌ  ʍ  u  x  ð  χ  ɰ  ɡ  j  ɢ  ç  ʐ  ɯ  ɵ  β  f  ɸ  œ  d  q  ɶ  l  ɞ  ʉ  p  ɭ  ʕ  l  c  ʝ  r  ɟ  ɤ  z  ɨ  ʂ  g  e  k  v  y  l  ⱱ  ɜ  ɻ  ø  ɛ  s  a  t  b  θ  ɖ  ʁ  ʎ  ʟ  ɘ  ɽ  
+
+
+
+EXAMPLES 
+  
+abante  >  abante
+syllabation : a/ban/te/
+structure : #V/CVC/CV# 
+abanteo  >  abanteo:
+syllabation : a/ban/te/o:/
+structure : #V/CVC/CV/V:# 
+abbato  >  abbato:
+syllabation : ab/ba/to:/
+structure : #vC/CV/CV:# 
+abbatuo  >  abbatuo:
+syllabation : ab/ba/tu/o:/
+structure : #VC/CV/CV/V:# 
+abbibero  >  abbibero:
+syllabation : ab/bi/be/ro:/
+structure : #VC/CV/CV/CV:# 
+absedii  >  apsedii:
+syllabation : ap/se/di/i:/
+structure : #VC/CV/CV/V:# 
+absedium  >  apsedium
+syllabation : ap/se/di/um/
+structure : #VC/CV/CV/VC# 
+abyssimus  >  abyssimus
+syllabation : a/bys/si/mus/
+structure : #V/CVC/CV/CVC# 
+acca  >  akka
+syllabation : ak/ka/
+structure : #vC/CV# 
+accapo  >  akkapo:
+syllabation : ak/ka/po:/
+structure : #vC/CV/CV:# 
+A change has occured 
+
+
+The feature height switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : sChB3rVpnflta Effect : height : +1
+Impacted phonems :b  
+
+
+
+EXAMPLES 
+  
+abante  >  abante
+syllabation : a/ban/te/
+structure : #V/CVC/CV# 
+abanteo  >  abanteo:
+syllabation : a/ban/te/o:/
+structure : #V/CVC/CV/V:# 
+abbato  >  abbato:
+syllabation : ab/ba/to:/
+structure : #vC/CV/CV:# 
+abbatuo  >  abbatuo:
+syllabation : ab/ba/tu/o:/
+structure : #VC/CV/CV/V:# 
+abbibero  >  abbifero:
+syllabation : ab/bi/fe/ro:/
+structure : #VC/CV/CV/CV:# 
+absedii  >  apsedii:
+syllabation : ap/se/di/i:/
+structure : #VC/CV/CV/V:# 
+absedium  >  apsediuf
+syllabation : ap/se/di/uf/
+structure : #VC/CV/CV/VC# 
+abyssimus  >  abyssifus
+syllabation : a/bys/si/fus/
+structure : #V/CVC/CV/CVC# 
+acca  >  akka
+syllabation : ak/ka/
+structure : #vC/CV# 
+accapo  >  akkafo:
+syllabation : ak/ka/fo:/
+structure : #vC/CV/CV:# 
+A change has occured 
+
+
+The feature aspiration switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : S???RVpnflta Effect : aspiration : +1cond : sC??????????cond : sC????????T?
+Impacted phonems :ʉ  ɵ  œ  ɔ  u  o  ɶ  y  w  ɞ  ø  
+
+
+
+EXAMPLES 
+  
+abante  >  abante
+syllabation : a/ban/te/
+structure : #V/CVC/CV# 
+abanteo  >  abanteo:
+syllabation : a/ban/te/o:/
+structure : #V/CVC/CV/V:# 
+abbato  >  abbato:
+syllabation : ab/ba/to:/
+structure : #vC/CV/CV:# 
+abbatuo  >  abbatuo:
+syllabation : ab/ba/tu/o:/
+structure : #VC/CV/CV/V:# 
+abbibero  >  abbifero:
+syllabation : ab/bi/fe/ro:/
+structure : #VC/CV/CV/CV:# 
+absedii  >  apsedii:
+syllabation : ap/se/di/i:/
+structure : #VC/CV/CV/V:# 
+absedium  >  apsediuf
+syllabation : ap/se/di/uf/
+structure : #VC/CV/CV/VC# 
+abyssimus  >  abyssifus
+syllabation : a/bys/si/fus/
+structure : #V/CVC/CV/CVC# 
+acca  >  akka
+syllabation : ak/ka/
+structure : #vC/CV# 
+accapo  >  akkafo:
+syllabation : ak/ka/fo:/
+structure : #vC/CV/CV:# 
+A change has occured 
+
+
+The feature nasal switched values from 1 to 0
+
+following phonemes were transformed :
+Change :  
+ Target : sC??rvpnfltA Effect : nasal : -1cond : Sc??rV???l?a
+Impacted phonems :h  
+
+
+
+EXAMPLES 
+  
+abante  >  abante
+syllabation : a/ban/te/
+structure : #V/CVC/CV# 
+abanteo  >  abanteo:
+syllabation : a/ban/te/o:/
+structure : #V/CVC/CV/V:# 
+abbato  >  abbato:
+syllabation : ab/ba/to:/
+structure : #vC/CV/CV:# 
+abbatuo  >  abbatuo:
+syllabation : ab/ba/tu/o:/
+structure : #VC/CV/CV/V:# 
+abbibero  >  abbibero:
+syllabation : ab/bi/be/ro:/
+structure : #VC/CV/CV/CV:# 
+absedii  >  apsedii:
+syllabation : ap/se/di/i:/
+structure : #VC/CV/CV/V:# 
+absedium  >  apsedium
+syllabation : ap/se/di/um/
+structure : #VC/CV/CV/VC# 
+abyssimus  >  abyssimus
+syllabation : a/bys/si/mus/
+structure : #V/CVC/CV/CVC# 
+acca  >  akka
+syllabation : ak/ka/
+structure : #vC/CV# 
+accapo  >  akkapo:
+syllabation : ak/ka/po:/
+structure : #vC/CV/CV:# 
+A change has occured 
+
+
+The feature aspiration switched values from 0 to 1
+
+following phonemes were transformed :
+Change :  
+ Target : ??H2?r??nflta Effect : aspiration : +1
+Impacted phonems :e  j  ɖ  ɘ  c  ʈ  ɻ  ɟ  ɤ  
+
+
+
+EXAMPLES 
+  
+abante  >  abahte
+syllabation : a/bah/te/
+structure : #V/CVC/CV# 
+abanteo  >  abahteo:
+syllabation : a/bah/te/o:/
+structure : #V/CVC/CV/V:# 
+abbato  >  abbaho:
+syllabation : ab/ba/ho:/
+structure : #vC/CV/CV:# 
+abbatuo  >  abbahuo:
+syllabation : ab/ba/hu/o:/
+structure : #VC/CV/CV/V:# 
+abbibero  >  abbiheho:
+syllabation : ab/bi/he/ho:/
+structure : #VC/CV/CV/CV:# 
+absedii  >  apsehii:
+syllabation : ap/se/hi/i:/
+structure : #VC/CV/CV/V:# 
+absedium  >  apsehium
+syllabation : ap/se/hi/um/
+structure : #VC/CV/CV/VC# 
+abyssimus  >  abyhsihuh
+syllabation : a/byh/si/huh/
+structure : #V/CVC/CV/CVC# 
+acca  >  akka
+syllabation : ak/ka/
+structure : #vC/CV# 
+accapo  >  akkaho:
+syllabation : ak/ka/ho:/
+structure : #vC/CV/CV:# 

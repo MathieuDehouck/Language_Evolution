@@ -1,0 +1,284 @@
+A change has occured 
+
+
+The feature lateral switched values from 0 to 1
+
+Target :   
+[0, 1, 1, 2, 0, 1, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[1, 0, -1, 1, -1, -1, -1, -1, 0, -1, -1, -1] 
+
+Impacted phonems :n > l
+t > l
+e > e
+a > a
+o > o
+u > u
+i > i
+s > l
+p > l
+r > l
+w > w
+k > ʟ
+h > ʟ
+m > l
+z > l
+ɡ > ʟ
+b > l
+y > y
+j > j
+d > l
+f > l
+c > ʎ
+
+
+
+
+EXAMPLES 
+  
+abante  >  aballe 
+abanteo:  >  aballeo: 
+abbato:  >  abbalo: 
+abbatuo:  >  abbaluo: 
+abyssimus  >  abylsimus 
+akkapo:  >  akkalo: 
+akkaptio:  >  akkallio: 
+akkapto:  >  akkallo: 
+akkorda:re  >  akkorda:le 
+akkwaerio:  >  akkwaelio: 
+A change has occured 
+
+
+The feature aspiration switched values from 0 to 1
+
+Target :   
+[1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[1, 0, -1, -1, 1, 1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :o > o
+m > h
+l > h
+s > h
+i > i
+ɡ > h
+n > h
+l > h
+o > o
+p > h
+r > h
+d > h
+a > a
+i > i
+ʟ > h
+l > h
+k > h
+t > h
+e > e
+u > u
+l > h
+y > y
+l > h
+z > h
+a > a
+u > u
+w > w
+ʟ > h
+l > h
+l > h
+e > e
+b > h
+f > h
+l > h
+
+
+
+
+EXAMPLES 
+  
+apsedium  >  apsediuh 
+abylsimus  >  abyhhimuh 
+akkoɡnito:  >  akkohhito: 
+akkolliɡo:  >  akkohhiɡo: 
+akkollo:  >  akkohho: 
+akkomple:sko:  >  akkohhhe:sko: 
+akkompli:re  >  akkohhhi:re 
+akkorda:le  >  akkohha:le 
+akkordo:  >  akkohho: 
+a:krus  >  a:kruh 
+A change has occured 
+
+
+The feature lateral switched values from 0 to 1
+
+Target :   
+[1, 0, 3, 0, 1, 1, 0, 0, 0, 1, 0, 1] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :o > o
+b > l
+e > e
+r > l
+d > l
+i > i
+u > u
+h > l
+h > l
+i > i
+m > l
+h > ʟ
+h > l
+t > l
+ɡ > ʟ
+o > o
+h > l
+s > l
+k > ʟ
+h > l
+h > l
+a > a
+a > a
+h > ʟ
+h > l
+n > l
+e > e
+u > u
+y > y
+w > w
+h > l
+p > l
+z > l
+w > w
+h > l
+h > ʟ
+h > l
+y > y
+
+
+
+
+EXAMPLES 
+  
+abbibero:  >  abbilelo: 
+apsedii:  >  apselii: 
+apsediuh  >  apseliul 
+abyhhimuh  >  abyhlilul 
+akkohhito:  >  akkoʟlilo: 
+akkohhiɡo:  >  akkohhiʟo: 
+akkohhhe:sko:  >  akkollhe:lʟo: 
+akkohhhi:re  >  akkollhi:le 
+akkohha:le  >  akkolla:le 
+akkohho:  >  akkollo: 
+A change has occured 
+
+
+The feature back switched values from 3 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+Effects : 
+[-1, -1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[1, 0, 3, -1, -1, -1, 0, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -1  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+
+Impacted phonems :b > χ
+f > f
+l > χ
+m > χ
+p > χ
+w > w
+l > χ
+l > χ
+l > χ
+l > l
+w > w
+
+
+
+
+EXAMPLES 
+  
+abbilelo:  >  aχbilelo: 
+abyhlilul  >  aχyhlilul 
+ale:lolyla  >  ale:χolyla 
+alelolyle:  >  aleχolyle: 
+ama:liʟul  >  aχa:liʟul 
+ambilo:  >  aχbilo: 
+ami:ʟila:l  >  aχi:ʟila:l 
+amiʟila:lil  >  aχiʟila:lil 
+ape:lio:le:l  >  aχe:lio:le:l 
+apiʟla  >  aχiʟla 
+A change has occured 
+
+
+The feature syllabic switched values from 0 to 1
+
+Target :   
+[0, 1, 1, 2, 0, 0, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[0, 1, 1, -1, -1, -1, -1, -1, -1, 1, -1, -1] 
+
+Impacted phonems :l > l
+l > l
+l > l
+l > l
+l > l
+h > h
+ʟ > ʟ
+l > l
+ʟ > ʟ
+l > l
+l > l
+l > l
+ʟ > ʟ
+l > l
+l > l
+χ > χ
+l > l
+l > l
+l > l
+l > l
+l > l
+h > h
+ʟ > ʟ
+l > l
+h > h
+χ > χ
+l > l
+l > l
+l > l
+h > h
+χ > χ
+k > k
+h > h
+ɡ > ɡ
+h > h
+t > t
+h > h
+h > h
+
+
+
+
+EXAMPLES 
+  
+akkoʟlilo:  >  akkoʟlil:o 
+akkohhiʟo:  >  akkohhiʟ:o 
+akkohho:  >  akkohh:o 
+akkollhe:lʟo:  >  akkollhe:lʟ:o 
+akkolla:le  >  akkoll:ale 
+akkollo:  >  akkoll:o 
+adbelle:lʟo:  >  adbell:elʟ:o 
+adjuʟlla:le  >  adjuʟl:lale 
+adjuʟllo:  >  adjuʟl:lo 
+admolle:lʟo:  >  admoll:elʟ:o 

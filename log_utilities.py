@@ -144,7 +144,33 @@ def phon2log (phon, path) :
     f.write( phon.description )
     
 
+def samples2log(path, liste, n =10 ) : 
+    """
+    Method that writes down the wors modified by a change. 
 
+    Parameters
+    ----------
+    path : str
+        path to the file you want tp write in.
+    liste : list of changed words :
+    n : int, optional
+        number of words that will be printed. The default is 10.
+
+    Returns
+    -------
+    None.
+
+    """
+
+    
+    folder = Path("logs/")
+    path = folder / path
+    f = open (path, "a",encoding='utf8')   
+    f.write("EXAMPLES")
+    f.write (" \n  \n")
+    for loop in range(min(n, len(liste))) :
+        f.write (str(liste[loop][0]) + "  >  "+str( liste[loop][1]) +" \n" )
+        
 
 def change2log (change, path,lang,  print_phons = False) :
     
@@ -173,9 +199,8 @@ def change2log (change, path,lang,  print_phons = False) :
             f.write (str(change.config_finale.state [i]))
             f.write("\n")
             f.write("\n")
-    f.write("following phonemes were transformed :")
-    f.write("\n")
-    f.write(change2str(change))
+    
+    f.write(str(change))
     
     #TODO this version of impacted phonem selects the impacted phonems an und für sich , not the imacted phonems i nthe language
     # we need to access the language and create functions to update it.
@@ -199,10 +224,12 @@ def change2log (change, path,lang,  print_phons = False) :
             phons = phons & cphons
         """    
         f.write('Impacted phonems :')
-        for phon in phons :
-            f.write(phon.ipa)
-            f.write("  ")
-        
+        phons = change.impacted_phonemes
+        for phon in change.impacted_phonemes :
+            f.write(phon.ipa) 
+            f.write(" > ")
+            f.write(change.impacted_phonemes[phon].ipa)
+            f.write("\n")
         
             
             

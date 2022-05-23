@@ -1,0 +1,13 @@
+A change has occured 
+
+
+The feature syllabic switched values from 1 to 0
+
+Target :   
+[-1, -1, 0, -1, -1, -1, -1, -1, 0, 0, 0, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :

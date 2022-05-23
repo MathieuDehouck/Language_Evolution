@@ -318,13 +318,18 @@ class P_change(Change) :
         a new language with the change applied on every of its word
 
         """
+        changed_words = []
+        
         dic = {}
         for wd in lang.voc :
             word  = lang.voc[wd]
+            save = word.ipa
             word = self.apply_word(word)
             if verbose : print(word)
             dic[wd] = word
-        return Language(lang.name+"*", dic)
+            if save != word.ipa : changed_words.append([ lang.voc[wd].ipa, word.ipa])
+            
+        return Language(lang.name+"*", dic), changed_words
         #TODO ; the name of the new language could be parametrizable maybe
     
     
@@ -332,15 +337,18 @@ class P_change(Change) :
     def __str__(self) :
         s = "Target :   \n"
         s += str(self.target) + " \n"
+        s+= "Effects : \n"
+        s+= str(self.config_initiale)+ " > " + str (self.config_finale) + "\n"
+        
         s+= "Conditions : \n"
         for i, condition in enumerate(self.conditions) :
             s+= str(i) + "  " +str(condition) + " \n"
         return s
     
     
-    
+    """
     def rd_change (lang, verbose = False ):
-            """
+            #""
         generates a randomly parametrized change that can be applied and will surely modify the 
         Language given in input.
     
@@ -357,7 +365,7 @@ class P_change(Change) :
         ch : TYPE
             DESCRIPTION.
 
-            """
+            #""
             if verbose : print("we create a rd change")
             li = lang.phonemes
             
@@ -444,7 +452,7 @@ class P_change(Change) :
             if sc : ch.add_condition(cond2)
             return ch 
                 
-                
+        """        
       
     
     
