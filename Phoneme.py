@@ -54,6 +54,10 @@ class Phoneme(object) :
         a list representing the features associated to the phonem
     description : str
         the verbose descritption of the phoneme
+    voice : bool 
+        states if the phoneme is voiced or not
+    syl : bool 
+        states if the phoneme is center of a syllable
     
     
     Methods
@@ -69,38 +73,35 @@ class Phoneme(object) :
     
     
     
-    def __init__(self, string, liste): 
+    def __init__(self, string , voice = False , syl = False): 
         """
         a gentle Phoneme constructor
         """
         
         self.ipa = string 
-        self.features = liste
-        
-        if self.ipa[-1] == "*" :
-            string = self.ipa[:-1]
+        self.syl = False 
+        self.voice = False
+        self.rank_in_wd = None
+       
         self.description = ""
         #UNICODE_TO_IPA[string] ._IPAChar__canonical_string
         
         
-        
-    def isV(self):
-        """ 
-        checks if a Phoneme is a vowell or not
-        """
-        return self.features[0] ==1 
+
         
     
         
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
+    def set_rank_in_wd(self, rk) :
+        self.rank_in_wd = rk 
 
+    def is_vow(self) :
+        return type(self) == Vowell 
+        
 
-    def equals(self, phonemes ) :
-        return self.features == phonemes.features
-
-
+    
 
     def update_IPA(self, config, verbose = False) :
         """
@@ -246,10 +247,154 @@ def get_phon(string) :
 
 
 
+class Vowell(Phoneme) : 
+    
+    """
+    A class representing a Vowell
+    
+    ...
+
+    Attributes
+    ----------
+    ipa : str
+        the ipa representation of a phoneme
+    features : list
+        a list representing the features associated to the phonem
+    description : str
+        the verbose descritption of the phoneme
+    voice : bool 
+        states if the phoneme is voiced or not
+    syl : bool 
+        states if the phoneme is center of a syllable
+    
+    Methods
+    -------
+    __init__() constructor taking all these information as input
+    
+    update_IPA  : finds the closest ipa character to represent a new phoneme
+    
+    is_round
+    is_nasal
+    is_palatal
+    
+    get_height
+    get_front
+    
+    linearize : get a representation of the phoneme as a single vector
+    
+    """
+    
+    def __init__(self, string,  features , voice = True , syl = True):
+
+        super().__init__(string, syl, voice)
+        self. features = features 
+        
+    
+    def is_round (self) :
+        return self.features[1][0]
+
+    def is_nasal(self) :
+        return self.features[1][1]
+    
+    def get_height(self) :
+        return self.features[0][1]
+
+    def get_front(self) :
+        return self.features[0][0]
+    
+    def is_palatal(self,  threshold) :
+        return self.features[0][1] > threshold
+
+    def linearize(self) :
+        
+        feat = []
+        feat.append(int(self.syl))
+        feat.append(int(self.voice))
+        feat.append(self.features[0][0])
+        feat.append(self.features[0][1])
+            
+        for manner in self.features[1] :
+            feat.append(int(manner))
+
+    
+
+
+class Consonant(Phoneme) : 
+    
+     
+    """
+    A class representing a Consonant
+    
+    ...
+
+    Attributes
+    ----------
+    ipa : str
+        the ipa representation of a phoneme
+    features : list
+        a list representing the features associated to the phonem
+    description : str
+        the verbose descritption of the phoneme
+    voice : bool 
+        states if the phoneme is voiced or not
+    syl : bool 
+        states if the phoneme is center of a syllable
+    
+    Methods
+    -------
+    __init__() constructor taking all these information as input
+    
+    update_IPA  : finds the closest ipa character to represent a new phoneme
+    
+    is_round
+    is_nasal
+    is_palatal
+    
+    get_place
+    get_manner
+    
+    linearize : get the representation of the phoneme as a list of integers
+    
+    """
+    
+    
+    
+    def __init__(self, string,  features, voice = False  , syl = False ):
+
+        super().__init__(string, syl, voice)
+        self. features = features 
+        self.feat_semantics = ["syllabic", "voiced", "place of articulation", "plosive", "fricative", "nasal", "trill", "lateral", "secondary place of articulation", "pren_nasal" , "aspiration"] 
+
+    def linearize(self) :
+        
+        feat = []
+        feat.append(int(self.syl))
+        feat.append(int(self.voice))
+        feat.append(self.features[0][0])
+        for manner in self.features[0][1] :
+            feat.append(int(manner))
+        for manner in self.features[1] :
+            feat.append(int(manner))
 
 
 
+    def is_round (self) :
+        return self.features[0][0] == 11
 
+    def is_palatal (self) :
+        return self.features[0][0] == 3
+
+    def is_uvular (self) :
+        return self.features[0][0] == 1
+
+    def is_nasal (self) :
+        return bool(self.features[0][1][2]) or bool(self.features[1][1])
+
+    def is_aspirate (self) :
+        return self.features[1][2]
+
+    def has_sec_articulation (self) :
+        return self.features[1][2]
 
 
 

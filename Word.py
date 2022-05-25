@@ -64,9 +64,11 @@ class Word :
         inds = 0 #index of syllables
         indp = 0 # index of phonemes
         for syl in syls :
+            syl.set_rank_in_wd(inds)
             for po in syl.phonemes :
                 phon.append(po)
                 phon2syl[indp] = inds
+                po.set_rank_in_wd(indp)
                 indp += 1
             
             inds += 1

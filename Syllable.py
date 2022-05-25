@@ -49,7 +49,8 @@ class Syllable(object) :
     
         i_center = 0 
         for phon in self.phonemes :   
-            if phon.features[0] == 1 :
+            #updated
+            if phon.syl == 1 :
                 i_center = self.phonemes.index(phon)
                 self.i_center = i_center
                 break 
@@ -61,6 +62,7 @@ class Syllable(object) :
             if phoneme == self.center and self.length :
                 s += ":"
         self.ipa = s
+        self.rank_in_wd = None
        
         
         
@@ -68,7 +70,10 @@ class Syllable(object) :
         return self.ipa  + "\nstress : "+str(self.stress)+"    length : "+ str(self.length)
     
     
-    
+    def set_rank_in_wd(self, rk) :
+        self.rank_in_wd = rk
+        
+        
     def set_stress(self, stress) :
         """
         Allow the program to change the stress of a syllable
