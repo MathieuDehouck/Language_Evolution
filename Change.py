@@ -11,6 +11,7 @@ from Word import Word
 from Language import Language
 from Condition import P_condition
 from Configuration import Configuration
+from regularizations import regularize_stress, regularize_structure
 
 import random
 
@@ -563,67 +564,37 @@ class S_change(Change) :
     
     
     
-class i_change(Change) :
+class I_change(Change) :
     
     """
-    classe gérant l'insertion et la délétion de phonèmes, notamment les phénomène d'epenthèse et d'amuïssemnt
+    class allowing insertion or deletion of phonemes
+    We examine
     
-    we consider dissimilation and assimilation to be standard phonetic changes encoded using the first subclass we defined
     
+    
+    """
+    
+    def __init__(self, deletion = True ) :
+        self.delete = deletion
+        
+        
+      
+    def apply_word(self,wd) :
+        if self.delete : 
+            self.deletion(wd)
   
     
-    
-    def __init__(self, config_initiale,  threshold, feature_coef) :
+    def deletion(self, wd) :
         
-        self.config_initiale = config_initiale
-        self.config_finale = config_finale
-        self.threshold = threshold
-        self.feature_coef = feature_coef
-    
-    
-    """
-
-def regularize_stress(index, word) :
-    
-    
-   
-    nb_syl = len(word.syllables)
-    if nb_syl == 1 : return 
-    ran = range(nb_syl)
-    if word.syllables[index] == 1 :
-        if nb_syl-1 in ran : word.syllables[nb_syl-1].stress = False
-        if nb_syl+1 in ran : word.syllables[nb_syl + 1].stress = False
-            
-    else :
-        progressif = 0
-        regressif = 0
-        if index-1 not in ran  :
-            word.syllables[index+1].stress = True
-            return 
-        else : 
-            if word.syllables[index-1].length : regressif += 2
-            
-        if index+1 not in ran  : 
-            word.syllables[index -1].stress = True
-            return 
-        
-        else : 
-            if word.syllables[index+1].length : progressif += 2
-        
-        r = random.randint(0, 1) 
-        if r : progressif += 1 
-        else : regressif += 1
-        
-        if progressif > regressif :
-            word.syllables[index-1].stress = True
-        else : 
-            word.syllables[index +1].stress = True
-        
-        
-        
-        
-        
-    
-    
+        flag_change =  False
+        syls = []
+        for syl in wd.syllables :
+            for phon in syl :
+                if phon.features == syl.target :
+                    syl = Syllable ( [pho for pho in syl if pho != phon  ], not phon.is_Vow and syl.stress, not phon.is_Vow and syl.length, None)
+                    flag_change = False
+                syls.append(syl)
+        new_wd = Word(syls)
+        if flag_change : regularize_structure(new_wd)
     
     
