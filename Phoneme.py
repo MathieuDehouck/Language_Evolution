@@ -287,23 +287,24 @@ class Vowell(Phoneme) :
     def __init__(self, string,  features , voice = True , syl = True):
 
         super().__init__(string, syl, voice)
-        self. features = features 
-        
-    
+        self.features = features 
+
+    def get_height(self) :
+        return self.features[0][1]
+
+    def get_front(self) :
+        return self.features[0][0]
+
+
     def is_round (self) :
         return self.features[1][0]
 
     def is_nasal(self) :
         return self.features[1][1]
     
-    def get_height(self) :
-        return self.features[0][1]
-
-    def get_front(self) :
-        return self.features[0][0]
-    
-    def is_palatal(self,  threshold) :
+    def is_palatal(self, threshold):
         return self.features[0][1] > threshold
+
 
     def linearize(self) :
         
@@ -363,7 +364,7 @@ class Consonant(Phoneme) :
 
         super().__init__(string, syl, voice)
         self. features = features 
-        self.feat_semantics = ["syllabic", "voiced", "place of articulation", "plosive", "fricative", "nasal", "trill", "lateral", "secondary place of articulation", "pren_nasal" , "aspiration"] 
+        self.feat_semantics = "syllabic", "voiced", ["place of articulation", "nasal", "plosive", "fricative", "trill", "lateral"], ["secondary place of articulation", "pre_nasal" , "aspiration"] 
 
     def linearize(self) :
         
