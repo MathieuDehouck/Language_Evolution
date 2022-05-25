@@ -5,13 +5,10 @@ Created on Thu May  5 00:01:15 2022
 @author: 3b13j
 """
 
-
-
 import numpy as np
-import os
 from ipapy import *
+from copy import deepcopy
 from Natural_class import create_classes
-from pathlib import Path
 
 
 class archetype(object) :
@@ -81,7 +78,7 @@ class IPA() :
     
     
     def __init__(self) :
-        self.features = ['Syllabic', 'COnsonant', 'Height', 'Backness',
+        self.features = ['Syllabic', 'Consonant', 'Height', 'Backness',
                          'Round',    'Voiced',    'Nasal',
                          'Plosive',  'Fricative', 'Lateral', 'Trill', 'Aspirated']
         self.phonemes = [] 
@@ -93,9 +90,7 @@ class IPA() :
         arts = [int(x) for x in consonants[0][1:]]
         for line in consonants[1:]:
             manner = line[0]
-            base = [0, 1, 0, 0,    # Syllabic Cons   Height Backness
-                    0, 0, 0,       # Round    Voiced Nasal 
-                    0, 0, 0, 0, 0] # Plosive  Fricat Later  Trill/flap Aspirated
+            base = 0, 0, [0, 0, 0, 0, 0]
             if 'v' in manner:
                 base[5] = 1
                 manner = manner[:-1]
@@ -141,26 +136,26 @@ class IPA() :
                 self.feat2ipa[fts] = ch
 
         # reading vowels
-        consonants = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str)
-        arts = [int(x) for x in consonants[0][1:]]
-        for line in consonants[1:]:
-            manner = line[0]
-            base = [1, 0, 0, 0,    # Syllabic Cons   Height Backness
-                    0, 1, 0,       # Round    Voiced Nasal 
-                    0, 0, 0, 0, 0] # Plosive  Fricat Later  Trill/flap Aspirated
-            if 'r' in manner:
-                base[4] = 1
-                manner = manner[:-1]
+        vows = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str)
+        front = [int(x) for x in vows[0][1:]]
+        for line in vows[1:]:
+            height = line[0]
+            base = [1, 1, [0, 0], [0, 0]]
+            if 'r' in height:
+                base[3][0] = 1
+                height = int(height[:-1])
+            else:
+                height = int(height)
 
-            base[2] = int(manner) # height
+            base[2][0] = height
                 
             for i, ch in enumerate(line[1:]):
                 if ch == '-':
                     continue
-                feats = base.copy()
-                feats[3] = arts[i]
+                feats = deepcopy(base)
+                feats[2][1] = front[i]
 
-                fts = tuple(feats)
+                fts = tuple([tuple(f) if type(f) != int else f for f in feats])
                 phon = archetype(ch, fts)
 
                 self.phonemes.append(phon)
@@ -168,10 +163,10 @@ class IPA() :
                 self.feat2ipa[fts] = ch
             
         
-        dic_class, classes = create_classes(self.alphabet)
+        #dic_class, classes = create_classes(self.alphabet)
         
-        self.classes = classes
-        self.dic_class = dic_class
+        #self.classes = classes
+        #self.dic_class = dic_class
 
 
 
