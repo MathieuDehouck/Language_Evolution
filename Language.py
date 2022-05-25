@@ -87,6 +87,7 @@ class Language() :
             subclass = []
             for i, ft in enumerate(phoneme.features) :
                 classe = [] 
+                if i < 2 : continue 
                 for phoneme2 in self.phonemes :
                     if phoneme2.features[i] == ft :
                         classe.append(phoneme2)

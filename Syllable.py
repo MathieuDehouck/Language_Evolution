@@ -41,10 +41,11 @@ class Syllable(object) :
     
     
     
-    def __init__(self, phonemes , stress = False, length = False) :
+    def __init__(self, phonemes , stress = False, length = False, tone = None) :
         self.phonemes = phonemes
         self.stress = stress 
         self.length = length
+        self.tone = tone
     
         i_center = 0 
         for phon in self.phonemes :   
@@ -64,7 +65,7 @@ class Syllable(object) :
         
         
     def __str__(self) :
-        return self.ipa 
+        return self.ipa  + "\nstress : "+str(self.stress)+"    length : "+ str(self.length)
     
     
     

@@ -72,7 +72,7 @@ def encode_p_change(change) :
     s+= "Target:" + encode_f(change.target) +" "
     s+= "Effect:" + encode_f(change.config_initiale.state)+">"+encode_f(change.config_finale.state) + " "
     for condition in change.conditions :
-        s+= "Condition:"+"rp"+str(condition.rel_pos) +encode_f(condition.template) + " "
+        s+= "Condition:"+"rp"+str(condition)
     return s
 
 def encoded_changes2log(changes, path, rewind = False ):

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Wed May  4 14:39:58 2022
 
@@ -56,7 +55,7 @@ class Word :
         
         self.syllables = syls 
         s = ""
-        for x in self.syllables : s += str(x) 
+        for x in self.syllables : s += x.ipa
         self.ipa = s
         self.structure = get_structure(self.syllables)
         
@@ -88,9 +87,27 @@ class Word :
     def __str__(self)  :
         print()
         s =self.ipa + "\n"    +'syllabation : '
-        for x in self.syllables : s += str(x) + "/"
+        for x in self.syllables : s += x.ipa + "/"
         if s[-1] =="\"" :
             s = s [:-2]
         s += "\n"    + "structure : "+ str(self.structure)
+        
         return s
     
+    
+    
+    def get_stess_patter(self) :
+        """
+        Returns a string representing the stress pattern of the word
+
+        Returns
+        -------
+        s : str.
+
+        """
+        s = ""
+        for syllable in self.syllables :
+            if syllable.stress : s += "S/"
+            else : s += "_/"
+        s = s[:-1]
+        return s

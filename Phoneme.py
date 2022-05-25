@@ -79,7 +79,8 @@ class Phoneme(object) :
         
         if self.ipa[-1] == "*" :
             string = self.ipa[:-1]
-        self.description = UNICODE_TO_IPA[string] ._IPAChar__canonical_string
+        self.description = ""
+        #UNICODE_TO_IPA[string] ._IPAChar__canonical_string
         
         
         

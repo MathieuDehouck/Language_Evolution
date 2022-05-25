@@ -456,7 +456,7 @@ class P_change(Change) :
       
     
     
-class s_change(Change) :
+class S_change(Change) :
     """
     subclass of change 
     A class modelling a structural change in the syllable .
@@ -468,9 +468,9 @@ class s_change(Change) :
     conditiosn : list
         list of the conditions that need to be satisfied for the change to be applied
     config_initiale :  list
-        a list of 2 boleans coding stress and length
+        a list of 3 boleans coding stress , length and tone (None for now)
     config_finale : list
-        a list of 2 boleans coding stress and length
+        a list of 3 boleans coding stress ,length (None for now)
     
     
     Methods
@@ -492,54 +492,63 @@ class s_change(Change) :
     
     """
     
-    
+    def check(self, word, rank) :
+        """
+        checks if a change would modufy a language given as input. 
+        if that s not the case, it is not usefull to apply it.
+
+        Parameters
+        ----------
+        language : Language
+            the language we would like to apply the change on
+
+        Returns
+        -------
+        bool
+            DESCRIPTION.
+
+        """
+        for condition in self.conditions :
+            if not condition.test(word, rank) : return False
+                
+        for s in word.syllables :
+            if s.stress == self.config_initiale[0] and s.length == self.config_initiale[1] and  s.tone == self.config_initiale[2] :
+                    return True
+        return False
     
     
     def __init__(self, config_initiale, config_finale, conditions = []) :
         self.conditions = conditions
         self.config_initiale = config_initiale
         self.config_finale = config_finale
+        self.reconfig_stress = []
       
     
-    def apply(self,phon, index , word, verbose = False ) :
+    
         
-        return self.check(  phon, index , word, verbose = False)
-        
-    def apply_syl (self, syl, index, word) :
+    def apply_syl (self, syl, word, index) :
         
         # Un peu brouillon ,  à améliorer 
         #mettre à jour la rpz de l'accent dans l IPA  / structure de syllabe
-        apply = False 
-        for phon in syl.phonemes :
-            app =  self.apply( phon, index, word) 
-            index +=1
-            if app :
-               
-    
-                
-                n_stress = self.config_finale[0]
-                
-                n_length = self.config_finale[1]
-                
-                if n_stress == None :
-                    n_stress = syl.stress
-                    
-                if n_length == None :
-                    n_length = syl.stress
-                    
-                n_syll   = Syllable(syl.phonemes, n_stress, n_length)
-                
-                
-                
-        return n_syll, index
+        applicable = self.check (word, index)
+        if not applicable : return syl
+        n_syll = Syllable(syl.phonemes, self.config_finale[0],self.config_finale[1],self.config_finale[2] )
+        
+        if self.config_initiale[0] != self.config_finale[0] and syl.stress == self.config_initiale[0] :
+            self.reconfig_stress.append(index)
+            
+        return n_syll
     
     def apply_word (self, wd) :
-        index  = 0
+        
         syls = []
-        for s in wd.syllables :
-            ns , index = self.apply_syl ( s, index, wd)
+        for i, s in enumerate( wd.syllables) :
+            ns = self.apply_syl ( s, wd, i)
             syls.append(ns)
-        return Word(syls)
+        w =  Word(syls)
+        for ind in self.reconfig_stress :
+            regularize_stress(ind, w)
+        return w
     
     
     def __str__(self) :
@@ -573,5 +582,48 @@ class i_change(Change) :
     
     
     """
+
+def regularize_stress(index, word) :
+    
+    
+   
+    nb_syl = len(word.syllables)
+    if nb_syl == 1 : return 
+    ran = range(nb_syl)
+    if word.syllables[index] == 1 :
+        if nb_syl-1 in ran : word.syllables[nb_syl-1].stress = False
+        if nb_syl+1 in ran : word.syllables[nb_syl + 1].stress = False
+            
+    else :
+        progressif = 0
+        regressif = 0
+        if index-1 not in ran  :
+            word.syllables[index+1].stress = True
+            return 
+        else : 
+            if word.syllables[index-1].length : regressif += 2
+            
+        if index+1 not in ran  : 
+            word.syllables[index -1].stress = True
+            return 
+        
+        else : 
+            if word.syllables[index+1].length : progressif += 2
+        
+        r = random.randint(0, 1) 
+        if r : progressif += 1 
+        else : regressif += 1
+        
+        if progressif > regressif :
+            word.syllables[index-1].stress = True
+        else : 
+            word.syllables[index +1].stress = True
+        
+        
+        
+        
+        
+    
+    
     
     

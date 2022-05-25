@@ -89,7 +89,7 @@ class IPA() :
         self.feat2ipa = {}
 
         # reading consonants
-        consonants = np.loadtxt('phonetic/consonants.tsv', delimiter='\t', dtype=str)
+        consonants = np.loadtxt('phonetic/consonants.tsv', delimiter='\t', dtype=str, encoding = 'utf8')
         arts = [int(x) for x in consonants[0][1:]]
         for line in consonants[1:]:
             manner = line[0]

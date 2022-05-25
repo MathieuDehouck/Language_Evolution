@@ -94,7 +94,7 @@ def segm2syl(dic, alphabet ) :
             # ATTENTION, LABIALISATION A TRAITER PLUS TARD
             
             syl = syl.replace("ʷ", "w")
-            
+            syl = syl.replace('g', "ɡ")
             syl = syl.replace('̯', "")
             
             syl = syl.replace('ʰ', "h")
@@ -125,6 +125,8 @@ def segm2syl(dic, alphabet ) :
                 syl2 = syl2.replace("ʷ", "w")
                 
                 syl2 = syl2.replace('̯', "")
+                
+                syl2 = syl2.replace('g', "g")
                 
                 syl2 = syl2.replace('ʰ', "h")
             

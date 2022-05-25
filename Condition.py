@@ -174,7 +174,7 @@ class P_condition (Condition) :
         for j in range (min(index, rank) ,max(index, rank) ) :
                 val = utilitaries.feature_match ( self.template , word.phonemes[j].features    )
                 if verbose :
-                    print("on teste ",j)
+                    print("we test ",j)
                     print(val)
                     print()
                 if val : return True   
@@ -289,14 +289,44 @@ class P_condition (Condition) :
     
     
 # premier essai d'implémentation, en lien étroit avec la façon donc on a implémenté la structure dans la classe mot
-class s_condition (Condition) : 
+class S_condition (Condition) : 
+    """
+    A class to represent a condition regarding the Syllabic structure of the word
+
+    ...
+
+    Attributes
+    ----------
+    absol_pos : int
+        absolute offset, checks the position of the syllable  inside the word.
+        -1 means wildcard
+    rel_pos : int
+        defines the position of the phoneme conditionning the change regarding the syllable undergoing it
+        0 means the condition applies to the phonemes that changes itself
+    stress : bool 
+        Checks a condition on the stress 
+    length : bool 
+        Checks a condition on the length 
+    tone : bool 
+        Checks a condition on the tone
+        
     
-    def __init__(self, name,length = None, stress = None  , abs_position = -1 , rel_pos=0):
+    Methods
+    -------
+    __init__() constructor taking all these information as input
+    
+    test :
+        input : a word and an index.
+        checks whether the condition is satisfied.
+    """
+    
+    #TODO implement tones 
+    
+    def __init__(self, abs_position = 42 , rel_pos=0, length = None, stress = None  ,tone = None, ):
         
-        
-        self.name = name
         self.stress = stress
         self.length = length
+        self.tone = tone
         self.abs_position = abs_position
         self.rel_pos = rel_pos
         
@@ -321,30 +351,36 @@ class s_condition (Condition) :
         """
         
         
-        index_syl = word.phon2syl[rank]
-        index = index_syl + self.rel_pos 
         
-        print("on teste pour la syl ", index_syl)
+        nb_syl = len(word.syllables)
+        
+        # we test the condition on absolute positions.
+        # in the semantic of our programm -1 means the last , -2 the penultian and so on
         
         
-        if index not in range (len(word.phonemes)) :
-            print("index out of range")
-            return False
-        syl = word.syllables[index]
-        print("length", self.length,syl.length )
-        print("stress", self.stress, syl.stress )
+        # index of the syllable we need to study
+        index  = rank + self.rel_pos
         
-        if self.length != None :
-            if self.length != syl.length :
-                return False
-        if self.stress != None :
-            if self.stress != syl.stress :
-                return False
-                
-        return True
+        if index not in range(nb_syl) : return False  
+        #TODO modif
+        if abs(self.abs_position) not in range (nb_syl) : return False
         
+        #test of absolute position : 
+        if self.abs_position != 42 :
+            if word.syllables[self.abs_position] != word.syllables[index] : return False 
+            else : print ( word.syllables[rank] .ipa , " vs ", word.syllables[index] )
+        
+        
+        return  self.length == word.syllables[index].length and self.stress == word.syllables[index].stress and self.tone == word.syllables[index].tone
+        
+        
+      
+            
+            
+            
+            
          
     def __str__(self) :
         
-        return "condition :" + self.name + "\n" + str(self.length) + "stress : " +str(self.stress)
+        return "condition :" + "\nabsolute position : " + str(self.abs_position) + "         relative position : " +str(self.rel_pos) + "\nlength : " + str(self.length) + "         stress : " +str(self.stress)
         

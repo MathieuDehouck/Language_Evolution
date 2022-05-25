@@ -1,0 +1,7914 @@
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, 1, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1]
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, 1, -1, 0] 
+
+Impacted phonems :n > t
+
+
+
+
+EXAMPLES 
+  
+wulnero:  >  wultero: 
+A change has occured 
+
+
+The feature Plosive switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, 1, 0, 0, 0, 1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :b > m̥
+p > m̥
+k > ŋ̊
+ɡ > ŋ̊
+t > n̥
+d > n̥
+
+
+
+
+EXAMPLES 
+  
+abante  >  am̥ante 
+abanteo:  >  am̥anteo: 
+abbato:  >  am̥bato: 
+abbatuo:  >  am̥m̥atuo: 
+abbibero:  >  am̥bibero: 
+apsedii:  >  am̥sedii: 
+apsedium  >  am̥sedium 
+abyssimus  >  am̥yssimus 
+akkapo:  >  aŋ̊kapo: 
+akkaptio:  >  akŋ̊aptio: 
+A change has occured 
+
+
+The feature Fricative switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 11, 0, 1, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1] >
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 1  Template :[0, 1, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1] 
+1  C:   Rel pos :  -3  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, 0, 1, -1, 0] 
+
+Impacted phonems :s > n̥
+
+
+
+
+EXAMPLES 
+  
+adm̥elle:sko:  >  adm̥elle:n̥ko: 
+ŋ̊apm̥ellus  >  ŋ̊apm̥ellun̥ 
+ŋ̊ultus  >  ŋ̊ultun̥ 
+ŋ̊yklo:ps  >  ŋ̊yklo:pn̥ 
+falle:skere  >  falle:n̥kere 
+falle:sko:  >  falle:n̥ko: 
+inaltus  >  inaltun̥ 
+inŋ̊aln̥e:sko:  >  inŋ̊aln̥e:n̥ko: 
+indolens  >  indolenn̥ 
+inn̥ulŋ̊e:sko:  >  inn̥ulŋ̊e:n̥ko: 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 11, 0, 1, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :t > n
+m̥ > m
+s > n
+k > ŋ
+ŋ̊ > ŋ
+p > m
+n̥ > n
+h > ɦ
+f > ɱ
+c > ɲ
+
+
+
+
+EXAMPLES 
+  
+am̥ante  >  am̥anne 
+am̥anteo:  >  am̥anneo: 
+am̥bato:  >  am̥bano: 
+am̥m̥atuo:  >  am̥m̥anuo: 
+am̥sedii:  >  amnedii: 
+am̥sedium  >  amnedium 
+am̥yssimus  >  am̥ynnimun 
+akka  >  aŋŋa 
+aŋ̊kapo:  >  aŋŋamo: 
+akŋ̊aptio:  >  aŋŋamnio: 
+A change has occured 
+
+
+The feature Lateral switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, 1, -1, 0, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[0, 1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 0] 
+
+Impacted phonems :l > n̥
+
+
+
+
+EXAMPLES 
+  
+aŋŋolliɡo:  >  aŋŋoln̥iɡo: 
+aŋŋommle:nŋo:  >  aŋŋommn̥e:nŋo: 
+aŋŋommli:re  >  aŋŋommn̥i:re 
+a:ŋnua:lin  >  a:ŋnua:n̥in 
+adm̥elle:nŋo:  >  adm̥eln̥e:nŋo: 
+an̥oŋla:re  >  an̥oŋn̥a:re 
+ale:monyna  >  an̥e:monyna 
+alemonyne:  >  an̥emonyne: 
+aliŋu:nun  >  an̥iŋu:nun 
+alima  >  an̥ima 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, -1, -1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :n > t
+m > p
+
+
+
+
+EXAMPLES 
+  
+abante  >  abatte 
+abanteo:  >  abatteo: 
+apsedium  >  apsediup 
+abyssimus  >  abyssipus 
+akkoɡnito:  >  akkoɡtito: 
+akkomple:sko:  >  akkopple:sko: 
+akkompli:re  >  akkoppli:re 
+admina:kia:re  >  adpita:kia:re 
+admina:kio:  >  adpita:kio: 
+admorte:sko:  >  adporte:sko: 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[1, 0, -1, 2, -1, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -4  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :o > o
+e > e
+i > i
+a > a
+u > u
+y > y
+
+
+
+
+EXAMPLES 
+  
+abbibero:  >  abbiber:o 
+akkopple:sko:  >  akkopp:lesko: 
+akkoppli:re  >  akkopp:lire 
+adjuksta:re  >  adjuks:tare 
+adjuksto:  >  adjuks:to 
+aeta:tiki:  >  aeta:tik:i 
+aethe:r  >  aet:her 
+aleposyte:  >  aleposyt:e 
+aliku:tus  >  alik:utus 
+allu:pita:re  >  allu:pit:are 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 0  Template :[0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  5  Continu : 1  Template :[1, 0, -1, -1, 1, 1, -1, -1, 0, -1, -1, -1] 
+
+Impacted phonems :a > a
+u > É¯
+o > É¤
+e > e
+
+
+
+
+EXAMPLES 
+  
+adjuks:tare  >  adjÉ¯ks:tare 
+allu:pit:are  >  allÉ¯:pit:are 
+atko:tit:atus  >  atkÉ¤:tit:atus 
+khi:rurɡia:tus  >  khi:rÉ¯rɡia:tus 
+koki:t:arius  >  kÉ¤ki:t:arius 
+kotstatti:topolis  >  kÉ¤tstatti:topolis 
+kott:rafakio:  >  kÉ¤tt:rafakio: 
+fortia:re  >  fÉ¤rtia:re 
+pu:ter:atio:  >  pÉ¯:ter:atio: 
+tea:pol:it:atus  >  tea:pÉ¤l:it:atus 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[0, 0, 3, 2, 1, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 0  Template :[0, 0, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :s > t
+p > p
+t > t
+l > t
+r > t
+
+
+
+
+EXAMPLES 
+  
+aero:sus  >  aero:sut 
+ale:posyta  >  ale:potyta 
+aleposyt:e  >  alepotyt:e 
+alik:utus  >  alik:utut 
+apa:rikus  >  apa:rikut 
+atkÉ¤:tit:atus  >  atkÉ¤:tit:atut 
+apparikul:are  >  apparikut:are 
+apparikul:o  >  apparikut:o 
+askiola  >  askiota 
+aukt:orizzo:  >  aukt:otizzo: 
+A change has occured 
+
+
+The feature Fricative switched values from 1 to 0
+
+Target :   
+[1, 0, 0, 2, 0, 1, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -2  Continu : 0  Template :[0, 1, -1, -1, 0, -1, 0, -1, 1, -1, -1, -1] 
+
+Impacted phonems :t > n̥
+s > n̥
+e > e
+f > ɱ
+j > ɲ̊
+w > m̥
+
+
+
+
+EXAMPLES 
+  
+aero:sut  >  aero:sun̥ 
+alikwis  >  alikwin̥ 
+bajjuli:wut  >  bajjuli:wun̥ 
+bla:wus  >  bla:wun̥ 
+kti:fus  >  kti:fun̥ 
+kotfesso:  >  kotfen̥so: 
+kra:pul:otut  >  kra:pul:otun̥ 
+de:si:der:otut  >  de:si:der:otun̥ 
+ephesius  >  ephen̥ius 
+fe:stizzo:  >  fe:n̥tizzo: 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[1, 0, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+b > ⱱ̟
+n > ɾ̥
+t > ɾ̥
+e > e
+o > o
+u > u
+i > i
+p > ⱱ̟
+s > ɾ̥
+d > ɾ̥
+m > ⱱ̟
+y > y
+k > ʟ̆
+ɡ > ʟ̆
+l > ɾ̥
+w > ⱱ̟
+h > ʡ̆
+j > ʎ̆
+f > ⱱ
+z > ɾ̥
+v > ⱱ
+c > ʎ̆
+
+
+
+
+EXAMPLES 
+  
+abante  >  aⱱ̟aɾ̥ɾ̥e 
+abanteo:  >  aⱱ̟aɾ̥ɾ̥eo: 
+abbato:  >  aⱱ̟ⱱ̟aɾ̥o: 
+abbatuo:  >  aⱱ̟ⱱ̟aɾ̥uo: 
+abbibero:  >  aⱱ̟ⱱ̟iⱱ̟ero: 
+apsedii:  >  aⱱ̟ɾ̥eɾ̥ii: 
+apsedium  >  aⱱ̟ɾ̥eɾ̥iuⱱ̟ 
+abyssimus  >  aⱱ̟yɾ̥ɾ̥iⱱ̟uɾ̥ 
+akka  >  aʟ̆ʟ̆a 
+akkapo:  >  aʟ̆ʟ̆aⱱ̟o: 
+A change has occured 
+
+
+The feature Trill switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 3, 0, 1, 0, 1, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -2  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  -3  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ɾ̥ > n̥
+o > É¤
+ɾ̥ > n̥
+ⱱ̟ > m̥
+ɾ̥ > n̥
+i > i
+u > É¯
+ɾ̥ > n̥
+ⱱ̟ > m̥
+ⱱ̟ > m̥
+ʟ̆ > ŋ̊
+ɾ̥ > n̥
+e > e
+a > a
+ʟ̆ > ŋ̊
+ⱱ̟ > m̥
+ɾ̥ > n̥
+ⱱ > ɱ
+ʡ̆ > ʔ
+
+
+
+
+EXAMPLES 
+  
+aⱱ̟aɾ̥ɾ̥e  >  aⱱ̟an̥ɾ̥e 
+aⱱ̟aɾ̥ɾ̥eo:  >  aⱱ̟an̥ɾ̥eÉ¤: 
+aⱱ̟ⱱ̟aɾ̥o:  >  aⱱ̟ⱱ̟an̥o: 
+aⱱ̟ⱱ̟aɾ̥uo:  >  aⱱ̟ⱱ̟an̥uÉ¤: 
+aⱱ̟ⱱ̟iⱱ̟ero:  >  aⱱ̟ⱱ̟im̥ero: 
+aⱱ̟ɾ̥eɾ̥ii:  >  aⱱ̟ɾ̥en̥ii: 
+aⱱ̟ɾ̥eɾ̥iuⱱ̟  >  aⱱ̟ɾ̥en̥iÉ¯ⱱ̟ 
+aⱱ̟yɾ̥ɾ̥iⱱ̟uɾ̥  >  aⱱ̟yn̥ɾ̥im̥un̥ 
+aʟ̆ʟ̆aⱱ̟o:  >  aʟ̆ʟ̆am̥o: 
+aʟ̆ʟ̆aⱱ̟ɾ̥io:  >  aʟ̆ʟ̆am̥ɾ̥iÉ¤: 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, 1, 0, 0, 0, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[0, 1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1] 
+
+Impacted phonems :i > i
+o > o
+n̥ > n̥
+a > a
+r > n̥
+e > e
+a > a
+u > u
+ɾ̥ > n̥
+É¤ > É¤
+ⱱ̟ > m̥
+É¯ > É¯
+ⱱ̟ > m̥
+ⱱ̟ > m̥
+ɾ̥ > n̥
+ɾ̥ > n̥
+e > e
+m̥ > m̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+n̥ > n̥
+ʟ̆ > ŋ̊
+n̥ > n̥
+ɾ̥ > n̥
+m̥ > m̥
+
+
+
+
+EXAMPLES 
+  
+aɾ̥ⱱ̟orɾ̥e:n̥ʟ̆o:  >  aɾ̥ⱱ̟on̥ɾ̥e:n̥ʟ̆o: 
+aɾ̥ⱱ̟orɾ̥i:re  >  aɾ̥ⱱ̟on̥ɾ̥i:re 
+aⱱ̟a:riŋ̊un̥  >  aⱱ̟a:n̥iŋ̊un̥ 
+ⱱ̟aɾ̥ɾ̥iÉ¤:  >  ⱱ̟aɾ̥n̥iÉ¤: 
+ⱱ̟aɾ̥ɾ̥i:re  >  ⱱ̟aɾ̥n̥i:n̥e 
+ʟ̆aⱱ̟ⱱ̟ia:re  >  ʟ̆aⱱ̟m̥ia:re 
+ʟ̆aⱱ̟ⱱ̟ia:ⱱ̟i:  >  ʟ̆aⱱ̟m̥ia:ⱱ̟i: 
+ʟ̆aⱱ̟ⱱ̟iÉ¤:  >  ʟ̆aⱱ̟m̥iÉ¤: 
+ʟ̆aⱱ̟ⱱ̟i:re  >  ʟ̆aⱱ̟m̥i:n̥e 
+ʟ̆aⱱ̟ⱱ̟iÉ¯ⱱ̟  >  ʟ̆aⱱ̟m̥iÉ¯ⱱ̟ 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[0, 1, -1, -1, -1, 0, -1, -1, -1, -1, -1, 0] 
+1  C:   Rel pos :  2  Continu : 1  Template :[1, 0, -1, -1, -1, 0, -1, -1, -1, -1, 1, -1] 
+
+Impacted phonems :i > i
+n̥ > n̥
+a > a
+o > É¤
+e > e
+ŋ̊ > ŋ̊
+n̥ > n̥
+ʟ̆ > ŋ̊
+ɾ̥ > n̥
+n̥ > n̥
+u > É¯
+n̥ > n̥
+m̥ > m̥
+m̥ > m̥
+n̥ > n̥
+m̥ > m̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+aɾ̥ⱱ̟on̥ɾ̥e:n̥ʟ̆o:  >  aɾ̥ⱱ̟É¤n̥ɾ̥e:n̥ʟ̆o: 
+aɾ̥ⱱ̟on̥ɾ̥i:re  >  aɾ̥ⱱ̟É¤n̥ɾ̥i:re 
+aⱱ̟ⱱ̟on̥ɾ̥a  >  aⱱ̟ⱱ̟É¤n̥ɾ̥a 
+aɾ̥ʟ̆o:n̥in̥a:n̥un̥  >  aɾ̥ŋ̊É¤:n̥in̥a:n̥un̥ 
+aɾ̥ɾ̥ea:ɾ̥un̥  >  aɾ̥n̥ea:ɾ̥un̥ 
+ⱱeɾ̥un̥un̥  >  ⱱeɾ̥É¯n̥un̥ 
+ʟ̆iɾ̥u:n̥ia  >  ʟ̆iɾ̥É¯:n̥ia 
+ʟ̆oɾ̥ɾ̥ɾ̥an̥ɾ̥i:n̥om̥on̥in̥  >  ʟ̆oɾ̥ɾ̥n̥an̥ɾ̥i:n̥om̥on̥in̥ 
+ʟ̆oɾ̥ɾ̥in̥ʟ̆e:n̥ʟ̆o:  >  ʟ̆oɾ̥n̥in̥ʟ̆e:n̥ʟ̆o: 
+ʟ̆o:ɾ̥ɾ̥iÉ¤:  >  ʟ̆o:ɾ̥n̥iÉ¤: 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 11, 0, 0, 0, 0, 1, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+ɾ̥ > t
+i > i
+y > y
+m̥ > p
+o > o
+ɾ̥ > t
+ɾ̥ > t
+e > e
+r > t
+u > u
+ʎ̆ > c
+ⱱ̟ > p
+n̥ > t
+É¤ > É¤
+ⱱ̟ > p
+n̥ > t
+ʡ̆ > ʔ
+ⱱ > p̪
+m̥ > p
+n̥ > t
+n̥ > t
+n̥ > t
+e > e
+ɾ̥ > t
+n̥ > t
+n̥ > t
+ⱱ > p̪
+i > i
+m̥ > p
+i > i
+m̥ > p
+ɱ > p̪
+a > a
+n̥ > t
+e > e
+a > a
+n̥ > t
+É¯ > É¯
+n̥ > t
+e > e
+u > u
+e > e
+ʔ > ʔ
+n̥ > t
+i > i
+n̥ > t
+m̥ > p
+
+
+
+
+EXAMPLES 
+  
+aⱱ̟ɾ̥en̥ii:  >  aⱱ̟ten̥ii: 
+aⱱ̟ɾ̥en̥iÉ¯ⱱ̟  >  aⱱ̟ten̥iÉ¯ⱱ̟ 
+aⱱ̟yn̥ɾ̥im̥un̥  >  aⱱ̟yn̥tipun̥ 
+aʟ̆ʟ̆oŋ̊ɾ̥in̥o:  >  aʟ̆ʟ̆oŋ̊tin̥o: 
+aʟ̆ʟ̆on̥ɾ̥iŋ̊o:  >  aʟ̆ʟ̆on̥tiŋ̊o: 
+aʟ̆ʟ̆om̥ⱱ̟ɾ̥e:n̥ʟ̆o:  >  aʟ̆ʟ̆opⱱ̟te:n̥ʟ̆o: 
+aʟ̆ʟ̆om̥ⱱ̟ɾ̥i:re  >  aʟ̆ʟ̆opⱱ̟ti:re 
+aʟ̆ʟ̆ⱱ̟aeri:re  >  aʟ̆ʟ̆ⱱ̟aeti:re 
+a:ʟ̆run̥  >  a:ʟ̆tun̥ 
+a:ʟ̆ɾ̥ua:ɾ̥in̥  >  a:ʟ̆ɾ̥ua:tin̥ 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 3, 0, 0, 0, 1, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ɾ̥ > n
+n̥ > n
+t > n
+m̥ > m
+o > É¤
+ⱱ̟ > m
+n̥ > n
+ʟ̆ > ŋ
+ɾ̥ > n
+ŋ̊ > ŋ
+t > n
+a > a
+n̥ > n
+ŋ̊ > ŋ
+a > a
+i > i
+t > n
+a > a
+n̥ > n
+É¤ > É¤
+t > n
+e > e
+É¯ > É¯
+u > É¯
+m̥ > m
+É¯ > É¯
+p > m
+i > i
+e > e
+i > i
+p̪ > ɱ
+n̥ > n
+e > e
+p̪ > ɱ
+a > a
+n̥ > n
+t > n
+n̥ > n
+ŋ̊ > ŋ
+n̥ > n
+ʔ > ɦ
+ʡ̆ > ɦ
+É¯ > É¯
+t > n
+ʎ̆ > ɲ
+u > É¯
+e > e
+ʔ > ɦ
+n̥ > n
+ʔ > ɦ
+t > n
+m̥ > m
+i > i
+É¤ > É¤
+É¤ > É¤
+m̥ > m
+t > n
+t > n
+
+
+
+
+EXAMPLES 
+  
+aⱱ̟an̥ɾ̥e  >  aⱱ̟an̥ne 
+aⱱ̟an̥ɾ̥eÉ¤:  >  aⱱ̟an̥neÉ¤: 
+aⱱ̟ⱱ̟an̥o:  >  aⱱ̟ⱱ̟ano: 
+aⱱ̟ⱱ̟an̥uÉ¤:  >  aⱱ̟ⱱ̟anuÉ¤: 
+aⱱ̟yn̥tipun̥  >  aⱱ̟yn̥nipun̥ 
+aʟ̆ʟ̆am̥o:  >  aʟ̆ʟ̆amo: 
+aʟ̆ʟ̆am̥ɾ̥iÉ¤:  >  aʟ̆ʟ̆amniÉ¤: 
+aʟ̆ʟ̆am̥ɾ̥o:  >  aʟ̆ʟ̆amno: 
+aʟ̆ʟ̆oŋ̊tin̥o:  >  aʟ̆ʟ̆oŋ̊tinÉ¤: 
+aʟ̆ʟ̆opⱱ̟te:n̥ʟ̆o:  >  aʟ̆ʟ̆opmte:nŋo: 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[1, 0, 2, 2, 0, 0, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+ⱱ̟ > m̥
+a > a
+n̥ > n̥
+n > n̥
+e > e
+É¤ > É¤
+n > n̥
+o > o
+u > u
+i > i
+m̥ > m̥
+r > n̥
+i > i
+i > i
+É¯ > É¯
+ⱱ̟ > m̥
+y > y
+n > n̥
+p > m̥
+o > o
+ŋ̊ > ŋ̊
+t > n̥
+n̥ > n̥
+t > n̥
+ɾ̥ > n̥
+e > e
+n > n̥
+ŋ > ŋ̊
+ⱱ̟ > m̥
+e > e
+t > n̥
+u > u
+a > a
+n > n̥
+c > ɲ̊
+p > m̥
+n > n̥
+a > a
+ŋ > ŋ̊
+m̥ > m̥
+p > m̥
+p > m̥
+ʎ̆ > ɲ̊
+t > n̥
+y > y
+ɾ̥ > n̥
+i > i
+t > n̥
+m̥ > m̥
+n > n̥
+n > n̥
+p̪ > p̪
+É¯ > É¯
+m > m̥
+i > i
+ɱ > p̪
+e > e
+n > n̥
+ŋ > ŋ̊
+ɦ > ʔ
+ɦ > ʔ
+É¯ > É¯
+e > e
+ɲ > ɲ̊
+e > e
+ɦ > ʔ
+ɦ > ʔ
+i > i
+É¤ > É¤
+É¤ > É¤
+n > n̥
+n > n̥
+
+
+
+
+EXAMPLES 
+  
+aⱱ̟an̥ne  >  am̥an̥n̥e 
+aⱱ̟an̥neÉ¤:  >  am̥an̥n̥eÉ¤: 
+aⱱ̟ⱱ̟ano:  >  am̥m̥an̥o: 
+aⱱ̟ⱱ̟anuÉ¤:  >  am̥m̥an̥uÉ¤: 
+aⱱ̟ⱱ̟im̥ero:  >  am̥m̥im̥en̥o: 
+aⱱ̟ten̥iÉ¯ⱱ̟  >  aⱱ̟ten̥iÉ¯m̥ 
+aⱱ̟yn̥nipun̥  >  am̥yn̥n̥im̥un̥ 
+aʟ̆ʟ̆amo:  >  aʟ̆ʟ̆am̥o: 
+aʟ̆ʟ̆amniÉ¤:  >  aʟ̆ʟ̆am̥n̥iÉ¤: 
+aʟ̆ʟ̆amno:  >  aʟ̆ʟ̆am̥n̥o: 
+A change has occured 
+
+
+The feature Nasal switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 7, 0, 0, 0, 0, 0, 1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -3  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :i > i
+e > e
+n̥ > n̥
+a > a
+o > o
+n̥ > n̥
+m̥ > m̥
+u > u
+n̥ > n̥
+e > e
+n̥ > n̥
+i > i
+ŋ̊ > ŋ̊
+É¤ > É¤
+e > e
+a > a
+u > u
+t > n̥
+ŋ̊ > ŋ̊
+É¤ > É¤
+n̥ > n̥
+o > o
+i > i
+ɾ̥ > n̥
+n̥ > n̥
+n̥ > n̥
+É¯ > É¯
+a > a
+p > m̥
+a > a
+t > n̥
+n̥ > n̥
+m̥ > m̥
+i > i
+ɾ̥ > n̥
+ʟ̆ > ŋ̊
+e > e
+p̪ > ɱ
+ⱱ > ɱ
+ⱱ̟ > m̥
+y > y
+n̥ > n̥
+e > e
+m̥ > m̥
+É¯ > É¯
+n̥ > n̥
+a > a
+p̪ > ɱ
+e > e
+
+
+
+
+EXAMPLES 
+  
+am̥a:tiŋ̊un̥  >  am̥a:n̥iŋ̊un̥ 
+auʟ̆ɾ̥o:n̥in̥n̥o:  >  auʟ̆n̥o:n̥in̥n̥o: 
+ʟ̆an̥ŋ̊tiŋ̊n̥un̥  >  ʟ̆an̥ŋ̊n̥iŋ̊n̥un̥ 
+ʟ̆i:n̥ŋ̊pa:ŋ̊in̥n̥a:  >  ʟ̆i:n̥ŋ̊m̥a:ŋ̊in̥n̥a: 
+ʟ̆oaŋ̊ɾ̥iŋ̊a:n̥e  >  ʟ̆oaŋ̊n̥iŋ̊a:n̥e 
+ʟ̆om̥m̥te:n̥ŋ̊o:  >  ʟ̆om̥m̥n̥e:n̥ŋ̊o: 
+ʟ̆on̥n̥ta:p̪aŋ̊iÉ¤:  >  ʟ̆on̥n̥n̥a:p̪aŋ̊iÉ¤: 
+n̥e:eŋ̊ɾ̥ʟ̆in̥a:n̥e  >  n̥e:eŋ̊n̥ŋ̊in̥a:n̥e 
+n̥e:eŋ̊ɾ̥ʟ̆in̥o:  >  n̥e:eŋ̊n̥ʟ̆in̥o: 
+eʟ̆ɾ̥ʟ̆an̥eÉ¤:  >  eʟ̆ɾ̥ŋ̊an̥eÉ¤: 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, 0, -1, 0, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 0  Template :[1, 0, 2, -1, -1, -1, -1, -1, -1, -1, 1, -1] 
+
+Impacted phonems :n̥ > t
+n̥ > t
+n̥ > t
+i > i
+m̥ > p
+a > a
+n̥ > t
+t > t
+n̥ > t
+a > a
+n̥ > t
+n̥ > t
+i > i
+n̥ > t
+i > i
+m̥ > p
+n̥ > t
+ŋ̊ > k
+o > É¤
+ŋ̊ > k
+n̥ > t
+i > i
+e > e
+ɱ > p̪
+ɱ > p̪
+m̥ > p
+m̥ > p
+y > i
+n̥ > t
+m̥ > p
+a > a
+o > É¤
+e > e
+n̥ > t
+a > a
+e > e
+u > É¯
+É¤ > É¤
+m̥ > p
+
+
+
+
+EXAMPLES 
+  
+aʟ̆ʟ̆om̥m̥n̥e:n̥ŋ̊o:  >  aʟ̆ʟ̆om̥m̥te:n̥ŋ̊o: 
+aeɾ̥a:n̥iŋ̊um̥  >  aeɾ̥a:tiŋ̊um̥ 
+an̥e:m̥otyn̥a  >  an̥e:m̥otyta 
+an̥em̥otyn̥e:  >  an̥em̥otyte: 
+an̥ŋ̊É¤:n̥in̥a:n̥un̥  >  an̥ŋ̊É¤:n̥ita:n̥un̥ 
+m̥ito:m̥um̥  >  m̥ito:m̥up 
+ʟ̆aen̥an̥aÉ¯ŋ̊un̥n̥a  >  ʟ̆aen̥ataÉ¯ŋ̊un̥n̥a 
+ʟ̆oaŋ̊n̥iŋ̊a:n̥e  >  ʟ̆oaŋ̊tiŋ̊a:n̥e 
+ʟ̆oʟ̆i:n̥a:n̥iÉ¯n̥  >  ʟ̆oʟ̆i:ta:n̥iÉ¯n̥ 
+ʟ̆on̥um̥m̥i:n̥un̥  >  ʟ̆on̥upm̥i:n̥un̥ 
+A change has occured 
+
+
+The feature Lateral switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, 0, 0, -1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  5  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  2  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+ʟ̆ > ʟ̝̊
+m̥ > ɬ
+u > u
+n̥ > ɬ
+n̥ > ɬ
+a > a
+n̥ > ɬ
+i > i
+ⱱ > ɬ
+m̥ > ɬ
+n̥ > ɬ
+e > e
+o > o
+a > a
+ɾ̥ > ɬ
+i > i
+É¯ > É¯
+n̥ > ɬ
+o > o
+n̥ > ɬ
+k > ʟ̝̊
+i > i
+ʔ > ʟ̠
+y > y
+e > e
+e > e
+a > a
+n̥ > ɬ
+e > e
+É¤ > É¤
+
+
+
+
+EXAMPLES 
+  
+aʟ̆ʟ̆am̥n̥iÉ¤:  >  aʟ̝̊ʟ̆am̥n̥iÉ¤: 
+aʟ̆ʟ̆am̥n̥o:  >  aʟ̝̊ʟ̆am̥n̥o: 
+aʟ̆ʟ̆oŋ̊n̥in̥É¤:  >  aʟ̝̊ʟ̆oŋ̊n̥in̥É¤: 
+aʟ̆ʟ̆on̥n̥iŋ̊o:  >  aʟ̝̊ʟ̆on̥n̥iŋ̊o: 
+aʟ̆ʟ̆on̥n̥o:  >  aʟ̝̊ʟ̆on̥n̥o: 
+aʟ̆ʟ̆om̥m̥te:n̥ŋ̊o:  >  aʟ̝̊ʟ̆om̥ɬte:n̥ŋ̊o: 
+aʟ̆ʟ̆om̥m̥n̥i:n̥e  >  aʟ̝̊ʟ̆om̥m̥n̥i:n̥e 
+aʟ̆ʟ̆on̥n̥a:n̥e  >  aʟ̝̊ʟ̆on̥n̥a:n̥e 
+aʟ̆ʟ̆on̥n̥o:  >  aʟ̝̊ʟ̆on̥n̥o: 
+aʟ̆ʟ̆m̥aen̥iÉ¤:  >  aʟ̆ʟ̝̊m̥aen̥iÉ¤: 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, 0, -1, -1, 0, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+i > i
+n̥ > t
+i > i
+n̥ > t
+n̥ > t
+m̥ > p
+e > e
+a > a
+a > a
+n̥ > t
+i > i
+ɬ > t
+e > e
+a > a
+n̥ > t
+n̥ > t
+e > e
+e > e
+o > o
+ⱱ > p̪
+u > u
+ɬ > p̪
+ɲ̊ > c
+u > u
+n̥ > t
+i > i
+m̥ > p
+ɬ > p
+n̥ > t
+É¤ > É¤
+n̥ > t
+É¤ > É¤
+a > a
+ɬ > t
+o > o
+u > u
+m̥ > p
+i > i
+m̥ > p
+y > y
+É¯ > É¯
+É¯ > É¯
+ʡ̆ > ʔ
+a > a
+o > o
+p > p
+ɬ > t
+e > e
+a > a
+i > i
+t > t
+e > e
+e > e
+a > a
+e > e
+É¤ > É¤
+n̥ > t
+É¯ > É¯
+e > e
+É¤ > É¤
+
+
+
+
+EXAMPLES 
+  
+am̥yn̥n̥im̥un̥  >  am̥ytn̥im̥un̥ 
+aʟ̝̊ʟ̆on̥n̥iŋ̊o:  >  aʟ̝̊ʟ̆otn̥iŋ̊o: 
+aʟ̝̊ʟ̆on̥n̥a:n̥e  >  aʟ̝̊ʟ̆otn̥a:n̥e 
+aʟ̆ʟ̝̊m̥aen̥iÉ¤:  >  aʟ̆ʟ̝̊paen̥iÉ¤: 
+aʟ̆ʟ̝̊m̥aen̥i:n̥e  >  aʟ̆ʟ̝̊paen̥i:n̥e 
+aɬm̥aɬn̥ia:n̥e  >  aɬm̥aɬtia:n̥e 
+aɬm̥en̥n̥e:n̥ŋ̊o:  >  aɬm̥etn̥e:n̥ŋ̊o: 
+aɬɲ̊uŋ̊n̥ɾ̥a:n̥e  >  aɬɲ̊uŋ̊tɾ̥a:n̥e 
+aɬm̥É¤ɬn̥e:n̥ŋ̊o:  >  aɬm̥É¤tn̥e:n̥ŋ̊o: 
+aɬm̥É¤n̥n̥i:n̥e  >  aɬm̥É¤tn̥i:n̥e 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[1, 0, -1, -1, -1, 0, -1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+1  C:   Rel pos :  -3  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :n̥ > t
+a > a
+e > e
+i > i
+i > i
+n̥ > t
+n̥ > t
+n̥ > t
+e > e
+n̥ > t
+a > a
+n̥ > t
+ʡ̆ > ʔ
+a > a
+e > e
+u > u
+y > y
+o > o
+É¤ > É¤
+n̥ > t
+É¯ > É¯
+m̥ > p
+n̥ > t
+t > t
+n̥ > t
+É¤ > É¤
+m̥ > p
+m̥ > p
+
+
+
+
+EXAMPLES 
+  
+am̥an̥n̥e  >  am̥atn̥e 
+am̥an̥n̥eÉ¤:  >  am̥atn̥eÉ¤: 
+aʟ̝̊ʟ̆on̥n̥o:  >  aʟ̝̊ʟ̆otn̥o: 
+aʟ̝̊ʟ̆om̥ɬte:n̥ŋ̊o:  >  aʟ̝̊ʟ̆om̥ɬte:tŋ̊o: 
+aʟ̝̊ʟ̆on̥n̥o:  >  aʟ̝̊ʟ̆otn̥o: 
+aʟ̆ʟ̝̊paen̥iÉ¤:  >  aʟ̆ʟ̝̊paetiÉ¤: 
+aʟ̆u:ŋ̊n̥ae  >  aʟ̆u:ŋ̊tae 
+aɬm̥an̥n̥iÉ¤:  >  aɬm̥attiÉ¤: 
+aɬm̥etn̥e:n̥ŋ̊o:  >  aɬm̥etn̥e:tŋ̊o: 
+an̥ɬn̥aŋ̊ŋ̊ʡ̆iÉ¤:  >  an̥ɬn̥aŋ̊ŋ̊ʔiÉ¤: 
+A change has occured 
+
+
+The feature Plosive switched values from 1 to 0
+
+Target :   
+[1, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :n̥ > n̥
+i > i
+ŋ̊ > ŋ̊
+t > n̥
+ɬ > m̥
+t > n̥
+m̥ > m̥
+t > n̥
+e > e
+a > a
+t > n̥
+a > a
+ŋ̊ > ŋ̊
+t > n̥
+n̥ > n̥
+t > n̥
+t > n̥
+o > É¤
+u > É¯
+i > i
+É¤ > É¤
+o > É¤
+p > m̥
+u > É¯
+i > i
+É¯ > É¯
+ŋ̊ > ŋ̊
+n̥ > n̥
+ŋ̊ > ŋ̊
+a > a
+p > m̥
+t > n̥
+t > n̥
+a > a
+a > a
+e > e
+i > i
+t > n̥
+m̥ > m̥
+i > i
+m̥ > m̥
+e > e
+ʔ > h
+e > e
+ʔ > h
+a > a
+ŋ̊ > ŋ̊
+É¤ > É¤
+t > n̥
+É¯ > É¯
+e > e
+t > n̥
+ʟ̝̊ > ŋ̊
+m̥ > m̥
+É¤ > É¤
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+aʟ̝̊ʟ̆otn̥iŋ̊o:  >  aʟ̝̊ʟ̆on̥n̥iŋ̊o: 
+aʟ̝̊ʟ̆om̥ɬte:tŋ̊o:  >  aʟ̝̊ʟ̆om̥m̥n̥e:tŋ̊o: 
+aʟ̝̊ʟ̆otn̥a:n̥e  >  aʟ̝̊ʟ̆on̥n̥a:n̥e 
+aɬm̥aɬtia:n̥e  >  aɬm̥aɬn̥ia:n̥e 
+aɬm̥etn̥e:tŋ̊o:  >  aɬm̥en̥n̥e:tŋ̊o: 
+aɬɲ̊uŋ̊tɾ̥a:n̥e  >  aɬɲ̊uŋ̊n̥ɾ̥a:n̥e 
+aɬm̥É¤tn̥e:tŋ̊o:  >  aɬm̥É¤n̥n̥e:tŋ̊o: 
+aɬm̥É¤tn̥i:n̥e  >  aɬm̥É¤n̥n̥i:n̥e 
+aⱱ̟ɬn̥etn̥um̥  >  aⱱ̟ɬn̥en̥n̥um̥ 
+aɬm̥etn̥u:n̥a  >  aɬm̥en̥n̥u:n̥a 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[1, 0, 3, 2, 1, 0, 0, 0, 0, 1, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+m̥ > m
+a > a
+t > n
+n̥ > n
+e > e
+É¤ > É¤
+n̥ > n
+o > É¤
+u > É¯
+i > i
+m̥ > m
+e > e
+n̥ > n
+t > n
+i > i
+i > i
+e > e
+n̥ > n
+i > i
+É¯ > É¯
+m̥ > m
+y > i
+t > n
+m̥ > m
+n̥ > n
+ʟ̆ > ŋ
+a > a
+ʟ̝̊ > ŋ
+a > a
+o > É¤
+ŋ̊ > ŋ
+n̥ > n
+i > i
+n̥ > n
+n̥ > n
+ŋ̊ > ŋ
+o > É¤
+t > n
+n̥ > n
+m̥ > m
+t > n
+m̥ > m
+t > n
+ɾ̥ > n
+p > m
+e > e
+e > e
+u > É¯
+a > a
+u > É¯
+u > É¯
+a > a
+m̥ > m
+ɬ > n
+ɬ > m
+e > e
+n̥ > n
+ʔ > ɦ
+ɲ̊ > ɲ
+m̥ > m
+i > i
+a > a
+ŋ̊ > ŋ
+a > a
+É¤ > É¤
+n̥ > n
+n̥ > n
+e > e
+ŋ̊ > ŋ
+e > e
+ŋ̊ > ŋ
+m̥ > m
+m̥ > m
+n̥ > n
+i > i
+p̪ > ɱ
+m̥ > m
+p̪ > ɱ
+n̥ > n
+n̥ > n
+i > i
+p > m
+É¤ > É¤
+ŋ̊ > ŋ
+ŋ̊ > ŋ
+ɬ > n
+e > e
+t > n
+o > É¤
+a > a
+t > n
+ɬ > n
+É¤ > É¤
+t > n
+u > É¯
+i > i
+a > a
+É¯ > É¯
+m̥ > m
+t > n
+É¯ > É¯
+p > m
+i > i
+a > a
+É¯ > É¯
+ŋ̊ > ŋ
+ɬ > m
+n̥ > n
+a > a
+ŋ̊ > ŋ
+ɬ > n
+p̪ > ɱ
+o > É¤
+t > n
+n̥ > n
+t > n
+a > a
+e > e
+ʟ̝̊ > ŋ
+i > i
+ʎ̆ > ɲ
+n̥ > n
+i > i
+ⱱ > ɱ
+i > i
+ʟ̠ > ɦ
+a > a
+ʡ̆ > ɦ
+y > i
+e > e
+e > e
+e > e
+h > ɦ
+a > a
+ʔ > ɦ
+É¯ > É¯
+a > a
+i > i
+ɲ̊ > ɲ
+ɱ > ɱ
+ŋ̊ > ŋ
+o > É¤
+É¤ > É¤
+n̥ > n
+a > a
+É¯ > É¯
+e > e
+ŋ̊ > ŋ
+m̥ > m
+É¤ > É¤
+
+
+
+
+EXAMPLES 
+  
+am̥atn̥e  >  amanne 
+am̥atn̥eÉ¤:  >  amanneÉ¤: 
+am̥m̥an̥o:  >  ammanÉ¤: 
+am̥m̥an̥uÉ¤:  >  ammanÉ¯É¤: 
+am̥m̥im̥en̥o:  >  ammimenÉ¤: 
+aⱱ̟ten̥ii:  >  amnenii: 
+aⱱ̟ten̥iÉ¯m̥  >  amneniÉ¯m 
+am̥ytn̥im̥un̥  >  aminnimÉ¯n 
+aʟ̆ʟ̆a  >  aŋŋa 
+aʟ̆ʟ̆am̥o:  >  aŋŋamÉ¤: 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, 0, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :n > t
+i > i
+e > e
+m > p
+n > t
+m > p
+a > a
+É¤ > É¤
+n > t
+m > p
+É¯ > É¯
+e > e
+n > t
+m > p
+i > i
+ŋ > k
+É¤ > É¤
+e > e
+ŋ > k
+m > p
+n > t
+i > i
+n > t
+n > t
+m > p
+ŋ > k
+n > t
+n > t
+É¤ > É¤
+a > a
+É¯ > É¯
+n > t
+i > i
+a > a
+É¯ > É¯
+m > p
+n > t
+a > a
+n > t
+n > t
+n > t
+n > t
+a > a
+e > e
+e > e
+a > a
+É¯ > É¯
+a > a
+ɱ > p̪
+ŋ > k
+n > t
+a > a
+É¯ > É¯
+m > p
+
+
+
+
+EXAMPLES 
+  
+amanne  >  amatne 
+amanneÉ¤:  >  amatneÉ¤: 
+amneniÉ¯m  >  amneniÉ¯p 
+aminnimÉ¯n  >  amitnipÉ¯n 
+aŋŋÉ¤ŋninÉ¤:  >  aŋŋÉ¤ŋtinÉ¤: 
+aŋŋÉ¤mmne:nŋÉ¤:  >  aŋŋÉ¤pmne:nŋÉ¤: 
+aŋŋÉ¤mmni:ne  >  aŋŋÉ¤pmni:ne 
+aŋŋmaeniÉ¤:  >  aŋŋpaeniÉ¤: 
+aŋŋmaeni:ne  >  aŋŋpaeni:ne 
+aŋÉ¯:nia:ne  >  aŋÉ¯:tia:ne 
+A change has occured 
+
+
+The feature Backness switched values from 3 to 0
+
+Target :   
+[1, 0, 0, 2, 0, 1, 0, 1, 1, 1, 1, 0] 
+Effects : 
+[-1, -1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ŋ > ʔ
+ŋ > ʔ
+ŋ > ʔ
+ŋ > ʔ
+ŋ > ʔ
+ŋ > ʔ
+ŋ > ʔ
+ŋ > ʔ
+ŋ > ʔ
+ŋ > ʔ
+
+
+
+
+EXAMPLES 
+  
+aŋŋa  >  aʔŋa 
+aŋŋamÉ¤:  >  aʔŋamÉ¤: 
+aŋŋamniÉ¤:  >  aʔŋamniÉ¤: 
+aŋŋamnÉ¤:  >  aʔŋamnÉ¤: 
+aŋŋÉ¤ŋtinÉ¤:  >  aʔŋÉ¤ʔtinÉ¤: 
+aŋŋÉ¤nniŋÉ¤:  >  aʔŋÉ¤nniŋÉ¤: 
+aŋŋÉ¤nnÉ¤:  >  aʔŋÉ¤nnÉ¤: 
+aŋŋÉ¤pmne:nŋÉ¤:  >  aʔŋÉ¤pmne:nŋÉ¤: 
+aŋŋÉ¤pmni:ne  >  aʔŋÉ¤pmni:ne 
+aŋŋÉ¤nna:ne  >  aʔŋÉ¤nna:ne 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, 1, 0, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+1  C:   Rel pos :  -1  Continu : 0  Template :[0, 1, 0, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+2  C:   Rel pos :  1  Continu : 0  Template :[1, 0, -1, 0, -1, 1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m > m̥
+t > n̥
+a > a
+n > n̥
+t > n̥
+
+
+
+
+EXAMPLES 
+  
+ammÉ¤nia:ne  >  amm̥É¤nia:ne 
+aÉ¯ʔtÉ¤:ninnÉ¤:  >  aÉ¯ʔn̥É¤:ninnÉ¤: 
+ɦinnÉ¤panni:a  >  ɦinn̥É¤panni:a 
+ɦinnÉ¤pannin  >  ɦinn̥É¤pannin 
+itnÉ¤nenn  >  itn̥É¤nenn 
+nÉ¤ptÉ¤nennÉ¯n  >  nÉ¤pn̥É¤nennÉ¯n 
+A change has occured 
+
+
+The feature Backness switched values from 2 to 0
+
+Target :   
+[0, 1, 0, 3, 0, 1, 0, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, 2, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -2  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+e > É¤
+i > É¯
+i > É¯
+i > É¯
+i > É¯
+e > É¤
+e > É¤
+e > É¤
+a > a
+a > a
+a > a
+a > a
+a > a
+i > É¯
+e > É¤
+i > É¯
+a > a
+a > a
+i > É¯
+e > É¤
+i > É¯
+a > a
+e > É¤
+i > É¯
+e > É¤
+
+
+
+
+EXAMPLES 
+  
+ammimenÉ¤:  >  ammimÉ¤nÉ¤: 
+amnenii:  >  amnenÉ¯É¯: 
+amneniÉ¯p  >  amnenÉ¯É¯p 
+amitnipÉ¯n  >  amÉ¯tnipÉ¯n 
+aʔŋÉ¤pmni:ne  >  aʔŋÉ¤pmni:nÉ¤ 
+aʔŋÉ¤nna:ne  >  aʔŋÉ¤nna:nÉ¤ 
+aŋʔpaeniÉ¤:  >  aŋʔpaÉ¤nÉ¯É¤: 
+aŋʔpaeni:ne  >  aŋʔpaÉ¤nÉ¯:nÉ¤ 
+a:ʔnÉ¯a:nin  >  a:ʔnÉ¯a:nÉ¯n 
+aŋÉ¯:ʔnae  >  aŋÉ¯:ʔnaÉ¤ 
+A change has occured 
+
+
+The feature Height switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, 1, 0, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+1  C:   Rel pos :  -5  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+
+Impacted phonems :n > n̥
+k > ŋ̊
+n > n̥
+t > n̥
+n > n̥
+t > n̥
+ʔ > ʔ
+a > É›
+a > ÊŒ
+m > m̥
+a > É›
+n > n̥
+p > m̥
+a > É›
+n > n̥
+a > ÊŒ
+n > n̥
+n > n̥
+m > m̥
+ɦ > ɦ
+n > n̥
+p > m̥
+ʔ > ʔ
+ʔ > ʔ
+a > ÊŒ
+
+
+
+
+EXAMPLES 
+  
+atŋÉ¤:tÉ¯na:tÉ¯n  >  atŋÉ¤:tÉ¯n̥a:tÉ¯n 
+ammanÉ¯kÉ¯na:nÉ¤  >  ammanÉ¯ŋ̊É¯na:nÉ¤ 
+maɲɲÉ¯nÉ¯:mÉ¯n  >  maɲɲÉ¯n̥É¯:mÉ¯n 
+mennina:nÉ¯n  >  mennin̥a:nÉ¯n 
+mÉ¤nŋa:nÉ¯ŋÉ¯p  >  mÉ¤nŋa:n̥É¯ŋÉ¯p 
+mi:nnatniÉ¤t  >  mi:nnan̥niÉ¤t 
+mi:nnatniÉ¯p  >  mi:nnan̥niÉ¯p 
+ʔaÉ¤nanaÉ¯ŋÉ¯nna  >  ʔaÉ¤nan̥aÉ¯ŋÉ¯nna 
+ʔɦi:nÉ¯tʔia:tÉ¯n  >  ʔɦi:nÉ¯n̥ʔia:tÉ¯n 
+ŋi:tʔpa:ŋÉ¯tna:  >  ŋi:tʔpÉ›:ŋÉ¯tna: 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[1, 0, 3, 0, 0, 1, 0, 1, 0, 0, 1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -4  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -4  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :e > e
+É¤ > É¤
+É¯ > É¯
+É¤ > É¤
+É¤ > É¤
+É¯ > É¯
+É¯ > É¯
+É¯ > É¯
+É¯ > É¯
+i > i
+i > i
+i > i
+É¤ > É¤
+a > a
+É¤ > É¤
+É¤ > É¤
+a > a
+a > a
+e > e
+a > a
+a > a
+a > a
+a > a
+É¯ > É¯
+a > a
+a > a
+É¯ > É¯
+i > i
+a > a
+É¤ > É¤
+a > a
+e > e
+É¤ > É¤
+É¯ > É¯
+i > i
+i > i
+i > i
+a > a
+É¤ > É¤
+É¯ > É¯
+É¯ > É¯
+É¤ > É¤
+a > a
+É¤ > É¤
+
+
+
+
+EXAMPLES 
+  
+ammanÉ¤:  >  amman:É¤ 
+aʔŋamÉ¤:  >  aʔŋam:É¤ 
+aʔŋamnÉ¤:  >  aʔŋamn:É¤ 
+aʔŋÉ¤ʔtinÉ¤:  >  aʔŋÉ¤ʔtin:É¤ 
+aʔŋÉ¤nniŋÉ¤:  >  aʔŋÉ¤nniŋ:É¤ 
+aʔŋÉ¤nnÉ¤:  >  aʔŋÉ¤nn:É¤ 
+aʔŋÉ¤pmne:nŋÉ¤:  >  aʔŋÉ¤pmne:nŋ:É¤ 
+aʔŋÉ¤nna:nÉ¤  >  aʔŋÉ¤nn:anÉ¤ 
+aʔŋÉ¤nnÉ¤:  >  aʔŋÉ¤nn:É¤ 
+aŋʔpaÉ¤nÉ¯:nÉ¤  >  aŋʔpaÉ¤n:É¯nÉ¤ 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 7, 0, 1, 0, 1, 1, 0, 2, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] 
+
+Impacted phonems :m > m
+e > e
+n > n
+n > n
+ŋ > ŋ
+i > i
+n > n
+n > n
+n > n
+p > p
+É¯ > É¯
+n > n
+a > a
+t > t
+i > i
+ɦ > ɦ
+ɲ > ɲ
+ʔ > ʔ
+ʔ > ʔ
+n > n
+ŋ > ŋ
+ɱ > ɱ
+m > m
+p > p
+n > n
+p > p
+n̥ > n̥
+t > t
+ŋ̊ > ŋ̊
+n > n
+m̥ > m̥
+ʔ > ʔ
+n̥ > n̥
+n > n
+m > m
+n̥ > n̥
+É¤ > É¤
+a > a
+m > m
+ʔ > ʔ
+n > n
+m̥ > m̥
+n̥ > n̥
+e > e
+ɱ > ɱ
+p > p
+ɦ > ɦ
+m > m
+t > t
+t > t
+É¯ > É¯
+p̪ > p̪
+ʔ > ʔ
+ʔ > ʔ
+ŋ > ŋ
+n > n
+a > a
+n > n
+ŋ > ŋ
+É¯ > É¯
+
+
+
+
+EXAMPLES 
+  
+ammimÉ¤nÉ¤:  >  ammimÉ¤n:É¤ 
+aʔŋÉ¤pmne:nŋ:É¤  >  aʔŋÉ¤pmn:enŋ:É¤ 
+aʔŋÉ¤pmni:nÉ¤  >  aʔŋÉ¤pmn:inÉ¤ 
+aŋÉ¯:ʔna  >  aŋ:É¯ʔna 
+aŋÉ¯:ʔnaÉ¤  >  aŋ:É¯ʔnaÉ¤ 
+aŋÉ¯:tÉ¯a:nÉ¤  >  aŋ:É¯tÉ¯a:nÉ¤ 
+aŋÉ¯:nÉ¯É¤:  >  aŋ:É¯nÉ¯É¤: 
+anɲÉ¯ŋnna:nÉ¤  >  anɲÉ¯ŋnn:anÉ¤ 
+anɲÉ¯ŋnnÉ¤:  >  anɲÉ¯ŋnn:É¤ 
+anma:ŋ:anÉ¤  >  anm:aŋ:anÉ¤ 
+A change has occured 
+
+
+The feature Nasal switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] 
+
+Impacted phonems :a > a
+a > a
+m > m̥
+i > i
+ŋ > ŋ̊
+n > n̥
+É¯ > É¯
+ŋ > ŋ
+n > n
+n > n̥
+ŋ > ŋ̊
+t > n̥
+ŋ > ŋ̊
+m > m̥
+n > n
+n > n
+n > n
+e > e
+n > n̥
+n > n
+p > p
+n > n
+k > k
+p > p
+t > n̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+n > n
+n > n̥
+m > m
+n > n̥
+n̥ > n̥
+n̥ > n̥
+ɱ > ɱ
+a > a
+É¤ > É¤
+i > i
+É¯ > É¯
+n > n̥
+m̥ > m̥
+É¤ > É¤
+ɱ > ɱ
+n̥ > n̥
+n̥ > n̥
+É¯ > É¯
+ɦ > ɦ
+a > a
+n̥ > n̥
+ɲ > ɲ
+É¤ > É¤
+m > m
+m̥ > m̥
+ɦ > ɴ
+m > m̥
+É¯ > É¯
+p̪ > p̪
+ŋ̊ > ŋ̊
+m > m̥
+É¤ > É¤
+É¤ > É¤
+e > e
+i > i
+
+
+
+
+EXAMPLES 
+  
+ammimÉ¤n:É¤  >  ammim̥É¤n:É¤ 
+aʔŋÉ¤pmn:enŋ:É¤  >  aʔŋÉ¤m̥mn:enŋ:É¤ 
+aʔŋÉ¤pmn:inÉ¤  >  aʔŋÉ¤m̥mn:inÉ¤ 
+aŋʔpaÉ¤nÉ¯É¤:  >  aŋ̊ʔpaÉ¤nÉ¯É¤: 
+aŋʔpaÉ¤n:É¯nÉ¤  >  aŋ̊ʔpaÉ¤n̥:É¯nÉ¤ 
+anmtaŋʔɦiÉ¤:  >  an̥mtaŋ̊ʔɦiÉ¤: 
+anɲÉ¯ŋnn:anÉ¤  >  anɲÉ¯ŋ̊nn:anÉ¤ 
+anɲÉ¯ŋnn:É¤  >  anɲÉ¯ŋ̊nn:É¤ 
+anpit:aʔÉ¯a:nÉ¤  >  anpin̥:aʔÉ¯a:nÉ¤ 
+anpit:aʔÉ¯É¤:  >  anpin̥:aʔÉ¯É¤: 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[-1, -1, 0, -1, 0, 1, -1, -1, -1, -1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+a > a
+n̥ > n
+n̥ > n
+n̥ > n
+
+
+
+
+EXAMPLES 
+  
+ɦinn̥É¤panni:a  >  ɦinnÉ¤panni:a 
+ɦinn̥É¤pannin  >  ɦinnÉ¤pannin 
+itn̥É¤nÉ¤nn  >  itnÉ¤nÉ¤nn 
+nÉ¤pn̥É¤nÉ¤nnÉ¯n  >  nÉ¤pnÉ¤nÉ¤nnÉ¯n 
+A change has occured 
+
+
+The feature Lateral switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, 1, -1, -1, 1, -1, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 1  Template :[0, 0, 2, 0, -1, -1, -1, -1, -1, -1, 1, 0] 
+
+Impacted phonems :i > i
+m̥ > ɬ
+É¤ > É¤
+ʔ > ʟ̠
+a > a
+ŋ̊ > ʟ̝̊
+i > i
+a > a
+ʔ > ʟ̠
+É¯ > É¯
+n̥ > ɬ
+É¤ > É¤
+i > i
+n̥ > ɬ
+É¤ > É¤
+m > ɬ
+É¤ > É¤
+e > e
+ʔ > ʟ̠
+ɱ > ɬ
+É¤ > É¤
+É¯ > É¯
+ŋ > ʟ̝̊
+a > a
+n̥ > ɬ
+n > ɬ
+m > ɬ
+n > ɬ
+a > a
+n > ɬ
+n > ɬ
+É¤ > É¤
+ʔ > ʟ̠
+n > ɬ
+a > a
+m̥ > ɬ
+É¤ > É¤
+ʔ > ʟ̠
+É¤ > É¤
+m̥ > ɬ
+n > ɬ
+ɱ > ɬ
+n̥ > ɬ
+p > ɬ
+ɦ > ʟ̠
+É¤ > É¤
+ɱ > ɬ
+
+
+
+
+EXAMPLES 
+  
+ammim̥É¤n:É¤  >  ammiɬÉ¤n:É¤ 
+anneʔmÉ¤n  >  anneʟ̠mÉ¤n 
+an̥ntaŋ̊É¤nÉ¤  >  an̥ntaʟ̝̊É¤nÉ¤ 
+ŋant:aʔÉ¤É¯n  >  ŋant:aʟ̠É¤É¯n 
+ʔaÉ¯n̥:É¤nÉ¯É¯p  >  ʔaÉ¯ɬ:É¤nÉ¯É¯p 
+ŋÉ¤n̥nnÉ›tn̥:in̥É¤m̥É¤nÉ¯n  >  ŋÉ¤n̥nnÉ›tn̥:iɬÉ¤m̥É¤nÉ¯n 
+ʔnemÉ¤nnÉ¯p  >  ʔneɬÉ¤nnÉ¯p 
+ʔnem̥É¤nÉ¤  >  ʔneɬÉ¤nÉ¤ 
+ŋiʔ:nÉ¤mn  >  ŋiʟ̠:nÉ¤mn 
+neÉ¯ɱÉ¤npin  >  neÉ¯ɬÉ¤npin 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m > m
+É¤ > É¤
+a > a
+ŋ > ŋ
+É¤ > É¤
+ŋ > ŋ
+t > t
+n > n
+a > a
+e > e
+n > n
+e > e
+n > n
+n > n
+n > n
+n > n
+ŋ > ŋ
+e > e
+n > n
+p > p
+n > n
+n > n
+k > k
+p > p
+n > n
+p > p
+t > t
+n > n
+n > n
+É¤ > É¤
+É¯ > É¯
+É¯ > É¯
+É¯ > É¯
+n > n
+n > n
+É¯ > É¯
+m > m
+m > m
+p > p
+n > n
+É¯ > É¯
+É¤ > É¤
+m > m
+a > a
+a > a
+É¯ > É¯
+É¯ > É¯
+É¤ > É¤
+a > a
+É¤ > É¤
+ʔ > ʔ
+ʔ > ʔ
+É¤ > É¤
+É¤ > É¤
+m > m
+t > t
+m > m
+m > m
+n > n
+É¯ > É¯
+p̪ > p̪
+ʔ > ʔ
+ʔ > ʔ
+a > a
+ŋ > ŋ
+ɱ > ɱ
+n > n
+É¤ > É¤
+n > n
+É¤ > É¤
+ɱ > ɱ
+É¤ > É¤
+ÊŒ > ÊŒ
+p > p
+ɲ > ɲ
+
+
+
+
+EXAMPLES 
+  
+aŋ:É¯ʔna  >  aŋÉ¯:ʔna 
+aŋ:É¯ʔnaÉ¤  >  aŋÉ¯:ʔnaÉ¤ 
+aŋ:É¯tÉ¯a:nÉ¤  >  aŋÉ¯:tÉ¯a:nÉ¤ 
+aŋ:É¯nÉ¯É¤:  >  aŋÉ¯:nÉ¯É¤: 
+aen:É¤nÉ¯n  >  aenÉ¤:nÉ¯n 
+aen:anÉ¯ŋ:É¯  >  aena:nÉ¯ŋÉ¯: 
+aen:anÉ¯ŋÉ¯p  >  aena:nÉ¯ŋÉ¯p 
+aŋ:É¤nŋ:É¤  >  aŋÉ¤:nŋ:É¤ 
+an:É¤pÉ¤nÉ¯na  >  anÉ¤:pÉ¤nÉ¯na 
+anÉ¤pÉ¤nÉ¯n:É¤  >  anÉ¤pÉ¤nÉ¯nÉ¤: 
+A change has occured 
+
+
+The feature Plosive switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 10, 0, 1, 0, 1, 1, 1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -4  Continu : 0  Template :[0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ŋ̊ > ŋ̊
+n > n̥
+É¯ > É¯
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+ɦinm:an̥É¯É¤nÉ¯n  >  ɦinm:an̥É¯É¤n̥É¯n 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, 1, 0, -1, -1, -1, -1, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[0, 1, -1, -1, -1, -1, 0, -1, 0, -1, -1, -1] 
+1  C:   Rel pos :  5  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+2  C:   Rel pos :  3  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+n̥ʔn:imÉ¯É¤:  >  n̥:ʔnimÉ¯É¤: 
+A change has occured 
+
+
+The feature Nasal switched values from 0 to 1
+
+Target :   
+[1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, 1, -1, -1, 1, -1] 
+1  C:   Rel pos :  5  Continu : 0  Template :[0, 1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :É¯ > É¯
+a > a
+É¤ > É¤
+ɬ > n̥
+ɬ > m̥
+n > n
+a > a
+ʟ̠ > ɴ
+a > a
+É¯ > É¯
+i > i
+
+
+
+
+EXAMPLES 
+  
+eŋ̊nŋaɬÉ¤tŋenÉ¤  >  eŋ̊nŋan̥É¤tŋenÉ¤ 
+eŋ̊nmaɬÉ¤tn:anÉ¤  >  eŋ̊nmam̥É¤tn:anÉ¤ 
+im̥mteʟ̠É¤nnenÉ¤  >  im̥mteɴÉ¤nnenÉ¤ 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, 1, 0, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[0, 0, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :n > ɾ̥
+ɬ > ⱱ̟
+n > ɾ̥
+p > ⱱ̟
+ŋ > ʟ̆
+n̥ > ɾ̥
+ʔ > ʡ̆
+ŋ̊ > ʟ̆
+ŋ̊ > ʟ̆
+n̥ > ɾ̥
+m̥ > ⱱ̟
+p > ⱱ̟
+n > ɾ̥
+ʟ̝̊ > ʟ̆
+n̥ > ɾ̥
+n̥ > ɾ̥
+n̥ > ɾ̥
+m > ⱱ̟
+ʔ > ʡ̆
+t > ɾ̥
+ʟ̠ > ʡ̆
+ŋ > ʟ̆
+ɱ > ⱱ
+ŋ̊ > ʟ̆
+ɱ > ⱱ
+ɬ > ⱱ̟
+n̥ > ɾ̥
+ʟ̝̊ > ʟ̆
+n > ɾ̥
+n̥ > ɾ̥
+ʔ > ʡ̆
+m̥ > ⱱ̟
+ɬ > ⱱ̟
+m > ⱱ̟
+n̥ > ɾ̥
+m̥ > ⱱ̟
+ɴ > ʡ̆
+ɴ > ʡ̆
+ɦ > ʡ̆
+m̥ > ⱱ̟
+ŋ̊ > ʟ̆
+ʟ̠ > ʡ̆
+ɬ > ⱱ̟
+ɬ > ⱱ
+n > ɾ̥
+ʟ̠ > ʡ̆
+ɬ > ⱱ
+n > ɾ̥
+
+
+
+
+EXAMPLES 
+  
+amman:É¤  >  ammaɾ̥:É¤ 
+ammanÉ¯É¤:  >  ammaɾ̥É¯É¤: 
+ammiɬÉ¤n:É¤  >  ammiⱱ̟É¤n:É¤ 
+amnenÉ¯É¯:  >  amneɾ̥É¯É¯: 
+amnenÉ¯É¯p  >  amneɾ̥É¯É¯p 
+amÉ¯tnipÉ¯n  >  amÉ¯tniⱱ̟É¯n 
+aʔŋam:É¤  >  aʔŋaⱱ̟:É¤ 
+aʔŋÉ¤ʔtin:É¤  >  aʔŋÉ¤ʔtiɾ̥:É¤ 
+aʔŋÉ¤nniŋ:É¤  >  aʔŋÉ¤nniʟ̆:É¤ 
+anpin̥:aʔÉ¯a:nÉ¤  >  anpiɾ̥:aʔÉ¯a:nÉ¤ 
+A change has occured 
+
+
+The feature Plosive switched values from 1 to 0
+
+Target :   
+[1, 1, 0, 7, 0, 1, 1, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -1  Continu : 1  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :n > n̥
+n > n̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+ʔ > h
+n > n̥
+ɾ̥ > n̥
+ɾ̥ > n̥
+n̥ > n̥
+ɬ > n̥
+m̥ > m̥
+n̥ > n̥
+ɾ̥ > n̥
+ŋ̊ > ŋ̊
+ⱱ̟ > m̥
+ʟ̆ > ŋ̊
+ɬ > m̥
+ŋ̊ > ŋ̊
+m̥ > m̥
+
+
+
+
+EXAMPLES 
+  
+aenÉ¤:nÉ¯n  >  aen̥É¤:nÉ¯n 
+aena:nÉ¯ŋÉ¯:  >  aen̥a:nÉ¯ŋÉ¯: 
+aena:nÉ¯ŋÉ¯p  >  aen̥a:nÉ¯ŋÉ¯p 
+aÉ¯ʔn̥:É¤nÉ¯nn:É¤  >  aÉ¯hn̥:É¤nÉ¯nn:É¤ 
+aÉ¯na:nÉ¯n  >  aÉ¯n̥a:nÉ¯n 
+aÉ¯nÉ¯ptÉ¯n  >  aÉ¯n̥É¯ptÉ¯n 
+maɲɲÉ¯ɾ̥:É¯mÉ¯n  >  maɲɲÉ¯n̥:É¯mÉ¯n 
+menniɾ̥:anÉ¯n  >  mennin̥:anÉ¯n 
+mÉ¤nŋ:aɾ̥É¯ŋÉ¯p  >  mÉ¤nŋ:an̥É¯ŋÉ¯p 
+ʔaÉ¯ɬ:É¤nÉ¯É¯p  >  ʔaÉ¯n̥:É¤nÉ¯É¯p 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+0  C:   Rel pos :  5  Continu : 0  Template :[0, 1, -1, -1, -1, 1, -1, 1, -1, 0, -1, -1] 
+
+Impacted phonems :k > ʟ̆
+a > a
+s > ɾ̥
+h > ʡ̆
+i > i
+o > o
+d > ɾ̥
+e > e
+l > ɾ̥
+n > ɾ̥
+f > ⱱ
+m > ⱱ̟
+
+
+
+
+EXAMPLES 
+  
+akkolliɡo:  >  akʟ̆olliɡo: 
+kaesarauɡusta  >  kaeɾ̥arauɡusta 
+khi:rurɡia:nus  >  kʡ̆i:rurɡia:nus 
+kolliɡo:  >  ʟ̆olliɡo: 
+kolumbi:nus  >  ʟ̆olumbi:nus 
+dekembrius  >  ɾ̥ekembrius 
+ekskambio:  >  eʟ̆skambio: 
+ekskorriɡiata  >  eksʟ̆orriɡiata 
+ekse:liɡere  >  eʟ̆se:liɡere 
+ekse:liɡo:  >  eʟ̆se:liɡo: 
+A change has occured 
+
+
+The feature Trill switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 10, 0, 0, 0, 0, 1, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1]
+Conditions : 
+
+Impacted phonems :ʟ̆ > ŋ̊
+a > a
+ɾ̥ > n̥
+ʡ̆ > ʔ
+i > i
+o > É¤
+ɾ̥ > n̥
+e > e
+ɾ̥ > n̥
+ɾ̥ > n̥
+ⱱ > ɱ
+ⱱ̟ > m̥
+
+
+
+
+EXAMPLES 
+  
+akʟ̆olliɡo:  >  akŋ̊olliɡo: 
+kaeɾ̥arauɡusta  >  kaen̥arauɡusta 
+kʡ̆i:rurɡia:nus  >  kʔi:rurɡia:nus 
+ʟ̆olliɡo:  >  ŋ̊olliɡo: 
+ʟ̆olumbi:nus  >  ŋ̊olumbi:nus 
+kommanda:re  >  kÉ¤mmanda:re 
+kommando:  >  kÉ¤mmando: 
+kontinɡe:sko:  >  kÉ¤ntinɡe:sko: 
+ɾ̥ekembrius  >  n̥ekembrius 
+eʟ̆skambio:  >  eŋ̊skambio: 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 10, 0, 1, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+b > ⱱ̟
+n > ɾ̥
+t > ɾ̥
+e > e
+o > o
+u > u
+i > i
+p > ⱱ̟
+s > ɾ̥
+d > ɾ̥
+m > ⱱ̟
+y > y
+k > ʟ̆
+ɡ > ʟ̆
+l > ɾ̥
+w > ⱱ̟
+h > ʡ̆
+j > ʎ̆
+f > ⱱ
+z > ɾ̥
+v > ⱱ
+c > ʎ̆
+
+
+
+
+EXAMPLES 
+  
+abante  >  aⱱ̟aɾ̥ɾ̥e 
+abanteo:  >  aⱱ̟aɾ̥ɾ̥eo: 
+abbato:  >  aⱱ̟ⱱ̟aɾ̥o: 
+abbatuo:  >  aⱱ̟ⱱ̟aɾ̥uo: 
+abbibero:  >  aⱱ̟ⱱ̟iⱱ̟ero: 
+apsedii:  >  aⱱ̟ɾ̥eɾ̥ii: 
+apsedium  >  aⱱ̟ɾ̥eɾ̥iuⱱ̟ 
+abyssimus  >  aⱱ̟yɾ̥ɾ̥iⱱ̟uɾ̥ 
+akka  >  aʟ̆ʟ̆a 
+akkapo:  >  aʟ̆ʟ̆aⱱ̟o: 
+A change has occured 
+
+
+The feature Lateral switched values from 1 to 0
+
+Target :   
+[1, 0, 2, 2, 0, 1, 0, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ɾ̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+aʟ̆ʟ̆oɾ̥ɾ̥iʟ̆o:  >  aʟ̆ʟ̆on̥ɾ̥iʟ̆o: 
+aʟ̆ʟ̆oɾ̥ɾ̥o:  >  aʟ̆ʟ̆on̥ɾ̥o: 
+aɾ̥ⱱ̟eɾ̥ɾ̥e:ɾ̥ʟ̆o:  >  aɾ̥ⱱ̟en̥ɾ̥e:ɾ̥ʟ̆o: 
+aɾ̥ɾ̥aʟ̆ɾ̥a:re  >  an̥ɾ̥aʟ̆ɾ̥a:re 
+aɾ̥ɾ̥aʟ̆ɾ̥o:  >  an̥ɾ̥aʟ̆ɾ̥o: 
+aɾ̥ɾ̥o:  >  an̥ɾ̥o: 
+aɾ̥ɾ̥u:ⱱ̟iɾ̥a:re  >  an̥ɾ̥u:ⱱ̟iɾ̥a:re 
+aɾ̥ɾ̥u:ⱱ̟iɾ̥o:  >  an̥ɾ̥u:ⱱ̟iɾ̥o: 
+aɾ̥ɾ̥ia:re  >  an̥ɾ̥ia:re 
+aɾ̥ɾ̥io:  >  an̥ɾ̥io: 
+A change has occured 
+
+
+The feature Nasal switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 7, 0, 0, 0, 1, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+ⱱ̟ > m̥
+ɾ̥ > n̥
+e > e
+o > o
+u > u
+i > i
+r > n̥
+ⱱ̟ > m̥
+ɾ̥ > n̥
+ɾ̥ > n̥
+y > y
+ʟ̆ > ŋ̊
+ʟ̆ > ŋ̊
+n̥ > n̥
+ɾ̥ > n̥
+ⱱ̟ > m̥
+ʡ̆ > ɴ
+ʎ̆ > ɲ̊
+ⱱ > ɱ
+ɾ̥ > n̥
+ⱱ > ɱ
+ʎ̆ > ɲ̊
+
+
+
+
+EXAMPLES 
+  
+aⱱ̟aɾ̥ɾ̥e  >  am̥aɾ̥n̥e 
+aⱱ̟aɾ̥ɾ̥eo:  >  am̥aɾ̥n̥eo: 
+aⱱ̟ⱱ̟aɾ̥o:  >  am̥m̥an̥o: 
+aⱱ̟ⱱ̟aɾ̥uo:  >  am̥m̥an̥uo: 
+aⱱ̟ⱱ̟iⱱ̟ero:  >  am̥m̥im̥en̥o: 
+aⱱ̟ɾ̥eɾ̥ii:  >  am̥n̥en̥ii: 
+aⱱ̟ɾ̥eɾ̥iuⱱ̟  >  am̥n̥en̥iuⱱ̟ 
+aⱱ̟yɾ̥ɾ̥iⱱ̟uɾ̥  >  am̥yn̥n̥iⱱ̟un̥ 
+aʟ̆ʟ̆a  >  aŋ̊ŋ̊a 
+aʟ̆ʟ̆aⱱ̟o:  >  aŋ̊ŋ̊am̥o: 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 1, 0, -1, -1, -1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :o > o
+i > i
+u > u
+e > e
+a > a
+y > y
+
+
+
+
+EXAMPLES 
+  
+am̥m̥im̥en̥o:  >  am̥m̥im̥en̥:o 
+aŋ̊ŋ̊am̥n̥o:  >  aŋ̊ŋ̊am̥n̥:o 
+aŋ̊ŋ̊on̥n̥o:  >  aŋ̊ŋ̊on̥n̥:o 
+aŋ̊ŋ̊oⱱ̟m̥n̥e:n̥ŋ̊o:  >  aŋ̊ŋ̊oⱱ̟m̥:n̥en̥ŋ̊:o 
+aŋ̊ŋ̊oⱱ̟m̥n̥i:n̥e  >  aŋ̊ŋ̊oⱱ̟m̥:n̥in̥e 
+aŋ̊ŋ̊on̥n̥a:n̥e  >  aŋ̊ŋ̊on̥n̥:an̥e 
+aŋ̊ŋ̊on̥n̥o:  >  aŋ̊ŋ̊on̥n̥:o 
+aŋ̊ŋ̊m̥aen̥i:n̥e  >  aŋ̊ŋ̊m̥aen̥:in̥e 
+an̥m̥en̥n̥e:n̥ŋ̊o:  >  an̥m̥en̥n̥:en̥ŋ̊:o 
+an̥ɲ̊uŋ̊n̥n̥a:n̥e  >  an̥ɲ̊uŋ̊n̥:n̥an̥e 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 7, 0, 1, 1, -1, -1, -1, -1, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -2  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+n̥ > n̥
+ɲ̊ > ɲ̊
+ⱱ̟ > ⱱ̟
+ɾ̥ > ɾ̥
+m̥ > m̥
+m̥ > m̥
+n̥ > n̥
+ɱ > ɱ
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+a > a
+i > i
+ɴ > ɴ
+e > e
+u > u
+
+
+
+
+EXAMPLES 
+  
+an̥ⱱ̟iɾ̥a:ŋ̊ia:n̥e  >  an̥ⱱ̟iɾ̥:aŋ̊ia:n̥e 
+an̥ⱱ̟iɾ̥a:ŋ̊io:  >  an̥ⱱ̟iɾ̥:aŋ̊io: 
+an̥oŋ̊n̥a:n̥e  >  an̥oŋ̊:n̥an̥e 
+an̥m̥a:ŋ̊a:n̥e  >  an̥m̥:aŋ̊a:n̥e 
+an̥m̥e:n̥a:n̥e  >  an̥m̥:en̥a:n̥e 
+aen̥o:n̥un̥  >  aen̥:on̥un̥ 
+aen̥a:n̥iŋ̊:i  >  aen̥:an̥iŋ̊:i 
+aen̥a:n̥iŋ̊uⱱ̟  >  aen̥:an̥iŋ̊uⱱ̟ 
+aɱɱi:n̥a:m̥in̥  >  aɱɱ:in̥:am̥in̥ 
+aɱɱu:ⱱ̟a:n̥e  >  aɱɱ:uⱱ̟a:n̥e 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[1, 0, 2, 0, 1, 1, 1, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -2  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ɾ̥ > n̥
+e > e
+o > o
+a > a
+n̥ > n̥
+i > i
+n̥ > n̥
+i > i
+u > u
+m̥ > m̥
+o > É¤
+ŋ̊ > ŋ̊
+n̥ > n̥
+e > e
+a > a
+u > É¯
+ŋ̊ > ŋ̊
+n̥ > n̥
+ŋ̊ > ŋ̊
+ⱱ̟ > m̥
+ⱱ̟ > ⱱ̟
+n̥ > n̥
+n̥ > n̥
+m̥ > m̥
+m̥ > m̥
+ɾ̥ > ɾ̥
+n̥ > n̥
+n̥ > n̥
+m̥ > m̥
+ɲ̊ > ɲ̊
+y > y
+ŋ̊ > ŋ̊
+
+
+
+
+EXAMPLES 
+  
+am̥aɾ̥n̥e  >  am̥an̥n̥e 
+am̥aɾ̥n̥eo:  >  am̥an̥n̥eo: 
+aŋ̊ŋ̊oŋ̊ɾ̥in̥o:  >  aŋ̊ŋ̊É¤ŋ̊ɾ̥in̥o: 
+aŋ̊ŋ̊on̥n̥iŋ̊o:  >  aŋ̊ŋ̊É¤n̥n̥iŋ̊o: 
+aŋ̊ŋ̊on̥n̥:o  >  aŋ̊ŋ̊É¤n̥n̥:o 
+aŋ̊ŋ̊oⱱ̟m̥:n̥en̥ŋ̊:o  >  aŋ̊ŋ̊É¤ⱱ̟m̥:n̥en̥ŋ̊:o 
+aŋ̊ŋ̊oⱱ̟m̥:n̥in̥e  >  aŋ̊ŋ̊É¤ⱱ̟m̥:n̥in̥e 
+aŋ̊ŋ̊on̥n̥:an̥e  >  aŋ̊ŋ̊É¤n̥n̥:an̥e 
+aŋ̊ŋ̊on̥n̥:o  >  aŋ̊ŋ̊É¤n̥n̥:o 
+a:ŋ̊n̥un̥  >  a:ŋ̊n̥É¯n̥ 
+A change has occured 
+
+
+The feature Lateral switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 1, 0, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 1  Template :[1, 0, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1] 
+
+Impacted phonems :o > o
+n̥ > n̥
+n̥ > ɬ
+ŋ̊ > ʟ̝̊
+n̥ > ɬ
+ⱱ̟ > ɬ
+n̥ > ɬ
+a > a
+ŋ̊ > ʟ̝̊
+n̥ > n̥
+n̥ > ɬ
+ŋ̊ > ʟ̝̊
+ŋ̊ > ŋ̊
+m̥ > ɬ
+ⱱ̟ > ⱱ̟
+ɾ̥ > ɾ̥
+n̥ > ɬ
+n̥ > n̥
+n̥ > n̥
+n̥ > ɬ
+n̥ > ɬ
+ŋ̊ > ŋ̊
+n̥ > n̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+e > e
+n̥ > ɬ
+ⱱ̟ > ⱱ̟
+m̥ > ɬ
+a > a
+m̥ > ɬ
+n̥ > n̥
+m̥ > ɬ
+e > e
+n̥ > n̥
+m̥ > m̥
+e > e
+ɴ > ɴ
+ɴ > ʟ̠
+m̥ > ɬ
+ŋ̊ > ŋ̊
+É¤ > É¤
+ɱ > ɬ
+n̥ > ɬ
+ɱ > ɱ
+e > e
+m̥ > m̥
+
+
+
+
+EXAMPLES 
+  
+am̥yn̥n̥iⱱ̟un̥  >  am̥yn̥n̥iⱱ̟uɬ 
+aŋ̊ŋ̊É¤ŋ̊ɾ̥in̥o:  >  aŋ̊ŋ̊É¤ʟ̝̊ɾ̥in̥o: 
+aŋ̊ŋ̊É¤n̥n̥iŋ̊o:  >  aŋ̊ŋ̊É¤ɬn̥iŋ̊o: 
+aŋ̊ŋ̊É¤n̥n̥:o  >  aŋ̊ŋ̊É¤ɬn̥:o 
+aŋ̊ŋ̊É¤ⱱ̟m̥:n̥en̥ŋ̊:o  >  aŋ̊ŋ̊É¤ɬm̥:n̥en̥ŋ̊:o 
+aŋ̊ŋ̊É¤ⱱ̟m̥:n̥in̥e  >  aŋ̊ŋ̊É¤ɬm̥:n̥in̥e 
+aŋ̊ŋ̊É¤n̥n̥:an̥e  >  aŋ̊ŋ̊É¤ɬn̥:an̥e 
+aŋ̊ŋ̊É¤n̥n̥:o  >  aŋ̊ŋ̊É¤ɬn̥:o 
+a:ŋ̊n̥É¯n̥  >  a:ŋ̊n̥É¯ɬ 
+aŋ̊u:ŋ̊n̥a  >  aŋ̊u:ʟ̝̊n̥a 
+A change has occured 
+
+
+The feature Trill switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 1, 0, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1]
+Conditions : 
+
+Impacted phonems :a > a
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+e > e
+o > o
+a > a
+n̥ > n̥
+o > É¤
+m̥ > m̥
+u > É¯
+o > o
+i > i
+e > e
+o > o
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+i > i
+i > i
+u > u
+ⱱ̟ > m̥
+y > i
+n̥ > n̥
+ɬ > n̥
+ŋ̊ > ŋ̊
+m̥ > m̥
+ŋ̊ > ŋ̊
+É¤ > É¤
+ʟ̝̊ > ŋ̊
+ɾ̥ > n̥
+ɬ > n̥
+ŋ̊ > ŋ̊
+ɬ > m̥
+n̥ > n̥
+e > e
+n̥ > n̥
+e > e
+a > a
+m̥ > m̥
+i > i
+É¯ > É¯
+n̥ > n̥
+a > a
+ʟ̝̊ > ŋ̊
+n̥ > n̥
+ɬ > n̥
+ŋ̊ > ŋ̊
+ɴ > ʔ
+ɲ̊ > ɲ̊
+ʟ̝̊ > ŋ̊
+ⱱ̟ > ⱱ̟
+ɾ̥ > ɾ̥
+u > u
+ŋ̊ > ŋ̊
+m̥ > m̥
+m̥ > m̥
+a > a
+ɱ > ɱ
+ɱ > ɱ
+n̥ > n̥
+ɬ > m̥
+ŋ̊ > ŋ̊
+ɲ̊ > ɲ̊
+y > y
+ŋ̊ > ŋ̊
+n̥ > n̥
+ⱱ̟ > ⱱ̟
+n̥ > n̥
+ɬ > n̥
+n̥ > n̥
+ɬ > n̥
+ŋ̊ > ŋ̊
+n̥ > n̥
+m̥ > m̥
+m̥ > m̥
+ɾ̥ > ɾ̥
+n̥ > n̥
+ɱ > ɱ
+n̥ > n̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+e > e
+m̥ > m̥
+ŋ̊ > ŋ̊
+ⱱ̟ > ⱱ̟
+ɬ > m̥
+a > a
+ɬ > m̥
+ɲ̊ > ɲ̊
+ɴ > ɴ
+ɬ > m̥
+y > y
+e > e
+n̥ > n̥
+m̥ > m̥
+ɲ̊ > ɲ̊
+e > e
+ɴ > ɴ
+ʟ̠ > ʔ
+ɬ > m̥
+ŋ̊ > ŋ̊
+É¤ > É¤
+ɬ > ɱ
+ɬ > n̥
+ɱ > ɱ
+e > e
+m̥ > m̥
+ŋ̊ > ŋ̊
+
+
+
+
+EXAMPLES 
+  
+am̥m̥an̥o:  >  am̥m̥an̥É¤: 
+am̥m̥an̥uo:  >  am̥m̥an̥É¯o: 
+am̥n̥en̥iuⱱ̟  >  am̥n̥en̥ium̥ 
+am̥yn̥n̥iⱱ̟uɬ  >  am̥in̥n̥im̥É¯n̥ 
+aŋ̊ŋ̊am̥o:  >  aŋ̊ŋ̊am̥É¤: 
+aŋ̊ŋ̊É¤ʟ̝̊ɾ̥in̥o:  >  aŋ̊ŋ̊É¤ŋ̊n̥in̥É¤: 
+aŋ̊ŋ̊É¤ɬn̥iŋ̊o:  >  aŋ̊ŋ̊É¤n̥n̥iŋ̊É¤: 
+aŋ̊ŋ̊É¤ɬn̥:o  >  aŋ̊ŋ̊É¤n̥n̥:o 
+aŋ̊ŋ̊É¤ɬm̥:n̥en̥ŋ̊:o  >  aŋ̊ŋ̊É¤m̥m̥:n̥en̥ŋ̊:o 
+aŋ̊ŋ̊É¤ɬm̥:n̥in̥e  >  aŋ̊ŋ̊É¤m̥m̥:n̥in̥e 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :e > e
+o > o
+É¤ > É¤
+É¯ > É¯
+o > o
+e > e
+n̥ > n̥
+o > o
+i > i
+i > i
+u > u
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+n̥ > n̥
+e > e
+n̥ > n̥
+a > a
+n̥ > n̥
+i > i
+a > a
+a > a
+É¤ > É¤
+e > e
+u > u
+m̥ > m̥
+a > a
+y > y
+n̥ > n̥
+i > i
+ŋ̊ > ŋ̊
+ɬ > n̥
+ɬ > n̥
+n̥ > n̥
+É¯ > É¯
+m̥ > m̥
+n̥ > n̥
+m̥ > m̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+e > e
+ŋ̊ > ŋ̊
+m̥ > m̥
+m̥ > m̥
+n̥ > n̥
+y > y
+ɾ̥ > ɾ̥
+ⱱ̟ > ⱱ̟
+ⱱ̟ > ⱱ̟
+m̥ > m̥
+e > e
+
+
+
+
+EXAMPLES 
+  
+an̥n̥eŋ̊:É¯ɬ:an̥e  >  an̥n̥eŋ̊:É¯n̥:an̥e 
+an̥n̥eŋ̊É¯:ɬ:o  >  an̥n̥eŋ̊É¯:n̥:o 
+n̥eiɱÉ¤ɬm̥in̥  >  n̥eiɱÉ¤n̥m̥in̥ 
+eŋ̊n̥ŋ̊É¤ɬn̥iŋ̊ian̥a  >  eŋ̊n̥ŋ̊É¤n̥n̥iŋ̊ian̥a 
+eŋ̊n̥ɱÉ¤ɬn̥io:  >  eŋ̊n̥ɱÉ¤n̥n̥io: 
+eŋ̊n̥n̥É¤ɬŋ̊en̥e  >  eŋ̊n̥n̥É¤n̥ŋ̊en̥e 
+eŋ̊n̥n̥É¤ɬŋ̊:o  >  eŋ̊n̥n̥É¤n̥ŋ̊:o 
+ʔÉ¤n̥n̥:an̥:É¤ɬiÉ¯n̥  >  ʔÉ¤n̥n̥:an̥:É¤n̥iÉ¯n̥ 
+in̥É¤n̥:É¤ɬun̥  >  in̥É¤n̥:É¤n̥un̥ 
+in̥É¯ŋ̊n̥É¤ɬÉ¤:  >  in̥É¯ŋ̊n̥É¤n̥É¤: 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[0, 0, 2, 2, 0, 0, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -1  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] 
+
+Impacted phonems :n̥ > n̥
+m̥ > m̥
+i > i
+n̥ > n̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+a > a
+y > y
+a > a
+u > u
+e > e
+o > o
+n̥ > n̥
+m̥ > m̥
+i > i
+a > a
+e > e
+m̥ > m̥
+ŋ̊ > ŋ̊
+i > i
+n̥ > n̥
+ʔ > ʔ
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+an̥n̥:É¯ⱱ̟in̥:an̥e  >  an̥n̥:É¯ⱱ̟in̥a:n̥e 
+am̥iŋ̊in̥:an̥in̥  >  am̥iŋ̊in̥a:n̥in̥ 
+an̥ŋ̊:É¤ɾ̥in̥:an̥un̥  >  an̥ŋ̊:É¤ɾ̥in̥a:n̥un̥ 
+am̥m̥an̥iŋ̊un̥:an̥e  >  am̥m̥an̥iŋ̊un̥a:n̥e 
+m̥am̥in̥:on̥ia  >  m̥am̥in̥o:n̥ia 
+ŋ̊am̥in̥:in̥a  >  ŋ̊am̥in̥i:n̥a 
+ŋ̊an̥iŋ̊:an̥e  >  ŋ̊an̥iŋ̊a:n̥e 
+ŋ̊n̥a:m̥É¯n̥:on̥un̥  >  ŋ̊n̥a:m̥É¯n̥o:n̥un̥ 
+n̥e:eŋ̊n̥ŋ̊in̥:an̥e  >  n̥e:eŋ̊n̥ŋ̊in̥a:n̥e 
+n̥e:m̥:an̥:an̥e  >  n̥e:m̥:an̥a:n̥e 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 11, 0, 0, 1, 1, 1, 0, 0, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 1  Template :[0, 0, -1, 0, -1, -1, -1, -1, 0, 0, -1, -1] 
+
+Impacted phonems :i > i
+É¯ > É¯
+i > i
+a > a
+a > a
+É¤ > É¤
+i > i
+o > o
+e > e
+a > a
+e > e
+ɾ̥ > ɾ̥
+u > u
+
+
+
+
+EXAMPLES 
+  
+an̥ŋ̊:É¤ɾ̥in̥a:n̥un̥  >  an̥ŋ̊:É¤ɾ̥in̥:an̥un̥ 
+ŋ̊n̥a:m̥É¯n̥o:n̥un̥  >  ŋ̊n̥a:m̥É¯n̥:on̥un̥ 
+in̥ŋ̊É¤ɴ:an̥i:m̥un̥  >  in̥ŋ̊É¤ɴ:an̥:im̥un̥ 
+n̥ea:m̥É¤n̥:in̥a:n̥un̥  >  n̥ea:m̥É¤n̥:in̥:an̥un̥ 
+m̥en̥in̥u:n̥un̥  >  m̥en̥in̥:un̥un̥ 
+n̥a:ɾ̥in̥o:n̥un̥  >  n̥a:ɾ̥in̥:on̥un̥ 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, 0, -1, 1, -1, -1, -1, -1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  5  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, 1, -1, 0, -1] 
+
+Impacted phonems :a > a
+m̥ > m̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+É¤ > É¤
+n̥ > n̥
+a > a
+e > e
+ɲ̊ > ɲ̊
+É¯ > É¯
+ⱱ̟ > ⱱ̟
+i > i
+ɾ̥ > ɾ̥
+m̥ > m̥
+m̥ > m̥
+ɱ > ɱ
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+i > i
+a > a
+É¤ > É¤
+a > a
+m̥ > m̥
+ɾ̥ > ɾ̥
+e > e
+a > a
+n̥ > n̥
+ɴ > ɴ
+e > e
+ɾ̥ > ɾ̥
+n̥ > n̥
+ⱱ̟ > ⱱ̟
+n̥ > n̥
+ŋ̊ > ŋ̊
+ŋ̊ > ŋ̊
+ŋ̊ > ŋ̊
+m̥ > m̥
+É¯ > É¯
+i > i
+n̥ > n̥
+n̥ > n̥
+É¯ > É¯
+i > i
+
+
+
+
+EXAMPLES 
+  
+an̥m̥:aŋ̊a:n̥e  >  an̥m̥a:ŋ̊a:n̥e 
+an̥m̥:en̥a:n̥e  >  an̥m̥e:n̥a:n̥e 
+aɱɱ:É¯m̥a:n̥e  >  aɱɱÉ¯:m̥a:n̥e 
+an̥n̥:É¯m̥in̥:o  >  an̥n̥É¯:m̥in̥:o 
+am̥m̥:aŋ̊a:n̥e  >  am̥m̥a:ŋ̊a:n̥e 
+an̥n̥:im̥a:n̥e  >  an̥n̥i:m̥a:n̥e 
+ŋ̊aÉ¯n̥:en̥iÉ¯m̥  >  ŋ̊aÉ¯n̥e:n̥iÉ¯m̥ 
+ŋ̊ʔi:n̥É¯n̥ŋ̊ia:n̥un̥  >  ŋ̊:ʔin̥É¯n̥ŋ̊ia:n̥un̥ 
+ŋ̊i:n̥ŋ̊:m̥aŋ̊in̥n̥a:  >  ŋ̊:in̥ŋ̊:m̥aŋ̊in̥n̥a: 
+ŋ̊n̥a:m̥É¯n̥on̥  >  ŋ̊:n̥am̥É¯n̥on̥ 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[1, 1, 0, 7, 0, 1, 1, 0, 1, 1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[0, 0, 0, -1, -1, 0, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -4  Continu : 1  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, 0, -1, 0] 
+
+Impacted phonems :m̥ > m̥
+i > i
+n̥ > n̥
+ⱱ̟ > m̥
+m̥ > m̥
+
+
+
+
+EXAMPLES 
+  
+m̥ʔan̥ⱱ̟aŋ̊eÉ¯n̥iŋ̊É¯n̥  >  m̥ʔan̥m̥aŋ̊eÉ¯n̥iŋ̊É¯n̥ 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 7, 0, 0, 1, 0, 1, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  5  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0] 
+
+Impacted phonems :a > a
+a > a
+i > i
+É¤ > É¤
+É¯ > É¯
+ɲ̊ > c
+i > i
+a > a
+É¤ > É¤
+e > e
+É¯ > É¯
+n̥ > t
+a > a
+m̥ > p
+e > e
+n̥ > n̥
+i > i
+É¯ > É¯
+a > a
+a > a
+É¤ > É¤
+n̥ > t
+e > e
+a > a
+n̥ > t
+e > e
+i > i
+y > y
+ʔ > ʔ
+i > i
+e > e
+n̥ > t
+ⱱ̟ > ⱱ̟
+i > i
+n̥ > t
+m̥ > p
+e > e
+n̥ > t
+i > i
+
+
+
+
+EXAMPLES 
+  
+an̥ɲ̊É¯ŋ̊n̥:n̥an̥e  >  an̥cÉ¯ŋ̊n̥:n̥an̥e 
+an̥e:ⱱ̟É¤n̥yn̥a  >  ate:ⱱ̟É¤n̥yn̥a 
+an̥eⱱ̟É¤n̥yn̥:e  >  ateⱱ̟É¤n̥yn̥:e 
+an̥n̥:É¯ⱱ̟in̥a:n̥e  >  an̥t:É¯ⱱ̟in̥a:n̥e 
+am̥iŋ̊in̥a:n̥in̥  >  apiŋ̊in̥a:n̥in̥ 
+ŋ̊É¤n̥n̥:n̥aɱaŋ̊iÉ¤:  >  ŋ̊É¤tn̥:n̥aɱaŋ̊iÉ¤: 
+n̥e:n̥n̥n̥uŋ̊en̥e  >  n̥e:tn̥n̥uŋ̊en̥e 
+eŋ̊n̥:en̥iŋ̊en̥e  >  eŋ̊t:en̥iŋ̊en̥e 
+in̥ŋ̊n̥em̥iŋ̊:o  >  itŋ̊n̥em̥iŋ̊:o 
+n̥an̥ŋ̊:m̥in̥e  >  tan̥ŋ̊:m̥in̥e 
+A change has occured 
+
+
+The feature Lateral switched values from 0 to 1
+
+Target :   
+[-1, 0, -1, 2, -1, -1, 1, -1, -1, -1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[1, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+m̥ > ɬ
+a > a
+m̥ > m̥
+ŋ̊ > ʟ̝̊
+a > a
+ŋ̊ > ŋ̊
+m̥ > ɬ
+É¯ > É¯
+n̥ > ɬ
+n̥ > ɬ
+n̥ > ɬ
+ɾ̥ > ɾ̥
+a > a
+m̥ > ɬ
+n̥ > n̥
+n̥ > n̥
+m̥ > ɬ
+n̥ > ɬ
+n̥ > n̥
+n̥ > ɬ
+n̥ > ɬ
+n̥ > n̥
+n̥ > n̥
+a > a
+n̥ > ɬ
+ⱱ̟ > ⱱ̟
+ɱ > ɬ
+m̥ > m̥
+i > i
+ŋ̊ > ʟ̝̊
+m̥ > ɬ
+ŋ̊ > ʟ̝̊
+ʔ > ʟ̠
+ʔ > ʟ̠
+m̥ > m̥
+ɲ̊ > ʎ̝̊
+n̥ > ɬ
+n̥ > n̥
+ⱱ̟ > ⱱ̟
+e > e
+n̥ > n̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+am̥an̥n̥e  >  aɬan̥n̥e 
+am̥an̥n̥eo:  >  aɬan̥n̥eo: 
+aŋ̊ŋ̊am̥n̥io:  >  aŋ̊ʟ̝̊am̥n̥io: 
+aŋ̊ŋ̊m̥aen̥io:  >  aŋ̊ŋ̊ɬaen̥io: 
+n̥an̥in̥  >  ɬan̥in̥ 
+an̥aŋ̊m̥É¤:  >  aɬaŋ̊m̥É¤: 
+am̥m̥an̥n̥io:  >  am̥ɬan̥n̥io: 
+an̥m̥n̥aŋ̊ŋ̊ʔiÉ¤:  >  an̥m̥ɬaŋ̊ŋ̊ʔiÉ¤: 
+an̥m̥a:ŋ̊a:n̥e  >  an̥ɬa:ŋ̊a:n̥e 
+am̥a:n̥iŋ̊un̥  >  aɬa:n̥iŋ̊un̥ 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  5  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ɬ > p
+ɬ > t
+ⱱ̟ > ⱱ̟
+n̥ > t
+ɱ > p̪
+m̥ > p
+ɾ̥ > ɾ̥
+
+
+
+
+EXAMPLES 
+  
+aŋ̊ŋ̊ɬaen̥io:  >  aŋ̊ŋ̊paen̥io: 
+an̥m̥ɬaŋ̊ŋ̊ʔiÉ¤:  >  an̥m̥taŋ̊ŋ̊ʔiÉ¤: 
+an̥n̥ɬaŋ̊en̥e  >  an̥n̥taŋ̊en̥e 
+ŋ̊É¤tn̥:n̥aɬaŋ̊iÉ¤:  >  ŋ̊É¤tn̥:taɬaŋ̊iÉ¤: 
+n̥e:tn̥n̥uŋ̊en̥e  >  n̥e:tn̥tuŋ̊en̥e 
+eŋ̊n̥ɱÉ¤n̥n̥io:  >  eŋ̊n̥p̪É¤n̥n̥io: 
+eŋ̊n̥m̥É¤n̥a:n̥e  >  eŋ̊n̥pÉ¤n̥a:n̥e 
+itŋ̊n̥em̥iŋ̊:o  >  itŋ̊tem̥iŋ̊:o 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, 1, 1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[0, 1, 0, -1, -1, 1, -1, -1, -1, 0, -1, -1] 
+1  C:   Rel pos :  3  Continu : 1  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+
+Impacted phonems :a > a
+a > a
+m̥ > m̥
+ŋ̊ > ŋ̊
+n̥ > n̥
+n̥ > n̥
+e > e
+e > e
+n̥ > n̥
+i > i
+i > i
+t > n̥
+É¤ > É¤
+É¤ > É¤
+É¯ > É¯
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+tan̥ŋ̊:m̥in̥e  >  n̥an̥ŋ̊:m̥in̥e 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, 0, -1, 1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+
+Impacted phonems :o > o
+n̥ > t
+o > o
+i > i
+u > u
+m̥ > p
+o > o
+n̥ > t
+e > e
+i > i
+a > a
+n̥ > t
+i > i
+n̥ > t
+e > e
+o > o
+a > a
+e > e
+u > u
+m̥ > p
+a > a
+n̥ > t
+a > a
+u > u
+n̥ > t
+n̥ > t
+e > e
+n̥ > t
+m̥ > p
+n̥ > n̥
+n̥ > t
+i > i
+n̥ > t
+a > a
+i > i
+o > o
+m̥ > p
+u > u
+e > e
+o > o
+n̥ > n̥
+ɴ > ɴ
+n̥ > n̥
+ɾ̥ > ɾ̥
+u > u
+n̥ > t
+i > i
+a > a
+e > e
+
+
+
+
+EXAMPLES 
+  
+am̥m̥im̥en̥:o  >  am̥m̥im̥et:o 
+am̥n̥en̥ium̥  >  am̥n̥en̥iup 
+am̥in̥n̥im̥É¯n̥  >  am̥in̥n̥ipÉ¯n̥ 
+aŋ̊ŋ̊É¤m̥m̥:n̥en̥ŋ̊:o  >  aŋ̊ŋ̊É¤m̥m̥:ten̥ŋ̊:o 
+aŋ̊ŋ̊É¤m̥m̥:n̥in̥e  >  aŋ̊ŋ̊É¤m̥m̥:tin̥e 
+aŋ̊ŋ̊É¤ɬn̥:an̥e  >  aŋ̊ŋ̊É¤ɬn̥:ate 
+aŋ̊ŋ̊paen̥io:  >  aŋ̊ŋ̊paetio: 
+aŋ̊ŋ̊m̥aen̥:in̥e  >  aŋ̊ŋ̊m̥aet:ite 
+a:ŋ̊n̥É¯a:n̥in̥  >  a:ŋ̊n̥É¯a:n̥it 
+aŋ̊É¯:n̥ia:n̥e  >  aŋ̊É¯:n̥ia:te 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[1, 0, 3, -1, -1, -1, 1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m̥ > m̥
+a > a
+i > i
+m̥ > m̥
+ŋ̊ > ŋ̊
+É¯ > É¯
+É¯ > É¯
+a > a
+n̥ > n̥
+É¤ > É¤
+a > a
+n̥ > n̥
+m̥ > m̥
+i > i
+e > e
+n̥ > n̥
+n̥ > n̥
+É¤ > É¤
+m̥ > m̥
+a > a
+n̥ > n̥
+n̥ > n̥
+É¯ > É¯
+ʟ̝̊ > ŋ̊
+e > e
+t > n̥
+i > i
+ⱱ̟ > ⱱ̟
+É¤ > É¤
+t > n̥
+ŋ̊ > ŋ̊
+a > a
+a > a
+o > o
+n̥ > n̥
+n̥ > n̥
+i > i
+a > a
+m̥ > m̥
+t > n̥
+ŋ̊ > ŋ̊
+ɾ̥ > ɾ̥
+ɾ̥ > ɾ̥
+m̥ > m̥
+É¤ > É¤
+m̥ > m̥
+ɬ > n̥
+ɾ̥ > ɾ̥
+n̥ > n̥
+e > e
+e > e
+i > i
+
+
+
+
+EXAMPLES 
+  
+ʟ̝̊aÉ¯n̥ae  >  ŋ̊aÉ¯n̥ae 
+ŋ̊aÉ¯n̥e:tiÉ¯m̥  >  ŋ̊aÉ¯n̥e:n̥iÉ¯m̥ 
+ŋ̊n̥em̥ettÉ¯p  >  ŋ̊n̥em̥en̥tÉ¯p 
+n̥eiɱÉ¤tm̥it  >  n̥eiɱÉ¤n̥m̥it 
+in̥ɱ:aŋ̊É¯tn̥É¯t  >  in̥ɱ:aŋ̊É¯n̥n̥É¯t 
+É¤:ɬn̥iÉ¤:  >  É¤:n̥n̥iÉ¤: 
+É¤:ɬn̥i:n̥e  >  É¤:n̥n̥i:n̥e 
+ɬam̥i:ɬiÉ¯t  >  ɬam̥i:n̥iÉ¯t 
+n̥m̥eɬatn̥É¯n̥  >  n̥m̥eɬan̥n̥É¯n̥ 
+A change has occured 
+
+
+The feature Fricative switched values from 1 to 0
+
+Target :   
+[1, 1, 0, 7, 0, 0, 1, 1, 0, 1, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1] 
+1  C:   Rel pos :  4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  -4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ⱱ̟ > ⱱ̟
+É¯ > É¯
+m̥ > m̥
+a > a
+ɬ > ɱ
+n̥ > n̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+ɬan̥iɬa:n̥iÉ¯n̥  >  ɬan̥iɱa:n̥iÉ¯n̥ 
+A change has occured 
+
+
+The feature Backness switched values from 2 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, 0, 1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, 2, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[1, 0, 0, -1, 0, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  1  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  -5  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :i > i
+a > a
+i > i
+i > i
+i > É¯
+
+
+
+
+EXAMPLES 
+  
+ŋ̊É¤n̥:an̥iÉ¤:n̥in̥  >  ŋ̊É¤n̥:an̥É¯É¤:n̥in̥ 
+A change has occured 
+
+
+The feature Backness switched values from 3 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, 0, -1, 0] 
+Effects : 
+[-1, -1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1] 
+
+Impacted phonems :ŋ̊ > ʔ
+ŋ̊ > ʔ
+ŋ̊ > ʔ
+
+
+
+
+EXAMPLES 
+  
+aŋ̊ʟ̝̊am̥n̥io:  >  aʔʟ̝̊am̥n̥io: 
+aŋ̊ŋ̊paetio:  >  aŋ̊ʔpaetio: 
+ʟ̝̊an̥ŋ̊n̥iŋ̊tut  >  ʟ̝̊an̥ŋ̊n̥iʔtut 
+ŋ̊É¯ɾ̥iŋ̊ti:  >  ŋ̊É¯ɾ̥iʔti: 
+ŋ̊É¯ɾ̥iŋ̊tÉ¯n̥  >  ŋ̊É¯ɾ̥iʔtÉ¯n̥ 
+ŋ̊eɾ̥É¯ŋ̊tÉ¯p  >  ŋ̊eɾ̥É¯ʔtÉ¯p 
+n̥É¤n̥iŋ̊ti:  >  n̥É¤n̥iʔti: 
+n̥É¤n̥iŋ̊tÉ¯n̥  >  n̥É¤n̥iʔtÉ¯n̥ 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[0, 0, 3, 0, 1, 1, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1] 
+1  C:   Rel pos :  -4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, 0, 0, -1] 
+
+Impacted phonems :o > o
+n̥ > t
+n̥ > t
+m̥ > p
+n̥ > t
+p > p
+m̥ > p
+n̥ > t
+n̥ > t
+ɬ > t
+t > t
+n̥ > t
+e > e
+ŋ̊ > k
+ŋ̊ > k
+ŋ̊ > k
+n̥ > t
+n̥ > t
+m̥ > p
+m̥ > p
+n̥ > t
+a > a
+É¤ > É¤
+a > a
+n̥ > t
+É¤ > É¤
+n̥ > t
+n̥ > n̥
+n̥ > t
+n̥ > t
+e > e
+m̥ > p
+p > p
+a > a
+ŋ̊ > ŋ̊
+n̥ > t
+m̥ > p
+t > t
+o > o
+n̥ > n̥
+p > p
+e > e
+t > t
+a > a
+ɲ̊ > c
+m̥ > m̥
+É¤ > É¤
+ʔ > ʔ
+ŋ̊ > k
+m̥ > p
+m̥ > p
+m̥ > p
+n̥ > n̥
+n̥ > t
+m̥ > p
+n̥ > t
+t > t
+
+
+
+
+EXAMPLES 
+  
+am̥m̥an̥É¤:  >  am̥m̥atÉ¤: 
+am̥m̥an̥É¯o:  >  am̥m̥atÉ¯o: 
+am̥m̥im̥et:o  >  am̥m̥ipet:o 
+am̥n̥en̥ii:  >  am̥n̥etii: 
+am̥n̥en̥iup  >  am̥n̥etiup 
+aŋ̊ŋ̊am̥É¤:  >  aŋ̊ŋ̊apÉ¤: 
+aŋ̊ŋ̊am̥n̥:o  >  aŋ̊ŋ̊apn̥:o 
+aŋ̊ŋ̊É¤n̥n̥:o  >  aŋ̊ŋ̊É¤tn̥:o 
+aŋ̊ŋ̊É¤m̥m̥:tin̥e  >  aŋ̊ŋ̊É¤m̥m̥:tite 
+aŋ̊ŋ̊É¤ɬn̥:o  >  aŋ̊ŋ̊É¤tn̥:o 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[1, 0, 0, 2, 0, 1, 1, 1, 0, 1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -5  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :o > o
+o > o
+e > e
+i > i
+o > o
+e > e
+y > y
+u > u
+t > t
+n̥ > t
+a > a
+o > o
+t > t
+o > o
+e > e
+p > p
+n̥ > t
+n̥ > t
+m̥ > p
+u > u
+i > i
+e > e
+p > p
+a > a
+m̥ > p
+a > a
+a > a
+n̥ > t
+a > a
+i > i
+t > t
+n̥ > t
+i > i
+a > a
+n̥ > n̥
+ʔ > ʔ
+i > i
+i > i
+
+
+
+
+EXAMPLES 
+  
+an̥n̥aŋ̊n̥:an̥e  >  an̥n̥aŋ̊n̥:ate 
+ɬaɾ̥n̥i:n̥e  >  ɬaɾ̥n̥i:te 
+ɬan̥n̥a:n̥e  >  ɬan̥n̥a:te 
+ɬaɬaŋ̊n̥É¯p  >  ɬaɬaŋ̊tÉ¯p 
+m̥n̥an̥ŋ̊un̥  >  m̥n̥an̥ŋ̊ut 
+m̥n̥an̥n̥em̥É¤:  >  m̥n̥an̥n̥epÉ¤: 
+m̥n̥an̥n̥im̥É¤:  >  m̥n̥an̥n̥ipÉ¤: 
+m̥ɬan̥n̥un̥  >  m̥ɬan̥n̥ut 
+ʟ̝̊aⱱ̟m̥i:n̥e  >  ʟ̝̊aⱱ̟m̥i:te 
+ŋ̊n̥É¯m̥ium̥  >  ŋ̊n̥É¯m̥iup 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[0, 0, 0, 2, 0, 1, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 1  Template :[0, 1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  2  Continu : 0  Template :[0, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :t > n̥
+i > i
+t > n̥
+ŋ̊ > ŋ̊
+t > n̥
+
+
+
+
+EXAMPLES 
+  
+ʟ̝̊an̥ŋ̊n̥iʔtut  >  ʟ̝̊an̥ŋ̊n̥iʔn̥ut 
+ŋ̊É¤n̥n̥n̥an̥n̥:itÉ¤m̥on̥in̥  >  ŋ̊É¤n̥n̥n̥an̥n̥:in̥É¤m̥on̥in̥ 
+ŋ̊:m̥in̥ŋ̊pen̥tit  >  ŋ̊:m̥in̥ŋ̊pen̥n̥it 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+0  C:   Rel pos :  -2  Continu : 0  Template :[0, 0, -1, -1, -1, 0, -1, -1, 0, -1, -1, 0] 
+
+Impacted phonems :e > e
+u > u
+e > e
+p > ⱱ̟
+i > i
+u > u
+n̥ > ɾ̥
+t > ɾ̥
+o > o
+u > u
+ŋ̊ > ʟ̆
+n̥ > ɾ̥
+n̥ > n̥
+n̥ > ɾ̥
+n̥ > n̥
+m̥ > ⱱ̟
+n̥ > ɾ̥
+
+
+
+
+EXAMPLES 
+  
+m̥in̥É¤n̥iÉ¯p  >  m̥in̥É¤n̥iÉ¯ⱱ̟ 
+ŋ̊:in̥ŋ̊:m̥aŋ̊itn̥a:  >  ŋ̊:in̥ŋ̊:m̥aŋ̊itɾ̥a: 
+ŋ̊É¤ŋ̊:iɬa:n̥iÉ¯t  >  ŋ̊É¤ŋ̊:iɬa:n̥iÉ¯ɾ̥ 
+n̥eŋ̊em̥m̥n̥iÉ¯t  >  n̥eŋ̊em̥m̥n̥iÉ¯ɾ̥ 
+n̥e:n̥in̥iÉ¯p  >  n̥e:n̥in̥iÉ¯ⱱ̟ 
+eŋ̊n̥ʟ̝̊an̥en̥ŋ̊ete  >  eŋ̊n̥ʟ̝̊an̥en̥ʟ̆ete 
+eŋ̊n̥ʟ̝̊an̥en̥ŋ̊É¤:  >  eŋ̊n̥ʟ̝̊an̥en̥ʟ̆É¤: 
+eŋ̊n̥ɬam̥en̥n̥a:te  >  eŋ̊n̥ɬam̥en̥ɾ̥a:te 
+eŋ̊n̥ɬam̥en̥n̥É¤:  >  eŋ̊n̥ɬam̥en̥ɾ̥É¤: 
+ʟ̝̊an̥n̥É¤m̥ɴyn̥aŋ̊iÉ¯p  >  ʟ̝̊an̥n̥É¤m̥ɴyn̥aŋ̊iÉ¯ⱱ̟ 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[0, 0, 3, 0, 1, 0, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1] 
+1  C:   Rel pos :  3  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ŋ̊ > k
+n̥ > n̥
+ŋ̊ > ŋ̊
+
+
+
+
+EXAMPLES 
+  
+ŋ̊É¤aŋ̊n̥iŋ̊a:te  >  kÉ¤aŋ̊n̥iŋ̊a:te 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[-1, 0, 2, -1, -1, -1, -1, -1, -1, -1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -4  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+
+Impacted phonems :i > i
+a > a
+a > a
+u > É¯
+o > É¤
+o > o
+n̥ > n
+u > u
+e > e
+t > n
+É¯ > É¯
+a > a
+i > i
+ɾ̥ > ɾ̥
+i > i
+É¯ > É¯
+
+
+
+
+EXAMPLES 
+  
+am̥m̥an̥ikun̥a:n̥e  >  am̥m̥an̥ikÉ¯n̥a:n̥e 
+am̥m̥an̥ikun̥:o  >  am̥m̥an̥ikÉ¯n̥:o 
+ŋ̊É¤n̥n̥n̥an̥n̥:in̥É¤m̥on̥in̥  >  ŋ̊É¤n̥n̥n̥an̥n̥:in̥É¤m̥É¤n̥in̥ 
+n̥eiɱÉ¤n̥m̥it  >  n̥eiɱÉ¤nm̥it 
+ʔin̥m̥:atioɾ̥É¯t  >  ʔin̥m̥:atioɾ̥É¯n 
+A change has occured 
+
+
+The feature Backness switched values from 3 to 0
+
+Target :   
+[0, 1, 0, 3, 0, 0, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :k > ʔ
+ɡ > ʔ
+
+
+
+
+EXAMPLES 
+  
+akka  >  aʔʔa 
+akkapo:  >  aʔʔapo: 
+akkaptio:  >  aʔʔaptio: 
+akkapto:  >  aʔʔapto: 
+akkoɡnito:  >  aʔʔoʔnito: 
+akkolliɡo:  >  aʔʔolliʔo: 
+akkollo:  >  aʔʔollo: 
+akkomple:sko:  >  aʔʔomple:sʔo: 
+akkompli:re  >  aʔʔompli:re 
+akkorda:re  >  aʔʔorda:re 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, -1, 1, -1, -1, 0, -1, -1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, 0, 0, -1, -1] 
+1  C:   Rel pos :  4  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  5  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+y > y
+o > o
+u > u
+e > e
+i > i
+
+
+
+
+EXAMPLES 
+  
+aʔu:tia:re  >  aʔ:utia:re 
+admina:ʔia:re  >  admin:aʔia:re 
+ape:lio:te:s  >  ap:elio:te:s 
+atti:tia:re  >  att:itia:re 
+auʔto:rizzo:  >  auʔt:orizzo: 
+ʔhi:rurʔia:nus  >  ʔ:hirurʔia:nus 
+ʔi:nʔwa:ʔinta:  >  ʔi:nʔ:waʔinta: 
+ʔora:tio:nis  >  ʔor:atio:nis 
+de:eʔsʔita:re  >  d:eeʔsʔita:re 
+de:eʔsʔito:  >  d:eeʔsʔito: 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[-1, 0, 2, -1, -1, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 1  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -4  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m > p
+r > t
+z > t
+n > t
+l > t
+w > p
+s > t
+h > ʔ
+
+
+
+
+EXAMPLES 
+  
+abyssimus  >  abyssipus 
+aʔʔorda:re  >  aʔʔorda:te 
+aʔʔwaeri:re  >  aʔʔwaeri:te 
+aʔ:utia:re  >  aʔ:utia:te 
+admin:aʔia:re  >  admin:aʔia:te 
+admorti:re  >  admorti:te 
+adoʔla:re  >  adoʔla:te 
+adwentu:ra  >  adwentu:ta 
+adwitia:re  >  adwitia:te 
+affunda:re  >  affunda:te 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, 1, 0, -1, 0, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+1  C:   Rel pos :  1  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :b > m̥
+d > n̥
+n > n̥
+l > n̥
+w > m̥
+a > a
+a > a
+r > n̥
+u > u
+i > i
+j > ɲ̊
+m > m̥
+ʔ > ʔ
+e > e
+z > n̥
+t > n̥
+t > n̥
+v > p̪
+o > o
+t > n̥
+e > e
+p > m̥
+t > n̥
+o > o
+
+
+
+
+EXAMPLES 
+  
+abante  >  am̥ante 
+abanteo:  >  am̥anteo: 
+abbato:  >  abm̥ato: 
+abbatuo:  >  abm̥atuo: 
+abbibero:  >  abm̥im̥ero: 
+apsedium  >  apsen̥ium 
+aʔʔoʔnito:  >  aʔʔoʔn̥ito: 
+aʔʔolliʔo:  >  aʔʔoln̥iʔo: 
+aʔʔomple:sʔo:  >  aʔʔompn̥e:sʔo: 
+aʔʔompli:re  >  aʔʔompn̥i:re 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[-1, 0, 2, -1, -1, -1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[0, 1, 0, -1, 0, -1, -1, 0, -1, -1, -1, -1] 
+1  C:   Rel pos :  1  Continu : 0  Template :[1, 0, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :t > n̥
+ʔ > ʔ
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+p > m̥
+n̥ > n̥
+a > a
+n̥ > n̥
+a > a
+e > e
+i > i
+
+
+
+
+EXAMPLES 
+  
+a:ʔtua:lis  >  a:ʔn̥ua:lis 
+altia:re  >  aln̥ia:re 
+apiʔla  >  am̥iʔla 
+autumtus  >  aun̥umtus 
+m̥u:ty:rum  >  m̥u:n̥y:rum 
+ʔatu:num  >  ʔan̥u:num 
+ʔontinʔe:sʔo:  >  ʔonn̥inʔe:sʔo: 
+ʔn̥a:pulor  >  ʔn̥a:m̥ulor 
+ʔn̥a:pun̥o:sus  >  ʔn̥a:m̥un̥o:sus 
+d:en̥e:ʔtia:re  >  d:en̥e:ʔn̥ia:re 
+A change has occured 
+
+
+The feature Height switched values from 0 to 1
+
+Target :   
+[-1, -1, 0, -1, 0, -1, 0, 0, 1, -1, -1, 0] 
+Effects : 
+[-1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+1  C:   Rel pos :  3  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, 0, 1, -1, -1, -1] 
+
+Impacted phonems :s > n̥
+ʔ > ʔ
+z > n̥
+a > É›
+a > a
+f > ɱ
+h > h
+
+
+
+
+EXAMPLES 
+  
+abyssipus  >  abyn̥sipus 
+apozn̥epa  >  apon̥n̥epa 
+appan̥iʔun̥a:re  >  appÉ›n̥iʔun̥a:re 
+appan̥iʔulo:  >  appÉ›n̥iʔulo: 
+d:eeʔsʔita:re  >  d:eeʔn̥ʔita:re 
+d:eeʔsʔito:  >  d:eeʔn̥ʔito: 
+eʔsʔadesʔete  >  eʔsʔaden̥ʔete 
+eʔsfn̥ido:  >  eʔsɱn̥ido: 
+juʔaster  >  juʔan̥ter 
+manizn̥a:te  >  manin̥n̥a:te 
+A change has occured 
+
+
+The feature Plosive switched values from 1 to 0
+
+Target :   
+[0, 1, 0, -1, 0, -1, 1, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  5  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+
+Impacted phonems :ʔ > h
+n̥ > n̥
+t > n̥
+n̥ > n̥
+ʔ > h
+p > m̥
+n̥ > n̥
+m̥ > m̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+appÉ›n̥iʔun̥a:re  >  appÉ›n̥ihun̥a:re 
+ʔ:hin̥urʔia:nus  >  ʔ:hin̥urhia:nus 
+ʔonstanti:n̥opolis  >  ʔonstann̥i:n̥opolis 
+d:eeʔn̥ʔita:re  >  d:eeʔn̥hita:re 
+ʔazzophyn̥aʔium  >  ʔazzom̥hyn̥aʔium 
+horta:to:n̥ius  >  horta:n̥o:n̥ius 
+impenetn̥a:m̥ilis  >  impenen̥n̥a:m̥ilis 
+inn̥iʔit:am̥enta  >  inn̥iʔin̥:am̥enta 
+latentissipe  >  latenn̥issipe 
+latentissipus  >  latenn̥issipus 
+A change has occured 
+
+
+The feature Plosive switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, 0, 0, 0, 0, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :m̥ > m̥
+t > n̥
+b > m̥
+d > n̥
+p > m̥
+ʔ > h
+ʔ > h
+t > n̥
+n̥ > n̥
+ʔ > h
+ʔ > ʔ
+m̥ > m̥
+n̥ > n̥
+t > n̥
+t > n̥
+t > n̥
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+c > ɲ̊
+p > m̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+am̥ante  >  am̥ann̥e 
+am̥anteo:  >  am̥ann̥eo: 
+abm̥ato:  >  am̥m̥an̥o: 
+abm̥atuo:  >  am̥m̥an̥uo: 
+abm̥im̥ero:  >  am̥m̥im̥ero: 
+apsedii:  >  am̥sen̥ii: 
+apsen̥ium  >  am̥sen̥ium 
+abyn̥sipus  >  am̥yn̥sim̥us 
+aʔʔa  >  ahha 
+aʔʔapo:  >  ahham̥o: 
+A change has occured 
+
+
+The feature Nasal switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 7, 0, 0, 1, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :h > ɴ
+l > n̥
+n̥ > n̥
+m̥ > m̥
+r > n̥
+a > a
+e > e
+s > n̥
+a > a
+h > ɴ
+n̥ > n̥
+o > o
+i > i
+u > u
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+h > ɴ
+f > ɱ
+n̥ > n̥
+n̥ > n̥
+w > m̥
+m̥ > m̥
+y > y
+n̥ > n̥
+u > u
+i > i
+z > n̥
+
+
+
+
+EXAMPLES 
+  
+ahhohn̥in̥o:  >  ahhoɴn̥in̥o: 
+ahholn̥iho:  >  ahhon̥n̥iho: 
+ahhorn̥a:n̥e  >  ahhon̥n̥a:n̥e 
+an̥m̥assia:re  >  an̥m̥asn̥ia:re 
+an̥m̥n̥ahhhio:  >  an̥m̥n̥aɴhhio: 
+an̥ɲ̊uhsn̥a:re  >  an̥ɲ̊uhn̥n̥a:re 
+an̥m̥in:ahia:n̥e  >  an̥m̥in:aɴia:n̥e 
+an̥morn̥i:n̥e  >  an̥mon̥n̥i:n̥e 
+allahn̥a:n̥e  >  allaɴn̥a:n̥e 
+arresn̥a:n̥e  >  arren̥n̥a:n̥e 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[-1, -1, -1, -1, 0, 1, 0, 0, 0, -1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 0  Template :[0, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+n̥ > n̥
+h > ʔ
+i > i
+o > É¤
+e > e
+m > m̥
+m̥ > m̥
+n̥ > n̥
+l > n̥
+r > n̥
+
+
+
+
+EXAMPLES 
+  
+haesan̥auɴusn̥a  >  ʔaesan̥auɴusn̥a 
+homm̥an̥n̥en̥e  >  ʔomm̥an̥n̥en̥e 
+hommann̥a:n̥e  >  ʔommann̥a:n̥e 
+honsn̥ann̥i:n̥om̥olis  >  hÉ¤nsn̥ann̥i:n̥om̥olis 
+ehshon̥n̥iɴian̥a  >  ehsʔon̥n̥iɴian̥a 
+hazzom̥hyn̥ahium  >  ʔazzom̥hyn̥ahium 
+imm̥enen̥n̥a:m̥ilis  >  im̥m̥enen̥n̥a:m̥ilis 
+lonhin̥urn̥us  >  n̥onhin̥urn̥us 
+m̥harmaɴeun̥ihus  >  m̥han̥maɴeun̥ihus 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[0, 1, -1, 0, 0, -1, -1, 0, -1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[1, 0, -1, -1, 0, -1, 1, -1, -1, -1, 0, 0] 
+1  C:   Rel pos :  -3  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  3  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+3  C:   Rel pos :  -4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :i > i
+n̥ > t
+o > o
+
+
+
+
+EXAMPLES 
+  
+n̥:eehn̥hin̥a:re  >  n̥:eehthin̥a:re 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, 0, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  3  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ɴ > ʔ
+n̥ > t
+n̥ > t
+m̥ > p
+n̥ > t
+a > a
+e > e
+n̥ > t
+a > a
+ɴ > ʔ
+n > t
+n̥ > t
+m > p
+o > É¤
+i > i
+u > É¯
+n̥ > t
+n̥ > t
+n̥ > t
+ɴ > ʔ
+i > i
+ɱ > p̪
+t > t
+n̥ > t
+m̥ > p
+m̥ > p
+y > i
+n̥ > t
+o > É¤
+u > É¯
+i > i
+n̥ > t
+
+
+
+
+EXAMPLES 
+  
+ahhoɴn̥in̥o:  >  ahhoʔn̥in̥o: 
+ahhon̥n̥iho:  >  ahhotn̥iho: 
+ahhomm̥n̥e:sho:  >  ahhomm̥te:sho: 
+ahhomm̥n̥i:re  >  ahhompn̥i:re 
+ahhon̥n̥a:n̥e  >  ahhotn̥a:n̥e 
+an̥m̥asn̥ia:re  >  an̥m̥astia:re 
+an̥m̥eln̥e:sho:  >  an̥m̥elte:sho: 
+an̥m̥n̥aɴhhio:  >  an̥m̥n̥aʔhhio: 
+an̥ɲ̊uhn̥n̥a:re  >  an̥ɲ̊uhtn̥a:re 
+an̥m̥in:aɴia:n̥e  >  an̥m̥it:aʔia:n̥e 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[-1, -1, 0, -1, 0, 0, 0, 0, 1, -1, -1, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+m̥ > m̥
+n > n
+n̥ > n̥
+m̥ > m̥
+r > r
+s > s
+n̥ > n̥
+m > m
+y > y
+n̥ > n̥
+h > h
+o > o
+ʔ > ʔ
+n̥ > n̥
+t > t
+n̥ > n̥
+m̥ > m̥
+w > w
+a > a
+n̥ > n̥
+h > h
+u > u
+ɲ̊ > ɲ̊
+n̥ > n̥
+m̥ > m̥
+e > e
+i > i
+f > f
+m̥ > m̥
+j > j
+n̥ > n̥
+ʔ > ʔ
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+a > a
+a > a
+o > o
+e > e
+t > t
+ɲ̊ > ɲ̊
+ɱ > ɱ
+h > h
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+am̥m̥an̥o:  >  am̥m̥an̥:o 
+am̥m̥im̥ero:  >  am̥m̥im̥er:o 
+ahham̥o:  >  ahham̥:o 
+ahham̥n̥o:  >  ahham̥n̥:o 
+ahhoʔn̥in̥o:  >  ahhoʔn̥in̥:o 
+ahhotn̥iho:  >  ahhotn̥ih:o 
+ahhollo:  >  ahholl:o 
+ahhomm̥te:sho:  >  ahhomm̥:tesh:o 
+ahhompn̥i:re  >  ahhomp:n̥ire 
+ahhotn̥a:n̥e  >  ahhotn̥:an̥e 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[1, 1, -1, 7, 0, 0, 0, -1, -1, -1, -1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[1, 0, -1, -1, 0, -1, -1, -1, 1, -1, -1, 0] 
+
+Impacted phonems :a > a
+a > a
+h > h
+h > h
+i > i
+n̥ > n̥
+e > e
+e > e
+n̥ > n̥
+i > i
+e > e
+
+
+
+
+EXAMPLES 
+  
+h:inh:waʔinn̥:a  >  hin:h:waʔinn̥:a 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[1, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+m̥ > m̥
+n > n
+n̥ > n̥
+e > e
+o > o
+m̥ > m̥
+u > u
+i > i
+s > s
+n̥ > n̥
+m > m
+y > y
+n̥ > n̥
+h > h
+ʔ > ʔ
+n̥ > n̥
+t > t
+n̥ > n̥
+m̥ > m̥
+a > a
+a > a
+w > w
+u > u
+h > h
+i > i
+ɲ̊ > ɲ̊
+n̥ > n̥
+m̥ > m̥
+f > f
+m̥ > m̥
+j > j
+n̥ > n̥
+ʔ > ʔ
+n̥ > n̥
+e > e
+n̥ > n̥
+É› > É›
+a > a
+h > ʡ̆
+h > ʡ̆
+i > i
+i > i
+o > o
+É¤ > É¤
+t > t
+n̥ > ɾ̥
+e > e
+e > e
+n̥ > ɾ̥
+i > i
+ɲ̊ > ɲ̊
+ɱ > ɱ
+h > h
+m̥ > m̥
+n̥ > n̥
+É¤ > É¤
+e > e
+
+
+
+
+EXAMPLES 
+  
+haulae  >  ʡ̆aulae 
+hin:h:waʔinn̥:a  >  ʡ̆in:h:waʔinn̥:a 
+n̥einn̥us  >  ɾ̥einn̥us 
+n̥en̥iʔatia:n̥e  >  ɾ̥en̥iʔatia:n̥e 
+n̥iurnus  >  ɾ̥iurnus 
+haunio:  >  ʡ̆aunio: 
+itn̥ihin̥:apenn̥a  >  itɾ̥ihin̥:apenn̥a 
+ɲ̊:un̥aizz:o  >  ɲ̊:uɾ̥aizz:o 
+n̥euhma  >  ɾ̥euhma 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[1, 1, 0, 4, 0, 0, 0, 0, 1, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ʡ̆ > ɦ
+ʡ̆ > ɦ
+ɾ̥ > n
+ɾ̥ > n
+ɲ̊ > ɲ̊
+
+
+
+
+EXAMPLES 
+  
+ʡ̆aulae  >  ɦaulae 
+ʡ̆in:h:waʔinn̥:a  >  ɦin:h:waʔinn̥:a 
+ɾ̥einn̥us  >  neinn̥us 
+ɾ̥en̥iʔatia:n̥e  >  nen̥iʔatia:n̥e 
+ɾ̥iurnus  >  niurnus 
+ʡ̆aunio:  >  ɦaunio: 
+itɾ̥ihin̥:apenn̥a  >  itnihin̥:apenn̥a 
+ɲ̊:uɾ̥aizz:o  >  ɲ̊:unaizz:o 
+ɾ̥euhma  >  neuhma 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[1, 1, 0, 7, 0, 1, 0, 0, 0, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[1, 0, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+e > e
+u > É¯
+r > r
+n̥ > n̥
+i > i
+m̥ > m̥
+m̥ > m̥
+h > h
+n̥ > n̥
+n̥ > n̥
+h > h
+l > l
+a > a
+n̥ > n̥
+u > É¯
+a > a
+i > i
+m̥ > m̥
+n > n
+e > e
+o > É¤
+o > É¤
+ɲ̊ > ɲ̊
+
+
+
+
+EXAMPLES 
+  
+am̥m̥an̥uo:  >  am̥m̥an̥É¯o: 
+a:hn̥ua:lis  >  a:hn̥É¯a:lis 
+haln̥in̥oe:  >  haln̥in̥É¤e: 
+haln̥irroe:  >  haln̥irrÉ¤e: 
+hoahn̥ih:are  >  hÉ¤ahn̥ih:are 
+hoan̥in̥io:  >  hÉ¤an̥in̥io: 
+huerra  >  hÉ¯erra 
+ɲ̊:an̥uella  >  ɲ̊:an̥É¯ella 
+nuo:  >  nÉ¯o: 
+rem̥oetin̥io:  >  rem̥É¤etin̥io: 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[-1, 0, -1, 2, -1, 1, 0, -1, -1, 0, 1, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ɦ > ɦ
+ɦ > ɦ
+n > n
+n > n
+
+
+
+
+EXAMPLES 
+  
+ɦin:h:waʔinn̥:a  >  ɦ:inh:waʔinn̥:a 
+A change has occured 
+
+
+The feature Trill switched values from 1 to 0
+
+Target :   
+[0, 0, 3, 2, 0, 1, 0, 0, 1, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1]
+Conditions : 
+
+Impacted phonems :a > a
+m̥ > m̥
+n > n
+n̥ > n̥
+e > e
+e > e
+o > É¤
+m̥ > m̥
+É¯ > É¯
+i > i
+m̥ > m̥
+n̥ > n̥
+i > i
+u > É¯
+m > m
+m̥ > m̥
+y > i
+n̥ > n̥
+m̥ > m̥
+h > h
+h > h
+ʔ > ʔ
+n̥ > n̥
+t > t
+n̥ > n̥
+h > h
+l > l
+a > a
+a > a
+É¯ > É¯
+a > a
+n̥ > n̥
+i > i
+n̥ > n̥
+ɲ̊ > ɲ̊
+m̥ > m̥
+f > f
+j > j
+n > n
+ʔ > ʔ
+e > e
+n̥ > n̥
+É› > É›
+a > a
+É¤ > É¤
+i > i
+i > i
+É¤ > É¤
+t > t
+e > e
+e > e
+i > i
+ɲ̊ > ɲ̊
+ɱ > ɱ
+h > h
+n̥ > n̥
+É¤ > É¤
+e > e
+
+
+
+
+EXAMPLES 
+  
+am̥ann̥eo:  >  am̥ann̥eÉ¤: 
+am̥m̥an̥:o  >  am̥m̥an̥:É¤ 
+am̥m̥an̥É¯o:  >  am̥m̥an̥É¯É¤: 
+am̥m̥im̥er:o  >  am̥m̥im̥er:É¤ 
+am̥sen̥ium  >  am̥sen̥iÉ¯m 
+am̥yn̥sim̥us  >  am̥in̥sim̥É¯s 
+ahham̥:o  >  ahham̥:É¤ 
+ahham̥n̥io:  >  ahham̥n̥iÉ¤: 
+ahham̥n̥:o  >  ahham̥n̥:É¤ 
+ahhoʔn̥in̥:o  >  ahhÉ¤ʔn̥in̥:É¤ 
+A change has occured 
+
+
+The feature Backness switched values from 0 to 1
+
+Target :   
+[-1, 0, 2, -1, -1, 0, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[1, 0, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :h > h
+É¯ > É¨
+ʔ > ʔ
+h > h
+É¤ > É˜
+É¤ > É˜
+
+
+
+
+EXAMPLES 
+  
+a:hn̥É¯a:lis  >  a:hn̥É¨a:lis 
+haln̥in̥É¤e:  >  haln̥in̥É˜e: 
+haln̥irrÉ¤e:  >  haln̥irrÉ˜e: 
+hÉ¤ahn̥ih:are  >  hÉ˜ahn̥ih:are 
+hÉ¤an̥in̥iÉ¤:  >  hÉ˜an̥in̥iÉ¤: 
+hÉ¯erra  >  hÉ¨erra 
+ɲ̊:an̥É¯ella  >  ɲ̊:an̥É¨ella 
+rem̥É¤etin̥iÉ¤:  >  rem̥É˜etin̥iÉ¤: 
+sem̥n̥É¯ennis  >  sem̥n̥É¨ennis 
+n̥rahÉ¤en̥É¯s  >  n̥rahÉ˜en̥É¯s 
+A change has occured 
+
+
+The feature Backness switched values from 2 to 0
+
+Target :   
+[1, 1, 1, -1, 0, -1, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, 2, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -4  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] 
+
+Impacted phonems :e > É¤
+e > É¤
+i > É¯
+i > É¯
+a > a
+a > a
+a > a
+i > É¯
+i > É¯
+i > É¯
+e > É¤
+
+
+
+
+EXAMPLES 
+  
+am̥ann̥e  >  am̥ann̥É¤ 
+am̥ann̥eÉ¤:  >  am̥ann̥É¤É¤: 
+am̥m̥im̥er:É¤  >  am̥m̥im̥É¤r:É¤ 
+am̥sen̥ii:  >  am̥sen̥É¯É¯: 
+am̥sen̥iÉ¯m  >  am̥sen̥É¯É¯m 
+am̥in̥sim̥É¯s  >  am̥in̥sÉ¯m̥É¯s 
+ahham̥n̥iÉ¤:  >  ahham̥n̥É¯É¤: 
+ahhÉ¤ʔn̥in̥:É¤  >  ahhÉ¤ʔn̥É¯n̥:É¤ 
+ahhÉ¤tn̥ih:É¤  >  ahhÉ¤tn̥É¯h:É¤ 
+ahhÉ¤mm̥:tesh:É¤  >  ahhÉ¤mm̥:tÉ¤sh:É¤ 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0] 
+1  C:   Rel pos :  -2  Continu : 1  Template :[1, 0, -1, -1, -1, 1, -1, -1, -1, 0, -1, -1] 
+
+Impacted phonems :É¤ > É¤
+É¯ > É¯
+É¤ > É¤
+É¯ > É¯
+É¯ > É¯
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+l > l
+m̥ > m̥
+r > r
+n̥ > n̥
+h > h
+ʔ > ʔ
+a > a
+a > a
+É¯ > É¯
+É¯ > É¯
+h > h
+m > m
+r > r
+n̥ > n̥
+n > n
+h > h
+w > w
+l > l
+n > n
+É˜ > É˜
+É¤ > É¤
+n̥ > n̥
+t > t
+p̪ > p̪
+m̥ > m̥
+h > h
+m̥ > m̥
+m̥ > m̥
+É¤ > É¤
+m̥ > m̥
+
+
+
+
+EXAMPLES 
+  
+ahham̥n̥:É¤  >  ahham̥n̥É¤: 
+ahhÉ¤ll:É¤  >  ahhÉ¤llÉ¤: 
+ahhÉ¤mm̥:tÉ¤sh:É¤  >  ahhÉ¤mm̥t:É¤sh:É¤ 
+ahhÉ¤mp:n̥É¯rÉ¤  >  ahhÉ¤mpn̥:É¯rÉ¤ 
+ahhÉ¤tn̥:an̥É¤  >  ahhÉ¤tn̥a:n̥É¤ 
+ahhÉ¤rn̥:É¤  >  ahhÉ¤rn̥É¤: 
+an̥m̥elt:É¤sh:É¤  >  an̥m̥eltÉ¤:shÉ¤: 
+an̥ɲ̊É¯ht:n̥arÉ¤  >  an̥ɲ̊É¯htn̥:arÉ¤ 
+an̥ɲ̊É¯hs:n̥É¤  >  an̥ɲ̊É¯hsn̥:É¤ 
+an̥pÉ¤rt:É¤sh:É¤  >  an̥pÉ¤rtÉ¤:shÉ¤: 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[-1, 1, 0, 7, 0, 1, 0, 0, -1, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :É¤ > É¤
+r > r
+É¯ > É¯
+É¯ > É¯
+a > a
+w > w
+n > n
+z > z
+m > m
+É¯ > É¯
+É¤ > É¤
+n > n
+É¤ > É¤
+i > i
+l > l
+h > h
+l > l
+r > r
+e > e
+m > m̥
+
+
+
+
+EXAMPLES 
+  
+saehÉ¯n̥É¯m  >  saehÉ¯n̥É¯m̥ 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[-1, 1, 0, 7, 0, -1, 0, 0, -1, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  3  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0] 
+
+Impacted phonems :m̥ > m̥
+s > s
+h > h
+n̥ > n
+n̥ > n
+n̥ > n
+n̥ > n̥
+É¯ > É¯
+h > h
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+É¯ > É¯
+f > f
+ɲ̊ > ɲ̊
+h > h
+i > i
+e > e
+h > ʕ
+h > ɦ
+m̥ > m̥
+n̥ > n
+m̥ > m
+É¤ > É¤
+É˜ > É˜
+
+
+
+
+EXAMPLES 
+  
+ahhÉ¤ʔn̥É¯n̥:É¤  >  ahhÉ¤ʔnÉ¯n̥:É¤ 
+ahhÉ¤tn̥É¯h:É¤  >  ahhÉ¤tnÉ¯h:É¤ 
+ahhÉ¤tn̥a:n̥É¤  >  ahhÉ¤tna:n̥É¤ 
+an̥pÉ¤tn̥É¯:n̥É¤  >  an̥pÉ¤tnÉ¯:n̥É¤ 
+an̥wetn̥É¯:n̥a  >  an̥wetnÉ¯:n̥a 
+affÉ¯tn̥a:n̥É¤  >  affÉ¯tna:n̥É¤ 
+allaʔn̥a:n̥É¤  >  allaʔna:n̥É¤ 
+arretn̥a:n̥É¤  >  arretna:n̥É¤ 
+ʔÉ¤mm̥atn̥É¤n̥É¤  >  ʔÉ¤mm̥atnÉ¤n̥É¤ 
+ʔÉ¤mpatn̥a:n̥É¤  >  ʔÉ¤mpatna:n̥É¤ 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[-1, 1, 0, 11, 0, -1, -1, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[1, 0, 3, -1, -1, 1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m̥ > m̥
+r > r
+n̥ > n̥
+s > s
+h > h
+n̥ > n̥
+t > n
+ʔ > ʔ
+h > h
+a > a
+É¤ > É¤
+n̥ > n
+m̥ > m̥
+h > h
+ʔ > ʔ
+n̥ > n̥
+h > ɦ
+n̥ > n
+t > t
+m > m
+É¤ > É¤
+h > ɦ
+É¯ > É¯
+f > f
+h > ʕ
+É¤ > É¤
+n̥ > n
+l > l
+n > n
+a > a
+a > a
+É¯ > É¯
+r > r
+m̥ > m̥
+f > ɱ
+É¯ > É¯
+m̥ > m
+n̥ > n
+
+
+
+
+EXAMPLES 
+  
+an̥ɲ̊É¯htn̥:arÉ¤  >  an̥ɲ̊É¯hnn̥:arÉ¤ 
+an̥ɲ̊É¯hsn̥:É¤  >  an̥ɲ̊É¯hnn̥:É¤ 
+aff:in̥:awÉ¯n̥  >  aff:in̥:awÉ¯n 
+an̥ih:É¯nÉ¯s  >  an̥ih:É¯nÉ¯n 
+am̥:an̥É¯hÉ¯s  >  am̥:an̥É¯ɦÉ¯n 
+am̥:ihÉ¯n̥a:s  >  am̥:ihÉ¯na:n 
+am̥ihÉ¯n̥a:n̥É¯s  >  am̥ihÉ¯na:nÉ¯n 
+ath:É¤n̥É¯n̥:anÉ¯s  >  ath:É¤n̥É¯n̥:anÉ¯n 
+am̥m̥É›n̥É¯hÉ¯n̥a:rÉ¤  >  am̥m̥É›n̥É¯hÉ¯na:rÉ¤ 
+aÉ¯n̥:an̥É¯s  >  aÉ¯n̥:an̥É¯n 
+A change has occured 
+
+
+The feature Fricative switched values from 1 to 0
+
+Target :   
+[-1, 0, 2, -1, 0, 1, 0, 0, -1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[1, 0, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+m̥ > m̥
+s > s
+h > h
+h > h
+n̥ > n̥
+h > h
+n > n̥
+n > n̥
+t > t
+n > n̥
+a > a
+r > r
+a > a
+É¨ > É¨
+l > l
+É¯ > É¯
+É¯ > É¯
+t > n̥
+n̥ > n̥
+ɲ̊ > ɲ̊
+m̥ > m̥
+n̥ > n̥
+É¯ > É¯
+a > a
+h > ʔ
+f > f
+f > f
+ɲ̊ > ɲ̊
+m̥ > m̥
+h > h
+i > i
+ɦ > ʔ
+e > e
+w > m̥
+h > ʡ
+i > i
+n̥ > n̥
+r > n̥
+e > e
+É˜ > É˜
+É˜ > É˜
+É¤ > É¤
+ʕ > ʡ
+p̪ > ɱ
+m̥ > m̥
+É¤ > É¤
+m̥ > m̥
+a > a
+ɱ > ɱ
+n̥ > n̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+ahhÉ¤ʔnÉ¯n̥:É¤  >  ahhÉ¤ʔn̥É¯n̥:É¤ 
+ahhÉ¤tnÉ¯h:É¤  >  ahhÉ¤tn̥É¯h:É¤ 
+ahhÉ¤tna:n̥É¤  >  ahhÉ¤tn̥a:n̥É¤ 
+a:hn̥É¨a:lÉ¯s  >  a:hn̥É¨a:n̥É¯s 
+am̥m̥assÉ¯É¤:  >  am̥m̥asn̥É¯É¤: 
+an̥m̥eltÉ¤:shÉ¤:  >  an̥m̥eln̥É¤:shÉ¤: 
+an̥pÉ¤rtÉ¤:shÉ¤:  >  an̥pÉ¤rn̥É¤:shÉ¤: 
+an̥pÉ¤tnÉ¯:n̥É¤  >  an̥pÉ¤tn̥É¯:n̥É¤ 
+an̥wetnÉ¯:n̥a  >  an̥wetn̥É¯:n̥a 
+aen̥:an̥É¯hÉ¯m  >  aen̥:an̥É¯ʔÉ¯m 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[1, 0, 3, 0, 0, 1, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+m̥ > m̥
+n > n
+É¤ > É¤
+n̥ > n̥
+É¤ > É¤
+m̥ > m̥
+É¤ > É¤
+É¤ > É¤
+i > i
+É¤ > É¤
+s > s
+e > e
+É¯ > É¯
+É¯ > É¯
+m > m
+i > i
+É¯ > É¯
+É¯ > É¯
+h > h
+h > h
+h > h
+n̥ > n̥
+ʔ > ʔ
+n̥ > n̥
+t > t
+n̥ > n̥
+m̥ > m̥
+t > t
+t > t
+n̥ > n̥
+a > a
+a > a
+a > a
+É¯ > É¯
+É¨ > É¨
+n̥ > n̥
+n̥ > n̥
+ʔ > ʔ
+ɲ̊ > ɲ̊
+a > a
+É¯ > É¯
+m > m̥
+r > n̥
+f > f
+f > f
+ɲ̊ > ɲ̊
+m̥ > m̥
+ʔ > ʔ
+i > i
+ʔ > ʔ
+e > e
+É› > É›
+m̥ > m̥
+ʡ > ʡ
+n̥ > n̥
+É¯ > É¯
+É˜ > É˜
+É¯ > É¯
+É˜ > É˜
+ʡ > ʡ
+ɱ > ɱ
+a > a
+É¤ > É¤
+ɱ > ɱ
+n̥ > n̥
+e > e
+É¤ > É¤
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+ahhÉ¤mpn̥:É¯rÉ¤  >  ahhÉ¤mm̥n̥:É¯rÉ¤ 
+aen̥:an̥É¯ʔÉ¯m  >  aen̥:an̥É¯ʔÉ¯m̥ 
+aen̥:hÉ¤r  >  aen̥:hÉ¤n̥ 
+aff:in̥:awÉ¯n  >  aff:in̥:awÉ¯n̥ 
+awihÉ¤ln̥a  >  awihÉ¤n̥n̥a 
+m̥is:É¤mÉ¯m  >  m̥is:É¤mÉ¯m̥ 
+m̥É¤sh:an̥É¯hÉ¯m  >  m̥É¤sh:an̥É¯hÉ¯m̥ 
+m̥:É¯n̥:irÉ¯m  >  m̥:É¯n̥:irÉ¯m̥ 
+m̥:izn̥ann̥É¯É¤n  >  m̥:izn̥ann̥É¯É¤n̥ 
+m̥:izn̥ann̥É¯É¯m  >  m̥:izn̥ann̥É¯É¯m̥ 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[1, 1, 0, 7, 0, 1, 1, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :n̥ > t
+n̥ > t
+n̥ > t
+m̥ > p
+r > t
+n̥ > t
+n̥ > t
+h > ʔ
+h > ʡ
+ʔ > ʔ
+m̥ > p
+ʕ > ʡ
+ɱ > p̪
+m̥ > p
+h > ʔ
+ɱ > p̪
+n̥ > t
+n̥ > t
+
+
+
+
+EXAMPLES 
+  
+ahham̥n̥É¯É¤:  >  ahham̥tÉ¯É¤: 
+ahham̥n̥É¤:  >  ahham̥tÉ¤: 
+ahhÉ¤ʔn̥É¯n̥:É¤  >  ahhÉ¤ʔtÉ¯n̥:É¤ 
+ahhÉ¤tn̥É¯h:É¤  >  ahhÉ¤ttÉ¯h:É¤ 
+ahhÉ¤llÉ¤:  >  ahhÉ¤ltÉ¤: 
+ahhÉ¤mm̥t:É¤sh:É¤  >  ahhÉ¤mpt:É¤th:É¤ 
+ahhÉ¤mm̥n̥:É¯rÉ¤  >  ahhÉ¤mpn̥:É¯tÉ¤ 
+ahhÉ¤tn̥a:n̥É¤  >  ahhÉ¤tta:n̥É¤ 
+ahhÉ¤rn̥É¤:  >  ahhÉ¤rtÉ¤: 
+a:hn̥É¨a:n̥É¯s  >  a:hn̥É¨a:tÉ¯s 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[1, 1, 0, 7, 0, 0, 0, 0, 1, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+É¤ > É¤
+É¯ > É¯
+É¯ > É¯
+h > h
+h > h
+t > n
+p > m
+t > t
+a > a
+a > a
+É¨ > É¨
+t > n
+ʔ > ɦ
+n̥ > n̥
+ɲ̊ > ɲ̊
+s > n
+ʡ > ʕ
+f > f
+m̥ > m̥
+i > i
+n̥ > n̥
+e > e
+a > a
+É¯ > É¯
+É˜ > É˜
+p̪ > ɱ
+t > t
+t > t
+e > e
+i > i
+ɱ > ɱ
+ʔ > ʔ
+t > n
+É¤ > É¤
+t > n
+
+
+
+
+EXAMPLES 
+  
+ahham̥tÉ¯É¤:  >  ahham̥nÉ¯É¤: 
+ahham̥tÉ¤:  >  ahham̥nÉ¤: 
+ahhÉ¤mpt:É¤th:É¤  >  ahhÉ¤mmt:É¤nh:É¤ 
+ahhÉ¤mpn̥:É¯tÉ¤  >  ahhÉ¤mmn̥:É¯tÉ¤ 
+an̥m̥astÉ¯a:tÉ¤  >  an̥m̥asnÉ¯a:tÉ¤ 
+am̥m̥astÉ¯É¤:  >  am̥m̥asnÉ¯É¤: 
+an̥m̥eltÉ¤:sʔÉ¤:  >  an̥m̥elnÉ¤:sɦÉ¤: 
+an̥m̥n̥aʔhhÉ¯É¤:  >  an̥m̥n̥aɦhhÉ¯É¤: 
+an̥pÉ¤rtÉ¤:sʔÉ¤:  >  an̥pÉ¤rnÉ¤:sɦÉ¤: 
+am̥m̥n̥É¤tsÉ¯m  >  am̥m̥n̥É¤nsÉ¯m 
+A change has occured 
+
+
+The feature Plosive switched values from 1 to 0
+
+Target :   
+[1, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :ɦ > h
+n > n̥
+t > n̥
+t > n̥
+t > n̥
+p > m̥
+p̪ > ɱ
+
+
+
+
+EXAMPLES 
+  
+aen̥:an̥É¯ɦÉ¯m̥  >  aen̥:an̥É¯hÉ¯m̥ 
+an̥:em̥É¤nÉ¯ta  >  an̥:em̥É¤n̥É¯ta 
+an̥em̥É¤nÉ¯tÉ¤:  >  an̥em̥É¤n̥É¯tÉ¤: 
+an̥ih:É¯tÉ¯n  >  an̥ih:É¯n̥É¯n 
+am̥:an̥É¯ʔÉ¯n  >  am̥:an̥É¯hÉ¯n 
+am̥:ihÉ¯ta:n  >  am̥:ihÉ¯n̥a:n 
+am̥ihÉ¯ta:tÉ¯n  >  am̥ihÉ¯n̥a:n̥É¯n 
+ath:É¤n̥É¯n̥:atÉ¯n  >  ath:É¤n̥É¯n̥:an̥É¯n 
+am̥m̥É›n̥É¯hÉ¯ta:tÉ¤  >  am̥m̥É›n̥É¯hÉ¯n̥a:tÉ¤ 
+hÉ¤nstatn̥:É¯n̥É¤m̥É¤tÉ¯n  >  hÉ¤nstatn̥:É¯n̥É¤m̥É¤n̥É¯n 
+A change has occured 
+
+
+The feature Fricative switched values from 1 to 0
+
+Target :   
+[1, 0, -1, 2, -1, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 2         relative position : 0
+length : True         stress : False 
+
+Impacted phonems :j > ɲ̊
+w > m̥
+f > ɱ
+s > n̥
+
+
+
+
+EXAMPLES 
+  
+adjuksta:re  >  adɲ̊uksta:re 
+adjuksto:  >  adɲ̊uksto: 
+adwentu:ra  >  adm̥entu:ra 
+adwe:ra:re  >  adm̥e:ra:re 
+adwe:ro:  >  adm̥e:ro: 
+affi:da:wit  >  afɱi:da:wit 
+affu:ma:re  >  afɱu:ma:re 
+affu:mo:  >  afɱu:mo: 
+affunda:re  >  afɱunda:re 
+affundo:  >  afɱundo: 
+A change has occured 
+
+
+The feature Lateral switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 7, 0, 1, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  5  Continu : 0  Template :[0, 1, -1, -1, -1, -1, 1, -1, -1, 0, 0, 0] 
+1  C:   Rel pos :  -5  Continu : 1  Template :[1, 0, 2, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  -5  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :t > ɬ
+e > e
+a > a
+
+
+
+
+EXAMPLES 
+  
+latentissime  >  latenɬissime 
+latentissimus  >  latenɬissimus 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, 1, 0, 0, 0, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 1         relative position : 0
+length : True         stress : False 
+
+Impacted phonems :m > p
+n > t
+
+
+
+
+EXAMPLES 
+  
+ama:rikus  >  apa:rikus 
+ami:kita:s  >  api:kita:s 
+anko:nita:nus  >  atko:nita:nus 
+ando:  >  atdo: 
+impli:re  >  ippli:re 
+impo:situm  >  ippo:situm 
+infa:kundus  >  itfa:kundus 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 11, 0, -1, -1, -1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 0  Template :[0, 1, -1, -1, -1, -1, 0, 1, -1, -1, -1, -1] 
+1  C:   Rel pos :  4  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  -1  Continu : 0  Template :[1, 0, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :n > t
+m > p
+
+
+
+
+EXAMPLES 
+  
+affunda:re  >  affutda:re 
+kolumbi:nus  >  kolupbi:nus 
+lonɡita:nus  >  lotɡita:nus 
+lonɡiturnus  >  lotɡiturnus 
+monta:nia  >  motta:nia 
+monta:re  >  motta:re 
+pu:nktio:  >  pu:tktio: 
+undiwaɡus  >  utdiwaɡus 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[1, 0, 3, 2, 0, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+1  C:   Rel pos :  -1  Continu : 0  Template :[1, 0, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  -2  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :n > t
+m > p
+e > e
+s > t
+r > t
+l > t
+u > u
+w > p
+a > a
+f > p̪
+i > i
+o > o
+h > ʔ
+t > t
+j > c
+
+
+
+
+EXAMPLES 
+  
+abanteo:  >  abatteo: 
+akkomple:sko:  >  akkopple:sko: 
+akkompli:re  >  akkoppli:re 
+adbassia:re  >  adbatsia:re 
+abbassio:  >  abbatsio: 
+admina:kia:re  >  admita:kia:re 
+admina:kio:  >  admita:kio: 
+adwe:ra:re  >  adwe:ta:re 
+affu:ma:re  >  affu:pa:re 
+ale:mosyna  >  ale:potyna 
+A change has occured 
+
+
+The feature Backness switched values from 3 to 0
+
+Target :   
+[0, 1, 0, 4, 0, -1, 0, 1, -1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, 3, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :k > ʔ
+ɡ > ʔ
+
+
+
+
+EXAMPLES 
+  
+akka  >  aʔʔa 
+akkapo:  >  aʔʔapo: 
+akkaptio:  >  aʔʔaptio: 
+akkapto:  >  aʔʔapto: 
+akkoɡnito:  >  aʔʔoʔnito: 
+akkolliɡo:  >  aʔʔolliʔo: 
+akkollo:  >  aʔʔollo: 
+akkopple:sko:  >  aʔʔopple:sʔo: 
+akkoppli:re  >  aʔʔoppli:re 
+akkorda:re  >  aʔʔorda:re 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[0, 1, 0, -1, 0, 0, 0, -1, -1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  2  Continu : 1  Template :[0, 1, -1, 0, -1, -1, 0, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  5  Continu : 0  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :h > ɦ
+
+
+
+
+EXAMPLES 
+  
+ɡazzophylakium  >  ɡazzopɦylakium 
+A change has occured 
+
+
+The feature Fricative switched values from 1 to 0
+
+Target :   
+[-1, -1, 0, -1, 0, 1, -1, -1, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 1         relative position : 0
+length : True         stress : False 
+1  C:   Rel pos :  1  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :f > ɱ
+j > ɲ̊
+s > n̥
+h > ʔ
+
+
+
+
+EXAMPLES 
+  
+affi:da:wit  >  aɱfi:da:wit 
+affu:ma:re  >  aɱfu:ma:re 
+affu:mo:  >  aɱfu:mo: 
+ajju:nus  >  aɲ̊ju:nus 
+askle:  >  an̥kle: 
+e:ska:rius  >  e:n̥ka:rius 
+phrene:sis  >  pʔrene:sis 
+A change has occured 
+
+
+The feature Lateral switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1]
+Conditions : 
+
+Impacted phonems :l > n̥
+
+
+
+
+EXAMPLES 
+  
+akkolliɡo:  >  akkon̥n̥iɡo: 
+akkollo:  >  akkon̥n̥o: 
+akkomple:sko:  >  akkompn̥e:sko: 
+akkompli:re  >  akkompn̥i:re 
+a:ktua:lis  >  a:ktua:n̥is 
+aku:kla  >  aku:kn̥a 
+aku:klae  >  aku:kn̥ae 
+adbelle:sko:  >  adben̥n̥e:sko: 
+adokla:re  >  adokn̥a:re 
+adoklo:  >  adokn̥o: 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[1, 0, -1, 2, -1, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+e > e
+o > o
+u > u
+i > i
+y > y
+
+
+
+
+EXAMPLES 
+  
+abbato:  >  abbat:o 
+abbibero:  >  abbiber:o 
+akkapo:  >  akkap:o 
+akkapto:  >  akkapt:o 
+akkoɡnito:  >  akkoɡnit:o 
+akkolliɡo:  >  akkolliɡ:o 
+akkollo:  >  akkoll:o 
+akkomple:sko:  >  akkomp:lesk:o 
+akkompli:re  >  akkomp:lire 
+akkorda:re  >  akkord:are 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 3, 0, 0, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 1         relative position : 0
+length : True         stress : False 
+1  C:   Rel pos :  -1  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :k > k
+t > t
+d > d
+e > e
+f > f
+ɡ > ɡ
+j > j
+l > l
+m > m
+n > n
+p > p
+r > r
+s > s
+u > u
+b > b
+
+
+
+
+EXAMPLES 
+  
+a:rd:o  >  ar:d:o 
+e:rɡ:o  >  er:ɡ:o 
+e:sk:arius  >  es:k:arius 
+o:rd:ire  >  or:d:ire 
+y:ps:ilon  >  yp:s:ilon 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 3, 0, 1, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 0  Template :[0, 1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+b > b
+e > e
+y > y
+s > s
+k > k
+o > o
+m > m
+p > p
+u > u
+d > d
+l > l
+r > r
+j > j
+n > n
+w > w
+i > i
+t > t
+f > f
+v > v
+z > z
+h > h
+ɡ > ɡ
+
+
+
+
+EXAMPLES 
+  
+a:ktua:lis  >  ak:tua:lis 
+admin:akia:re  >  admina:kia:re 
+att:itia:re  >  atti:tia:re 
+b:lawus  >  bl:awus 
+b:yzzantion  >  by:zzantion 
+b:yzzantium  >  by:zzantium 
+karn:akeus  >  karna:keus 
+kaut:erium  >  kaute:rium 
+k:hirurɡia:nus  >  kh:irurɡia:nus 
+k:ink:waɡint:a  >  k:inkw:aɡint:a 
+A change has occured 
+
+
+The feature Height switched values from 0 to 1
+
+Target :   
+[1, 0, 3, 2, 0, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :a > É›
+b > m̥
+n > n̥
+t > n̥
+r > n̥
+p > m̥
+s > n̥
+d > n̥
+m > m̥
+k > ŋ̊
+ɡ > ŋ̊
+l > n̥
+w > m̥
+h > h
+j > ɲ̊
+f > ɱ
+z > n̥
+v > ɱ
+c > ɲ̊
+
+
+
+
+EXAMPLES 
+  
+abante  >  É›m̥É›n̥n̥e 
+abanteo:  >  É›m̥É›n̥n̥eo: 
+abbato:  >  É›m̥m̥É›n̥o: 
+abbatuo:  >  É›m̥m̥É›n̥uo: 
+abbibero:  >  É›m̥m̥im̥en̥o: 
+apsedii:  >  É›m̥n̥en̥ii: 
+apsedium  >  É›m̥n̥en̥ium̥ 
+abyssimus  >  É›m̥yn̥n̥im̥un̥ 
+akka  >  É›ŋ̊ŋ̊É› 
+akkapo:  >  É›ŋ̊ŋ̊É›m̥o: 
+A change has occured 
+
+
+The feature Height switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, -1, 0, -1, 0, 0, -1, -1, -1, 0] 
+Effects : 
+[-1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 1  Template :[1, 0, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+É› > É›
+ŋ̊ > ŋ̊
+n̥ > n̥
+m̥ > m̥
+m̥ > m̥
+ɱ > ɱ
+h > ʔ
+
+
+
+
+EXAMPLES 
+  
+ŋ̊É›n̥n̥om̥hyn̥É›ŋ̊ium̥  >  ŋ̊É›n̥n̥om̥ʔyn̥É›ŋ̊ium̥ 
+n̥i:m̥in̥n̥om̥hun̥  >  n̥i:m̥in̥n̥om̥ʔun̥ 
+A change has occured 
+
+
+The feature Lateral switched values from 0 to 1
+
+Target :   
+[0, 1, -1, 11, 0, -1, -1, -1, -1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -5  Continu : 1  Template :[0, 1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :e > e
+o > o
+u > u
+n̥ > ɬ
+i > i
+m̥ > ɬ
+m̥ > ɬ
+n̥ > ɬ
+n̥ > ɬ
+n̥ > ɬ
+ŋ̊ > ʟ̝̊
+m̥ > ɬ
+ŋ̊ > ʟ̝̊
+n̥ > ɬ
+n̥ > ɬ
+É› > É›
+n̥ > ɬ
+É› > É›
+h > ʟ̠
+ŋ̊ > ʟ̝̊
+n̥ > ɬ
+m̥ > ɬ
+y > y
+n̥ > ɬ
+ŋ̊ > ʟ̝̊
+n̥ > ɬ
+m̥ > ɬ
+m̥ > ɬ
+ɱ > ɬ
+m̥ > ɬ
+n̥ > ɬ
+n̥ > ɬ
+ʔ > ʟ̠
+
+
+
+
+EXAMPLES 
+  
+É›m̥m̥im̥en̥o:  >  É›m̥m̥im̥eɬo: 
+É›m̥n̥en̥ium̥  >  É›m̥n̥en̥iuɬ 
+É›m̥yn̥n̥im̥un̥  >  É›m̥yn̥n̥iɬuɬ 
+É›ŋ̊ŋ̊oŋ̊n̥in̥o:  >  É›ŋ̊ŋ̊oŋ̊ɬiɬo: 
+É›ŋ̊ŋ̊on̥n̥iŋ̊o:  >  É›ŋ̊ŋ̊on̥n̥iʟ̝̊o: 
+É›ŋ̊ŋ̊om̥m̥n̥e:n̥ŋ̊o:  >  É›ŋ̊ŋ̊om̥ɬn̥e:ɬʟ̝̊o: 
+É›ŋ̊ŋ̊om̥m̥n̥i:n̥e  >  É›ŋ̊ŋ̊om̥ɬn̥i:ɬe 
+É›ŋ̊ŋ̊on̥n̥É›:n̥e  >  É›ŋ̊ŋ̊on̥ɬÉ›:ɬe 
+É›ŋ̊ŋ̊on̥n̥o:  >  É›ŋ̊ŋ̊on̥ɬo: 
+É›ŋ̊ŋ̊m̥É›en̥io:  >  É›ŋ̊ŋ̊m̥É›eɬio: 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[0, 1, -1, 3, 0, -1, 0, 1, 0, -1, 0, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 2         relative position : 0
+length : False         stress : False 
+1  C:   Rel pos :  2  Continu : 1  Template :[0, 1, -1, -1, 0, 0, -1, 1, -1, 0, -1, -1] 
+
+Impacted phonems :u > u
+i > i
+É› > É›
+e > e
+o > o
+
+
+
+
+EXAMPLES 
+  
+É›ŋ̊u:ŋ̊n̥É›  >  É›ŋ̊:uŋ̊n̥É› 
+É›ŋ̊u:ŋ̊n̥É›e  >  É›ŋ̊:uŋ̊n̥É›e 
+É›ŋ̊u:n̥iÉ›:n̥e  >  É›ŋ̊:un̥iÉ›:n̥e 
+É›ŋ̊u:n̥io:  >  É›ŋ̊:un̥io: 
+É›m̥i:ŋ̊iɬÉ›:n̥  >  É›m̥:iŋ̊iɬÉ›:n̥ 
+ŋ̊n̥É›:m̥un̥oɬ  >  ŋ̊:n̥É›m̥un̥oɬ 
+ɱn̥i:ŋ̊n̥u:ɬÉ›  >  ɱ:n̥iŋ̊n̥u:ɬÉ› 
+in̥É›:ŋ̊m̥iÉ›  >  in̥:É›ŋ̊m̥iÉ› 
+n̥ŋ̊o:m̥un̥É›  >  n̥:ŋ̊om̥un̥É› 
+A change has occured 
+
+
+The feature Lateral switched values from 1 to 0
+
+Target :   
+[0, 1, -1, -1, 0, 1, 1, 0, 0, -1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1]
+Conditions : 
+
+Impacted phonems :e > e
+o > É¤
+u > É¯
+ɬ > n̥
+i > i
+ɬ > m̥
+ɬ > m̥
+ɬ > n̥
+ɬ > n̥
+ɬ > n̥
+n̥ > n̥
+n̥ > n̥
+ʟ̝̊ > ŋ̊
+ɬ > m̥
+ʟ̝̊ > ŋ̊
+ɬ > n̥
+ɬ > n̥
+É› > É›
+ɬ > n̥
+É› > É›
+ʟ̠ > ʟ̠
+ʟ̝̊ > ŋ̊
+ɬ > n̥
+ɬ > m̥
+y > i
+ɬ > n̥
+ʟ̝̊ > ŋ̊
+ɬ > n̥
+ɬ > m̥
+ɬ > m̥
+ɬ > ɱ
+ɬ > m̥
+ɬ > n̥
+ɬ > n̥
+ʟ̠ > ʔ
+
+
+
+
+EXAMPLES 
+  
+É›m̥É›n̥n̥eo:  >  É›m̥É›n̥n̥eÉ¤: 
+É›m̥m̥É›n̥o:  >  É›m̥m̥É›n̥É¤: 
+É›m̥m̥É›n̥uo:  >  É›m̥m̥É›n̥É¯É¤: 
+É›m̥m̥im̥eɬo:  >  É›m̥m̥im̥en̥É¤: 
+É›m̥n̥en̥iuɬ  >  É›m̥n̥en̥iÉ¯m̥ 
+É›m̥yn̥n̥iɬuɬ  >  É›m̥yn̥n̥im̥É¯n̥ 
+É›ŋ̊ŋ̊oŋ̊ɬiɬo:  >  É›ŋ̊ŋ̊oŋ̊n̥in̥É¤: 
+É›ŋ̊ŋ̊on̥n̥iʟ̝̊o:  >  É›ŋ̊ŋ̊on̥n̥iŋ̊É¤: 
+É›ŋ̊ŋ̊on̥n̥o:  >  É›ŋ̊ŋ̊on̥n̥É¤: 
+É›ŋ̊ŋ̊om̥ɬn̥e:ɬʟ̝̊o:  >  É›ŋ̊ŋ̊om̥m̥n̥e:n̥ŋ̊É¤: 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 3, 0, 0, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+
+Impacted phonems :É› > É›
+m̥ > ⱱ̟
+n̥ > ɾ̥
+n̥ > ɾ̥
+e > e
+É¤ > É¤
+É¯ > É¯
+i > i
+m̥ > ⱱ̟
+n̥ > ɾ̥
+n̥ > ɾ̥
+m̥ > ⱱ̟
+y > y
+m̥ > ⱱ̟
+n̥ > ɾ̥
+ŋ̊ > ʟ̆
+ŋ̊ > ʟ̆
+n̥ > ɾ̥
+n̥ > ɾ̥
+n̥ > ɾ̥
+n̥ > ɾ̥
+ŋ̊ > ʟ̆
+m̥ > ⱱ̟
+n̥ > ɾ̥
+É› > É›
+m̥ > ⱱ̟
+u > u
+ʟ̠ > ʡ̆
+ɲ̊ > ʎ̆
+ŋ̊ > ʟ̆
+ɱ > ⱱ
+i > i
+n̥ > ɾ̥
+n̥ > ɾ̥
+m̥ > ⱱ̟
+ɱ > ⱱ
+É› > É›
+m̥ > ⱱ̟
+ɱ > ⱱ
+e > e
+ɲ̊ > ʎ̆
+o > o
+ʔ > ʡ̆
+
+
+
+
+EXAMPLES 
+  
+É›m̥É›n̥n̥e  >  É›ⱱ̟É›ɾ̥ɾ̥e 
+É›m̥É›n̥n̥eÉ¤:  >  É›ⱱ̟É›ɾ̥ɾ̥eÉ¤: 
+É›m̥m̥É›n̥É¤:  >  É›ⱱ̟ⱱ̟É›ɾ̥É¤: 
+É›m̥m̥É›n̥É¯É¤:  >  É›ⱱ̟ⱱ̟É›ɾ̥É¯É¤: 
+É›m̥m̥im̥en̥É¤:  >  É›ⱱ̟ⱱ̟iⱱ̟en̥É¤: 
+É›m̥n̥en̥ii:  >  É›ⱱ̟ɾ̥eɾ̥ii: 
+É›m̥n̥en̥iÉ¯m̥  >  É›ⱱ̟ɾ̥eɾ̥iÉ¯ⱱ̟ 
+É›m̥yn̥n̥im̥É¯n̥  >  É›ⱱ̟yɾ̥ɾ̥iⱱ̟É¯ɾ̥ 
+É›ŋ̊ŋ̊É›  >  É›ʟ̆ʟ̆É› 
+É›ŋ̊ŋ̊É›m̥o:  >  É›ʟ̆ʟ̆É›ⱱ̟o: 
+A change has occured 
+
+
+The feature Nasal switched values from 0 to 1
+
+Target :   
+[0, 1, -1, 7, 0, 1, 0, 0, 0, 0, 2, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :É› > É›
+ⱱ̟ > m̥
+ɾ̥ > n̥
+e > e
+É¤ > É¤
+É¯ > É¯
+i > i
+n̥ > n̥
+ⱱ̟ > m̥
+ɾ̥ > n̥
+ɾ̥ > n̥
+y > y
+ɾ̥ > n̥
+ʟ̆ > ŋ̊
+ʟ̆ > ŋ̊
+ɾ̥ > n̥
+ɾ̥ > n̥
+ɾ̥ > n̥
+ʟ̆ > ŋ̊
+ⱱ̟ > m̥
+n̥ > n̥
+ɾ̥ > n̥
+É› > É›
+ⱱ̟ > m̥
+u > u
+ʡ̆ > ɴ
+ʎ̆ > ɲ̊
+ʟ̆ > ŋ̊
+ⱱ > ɱ
+i > i
+ɾ̥ > n̥
+ɾ̥ > n̥
+ⱱ̟ > m̥
+ⱱ > ɱ
+É› > É›
+ⱱ̟ > m̥
+ⱱ > ɱ
+e > e
+ʎ̆ > ɲ̊
+o > o
+ʡ̆ > ɴ
+
+
+
+
+EXAMPLES 
+  
+É›ⱱ̟É›ɾ̥ɾ̥e  >  É›m̥É›ɾ̥n̥e 
+É›ⱱ̟É›ɾ̥ɾ̥eÉ¤:  >  É›m̥É›ɾ̥n̥eÉ¤: 
+É›ⱱ̟ⱱ̟É›ɾ̥É¤:  >  É›m̥m̥É›n̥É¤: 
+É›ⱱ̟ⱱ̟É›ɾ̥É¯É¤:  >  É›m̥m̥É›n̥É¯É¤: 
+É›ⱱ̟ⱱ̟iⱱ̟en̥É¤:  >  É›m̥m̥im̥en̥É¤: 
+É›ⱱ̟ɾ̥eɾ̥ii:  >  É›m̥n̥en̥ii: 
+É›ⱱ̟ɾ̥eɾ̥iÉ¯ⱱ̟  >  É›m̥n̥en̥iÉ¯ⱱ̟ 
+É›ⱱ̟yɾ̥ɾ̥iⱱ̟É¯ɾ̥  >  É›m̥yn̥n̥iⱱ̟É¯n̥ 
+É›ʟ̆ʟ̆É›  >  É›ŋ̊ŋ̊É› 
+É›ʟ̆ʟ̆É›ⱱ̟o:  >  É›ŋ̊ŋ̊É›m̥o: 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[0, 1, 1, 4, 0, 0, 1, 1, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 1         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :m̥ > p
+m̥ > p
+ŋ̊ > k
+n̥ > t
+e > e
+ɱ > p̪
+n̥ > t
+ⱱ̟ > p
+n̥ > t
+n̥ > t
+n̥ > t
+u > É¯
+m̥ > p
+É› > É›
+i > i
+y > i
+ɴ > ɴ
+o > É¤
+n̥ > t
+
+
+
+
+EXAMPLES 
+  
+É›m̥É›ɾ̥n̥e  >  É›pÉ›ɾ̥n̥e 
+É›m̥É›ɾ̥n̥eÉ¤:  >  É›pÉ›ɾ̥n̥eÉ¤: 
+É›m̥m̥É›n̥É¤:  >  É›pm̥É›n̥É¤: 
+É›m̥m̥É›n̥É¯É¤:  >  É›pm̥É›n̥É¯É¤: 
+É›m̥m̥im̥en̥É¤:  >  É›pm̥im̥en̥É¤: 
+É›m̥n̥en̥ii:  >  É›pn̥en̥ii: 
+É›m̥n̥en̥iÉ¯ⱱ̟  >  É›pn̥en̥iÉ¯ⱱ̟ 
+É›m̥yn̥n̥iⱱ̟É¯n̥  >  É›pyn̥n̥iⱱ̟É¯n̥ 
+É›ŋ̊ŋ̊É›  >  É›kŋ̊É› 
+É›ŋ̊ŋ̊É›m̥o:  >  É›kŋ̊É›m̥o: 
+A change has occured 
+
+
+The feature Trill switched values from 1 to 0
+
+Target :   
+[0, 1, 0, 7, 0, 0, 1, 1, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  4  Continu : 0  Template :[1, 0, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1] 
+2  C:   Rel pos :  -1  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :É› > É›
+m̥ > m̥
+i > i
+n̥ > n̥
+ŋ̊ > ŋ̊
+n̥ > n̥
+n̥ > n̥
+u > É¯
+n̥ > n̥
+e > e
+m̥ > m̥
+ɱ > ɱ
+n̥ > n̥
+m̥ > m̥
+É› > É›
+t > n̥
+ŋ̊ > ŋ̊
+o > É¤
+É¤ > É¤
+ⱱ̟ > m̥
+n̥ > n̥
+e > e
+i > i
+ɴ > ɴ
+n̥ > n̥
+É› > É›
+ŋ̊ > ŋ̊
+É¯ > É¯
+y > i
+
+
+
+
+EXAMPLES 
+  
+É›tɲ̊uŋ̊n̥n̥É¤:  >  É›tɲ̊É¯ŋ̊n̥n̥É¤: 
+É›n̥n̥u:ⱱ̟iɾ̥É¤:  >  É›n̥n̥É¯:ⱱ̟iɾ̥É¤: 
+m̥É›ɲ̊ɲ̊un̥i:m̥É¯n̥  >  m̥É›ɲ̊ɲ̊É¯n̥i:m̥É¯n̥ 
+m̥tÉ›ɾ̥ŋ̊É¯n̥  >  m̥n̥É›ɾ̥ŋ̊É¯n̥ 
+m̥u:n̥y:n̥É¯ⱱ̟  >  m̥É¯:n̥y:n̥É¯ⱱ̟ 
+ŋ̊É›n̥ɾ̥É›:ŋ̊eÉ¯n̥  >  ŋ̊É›n̥n̥É›:ŋ̊eÉ¯n̥ 
+ŋ̊ɴn̥oɾ̥iŋ̊É¯n̥  >  ŋ̊ɴn̥É¤ɾ̥iŋ̊É¯n̥ 
+n̥oⱱ̟É›ɾ̥É¯n̥  >  n̥É¤ⱱ̟É›ɾ̥É¯n̥ 
+ŋ̊tum̥iÉ¯ⱱ̟  >  ŋ̊n̥um̥iÉ¯ⱱ̟ 
+ŋ̊É¤ⱱ̟ⱱ̟É›ɾ̥n̥É¤:  >  ŋ̊É¤ⱱ̟m̥É›ɾ̥n̥É¤: 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[0, 1, 1, 11, 0, 1, 0, 1, 0, 0, 1, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  condition :
+absolute position : 1         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :p > p
+p > p
+k > k
+t > t
+p̪ > p̪
+t > t
+p > p
+t > t
+t > t
+t > t
+p > p
+n̥ > n̥
+ɴ > ɴ
+
+
+
+
+EXAMPLES 
+  
+m̥tÉ›:m̥un̥  >  m̥t:É›m̥un̥ 
+ŋ̊ɴi:n̥un̥ŋ̊iÉ›:ɾ̥É¯n̥  >  ŋ̊ɴ:in̥un̥ŋ̊iÉ›:ɾ̥É¯n̥ 
+ŋ̊ti:ɱun̥  >  ŋ̊t:iɱun̥ 
+ŋ̊:tÉ›m̥un̥É¤n̥  >  ŋ̊t:É›m̥un̥É¤n̥ 
+ŋ̊tÉ›:m̥É¯n̥É¤:n̥É¯n̥  >  ŋ̊t:É›m̥É¯n̥É¤:n̥É¯n̥ 
+n̥te:ŋ̊n̥É¯n̥  >  n̥t:eŋ̊n̥É¯n̥ 
+ɱto:n̥un̥  >  ɱt:on̥un̥ 
+ɱto:ŋ̊un̥  >  ɱt:oŋ̊un̥ 
+m̥n̥o:m̥m̥É¯n̥  >  m̥n̥:om̥m̥É¯n̥ 
+m̥ti:ⱱ̟É›m̥e:n̥É›  >  m̥t:iⱱ̟É›m̥e:n̥É› 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[0, 1, 1, -1, 0, 0, 1, 0, 1, 0, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+0  C:   Rel pos :  1  Continu : 1  Template :[0, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :m̥ > ⱱ̟
+n̥ > ɾ̥
+ŋ̊ > ʟ̆
+n̥ > ɾ̥
+n̥ > ɾ̥
+n̥ > ɾ̥
+m̥ > ⱱ̟
+ɱ > ⱱ
+n̥ > ɾ̥
+m̥ > ⱱ̟
+ŋ̊ > ʟ̆
+m̥ > ⱱ̟
+n̥ > ɾ̥
+ɴ > ʡ̆
+n̥ > ɾ̥
+ŋ̊ > ʟ̆
+
+
+
+
+EXAMPLES 
+  
+É›pm̥É›n̥É¯É¤:  >  É›pⱱ̟É›n̥É¯É¤: 
+É›pn̥en̥iÉ¯ⱱ̟  >  É›pɾ̥en̥iÉ¯ⱱ̟ 
+É›kŋ̊É›m̥n̥o:  >  É›kʟ̆É›m̥n̥o: 
+É›kŋ̊on̥n̥É¤:  >  É›kʟ̆on̥n̥É¤: 
+É›kŋ̊oⱱ̟m̥n̥e:n̥ŋ̊É¤:  >  É›kŋ̊oⱱ̟m̥ɾ̥e:n̥ŋ̊É¤: 
+É›kŋ̊on̥n̥É¤:  >  É›kʟ̆on̥n̥É¤: 
+É›tm̥en̥n̥e:n̥ŋ̊É¤:  >  É›tm̥en̥ɾ̥e:n̥ŋ̊É¤: 
+É›tⱱ̟on̥n̥e:n̥ŋ̊É¤:  >  É›tⱱ̟on̥ɾ̥e:n̥ŋ̊É¤: 
+É›tm̥eɾ̥n̥É¯:n̥É›  >  É›tⱱ̟eɾ̥n̥É¯:n̥É› 
+É›tm̥in̥iÉ¤:  >  É›tⱱ̟in̥iÉ¤: 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[-1, -1, -1, 0, -1, -1, -1, 0, -1, 0, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 2         relative position : 0
+length : False         stress : False 
+1  condition :
+absolute position : 2         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :É› > É›
+É› > É›
+ⱱ̟ > p
+n̥ > t
+y > i
+ŋ̊ > k
+u > u
+m̥ > p
+m̥ > p
+n̥ > t
+n̥ > t
+ɲ̊ > c
+e > e
+i > i
+i > i
+n̥ > t
+e > e
+o > É¤
+n̥ > t
+n̥ > t
+ⱱ̟ > p
+É› > É›
+u > É¯
+e > e
+ʡ̆ > ʡ̆
+o > o
+ŋ̊ > k
+ɱ > p̪
+i > i
+
+
+
+
+EXAMPLES 
+  
+É›pⱱ̟É›n̥É¯É¤:  >  É›ppÉ›n̥É¯É¤: 
+É›pm̥im̥en̥É¤:  >  É›ppim̥en̥É¤: 
+É›pn̥en̥ii:  >  É›pten̥ii: 
+É›pɾ̥en̥iÉ¯ⱱ̟  >  É›pten̥iÉ¯ⱱ̟ 
+É›pyn̥n̥iⱱ̟É¯n̥  >  É›pin̥n̥iⱱ̟É¯n̥ 
+É›kŋ̊É›m̥n̥io:  >  É›kkÉ›m̥n̥io: 
+É›kŋ̊oŋ̊ɾ̥in̥É¤:  >  É›kkoŋ̊ɾ̥in̥É¤: 
+É›kŋ̊on̥n̥iŋ̊É¤:  >  É›kkon̥n̥iŋ̊É¤: 
+É›kŋ̊m̥É›en̥iÉ¤:  >  É›kkm̥É›en̥iÉ¤: 
+É›tm̥É›n̥n̥iÉ›:n̥e  >  É›tpÉ›n̥n̥iÉ›:n̥e 
+A change has occured 
+
+
+The feature Height switched values from 1 to 0
+
+Target :   
+[1, 0, -1, 2, -1, 1, 1, 0, 0, 0, -1, 0] 
+Effects : 
+[-1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :É› > É›
+p > p
+É› > É›
+ɾ̥ > n̥
+n̥ > n̥
+É› > É›
+m̥ > m̥
+p > m̥
+n̥ > n̥
+p > p
+t > n̥
+n̥ > n̥
+n̥ > n̥
+ⱱ̟ > m̥
+k > ŋ̊
+ŋ̊ > ŋ̊
+k > k
+m̥ > m̥
+É› > É›
+ŋ̊ > ŋ̊
+m̥ > m̥
+t > t
+ɴ > ʔ
+ɲ̊ > ɲ̊
+p > m̥
+p > m̥
+t > n̥
+t > n̥
+ɱ > ɱ
+p̪ > p̪
+c > ɲ̊
+t > t
+t > n̥
+p > p
+n̥ > n̥
+t > t
+t > n̥
+t > t
+t > t
+p > p
+ɱ > ɱ
+n̥ > n̥
+t > n̥
+p > m̥
+ɴ > ɴ
+É› > É›
+ɲ̊ > ɲ̊
+ʡ̆ > ʔ
+k > ŋ̊
+p̪ > ɱ
+
+
+
+
+EXAMPLES 
+  
+É›pÉ›ɾ̥n̥e  >  É›pÉ›n̥n̥e 
+É›pÉ›ɾ̥n̥eÉ¤:  >  É›pÉ›n̥n̥eÉ¤: 
+É›ppÉ›n̥É¯É¤:  >  É›pm̥É›n̥É¯É¤: 
+É›ppim̥en̥É¤:  >  É›pm̥im̥en̥É¤: 
+É›pten̥ii:  >  É›pn̥en̥ii: 
+É›pten̥iÉ¯ⱱ̟  >  É›pn̥en̥iÉ¯ⱱ̟ 
+É›pin̥n̥iⱱ̟É¯n̥  >  É›pin̥n̥im̥É¯n̥ 
+É›kŋ̊É›  >  É›ŋ̊ŋ̊É› 
+É›kkÉ›m̥n̥io:  >  É›kŋ̊É›m̥n̥io: 
+É›kʟ̆É›m̥n̥o:  >  É›kŋ̊É›m̥n̥o: 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 11, 0, 1, 0, 0, 1, 0, 1, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 2         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+u > u
+m̥ > m̥
+m̥ > m̥
+n̥ > n̥
+n̥ > n̥
+ɲ̊ > ɲ̊
+i > i
+n̥ > n̥
+n̥ > n̥
+n̥ > n̥
+m̥ > m̥
+É› > É›
+e > e
+ʔ > ʔ
+o > o
+ŋ̊ > ŋ̊
+ɱ > ɱ
+
+
+
+
+EXAMPLES 
+  
+É›ŋ̊:uŋ̊n̥É›  >  É›ŋ̊u:ŋ̊n̥É› 
+É›ŋ̊:uŋ̊n̥É›e  >  É›ŋ̊u:ŋ̊n̥É›e 
+É›ŋ̊:un̥iÉ›:n̥e  >  É›ŋ̊u:n̥iÉ›:n̥e 
+É›ŋ̊:un̥io:  >  É›ŋ̊u:n̥io: 
+É›en̥o:n̥É¯n̥  >  É›en̥:on̥É¯n̥ 
+É›en̥É›:n̥iŋ̊i:  >  É›en̥:É›n̥iŋ̊i: 
+É›en̥É›:n̥iŋ̊uⱱ̟  >  É›en̥:É›n̥iŋ̊uⱱ̟ 
+É›ɲ̊ɲ̊u:n̥É¯n̥  >  É›ɲ̊ɲ̊:un̥É¯n̥ 
+É›n̥n̥u:m̥iɾ̥É›:n̥e  >  É›n̥n̥:um̥iɾ̥É›:n̥e 
+É›n̥n̥É¯:m̥iɾ̥É¤:  >  É›n̥n̥:É¯m̥iɾ̥É¤: 
+A change has occured 
+
+
+The feature Plosive switched values from 1 to 0
+
+Target :   
+[1, 0, 3, 2, 0, 1, 1, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :p > p
+n̥ > n̥
+m̥ > m̥
+p > p
+n̥ > n̥
+ŋ̊ > ŋ̊
+ŋ̊ > ŋ̊
+k > k
+m̥ > m̥
+ŋ̊ > ŋ̊
+t > t
+n̥ > n̥
+ɲ̊ > ɲ̊
+ŋ̊ > ŋ̊
+n̥ > n̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+É›tm̥on̥ɾ̥e:n̥ŋ̊É¤:  >  É›tm̥on̥n̥e:n̥ŋ̊É¤: 
+ŋ̊ɴ:in̥un̥ʟ̆iÉ›:ɾ̥É¯n̥  >  ŋ̊ɴ:in̥un̥ŋ̊iÉ›:ɾ̥É¯n̥ 
+ŋ̊É¤n̥n̥iɾ̥ʟ̆e:n̥ŋ̊É¤:  >  ŋ̊É¤n̥n̥iɾ̥ŋ̊e:n̥ŋ̊É¤: 
+itn̥un̥ʟ̆e:n̥ŋ̊É¤:  >  itn̥un̥ŋ̊e:n̥ŋ̊É¤: 
+m̥toɱeŋ̊ɾ̥i:ŋ̊iun̥  >  m̥toɱeŋ̊n̥i:ŋ̊iun̥ 
+m̥toɱeŋ̊ɾ̥i:n̥iun̥  >  m̥toɱeŋ̊n̥i:n̥iun̥ 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 7, 0, 1, 0, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 2         relative position : 0
+length : True         stress : False 
+
+Impacted phonems :m̥ > m̥
+ŋ̊ > ŋ̊
+n̥ > n̥
+É› > É›
+n̥ > n̥
+o > É¤
+m̥ > m̥
+e > e
+i > i
+n̥ > n̥
+É› > É›
+ŋ̊ > ŋ̊
+u > É¯
+i > i
+É¤ > É¤
+e > e
+É¯ > É¯
+
+
+
+
+EXAMPLES 
+  
+É›toŋ̊n̥É›:n̥e  >  É›tÉ¤ŋ̊n̥É›:n̥e 
+É›toŋ̊n̥É¤:  >  É›tÉ¤ŋ̊n̥É¤: 
+epom̥n̥e:n̥  >  epÉ¤m̥n̥e:n̥ 
+ʔÉ›un̥iÉ¤:  >  ʔÉ›É¯n̥iÉ¤: 
+o:tun̥É›:n̥e  >  o:tÉ¯n̥É›:n̥e 
+o:n̥un̥o:  >  o:n̥É¯n̥o: 
+m̥toɱeŋ̊n̥i:ŋ̊iun̥  >  m̥tÉ¤ɱeŋ̊n̥i:ŋ̊iun̥ 
+m̥toɱeŋ̊n̥i:n̥iun̥  >  m̥tÉ¤ɱeŋ̊n̥i:n̥iun̥ 
+A change has occured 
+
+
+The feature Nasal switched values from 1 to 0
+
+Target :   
+[1, 0, 2, -1, -1, 1, -1, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -3  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  C:   Rel pos :  -5  Continu : 0  Template :[1, 0, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1] 
+
+Impacted phonems :e > e
+n̥ > t
+É¤ > É¤
+ŋ̊ > k
+i > i
+n̥ > t
+m̥ > p
+É› > É›
+
+
+
+
+EXAMPLES 
+  
+É›tiŋ̊u:ɾ̥É¯n̥  >  É›tiŋ̊u:ɾ̥É¯t 
+ŋ̊t:É›m̥É¯n̥É¤:n̥É¯n̥  >  ŋ̊t:É›m̥É¯n̥É¤:tÉ¯n̥ 
+en̥e:m̥i:n̥iŋ̊É¯n̥  >  en̥e:m̥i:n̥ikÉ¯n̥ 
+itÉ¤n̥o:n̥É¯n̥  >  itÉ¤n̥o:n̥É¯t 
+on̥É¤:n̥É›:n̥É¯n̥  >  on̥É¤:n̥É›:n̥É¯t 
+m̥tÉ›en̥eŋ̊n̥o:  >  m̥tÉ›en̥eŋ̊to: 
+m̥t:im̥É›m̥e:n̥É›  >  m̥t:im̥É›m̥e:tÉ› 
+ŋ̊m̥É›n̥e:n̥i:m̥É›  >  ŋ̊m̥É›n̥e:n̥i:pÉ› 
+ŋ̊pÉ›n̥n̥iŋ̊o:  >  ŋ̊pÉ›n̥n̥iŋ̊É¤: 
+n̥eÉ›:n̥i:n̥É¯n̥  >  n̥eÉ›:n̥i:n̥É¯t 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[1, 0, 3, 2, 0, 1, 1, 0, 1, 0, 0, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  5  Continu : 1  Template :[1, 0, 2, -1, -1, -1, 1, -1, 0, -1, 1, -1] 
+1  condition :
+absolute position : 2         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :m̥ > m̥
+n̥ > n̥
+ŋ̊ > ŋ̊
+m̥ > m̥
+e > e
+e > e
+É¤ > É¤
+n̥ > n̥
+i > i
+n̥ > n̥
+n̥ > n̥
+u > u
+É› > É›
+ʔ > ʔ
+n̥ > n̥
+ŋ̊ > ŋ̊
+ɱ > ɱ
+i > i
+
+
+
+
+EXAMPLES 
+  
+É›n̥e:m̥on̥iɾ̥É›  >  É›n̥:em̥on̥iɾ̥É› 
+É›n̥ŋ̊:on̥in̥É›:ɾ̥É¯n̥  >  É›n̥ŋ̊o:n̥in̥É›:ɾ̥É¯n̥ 
+É›m̥e:n̥iÉ¤:n̥e:n̥  >  É›m̥:en̥iÉ¤:n̥e:n̥ 
+ŋ̊on̥:É›n̥iÉ¤:ɾ̥in̥  >  ŋ̊on̥É›:n̥iÉ¤:ɾ̥in̥ 
+n̥e:n̥:em̥in̥in̥  >  n̥e:n̥e:m̥in̥in̥ 
+n̥e:n̥:eŋ̊n̥iÉ›:n̥e  >  n̥e:n̥e:ŋ̊n̥iÉ›:n̥e 
+n̥e:n̥:eŋ̊n̥É¯n̥  >  n̥e:n̥e:ŋ̊n̥É¯n̥ 
+eŋ̊n̥:en̥iŋ̊en̥e  >  eŋ̊n̥e:n̥iŋ̊en̥e 
+on̥É¤:n̥iɱen̥  >  on̥:É¤n̥iɱen̥ 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[-1, 1, 0, 3, 0, -1, 0, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :É› > É›
+p > p
+É› > É›
+n̥ > n̥
+e > e
+É› > É›
+É¤ > É¤
+m̥ > m̥
+É¯ > É¯
+m̥ > m̥
+i > i
+m̥ > m̥
+n̥ > n̥
+i > i
+i > i
+É› > É›
+ŋ̊ > ŋ̊
+u > u
+t > t
+É› > É›
+ɲ̊ > ɲ̊
+É¯ > É¯
+n̥ > n̥
+e > e
+É¤ > É¤
+e > e
+m̥ > m̥
+n̥ > n̥
+e > e
+ɲ̊ > ɲ̊
+e > e
+i > i
+i > i
+n̥ > n̥
+i > i
+e > e
+É¤ > É¤
+n̥ > n̥
+n̥ > n̥
+i > i
+ɱ > p̪
+n̥ > n̥
+É¤ > É¤
+n̥ > n̥
+u > u
+É¤ > É¤
+É¤ > É¤
+É› > É›
+É› > É›
+e > e
+i > i
+ŋ̊ > ŋ̊
+ŋ̊ > ŋ̊
+n̥ > n̥
+É¯ > É¯
+i > i
+É¤ > É¤
+ŋ̊ > ŋ̊
+É¯ > É¯
+m̥ > m̥
+e > e
+i > i
+i > i
+É¯ > É¯
+
+
+
+
+EXAMPLES 
+  
+É›pn̥en̥iÉ¯ⱱ̟  >  É›pn̥en̥iÉ¯m̥ 
+É›kŋ̊oŋ̊ɾ̥in̥É¤:  >  É›kŋ̊oŋ̊n̥in̥É¤: 
+É›kŋ̊om̥m̥ɾ̥e:n̥ŋ̊É¤:  >  É›kŋ̊om̥m̥n̥e:n̥ŋ̊É¤: 
+É›pm̥n̥en̥n̥É¯ⱱ̟  >  É›pm̥n̥en̥n̥É¯m̥ 
+É›en̥:É›n̥iŋ̊uⱱ̟  >  É›en̥:É›n̥iŋ̊um̥ 
+É›n̥:em̥on̥iɾ̥É›  >  É›n̥:em̥on̥in̥É› 
+É›tem̥on̥iɾ̥e:  >  É›tem̥on̥in̥e: 
+É›tiŋ̊u:ɾ̥É¯t  >  É›tiŋ̊u:n̥É¯t 
+É›n̥n̥:um̥iɾ̥É›:n̥e  >  É›n̥n̥:um̥in̥É›:n̥e 
+É›n̥n̥:É¯m̥iɾ̥É¤:  >  É›n̥n̥:É¯m̥in̥É¤: 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[1, 0, 3, 2, 1, 0, 0, 0, 0, 0, 1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :É› > É›
+p > p
+É› > É›
+e > e
+É› > É›
+É¤ > É¤
+É¯ > É¯
+i > i
+n̥ > n̥
+i > i
+i > i
+k > k
+É› > É›
+u > u
+t > t
+É› > É›
+É¯ > É¯
+e > e
+É¤ > É¤
+e > e
+m̥ > m̥
+n̥ > n̥
+p̪ > p̪
+e > e
+ɲ̊ > ɲ̊
+i > i
+i > i
+i > i
+n̥ > n̥
+É¤ > É¤
+ɴ > ɴ
+É¤ > É¤
+É¤ > É¤
+É› > É›
+e > e
+i > i
+É¯ > É¯
+i > i
+É¤ > É¤
+É¯ > É¯
+e > e
+i > i
+É¯ > É¯
+
+
+
+
+EXAMPLES 
+  
+É›pm̥É›n̥É¤:  >  É›pm̥É›n̥:É¤ 
+É›pm̥im̥en̥É¤:  >  É›pm̥im̥en̥:É¤ 
+É›kŋ̊É›m̥o:  >  É›kŋ̊É›m̥:o 
+É›kŋ̊É›m̥n̥o:  >  É›kŋ̊É›m̥n̥:o 
+É›kŋ̊oŋ̊n̥in̥É¤:  >  É›kŋ̊oŋ̊n̥in̥:É¤ 
+É›kŋ̊on̥n̥iŋ̊É¤:  >  É›kŋ̊on̥n̥iŋ̊:É¤ 
+É›kŋ̊on̥n̥É¤:  >  É›kŋ̊on̥n̥:É¤ 
+É›kŋ̊om̥m̥n̥e:n̥ŋ̊É¤:  >  É›kŋ̊om̥m̥:n̥en̥ŋ̊:É¤ 
+É›kŋ̊om̥m̥n̥i:n̥e  >  É›kŋ̊om̥m̥:n̥in̥e 
+É›kŋ̊on̥n̥É›:n̥e  >  É›kŋ̊on̥n̥:É›n̥e 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[0, 1, 0, -1, 0, -1, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[0, 1, -1, -1, -1, -1, -1, 0, 0, -1, -1, -1] 
+
+Impacted phonems :a > a
+i > i
+o > o
+e > e
+u > u
+y > y
+
+
+
+
+EXAMPLES 
+  
+aku:klae  >  ak:uklae 
+atpa:ka:re  >  atp:aka:re 
+adwe:ra:re  >  adw:era:re 
+affu:ma:re  >  aff:uma:re 
+ale:mosyna  >  al:emosyna 
+allu:mina:re  >  all:umina:re 
+allu:mino:  >  all:umino: 
+ama:rikus  >  am:arikus 
+anko:nita:nus  >  ank:onita:nus 
+ape:lio:te:s  >  ap:elio:te:s 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[0, 0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : -2         relative position : 0
+length : True         stress : False 
+
+Impacted phonems :a > a
+b > m̥
+j > ɲ̊
+n > n̥
+m > m̥
+o > o
+w > m̥
+d > n̥
+i > i
+e > e
+ɡ > ŋ̊
+i > i
+l > n̥
+u > u
+r > n̥
+o > o
+a > a
+e > e
+u > u
+
+
+
+
+EXAMPLES 
+  
+adbelle:sko:  >  adm̥elle:sko: 
+adjuksta:re  >  adɲ̊uksta:re 
+admina:kia:re  >  admin̥a:kia:re 
+admorte:sko:  >  adm̥orte:sko: 
+admorti:re  >  adm̥orti:re 
+adneka:i:  >  adn̥eka:i: 
+adneka:re  >  adn̥eka:re 
+adneka:tu  >  adn̥eka:tu 
+adwentu:ra  >  adm̥entu:ra 
+adw:era:re  >  adm̥:era:re 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 4, 0, -1, 0, -1, -1, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 2         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :s > n
+k > ŋ
+p > m
+t > n
+h > ɦ
+f > ɱ
+
+
+
+
+EXAMPLES 
+  
+apsedii:  >  apnedii: 
+apsedium  >  apnedium 
+akkaptio:  >  akŋaptio: 
+akkoɡnito:  >  akŋoɡnito: 
+akkolliɡo:  >  akŋolliɡo: 
+akkwaerio:  >  akŋwaerio: 
+appressum  >  apmressum 
+aeta:tiki:  >  aena:tiki: 
+aeta:tikum  >  aena:tikum 
+ank:onita:nus  >  anŋ:onita:nus 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[1, 0, 3, 2, 1, 1, 0, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+0  condition :
+absolute position : 2         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :a > a
+a > a
+b > ⱱ̟
+n > ɾ̥
+y > y
+ŋ > ʟ̆
+u > u
+u > u
+w > ⱱ̟
+n > ɾ̥
+j > ʎ̆
+e > e
+i > i
+l > ɾ̥
+o > o
+i > i
+n > ɾ̥
+m > ⱱ̟
+e > e
+o > o
+ɦ > ʡ̆
+ɱ > ⱱ
+
+
+
+
+EXAMPLES 
+  
+abbatuo:  >  abⱱ̟atuo: 
+abbibero:  >  abⱱ̟ibero: 
+apnedii:  >  apɾ̥edii: 
+apnedium  >  apɾ̥edium 
+akŋaptio:  >  akʟ̆aptio: 
+akŋoɡnito:  >  akʟ̆oɡnito: 
+akŋolliɡo:  >  akʟ̆olliɡo: 
+akŋwaerio:  >  akʟ̆waerio: 
+adbassia:re  >  adⱱ̟assia:re 
+abbassio:  >  abⱱ̟assio: 
+A change has occured 
+
+
+The feature Height switched values from 0 to 1
+
+Target :   
+[0, 1, 0, 10, 0, 1, 0, 0, 1, 0, 0, 0] 
+Effects : 
+[-1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [-1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : -1         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :a > É›
+s > n̥
+k > ŋ̊
+w > m̥
+a > É›
+a > a
+ⱱ̟ > m̥
+t > n̥
+r > n̥
+ʎ̆ > ɲ̊
+m > m̥
+n > n̥
+z > n̥
+d > n̥
+ɾ̥ > n̥
+ɾ̥ > n̥
+l > n̥
+ʟ̆ > ŋ̊
+j > ɲ̊
+ɾ̥ > n̥
+b > m̥
+ⱱ̟ > m̥
+ⱱ̟ > m̥
+a > a
+p > m̥
+f > ɱ
+ɾ̥ > n̥
+h > h
+ⱱ > ɱ
+ɡ > ŋ̊
+
+
+
+
+EXAMPLES 
+  
+abante  >  abÉ›nte 
+abyssimus  >  abyn̥simus 
+akka  >  aŋ̊ka 
+akkwaeri:re  >  akkm̥aeri:re 
+a:krus  >  a:ŋ̊rus 
+adⱱ̟assia:re  >  adⱱ̟an̥sia:re 
+admin̥a:kia:re  >  admin̥É›:kia:re 
+adokla:re  >  adoŋ̊la:re 
+apⱱ̟ressum  >  apm̥ressum 
+adⱱ̟itia:re  >  adⱱ̟in̥ia:re 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[0, 1, 1, 7, 0, 1, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  3  Continu : 1  Template :[1, 0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+1  condition :
+absolute position : 2         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :É› > É›
+ɾ̥ > n̥
+ɾ̥ > n̥
+ʟ̆ > ŋ̊
+ɾ̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+aeɾ̥É›:tikum  >  aen̥É›:tikum 
+ekɾ̥kÉ›deskere  >  ekn̥kÉ›deskere 
+foʟ̆É›:kia  >  foŋ̊É›:kia 
+miɾ̥É›:kia  >  min̥É›:kia 
+wi:ɾ̥É›:tikum  >  wi:n̥É›:tikum 
+A change has occured 
+
+
+The feature Lateral switched values from 1 to 0
+
+Target :   
+[0, 1, -1, -1, 0, 1, 1, 0, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1]
+Conditions : 
+
+Impacted phonems :l > n̥
+n̥ > n̥
+ɾ̥ > n̥
+n̥ > n̥
+n̥ > n̥
+
+
+
+
+EXAMPLES 
+  
+akʟ̆olliɡo:  >  akʟ̆on̥n̥iɡo: 
+akkollo:  >  akkon̥n̥o: 
+akkomple:sko:  >  akkompn̥e:sko: 
+akkompli:re  >  akkompn̥i:re 
+a:ktua:lis  >  a:ktua:n̥is 
+aku:kla  >  aku:kn̥a 
+ak:uklae  >  ak:ukn̥ae 
+adm̥elle:sko:  >  adm̥en̥n̥e:sko: 
+adoŋ̊la:re  >  adoŋ̊n̥a:re 
+adoklo:  >  adokn̥o: 
+A change has occured 
+
+
+The feature Fricative switched values from 0 to 1
+
+Target :   
+[1, 0, 3, 0, 1, 1, 0, 0, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 1         relative position : 0
+length : False         stress : False 
+1  C:   Rel pos :  1  Continu : 1  Template :[1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :e > e
+u > É¯
+É› > É›
+a > a
+y > i
+o > É¤
+i > i
+
+
+
+
+EXAMPLES 
+  
+auka  >  aÉ¯ka 
+by:ɾ̥n̥antion  >  bi:ɾ̥n̥antion 
+by:ɾ̥n̥antium  >  bi:ɾ̥n̥antium 
+koakn̥ika:re  >  kÉ¤akn̥ika:re 
+ko:sio:  >  kÉ¤:sio: 
+domna  >  dÉ¤mna 
+ho:nta  >  hÉ¤:nta 
+hym̥aethrus  >  him̥aethrus 
+ju:ɾ̥aizzo:  >  jÉ¯:ɾ̥aizzo: 
+juŋ̊aster  >  jÉ¯ŋ̊aster 
+A change has occured 
+
+
+The feature Trill switched values from 0 to 1
+
+Target :   
+[0, 1, 1, 11, 0, 1, 0, 1, 0, 0, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1]
+Conditions : 
+0  condition :
+absolute position : -1         relative position : 0
+length : False         stress : False 
+1  C:   Rel pos :  4  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] 
+2  condition :
+absolute position : -1         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :e > e
+o > o
+u > u
+n̥ > ɾ̥
+É› > É›
+e > e
+ŋ̊ > ʟ̆
+m̥ > ⱱ̟
+n̥ > ɾ̥
+i > i
+É› > É›
+ɲ̊ > ʎ̆
+a > a
+n̥ > ɾ̥
+n̥ > ɾ̥
+m̥ > ⱱ̟
+m̥ > ⱱ̟
+n̥ > ɾ̥
+i > i
+o > o
+h > ʡ̆
+ŋ̊ > ʟ̆
+y > y
+i > i
+ɱ > ⱱ
+É¤ > É¤
+
+
+
+
+EXAMPLES 
+  
+adⱱ̟an̥sia:re  >  adⱱ̟aɾ̥sia:re 
+an̥iŋ̊u:nus  >  an̥iʟ̆u:nus 
+an̥n̥:um̥ina:re  >  an̥n̥:uⱱ̟ina:re 
+anʟ̆:on̥ita:nus  >  anʟ̆:oɾ̥ita:nus 
+asseŋ̊:ura:re  >  asseʟ̆:ura:re 
+baʎ̆ɲ̊un̥iwi  >  baʎ̆ʎ̆un̥iwi 
+baɲ̊ɲ̊un̥i:wus  >  baɲ̊ʎ̆un̥i:wus 
+bn̥a:wus  >  bɾ̥a:wus 
+bun̥n̥ika:re  >  bun̥ɾ̥ika:re 
+kn̥i:fus  >  kɾ̥i:fus 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[0, 1, -1, -1, 0, 0, 0, 0, 1, 0, -1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : -1         relative position : 0
+length : False         stress : False 
+1  condition :
+absolute position : 1         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :e > e
+É¯ > É¯
+É› > É›
+É› > É›
+i > i
+É¤ > É¤
+o > o
+i > i
+É¤ > É¤
+
+
+
+
+EXAMPLES 
+  
+di:a  >  d:ia 
+di:re  >  d:ire 
+di:us  >  d:ius 
+fÉ›:ta  >  f:É›ta 
+hÉ¤:nta  >  h:É¤nta 
+jÉ›:na  >  j:É›na 
+jÉ¯:sum  >  j:É¯sum 
+jÉ›:na  >  j:É›na 
+jÉ›:nae  >  j:É›nae 
+me:n̥um  >  m:en̥um 
+A change has occured 
+
+
+The feature Syllabic switched values from 1 to 0
+
+Target :   
+[-1, 0, 2, -1, -1, 1, 0, 0, -1, 0, -1, 0] 
+Effects : 
+[1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : -2         relative position : 0
+length : True         stress : False 
+
+Impacted phonems :a > a
+i > i
+o > o
+e > e
+u > u
+
+
+
+
+EXAMPLES 
+  
+atɾ̥i:n̥ia:re  >  atɾ̥:in̥ia:re 
+kora:n̥io:nis  >  kor:an̥io:nis 
+d:ere:ʟ̆tia:re  >  d:er:eʟ̆tia:re 
+miɾ̥a:ŋ̊ia:re  >  miɾ̥:aŋ̊ia:re 
+we:n̥i:us  >  w:en̥i:us 
+we:ŋ̊si:ka  >  w:eŋ̊si:ka 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[0, 1, 1, 7, 0, 1, -1, -1, 0, 0, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 0  Template :[0, 0, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] 
+1  C:   Rel pos :  -5  Continu : 0  Template :[0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :t > n
+k > ŋ
+p > m
+s > n
+
+
+
+
+EXAMPLES 
+  
+anʟ̆:oɾ̥ita:nus  >  anʟ̆:oɾ̥ina:nus 
+apⱱ̟an̥ikun̥a:re  >  apⱱ̟an̥iŋun̥a:re 
+apⱱ̟arikun̥o:  >  apⱱ̟ariŋun̥o: 
+bun̥ɾ̥ika:re  >  bun̥ɾ̥iŋa:re 
+konstant:inopon̥is  >  konstant:inomon̥is 
+kon̥ⱱ̟:ita:re  >  kon̥ⱱ̟:ina:re 
+doⱱ̟ɾ̥iken̥n̥a  >  doⱱ̟ɾ̥iŋen̥n̥a 
+horripin̥o:  >  horrimin̥o: 
+hort:at:orius  >  hort:an:orius 
+him̥aethrus  >  him̥aenhrus 
+A change has occured 
+
+
+The feature Trill switched values from 1 to 0
+
+Target :   
+[0, 1, -1, 10, 0, -1, 0, 0, 1, 0, -1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1]
+Conditions : 
+0  C:   Rel pos :  4  Continu : 1  Template :[0, 1, 0, -1, -1, -1, 0, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+ⱱ̟ > m̥
+ɾ̥ > n̥
+e > e
+y > i
+ʟ̆ > ŋ̊
+o > o
+u > u
+u > É¯
+ɾ̥ > n̥
+É› > É›
+m̥ > m̥
+e > e
+ⱱ̟ > m̥
+ɾ̥ > n̥
+n̥ > n̥
+i > i
+n̥ > n̥
+ɾ̥ > n̥
+o > É¤
+ʟ̆ > ŋ̊
+n̥ > n̥
+i > i
+É› > É›
+ŋ̊ > ŋ̊
+ʎ̆ > ɲ̊
+ʎ̆ > ɲ̊
+a > a
+n̥ > n̥
+ɾ̥ > n̥
+m̥ > m̥
+ɾ̥ > n̥
+a > a
+ɾ̥ > n̥
+ⱱ̟ > m̥
+ⱱ̟ > m̥
+ⱱ̟ > m̥
+ʡ̆ > ʔ
+n̥ > n̥
+ŋ̊ > ŋ̊
+É› > É›
+ʡ̆ > ʡ̆
+ⱱ > ɱ
+ɱ > ɱ
+n̥ > n̥
+y > y
+i > i
+ⱱ > ɱ
+É¤ > É¤
+
+
+
+
+EXAMPLES 
+  
+abⱱ̟atuo:  >  abm̥atuo: 
+abⱱ̟ibero:  >  abm̥ibero: 
+apɾ̥edii:  >  apn̥edii: 
+apɾ̥edium  >  apn̥edium 
+abyn̥simus  >  abin̥simus 
+akʟ̆aptio:  >  akŋ̊aptio: 
+akʟ̆oɡnito:  >  akŋ̊oɡnito: 
+akʟ̆on̥n̥iɡo:  >  akŋ̊on̥n̥iɡo: 
+akʟ̆waerio:  >  akŋ̊waerio: 
+aku:tia:re  >  akÉ¯:tia:re 
+A change has occured 
+
+
+The feature Lateral switched values from 0 to 1
+
+Target :   
+[0, 1, 1, 7, 0, 1, 0, 1, 0, 0, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  2  Continu : 1  Template :[0, 1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1] 
+
+Impacted phonems :a > a
+b > ɬ
+É› > É›
+n > ɬ
+t > ɬ
+a > a
+i > i
+e > e
+p > ɬ
+n̥ > ɬ
+d > ɬ
+i > i
+n̥ > ɬ
+s > ɬ
+i > i
+m > ɬ
+ŋ̊ > ʟ̝̊
+k > ʟ̝̊
+ŋ̊ > ʟ̝̊
+o > o
+n̥ > ɬ
+o > o
+r > ɬ
+w > ɬ
+m̥ > ɬ
+e > e
+u > u
+u > u
+É¯ > É¯
+a > a
+h > ʟ̠
+ɲ̊ > ʎ̝̊
+j > ʎ̝̊
+n̥ > ɬ
+É› > É›
+m̥ > ɬ
+o > o
+a > a
+m̥ > ɬ
+m̥ > ɬ
+i > i
+n̥ > ɬ
+e > e
+e > e
+n̥ > ɬ
+f > ɬ
+ɲ̊ > ʎ̝̊
+ʟ̆ > ʟ̝̊
+i > i
+n̥ > ɬ
+u > u
+ⱱ̟ > ɬ
+n̥ > ɬ
+n̥ > ɬ
+n̥ > ɬ
+n̥ > ɬ
+n̥ > ɬ
+É¯ > É¯
+n̥ > ɬ
+É› > É›
+y > y
+n̥ > ɬ
+a > a
+ŋ̊ > ʟ̝̊
+ɲ̊ > ʎ̝̊
+v > ɬ
+o > o
+i > i
+m̥ > ɬ
+m̥ > ɬ
+ŋ̊ > ʟ̝̊
+ⱱ̟ > ɬ
+É¤ > É¤
+m̥ > ɬ
+ɱ > ɬ
+e > e
+É› > É›
+e > e
+i > i
+i > i
+É¤ > É¤
+n̥ > ɬ
+ʔ > ʟ̠
+o > o
+n̥ > ɬ
+a > a
+ʡ̆ > ʟ̠
+ɱ > ɬ
+É¯ > É¯
+ʡ̆ > ʟ̠
+ɾ̥ > ɬ
+y > y
+e > e
+m̥ > ɬ
+ɾ̥ > ɬ
+É› > É›
+
+
+
+
+EXAMPLES 
+  
+abÉ›nte  >  aɬÉ›ɬte 
+abanteo:  >  aɬaɬɬeo: 
+abbato:  >  aɬɬato: 
+abm̥atuo:  >  aɬɬaɬuo: 
+abm̥ibero:  >  aɬɬiɬero: 
+apn̥edii:  >  aɬɬeɬii: 
+apn̥edium  >  aɬɬeɬium 
+abin̥simus  >  aɬiɬɬiɬus 
+aŋ̊ka  >  aʟ̝̊ka 
+akkapo:  >  aʟ̝̊ʟ̝̊apo: 
+A change has occured 
+
+
+The feature Syllabic switched values from 0 to 1
+
+Target :   
+[0, 0, 3, 2, 0, 1, 0, 0, 0, 1, 0, 0] 
+Effects : 
+[0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1] > [1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  condition :
+absolute position : 1         relative position : 0
+length : False         stress : False 
+1  C:   Rel pos :  4  Continu : 1  Template :[0, 1, -1, -1, 0, -1, -1, -1, -1, -1, 1, -1] 
+2  condition :
+absolute position : 1         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :ɬ > ɬ
+ɬ > ɬ
+u > u
+a > a
+o > o
+ʟ̝̊ > ʟ̝̊
+e > e
+ɬ > ɬ
+ɬ > ɬ
+
+
+
+
+EXAMPLES 
+  
+a:ɬɬere  >  aɬ:ɬere 
+ʟ̝̊:oɬere  >  ʟ̝̊o:ɬere 
+e:ɬʟ̝̊ere  >  eɬ:ʟ̝̊ere 
+ɬ:eɬiɬus  >  ɬe:ɬiɬus 
+ɬ:aɬeana  >  ɬa:ɬeana 
+ɬ:uɬika  >  ɬu:ɬika 
+A change has occured 
+
+
+The feature Plosive switched values from 0 to 1
+
+Target :   
+[0, 1, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  -1  Continu : 0  Template :[0, 0, -1, 0, -1, -1, 0, -1, -1, -1, -1, -1] 
+1  condition :
+absolute position : -2         relative position : 0
+length : False         stress : False 
+
+Impacted phonems :ɬ > p
+ɬ > t
+ɬ > t
+ɬ > t
+ɬ > t
+
+
+
+
+EXAMPLES 
+  
+ʟ̝̊oɬɬaɬɬere  >  ʟ̝̊opɬaɬɬere 
+ʟ̝̊oɬa:ɬio:  >  ʟ̝̊ota:ɬio: 
+ʟ̝̊oɬɬ:aɬius  >  ʟ̝̊otɬ:aɬius 
+ɬoɬɬiʟ̝̊eɬn̥a  >  ɬopɬiʟ̝̊eɬn̥a 
+ʟ̠:oɬ:aɬium  >  ʟ̠:ot:aɬium 
+ʟ̠oɬɬiɬin̥o:  >  ʟ̠otɬiɬin̥o: 
+ɬoɬʟ̝̊iɬuɬɬus  >  ɬotʟ̝̊iɬuɬɬus 
+ɬoɬɬa:ɬia  >  ɬotɬa:ɬia 
+o:ɬɬio:  >  o:tɬio: 
+o:ɬiʟ̝̊ʟ̝̊n̥a  >  o:tiʟ̝̊ʟ̝̊n̥a 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[0, 1, -1, -1, 0, -1, 1, -1, 0, 1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+0  C:   Rel pos :  5  Continu : 1  Template :[0, 0, -1, -1, 1, 1, -1, -1, -1, 1, -1, -1] 
+1  C:   Rel pos :  1  Continu : 1  Template :[0, 1, -1, -1, -1, -1, 0, 0, -1, 1, -1, -1] 
+
+Impacted phonems :ɬ > ɱ
+ɬ > n
+ɬ > n
+ʎ̝̊ > ɲ
+ʟ̠ > ɦ
+ɬ > n
+ɬ > ɱ
+ʟ̠ > ʟ̠
+
+
+
+
+EXAMPLES 
+  
+aɬɬ:uɬa:re  >  aɱɱ:uɬa:re 
+aɬɬuɬɬa:re  >  aɱɱuɬɬa:re 
+aɬɬaɬiʟ̝̊uɬa:re  >  aɬɬaniʟ̝̊uɬa:re 
+aɬɬeʟ̝̊:uɬa:re  >  anneʟ̝̊:uɬa:re 
+ɬaʎ̝̊ʎ̝̊uɬi:ɬus  >  ɬaɲʎ̝̊uɬi:ɬus 
+ʟ̝̊:ʟ̠iɬuɬʟ̝̊ia:ɬus  >  ʟ̝̊:ɦinuɬʟ̝̊ia:ɬus 
+ʟ̝̊ʟ̠ɬoɬiʟ̝̊us  >  ʟ̝̊ɦɬoɬiʟ̝̊us 
+ʟ̝̊oɬuɬɬi:ɬus  >  ʟ̝̊onuɬɬi:ɬus 
+ʟ̝̊:ɬuɬa:ɬis  >  ʟ̝̊:nuɬa:ɬis 
+ɬeiɬoɬɬis  >  ɬeiɱoɬɬis 
+A change has occured 
+
+
+The feature Lateral switched values from 0 to 1
+
+Target :   
+[0, 1, -1, 0, 0, -1, 0, 0, 1, -1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1] > [-1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1]
+Conditions : 
+
+Impacted phonems :t > ɬ
+e > e
+o > o
+u > u
+r > ɬ
+i > i
+m > ɬ
+s > ɬ
+k > ʟ̝̊
+a > a
+p > ɬ
+ɡ > ʟ̝̊
+n̥ > ɬ
+d > ɬ
+a > a
+u > u
+w > ɬ
+n > ɬ
+e > e
+i > i
+z > ɬ
+i > i
+i > i
+b > ɬ
+a > a
+a > a
+É¤ > É¤
+o > o
+e > e
+e > e
+e > e
+i > i
+i > i
+c > ʎ̝̊
+É› > É›
+h > ʟ̠
+É› > É›
+j > ʎ̝̊
+
+
+
+
+EXAMPLES 
+  
+aɬÉ›ɬte  >  aɬÉ›ɬɬe 
+aɬɬato:  >  aɬɬaɬo: 
+aɬɬiɬero:  >  aɬɬiɬeɬo: 
+aɬɬeɬium  >  aɬɬeɬiuɬ 
+aɬiɬɬiɬus  >  aɬiɬɬiɬuɬ 
+aʟ̝̊ka  >  aʟ̝̊ʟ̝̊a 
+aʟ̝̊ʟ̝̊apo:  >  aʟ̝̊ʟ̝̊aɬo: 
+aʟ̝̊ʟ̝̊aɬto:  >  aʟ̝̊ʟ̝̊aɬɬo: 
+aʟ̝̊ʟ̝̊oʟ̝̊ɬito:  >  aʟ̝̊ʟ̝̊oʟ̝̊ɬiɬo: 
+aʟ̝̊ʟ̝̊oɬɬiɡo:  >  aʟ̝̊ʟ̝̊oɬɬiʟ̝̊o: 
+A change has occured 
+
+
+The feature Voiced switched values from 0 to 1
+
+Target :   
+[1, 0, 3, 0, 1, 1, 0, 0, 0, 1, 0, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :É› > É›
+ɬ > n
+ɬ > m
+ɬ > n
+ɬ > n
+ʟ̝̊ > ŋ
+ʟ̝̊ > ŋ
+a > a
+ʟ̠ > ɦ
+ʎ̝̊ > ɲ
+ɬ > n
+ɬ > m
+o > o
+ɬ > m
+i > i
+ɬ > n
+e > e
+ɬ > ɱ
+ʟ̝̊ > ŋ
+ɬ > n
+u > u
+ɬ > n
+ɬ > m
+ʟ̝̊ > ʟ̝̊
+ʎ̝̊ > ɲ
+É› > É›
+ʟ̠ > ʟ̠
+ɬ > ɬ
+ɬ > ɬ
+ʟ̠ > ʟ̠
+ɬ > ɱ
+ɬ > n
+
+
+
+
+EXAMPLES 
+  
+aɬÉ›ɬɬe  >  aɬÉ›ɬne 
+aɬaɬɬeo:  >  aɬaɬneo: 
+aɬɬaɬo:  >  aɬɬano: 
+aɬɬaɬuo:  >  aɬɬanuo: 
+aɬɬeɬii:  >  amɬeɬii: 
+aɬɬeɬiuɬ  >  amɬeɬiuɬ 
+aɬiɬɬiɬuɬ  >  aɬinniɬun 
+aʟ̝̊ʟ̝̊a  >  aŋŋa 
+aʟ̝̊ʟ̝̊aɬo:  >  aŋŋamo: 
+aʟ̝̊ʟ̝̊aɬɬio:  >  aŋʟ̝̊amnio: 
+A change has occured 
+
+
+The feature Voiced switched values from 1 to 0
+
+Target :   
+[0, 0, 1, 2, 0, 1, 0, 0, 0, 1, 1, 0] 
+Effects : 
+[-1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1] > [-1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1]
+Conditions : 
+
+Impacted phonems :a > a
+ɬ > m̥
+É› > É›
+ɬ > n̥
+n > n̥
+e > e
+o > o
+a > a
+u > u
+i > i
+ɬ > n̥
+ɬ > n̥
+i > i
+ɬ > m̥
+i > i
+n > n̥
+ŋ > ŋ̊
+ŋ > ŋ̊
+o > o
+ɬ > n̥
+ɬ > m̥
+ɬ > m̥
+e > e
+u > u
+u > u
+ɦ > ʔ
+ɲ > ɲ̊
+É› > É›
+a > a
+ɬ > m̥
+n > n̥
+e > e
+ɬ > n̥
+ɱ > p̪
+ʎ̝̊ > ɲ̊
+ɬ > ɬ
+ŋ > ŋ̊
+i > i
+ɬ > m̥
+ɬ > n̥
+e > e
+i > i
+ɬ > ɬ
+ɬ > n̥
+É¯ > É¯
+ɬ > n̥
+É› > É›
+y > y
+ɬ > n̥
+a > a
+ʎ̝̊ > ɲ̊
+o > o
+i > i
+ɬ > m̥
+ɬ > m̥
+É¤ > É¤
+p > m̥
+ɬ > m̥
+t > n̥
+e > e
+ɱ > p̪
+i > i
+e > e
+i > i
+É¤ > É¤
+ɬ > n̥
+ʟ̝̊ > ʟ̝̊
+ɲ > ɲ̊
+o > o
+ɬ > n̥
+a > a
+ʟ̠ > ʔ
+ɬ > ɬ
+ɬ > ɬ
+É¯ > É¯
+t > n̥
+ʟ̠ > ʔ
+ɬ > n̥
+t > n̥
+y > y
+ɬ > m̥
+
+
+
+
+EXAMPLES 
+  
+aɬÉ›ɬne  >  am̥É›n̥n̥e 
+aɬaɬneo:  >  am̥an̥n̥eo: 
+aɬɬano:  >  am̥m̥an̥o: 
+aɬɬanuo:  >  am̥m̥an̥uo: 
+aɬɬiɬeɬo:  >  am̥m̥im̥en̥o: 
+amɬeɬii:  >  am̥n̥en̥ii: 
+amɬeɬiuɬ  >  am̥n̥en̥ium̥ 
+aɬinniɬun  >  am̥in̥n̥im̥un̥ 
+aŋŋa  >  aŋ̊ŋ̊a 
+aŋŋamo:  >  aŋ̊ŋ̊am̥o: 
