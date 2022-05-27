@@ -13,7 +13,7 @@ from ipapy import UNICODE_TO_IPA
 import numpy as np
 
 
-ipa = IPA()
+ipa = IPA.get_IPA()
 
 
 
@@ -41,20 +41,17 @@ class Phoneme(object) :
     -------
     __init__() constructor taking all these information as input
     
-        
-    isV : checks whether the phoneme is a vowell
+
+    isV : checks whether the phoneme is a vowel
     equals
     update_IPA  : finds the closest ipa character to represent a new phoneme
     
     """
     
-    
-    
-    def __init__(self , voice = False , syl = False): 
+    def __init__(self, voice=False, syl=False): 
         """
         a gentle Phoneme constructor
-        """
-        
+        """       
         self.ipa = None
         self.syl = False 
         self.voice = False
@@ -63,19 +60,18 @@ class Phoneme(object) :
         self.description = ""
         #UNICODE_TO_IPA[string] ._IPAChar__canonical_string
         
-        
-
-        
-    
-        
+            
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
-    def set_rank_in_wd(self, rk) :
+    def set_word_rank(self, rk) :
         self.rank_in_wd = rk 
 
-    def is_vow(self) :
-        return type(self) == Vowell 
+    def isVowel(self) :
+        return type(self) == Vowel
+
+    def isConsonant(self) :
+        return type(self) == Consonant
         
 
     
@@ -224,10 +220,10 @@ def get_phon(string) :
 
 
 
-class Vowell(Phoneme) : 
+class Vowel(Phoneme) : 
     
     """
-    A class representing a Vowell
+    A class representing a Vowel
     
     Semantic of a feature ;
     
@@ -266,36 +262,37 @@ class Vowell(Phoneme) :
     
     update_IPA  : finds the closest ipa character to represent a new phoneme
     
+    get_height
+    get_front
+
     is_round
     is_nasal
     is_palatal
-    
-    get_height
-    get_front
     
     linearize : get a representation of the phoneme as a single vector
     
     """
     
-    def __init__(self,   features , voice = True , syl = True):
-
-        super().__init__(string, syl, voice)
-        self. features = features 
-        self.feat_semantics = [ "syllabic", "voiced", "front", "height", "round", "nasal"]
+    def __init__(self, features):
+        super().__init__(features[0], features[-1][0])
+        self.features = features[1:]
+        self.feat_semantics = ipa.vfeatures
         
 
     def get_height(self) :
-        return self.features[0][1]
-
-    def get_front(self) :
         return self.features[0][0]
 
+    def get_front(self) :
+        return self.features[0][1]
 
     def is_round (self) :
-        return self.features[1][0]
+        return self.features[0][3]
 
     def is_nasal(self) :
-        return self.features[1][1]
+        return self.features[1][1] == 1
+
+    def is_voiced(self):
+        return self.features[1][0] == 1
     
     def is_palatal(self, threshold):
         return self.features[0][1] > threshold
@@ -378,11 +375,10 @@ class Consonant(Phoneme) :
     
     
     
-    def __init__(self,  features, voice = False  , syl = False ):
-
-        super().__init__(string, syl, voice)
-        self. features = features 
-        self.feat_semantics = "syllabic", "voiced", ["place of articulation", "nasal", "plosive", "fricative", "trill", "lateral"], ["secondary place of articulation", "pre_nasal" , "aspiration"] 
+    def __init__(self, features):
+        super().__init__(features[0], features[1][-1])
+        self. features = features[1:] 
+        self.feat_semantics = ipa.cfeatures
 
     def linearize(self) :
         
@@ -399,6 +395,9 @@ class Consonant(Phoneme) :
 
     def is_round (self) :
         return self.features[0][0] == 11
+    
+    def is_labialised (self) :
+        return self.features[1][0] == 11
 
     def is_palatal (self) :
         return self.features[0][0] == 3
@@ -407,10 +406,13 @@ class Consonant(Phoneme) :
         return self.features[0][0] == 1
 
     def is_nasal (self) :
-        return bool(self.features[0][1][2]) or bool(self.features[1][1])
+        return self.features[0][1] == (1, 0, 0, 0, 0) or self.features[1][1] == 1
 
-    def is_aspirate (self) :
-        return self.features[1][2]
+    def is_pre_nasalised(self):
+        return self.features[1][1] == 1
+
+    def is_aspirated (self) :
+        return self.features[1][2] == 1
     
     def is_sonorant(self) :
         return self.features[0][1][0] == 0 and  self.features[0][1][0] == 1

@@ -48,10 +48,21 @@ class archetype(object) :
 
 
 
+manner_enc = {'A' :  (0, 0, 0, 0, 0), # approximant
+              'N' :  (1, 0, 0, 0, 0), # nasal
+              'P' :  (0, 1, 0, 0, 0), # plosive
+              'S' :  (0, 0, 1, 0, 0), # fricative / sibilant
+              'F' :  (0, 0, 1, 0, 0), # fricative
+              'Fl':  (0, 0, 0, 1, 0), # flap
+              'Tr':  (0, 0, 0, 2, 0), # trill
+              'L':   (0, 0, 0, 0, 1), # lateral
+              'Lf':  (0, 0, 1, 0, 1), # lateral fric
+              'Lt':  (0, 0, 0, 1, 1)} # lateral trill
+
 
 class IPA() :
     """
-    A class to represent the IPA viewed as a set of archetypal phonemes.
+    A singleton class to represent the IPA viewed as a set of archetypal phonemes.
 
     ...
 
@@ -74,13 +85,22 @@ class IPA() :
     -------
     __init__() no argument, automatically generates the IPA from a CSV file we created
     """
-    
-    
+
+    __instance = None
+
+    @staticmethod
+    def get_IPA():
+      """ Static access method. """
+      if IPA.__instance == None:
+         IPA.__instance = IPA()
+      return IPA.__instance
+
     
     def __init__(self) :
-        self.features = ['Syllabic', 'Consonant', 'Height', 'Backness',
-                         'Round',    'Voiced',    'Nasal',
-                         'Plosive',  'Fricative', 'Lateral', 'Trill', 'Aspirated']
+        self.vfeatures = 'Syllabic', ('Backness', 'Height', 'Round'), ('Voiced', 'Nasal')
+        self.cfeatures = ('Syllabic', ('place of articulation', ('nasal', 'plosive', 'fricative', 'trill', 'lateral'), 'Voiced'),
+                          ('secondary place of articulation', 'pre_nasal' , 'aspiration'))
+                          
         self.phonemes = [] 
         self.alphabet = {}
         self.feat2ipa = {}
@@ -90,72 +110,39 @@ class IPA() :
         arts = [int(x) for x in consonants[0][1:]]
         for line in consonants[1:]:
             manner = line[0]
-            base = 0, 0, [0, 0, 0, 0, 0]
             if 'v' in manner:
-                base[5] = 1
+                voiced = 1
                 manner = manner[:-1]
-
-            if manner == 'N':
-                base[6] = 1
-            elif manner == 'P':
-                base[7] = 1
-            elif manner == 'S':
-                base[8] = 1 # fricative, high
-                base[3] = 2
-            elif manner == 'F':
-                base[8] = 1 # fricative, not so heigh
-                base[3] = 1
-            elif manner == 'A':
-                base[8] = 1 # fricative, low = approximant
-                base[3] = 0
-            elif manner == 'Fl':
-                base[10] = 1 # flap
-            elif manner == 'T':
-                base[10] = 2 # trill
-            elif manner == 'Lf':
-                base[9] = 1
-                base[8] = 1
-            elif manner == 'L':
-                base[9] = 1
-            elif manner == 'Lt':
-                base[9] = 1
-                base[10] = 1
-                
+            else:
+                voiced = 0
                 
             for i, ch in enumerate(line[1:]):
                 if ch == '-':
                     continue
-                feats = base.copy()
-                feats[3] = arts[i]
-
-                fts = tuple(feats)
+                fts = (arts[i], manner_enc[manner], voiced), (0, 0, 0)
                 phon = archetype(ch, fts)
 
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
 
+
         # reading vowels
         vows = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str)
         front = [int(x) for x in vows[0][1:]]
         for line in vows[1:]:
             height = line[0]
-            base = [1, 1, [0, 0], [0, 0]]
             if 'r' in height:
-                base[3][0] = 1
+                rounded = 1
                 height = int(height[:-1])
             else:
+                rounded = 0
                 height = int(height)
 
-            base[2][0] = height
-                
             for i, ch in enumerate(line[1:]):
                 if ch == '-':
                     continue
-                feats = deepcopy(base)
-                feats[2][1] = front[i]
-
-                fts = tuple([tuple(f) if type(f) != int else f for f in feats])
+                fts = (height, front[i], rounded), (1, 0)
                 phon = archetype(ch, fts)
 
                 self.phonemes.append(phon)
@@ -194,34 +181,33 @@ class IPA() :
         # we did not find a perfect match, so we build it
         if phon.isVowel():
             # a basic vowel is voiced and unnasalised
-            base = [x if i < 5 else 0 for i, x in enumerate(phon.features)]
-            base[5] = 1
-            base = tuple(base)
+            base = phon.features[:-1] + ((1,0),)
             out = self.feat2ipa[base]
             
-            if phon.features[6] == 1: # nasal
+            if phon.is_nasal(): # nasal
                 out += u'\u0303'
 
-            if phon.features[5] == 0: # unvoiced
+            if not phon.is_voiced(): # unvoiced
                 out += u'\u0325'
 
 
-        elif phon.isCons():
-            base = [x for x in phon.features]
-            base[11] = 0
-            base[4] = 0
-            if base[6] == 1:
-                base[7] = 0
-                base[8] = 0
-
-            base = tuple(base)
+        elif phon.isConsonant():
+            base = phon.features[:-1] + ((0,0,0),)
             out = self.feat2ipa[base]            
 
-            if phon.features[4] == 1: # round w
+            if phon.is_labialised() : # round w
                 out += 'ʷ'
             
-            if phon.features[11] == 1: # aspirated
+            if phon.is_aspirated() : # aspirated
                 out += 'ʰ'
+
+            if phon.is_pre_nasalised() : # prenasal
+                nasal = (phon.features[0][0], (1, 0, 0, 0, 0), 1), (0, 0, 0)
+                try:
+                    n = self.feat2ipa[nasal]
+                except:
+                    n = 'n'
+                out = n + u'\u035c' + out
             
         return out
     
