@@ -47,7 +47,7 @@ class Syllable(object) :
         self.length = length
         self.tone = tone
     
-        i_center = 0 
+        i_center = 0
         for phon in self.phonemes :   
             #updated
             if phon.syl == 1 :

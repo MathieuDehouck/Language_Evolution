@@ -11,7 +11,7 @@ def get_structure(syllabes):
     s = '#'
     for syl in syllabes :
         for phon in syl.phonemes :
-            if phon.isV() :
+            if phon.is_vow() :
                 if syl.stress :
                     s+= "v"
                 else :

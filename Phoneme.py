@@ -17,29 +17,6 @@ ipa = IPA()
 
 
 
-def rank_finder (config) : 
-    """
-    gives back the list of ranks of non 0 features
-
-    Parameters
-    ----------
-    config : list
-        feature list representing a phoneme 
-
-    Returns
-        
-    -------
-    i : int
-        the rank of the first non wildcarded feature
-    """
-    liste = []
-    for  i in range (len(config)) :
-        if config[i] != -1 :
-            liste.append(i)
-    return liste
-
-
-
 class Phoneme(object) :
     """
     A class representing a phoneme
@@ -73,12 +50,12 @@ class Phoneme(object) :
     
     
     
-    def __init__(self, string , voice = False , syl = False): 
+    def __init__(self , voice = False , syl = False): 
         """
         a gentle Phoneme constructor
         """
         
-        self.ipa = string 
+        self.ipa = None
         self.syl = False 
         self.voice = False
         self.rank_in_wd = None
@@ -252,6 +229,22 @@ class Vowell(Phoneme) :
     """
     A class representing a Vowell
     
+    Semantic of a feature ;
+    
+    syl : field of the Phoneme
+    voice : filed of the Phoneme
+    
+    Features :
+        First tuple :
+             
+            "fronting" : int  btw 0 and 2
+            "height", int btw 0 and 6
+                
+        Second tuple :
+            
+            "round" : bool
+            "nasal" : bool
+    
     ...
 
     Attributes
@@ -284,10 +277,12 @@ class Vowell(Phoneme) :
     
     """
     
-    def __init__(self, string,  features , voice = True , syl = True):
+    def __init__(self,   features , voice = True , syl = True):
 
         super().__init__(string, syl, voice)
-        self.features = features 
+        self. features = features 
+        self.feat_semantics = [ "syllabic", "voiced", "front", "height", "round", "nasal"]
+        
 
     def get_height(self) :
         return self.features[0][1]
@@ -326,6 +321,29 @@ class Consonant(Phoneme) :
     """
     A class representing a Consonant
     
+    Semantic of a feature ;
+    
+    syl : field of the Phoneme
+    voice : filed of the Phoneme
+    
+    Features :
+        First tuple :
+            0 : 
+            "place of articulation" : int 
+            1 : list of 5 manner of articulation , each coded by a boolean
+                "plosive"
+                "fricative"
+                "nasal"
+                "trill"
+                "lateral"
+                
+        Second tuple :
+            
+            "secondary place of articulation"  int (3 or 4 possibilities, same semantics as in place of articulation)
+            "pren_nasal"  bool
+            "aspiration" bool 
+            
+    
     ...
 
     Attributes
@@ -360,7 +378,7 @@ class Consonant(Phoneme) :
     
     
     
-    def __init__(self, string,  features, voice = False  , syl = False ):
+    def __init__(self,  features, voice = False  , syl = False ):
 
         super().__init__(string, syl, voice)
         self. features = features 
@@ -393,7 +411,10 @@ class Consonant(Phoneme) :
 
     def is_aspirate (self) :
         return self.features[1][2]
-
+    
+    def is_sonorant(self) :
+        return self.features[0][1][0] == 0 and  self.features[0][1][0] == 1
+ 
     def has_sec_articulation (self) :
         return self.features[1][2]
 

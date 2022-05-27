@@ -109,7 +109,7 @@ class Change_Generator():
         return  self.generate_S_cond( lang_state) 
 
 
-    def generate_p_change(self, lang_state):
+    def generate_P_change(self, lang_state):
         """
         generates a random P_change
 
@@ -200,8 +200,9 @@ class Change_Generator():
         if self.verbose : print(ch)
         return ch
         
-        # find a plausible resolution (result)
-        ()
+    
+        
+        
         
         
         
