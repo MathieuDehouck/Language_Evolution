@@ -213,5 +213,3 @@ class Change_Generator():
         
         
 
-cg = Change_Generator() 
-cg.generate_p_change(latin)

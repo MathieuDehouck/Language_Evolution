@@ -72,10 +72,10 @@ class Tree_changer(Changer) :
         
         
         lang = copy.deepcopy(lang)
-        change = self.generator.generate_p_change(lang)
+        change = self.generator.generate_P_change(lang)
         while change.applicable(lang) != True :
             change = None
-            change = self.generator.generate_p_change(lang)
+            change = self.generator.generate_P_change(lang)
             
             
         

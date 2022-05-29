@@ -7,6 +7,11 @@ Created on Wed May  4 11:33:05 2022
 Module containing the syllable class and its associated methods
 """
 
+from IPA import IPA
+ip = IPA()
+
+
+
 class Syllable(object) :
     """
     A class to represent a syllable.
@@ -58,7 +63,9 @@ class Syllable(object) :
           
         s = ""
         for phoneme in self.phonemes :
-            s += phoneme.ipa
+            #TODO
+            phoneme.ipa = ip.get_char(phoneme)
+            s += str(phoneme.ipa)
             if phoneme == self.center and self.length :
                 s += ":"
         self.ipa = s

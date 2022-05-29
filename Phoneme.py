@@ -60,21 +60,23 @@ class Phoneme(object) :
         self.description = ""
         #UNICODE_TO_IPA[string] ._IPAChar__canonical_string
         
+        self.features = None
+        self.rank_in_wd = None
             
     def __str__(self):
-        return self.ipa +  " :  " + self.description + "\n" + str(self.features)
+        return str(self.ipa )+  " :  " + str(self.description ) + "\n" + str(self.features)
 
     def set_word_rank(self, rk) :
         self.rank_in_wd = rk 
 
-    def isVowel(self) :
+    def isV(self) :
         return type(self) == Vowel
 
     def isConsonant(self) :
         return type(self) == Consonant
         
-
-    
+    def set_rank_in_wd(self, rk) :
+        self.rank_in_wd = rk
 
     def update_IPA(self, config, verbose = False) :
         """
@@ -277,7 +279,7 @@ class Vowel(Phoneme) :
         super().__init__(features[0], features[-1][0])
         self.features = features[1:]
         self.feat_semantics = ipa.vfeatures
-        
+        self.lin = self.linearize()
 
     def get_height(self) :
         return self.features[0][0]
@@ -299,7 +301,7 @@ class Vowel(Phoneme) :
 
 
     def linearize(self) :
-        
+     if len(self.features) > 0 :
         feat = []
         feat.append(int(self.syl))
         feat.append(int(self.voice))
@@ -379,6 +381,7 @@ class Consonant(Phoneme) :
         super().__init__(features[0], features[1][-1])
         self. features = features[1:] 
         self.feat_semantics = ipa.cfeatures
+        self.lin = self.linearize()
 
     def linearize(self) :
         

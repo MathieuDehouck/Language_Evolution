@@ -72,7 +72,7 @@ class Language() :
         for phoneme in phonemes :
             dic_phonemes[phoneme.ipa] = phoneme        
         self.dic_phonemes = dic_phonemes
-        self.subclasses = self.get_subclasses()
+        #self.subclasses = self.get_subclasses()
 
 
     def __str__(self) :

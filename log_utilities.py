@@ -11,8 +11,9 @@ from pathlib import Path
 
 
 ipa = IPA()
-ift = ipa.features
-ccl = ipa.classes
+ift = ipa.cfeatures
+#TODO
+#ccl = ipa.classes
 
 def tpl2phons(tpl, alph = ipa.phonemes) :
     phons = []

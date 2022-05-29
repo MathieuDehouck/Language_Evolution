@@ -10,6 +10,7 @@ import os
 import locale
 from pathlib import Path
 
+
 def create_classes(alphabet) :
     """
     creates the natural classes from an ipa alphabet
@@ -31,60 +32,82 @@ def create_classes(alphabet) :
     
     # we open the source csv.file
     folder = Path("phonetic/")
-    path = folder /  "class.csv"
+    path = folder /  "natural_class.csv"
     dic_class = {}
     dic_class_liste = {}
     classes = []
     data = np.genfromtxt(path, delimiter = ',', dtype = str, encoding = "utf8")
     f = open(folder /"liste_classes.txt", 'w',  encoding = 'utf8')
     f.write ("LIST OF NATURAL CLASSES  \n")
-    
-    
-    
+
     # we extract the list of classes
     features = data[0][1:]
-    f.write(str(features))
+    
     f.write('\n')
     f.write (" \n")
     
     
-    
-    for sound in data[1:]  :
-        n_class  = Natural_class(sound[0])
-        fts =  [int(x) for x in sound[1:]]
-        phonemes = []
+    for classe in data[1:][1:] :
+        
+        name = classe[0]
+        isV = classe[1]
+        
+        fts  = "" 
+        if not isV :
+            
+            voiced = classe[2]
+            place = classe[3]
+            manner = (classe[4] , classe[5], classe[6], classe[7], classe[8])
+            
+            tpl1 = (place, manner, voiced)
+            tpl2 = (classe[9], classe[10], classe[11])
+            fts = (tpl1, tpl2)
+        
+        
+        else :
+            voiced = classe[2]
+            front = classe[3]
+            heigth = classe [4]
+        
+            tpl1 = (front, heigth, voiced)
+            tpl2 = (classe[5], classe[6])
+            fts = (tpl1, tpl2)
+            
+        
+        
+        classe = [truc for truc in classe[1:] if truc != ""]
+        
+        classe = Natural_class(name, fts, isV, classe[1:])
+        classes.append(classe)
+        dic_class[name] = classe
+         
+        
         
         # we check which phonemes of the alphabet belon to the class
-        for phon in alphabet :
-            features_phon = alphabet[phon]
-            features_phon = features_phon.features
-            add = True 
+    for classe in classes :
+        for phon in alphabet.phonemes :
             
+            fts  = phon.lin
+            add = False
+            if len(fts) ==  len(classe.lin): 
+                
+                add = True
+                for i , ft in enumerate (fts) :
             
-            for i in range(len(fts)) :
-                if int(fts[i]) != -1 and int(features_phon[i]) != int( fts[i]) :
-                    add = False 
+                  if int(ft) != -1 and int(classe.lin[i]) != int( ft) :
+                       add = False 
+            print()
+            print(fts)
+            print("vs")
+            print(classe.lin)
+            
             if add :
-                phonemes.append(phon)
-                n_class.add_phon(phon)
+                
+               classe.add_phon(phon)
+    
         
-        
-        #we write the classes and its members in a text file
-        n_class.set_template(fts)
-        f.write (sound[0])
-        f.write ( '  :   ')
-        f.write(str(fts))
-        f.write (" \n")
-        f.write(" contains following phonems : " )
-        f.write(str(phonemes))
-        f.write (" \n")
-        f.write (" \n")
-        dic_class [sound[0] ] = phonemes
-        dic_class [sound[0] ] = n_class
-        classes.append(n_class)
-        
+    #TODO cafouillage dand l ordre des features
     return dic_class, classes
-
 
 
 def list2class(name, clas) :
@@ -127,17 +150,19 @@ class Natural_class :
     
 
     
-    def __init__(self, name) :
+    def __init__(self, name, feat, vow , lin) :
         self.name = name 
         self.members = []
-        self.template = [-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1	,-1]
-        
+        self.template = feat
+        self.isV = vow
+        self.lin = lin
         
         
     def add_phon(self, ph) :
         self.members.append(ph)
         
-        
+    def set_lin(self, lin) :
+        self.lin = lin
         
     def set_template(self, template) :
         self.template = template
@@ -145,7 +170,7 @@ class Natural_class :
         
         
     def __str__(self) :
-        s = self.name + "\n" + str(self.members)
+        s = self.name + "\n" + str(self.template) + "\n" + str(self.lin )+ "\n" + str(self.members)
         return s
 
     

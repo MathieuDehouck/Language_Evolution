@@ -9,9 +9,9 @@ Contains some functions that help handling phonetically transcribed words availa
 """
 
 
-from IPA import IPA, create_classes
+from IPA import IPA
 from Word import Word
-from Phoneme import Phoneme
+from Phoneme import Phoneme, Vowel, Consonant
 from Syllable import Syllable
 from Language import Language
 from pathlib import Path 
@@ -103,9 +103,14 @@ def segm2syl(dic, alphabet ) :
             for pho in syl :
                 #print(phoneme)
                 
-                feat = alphabet[pho]
+                arch = alphabet[pho]
+                if arch.isV :
                 
-                nphon = Phoneme(feat.ipa, list(feat.features))
+                    nphon = Vowel( arch.features)
+                else : 
+                    nphon = Consonant(arch.features)
+                    
+                    
                 phonemes.append(nphon)
             
             syl = Syllable (phonemes, stress, length)
@@ -184,8 +189,8 @@ def get_language(path, name) :
     """
     # creation of the alphabet
     al = IPA()
-    dic_class, classes = create_classes(al.alphabet)
-    
+    #dic_class, classes = create_classes(al.alphabet)
+    #TODO
     # exctraction of the words from the document
     gaffiot = wiki_lexicon(path)
     dic = dic2word(gaffiot, alphabet) 

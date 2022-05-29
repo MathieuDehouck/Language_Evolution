@@ -8,8 +8,21 @@ Created on Thu May  5 00:01:15 2022
 import numpy as np
 from ipapy import *
 from copy import deepcopy
-from Natural_class import create_classes
+#from Natural_class import create_classes
 
+
+
+def linearize (LISTE, liste = [], reset = True) :
+    if reset : liste = []
+    for ft in list(LISTE) : 
+        if type(ft) == int : 
+            liste.append(ft)
+            LISTE.remove(ft)
+        else :
+            
+            liste = linearize (list(ft), liste, False)
+        
+    return liste
 
 class archetype(object) :
     """
@@ -41,12 +54,14 @@ class archetype(object) :
             self.description = UNICODE_TO_IPA[string]._IPAChar__canonical_string
         except:
             self.description = 'No description'
-            
+        self.lin = linearize(feats)
+        self.isV = None
 
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
-
+ 
+    def set_isV(self, b) : self.isV = b
 
 manner_enc = {'A' :  (0, 0, 0, 0, 0), # approximant
               'N' :  (1, 0, 0, 0, 0), # nasal
@@ -54,10 +69,11 @@ manner_enc = {'A' :  (0, 0, 0, 0, 0), # approximant
               'S' :  (0, 0, 1, 0, 0), # fricative / sibilant
               'F' :  (0, 0, 1, 0, 0), # fricative
               'Fl':  (0, 0, 0, 1, 0), # flap
-              'Tr':  (0, 0, 0, 2, 0), # trill
+              'T':  (0, 0, 0, 2, 0), # trill
               'L':   (0, 0, 0, 0, 1), # lateral
               'Lf':  (0, 0, 1, 0, 1), # lateral fric
-              'Lt':  (0, 0, 0, 1, 1)} # lateral trill
+              'Lt':  (0, 0, 0, 1, 1),# lateral trill
+              'Afr' : (0, 1, 1, 0, 0)}  #Africates
 
 
 class IPA() :
@@ -125,7 +141,7 @@ class IPA() :
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
-
+                phon.set_isV(False)
 
         # reading vowels
         vows = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str)
@@ -148,14 +164,13 @@ class IPA() :
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
+                phon.set_isV(True)
             
         
         #dic_class, classes = create_classes(self.alphabet)
         
         #self.classes = classes
         #self.dic_class = dic_class
-
-
 
     def get_char(self, phon, verbose=False):
         """
@@ -179,7 +194,7 @@ class IPA() :
             return self.feat2ipa[phon.features]
 
         # we did not find a perfect match, so we build it
-        if phon.isVowel():
+        if phon.isV():
             # a basic vowel is voiced and unnasalised
             base = phon.features[:-1] + ((1,0),)
             out = self.feat2ipa[base]
@@ -209,5 +224,11 @@ class IPA() :
                     n = 'n'
                 out = n + u'\u035c' + out
             
+        else : 
+            print("AmBIGU")
+            print(phon)
+            out = ''
+            
         return out
+    
     

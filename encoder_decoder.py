@@ -11,7 +11,8 @@ from Configuration import Configuration
 from Change import P_change
 
 ipa = IPA()
-ift = ipa.features
+ift = ipa.cfeatures
+#TODO 
 
 
 def encode_f (feat) :
