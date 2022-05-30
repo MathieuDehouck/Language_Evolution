@@ -64,7 +64,7 @@ class Syllable(object) :
         s = ""
         for phoneme in self.phonemes :
             #TODO
-            phoneme.ipa = ip.get_char(phoneme)
+            phoneme.ipa = ip.get_char(phoneme, phoneme.isV)
             s += str(phoneme.ipa)
             if phoneme == self.center and self.length :
                 s += ":"

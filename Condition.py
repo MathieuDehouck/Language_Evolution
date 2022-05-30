@@ -10,6 +10,8 @@ A condition is associated to a change object and states whether a change can be 
 
 """
 
+maxC = [11, 1, 1, 1, 1, 2, 1, 1 , 1 , 1]
+maxV = [2, 6, 1 , 1 , 1]
 import utilitaries
 import random
 
@@ -76,6 +78,7 @@ class P_condition (Condition) :
         self.rel_pos = rel_pos
         self.absol_pos = absol_pos
         self.continu = continu
+        self.isV = (len(feature_template) == 5)
     
     
     
@@ -151,6 +154,9 @@ class P_condition (Condition) :
             
         phon = word.phonemes[rank]
         
+        if phon.isV != self.isV :
+            print("not applicable on the target")
+        
         # does the condition have an absolute position to be checked on ?
         if self.absol_pos  != - 1 :
             if  self.absol_pos != rank :
@@ -209,6 +215,7 @@ class P_condition (Condition) :
                     
         return cond
         
+    
         
     
     def rd_p_condition( rel_pos = 0, abs_pos = -1, continu = False):
@@ -230,57 +237,29 @@ class P_condition (Condition) :
 
         """
          
+        #TODO a parametriser 
+        
         # the main goal of this function to generate a condition is to generate the feature_template.
-        ft = [-1] * 12
-        sy = random.randint (0,1)
-        vo = random.randint (0,1)
-        while sy == 1 and vo == 1 :
-            sy = random.randint (0,1)
-            vo = random.randint (0,1)
-        ft[0] = sy
-        ft[1] = vo
+        
+        Voy = random.randint (0, 1)
+            
+        if  Voy : 
+            ft = [-1] * 5
+            m = maxV
+            
+        else :
+            ft = [-1] * 10
+            m = maxC
         
         
-        #TODO crucial pt in the parameters we would like a distribution over proba here
-        #TODO we decided to just condition up to two parameters. this value could / shuld change
-        #we want to condition one to three other features :
-        fts = random.randint (0,4)
-        
-        for i in range(fts) :
-            index = random.randint (2,11)
-            
-            # we adapt the rank to the feature
-            ran = 1
-            if index == 1 or index == 2 :
-                ran = 3
-                if sy == 1 and index == 1 :  ran = 2
-                if sy == 0 and index == 2 : ran =2
-            
-            #TODO roundness
-            
-            value = random.randint(0, ran)
+        for index, f in enumerate( ft ) : 
+
+            value = random.randint(0, m)
             ft[index] = value
         
         cond = P_condition(ft,  abs_pos, rel_pos, continu)
         
         return cond
-    
-            
-            
-            
-           
-        
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

@@ -8,7 +8,6 @@ Contains some functions that help handling phonetically transcribed words availa
 
 """
 
-
 from IPA import IPA
 from Word import Word
 from Phoneme import Phoneme, Vowel, Consonant
@@ -18,7 +17,6 @@ from pathlib import Path
 
 ipa = IPA()
 alphabet = ipa.alphabet
-
 
 
 
@@ -34,10 +32,43 @@ def wiki_lexicon(path) :
             ligne = ligne.split()
             dico[ligne[0]]= ligne[1]
             
-            
-            
-    
+
     return dico
+
+
+
+
+
+def treat_syl(syl, stress = False) :
+    
+    length =   ("ː" in syl )
+    if length :
+       syl = "".join(i for i in syl if  i != "ː")          
+    syl = syl.replace("ʷ", "w")
+    syl = syl.replace('g', "ɡ")
+    syl = syl.replace('̯', "")              
+    phonemes = []
+    
+    for i, pho in enumerate(syl,  ):
+                
+                if pho == 'ʰ' : continue          
+                arch = alphabet[pho]      
+                if arch.isV :
+                    nphon = Vowel( arch.features)
+                else : 
+                    nphon = Consonant(arch.features)        
+                if (i+1) in range (len(syl)) : 
+                     if syl[i+1] == 'ʰ' : nphon.set_aspirated(True)
+                    
+                phonemes.append(nphon)
+            
+    syl = Syllable (phonemes, stress, length)
+    
+    
+    return syl
+
+
+
 
 
 def segm2syl(dic, alphabet ) :
@@ -52,102 +83,34 @@ def segm2syl(dic, alphabet ) :
         
        
         for syl in segm :
-            stress = ( syl[0] == "ˈ" )
-            
+            stress = ( syl[0] == "ˈ" )    
             if stress : 
-                syl = syl [1:]
-            
+                syl = syl [1:]  
+                s = treat_syl(syl, stress)
+                syllables.append(s)
+                
             double = False
+            
             if not stress :
                 if "ˈ" in syl :
                     bric = syl.split("ˈ")
                     syl = bric[0]
+                    s = treat_syl(syl, stress)
+                    syllables.append(s)
                     double = True
                     syl2 = bric [1]
-                    
-            
-            length =   ("ː" in syl )
-            
-            
-            if length :
-                
-                
-                syl = "".join(i for i in syl if  i != "ː")
-                
-            # ATTENTION, LABIALISATION A TRAITER PLUS TARD
-            
-            syl = syl.replace("ʷ", "w")
-            syl = syl.replace('g', "ɡ")
-            syl = syl.replace('̯', "")
-            
-           #syl = syl.replace('ʰ', "h")
-                
-            phonemes = []
-            for i, pho in enumerate(syl ):
-                
-                if pho == 'ʰ' : continue
-               
-                        
-                arch = alphabet[pho]
-                
-                
-                if arch.isV :
-                
-                    nphon = Vowel( arch.features)
+                    s2 = treat_syl(syl2, stress)
+                    syllables.append(s2)
                 else : 
-                    nphon = Consonant(arch.features)
-                    
-                if (i+1) in range (len(syl)) : 
-                     if syl[i+1] == 'ʰ' : nphon.set_aspirated(True)
-                    
-                phonemes.append(nphon)
-            
-            syl = Syllable (phonemes, stress, length)
-            syllables.append(syl)
-            
-            if double :
-                
-                
-                length =   ("ː" in syl2 )
-                
-                
-                if length :
-                    
-                    
-                    syl2 = "".join(i for i in syl2 if  i != "ː")
-                    
-                syl2 = syl2.replace("ʷ", "w")
-                
-                syl2 = syl2.replace('̯', "")
-                
-                syl2 = syl2.replace('g', "g")
-                
-                syl2 = syl2.replace('ʰ', "h")
-            
-            
-                phonemes = []
-                for pho in syl2 :
-                #print(phoneme)
-                
-                    arch = alphabet[pho]
-                
-                    if arch.isV :
-                    
-                        nphon = Vowel( arch.features)
-                    else : 
-                        nphon = Consonant(arch.features)
-                        
-                    phonemes.append(nphon)
-            
-                syl2 = Syllable (phonemes, stress, length)
-                syllables.append(syl2)
-            
-            
-            
-            
-    
+                    s = treat_syl(syl, stress)
+                    syllables.append(s)              
         dic_syl[word] = syllables
+        
+        
+        
     return dic_syl
+
+
 
 
 
@@ -161,11 +124,10 @@ def dic2word(dic, alphabet) :
         wor = Word(dic2syl[w])
         dic2word[w] = wor
     return dic2word 
-gaffiot = wiki_lexicon('latin_classique.txt')
-
 
 
             
+
 
 def get_language(path, name) :   
     """
@@ -183,18 +145,8 @@ def get_language(path, name) :
     """
     # creation of the alphabet
     al = IPA()
-    #dic_class, classes = create_classes(al.alphabet)
-    #TODO
-    # exctraction of the words from the document
     gaffiot = wiki_lexicon(path)
     dic = dic2word(gaffiot, alphabet) 
     lg = Language(name, dic)
     
     return lg
-
-
-
-
-
-
-

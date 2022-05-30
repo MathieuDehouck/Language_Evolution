@@ -5,7 +5,7 @@ Created on Thu May  5 10:22:10 2022
 @author: 3b13j
 """
 from utilitaries import feature_match,  tpl2candidates
-from Phoneme import Phoneme
+from Phoneme import Phoneme, Vowel , Consonant, delinearize
 from Syllable import Syllable
 from Word import Word
 from Language import Language
@@ -14,6 +14,13 @@ from Configuration import Configuration
 from regularizations import regularize_stress, regularize_structure
 
 import random
+
+
+
+# TODO gérer l'interaction entre V et C 
+influence_V_on_C = {}
+influence_C_on_C = {}
+
 
 
 
@@ -149,7 +156,7 @@ class P_change(Change) :
     
     
     
-    def __init__(self, config_initiale, config_finale) :
+    def __init__(self, config_initiale, config_finale, target) :
         """ 
         a Phonetic change deals with the modification of a phonem, therefore the object P_change need
         information about the phoneme to modify. The two configurations object encode these informations,
@@ -160,7 +167,12 @@ class P_change(Change) :
         
         self.config_initiale = config_initiale
         self.config_finale = config_finale
+        self.target = target
         self.impacted_phonemes ={}
+        
+        self.nn = []
+        for  i, ft in enumerate( config_initiale.state ) :
+            if ft != 1 : self.nn.append(i)
         
         #TODO : rustine un bu fait que qd on crée plusieurs changements à la suite du même nom (dans une boucle par ex)
         # la liste des changements n'est pas remise à 0
@@ -187,6 +199,25 @@ class P_change(Change) :
             if feature_match(self.config_initiale.state, phoneme.features) :
                 return True
         return False
+        
+        
+        
+    def compensate(self, phon) :
+        
+        
+        
+        #TODO
+            
+        
+        
+        
+        
+        
+        
+        
+        return phon
+        
+        
         
         
     def apply_phon (self,  phon, index , word, verbose = False):
@@ -223,19 +254,34 @@ class P_change(Change) :
             if verbose : print("the condition is not respected, nothing is changed", phon.ipa)
             return phon, index+1
         
+        
+        if phon.isV != self.config_initiale.isV : 
+            if verbose : print ("wrong side")
+            
+            return phon, index+1
+        
+        
         modif = False
-        fts = list( phon.features).copy()
+        fts = phon.lin.copy()
         for i in range(len(self.config_initiale.state)) :
             coef = self.config_initiale.state[i]
             if coef != -1 and fts[i] == coef  :
                     # if the feature matches the initial configuration, a modification is applied
                     fts[i] = self. config_finale.state[i] 
-                    modif = True        
-        new_phon = Phoneme(phon.ipa, fts)
+                    modif = True      
+                    
+        
         
         
         if modif :
-            new_phon.update_IPA(self.config_finale)
+            
+            
+            result = delinearize(phon.isV, fts)
+            if phon.isV : new_phon = Vowel(result)
+            else :  new_phon = Consonant(result)
+            
+            
+            
             # these ligns of code update the impacted_phonemes dictionnary if necessary
             double = False
             for truc in self.impacted_phonemes :
@@ -243,14 +289,17 @@ class P_change(Change) :
                     double = True
             if not double  :
                 self.impacted_phonemes[phon] = new_phon
-       
+                
+        else :  new_phon = phon 
         
-        if verbose : print("conditions satisfied, a new phonem is born ", new_phon.ipa)
+        if verbose  :
+            if modif : print("conditions satisfied, a new phonem is born ", new_phon.ipa)
+            else : print("no change")
         return new_phon, index+1
 
     
     
-    def apply_word(self, wd ) :
+    def apply_word(self, wd , verbose = False) :
         """
         Apply the change to a word
 
@@ -269,13 +318,13 @@ class P_change(Change) :
         
 
         for syl in wd.syllables :
-            syl, index  = self.apply_syl(syl, index, wd)
+            syl, index  = self.apply_syl(syl, index, wd, verbose)
             syls.append(syl)
         return Word(syls)
          
     
     
-    def apply_syl(self,syl, index, wd):
+    def apply_syl(self,syl, index, wd, verbose = False):
         """
         Apply the change to a Syllable
 
@@ -300,7 +349,7 @@ class P_change(Change) :
         
         phonemes = []
         for phon in syl.phonemes :
-            phon2 , index = self.apply_phon( phon, index , wd )
+            phon2 , index = self.apply_phon( phon, index , wd , verbose)
             phonemes. append(phon2)
         return Syllable(phonemes, syl.stress, syl.length), index
     

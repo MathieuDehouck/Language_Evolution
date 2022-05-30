@@ -16,6 +16,12 @@ import numpy as np
 ipa = IPA.get_IPA()
 
 
+def tuple_2_list(tupl) :
+    liste = list(tupl) 
+    for el in liste :
+        if type(el) == tuple :
+            el = list(el)
+    return liste
 
 class Phoneme(object) :
     """
@@ -45,6 +51,7 @@ class Phoneme(object) :
     update_IPA  : finds the closest ipa character to represent a new phoneme
     
     """
+    
     
     def __init__(self, voice=False, syl=False): 
         """
@@ -206,8 +213,17 @@ class Phoneme(object) :
                 
                     self.ipa = best_cand.ipa
 
-    def set_aspirated(self) :
-        return
+    def set_aspirated(self, bol) :
+        
+        
+        if not self.isV : 
+            """
+            ft = tuple_2_list(self.features)
+            
+            ft[1][2] = int(bol)
+            self.features = ft
+            """
+            #TODO
 
 def get_phon(string) :
     """
@@ -280,6 +296,10 @@ class Vowel(Phoneme) :
         self.features = features
         self.feat_semantics = ipa.vfeatures
         self.lin = self.linearize()
+        self.ipa = ipa.get_char(self)
+        
+        
+        
     def get_height(self) :
         return self.features[0][0]
 
@@ -303,10 +323,8 @@ class Vowel(Phoneme) :
      
         #print(self.features)
         feat = []
-        print("FE")
-        print(self.features)
-        feat.append(int(self.syl))
-        feat.append(int(self.voice))
+        
+        
         feat.append(self.features[0][0])
         feat.append(self.features[0][1])
         feat.append(self.features[0][2])
@@ -385,15 +403,17 @@ class Consonant(Phoneme) :
         self.feat_semantics = ipa.cfeatures
         self.lin = self.linearize()
         self.isV = False
+        self.ipa = ipa.get_char(self)
+        
 
     def linearize(self) :
         
         feat = []
-        feat.append(int(self.syl))
-        feat.append(int(self.voice))
+        
         feat.append(self.features[0][0])
         for manner in self.features[0][1] :
             feat.append(int(manner))
+        feat.append(self.features[0][2])
         for manner in self.features[1] :
             feat.append(int(manner))
         return feat
@@ -428,6 +448,18 @@ class Consonant(Phoneme) :
         return self.features[1][2]
 
 
+def delinearize(isV, liste) :
+   if isV : 
+    tpl1 = (liste[0], liste[1], liste[2])
+    tpl2 = (liste[3], liste[4])
+    
+   else :
+    manner = (liste[1], liste[2], liste[3], liste[4], liste[5])
+    tpl1 = (liste[0], manner, liste[6])
+    tpl2 = (liste[7], liste[8], liste[9])
+   return (tpl1, tpl2)
+       
+       
 
 
 

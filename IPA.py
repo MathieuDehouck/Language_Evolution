@@ -13,6 +13,24 @@ from copy import deepcopy
 
 
 def linearize (LISTE, liste = [], reset = True) :
+    """
+    transforme une liste complexe en une liste linéarisée
+
+    Parameters
+    ----------
+    LISTE : TYPE
+        DESCRIPTION.
+    liste : TYPE, optional
+        DESCRIPTION. The default is [].
+    reset : TYPE, optional
+        DESCRIPTION. The default is True.
+
+    Returns
+    -------
+    liste : TYPE
+        DESCRIPTION.
+
+    """
     if reset : liste = []
     for ft in list(LISTE) : 
         if type(ft) == int : 
@@ -20,9 +38,11 @@ def linearize (LISTE, liste = [], reset = True) :
             LISTE.remove(ft)
         else :
             
-            liste = linearize (list(ft), liste, False)
-        
+            liste = linearize (list(ft), liste, False)      
     return liste
+
+
+
 
 class archetype(object) :
     """
@@ -57,11 +77,21 @@ class archetype(object) :
         self.lin = linearize(feats)
         self.isV = None
 
+
+
+
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
  
+
+
+
     def set_isV(self, b) : self.isV = b
+
+
+
+
 
 manner_enc = {'A' :  (0, 0, 0, 0, 0), # approximant
               'N' :  (1, 0, 0, 0, 0), # nasal
@@ -74,6 +104,9 @@ manner_enc = {'A' :  (0, 0, 0, 0, 0), # approximant
               'Lf':  (0, 0, 1, 0, 1), # lateral fric
               'Lt':  (0, 0, 0, 1, 1),# lateral trill
               'Afr' : (0, 1, 1, 0, 0)}  #Africates
+
+
+
 
 
 class IPA() :
@@ -104,12 +137,19 @@ class IPA() :
 
     __instance = None
 
+
+
+
+
     @staticmethod
     def get_IPA():
       """ Static access method. """
       if IPA.__instance == None:
          IPA.__instance = IPA()
       return IPA.__instance
+
+
+
 
     
     def __init__(self) :
@@ -167,12 +207,11 @@ class IPA() :
                 phon.set_isV(True)
             
         
-        #dic_class, classes = create_classes(self.alphabet)
-        
-        #self.classes = classes
-        #self.dic_class = dic_class
+      
 
-    def get_char(self, phon, verbose=False):
+
+
+    def get_char(self, phon, isV= None,  verbose=False):
         """
         returns a string representing the input phoneme's features
 
@@ -188,13 +227,14 @@ class IPA() :
         string
 
         """
-
+        if isV == None :
+            isV = phon.isV
         # We look directly in the dict of features to ipa if we find something
         if phon.features in self.feat2ipa:
             return self.feat2ipa[phon.features]
 
         # we did not find a perfect match, so we build it
-        if phon.isV:
+        if isV:
             # a basic vowel is voiced and unnasalised
             base = phon.features[:-1] + ((1,0),)
             out = self.feat2ipa[base]
@@ -206,9 +246,16 @@ class IPA() :
                 out += u'\u0325'
 
 
-        elif phon.isConsonant():
+        else:
             base = phon.features[:-1] + ((0,0,0),)
-            out = self.feat2ipa[base]            
+            if base in self.feat2ipa :  out = self.feat2ipa[base]            
+            else  :
+                part = phon.features[0][0]
+                voiced =  phon.features[0][2]
+                tpl1 = (part, (1, 0, 0, 0 ,0) , voiced)
+                base = tpl1 + (0, 0, 0)
+                out = self.feat2ipa[base]
+            
 
             if phon.is_labialised() : # round w
                 out += 'ʷ'
@@ -224,10 +271,7 @@ class IPA() :
                     n = 'n'
                 out = n + u'\u035c' + out
             
-        else : 
-            print("AmBIGU")
-            print(phon)
-            out = ''
+
             
         return out
     
