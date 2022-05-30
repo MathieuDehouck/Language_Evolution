@@ -206,7 +206,8 @@ class Phoneme(object) :
                 
                     self.ipa = best_cand.ipa
 
-
+    def set_aspirated(self) :
+        return
 
 def get_phon(string) :
     """

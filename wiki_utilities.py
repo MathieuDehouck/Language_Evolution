@@ -80,12 +80,14 @@ def segm2syl(dic, alphabet ) :
             syl = syl.replace('g', "ɡ")
             syl = syl.replace('̯', "")
             
-            syl = syl.replace('ʰ', "h")
+           #syl = syl.replace('ʰ', "h")
                 
             phonemes = []
-            for pho in syl :
-                #print(phoneme)
+            for i, pho in enumerate(syl ):
                 
+                if pho == 'ʰ' : continue
+               
+                        
                 arch = alphabet[pho]
                 
                 
@@ -95,6 +97,8 @@ def segm2syl(dic, alphabet ) :
                 else : 
                     nphon = Consonant(arch.features)
                     
+                if (i+1) in range (len(syl)) : 
+                     if syl[i+1] == 'ʰ' : nphon.set_aspirated(True)
                     
                 phonemes.append(nphon)
             

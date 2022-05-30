@@ -174,12 +174,7 @@ class Change_Generator():
         ch = P_change(conf_i, conf_f)
         ch.set_target(target)
         
-        
-        
-        
-        
-        
-        # find a context (conditions)
+
         
         #TODO parametrize the number and nature of conditions 
         
@@ -199,17 +194,3 @@ class Change_Generator():
         
         if self.verbose : print(ch)
         return ch
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
