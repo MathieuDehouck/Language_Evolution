@@ -194,7 +194,7 @@ class IPA() :
             return self.feat2ipa[phon.features]
 
         # we did not find a perfect match, so we build it
-        if phon.isV():
+        if phon.isV:
             # a basic vowel is voiced and unnasalised
             base = phon.features[:-1] + ((1,0),)
             out = self.feat2ipa[base]

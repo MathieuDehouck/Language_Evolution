@@ -44,30 +44,14 @@ def segm2syl(dic, alphabet ) :
     """ take as input the dictionnary created out of the wiki data and used the info concerning syllabification
     to create syllables in out IPA format"""
     dic_syl = {}
-    for word in dic :
+    for word, segm in dic.items() :
         
         syllables = []
-        
-        segm = dic[word]
-        
-        
-        """
-        copy = ""
-        for let in segm :
-            if str(let) == "ˈ" and let != segm [0]:
-                
-                copy+= "."
-            copy += let 
-        
-        """  
-        
         segm = segm.split(".")
+       
         
+       
         for syl in segm :
-            
-            
-            
-            
             stress = ( syl[0] == "ˈ" )
             
             if stress : 
@@ -76,7 +60,6 @@ def segm2syl(dic, alphabet ) :
             double = False
             if not stress :
                 if "ˈ" in syl :
-                    
                     bric = syl.split("ˈ")
                     syl = bric[0]
                     double = True
@@ -104,6 +87,8 @@ def segm2syl(dic, alphabet ) :
                 #print(phoneme)
                 
                 arch = alphabet[pho]
+                
+                
                 if arch.isV :
                 
                     nphon = Vowel( arch.features)
@@ -140,9 +125,14 @@ def segm2syl(dic, alphabet ) :
                 for pho in syl2 :
                 #print(phoneme)
                 
-                    feat = alphabet[pho]
+                    arch = alphabet[pho]
                 
-                    nphon = Phoneme(feat.ipa, list(feat.features))
+                    if arch.isV :
+                    
+                        nphon = Vowel( arch.features)
+                    else : 
+                        nphon = Consonant(arch.features)
+                        
                     phonemes.append(nphon)
             
                 syl2 = Syllable (phonemes, stress, length)

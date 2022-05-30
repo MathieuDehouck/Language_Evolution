@@ -42,8 +42,6 @@ class Phoneme(object) :
     __init__() constructor taking all these information as input
     
 
-    isV : checks whether the phoneme is a vowel
-    equals
     update_IPA  : finds the closest ipa character to represent a new phoneme
     
     """
@@ -62,15 +60,16 @@ class Phoneme(object) :
         
         self.features = None
         self.rank_in_wd = None
-            
+        self.isV = (type(self) == Vowel)
+        
+        
     def __str__(self):
         return str(self.ipa )+  " :  " + str(self.description ) + "\n" + str(self.features)
 
     def set_word_rank(self, rk) :
         self.rank_in_wd = rk 
 
-    def isV(self) :
-        return type(self) == Vowel
+    
 
     def isConsonant(self) :
         return type(self) == Consonant
@@ -277,10 +276,9 @@ class Vowel(Phoneme) :
     
     def __init__(self, features):
         super().__init__(features[0], features[-1][0])
-        self.features = features[1:]
+        self.features = features
         self.feat_semantics = ipa.vfeatures
         self.lin = self.linearize()
-
     def get_height(self) :
         return self.features[0][0]
 
@@ -301,18 +299,21 @@ class Vowel(Phoneme) :
 
 
     def linearize(self) :
-     if len(self.features) > 0 :
+     
+        #print(self.features)
         feat = []
+        print("FE")
+        print(self.features)
         feat.append(int(self.syl))
         feat.append(int(self.voice))
         feat.append(self.features[0][0])
         feat.append(self.features[0][1])
-            
-        for manner in self.features[1] :
-            feat.append(int(manner))
-
+        feat.append(self.features[0][2])
+        feat.append(self.features[1][0])
+        feat.append(self.features[1][1])
     
-
+        return feat
+    
 
 class Consonant(Phoneme) : 
     
@@ -379,9 +380,10 @@ class Consonant(Phoneme) :
     
     def __init__(self, features):
         super().__init__(features[0], features[1][-1])
-        self. features = features[1:] 
+        self. features = features
         self.feat_semantics = ipa.cfeatures
         self.lin = self.linearize()
+        self.isV = False
 
     def linearize(self) :
         
@@ -393,8 +395,9 @@ class Consonant(Phoneme) :
             feat.append(int(manner))
         for manner in self.features[1] :
             feat.append(int(manner))
+        return feat
 
-
+    
 
     def is_round (self) :
         return self.features[0][0] == 11

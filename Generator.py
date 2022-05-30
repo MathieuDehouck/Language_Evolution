@@ -150,7 +150,7 @@ class Change_Generator():
         
         
         if self.verbose : printl(classe)
-        target = phon.features.copy()
+        target = phon.features #.copy()
         for i, ft in enumerate (target ) :
             for phon2 in classe :
                 if phon2.features[i] != phon.features[i] :
