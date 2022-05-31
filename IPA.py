@@ -9,6 +9,8 @@ import numpy as np
 from ipapy import *
 from copy import deepcopy
 #from Natural_class import create_classes
+from IPA_utils import manner_enc
+from Phoneme import Vowel, Consonant
 
 
 
@@ -67,47 +69,52 @@ class archetype(object) :
         the constructor, that takes the ipa and features as attributes
     """
     
-    def __init__(self, string, feats):
+    def __init__(self, string, feats, vow=False):
         self.ipa = string
         self.features = feats
+        self.vow = vow
         try:
             self.description = UNICODE_TO_IPA[string]._IPAChar__canonical_string
         except:
             self.description = 'No description'
         self.lin = linearize(feats)
-        self.isV = None
-
-
 
 
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
- 
+
+    def is_Vowel(self):
+        return self.vow
+
+    def is_Consonant(self):
+        return not self.vow
+    
+
+    def get_one(self, extra_feats):
+        """
+        I'll change this eventually
+        """
+        base = self.features[0]
+        print(self.features, extra_feats)
+        if self.vow:
+            extra = [1, 0]
+            if 'nasalised' in extra_feats:
+                extra[1] = 1
+            return Vowel((1, base ,tuple(extra)), IPA.get_IPA())
+        else:
+            extra = [0, 0, 0]
+            if 'pre_nasal' in extra_feats:
+                extra[1] = 1
+            if 'aspirated' in extra_feats:
+                extra[2] = 1
+            if 'labialised' in extra_feats:
+                extra[0] = 11
+
+            return Consonant((0, base, tuple(extra)), IPA.get_IPA())
 
 
-
-    def set_isV(self, b) : self.isV = b
-
-
-
-
-
-manner_enc = {'A' :  (0, 0, 0, 0, 0), # approximant
-              'N' :  (1, 0, 0, 0, 0), # nasal
-              'P' :  (0, 1, 0, 0, 0), # plosive
-              'S' :  (0, 0, 1, 0, 0), # fricative / sibilant
-              'F' :  (0, 0, 1, 0, 0), # fricative
-              'Fl':  (0, 0, 0, 1, 0), # flap
-              'T':  (0, 0, 0, 2, 0), # trill
-              'L':   (0, 0, 0, 0, 1), # lateral
-              'Lf':  (0, 0, 1, 0, 1), # lateral fric
-              'Lt':  (0, 0, 0, 1, 1),# lateral trill
-              'Afr' : (0, 1, 1, 0, 0)}  #Africates
-
-
-
-
+        
 
 class IPA() :
     """
@@ -181,7 +188,6 @@ class IPA() :
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
-                phon.set_isV(False)
 
         # reading vowels
         vows = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str, encoding = 'utf8')
@@ -204,11 +210,7 @@ class IPA() :
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
-                phon.set_isV(True)
             
-        
-      
-
 
 
     def get_char(self, phon, isV= None,  verbose=False):
@@ -227,18 +229,14 @@ class IPA() :
         string
 
         """
-        if isV == None :
-            isV = phon.isV
-            
-            
         # We look directly in the dict of features to ipa if we find something
         if phon.features in self.feat2ipa:
             return self.feat2ipa[phon.features]
 
         # we did not find a perfect match, so we build it
-        if isV:
+        if phon.is_Vowel():
             # a basic vowel is voiced and unnasalised
-            base = phon.features[:-1] + ((1,0),)
+            base = (phon.features[0], (1,0))
             out = self.feat2ipa[base]
             
             if phon.is_nasal(): # nasal
@@ -249,15 +247,12 @@ class IPA() :
 
 
         else:
-            base = phon.features[:-1] + ((0,0,0),)
-            if base in self.feat2ipa :  out = self.feat2ipa[base]            
-            else  :
-                part = phon.features[0][0]
-                voiced =  phon.features[0][2]
-                tpl1 = ((part, (1, 0, 0, 0 ,0) , voiced),)
-                base = tpl1 + ((0, 0, 0),)
+            base = (phon.features[0], (0,0,0))
+            if base in self.feat2ipa:
                 out = self.feat2ipa[base]
-            
+            else:
+                print(base)
+                out = ((base[0][0], base[0][1], 1), base[1])
 
             if phon.is_labialised() : # round w
                 out += 'ʷ'

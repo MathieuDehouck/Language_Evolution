@@ -13,13 +13,11 @@ from Word import Word
 from Phoneme import Phoneme, Vowel, Consonant
 from Syllable import Syllable
 from Language import Language
-from pathlib import Path 
+from pathlib import Path
 
-ipa = IPA()
-alphabet = ipa.alphabet
+from IPA_utils import diacritics
 
-
-
+ipa = IPA.get_IPA()
 
 
 def wiki_lexicon(path) :
@@ -40,38 +38,38 @@ def wiki_lexicon(path) :
 
 
 def treat_syl(syl, stress = False) :
+    print(syl)
     
-    length =   ("ː" in syl )
-    if length :
-       syl = "".join(i for i in syl if  i != "ː")          
-    syl = syl.replace("ʷ", "w")
-    syl = syl.replace('g', "ɡ")
-    syl = syl.replace('̯', "")              
+    length = 'ː' in syl
+    syl = syl.replace('ː', '')
+    syl = syl.replace('g', 'ɡ')
+    syl = syl.replace('̯', '')
+
+    phones = []
+    feats = []
+    for i, ch in enumerate(syl):
+        if ch in diacritics:
+            feats[-1].append(diacritics[ch])
+            continue
+
+        phones.append(ipa.alphabet[ch])
+        feats.append([])
+
+    #print(phones, feats)
     phonemes = []
-    
-    for i, pho in enumerate(syl,  ):
-                
-                if pho == 'ʰ' : continue          
-                arch = alphabet[pho]      
-                if arch.isV :
-                    nphon = Vowel( arch.features)
-                else : 
-                    nphon = Consonant(arch.features)        
-                if (i+1) in range (len(syl)) : 
-                     if syl[i+1] == 'ʰ' : nphon.set_aspirated(True)
-                    
-                phonemes.append(nphon)
-            
-    syl = Syllable (phonemes, stress, length)
-    
-    
+    for i, pho in enumerate(phones):
+            phonemes.append(pho.get_one(feats[i]))
+
+    #print(phonemes)
+    syl = Syllable(phonemes, stress, length)
+        
     return syl
 
 
 
 
 
-def segm2syl(dic, alphabet ) :
+def segm2syl(dic) :
     """ take as input the dictionnary created out of the wiki data and used the info concerning syllabification
     to create syllables in out IPA format"""
     dic_syl = {}
@@ -114,10 +112,10 @@ def segm2syl(dic, alphabet ) :
 
 
 
-def dic2word(dic, alphabet) :
+def dic2word(dic) :
     """ converts a wiki dic into a dic of "word" objects """
     
-    dic2syl = segm2syl(dic, alphabet)
+    dic2syl = segm2syl(dic)
     
     dic2word = {}
     for w in dic2syl :
@@ -146,7 +144,7 @@ def get_language(path, name) :
     # creation of the alphabet
     al = IPA()
     gaffiot = wiki_lexicon(path)
-    dic = dic2word(gaffiot, alphabet) 
+    dic = dic2word(gaffiot) 
     lg = Language(name, dic)
     
     return lg

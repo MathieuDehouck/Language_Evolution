@@ -20,20 +20,14 @@ for f in i.phonemes :
 
 dc, c = create_classes(i)
 
-
-
 latin = get_language("latin_classique.txt", "latin")
-
-
 wd = latin.voc['werrizo']
 
-
-
 pho = wd.phonemes [3]
-
+"""
 ci = Configuration(pho.lin)
 print("CI", ci)
-cf = ci.get_output() 
+cf = ci.get_output()
 print("CF", cf)
 """
 
@@ -44,7 +38,7 @@ print(ch)
 wd2 = ch.apply_word(wd, True)
 print(wd2)
 
-"""
+
 for phon in wd.phonemes :
     print(phon.ipa)
     print(phon.features)
