@@ -8,7 +8,8 @@ Created on Thu May  5 00:01:15 2022
 import numpy as np
 from ipapy import *
 from copy import deepcopy
-#from Natural_class import create_classes
+
+from Natural_class import create_classes
 
 
 
@@ -206,9 +207,10 @@ class IPA() :
                 self.feat2ipa[fts] = ch
                 phon.set_isV(True)
             
+        classes, dic_class = create_classes(self) 
+        self.classes = classes
+        self.dic_classes = classes 
         
-      
-
 
 
     def get_char(self, phon, isV= None,  verbose=False):
@@ -254,7 +256,9 @@ class IPA() :
             else  :
                 part = phon.features[0][0]
                 voiced =  phon.features[0][2]
-                tpl1 = ((part, (1, 0, 0, 0 ,0) , voiced),)
+                # Si on ne trouve pas  d'équivalent, on ramène à la sourde plosive la plus proche. mais ne prend pas en compte la mannière spacifique d'articulation
+                # TODO
+                tpl1 = ((part, (0, 1, 0, 0 ,0) , voiced),)
                 base = tpl1 + ((0, 0, 0),)
                 out = self.feat2ipa[base]
             

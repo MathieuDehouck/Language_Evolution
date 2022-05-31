@@ -35,7 +35,7 @@ ci = Configuration(pho.lin)
 print("CI", ci)
 cf = ci.get_output() 
 print("CF", cf)
-"""
+
 
 bb = Baby_P_change_generator()
 ch = bb.create_change(latin)
@@ -44,8 +44,12 @@ print(ch)
 wd2 = ch.apply_word(wd, True)
 print(wd2)
 
+print(ch)
+
+
 """
 for phon in wd.phonemes :
     print(phon.ipa)
     print(phon.features)
     print(phon.lin)
+"""
