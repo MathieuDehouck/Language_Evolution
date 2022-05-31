@@ -184,7 +184,7 @@ class IPA() :
                 phon.set_isV(False)
 
         # reading vowels
-        vows = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str)
+        vows = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str, encoding = 'utf8')
         front = [int(x) for x in vows[0][1:]]
         for line in vows[1:]:
             height = line[0]
@@ -229,6 +229,8 @@ class IPA() :
         """
         if isV == None :
             isV = phon.isV
+            
+            
         # We look directly in the dict of features to ipa if we find something
         if phon.features in self.feat2ipa:
             return self.feat2ipa[phon.features]
@@ -252,8 +254,8 @@ class IPA() :
             else  :
                 part = phon.features[0][0]
                 voiced =  phon.features[0][2]
-                tpl1 = (part, (1, 0, 0, 0 ,0) , voiced)
-                base = tpl1 + (0, 0, 0)
+                tpl1 = ((part, (1, 0, 0, 0 ,0) , voiced),)
+                base = tpl1 + ((0, 0, 0),)
                 out = self.feat2ipa[base]
             
 
@@ -275,4 +277,5 @@ class IPA() :
             
         return out
     
-    
+ipa = IPA.get_IPA()
+print(ipa.feat2ipa.values())

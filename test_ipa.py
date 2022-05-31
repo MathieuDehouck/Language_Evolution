@@ -27,7 +27,7 @@ print(ch, fts)
 
 
 print(ipa.cfeatures)
-fts =  (11, (0, 1, 0, 1, 0), 1), (0, 0, 0)
+fts =  (11, (0, 1, 0, 0, 0), 1), (0, 0, 0)
 phon = Consonant(fts)
 ch = ipa.get_char(phon)
 print(ch, fts)
