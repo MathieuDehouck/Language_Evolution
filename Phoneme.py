@@ -14,12 +14,26 @@ import numpy as np
 
 
 def tuple_2_list(tupl) :
-    liste = list(tupl) 
-    for el in liste :
-        if type(el) == tuple :
-            el = list(el)
+    
+    
+    liste = []
+    for el in tupl : 
+        if type(el) == tuple : 
+            liste.append(tuple_2_list(el))
+        else : liste.append(el)
     return liste
 
+
+def list_2_tuple(tupl) :
+    
+    liste = tuple([])
+    for el in tupl : 
+        if type(el) == list : 
+            liste += (list_2_tuple(el),)
+        else : liste +=(el,)
+        
+    return tuple(liste)
+    
 
 class Phoneme(object) :
     """
@@ -65,7 +79,7 @@ class Phoneme(object) :
         #UNICODE_TO_IPA[string] ._IPAChar__canonical_string
         
         self.features = None
-        self.rank_in_wd = None
+        self.isV = (type(self) == Vowel)
         
         
     def __str__(self):

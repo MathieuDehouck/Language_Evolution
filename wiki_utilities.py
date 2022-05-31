@@ -38,7 +38,7 @@ def wiki_lexicon(path) :
 
 
 def treat_syl(syl, stress = False) :
-    print(syl)
+    
     
     length = 'ː' in syl
     syl = syl.replace('ː', '')

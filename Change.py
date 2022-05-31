@@ -5,7 +5,7 @@ Created on Thu May  5 10:22:10 2022
 @author: 3b13j
 """
 from utilitaries import feature_match,  tpl2candidates
-from Phoneme import Phoneme, Vowel , Consonant, delinearize
+from Phoneme import Phoneme, Vowel , Consonant
 from Syllable import Syllable
 from Word import Word
 from Language import Language

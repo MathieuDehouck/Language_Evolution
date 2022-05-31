@@ -101,7 +101,7 @@ class Baby_P_change_generator(P_change_generator) :
     def select_target(self, language) :
         
         index = random.randint(0, len(language.phonemes)-1)
-        target = language.phonemes[index].lin
+        target = language.phonemes[index]
         return target
     
     def select_effect(self, language, target) :

@@ -81,7 +81,7 @@ f4v = fill_matrix(1)
 f5v = fill_matrix(1)
 
 
-MatricesV = [f1v, f2v, f3v, f4v, f5v]
+MatricesV = ((f1v, f2v, f3v),( f4v, f5v))
 
 
 
@@ -167,7 +167,7 @@ f5c = fill_matrix(1)
 f6c = fill_matrix(1)
 
 
-MatricesC = [f1c, f2c, f3c, f4c, f5c, f6c]
+MatricesC = ((f1c, f2c, f3c),( f4c, f5c, f6c))
 
 
 

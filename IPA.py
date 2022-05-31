@@ -95,7 +95,7 @@ class archetype(object) :
         I'll change this eventually
         """
         base = self.features[0]
-        print(self.features, extra_feats)
+        #print(self.features, extra_feats)
         if self.vow:
             extra = [1, 0]
             if 'nasalised' in extra_feats:
@@ -250,7 +250,9 @@ class IPA() :
                 out = self.feat2ipa[base]
             else:
                 print(base)
-                out = ((base[0][0], base[0][1], 1), base[1])
+                
+                out = "tres" #self.feat2ipa [((base[0][0], base[0][1], 1), base[1])]
+                
 
             if phon.is_labialised() : # round w
                 out += 'ʷ'
@@ -271,4 +273,4 @@ class IPA() :
         return out
     
 ipa = IPA.get_IPA()
-print(ipa.feat2ipa.values())
+#print(ipa.feat2ipa.values())
