@@ -11,26 +11,34 @@ sampling :
 parameter, following a proba weighting represented by a matrix. 
 
 """
-
+import numpy  as np
 
 
 def fill_matrix(rang) :
     
-    dic = {} 
+    mat = np.zeros((rang+1, rang+1))
+    
+    
     for ran in range(rang+1) :
         liste = []
         for rang2 in range (rang+1) :
-            if (abs(ran-rang2)) == 1 : liste.append(4)
-            elif  (abs(ran-rang2)) == 2: liste.append(2)
-            elif  (abs(ran-rang2)) == 3 : liste.append(1)
-            else : liste.append(0)
-        dic[ran] = liste
-    
-    
+            if (abs(ran-rang2)) == 1 : mat[ran, rang2] = 4 
+            elif  (abs(ran-rang2)) == 2: mat[ran, rang2] = 2
+            elif  (abs(ran-rang2)) == 3 : mat[ran, rang2] = 1 
+            
+    return mat
+
+def mat_to_adj (mat) :
+    dic = {}
+    for rang in range ( mat.shape[0]  )  :
+        liste = []
+        for ind, el in enumerate ( mat[:,rang])   :
+
+            if el != 0 : liste.append ([ind, el])
+        dic[rang] = liste
     
     return dic
-
-
+    
 # voc matrices 
 
 #TODO  : fonction qui pourrait faire ça à partir de csv
@@ -98,6 +106,38 @@ f1c = fill_matrix(11)
 #feature 2 : manner of articulation
 
 
+manner_list  =  [ (0, 0, 0, 0, 0), # approximant
+                (1, 0, 0, 0, 0), # nasal
+                (0, 1, 0, 0, 0), # plosive
+                (0, 0, 1, 0, 0), # fricative / sibilant
+                (0, 0, 1, 0, 0), # fricative
+                (0, 0, 0, 1, 0), # flap
+                (0, 0, 0, 2, 0), # trill
+                (0, 0, 0, 0, 1), # lateral
+                (0, 0, 1, 0, 1), # lateral fric
+                (0, 0, 0, 1, 1),# lateral trill
+                (0, 1, 1, 0, 0) ]  #Africates
+
+l = len(manner_list) 
+f2c = np.ones((l, l))
+
+
+def interpret_manner (mat) :
+    dic = mat_to_adj(mat)
+    dic_sem = {}
+    for k in dic :
+        liste = []
+        for v in dic[k] :
+            liste.append([manner_list[v[0]]  , v[1] ])
+        dic_sem [manner_list[k]] = liste
+    return dic_sem
+
+manner_adj = interpret_manner(f2c)
+
+
+
+
+
 
 #feature 3 : voiced 
 
@@ -106,41 +146,6 @@ f3c = fill_matrix(1)
 
 
 #Tuple2 
-
-
-
-
-f2c =  {}
-
-tpl_to_ = {'A' :  (0, 0, 0, 0, 0), # approximant
-              'N' :  (1, 0, 0, 0, 0), # nasal
-              'P' :  (0, 1, 0, 0, 0), # plosive
-              'S' :  (0, 0, 1, 0, 0), # fricative / sibilant
-              'F' :  (0, 0, 1, 0, 0), # fricative
-              'Fl':  (0, 0, 0, 1, 0), # flap
-              'T':  (0, 0, 0, 2, 0), # trill
-              'L':   (0, 0, 0, 0, 1), # lateral
-              'Lf':  (0, 0, 1, 0, 1), # lateral fric
-              'Lt':  (0, 0, 0, 1, 1),# lateral trill
-              'Afr' : (0, 1, 1, 0, 0)}  #Africates
-
-manner_to_enc = {'A' : 0, # approximant
-              'N' :  1 , # nasal
-              'P' :  (0, 1, 0, 0, 0), # plosive
-              'S' :  (0, 0, 1, 0, 0), # fricative / sibilant
-              'F' :  (0, 0, 1, 0, 0), # fricative
-              'Fl':  (0, 0, 0, 1, 0), # flap
-              'T':  (0, 0, 0, 2, 0), # trill
-              'L':   (0, 0, 0, 0, 1), # lateral
-              'Lf':  (0, 0, 1, 0, 1), # lateral fric
-              'Lt':  (0, 0, 0, 1, 1),# lateral trill
-              'Afr' : (0, 1, 1, 0, 0)}  #Africates
-
-
-
-
-
-
 
 
 
@@ -173,7 +178,34 @@ MatricesC = [f1c, f2c, f3c, f4c, f5c, f6c]
 
 
 
+"""
 
+être generique, choisir une manière
+
+manière de remplir, vitef
+
+mais manière de les construire
+design fort,  choix qui a un sens , cohérent et on le tient , ou qqc de numérique, générique 
+
+
+
+
+le vecteur de feats est composé de deux bouts. 
+ds ces 2 bouts, on a des index,
+
+chaque attribut à deu
+
+deux boucles for imbriquées. enumeration des turcs du premier niveau ,ceux du second niceau. 
+faire des paires 
+on tire au hasard une paire A B 
+phon.feature (A B )
+
+
+crer matrices,  on les met dans des structures qui ont la même forme que les features
+
+
+
+"""
 
 
 
