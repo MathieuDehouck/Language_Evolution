@@ -43,4 +43,3 @@ latin2 , chs_wds = ch.apply_language(latin)
 #latin.print_both(latin2)
 print(chs_wds)
 
-
