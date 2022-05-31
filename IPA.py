@@ -68,7 +68,7 @@ class archetype(object) :
         the constructor, that takes the ipa and features as attributes
     """
     
-    def __init__(self, string, feats, vow=False):
+    def __init__(self, string, feats, vow):
         self.ipa = string
         self.features = feats
         self.vow = vow
@@ -182,7 +182,7 @@ class IPA() :
                 if ch == '-':
                     continue
                 fts = (arts[i], manner_enc[manner], voiced), (0, 0, 0)
-                phon = archetype(ch, fts)
+                phon = archetype(ch, fts, False)
 
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
