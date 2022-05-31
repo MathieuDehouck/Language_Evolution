@@ -92,7 +92,8 @@ class Configuration (object) :
         A new Configuration object with just one feature modified
 
         """
-        print("STATE")
+        
+        
         state_fin = self.state.copy()
         #TODO peut être paramétré
         

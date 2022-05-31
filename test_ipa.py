@@ -62,3 +62,7 @@ fts = ((6, (0, 1, 0, 0, 0), 1), (0, 0, 0))
 
 fts = ((8, (0, 1, 0, 0, 0), 0), (0, 0, 0))
 
+fts = ((7, (0, 1, 0, 0, 1), 0), (0, 0, 0))
+phon = Consonant(fts)
+ch = ipa.get_char(phon)
+print(ch, fts)

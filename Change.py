@@ -196,7 +196,9 @@ class P_change(Change) :
 
         """
         for phoneme in language.phonemes :
-            if feature_match(self.config_initiale.state, phoneme.features) :
+            if feature_match(self.config_initiale.state, phoneme.lin) :
+                print("winner)")
+                print(phoneme)
                 return True
         return False
         
@@ -250,7 +252,7 @@ class P_change(Change) :
             print()
         applicable = self.check (phon, index , word, verbose = False)
         
-        if not applicable :
+        if not applicable or not feature_match(self.config_initiale.state, phon.lin):
             if verbose : print("the condition is not respected, nothing is changed", phon.ipa)
             return phon, index+1
         

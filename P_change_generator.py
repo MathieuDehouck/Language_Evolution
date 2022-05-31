@@ -74,6 +74,13 @@ class P_change_generator(object) :
         target = self.select_target(language) 
         ci , cf = self.select_effect(language, target)
         change = P_change(ci, cf, target)
+        print(change.applicable(language ))
+        while not change.applicable(language ) : 
+            change = self.create_change( language, random, target = None, ci = None)
+            print( "unacceptable change")
+        
+        
+        
         #self.set_conditions(change)
         return change
        
