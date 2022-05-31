@@ -79,7 +79,6 @@ class Phoneme(object) :
         #UNICODE_TO_IPA[string] ._IPAChar__canonical_string
         
         self.features = None
-        self.isV = (type(self) == Vowel)
         
         
     def __str__(self):
@@ -224,8 +223,6 @@ class Vowel(Phoneme) :
     
 
 class Consonant(Phoneme) : 
-    
-     
     """
     A class representing a Consonant
     

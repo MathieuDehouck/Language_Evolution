@@ -204,7 +204,7 @@ class IPA() :
                 if ch == '-':
                     continue
                 fts = (height, front[i], rounded), (1, 0)
-                phon = archetype(ch, fts)
+                phon = archetype(ch, fts, True)
 
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
