@@ -8,7 +8,6 @@ Created on Thu May  5 00:01:15 2022
 import numpy as np
 from ipapy import *
 from copy import deepcopy
-#from Natural_class import create_classes
 from IPA_utils import manner_enc
 from Phoneme import Vowel, Consonant
 
@@ -210,7 +209,6 @@ class IPA() :
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
-            
 
 
     def get_char(self, phon, isV= None,  verbose=False):

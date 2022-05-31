@@ -47,13 +47,12 @@ def create_classes(alphabet) :
     f.write (" \n")
     
     
-    for classe in data[1:][1:] :
+    for classe in data[1:] :
         
         name = classe[0]
         isV = classe[1]
-        
         fts  = "" 
-        if not isV :
+        if  int(isV) ==  0 :
             
             voiced = classe[2]
             place = classe[3]
@@ -62,7 +61,7 @@ def create_classes(alphabet) :
             tpl1 = (place, manner, voiced)
             tpl2 = (classe[9], classe[10], classe[11])
             fts = (tpl1, tpl2)
-        
+            
         
         else :
             voiced = classe[2]
@@ -72,6 +71,7 @@ def create_classes(alphabet) :
             tpl1 = (front, heigth, voiced)
             tpl2 = (classe[5], classe[6])
             fts = (tpl1, tpl2)
+            
             
         
         
@@ -90,20 +90,19 @@ def create_classes(alphabet) :
             fts  = phon.lin
             add = False
             if len(fts) ==  len(classe.lin): 
-                
+               # print( 'there is a chance' )
                 add = True
                 for i , ft in enumerate (fts) :
-            
+                 
                   if int(ft) != -1 and int(classe.lin[i]) != int( ft) :
+                       #print(ft, "  vs  ", int(classe.lin[i]))
                        add = False 
-            print()
-            print(fts)
-            print("vs")
-            print(classe.lin)
             
-            if add :
+            
+                if add :
                 
-               classe.add_phon(phon)
+                    classe.add_phon(phon)
+                    print("added !")
     
         
     #TODO cafouillage dand l ordre des features

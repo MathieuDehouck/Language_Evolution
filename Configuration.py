@@ -92,26 +92,24 @@ class Configuration (object) :
         A new Configuration object with just one feature modified
 
         """
-        print("STATE")
+        
+        
         state_fin = self.state.copy()
         #TODO peut être paramétré
         
             
         if self.isV : m = maxV 
         else : m = maxC
-            
-        for i , el in  enumerate(state_fin ): 
         
-         el = int(el)
-         
-         if el != -1 :
+        i = random.randint(0,len(m) - 1)
             
-            if m[i] == 1 :
+        
+        if m[i] == 1 :
                 
                 if state_fin[i] == 1 : state_fin[i] = 0 
                 else : state_fin[i] = 1
             
-            else :
+        else :
                 augmenter = bool (random.randint(0,1))
                 
                 if augmenter and  state_fin[i] < m[i] : state_fin[i] += 1
