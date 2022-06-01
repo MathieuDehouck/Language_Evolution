@@ -15,7 +15,6 @@ from regularizations import regularize_stress, regularize_structure
 from IPA import IPA
 
 import random
-i = IPA.get_IPA()
 
 
 
@@ -280,8 +279,8 @@ class P_change(Change) :
         print(ft)
         
         print("FT", ft)
-        if phon.isV : new_phon = Vowel(ft, i)
-        else : new_phon = Consonant(ft, i)
+        if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
+        else : new_phon = Consonant(ft, phon.syl, phon.speller)
         
         
         
