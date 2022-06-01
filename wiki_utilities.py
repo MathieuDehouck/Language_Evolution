@@ -76,7 +76,7 @@ def segm2syl(dic) :
     to create syllables in out IPA format"""
     dic_syl = {}
     for word, segm in dic.items() :
-        print(word, segm)
+        #print(word, segm)
         syllables = []
         segm = segm.split(".")
 

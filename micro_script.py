@@ -18,19 +18,15 @@ i = IPA.get_IPA()
 
 
 
-#latin = get_language("latin_classique.txt", "latin")
-#toki = get_language("tokipona.txt", "tokipona")
-
-greek = get_language("greek.txt", "greek")
-
-
-lang = greek
+#lang = get_language("latin_classique.txt", "latin")
+lang = get_language("tokipona.txt", "tokipona")
+#lang = get_language("greek.txt", "greek")
 
 bb = Baby_P_change_generator()
-ch = bb.create_change(lang, True)
-latin2 , chs_wds = ch.apply_language(lang)
 
+for i in range(10):
+    ch = bb.create_change(lang, True)
+    lang , chs_wds = ch.apply_language(lang)
 
-#latin.print_both(latin2)
-print(chs_wds)
-
+    #latin.print_both(latin2)
+    print(chs_wds)
