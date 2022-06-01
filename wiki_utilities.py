@@ -27,11 +27,11 @@ def wiki_lexicon(path) :
     dico = {}
     with open(path,'r', encoding = 'utf8') as doc :
         for line in doc:
-            line=  line.strip()
-            line = line.split()
+            line = line.strip()
+            line = line.split('\t')
             if line == []:
                 continue
-            dico[line[0]] = line[1]
+            dico[line[0]] = line[1].replace(' ', '.').replace('(','').replace(')','')
 
     return dico
 
@@ -40,8 +40,7 @@ def wiki_lexicon(path) :
 
 
 def treat_syl(syl, stress = False) :
-    
-    
+
     length = 'ː' in syl
     syl = syl.replace('ː', '')
     syl = syl.replace('g', 'ɡ')
@@ -57,10 +56,11 @@ def treat_syl(syl, stress = False) :
         phones.append(ipa.alphabet[ch])
         feats.append([])
 
+
     #print(phones, feats)
     phonemes = []
     for i, pho in enumerate(phones):
-            phonemes.append(pho.get_one(feats[i], False))
+        phonemes.append(pho.get_one(feats[i], False))
 
     #print(phonemes)
     syl = Syllable(phonemes, stress, length)
@@ -76,12 +76,10 @@ def segm2syl(dic) :
     to create syllables in out IPA format"""
     dic_syl = {}
     for word, segm in dic.items() :
-        
+        print(word, segm)
         syllables = []
         segm = segm.split(".")
-       
-        
-       
+
         for syl in segm :
             stress = ( syl[0] == "ˈ" )    
             if stress : 

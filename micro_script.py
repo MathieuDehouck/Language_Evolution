@@ -18,26 +18,13 @@ i = IPA.get_IPA()
 
 
 
-latin = get_language("latin_classique.txt", "latin")
-toki = get_language("tokipona.txt", "tokipona")
+#latin = get_language("latin_classique.txt", "latin")
+#toki = get_language("tokipona.txt", "tokipona")
+
+greek = get_language("greek.txt", "greek")
 
 
-wd = latin.voc['werrizo']
-pho = wd.phonemes[0]
-ci = Configuration(pho)
-
-
-
-c = ci.state
-print(pho)
-for loop in range(20) :
-    ef = Effect(pho)
-    print(ef)
-    print()
-
-
-
-lang = latin
+lang = greek
 
 bb = Baby_P_change_generator()
 ch = bb.create_change(lang, True)

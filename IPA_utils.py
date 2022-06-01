@@ -3,7 +3,8 @@
 
 
 diacritics = {'ʷ':'labialised',
-               'ʰ':'aspirated'}
+              'ʰ':'aspirated',
+              '̥':'unvoiced'}
 
 
 

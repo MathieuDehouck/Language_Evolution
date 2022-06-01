@@ -109,6 +109,8 @@ class archetype(object) :
                 extra[2] = 1
             if 'labialised' in extra_feats:
                 extra[0] = 11
+            if 'unvoiced' in extra_feats:
+                base = base[0], base[1], 0
 
             return Consonant((base, tuple(extra)), syllabic, IPA.get_IPA())
 
