@@ -184,6 +184,8 @@ class IPA() :
                 fts = (arts[i], manner_enc[manner], voiced), (0, 0, 0)
                 phon = archetype(ch, fts, False)
 
+                if fts in self.feat2ipa:
+                    continue
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
@@ -250,8 +252,7 @@ class IPA() :
                 out = self.feat2ipa[base]
             else:
                 print(base)
-                
-                out = "tres" #self.feat2ipa [((base[0][0], base[0][1], 1), base[1])]
+                out = self.feat2ipa [((base[0][0], base[0][1], 1), base[1])]
                 
 
             if phon.is_labialised() : # round w

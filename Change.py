@@ -205,17 +205,7 @@ class P_change(Change) :
         
     def compensate(self, phon) :
         
-        
-        
         #TODO
-            
-        
-        
-        
-        
-        
-        
-        
         return phon
         
         
@@ -272,18 +262,15 @@ class P_change(Change) :
                 ft[ind[0]][ind[1]] = self.effect.effect[ind]
             else :
                 ft[ind[0]][ind[1]] = phon.features[ind[0]][ind[1]]
-        
+
         
         ft = list_2_tuple(ft)
         print("FEATURE")
-        print(ft)
+        print("  ", phon.features)
         
         print("FT", ft)
         if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
         else : new_phon = Consonant(ft, phon.syl, phon.speller)
-        
-        
-        
         
         """
         if verbose  :

@@ -38,25 +38,14 @@ for loop in range(20) :
 
 
 
-
-
-
-
-
-
-
 bb = Baby_P_change_generator()
 
 ch = bb.create_change(latin, True)
 
 
-
-
-
 latin2 , chs_wds = ch.apply_language(latin)
 
-"""
+
 #latin.print_both(latin2)
 print(chs_wds)
 
-"""

@@ -13,7 +13,6 @@ import random
 
 
 class Effect (object) :
-    
     """
     A class representing the effect of a change
     
@@ -39,12 +38,10 @@ class Effect (object) :
     """
     
     def __init__(self, target, r = True, index = None)  :
-        
-        
+
         self.target = target
         t = target 
         if type(t) == list : t = t [0]
-        
         
         self.isV = t.isV
         self.idx = t.feature_indices() 
@@ -55,12 +52,11 @@ class Effect (object) :
         if r : inde = self.idx[elisabeth]
         else : inde = index
         self.set_output( inde)
+
+
         
     def set_output(self, index) :
-        
-        
-        
-        
+
         if self.isV : Trinity = MatricesV 
         else : Trinity = MatricesC
         
