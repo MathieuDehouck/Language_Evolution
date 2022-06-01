@@ -26,10 +26,12 @@ def wiki_lexicon(path) :
     """ Extract the data taken from wikipedia (input : path of the file) and returns a dictionnary """
     dico = {}
     with open(path,'r', encoding = 'utf8') as doc :
-        for ligne in doc :
-            ligne = ligne.split()
-            dico[ligne[0]]= ligne[1]
-            
+        for line in doc:
+            line=  line.strip()
+            line = line.split()
+            if line == []:
+                continue
+            dico[line[0]] = line[1]
 
     return dico
 

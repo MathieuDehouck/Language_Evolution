@@ -19,12 +19,11 @@ i = IPA.get_IPA()
 
 
 latin = get_language("latin_classique.txt", "latin")
+toki = get_language("tokipona.txt", "tokipona")
 
 
 wd = latin.voc['werrizo']
-
 pho = wd.phonemes[0]
-
 ci = Configuration(pho)
 
 
@@ -38,12 +37,11 @@ for loop in range(20) :
 
 
 
+lang = toki
+
 bb = Baby_P_change_generator()
-
-ch = bb.create_change(latin, True)
-
-
-latin2 , chs_wds = ch.apply_language(latin)
+ch = bb.create_change(lang, True)
+latin2 , chs_wds = ch.apply_language(lang)
 
 
 #latin.print_both(latin2)

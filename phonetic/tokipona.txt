@@ -1,122 +1,122 @@
-'a
-'a.ke.si
-'a.la
-'a.la.sa
-'a.le
-'a.li
-'an.pa
-'an.te
-'anu
-'a.wen
-'e
-'en
-'e.sun
-'i.jo
-'i.ke
-'i.lo
-'in.sa
-'ja.ki
-'jan
-'je.lo
-'jo
-'ka.la
-'ka.la.ma
-'ka.ma
-'ka.si
-'ken
-'ke.pe.ken
-'ki.li
-'kin
-'ki.wen
-'ko
-'kon
-'ku.le
-'ku.lu.pu
-'ku.te
-'la
-'la.pe
-'la.so
-'la.wa
-'len
-'le.te
-'li.li
-'lin.ja
-'li.pu
-'lo.je
-'lon
-'lu.ka
-'lu.kin
-'lu.pa
-'ma
-'ma.ma
-'ma.ni
-'me.li
-'mi
-'mi.je
-'mo.ku
-'mo.li
-'mon.si
-'mu
-'mun
-'mu.si
-'mu.te
-'nan.pa
-'na.sa
-'na.sin
-'ne.na
-'ni
-'ni.mi
-'no.ka
-'o
-'o.ko
-'o.lin
-'ona
-'o.pen
-'pa.ka.la
-'pa.li
-'pa.li.sa
-'pan
-'pa.na
-'pi
-'pi.lin
-'pi.me.ja
-'pi.ni
-'pi.pi
-'po.ka
-'po.ki
-'po.na
-'pu
-'sa.ma
-'se.li
-'se.lo
-'se.me
-'se.wi
-'si.je.lo
-'si.ke
-'sin
-'si.na
-'sin.pin
-'si.te.len
-'so.na
-'so.we.li
-'su.li
-'su.no
-'su.pa
-'su.wi
-'tan
-'ta.so
-'ta.wa
-'te.lo
-'ten.po
-'to.ki
-'to.mo
-'tu
-'un.pa
-'u.ta
-'u.ta.la
-'wa.lo
-'wan
-'wa.so
-'wa.wa
-'we.ka
-'wi.le
+ˈa		ˈa
+ˈa.ke.si		ˈa.ke.si
+ˈa.la		ˈa.la
+ˈa.la.sa		ˈa.la.sa
+ˈa.le		ˈa.le
+ˈa.li		ˈa.li
+ˈan.pa		ˈan.pa
+ˈan.te		ˈan.te
+ˈanu		ˈanu
+ˈa.wen		ˈa.wen
+ˈe		ˈe
+ˈen		ˈen
+ˈe.sun		ˈe.sun
+ˈi.jo		ˈi.jo
+ˈi.ke		ˈi.ke
+ˈi.lo		ˈi.lo
+ˈin.sa		ˈin.sa
+ˈja.ki		ˈja.ki
+ˈjan		ˈjan
+ˈje.lo		ˈje.lo
+ˈjo		ˈjo
+ˈka.la		ˈka.la
+ˈka.la.ma		ˈka.la.ma
+ˈka.ma		ˈka.ma
+ˈka.si		ˈka.si
+ˈken		ˈken
+ˈke.pe.ken		ˈke.pe.ken
+ˈki.li		ˈki.li
+ˈkin		ˈkin
+ˈki.wen		ˈki.wen
+ˈko		ˈko
+ˈkon		ˈkon
+ˈku.le		ˈku.le
+ˈku.lu.pu		ˈku.lu.pu
+ˈku.te		ˈku.te
+ˈla		ˈla
+ˈla.pe		ˈla.pe
+ˈla.so		ˈla.so
+ˈla.wa		ˈla.wa
+ˈlen		ˈlen
+ˈle.te		ˈle.te
+ˈli.li		ˈli.li
+ˈlin.ja		ˈlin.ja
+ˈli.pu		ˈli.pu
+ˈlo.je		ˈlo.je
+ˈlon		ˈlon
+ˈlu.ka		ˈlu.ka
+ˈlu.kin		ˈlu.kin
+ˈlu.pa		ˈlu.pa
+ˈma		ˈma
+ˈma.ma		ˈma.ma
+ˈma.ni		ˈma.ni
+ˈme.li		ˈme.li
+ˈmi		ˈmi
+ˈmi.je		ˈmi.je
+ˈmo.ku		ˈmo.ku
+ˈmo.li		ˈmo.li
+ˈmon.si		ˈmon.si
+ˈmu		ˈmu
+ˈmun		ˈmun
+ˈmu.si		ˈmu.si
+ˈmu.te		ˈmu.te
+ˈnan.pa		ˈnan.pa
+ˈna.sa		ˈna.sa
+ˈna.sin		ˈna.sin
+ˈne.na		ˈne.na
+ˈni		ˈni
+ˈni.mi		ˈni.mi
+ˈno.ka		ˈno.ka
+ˈo		ˈo
+ˈo.ko		ˈo.ko
+ˈo.lin		ˈo.lin
+ˈona		ˈona
+ˈo.pen		ˈo.pen
+ˈpa.ka.la		ˈpa.ka.la
+ˈpa.li		ˈpa.li
+ˈpa.li.sa		ˈpa.li.sa
+ˈpan		ˈpan
+ˈpa.na		ˈpa.na
+ˈpi		ˈpi
+ˈpi.lin		ˈpi.lin
+ˈpi.me.ja		ˈpi.me.ja
+ˈpi.ni		ˈpi.ni
+ˈpi.pi		ˈpi.pi
+ˈpo.ka		ˈpo.ka
+ˈpo.ki		ˈpo.ki
+ˈpo.na		ˈpo.na
+ˈpu		ˈpu
+ˈsa.ma		ˈsa.ma
+ˈse.li		ˈse.li
+ˈse.lo		ˈse.lo
+ˈse.me		ˈse.me
+ˈse.wi		ˈse.wi
+ˈsi.je.lo		ˈsi.je.lo
+ˈsi.ke		ˈsi.ke
+ˈsin		ˈsin
+ˈsi.na		ˈsi.na
+ˈsin.pin		ˈsin.pin
+ˈsi.te.len		ˈsi.te.len
+ˈso.na		ˈso.na
+ˈso.we.li		ˈso.we.li
+ˈsu.li		ˈsu.li
+ˈsu.no		ˈsu.no
+ˈsu.pa		ˈsu.pa
+ˈsu.wi		ˈsu.wi
+ˈtan		ˈtan
+ˈta.so		ˈta.so
+ˈta.wa		ˈta.wa
+ˈte.lo		ˈte.lo
+ˈten.po		ˈten.po
+ˈto.ki		ˈto.ki
+ˈto.mo		ˈto.mo
+ˈtu		ˈtu
+ˈun.pa		ˈun.pa
+ˈu.ta		ˈu.ta
+ˈu.ta.la		ˈu.ta.la
+ˈwa.lo		ˈwa.lo
+ˈwan		ˈwan
+ˈwa.so		ˈwa.so
+ˈwa.wa		ˈwa.wa
+ˈwe.ka		ˈwe.ka
+ˈwi.le		ˈwi.le
