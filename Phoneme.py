@@ -65,14 +65,14 @@ class Phoneme(object) :
     """
     
     
-    def __init__(self, voice=False, syl=False, speller=None): 
+    def __init__(self, speller=None): 
         """
         a gentle Phoneme constructor
         """
         self.speller = speller
         self.ipa = None
-        self.syl = False 
-        self.voice = False
+        
+        
         self.rank_in_wd = None
        
         self.description = ""
@@ -125,6 +125,8 @@ class Phoneme(object) :
 
         return idx
 
+    def apply_effect(self , effect) :
+        return
         
 
 
@@ -199,6 +201,7 @@ class Vowel(Phoneme) :
         self.features = features[1:]
         #self.feat_semantics = ipa.vfeatures
         self.ipa = speller.get_char(self)
+        self.isV = True
         
         
         
@@ -288,7 +291,7 @@ class Consonant(Phoneme) :
         self. features = features[1:]
         #self.feat_semantics = ipa.cfeatures
         self.ipa = speller.get_char(self)
-
+        self.isV = False
     
 
     def is_round (self) :

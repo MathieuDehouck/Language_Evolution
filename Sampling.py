@@ -105,6 +105,19 @@ f1c = fill_matrix(11)
 
 #feature 2 : manner of articulation
 
+manner_2_ind  =  { (0, 0, 0, 0, 0) : 1, # approximant
+                (1, 0, 0, 0, 0) : 1, # nasal
+                (0, 1, 0, 0, 0) : 1, # plosive
+                (0, 0, 1, 0, 0) : 1, # fricative / sibilant
+                (0, 0, 1, 0, 0) : 1, # fricative
+                (0, 0, 0, 1, 0) : 1, # flap
+                (0, 0, 0, 2, 0) : 1, # trill
+                (0, 0, 0, 0, 1) : 1, # lateral
+                (0, 0, 1, 0, 1) : 1, # lateral fric
+                (0, 0, 0, 1, 1) : 1,# lateral trill
+                (0, 1, 1, 0, 0) : 1 }  #Africates
+
+
 
 manner_list  =  [ (0, 0, 0, 0, 0), # approximant
                 (1, 0, 0, 0, 0), # nasal
@@ -117,6 +130,10 @@ manner_list  =  [ (0, 0, 0, 0, 0), # approximant
                 (0, 0, 1, 0, 1), # lateral fric
                 (0, 0, 0, 1, 1),# lateral trill
                 (0, 1, 1, 0, 0) ]  #Africates
+
+
+
+
 
 l = len(manner_list) 
 f2c = np.ones((l, l))

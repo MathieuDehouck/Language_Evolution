@@ -76,7 +76,7 @@ class archetype(object) :
             self.description = UNICODE_TO_IPA[string]._IPAChar__canonical_string
         except:
             self.description = 'No description'
-        self.lin = linearize(feats)
+       
 
 
     def __str__(self):
@@ -90,7 +90,7 @@ class archetype(object) :
         return not self.vow
     
 
-    def get_one(self, extra_feats):
+    def get_one(self, extra_feats, syllabic):
         """
         I'll change this eventually
         """

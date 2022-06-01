@@ -5,15 +5,17 @@ Created on Thu May  5 10:22:10 2022
 @author: 3b13j
 """
 from utilitaries import feature_match,  tpl2candidates
-from Phoneme import Phoneme, Vowel , Consonant
+from Phoneme import Phoneme, Vowel , Consonant, list_2_tuple
 from Syllable import Syllable
 from Word import Word
 from Language import Language
 from Condition import P_condition
 from Configuration import Configuration
 from regularizations import regularize_stress, regularize_structure
+from IPA import IPA
 
 import random
+i = IPA.get_IPA()
 
 
 
@@ -156,7 +158,7 @@ class P_change(Change) :
     
     
     
-    def __init__(self, config_initiale, config_finale, target) :
+    def __init__(self, effect, target) :
         """ 
         a Phonetic change deals with the modification of a phonem, therefore the object P_change need
         information about the phoneme to modify. The two configurations object encode these informations,
@@ -165,14 +167,12 @@ class P_change(Change) :
         """
         super().__init__()
         
-        self.config_initiale = config_initiale
-        self.config_finale = config_finale
+        
         self.target = target
+        self.effect = effect
         self.impacted_phonemes ={}
         
-        self.nn = []
-        for  i, ft in enumerate( config_initiale.state ) :
-            if ft != 1 : self.nn.append(i)
+        
         
         #TODO : rustine un bu fait que qd on crée plusieurs changements à la suite du même nom (dans une boucle par ex)
         # la liste des changements n'est pas remise à 0
@@ -196,7 +196,7 @@ class P_change(Change) :
 
         """
         for phoneme in language.phonemes :
-            if feature_match(self.config_initiale.state, phoneme.lin) :
+            if feature_match(self.target.features, phoneme.features) :
                 print("winner)")
                 print(phoneme)
                 return True
@@ -252,51 +252,45 @@ class P_change(Change) :
             print()
         applicable = self.check (phon, index , word, verbose = False)
         
-        if not applicable or not feature_match(self.config_initiale.state, phon.lin):
+        if not applicable or not feature_match(self.target.features, phon.features):
             if verbose : print("the condition is not respected, nothing is changed", phon.ipa)
             return phon, index+1
         
         
-        if phon.isV != self.config_initiale.isV : 
+        if phon.isV != self.effect.isV : 
             if verbose : print ("wrong side")
             
             return phon, index+1
         
         
-        modif = False
-        fts = phon.lin.copy()
-        for i in range(len(self.config_initiale.state)) :
-            coef = self.config_initiale.state[i]
-            if coef != -1 and fts[i] == coef  :
-                    # if the feature matches the initial configuration, a modification is applied
-                    fts[i] = self. config_finale.state[i] 
-                    modif = True      
-                    
+        if not phon.isV : ft = [[0, 0, 0],[0,0,0]]
+        
+        else : ft =  [[ 0, 0 , 0],[0,0]]
+        
+        for ind in self.effect.idx : 
+            
+            if ind in self.effect.effect : 
+                ft[ind[0]][ind[1]] = self.effect.effect[ind]
+            else :
+                ft[ind[0]][ind[1]] = phon.features[ind[0]][ind[1]]
+        
+        
+        ft = list_2_tuple(ft)
+        print("FEATURE")
+        print(ft)
+        
+        print("FT", ft)
+        if phon.isV : new_phon = Vowel(ft, i)
+        else : new_phon = Consonant(ft, i)
         
         
         
-        if modif :
-            
-            
-            result = delinearize(phon.isV, fts)
-            if phon.isV : new_phon = Vowel(result)
-            else :  new_phon = Consonant(result)
-            
-            
-            
-            # these ligns of code update the impacted_phonemes dictionnary if necessary
-            double = False
-            for truc in self.impacted_phonemes :
-                if phon.features == truc.features :
-                    double = True
-            if not double  :
-                self.impacted_phonemes[phon] = new_phon
-                
-        else :  new_phon = phon 
         
+        """
         if verbose  :
             if modif : print("conditions satisfied, a new phonem is born ", new_phon.ipa)
             else : print("no change")
+            """
         return new_phon, index+1
 
     
@@ -390,7 +384,8 @@ class P_change(Change) :
         s = "Target :   \n"
         s += str(self.target) + " \n"
         s+= "Effects : \n"
-        s+= str(self.config_initiale)+ " > " + str (self.config_finale) + "\n"
+        s+= str(self.effect) + "\n"
+        #TODO améliorer
         
         s+= "Conditions : \n"
         for i, condition in enumerate(self.conditions) :
@@ -604,12 +599,12 @@ class S_change(Change) :
     
     
     def __str__(self) :
-        s= "si les conditions suivantes sont réunnies : \n"
+        s= "if following conditions are satisfied : \n"
         for condition in self.conditions :
             s+= str(condition) + "\:n"
-        s+= "alos on assiste au changement de configuration suivant :\n "
-        s+= str(self.config_initiale) + "\n"
-        s+= str(self.config_finale) + "\n"
+        s+= "following effect  :\n "
+        s+= str(self.effect) + "\n"
+        
         return s
     
     

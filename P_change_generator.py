@@ -7,8 +7,9 @@ Created on Mon May 30 11:58:54 2022
 
 
 import random 
-from Configuration import Configuration
+from Effect import Effect
 from Change import P_change 
+
 
 class P_change_generator(object) :
     
@@ -72,8 +73,8 @@ class P_change_generator(object) :
     def create_change( self,language, random = True, target = None, ci = None)  :
         
         target = self.select_target(language) 
-        ci , cf = self.select_effect(language, target)
-        change = P_change(ci, cf, target)
+        effect = self.select_effect(language, target)
+        change = P_change(effect, target)
         print(change.applicable(language ))
         while not change.applicable(language ) : 
             change = self.create_change( language, random, target = None, ci = None)
@@ -106,9 +107,8 @@ class Baby_P_change_generator(P_change_generator) :
     
     def select_effect(self, language, target) :
         
-        conf_i = Configuration(target, False)
-        conf_f = conf_i.get_output() 
-        return conf_i, conf_f 
+        effect = Effect(target)
+        return effect 
         
     def set_conditions(self) :
         return

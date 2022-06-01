@@ -58,7 +58,7 @@ def treat_syl(syl, stress = False) :
     #print(phones, feats)
     phonemes = []
     for i, pho in enumerate(phones):
-            phonemes.append(pho.get_one(feats[i]))
+            phonemes.append(pho.get_one(feats[i], False))
 
     #print(phonemes)
     syl = Syllable(phonemes, stress, length)

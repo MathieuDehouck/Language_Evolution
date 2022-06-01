@@ -11,6 +11,7 @@ from wiki_utilities import get_language
 from Configuration import Configuration 
 from P_change_generator import Baby_P_change_generator
 from Phoneme import list_2_tuple , tuple_2_list
+from Effect import Effect
 
 i = IPA.get_IPA()
 
@@ -26,25 +27,35 @@ pho = wd.phonemes[0]
 
 ci = Configuration(pho)
 
+
+
 c = ci.state
+print(pho)
+for loop in range(20) :
+    ef = Effect(pho)
+    print(ef)
+    print()
 
 
-print("CI", ci)
-"""
-cf = ci.build_final_configuration(pho) 
-print("CF", cf)
+
+
+
+
+
+
 
 
 bb = Baby_P_change_generator()
 
-#ch = bb.create_change(latin)
-
+ch = bb.create_change(latin, True)
 
 
 
 
 
 latin2 , chs_wds = ch.apply_language(latin)
+
+"""
 #latin.print_both(latin2)
 print(chs_wds)
 
