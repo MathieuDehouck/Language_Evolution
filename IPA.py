@@ -100,7 +100,7 @@ class archetype(object) :
             extra = [1, 0]
             if 'nasalised' in extra_feats:
                 extra[1] = 1
-            return Vowel((1, base ,tuple(extra)), IPA.get_IPA())
+            return Vowel((base ,tuple(extra)), syllabic, IPA.get_IPA())
         else:
             extra = [0, 0, 0]
             if 'pre_nasal' in extra_feats:
@@ -110,7 +110,7 @@ class archetype(object) :
             if 'labialised' in extra_feats:
                 extra[0] = 11
 
-            return Consonant((0, base, tuple(extra)), IPA.get_IPA())
+            return Consonant((base, tuple(extra)), syllabic, IPA.get_IPA())
 
 
         

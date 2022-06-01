@@ -65,27 +65,25 @@ class Phoneme(object) :
     """
     
     
-    def __init__(self, speller=None): 
+    def __init__(self, features, syllabic, speller=None): 
         """
         a gentle Phoneme constructor
         """
         self.speller = speller
-        self.ipa = None
+
+        self.syl = syllabic
+        self.word_rank = None
         
-        
-        self.rank_in_wd = None
-       
-        self.description = ""
-        #UNICODE_TO_IPA[string] ._IPAChar__canonical_string
-        
-        self.features = None
+        self.features = features
+        self.ipa = speller.get_char(self)
+        self.description = ''
         
         
     def __str__(self):
         return str(self.ipa )+  " : " + str(self.description ) + "\n" + str(self.features)
 
     def set_word_rank(self, rk) :
-        self.rank_in_wd = rk 
+        self.word_rank = rk 
 
     def set_rank_in_wd(self, rk) :
         self.set_word_rank(rk)
@@ -196,11 +194,8 @@ class Vowel(Phoneme) :
     
     """
     
-    def __init__(self, features, speller):
-        super().__init__(features[0], features[-1][0], speller)
-        self.features = features[1:]
-        #self.feat_semantics = ipa.vfeatures
-        self.ipa = speller.get_char(self)
+    def __init__(self, features, syllabic, speller):
+        super().__init__(features, syllabic, speller)
         self.isV = True
         
         
@@ -286,11 +281,8 @@ class Consonant(Phoneme) :
     
     
     
-    def __init__(self, features, speller):
-        super().__init__(features[0], features[1][-1], speller)
-        self. features = features[1:]
-        #self.feat_semantics = ipa.cfeatures
-        self.ipa = speller.get_char(self)
+    def __init__(self, features, syllabic, speller):
+        super().__init__(features, syllabic, speller)
         self.isV = False
     
 
