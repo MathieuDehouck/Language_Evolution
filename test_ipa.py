@@ -12,7 +12,7 @@ print(ipa.vfeatures)
 
 
 # when creating phonemes we can give whatever string so maybe we should not ??
-
+"""
 fts =  (0, 0, 0), (1, 0)
 phon = Vowel(fts)
 ch = ipa.get_char(phon)
@@ -49,15 +49,16 @@ fts = (11, (1, 1, 0, 1, 0), 0), (6, 0, 0)
 phon = Consonant(fts)
 ch = ipa.get_char(phon)
 print(ch, fts)
+"""
 
 
 
-
-fts = ((10, (1, 0, 0, 0, 0), 0), (0, 0, 0))
-phon = Consonant(fts)
+fts = ((7, (0, 1, 0, 0, 0), 1), (0, 0, 0))
+phon = Consonant(fts, False, ipa)
 ch = ipa.get_char(phon)
 print(ch, fts)
 
+"""
 fts = ((6, (0, 1, 0, 0, 0), 1), (0, 0, 0))
 
 fts = ((8, (0, 1, 0, 0, 0), 0), (0, 0, 0))
@@ -66,3 +67,4 @@ fts = ((7, (0, 1, 0, 0, 1), 0), (0, 0, 0))
 phon = Consonant(fts)
 ch = ipa.get_char(phon)
 print(ch, fts)
+"""

@@ -126,7 +126,14 @@ class Phoneme(object) :
     def apply_effect(self , effect) :
         return
         
+    def get_mofified (self, index, value ) :
+        
+        new_ft = change_feature(self, index, value) 
+        
+        if phon.is_Vowel : new_phon = Vowel(new_ft, phon.syl, phon.speller)
+        else : new_phon = Consonant(new_ft, phon.syl, phon.speller)
 
+        
 
 def get_phon(string) :
     """
@@ -137,7 +144,30 @@ def get_phon(string) :
     return Phoneme(string, list(ipa.alphabet[string].features))
 
 
+def change_feature (phon, vowel,  index, new_value) :
+    
+    if not vowel :
+        ft = [[0, 0, 0],[0,0,0]]
+        idx =  [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
+        
+    
+    else : 
+        ft =  [[ 0, 0 , 0],[0,0]]
+        idx = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1) ]
+    
+    
+    for ind in idx : 
+        
+        if ind == index :
+            ft[ind[0]][ind[1]] = new_value
+        else :
+            ft[ind[0]][ind[1]] = phon[ind[0]][ind[1]]
 
+    
+    ft = list_2_tuple(ft)
+    return ft
+    
+   
 
 
 

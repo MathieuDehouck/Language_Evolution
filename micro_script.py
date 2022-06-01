@@ -37,7 +37,7 @@ for loop in range(20) :
 
 
 
-lang = toki
+lang = latin
 
 bb = Baby_P_change_generator()
 ch = bb.create_change(lang, True)

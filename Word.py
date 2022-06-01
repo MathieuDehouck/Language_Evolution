@@ -6,6 +6,9 @@ Created on Wed May  4 14:39:58 2022
 Contains the word class and some methods used specifically to work with it
 """
 
+
+
+
 def get_structure(syllabes):
     """ transform a list of syllables into a string representing its structure (in the CVC format)"""
     s = '#'
@@ -58,6 +61,7 @@ class Word :
         for x in self.syllables : s += x.ipa
         self.ipa = s
         self.structure = get_structure(self.syllables)
+        #TODO  peut être codée  ds structure 
         
         phon = []
         phon2syl = {}
@@ -77,12 +81,25 @@ class Word :
         
         
         
-    def equals(self,word, verbose = False) :
-        if verbose :
-            print(self.ipa)
-            print(word.ipa)
-        bol = self.ipa == word.ipa 
-        return bol
+    def __eq__(self, other) :
+        
+        
+        #TODO  objet
+        for i, phon in enumerate ( self.phonemes ) :
+            
+            if phon.features != other.phonemes[i].features :
+                
+                return False
+        """
+        for i, phon in enumerate ( self.syllables ) :
+            
+            if phon.syllables != other.syllables[i].features :
+                
+                return False
+        """
+        
+            
+        return True
         
         
         

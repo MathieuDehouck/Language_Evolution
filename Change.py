@@ -4,17 +4,19 @@ Created on Thu May  5 10:22:10 2022
 
 @author: 3b13j
 """
-from utilitaries import feature_match,  tpl2candidates
+from utilitaries import feature_match,  tpl2candidates, mask_match
 from Phoneme import Phoneme, Vowel , Consonant, list_2_tuple
 from Syllable import Syllable
 from Word import Word
 from Language import Language
 from Condition import P_condition
-from Configuration import Configuration
+
 from regularizations import regularize_stress, regularize_structure
 from IPA import IPA
 
+
 import random
+import copy
 
 
 
@@ -157,7 +159,7 @@ class P_change(Change) :
     
     
     
-    def __init__(self, effect, target) :
+    def __init__(self, effect, phon) :
         """ 
         a Phonetic change deals with the modification of a phonem, therefore the object P_change need
         information about the phoneme to modify. The two configurations object encode these informations,
@@ -167,7 +169,8 @@ class P_change(Change) :
         super().__init__()
         
         
-        self.target = target
+        self.target = phon.features
+        self.is_Vowel = phon.is_Vowel()
         self.effect = effect
         self.impacted_phonemes ={}
         
@@ -195,7 +198,7 @@ class P_change(Change) :
 
         """
         for phoneme in language.phonemes :
-            if feature_match(self.target.features, phoneme.features) :
+            if mask_match(self.target, phoneme.features, self.is_Vowel) :
                 print("winner)")
                 print(phoneme)
                 return True
@@ -208,7 +211,8 @@ class P_change(Change) :
         #TODO
         return phon
         
-        
+    
+    
         
         
     def apply_phon (self,  phon, index , word, verbose = False):
@@ -241,7 +245,7 @@ class P_change(Change) :
             print()
         applicable = self.check (phon, index , word, verbose = False)
         
-        if not applicable or not feature_match(self.target.features, phon.features):
+        if not applicable or not mask_match(self.target, phon.features, self.is_Vowel):
             if verbose : print("the condition is not respected, nothing is changed", phon.ipa)
             return phon, index+1
         
@@ -265,10 +269,7 @@ class P_change(Change) :
 
         
         ft = list_2_tuple(ft)
-        print("FEATURE")
-        print("  ", phon.features)
         
-        print("FT", ft)
         if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
         else : new_phon = Consonant(ft, phon.syl, phon.speller)
         
@@ -355,11 +356,11 @@ class P_change(Change) :
         dic = {}
         for wd in lang.voc :
             word  = lang.voc[wd]
-            save = word.ipa
+            save = copy.deepcopy(word)
             word = self.apply_word(word)
             if verbose : print(word)
             dic[wd] = word
-            if save != word.ipa : changed_words.append([ lang.voc[wd].ipa, word.ipa])
+            if not save == word : changed_words.append([ lang.voc[wd].ipa, word.ipa])
             
         return Language(lang.name+"*", dic), changed_words
         #TODO ; the name of the new language could be parametrizable maybe

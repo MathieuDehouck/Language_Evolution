@@ -12,10 +12,27 @@ import random
 import copy 
 
 
-
+idxC = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1) , (1,2)]
+idxV = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1) ]
 
 
 # functions interacting with features.
+
+
+
+def mask_match(mask, phon, voy):
+    
+    if voy : idx = idxV 
+    else : idx = idxC
+    
+    for ind in idx :
+        if mask[ind[0]][ind[1]] != -1 and mask[ind[0]][ind[1]] != phon[ind[0]][ind[1]] :
+             
+            return False
+        
+    return True 
+    
+
 
 
 

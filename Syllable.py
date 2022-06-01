@@ -118,7 +118,20 @@ class Syllable(object) :
         self.length =  length
         
     
-    
+    def __eq__(self, other ) :
+       
+            for i, phon in enumerate ( self.phonemes ) :
+                
+                if phon.features != other.phonemes[i].features :
+                    
+                    return False
+        
+            if self.length != other.length : return False
+            if self.stress != other.stress : return False 
+            if self.tone != other.tone : return False
+                
+                
+            return True
     
     
     
