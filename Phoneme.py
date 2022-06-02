@@ -13,6 +13,10 @@ import numpy as np
 
 
 
+
+
+
+
 def tuple_2_list(tupl) :
     
     
@@ -115,13 +119,7 @@ class Phoneme(object) :
         self.ipa = self.speller.get_char(self)
 
 
-    def feature_indices(self):
-        idx = []
-        for i,fs in enumerate(self.features):
-            for j, f in enumerate(fs):
-                idx.append((i,j))
-
-        return idx
+    
 
     def apply_effect(self , effect) :
         return

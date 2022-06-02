@@ -57,7 +57,7 @@ def mat_to_adj (mat) :
 
 #feature 1 : front , values btw 0 and 2
 
-f1v = fill_matrix(2)
+f1v = fill_matrix(3)
 
 #feature 2 : weight, values btw 0 and 6
 
@@ -132,6 +132,9 @@ manner_list  =  [ (0, 0, 0, 0, 0), # approximant
                 (0, 1, 1, 0, 0) ]  #Africates
 
 
+secondary_place = [ 0, 1, 5, 11]
+
+sec_place_2_ind = { 11 : 3 , 1 : 1 , 0:0 , 2 : 5}
 
 
 
@@ -155,7 +158,6 @@ manner_adj = interpret_manner(f2c)
 
 
 
-
 #feature 3 : voiced 
 
 f3c = fill_matrix(1)
@@ -173,7 +175,20 @@ f3c = fill_matrix(1)
 # feature 4 : secondary articulation
 
 # 4 valeurs, -1, 11, and two others.TODO conversion of indexes
-f4c = fill_matrix(4)
+f4c = fill_matrix(3)
+
+
+def interpret_sec_manner (mat) :
+    dic = mat_to_adj(mat)
+    dic_sem = {}
+    for k in dic :
+        liste = []
+        for v in dic[k] :
+            liste.append([secondary_place[v[0]]  , v[1] ])
+        dic_sem [secondary_place[k]] = liste
+    return dic_sem
+
+sec_manner_adj  =  interpret_sec_manner(f4c)
 
 #feature 5 : pre nasal
 

@@ -167,7 +167,7 @@ class Baby_P_change_generator(P_change_generator) :
     
     def select_effect(self, language, target) :
         
-        effect = Effect(target)
+        effect = Effect(target.features)
         return effect 
         
     def set_conditions(self) :
