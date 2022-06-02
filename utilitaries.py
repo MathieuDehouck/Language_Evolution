@@ -43,7 +43,7 @@ def feature_indices(features):
 
 
 def mask_match(mask, phon, voy):
-    
+   
     idx = feature_indices(mask)
     idx2 = feature_indices(phon) 
     if idx != idx2 : return False
@@ -93,11 +93,15 @@ def change_pattern (pattern , vowel,  index, new_value) :
     
    
     
-def bewilder_pattern(pattern) :
+def bewilder_pattern(pattern, index = None) :
     
     idx = feature_indices(pattern)
     
-    index = random.choice(idx)
+    if index == None : index = random.choice(idx)
+    
+    print(pattern)
+    print(index)
+    
     while pattern[index[0]][index[1]] == -1 :
         index = random.choice(idx)
     
@@ -239,6 +243,18 @@ def tpl_2_candidates(lang, tpl, verbose = False) :
         printl(candidates)
         
     return candidates
+
+
+
+def words_containing(mask, language) :
+    
+    
+    wds = []
+    for wd in language.voc.values() :
+        
+        for phon in wd.phonemes : 
+            if mask_match(mask, phon.features, phon.is_Vowel) : wds.append(wd)
+    return wds
 
 
 

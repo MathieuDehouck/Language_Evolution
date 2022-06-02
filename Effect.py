@@ -37,7 +37,7 @@ class Effect (object) :
     
     """
     
-    def __init__(self, target, r = True, index = None)  :
+    def __init__(self, target, r = False, index = None)  :
 
         self.target = target
         t = target 
@@ -49,10 +49,14 @@ class Effect (object) :
         self.effect = {}
         self.impacted_idx = []
          
-        if r : inde = self.idx[random.randint(0, len(self.idx)-1)]
-        else : inde = index
-        self.set_output( inde)
+        if r : 
+            inde = self.idx[random.randint(0, len(self.idx)-1)]
+        
+            self.set_output( inde)
 
+
+    def add_effect (self, key, value) :
+        self.effect[key] = value
 
         
     def set_output(self, index) :
@@ -75,8 +79,10 @@ class Effect (object) :
         
         matrix =  Trinity[index[0]][index[1]]
         
-        
-        
+        print()
+        print(self.target)
+        print(index)
+        print(original_value)
         
         line = matrix [original_value]
         

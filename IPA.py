@@ -161,7 +161,7 @@ class IPA() :
 
     
     def __init__(self) :
-        self.vfeatures = ('Backness', 'Height', 'Round'), ('Voiced', 'Nasal')
+        self.vfeatures = ( 'Height','Backness', 'Round'), ('Voiced', 'Nasal')
         self.cfeatures = ('place of articulation', ('nasal', 'plosive', 'fricative', 'trill', 'lateral'), 'Voiced'), ('secondary place of articulation', 'pre_nasal' , 'aspiration')
                         
         self.phonemes = [] 

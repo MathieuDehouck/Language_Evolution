@@ -157,19 +157,22 @@ class P_condition (Condition) :
             
         phon = word.phonemes[rank]
         
+        """
         if phon.isV != self.concerns_V:
             if verbose : print("not applicable on the target")
             return False 
-        
+        """
         # does the condition have an absolute position to be checked on ?
         if self.absol_pos  != - 1 :
             if  self.absol_pos != rank :
                 if verbose : print("The condition is not applied on the phoneme "+ phon.ipa)
                 return  False
         
-        # we check if the relative posotions match 
+        # we check if the relative positions match 
         index = rank + self.rel_pos 
-        if index not in range (len(word.phonemes)) :
+        #TODO
+        if rank not in range (len(word.phonemes)) :
+            if verbose : print('conditioning phoneme not in range')
             return False
         if verbose :
             print("we need to satisfy the following pattern")
@@ -177,7 +180,12 @@ class P_condition (Condition) :
             print( "Phoneme :" , word.phonemes[index].ipa, "    " , word.phonemes[index])
             
         if not self.continu :
-            bol = mask_match ( self.template , word.phonemes[index].features , self.concerns_V )
+            if index not in range (len(word.phonemes)) : bol = False
+            else : bol = mask_match ( self.template , word.phonemes[index].features , self.concerns_V )
+            if verbose :
+                if bol :print("CONDITION SATISFIED") 
+                else : print ("CONDITION NOT SATISFIED")
+            
             return bol
         
         
@@ -187,7 +195,12 @@ class P_condition (Condition) :
                     print("we test ",j)
                     print(val)
                     print()
-                if val : return True   
+                if val : 
+                    if verbose : 
+                        print("CONDITION SATISFIED") 
+                    return True
+                
+        if verbose: print ("CONDITION NOT SATISFIED")
         return False
     
     

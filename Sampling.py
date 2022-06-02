@@ -57,11 +57,11 @@ def mat_to_adj (mat) :
 
 #feature 1 : front , values btw 0 and 2
 
-f1v = fill_matrix(3)
+f1v = fill_matrix(6)
 
 #feature 2 : weight, values btw 0 and 6
 
-f2v = fill_matrix(6)
+f2v = fill_matrix(2)
 
 
 

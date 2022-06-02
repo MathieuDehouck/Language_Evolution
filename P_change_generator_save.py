@@ -67,14 +67,37 @@ class P_change_generator(object) :
     
     
     
-  
+    def set_conditions(self,change) :
+        
+        NotImplemented
+        
+        
         
         
         
     def create_change( self,language, random = True, target = None, ci = None)  :
         
+        target = self.select_target(language).features 
         
-        NotImplemented
+        
+        
+        
+        effect = self.select_effect(language, target)
+        change = P_change(target, effect)
+        
+        
+        
+        
+        while not change.applicable(language ) : 
+            change = self.create_change( language, random, target = None, ci = None)
+            print( "unacceptable change")
+        
+       
+        
+        
+        self.set_conditions(change)
+        return change
+       
         
        
         
@@ -121,49 +144,29 @@ class Baby_P_change_generator(P_change_generator) :
         print()
         print(change.target)
     
-    def create_change( self,language, rd = True, target = None, ci = None, verbose = False ) :
+    def create_change( self,language, rd = True, target = None, ci = None)  :
         
         
-        #selection of the target
-        target = self.select_target(language).features 
-        if verbose : print("Target", target)
+        change = super().create_change(language)
         
-        #selection of the effect
-        effect = self.select_effect(language, target)
-        change = P_change(target, effect)
-        
-        if verbose : print("Effect", effect)
         
         self.extends_target(change, language)
         
-        
-        
         r = random.randint(0,1)
         #TODO paramétrisable
-        
         if r : 
             self.extends_target(change, language)
-            if verbose : 
-                print()
-                print("Generalization")
+            print("extension")
+        
+        print("Target after gen" , change.target)  
         
        
         
-       
-        
-       
-        #we add conditions
-        if verbose : print('Conditions')
-        
-        self.set_conditions( language, change )
+        self.set_conditions(language, change)
         
         
-        if verbose :
-            print()
-            print("CHANGE SUCCESSFULLY CREATED")
-            print(change)
-            print()
-            
+        print("CHANGE SUCCESSFULLY CREATED")
+        print(change)
         return change
     
     
@@ -210,12 +213,11 @@ class Baby_P_change_generator(P_change_generator) :
         potential_contexts = words_containing(change.target, language)
         
        
+        
         rd_context = random.choice(potential_contexts)
         
         for i, pho in enumerate(rd_context.phonemes ) : 
-            if mask_match(change.target, pho.features , change.concerns_V ): 
-                idx_in_wd = i
-                break
+            if pho.features == change.target : return i
         
         print( rd_context)
         print("THIS IS THE INDEX OF THE CHANGED WD", i)
@@ -223,8 +225,7 @@ class Baby_P_change_generator(P_change_generator) :
         
         #TODO we set randomly between 1 and 3 conditions . to be parametrized 
         
-        nb_cond  = random.randint(0,1) 
-        print("We will add ", nb_cond, " conditions")
+        nb_cond  = random.randint(0,3) 
         
         forbidden_rel_pos = [] 
         for loop in range(nb_cond) :
@@ -286,8 +287,8 @@ def rd_rel_pos()  :
         ran = random.randint (1, 2) 
         sign = random.choice ([-1, 1])
         rel_pos = ran * sign
-        return sign
-        #TODO simplifie pour test
+        return rel_pos
+        
         
         
 

@@ -34,12 +34,16 @@ modifs = []
 
 for i in range(1):
     
-    ch_wds = []
-    while len(ch_wds)== 0 : 
-        ch = bb.create_change(lang, True)
-        lang , chs_wds = ch.apply_language(lang)
+    
+    
+    ch = bb.create_change(lang, True, verbose = True)
+    lang , chs_wds = ch.apply_language(lang)
     
     modifs.append(chs_wds)
-    
+    print(chs_wds)
+    print(ch)
 
-#origin.print_both(lang)
+if len(ch.conditions) != 0 :
+ print(   "we test a condition ")
+ cond = ch.conditions[0]
+ 

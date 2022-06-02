@@ -4,7 +4,7 @@ Created on Thu May  5 10:22:10 2022
 
 @author: 3b13j
 """
-from utilitaries import feature_match,  tpl_2_candidates, mask_match
+from utilitaries import feature_match,  tpl_2_candidates, mask_match, feature_indices, printl, printd
 from Phoneme import Phoneme, Vowel , Consonant, list_2_tuple
 from Syllable import Syllable
 from Word import Word
@@ -159,7 +159,7 @@ class P_change(Change) :
     
     
     
-    def __init__(self, effect, phon) :
+    def __init__(self, target, effect) :
         """ 
         a Phonetic change deals with the modification of a phonem, therefore the object P_change need
         information about the phoneme to modify. The two configurations object encode these informations,
@@ -169,11 +169,12 @@ class P_change(Change) :
         super().__init__()
         
         
-        self.target = phon.features
-        self.is_Vowel = phon.is_Vowel()
+        self.target = target
+        self.idx = feature_indices(target)
+        
         self.effect = effect
         self.impacted_phonemes ={}
-        
+        self.concerns_V  = len(self.idx) == 5
         
         
         #TODO : rustine un bu fait que qd on crée plusieurs changements à la suite du même nom (dans une boucle par ex)
@@ -198,16 +199,16 @@ class P_change(Change) :
 
         """
         for phoneme in language.phonemes :
-            if mask_match(self.target, phoneme.features, self.is_Vowel) :
+            if mask_match(self.target, phoneme.features, self.concerns_V) :
                 print("winner)")
                 print(phoneme)
                 return True
         return False
         
-    def effective (self, language) :     
+    def effective (self, language, verbose = False) :     
         lg, cw = self.apply_language(language)
         bol = len(cw) == 0 
-        if not bol : 
+        if not bol and verbose : 
             print("VICTORY")
             print(cw)
         return bol
@@ -252,7 +253,7 @@ class P_change(Change) :
             print()
         applicable = self.check (phon, index , word, verbose = False)
         
-        if not applicable or not mask_match(self.target, phon.features, self.is_Vowel):
+        if not applicable or not mask_match(self.target, phon.features, self.concerns_V):
             if verbose : print("the condition is not respected, nothing is changed", phon.ipa)
             return phon, index+1
         
@@ -272,11 +273,15 @@ class P_change(Change) :
            
             
             if ind in self.effect.effect : 
-                print()
-                print(ft)
-                print("becomes")
+                
                 ft[ind[0]][ind[1]] = self.effect.effect[ind]  [1]
-                print(ft)
+                
+                
+                if verbose : 
+                    print()
+                    print(ft)
+                    print("becomes")
+                    print(ft)
             else :
                 ft[ind[0]][ind[1]] = phon.features[ind[0]][ind[1]]
 
@@ -286,7 +291,7 @@ class P_change(Change) :
         if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
         else : new_phon = Consonant(ft, phon.syl, phon.speller)
         
-        print(new_phon)
+        if verbose  : print(new_phon)
         """
         if verbose  :
             if modif : print("conditions satisfied, a new phonem is born ", new_phon.ipa)
@@ -374,8 +379,14 @@ class P_change(Change) :
             new_word = self.apply_word(word)
             if verbose : print(new_word)
             dic[key] = new_word
-            if not new_word == word : changed_words.append([  word.ipa, new_word.ipa])
-            
+            if  new_word != word : 
+                changed_words.append([  word.ipa, new_word.ipa])
+                
+                if verbose :
+                 print("NW", new_word)
+                 printl(changed_words)
+                
+                
         return Language(lang.name+"*", dic), changed_words
         #TODO ; the name of the new language could be parametrizable maybe
     
@@ -542,20 +553,22 @@ class S_change(Change) :
     
     def check(self, word, rank) :
         """
-        checks if a change would modufy a language given as input. 
-        if that s not the case, it is not usefull to apply it.
+        checks if a change can ba applied to a word
 
         Parameters
         ----------
-        language : Language
-            the language we would like to apply the change on
+        word : word 
+            word that we test
+        rank : int
+                rank of the phoneme 
 
         Returns
         -------
         bool
-            DESCRIPTION.
+            whether it is applicable
 
         """
+    
         for condition in self.conditions :
             if not condition.test(word, rank) : return False
                 
