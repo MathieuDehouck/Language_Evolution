@@ -354,13 +354,13 @@ class P_change(Change) :
         changed_words = []
         
         dic = {}
-        for wd in lang.voc :
-            word  = lang.voc[wd]
-            save = copy.deepcopy(word)
-            word = self.apply_word(word)
-            if verbose : print(word)
-            dic[wd] = word
-            if not save == word : changed_words.append([ lang.voc[wd].ipa, word.ipa])
+        for key, word in lang.voc.items() :
+            
+            #save = copy.deepcopy(word)
+            new_word = self.apply_word(word)
+            if verbose : print(new_word)
+            dic[key] = new_word
+            if not new_word == word : changed_words.append([ lang.voc[key].ipa, word.ipa])
             
         return Language(lang.name+"*", dic), changed_words
         #TODO ; the name of the new language could be parametrizable maybe

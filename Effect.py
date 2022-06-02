@@ -47,9 +47,7 @@ class Effect (object) :
         self.idx = t.feature_indices() 
         self.effect = {}
         borne = len(self.idx)-1
-        
-        elisabeth = random.randint(0, borne)
-        if r : inde = self.idx[elisabeth]
+        if r : inde = self.idx[random.randint(0, borne)]
         else : inde = index
         self.set_output( inde)
 
