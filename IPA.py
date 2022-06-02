@@ -161,13 +161,14 @@ class IPA() :
 
     
     def __init__(self) :
-        self.vfeatures = 'Syllabic', ('Backness', 'Height', 'Round'), ('Voiced', 'Nasal')
-        self.cfeatures = ('Syllabic', ('place of articulation', ('nasal', 'plosive', 'fricative', 'trill', 'lateral'), 'Voiced'),
-                          ('secondary place of articulation', 'pre_nasal' , 'aspiration'))
-                          
+        self.vfeatures = ('Backness', 'Height', 'Round'), ('Voiced', 'Nasal')
+        self.cfeatures = ('place of articulation', ('nasal', 'plosive', 'fricative', 'trill', 'lateral'), 'Voiced'), ('secondary place of articulation', 'pre_nasal' , 'aspiration')
+                        
         self.phonemes = [] 
         self.alphabet = {}
         self.feat2ipa = {}
+        self.cons2ipa = {}
+        self.vow2ipa = {}
 
         # reading consonants
         consonants = np.loadtxt('phonetic/consonants.tsv', delimiter='\t', dtype=str, encoding = 'utf8')
@@ -191,6 +192,7 @@ class IPA() :
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
+                self.cons2ipa[fts] = ch
 
         # reading vowels
         vows = np.loadtxt('phonetic/vowels.tsv', delimiter='\t', dtype=str, encoding = 'utf8')
@@ -213,9 +215,10 @@ class IPA() :
                 self.phonemes.append(phon)
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
+                self.vow2ipa[fts] = ch
 
 
-    def get_char(self, phon, isV= None,  verbose=False):
+    def get_char(self, phon, verbose=False):
         """
         returns a string representing the input phoneme's features
 
@@ -235,12 +238,44 @@ class IPA() :
         if phon.features in self.feat2ipa:
             return self.feat2ipa[phon.features]
 
-        # we did not find a perfect match, so we build it
+        # We did not find a perfect match, so we build it
+        feats = phon.features
         if phon.is_Vowel():
             # a basic vowel is voiced and unnasalised
-            base = (phon.features[0], (1,0))
-            out = self.feat2ipa[base]
-            
+            base = feats[0], (1, 0)
+            if base in self.vow2ipa:
+                out = self.vow2ipa[base]
+            else:
+                # try flip round
+                base = (feats[0][0], feats[0][1], 1-feats[0][2]), (1, 0)
+                if base in self.vow2ipa:
+                    out = self.vow2ipa[base]
+                    if feats[0][2] == 1:
+                        out += u'\u0339'
+                    elif feats[0][2] == 0:
+                        out += u'\u031C'
+                else:
+                    # compute distance in the vowel space
+                    dist = []
+                    xh, xb, xr = feats[0]
+                    for ((yh, yb, yr), _), ch in self.vow2ipa.items():
+                        dist.append(((xh-yh)**2 + (xb-yb)**2 + (xr-yr)**2 - (yh-3)**2/100, (yh, yb, yr), ch))
+
+                    dist.sort()
+                    #print(dist)
+                    _, (yh, yb, yr), out = dist[0]
+
+                    if xh > yh:
+                        out += u'\u031E'
+                    elif xh < yh:
+                        out += u'\u031D'
+
+                    if xr == 1 and xr != yr:
+                        out += u'\u0339'
+                    elif xr == 0 and xr != yr:
+                        out += u'\u031C'
+
+                
             if phon.is_nasal(): # nasal
                 out += u'\u0303'
 
