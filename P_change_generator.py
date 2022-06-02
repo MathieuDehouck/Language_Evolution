@@ -9,10 +9,9 @@ Created on Mon May 30 11:58:54 2022
 import random 
 from Effect import Effect
 from Change import P_change
-from Phoneme import change_feature
-from utilitaries import mask_match
+from Condition import rd_p_condition
 
-
+from utilitaries import mask_match,  change_pattern, tpl_2_candidates
 
 idxC = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
 idxV = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), ]
@@ -111,7 +110,7 @@ class Baby_P_change_generator(P_change_generator) :
     
     def __init__(self) :
         super().__init__() 
-        
+     
         
         
         
@@ -136,7 +135,7 @@ class Baby_P_change_generator(P_change_generator) :
         feature_index = idx [ random.randint (0, len(idx)-1)]
         
         
-        change.target = change_feature (change.target, change.is_Vowel, feature_index, -1) 
+        change.target = change_pattern (change.target, change.is_Vowel, feature_index, -1) 
             
         impacted = []
         for phon in language.phonemes :
@@ -163,6 +162,20 @@ class Baby_P_change_generator(P_change_generator) :
         
         print("Target after gen" , change.target)
         
+        self.set_conditions(language, change)
+        
+        """
+        valid_change = change.effective(language) 
+        print("VALID SCORE" , valid_change )
+        while not valid_change :
+            
+            change = self.create_change(language, rd, target, ci)
+            print(change)
+            valid_change = change.effective(language) 
+        
+        """
+        
+        
         return change
     
     def select_effect(self, language, target) :
@@ -170,7 +183,20 @@ class Baby_P_change_generator(P_change_generator) :
         effect = Effect(target.features)
         return effect 
         
-    def set_conditions(self) :
+    def set_conditions(self, language, change ) :
+        
+        
+        #TODO multiplier conditions, jouer...
+        
+        #rd = random.randint(0, 2)
+        
+        cond = rd_p_condition(language)
+        change.add_condition(cond)
+        
+        
+    
+        
+        
         return
     
     """

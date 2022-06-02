@@ -134,7 +134,7 @@ manner_list  =  [ (0, 0, 0, 0, 0), # approximant
 
 secondary_place = [ 0, 1, 5, 11]
 
-sec_place_2_ind = { 11 : 3 , 1 : 1 , 0:0 , 2 : 5}
+sec_place_2_ind = { 11 : 3 , 1 : 1 , 0:0 , 5 : 2}
 
 
 

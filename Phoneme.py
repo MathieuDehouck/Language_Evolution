@@ -17,26 +17,7 @@ import numpy as np
 
 
 
-def tuple_2_list(tupl) :
-    
-    
-    liste = []
-    for el in tupl : 
-        if type(el) == tuple : 
-            liste.append(tuple_2_list(el))
-        else : liste.append(el)
-    return liste
 
-
-def list_2_tuple(tupl) :
-    
-    liste = tuple([])
-    for el in tupl : 
-        if type(el) == list : 
-            liste += (list_2_tuple(el),)
-        else : liste +=(el,)
-        
-    return tuple(liste)
     
 
 class Phoneme(object) :
@@ -142,30 +123,7 @@ def get_phon(string) :
     return Phoneme(string, list(ipa.alphabet[string].features))
 
 
-def change_feature (phon, vowel,  index, new_value) :
-    
-    if not vowel :
-        ft = [[0, 0, 0],[0,0,0]]
-        idx =  [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
-        
-    
-    else : 
-        ft =  [[ 0, 0 , 0],[0,0]]
-        idx = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1) ]
-    
-    
-    for ind in idx : 
-        
-        if ind == index :
-            ft[ind[0]][ind[1]] = new_value
-        else :
-            ft[ind[0]][ind[1]] = phon[ind[0]][ind[1]]
 
-    
-    ft = list_2_tuple(ft)
-    return ft
-    
-   
 
 
 

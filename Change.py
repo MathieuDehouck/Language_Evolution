@@ -4,7 +4,7 @@ Created on Thu May  5 10:22:10 2022
 
 @author: 3b13j
 """
-from utilitaries import feature_match,  tpl2candidates, mask_match
+from utilitaries import feature_match,  tpl_2_candidates, mask_match
 from Phoneme import Phoneme, Vowel , Consonant, list_2_tuple
 from Syllable import Syllable
 from Word import Word
@@ -204,7 +204,14 @@ class P_change(Change) :
                 return True
         return False
         
-        
+    def effective (self, language) :     
+        lg, cw = self.apply_language(language)
+        bol = len(cw) == 0 
+        if not bol : 
+            print("VICTORY")
+            print(cw)
+        return bol
+            
         
     def compensate(self, phon) :
         
