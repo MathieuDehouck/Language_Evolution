@@ -29,11 +29,14 @@ lang = get_language("latin_classique.txt", "latin")
 origin = lang
 bb = Baby_P_change_generator()
 
-for i in range(10):
+for i in range(1):
     ch = bb.create_change(lang, True)
     lang , chs_wds = ch.apply_language(lang)
 
     print(chs_wds)
+    print(ch)
+    
+
     
     
 #origin.print_both(lang)

@@ -19,11 +19,34 @@ idxV = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1) ]
 # functions interacting with features.
 
 
+def feature_indices(features):
+    """
+    Gives the coordinates of the indices of a template
+
+    Parameters
+    ----------
+    features : TYPE
+        DESCRIPTION.
+
+    Returns
+    -------
+    idx : TYPE
+        DESCRIPTION.
+
+    """
+    idx = []
+    for i,fs in enumerate(features):
+        for j, f in enumerate(fs):
+            idx.append((i,j))
+
+    return idx
+
 
 def mask_match(mask, phon, voy):
     
-    if voy : idx = idxV 
-    else : idx = idxC
+    idx = feature_indices(mask)
+    idx2 = feature_indices(phon) 
+    if idx != idx2 : return False
     
     for ind in idx :
         if mask[ind[0]][ind[1]] != -1 and mask[ind[0]][ind[1]] != phon[ind[0]][ind[1]] :

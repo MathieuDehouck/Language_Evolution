@@ -262,8 +262,14 @@ class P_change(Change) :
         
         for ind in self.effect.idx : 
             
+           
+            
             if ind in self.effect.effect : 
-                ft[ind[0]][ind[1]] = self.effect.effect[ind]
+                print()
+                print(ft)
+                print("becomes")
+                ft[ind[0]][ind[1]] = self.effect.effect[ind]  [1]
+                print(ft)
             else :
                 ft[ind[0]][ind[1]] = phon.features[ind[0]][ind[1]]
 
@@ -273,6 +279,7 @@ class P_change(Change) :
         if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
         else : new_phon = Consonant(ft, phon.syl, phon.speller)
         
+        print(new_phon)
         """
         if verbose  :
             if modif : print("conditions satisfied, a new phonem is born ", new_phon.ipa)
@@ -360,7 +367,7 @@ class P_change(Change) :
             new_word = self.apply_word(word)
             if verbose : print(new_word)
             dic[key] = new_word
-            if not new_word == word : changed_words.append([ lang.voc[key].ipa, word.ipa])
+            if not new_word == word : changed_words.append([  word.ipa, new_word.ipa])
             
         return Language(lang.name+"*", dic), changed_words
         #TODO ; the name of the new language could be parametrizable maybe

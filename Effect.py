@@ -6,8 +6,8 @@ Created on Wed Jun  1 09:55:33 2022
 """
 
 
-from Sampling import MatricesV, MatricesC, manner_2_ind, manner_list
-
+from Sampling import MatricesV, MatricesC, manner_2_ind, manner_list, sec_place_2_ind, secondary_place 
+from Phoneme import feature_indices
 import random
 
 
@@ -43,11 +43,13 @@ class Effect (object) :
         t = target 
         if type(t) == list : t = t [0]
         
-        self.isV = t.isV
-        self.idx = t.feature_indices() 
+        
+        self.idx = feature_indices( self.target) 
+        self.isV = (len(self.idx) == 5)
         self.effect = {}
-        borne = len(self.idx)-1
-        if r : inde = self.idx[random.randint(0, borne)]
+        self.impacted_idx = []
+         
+        if r : inde = self.idx[random.randint(0, len(self.idx)-1)]
         else : inde = index
         self.set_output( inde)
 
@@ -58,26 +60,38 @@ class Effect (object) :
         if self.isV : Trinity = MatricesV 
         else : Trinity = MatricesC
         
-        #TODO cas si un seul changement, généraliser
         
-        original_value = self.target.features[index[0]][index[1]]
+        
+        original_value = self.target[index[0]][index[1]]
         manner = False
+        sec_manner = False 
+        
         if type(original_value) == tuple :
             original_value = manner_2_ind[original_value]
             manner = True
+        if not self.isV and index == (1, 0) :
+            original_value = sec_place_2_ind [original_value]
+            sec_manner = True
+        
         matrix =  Trinity[index[0]][index[1]]
-        line = matrix [:, original_value]
+        
+        
+        
+        
+        line = matrix [original_value]
         
         # we pick an element depending on the weights we gave
         
         output_value = random.choices(range(len(line)), weights = line, k=1)[0]
         
-        print(output_value)
         
-        self.effect[index] = output_value
-        if manner :  self.effect[index] = manner_list [output_value]
+        self.impacted_idx .append(index)
         
-           
+        
+        if manner : output_value  = manner_list [output_value]
+        if sec_manner :  output_value = secondary_place[output_value]
+        value = ( original_value, output_value) 
+        self.effect[index] = value
         
     def __str__(self) :
         
