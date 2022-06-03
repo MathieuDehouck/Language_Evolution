@@ -115,6 +115,31 @@ class archetype(object) :
             return Consonant((base, tuple(extra)), syllabic, IPA.get_IPA())
 
 
+
+
+def cons_dist(features, consonants):
+    """
+    computes the distance between a cons features and a set of consonants
+    """
+    dists = []
+    (xplace, xmanner, xvoice), _ = features
+    for ((place, manner, voice), _), ch in consonants.items():
+        if manner == xmanner:
+            dists.append(((place - xplace)**2 + (voice - xvoice)**2 / 2, (place, voice), ch))
+    dists.sort()
+
+    return dists
+
+
+def vowel_dist(features, vowels):
+    dists = []
+    (xh, xb, xr), _ = features
+    for ((yh, yb, yr), _), ch in vowels.items():
+        dists.append(((xh-yh)**2 + (xb-yb)**2 + (xr-yr)**2 - (yh-3)**2/100, (yh, yb, yr), ch))
+    dists.sort()
+
+    return dists
+        
         
 
 class IPA() :
@@ -256,12 +281,8 @@ class IPA() :
                         out += u'\u031C'
                 else:
                     # compute distance in the vowel space
-                    dist = []
+                    dist = vowel_dist(feats, self.vow2ipa)
                     xh, xb, xr = feats[0]
-                    for ((yh, yb, yr), _), ch in self.vow2ipa.items():
-                        dist.append(((xh-yh)**2 + (xb-yb)**2 + (xr-yr)**2 - (yh-3)**2/100, (yh, yb, yr), ch))
-
-                    dist.sort()
                     #print(dist)
                     _, (yh, yb, yr), out = dist[0]
 
@@ -294,6 +315,10 @@ class IPA() :
 
                 if plos in self.cons2ipa:
                     out = self.cons2ipa[plos]
+
+                elif feats[0][0] in [6, 8]:
+                    plos = (7, (0, 1, 0, 0, 0), 1-feats[0][2]), (0, 0, 0)
+                    out = self.cons2ipa[plos]
                 else:
                     plos = (feats[0][0], (0, 1, 0, 0, 0), 1-feats[0][2]), (0, 0, 0)
                     out = self.cons2ipa[plos]
@@ -308,6 +333,7 @@ class IPA() :
                 # try flipping voicing
                 base = (feats[0][0], base[0][1], 1-feats[0][2]), (0, 0, 0)
                 if base in self.cons2ipa:
+                    #print(base, feats)
                     out = self.cons2ipa[base]
 
                     if feats[0][2] == 1:
@@ -316,22 +342,19 @@ class IPA() :
                         out += u'\u0325'
 
                 else:
-                    dist = []
-                    for ((part, manner, voice), _), ch in self.cons2ipa.items():
-                        if feats[0][1] == manner:
-                            dist.append(((part-feats[0][0])**2 + (voice - feats[0][2])**2, (part, voice), ch))
-                    dist.sort()
-                    print(dist)
-                    print(feats)
+                    dist = cons_dist(feats, self.cons2ipa)
+                    #print(dist)
+                    #print(feats)
                     _, (part, voice), out = dist[0]
-
+                    
                     if feats[0][2] == 1 and feats[0][2] != voice:
+                        print(out)
                         out += u'\u032C'
                     elif feats[0][2] == 0 and feats[0][2] != voice:
                         out += u'\u0325'
                     
                     direction = feats[0][0] - part
-                    print(direction)
+                    #print(direction)
                     if direction < 0:
                         for _ in range(abs(direction)):
                             #out += u'\u034F'

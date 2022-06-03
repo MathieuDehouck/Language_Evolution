@@ -4,8 +4,6 @@ from Phoneme import Vowel, Consonant
 
 ipa = IPA.get_IPA()
 
-
-
 for h in range(7):
     for b in range(3):
         for r in range(2):
@@ -18,3 +16,30 @@ for part in range(12):
         for v in range(2):
             vow = Consonant(((part, manner, v), (0, 0, 0)), 0, ipa)
             print(vow.ipa, vow.features, sep='\t')
+
+exit()
+
+s = ''
+for ch in ipa.cons2ipa.values():
+    s += ch + ' '
+
+print(s)
+
+s = ''
+for ch in ipa.cons2ipa.values():
+    s += ch + u'\u0325' + ' '
+
+print(s)
+
+s = ''
+for ch in ipa.cons2ipa.values():
+    s += ch + u'\u030A' + ' '
+
+print(s)
+
+s = ''
+for ch in ipa.cons2ipa.values():
+    s += ch + u'\u02F3' + ' '
+
+print(s)
+
