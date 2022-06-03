@@ -220,7 +220,40 @@ class P_change(Change) :
         return phon
         
     
-    
+    def just_transform (self, phon) :
+        """
+        Applies a change to transform a phoneme whithout taking care of any kind of condition
+
+        Parameters
+        ----------
+        phon : Phoneme
+
+        Returns
+        -------
+        new_phon : Phoneme 
+
+        """
+        
+        if not phon.isV : ft = [[0, 0, 0],[0,0,0]]
+        
+        else : ft =  [[ 0, 0 , 0],[0,0]]
+        
+        
+        for ind in self.effect.idx : 
+            if ind in self.effect.effect : 
+                
+                ft[ind[0]][ind[1]] = self.effect.effect[ind]  [1]
+
+            else :
+                ft[ind[0]][ind[1]] = phon.features[ind[0]][ind[1]]
+
+        
+        ft = list_2_tuple(ft)
+        
+        if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
+        else : new_phon = Consonant(ft, phon.syl, phon.speller)
+        return new_phon
+       
         
         
     def apply_phon (self,  phon, index , word, verbose = False):

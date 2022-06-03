@@ -121,7 +121,7 @@ class Baby_P_change_generator(P_change_generator) :
         print()
         print(change.target)
     
-    def create_change( self,language, rd = True, target = None, ci = None, verbose = False ) :
+    def generate_P_change( self,language, rd = True, target = None, ci = None, verbose = False ) :
         
         
         #selection of the target
@@ -202,7 +202,7 @@ class Baby_P_change_generator(P_change_generator) :
     
     
     
-    def set_conditions(self, language, change ) :
+    def set_conditions(self, language, change, verbose = False ) :
         
         
         #TODO dirty work incoming
@@ -217,17 +217,21 @@ class Baby_P_change_generator(P_change_generator) :
                 idx_in_wd = i
                 break
         
-        print( rd_context)
-        print("THIS IS THE INDEX OF THE CHANGED WD", i)
+        if verbose : 
+            print( rd_context)
+            print("THIS IS THE INDEX OF THE CHANGED WD", i)
         
         
         #TODO we set randomly between 1 and 3 conditions . to be parametrized 
         
-        nb_cond  = random.randint(0,1) 
-        print("We will add ", nb_cond, " conditions")
+        nb_cond  = random.randint(0,2) 
+        if verbose : print("We will add ", nb_cond, " conditions")
         
         forbidden_rel_pos = [] 
         for loop in range(nb_cond) :
+            
+            print("setting condition ", loop)
+            
             rel_pos = -666
             index = i +rel_pos
             while index not in range(len(rd_context.phonemes)) or rel_pos in forbidden_rel_pos :
@@ -239,13 +243,14 @@ class Baby_P_change_generator(P_change_generator) :
             
             
             conditioner = rd_context.phonemes[index].features
+            idx_cond = feature_indices(conditioner)
             
-            print("THIS IS THE INDEX OF THE CONDITIONER", index)
-            
-            print("CONDITIONNER", )
-            print(rd_context.phonemes[index])
-            print(rd_context.phonemes[index].features)
-            print()
+            if verbose : 
+                print("THIS IS THE INDEX OF THE CONDITIONER", index)
+                print("CONDITIONNER", )
+                print(rd_context.phonemes[index])
+                print(rd_context.phonemes[index].features)
+                print()
             
             #TODO second approximation : one change over 2 the effect is selected.
             effect_tf_id = random.choice( list( change.effect.effect.keys()))
@@ -256,23 +261,27 @@ class Baby_P_change_generator(P_change_generator) :
             #TODO third approximation, the number of wildcards
             nb_wild = random.randint(0,5) 
             for l in range  (nb_wild) :
-                conditioner = bewilder_pattern(conditioner, ft_id)
+                
+                effect_tf_id = random.choice( list( change.effect.effect.keys()))
+                rd_ft_id = random.choice (feature_indices(rd_context.phonemes[index].features))
+                ft_id = random.choice( [effect_tf_id, rd_ft_id])
+                if ft_id in idx_cond : conditioner = bewilder_pattern(conditioner, ft_id)
             
             continu = random.randint(0,1)
             
             
             cond = P_condition(conditioner, rel_pos )
-            
-            print()
-            print("conditions settled")
-            print(cond)
+            if verbose : 
+                print()
+                print("conditions settled")
+                print(cond)
         
       
             change.add_condition(cond)
         
             
             
-        
+            #TODO délocaliser la génération des P_conditions ailleurs (dans le générateur général ? )
         
        
     
@@ -286,7 +295,7 @@ def rd_rel_pos()  :
         ran = random.randint (1, 2) 
         sign = random.choice ([-1, 1])
         rel_pos = ran * sign
-        return sign
+        return rel_pos
         #TODO simplifie pour test
         
         

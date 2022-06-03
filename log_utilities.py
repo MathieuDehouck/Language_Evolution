@@ -4,10 +4,11 @@ Created on Tue May 17 16:02:54 2022
 
 @author: 3b13j
 """
-from utilitaries import feature_match
+from utilitaries import feature_match, feature_indices, tpl_2_candidates
 from IPA import IPA
 from encoder_decoder import encode_f
 from pathlib import Path
+
 
 
 ipa = IPA()
@@ -144,10 +145,13 @@ def phon2log (phon, path) :
     f.write("   :  ")
     f.write( phon.description )
     
+    
+    
+    
 
 def samples2log(path, liste, n =10 ) : 
     """
-    Method that writes down the wors modified by a change. 
+    Method that writes down only some of the words modified by a change. 
 
     Parameters
     ----------
@@ -172,8 +176,32 @@ def samples2log(path, liste, n =10 ) :
     for loop in range(min(n, len(liste))) :
         f.write (str(liste[loop][0]) + "  >  "+str( liste[loop][1]) +" \n" )
         
+        
+        
+        
+        
+        
+def purge_log(path) :
+    """
+    Clears a log file
 
-def change2log (change, path,lang,  print_phons = False) :
+    Parameters
+    ----------
+    path : 
+
+    Returns
+    -------
+    None.
+
+    """
+    folder = Path("logs/")
+    path = folder / path
+    f = open(path, 'w')
+    f.close()
+
+
+
+def change2log (change, path,lang,  print_phons = True, i = 0 ) :
     
     
     folder = Path("logs/")
@@ -183,53 +211,68 @@ def change2log (change, path,lang,  print_phons = False) :
     
     f = open (path, "a",encoding='utf8')
     
-    f.write("A change has occured ")
-    f.write("\n")
+    if i != 0 : 
+        f.write("CHANGE N°")
+        f.write(str(i))
     f.write("\n")
     f.write("\n")
     
+    if len(change.conditions) != 0 : 
+        f.write ( "If the following conditions were satisfied :  ")
+        f.write("\n")
+        for cond in change.conditions : 
+          f.write(str(cond))  
+          f.write("\n")
     
-    for i in range (len (change.config_initiale.state )) :
-        value = change.config_initiale.state [i]
-        if value != -1 :
+    
+    f.write("\n")
+    f.write("The phonemes matching the followin target were modified  : \n ")
+    f.write(str(change.target))
+    f.write("\n")
+    
+    idx  = feature_indices(change.target)
+    target_vow = (len(idx) == 5)
+    
+    for key, values in change.effect.effect.items() :
+        
+            if target_vow : feat_semantics = ipa.vfeatures
+            else : feat_semantics = ipa.cfeatures
+        
             f.write ( "The feature ")
-            f.write ( ipa.features[i]) 
+            f.write ( str(feat_semantics[key[0]][key[1]])) 
+            # For the manner of articulation , it is possible that the result is in fact a tuple 
             f.write (' switched values from ')
-            f.write (str(change.config_initiale.state [i] ))
+            f.write (str(values[0]))
             f.write (' to ')
-            f.write (str(change.config_finale.state [i]))
-            f.write("\n")
+            f.write (str(values[1]))
             f.write("\n")
     
-    f.write(str(change))
+    #f.write(str(change))
+    f.write("\n")
+    
+    
+   
     
     #TODO this version of impacted phonem selects the impacted phonems an und für sich , not the imacted phonems i nthe language
     # we need to access the language and create functions to update it.
     
+
+    
+    
     if print_phons :
         f.write("\n")
+        phons = tpl_2_candidates(lang, change.target)
         
-        
-        phons = set( tpl2phons(change.target, lang.phonemes))
-        
-        
-        cphons = set(tpl2phons(change.target , lang.phonemes) )
-        phons = phons & cphons
-        
-        """
-        
-        TODO we need to eliminate phonems regarding the condition. 
-        simple and lazy solution : only considering the conditions and the target 
-        for condition in change.conditions :
-            cphons = set(tpl2phons(condition.template , lang.phonemes) )
-            phons = phons & cphons
-        """    
+    
         f.write('Impacted phonems :')
-        phons = change.impacted_phonemes
-        for phon in change.impacted_phonemes :
+        
+        for phon in phons :
+            
+            new_phon = change.just_transform(phon)
+            
             f.write(phon.ipa) 
             f.write(" > ")
-            f.write(change.impacted_phonemes[phon].ipa)
+            f.write(new_phon.ipa)
             f.write("\n")
         
             
@@ -237,37 +280,38 @@ def change2log (change, path,lang,  print_phons = False) :
     f.write("\n")
     f.write("\n")
     
-    """
-    for phon in change.impacted_phonemes :
-        
-        f.write (str(phon.ipa))
-        
-        f.write("   :  ")
-        f.write( phon.description )
-        
-        
-        f.write( "   ->   ")
-        
-        
-        
-        phon = change.impacted_phonemes[phon]
-        
-        f.write (str(phon.ipa))
-        
-        f.write("   :  ")
-        f.write( phon.description )
-        
-        
-        
-        f.write("\n")
-    """
     f.write("\n")
     f.write("\n")
     f.close()
     
     return 
    
+    
+   
+    
+   
+    
+   
 def langcomp2log (l1, l2, path) :
+    """
+    Comapres the vobulary of two languages and writes it in a log (subfunction used to trace the evolution between two language state)
+    
+
+    Parameters
+    ----------
+    l1 : Language
+    
+    l2 :Language
+    
+    path : str
+        path to destination file
+
+    Returns
+    -------
+    None.
+
+    """
+    
     
     folder = Path("logs/")
     path = folder / path
@@ -290,7 +334,22 @@ def langcomp2log (l1, l2, path) :
     f.close()
         
     
+    
+    
+    
 def lgs2log(liste) :
+    """
+    I honestly currently forgot what it did
+
+    Parameters
+    ----------
+    liste : ?
+
+    Returns
+    -------
+    None.
+
+    """
     
     
     for i in range (len(liste) -1) :
@@ -299,6 +358,56 @@ def lgs2log(liste) :
         
     
     
+    
+    
+    
+def extract_changed_words(path, write = False) :
+    """
+    Analyses a dictionnary log and extracts only the words that were changed.
+    
+    The function the can if the user wants it write the modified words at the end of the same document
+
+    Parameters
+    ----------
+    path : str
+        path to the file
+        
+    write : bool
+        Does the user want to write down the modified words at the end of the document ?
+
+    Returns
+    -------
+    chg_wds :list 
+
+    """
+    
+    folder = Path("logs/")
+    path = folder / path
+    chg_wds = []
+    
+    f = open(path, 'r', encoding = 'utf8')
+    
+    for line in f :
+        line = line.split() 
+        print(line)
+        if len(line) == 3 : 
+            if line[0] != line[2] : chg_wds .append(line[2])
+   
+    if write :
+        
+        f = open(path, 'a', encoding = 'utf8')
+        f.write("\n")
+        f.write("\n")
+        f.write("CHANGED WORDS ; ")
+        f.write("\n")
+        f.write("\n")
+        for wd in chg_wds : 
+            
+            f.write (wd)
+            f.write("  ;  ")
+        
+    f.close()
+    return chg_wds
     
     
     

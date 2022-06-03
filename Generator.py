@@ -4,7 +4,7 @@ to fill
 import random
 from wiki_utilities import get_language 
 latin = get_language('latin_classique.txt', "latin")
-from utilitaries import printl, feature_match,  tpl2candidates
+from utilitaries import printl, feature_match,  tpl_2_candidates
 from Configuration import Configuration
 from Condition import P_condition , S_condition 
 from Change import P_change
@@ -50,11 +50,11 @@ class Change_Generator():
         rel_pos = random.randint(1, 5)
         continu = random. randint(0,1)
         cond = P_condition.constrained_rd_condition( conf_i , direction*rel_pos, -1, continu)
-        candidates2 = tpl2candidates(candidates, cond.template)
+        candidates2 = tpl_2_candidates(candidates, cond.template)
         # We want our condition to be compatible with the phonemes belongingto out language
         while len(candidates ) == 0 :
             print("we generate a P_cond")
-            candidates2 = tpl2candidates(candidates, cond.template)
+            candidates2 = tpl_2_candidates(candidates, cond.template)
             cond = P_condition.constrained_rd_condition( conf_i , direction*rel_pos, -1, continu)
            
         return cond
@@ -163,10 +163,10 @@ class Change_Generator():
         # we find a change to operate
         conf_i = Configuration()
         conf_f = conf_i.get_output()
-        candidates = tpl2candidates(classe, conf_i.state)
+        candidates = tpl_2_candidates(classe, conf_i.state)
         
         while len(candidates) == 0 :
-            candidates = tpl2candidates(classe, conf_i.state)
+            candidates = tpl_2_candidates(classe, conf_i.state)
             conf_i = Configuration()
             conf_f = conf_i.get_output()
         

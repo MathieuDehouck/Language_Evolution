@@ -1,0 +1,195 @@
+CHANGE N°1
+
+
+The phonemes matching the followin target were modified  : 
+ ((3, -1, 1), (11, 0, -1))
+The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 1, 0, 0)
+
+
+Impacted phonems :ɣʷ > ɣʷ
+
+
+
+
+EXAMPLES 
+  
+lanɡʷio:  >  lanɣʷio: 
+lanɡʷ:ire  >  lanɣʷ:ire 
+linɡʷ:atikum  >  linɣʷ:atikum 
+sanɡʷinit:as  >  sanɣʷinit:as 
+CHANGE N°2
+
+
+The phonemes matching the followin target were modified  : 
+ ((-1, (0, 0, 1, 0, 0), 1), (0, 0, 0))
+The feature Voiced switched values from 1 to 0
+
+
+Impacted phonems :
+
+
+
+EXAMPLES 
+  
+apozzema  >  apossema 
+aukt:orizz:o  >  aukt:oriss:o 
+b:yzzantion  >  b:yssantion 
+b:yzzantium  >  b:yssantium 
+f:estizz:o  >  f:estiss:o 
+ɡazzopʰylakium  >  ɡassopʰylakium 
+j:udaizz:o  >  j:udaiss:o 
+izzo  >  isso 
+manizz:are  >  maniss:are 
+manizz:o  >  maniss:o 
+CHANGE N°3
+
+
+The phonemes matching the followin target were modified  : 
+ ((11, (0, 1, 0, 0, 0), 0), (-1, 0, -1))
+The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 1, 0, 0)
+
+
+Impacted phonems :
+
+
+
+EXAMPLES 
+  
+apsedii:  >  aɸsedii: 
+apsedium  >  aɸsedium 
+akkap:o  >  akkaɸ:o 
+akkaptio:  >  akkaɸtio: 
+akkapt:o  >  akkaɸt:o 
+akkomp:lesk:o  >  akkomɸ:lesk:o 
+akkomp:lire  >  akkomɸ:lire 
+akkumipse  >  akkumiɸse 
+atp:ak:are  >  atɸ:ak:are 
+appressum  >  aɸɸressum 
+CHANGE N°4
+
+If the following conditions were satisfied :  
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((6, 2, -1), (-1, 0))
+
+The phonemes matching the followin target were modified  : 
+ ((7, -1, 1), (0, 0, 0))
+The feature secondary place of articulation switched values from 0 to 5
+
+
+Impacted phonems :n > n
+r > r
+l > l
+
+
+
+
+EXAMPLES 
+  
+akkomɸ:lire  >  akkomɸ:lire 
+akkumille  >  akkumille 
+akkʷaer:ire  >  akkʷaer:ire 
+admin:akia:re  >  admin:akia:re 
+admin:akio:  >  admin:akio: 
+admort:ire  >  admort:ire 
+aff:id:awit  >  aff:id:awit 
+al:emosyna  >  al:emosyna 
+alemosyn:e  >  alemosyn:e 
+all:umin:are  >  all:umin:are 
+CHANGE N°5
+
+If the following conditions were satisfied :  
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((0, (0, 0, 1, 0, 0), -1), (-1, 0, -1))
+
+The phonemes matching the followin target were modified  : 
+ ((6, 2, 1), (1, -1))
+The feature Round switched values from 1 to 0
+
+
+Impacted phonems :y > i
+
+
+
+
+EXAMPLES 
+  
+hydromant:ia  >  hidromant:ia 
+hydromantis  >  hidromantis 
+hyɸaetʰrus  >  hiɸaetʰrus 
+CHANGE N°6
+
+If the following conditions were satisfied :  
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, -1, -1), (-1, -1))
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((6, -1, 0), (1, -1))
+
+The phonemes matching the followin target were modified  : 
+ ((-1, (0, 0, 0, 2, 0), 1), (5, -1, 0))
+The feature pre_nasal switched values from 0 to 1
+
+
+Impacted phonems :n͜r > n͜r
+r > n͜r
+
+
+
+
+EXAMPLES 
+  
+akkomɸ:lire  >  akkomɸ:lin͜re 
+akkʷaer:ire  >  akkʷaer:in͜re 
+admort:ire  >  admort:in͜re 
+bann:ire  >  bann:in͜re 
+kalliroe:  >  kallin͜roe: 
+kamb:ire  >  kamb:in͜re 
+kʰ:irurɡia:nus  >  kʰ:in͜rurɡia:nus 
+komɸ:lire  >  komɸ:lin͜re 
+k:os:ire  >  k:os:in͜re 
+d:ire  >  d:in͜re 
+CHANGE N°7
+
+If the following conditions were satisfied :  
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((6, -1, 1), (1, 0))
+C:   Rel pos :  -2    Abs_pos : -1         Continu : False
+Template :((-1, (0, 0, 0, 2, 0), -1), (-1, -1, -1))
+
+The phonemes matching the followin target were modified  : 
+ ((3, (0, 1, 0, 0, 0), 1), (0, -1, -1))
+The feature secondary place of articulation switched values from 0 to 1
+
+
+Impacted phonems :ɡ > ɡ
+
+
+
+
+EXAMPLES 
+  
+d:estruɡere  >  d:estruɡere 
+d:estruɡ:o  >  d:estruɡ:o 
+CHANGE N°8
+
+
+The phonemes matching the followin target were modified  : 
+ ((7, (0, 1, 0, 0, 0), 1), (-1, 0, 0))
+The feature Voiced switched values from 1 to 0
+
+
+Impacted phonems :
+
+
+
+EXAMPLES 
+  
+aɸsedii:  >  aɸsetii: 
+aɸsedium  >  aɸsetium 
+akkord:are  >  akkort:are 
+akkord:o  >  akkort:o 
+adbassum  >  atbassum 
+adh:ik  >  ath:ik 
+adakʷ:o  >  atakʷ:o 
+adbassia:re  >  atbassia:re 
+adbell:esk:o  >  atbell:esk:o 
+adbrakkʰio:  >  atbrakkʰio: 

@@ -126,8 +126,8 @@ class Language() :
         for word in self.voc.keys() :
             w1 = self.voc[word]
             w2 = language.voc[word]
-            bol = w1.equals(w2)
-            if  not bol :
+            
+            if  not w1 == w2 :
                 differents.append([self.voc[word],language.voc[word] ])
         
         if verbose :

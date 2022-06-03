@@ -93,15 +93,17 @@ def change_pattern (pattern , vowel,  index, new_value) :
     
    
     
-def bewilder_pattern(pattern, index = None) :
+def bewilder_pattern(pattern, index = None, verbose = False) :
     
     idx = feature_indices(pattern)
     
-    if index == None : index = random.choice(idx)
+    if type(index ) != tuple : index = random.choice(idx)
     
-    print(pattern)
-    print(index)
-    
+    if verbose : 
+        print(pattern)
+        print(idx)
+        print(index)
+        
     while pattern[index[0]][index[1]] == -1 :
         index = random.choice(idx)
     
