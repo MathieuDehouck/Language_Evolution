@@ -16,8 +16,10 @@ import copy
 
 class Changer () :
     
-   def  __init__(self) :
-        self.generator = Change_Generator() 
+   def  __init__(self, gen = None) :
+       #TODO modified for the new micro script
+        if gen == None : self.generator = Change_Generator() 
+        else : self.generator = gen
     
    def change_u (self, lang) :
        
@@ -60,8 +62,8 @@ class Changer () :
        
 class Tree_changer(Changer) :
     
-    def __init__(self, lang) :
-        super().__init__()
+    def __init__(self, lang, gen = None) :
+        super().__init__(gen)
         rt = Root(lang)
         tree = L_tree(rt)
         self.tree = tree
@@ -71,7 +73,7 @@ class Tree_changer(Changer) :
         
         
         
-        lang = copy.deepcopy(lang)
+        
         change = self.generator.generate_P_change(lang)
         while change.applicable(lang) != True :
             change = None
