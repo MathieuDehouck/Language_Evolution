@@ -12,7 +12,10 @@ A condition is associated to a change object and states whether a change can be 
 
 maxC = [11, 1, 1, 1, 1, 2, 1, 1 , 1 , 1]
 maxV = [2, 6, 1 , 1 , 1]
-import utilitaries
+
+
+import Sampling
+from utilitaries import get_random_pattern, mask_match, feature_indices
 import random
 
 class Condition():
@@ -72,13 +75,13 @@ class P_condition (Condition) :
         checks whether the condition is satisfied.
     """
     
-    def __init__(self, feature_template,absol_pos = -1,  rel_pos = 0 , continu = False):
+    def __init__(self, feature_template,  rel_pos = 0 , absol_pos = -1, continu = False):
         
         self.template = feature_template 
         self.rel_pos = rel_pos
         self.absol_pos = absol_pos
         self.continu = continu
-        self.isV = (len(feature_template) == 5)
+        self.concerns_V = (len(feature_template) == 5)
     
     
     
@@ -154,18 +157,22 @@ class P_condition (Condition) :
             
         phon = word.phonemes[rank]
         
-        if phon.isV != self.isV :
-            print("not applicable on the target")
-        
+        """
+        if phon.isV != self.concerns_V:
+            if verbose : print("not applicable on the target")
+            return False 
+        """
         # does the condition have an absolute position to be checked on ?
         if self.absol_pos  != - 1 :
             if  self.absol_pos != rank :
                 if verbose : print("The condition is not applied on the phoneme "+ phon.ipa)
                 return  False
         
-        # we check if the relative posotions match 
+        # we check if the relative positions match 
         index = rank + self.rel_pos 
-        if index not in range (len(word.phonemes)) :
+        #TODO
+        if rank not in range (len(word.phonemes)) :
+            if verbose : print('conditioning phoneme not in range')
             return False
         if verbose :
             print("we need to satisfy the following pattern")
@@ -173,54 +180,47 @@ class P_condition (Condition) :
             print( "Phoneme :" , word.phonemes[index].ipa, "    " , word.phonemes[index])
             
         if not self.continu :
-            bol = utilitaries.feature_match ( self.template , word.phonemes[index].features)
+            if index not in range (len(word.phonemes)) : bol = False
+            else : bol = mask_match ( self.template , word.phonemes[index].features , self.concerns_V )
+            if verbose :
+                if bol :print("CONDITION SATISFIED") 
+                else : print ("CONDITION NOT SATISFIED")
+            
             return bol
         
         
         for j in range (min(index, rank) ,max(index, rank) ) :
-                val = utilitaries.feature_match ( self.template , word.phonemes[j].features    )
+                val = mask_match( self.template , word.phonemes[j].features , self.concerns_V  )
                 if verbose :
                     print("we test ",j)
                     print(val)
                     print()
-                if val : return True   
+                if val : 
+                    if verbose : 
+                        print("CONDITION SATISFIED") 
+                    return True
+                
+        if verbose: print ("CONDITION NOT SATISFIED")
         return False
+    
+    
+    
     
     
          
     def __str__(self) :
-        return "C:   Rel pos :  " + str(self.rel_pos) + "  Continu : "+ str(self.continu) +  "  Template :" + str(self.template)
+    
+        return "C:   Rel pos :  " + str(self.rel_pos) + "    Abs_pos : "+ str(self.absol_pos) +  "         Continu : "+ str(self.continu) +  "\nTemplate :" + str(self.template)
           
     
     
-    #TODO raffiner la gestion des conditions contraintes 
-    def constrained_rd_condition( config , rel_pos = 0, abs_pos = -1, continu = False):
-        """
-        Creates a random condition constrained by a configuration 
-        """
-        modifs = [] # the non wildcarded features
-        tpl = config.state
-        for i in range (len(tpl)) :
-            if tpl[i] != -1 :
-                modifs.append(i) 
-                   
-        cond = P_condition.rd_p_condition(  rel_pos , abs_pos  , continu ) 
-        
-        #these lines of code add a constrained condition on a phoneme directly following the target phoneme
-        for ind in modifs :
-            if ind >1 :
-                if cond.template == -1 : 
-                    val = random.randint (0,1)
-                    cond.set_ft(ind, val)
-                    
-        return cond
-        
+    
     
         
     
-    def rd_p_condition( rel_pos = 0, abs_pos = -1, continu = False):
+def rd_p_condition( language, rel_pos = 0, abs_pos = -1, continu = False):
         """
-        generates a random s_condition
+        generates a random P_condition
 
         Parameters
         ----------
@@ -237,27 +237,14 @@ class P_condition (Condition) :
 
         """
          
-        #TODO a parametriser 
         
-        # the main goal of this function to generate a condition is to generate the feature_template.
+        sign = random.randint(0, 1) 
+        if sign == 0 : sign = -1
         
-        Voy = random.randint (0, 1)
-            
-        if  Voy : 
-            ft = [-1] * 5
-            m = maxV
-            
-        else :
-            ft = [-1] * 10
-            m = maxC
+        pattern = get_random_pattern(language)
+        cond = P_condition(pattern, sign)
         
         
-        for index, f in enumerate( ft ) : 
-
-            value = random.randint(0, m)
-            ft[index] = value
-        
-        cond = P_condition(ft,  abs_pos, rel_pos, continu)
         
         return cond
     

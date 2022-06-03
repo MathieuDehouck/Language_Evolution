@@ -12,6 +12,7 @@ from Configuration import Configuration
 from P_change_generator import Baby_P_change_generator
 from Phoneme import list_2_tuple , tuple_2_list
 from Effect import Effect
+from Condition import P_condition, rd_p_condition
 
 i = IPA.get_IPA()
 
@@ -29,14 +30,20 @@ lang = get_language("latin_classique.txt", "latin")
 origin = lang
 bb = Baby_P_change_generator()
 
-for i in range(1):
-    ch = bb.create_change(lang, True)
-    lang , chs_wds = ch.apply_language(lang)
+modifs = []
 
+for i in range(1):
+    
+    
+    
+    ch = bb.create_change(lang, True, verbose = True)
+    lang , chs_wds = ch.apply_language(lang)
+    
+    modifs.append(chs_wds)
     print(chs_wds)
     print(ch)
-    
 
-    
-    
-#origin.print_both(lang)
+if len(ch.conditions) != 0 :
+ print(   "we test a condition ")
+ cond = ch.conditions[0]
+ 

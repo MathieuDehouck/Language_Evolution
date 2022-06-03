@@ -43,7 +43,7 @@ def feature_indices(features):
 
 
 def mask_match(mask, phon, voy):
-    
+   
     idx = feature_indices(mask)
     idx2 = feature_indices(phon) 
     if idx != idx2 : return False
@@ -57,7 +57,62 @@ def mask_match(mask, phon, voy):
     
 
 
+def get_random_pattern(language) :
+    
+    
+    # TODO ajouter distribution de probabilité sur le nombre de wildcards ? 
+    phon = random.choice(language.phonemes)
+    base = phon.features
+    nb_wild = random.randint(0,len(feature_indices(base)) - 2)
+    for i in range(nb_wild ) :
+        base = bewilder_pattern(base)
+    return base
+    
+def change_pattern (pattern , vowel,  index, new_value) :
+    
+    if not vowel :
+        ft = [[0, 0, 0],[0,0,0]]
+        idx =  [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
+        
+    
+    else : 
+        ft =  [[ 0, 0 , 0],[0,0]]
+        idx = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1) ]
+    
+    
+    for ind in idx : 
+        
+        if ind == index :
+            ft[ind[0]][ind[1]] = new_value
+        else :
+            ft[ind[0]][ind[1]] = pattern[ind[0]][ind[1]]
 
+    
+    ft = list_2_tuple(ft)
+    return ft
+    
+   
+    
+def bewilder_pattern(pattern, index = None) :
+    
+    idx = feature_indices(pattern)
+    
+    if index == None : index = random.choice(idx)
+    
+    print(pattern)
+    print(index)
+    
+    while pattern[index[0]][index[1]] == -1 :
+        index = random.choice(idx)
+    
+    return change_pattern(pattern, len(idx)==5, index, -1)
+    
+
+
+    
+    
+    
+    
 
 def feature_match(f1, f2, verbose=False):
     """input : two feature list 
@@ -140,9 +195,28 @@ def feature_random_generator():
 
 # functions interacting with Language objects
 
+def tuple_2_list(tupl) :
+    
+    
+    liste = []
+    for el in tupl : 
+        if type(el) == tuple : 
+            liste.append(tuple_2_list(el))
+        else : liste.append(el)
+    return liste
 
 
-def tpl2candidates(lang, tpl, verbose = False) :
+def list_2_tuple(tupl) :
+    
+    liste = tuple([])
+    for el in tupl : 
+        if type(el) == list : 
+            liste += (list_2_tuple(el),)
+        else : liste +=(el,)
+        
+    return tuple(liste)
+
+def tpl_2_candidates(lang, tpl, verbose = False) :
     """
     gives the list of the phonemes of a language that satisfy a conditionned feature template
 
@@ -159,8 +233,8 @@ def tpl2candidates(lang, tpl, verbose = False) :
     """
     
     candidates = []
-    for phoneme in lang :
-        if feature_match(tpl, phoneme.features) :
+    for phoneme in lang.phonemes :
+        if mask_match(tpl, phoneme.features, phoneme.is_Vowel() ) :
             candidates.append(phoneme)
     if verbose :
         print("In ", lang.name, " the following pattern is satisfied by the following list of phonems")
@@ -169,6 +243,18 @@ def tpl2candidates(lang, tpl, verbose = False) :
         printl(candidates)
         
     return candidates
+
+
+
+def words_containing(mask, language) :
+    
+    
+    wds = []
+    for wd in language.voc.values() :
+        
+        for phon in wd.phonemes : 
+            if mask_match(mask, phon.features, phon.is_Vowel) : wds.append(wd)
+    return wds
 
 
 

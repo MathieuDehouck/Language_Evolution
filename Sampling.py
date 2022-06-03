@@ -57,11 +57,11 @@ def mat_to_adj (mat) :
 
 #feature 1 : front , values btw 0 and 2
 
-f1v = fill_matrix(3)
+f1v = fill_matrix(6)
 
 #feature 2 : weight, values btw 0 and 6
 
-f2v = fill_matrix(6)
+f2v = fill_matrix(2)
 
 
 
@@ -134,7 +134,7 @@ manner_list  =  [ (0, 0, 0, 0, 0), # approximant
 
 secondary_place = [ 0, 1, 5, 11]
 
-sec_place_2_ind = { 11 : 3 , 1 : 1 , 0:0 , 2 : 5}
+sec_place_2_ind = { 11 : 3 , 1 : 1 , 0:0 , 5 : 2}
 
 
 
