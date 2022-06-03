@@ -17,5 +17,5 @@ manner_enc = {'A' :  (0, 0, 0, 0, 0), # approximant
               'T':   (0, 0, 0, 2, 0), # trill
               'L':   (0, 0, 0, 0, 1), # lateral
               'Lf':  (0, 0, 1, 0, 1), # lateral fric
-              'Lt':  (0, 0, 0, 1, 1),# lateral trill
-              'Afr': (0, 1, 1, 0, 0)}  #Africates
+              'Lt':  (0, 0, 0, 1, 1), # lateral trill
+              'Afr': (0, 1, 1, 0, 0)} # Africates

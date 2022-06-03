@@ -284,13 +284,64 @@ class IPA() :
 
 
         else:
-            base = (phon.features[0], (0,0,0))
-            if base in self.feat2ipa:
-                out = self.feat2ipa[base]
+            base = feats[0], (0, 0, 0)
+            if base in self.cons2ipa:
+                out = self.cons2ipa[base]
+            elif feats[0][1] == (0, 1, 1, 0, 0):
+                # thats an affricate
+                plos = (feats[0][0], (0, 1, 0, 0, 0), feats[0][2]), (0, 0, 0)
+                fric = (feats[0][0], (0, 0, 1, 0, 0), feats[0][2]), (0, 0, 0)
+
+                if plos in self.cons2ipa:
+                    out = self.cons2ipa[plos]
+                else:
+                    plos = (feats[0][0], (0, 1, 0, 0, 0), 1-feats[0][2]), (0, 0, 0)
+                    out = self.cons2ipa[plos]
+
+                if fric in self.cons2ipa:
+                    out += u'\u035c' + self.cons2ipa[fric]
+                else:
+                    fric = (feats[0][0], (0, 0, 1, 0, 0), 1-feats[0][2]), (0, 0, 0)
+                    out += u'\u035c' + self.cons2ipa[fric]
+
             else:
-                print(base)
-                out = self.feat2ipa [((base[0][0], base[0][1], 1), base[1])]
-                
+                # try flipping voicing
+                base = (feats[0][0], base[0][1], 1-feats[0][2]), (0, 0, 0)
+                if base in self.cons2ipa:
+                    out = self.cons2ipa[base]
+
+                    if feats[0][2] == 1:
+                        out += u'\u032C'
+                    elif feats[0][2] == 0:
+                        out += u'\u0325'
+
+                else:
+                    dist = []
+                    for ((part, manner, voice), _), ch in self.cons2ipa.items():
+                        if feats[0][1] == manner:
+                            dist.append(((part-feats[0][0])**2 + (voice - feats[0][2])**2, (part, voice), ch))
+                    dist.sort()
+                    print(dist)
+                    print(feats)
+                    _, (part, voice), out = dist[0]
+
+                    if feats[0][2] == 1 and feats[0][2] != voice:
+                        out += u'\u032C'
+                    elif feats[0][2] == 0 and feats[0][2] != voice:
+                        out += u'\u0325'
+                    
+                    direction = feats[0][0] - part
+                    print(direction)
+                    if direction < 0:
+                        for _ in range(abs(direction)):
+                            #out += u'\u034F'
+                            out += u'\u0320'
+                    else:
+                        for _ in range(abs(direction)):
+                            #out += u'\u034F'
+                            out += u'\u031F'
+
+
 
             if phon.is_labialised() : # round w
                 out += 'ʷ'
@@ -305,10 +356,5 @@ class IPA() :
                 except:
                     n = 'n'
                 out = n + u'\u035c' + out
-            
-
-            
+                    
         return out
-    
-ipa = IPA.get_IPA()
-#print(ipa.feat2ipa.values())
