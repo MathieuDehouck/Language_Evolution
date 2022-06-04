@@ -212,6 +212,9 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
     f = open (path, "a",encoding='utf8')
     
     if i != 0 : 
+        if i != 1 : 
+            f.write("\n")
+            f.write("\n")
         f.write("CHANGE N°")
         f.write(str(i))
     f.write("\n")
@@ -261,24 +264,22 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
     
     if print_phons :
         f.write("\n")
-        phons = tpl_2_candidates(lang, change.target)
+        #phons = tpl_2_candidates(lang, change.target)
         
     
         f.write('Impacted phonems :')
         
-        for phon in phons :
+        for phon in change.impacted_phonemes :
             
-            new_phon = change.just_transform(phon)
-            
-            f.write(phon.ipa) 
-            f.write(" > ")
-            f.write(new_phon.ipa)
+            #new_phon = change.just_transform(phon)
             f.write("\n")
+            f.write(phon[1]) 
+            f.write(" > ")
+            f.write(change.impacted_phonemes[phon][1])
+        f.write("\n")
         
             
-            
-    f.write("\n")
-    f.write("\n")
+    
     
     f.write("\n")
     f.write("\n")

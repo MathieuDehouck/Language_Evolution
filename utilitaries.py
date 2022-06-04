@@ -218,6 +218,18 @@ def list_2_tuple(tupl) :
         
     return tuple(liste)
 
+
+
+
+def phon_in_dic(dic, phon):
+    
+    for key in dic : 
+        if key == phon : return True
+    return False
+
+
+
+
 def tpl_2_candidates(lang, tpl, verbose = False) :
     """
     gives the list of the phonemes of a language that satisfy a conditionned feature template

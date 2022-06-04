@@ -80,7 +80,10 @@ class Phoneme(object) :
     def is_Vowel(self) :
         return type(self) == Vowel
 
-    
+    def __eq__(self, other) :
+        return self.features == other.features
+
+
     def update_IPA(self, config, verbose = False) :
         """
         updates the ipa field of the Phoneme it is applied to. 

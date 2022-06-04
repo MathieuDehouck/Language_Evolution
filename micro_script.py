@@ -25,11 +25,11 @@ i = IPA.get_IPA()
 path = "friday"
 
 
-lang = get_language("latin_classique.txt", "latin")
+#lang = get_language("latin_classique.txt", "latin")
 
 #lang = get_language("tokipona.txt", "tokipona")
 
-#lang = get_language("greek.txt", "greek")
+lang = get_language("greek.txt", "greek")
 
 
 
@@ -37,13 +37,14 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, 8 ,True)
+new_language , changes, wc = time.change(lang, 50,True)
 origin.print_both(new_language)
 #origin.compare(nlp)
 
 
 # we write two logs to keep track of the changes
 purge_log(path+"_changes.txt")
+purge_log(path+"_dic.txt")
 for i in range(len(changes))  :
     change2log(changes[i], path+"_changes.txt" ,new_language,  True, i+1)
     samples2log(path+"_changes.txt", wc[i])
