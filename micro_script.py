@@ -25,11 +25,16 @@ i = IPA.get_IPA()
 path = "friday"
 
 
-#lang = get_language("latin_classique.txt", "latin")
+
+
+# We choose a language to play with 
+
+lang = get_language("latin_classique.txt", "latin")
 
 #lang = get_language("tokipona.txt", "tokipona")
 
-lang = get_language("greek.txt", "greek")
+#lang = get_language("greek.txt", "greek")
+
 
 
 
@@ -48,7 +53,7 @@ purge_log(path+"_dic.txt")
 for i in range(len(changes))  :
     change2log(changes[i], path+"_changes.txt" ,new_language,  True, i+1)
     samples2log(path+"_changes.txt", wc[i])
-langcomp2log (lang, new_language, path + "_dic.txt")
+langcomp2log (origin, new_language, path + "_dic.txt")
 extract_changed_words(path + "_dic.txt", True)
 
  # we open

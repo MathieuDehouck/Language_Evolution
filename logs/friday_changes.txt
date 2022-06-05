@@ -1,1310 +1,1403 @@
 CHANGE N°1
 
 If the following conditions were satisfied :  
-C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((-1, -1, 0), (-1, 0))
 C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((6, 2, 0), (1, 0))
+Template :((-1, 2, 0), (1, 0))
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, 0, -1), (1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((11, (0, 1, 0, 0, 0), -1), (-1, 0, 1))
-The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 1, 0, 0)
+ ((-1, -1, 0), (0, 0, 0))
+The feature aspiration switched values from 0 to 1
 
 
 Impacted phonems :
-pʰ > ɸʰ
+t > tʰ
+p > pʰ
+k > kʰ
+s > sʰ
+f > fʰ
 
 
 EXAMPLES 
   
-lɛksipʰanes  >  lɛksiɸʰanes 
-alɛksipʰarmakon  >  alɛksiɸʰarmakon 
-areipʰilos  >  areiɸʰilos 
-alipʰar  >  aliɸʰar 
-ipʰiɡɛnia  >  iɸʰiɡɛnia 
+abbat:o  >  abbatʰ:o 
+abbatuo:  >  abbatʰuo: 
+akkap:o  >  akkapʰ:o 
+akkoɡnit:o  >  akkoɡnitʰ:o 
+ak:ukla  >  akʰ:ukla 
+ak:uklae  >  akʰ:uklae 
+ak:utia:re  >  akʰ:utia:re 
+ak:utio:  >  akʰ:utio: 
+adnek:atu  >  adnek:atʰu 
+adnek:o  >  adnekʰ:o 
 
 
 CHANGE N°2
 
+If the following conditions were satisfied :  
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((10, (0, 0, 1, 0, 0), 0), (0, 0, 0))
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((-1, -1, -1), (-1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((11, -1, 1), (0, 0, -1))
-The feature place of articulation switched values from 11 to 9
+ ((10, (0, 0, 1, 0, 0), -1), (0, 0, 0))
+The feature place of articulation switched values from 10 to 9
 
 
 Impacted phonems :
-w > ʋ̠
-m > n̼
-b > d̼
-β > ð̼
+f > θ̼
 
 
 EXAMPLES 
   
-awɡias  >  aʋ̠ɡias 
-awlis  >  aʋ̠lis 
-aʍksumon  >  aʍksun̼on 
-baal  >  d̼aal 
-balbura  >  d̼ald̼ura 
-bɛrɡa  >  d̼ɛrɡa 
-baktria  >  d̼aktria 
-betriakon  >  d̼etriakon 
-byotos  >  d̼yotos 
-bottiɛy  >  d̼ottiɛy 
+aff:id:awit  >  aθ̼f:id:awit 
+aff:um:are  >  aθ̼f:um:are 
+aff:um:o  >  aθ̼f:um:o 
+affund:are  >  aθ̼fund:are 
+affund:o  >  aθ̼fund:o 
+offer:eskere  >  oθ̼fer:eskere 
+offer:esk:o  >  oθ̼fer:esk:o 
+offerio:  >  oθ̼ferio: 
+offer:ire  >  oθ̼fer:ire 
+sufferio:  >  suθ̼ferio: 
 
 
 CHANGE N°3
 
+If the following conditions were satisfied :  
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, -1, 1), (1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((7, (0, 0, 0, 2, 0), -1), (-1, 0, 0))
-The feature secondary place of articulation switched values from 0 to 1
+ ((-1, (0, 0, 1, 0, 0), 0), (0, 0, 1))
+The feature aspiration switched values from 1 to 0
 
 
 Impacted phonems :
-r > r
-r̥ > r̥
+sʰ > s
+fʰ > f
 
 
 EXAMPLES 
   
-d̼ald̼ura  >  d̼ald̼ura 
-d̼ɛrɡa  >  d̼ɛrɡa 
-d̼aktria  >  d̼aktria 
-d̼etriakon  >  d̼etriakon 
-d̼rɛnɛ  >  d̼rɛnɛ 
-d̼raʋ̠ron  >  d̼raʋ̠ron 
-d̼reʍky  >  d̼reʍky 
-d̼ryklike  >  d̼ryklike 
-d̼osporos  >  d̼osporos 
-ɡad̼riel  >  ɡad̼riel 
+bisʰ:omum  >  bis:omum 
+bisʰonium  >  bisonium 
+k:nifʰus  >  k:nifus 
+deifʰormis  >  deiformis 
+refʰ:us:are  >  ref:us:are 
+refʰ:us:o  >  ref:us:o 
+trifʰolum  >  trifolum 
 
 
 CHANGE N°4
 
 If the following conditions were satisfied :  
-C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((3, (0, 1, 0, 0, 0), 0), (-1, 0, 0))
 C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((4, -1, 1), (-1, -1))
+Template :((7, (0, 0, 0, 2, 0), 1), (0, 0, 0))
 
 The phonemes matching the followin target were modified  : 
- ((7, (1, 0, 0, 0, 0), 1), (0, 0, -1))
-The feature secondary place of articulation switched values from 0 to 1
+ ((7, (0, 1, 0, 0, 0), -1), (-1, 0, 0))
+The feature place of articulation switched values from 7 to 4
 
 
 Impacted phonems :
-n > n
+t > c
+d > ɟ
 
 
 EXAMPLES 
   
-lan̼psakenos  >  lan̼psakenos 
-leʍkanos  >  leʍkanos 
-pikenos  >  pikenos 
-karkinos  >  karkinos 
-kynokran̼d̼e  >  kynokran̼d̼e 
-kynokkʰalke  >  kynokkʰalke 
-ykonon̼os  >  ykonon̼os 
+arret:ro  >  arrec:ro 
+attraɡere  >  atcraɡere 
+attraɡ:o  >  atcraɡ:o 
+kont:rafakio:  >  konc:rafakio: 
+d:estruɡere  >  d:escruɡere 
+d:estruɡ:o  >  d:escruɡ:o 
+d:rektus  >  ɟ:rektus 
+hydromant:ia  >  hyɟromant:ia 
+hydromantis  >  hyɟromantis 
+impenet:rabilis  >  impenec:rabilis 
 
 
 CHANGE N°5
 
-If the following conditions were satisfied :  
-C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((7, -1, 1), (-1, 0, -1))
-C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((-1, -1, 0), (-1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((8, (0, 0, 1, 0, 0), -1), (0, 0, 0))
-The feature aspiration switched values from 0 to 1
+ ((3, (0, 1, 0, 0, 0), -1), (11, 0, 0))
+The feature secondary place of articulation switched values from 3 to 5
 
 
 Impacted phonems :
-ð > ðʰ
+kʷ > k
+ɡʷ > ɡ
 
 
 EXAMPLES 
   
-ðanað̼i  >  ðʰanað̼i 
+akkʷaerio:  >  akkaerio: 
+akkʷaer:ire  >  akkaer:ire 
+adakʷ:o  >  adak:o 
+alikʷis  >  alikis 
+assekʷor  >  assekor 
+k:inkʷ:aɡint:a  >  k:ink:aɡint:a 
+k:inkʷe  >  k:inke 
+ir:akʷia  >  ir:akia 
+lanɡʷio:  >  lanɡio: 
+lanɡʷ:ire  >  lanɡ:ire 
 
 
 CHANGE N°6
 
 
 The phonemes matching the followin target were modified  : 
- ((3, (0, 0, 1, 0, 0), 1), (0, -1, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((9, (0, 0, 1, 0, 0), 0), (0, 0, -1))
+The feature secondary place of articulation switched values from 0 to 1
 
 
 Impacted phonems :
-ɣ > ŋ͜ɣ
+θ̼ > θ̼
 
 
 EXAMPLES 
   
-ð̼attoloɣia  >  ð̼attoloŋ͜ɣia 
+aθ̼f:id:awit  >  aθ̼f:id:awit 
+aθ̼f:um:are  >  aθ̼f:um:are 
+aθ̼f:um:o  >  aθ̼f:um:o 
+aθ̼fund:are  >  aθ̼fund:are 
+aθ̼fund:o  >  aθ̼fund:o 
+oθ̼fer:eskere  >  oθ̼fer:eskere 
+oθ̼fer:esk:o  >  oθ̼fer:esk:o 
+oθ̼ferio:  >  oθ̼ferio: 
+oθ̼fer:ire  >  oθ̼fer:ire 
+suθ̼ferio:  >  suθ̼ferio: 
 
 
 CHANGE N°7
 
 If the following conditions were satisfied :  
-C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((6, -1, -1), (1, 0))
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((-1, (0, 0, 0, 2, 0), -1), (0, -1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((3, (0, 0, 1, 0, 0), 1), (-1, -1, 0))
-The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 0, 1, 1)
+ ((-1, (0, 1, 0, 0, 0), 0), (0, 0, 0))
+The feature place of articulation switched values from 4 to 3
 
 
 Impacted phonems :
-ŋ͜ɣ > ŋ͜ʟ̆
+k > k
+t > k
+p > k
 
 
 EXAMPLES 
   
-ð̼attoloŋ͜ɣia  >  ð̼attoloŋ͜ʟ̆ia 
+adjuks:tare  >  adjuks:kare 
+admort:ire  >  admork:ire 
+appressum  >  akpressum 
+adwent:ura  >  adwenk:ura 
+allakt:are  >  allakk:are 
+apparikʰul:are  >  apkarikʰul:are 
+apparikʰul:o  >  apkarikʰul:o 
+arrest:are  >  arresk:are 
+arr:ip:are  >  arr:ik:are 
+asperɡ:o  >  askerɡ:o 
 
 
 CHANGE N°8
 
 If the following conditions were satisfied :  
 C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((0, -1, 0), (-1, -1))
+Template :((7, -1, -1), (-1, -1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((7, -1, 1), (0, 0, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((11, (1, 0, 0, 0, 0), 1), (-1, 0, 0))
+The feature secondary place of articulation switched values from 0 to 1
 
 
 Impacted phonems :
-l > n͜l
-n > n͜n
-d > n͜d
-z > n͜z
+m > m
 
 
 EXAMPLES 
   
-zɛlpʰa  >  zɛn͜lpʰa 
-kalkʰas  >  kan͜lkʰas 
-kantad̼ry  >  kan͜ntad̼ry 
-kandake  >  kan͜ndake 
-kassandra  >  kassann͜dra 
-klɛanor  >  kn͜lɛanor 
-kydonia  >  kydon͜nia 
-likinnia  >  likinn͜nia 
-n̼arakanda  >  n̼arakan͜nda 
-n̼assalia  >  n̼assan͜lia 
+abyssimus  >  abyssimus 
+akkomp:lesk:o  >  akkomp:lesk:o 
+akkomp:lire  >  akkomp:lire 
+akkumille  >  akkumille 
+akkumiste  >  akkumiste 
+admin:akia:re  >  admin:akia:re 
+admin:akio:  >  admin:akio: 
+admort:esk:o  >  admort:esk:o 
+admork:ire  >  admork:ire 
+aθ̼f:um:are  >  aθ̼f:um:are 
 
 
 CHANGE N°9
 
-If the following conditions were satisfied :  
-C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (0, -1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((-1, 2, 1), (1, -1))
-The feature Backness switched values from 2 to 1
+ ((-1, 0, 1), (-1, 0))
+The feature Height switched values from 6 to 4
 
 
 Impacted phonems :
-y > ʉ
+o > o
+u > o
 
 
 EXAMPLES 
   
-d̼ryklike  >  d̼rʉklike 
-d̼yznɛy  >  d̼ʉznɛy 
-dirpʰys  >  dirpʰʉs 
-dionysios  >  dionʉsios 
-eʍtʰyn̼ɛnes  >  eʍtʰʉn̼ɛnes 
-eʋ̠rykles  >  eʋ̠rʉkles 
-tʰaryd̼is  >  tʰarʉd̼is 
-tʰukydides  >  tʰukʉdides 
-kordyd̼e  >  kordʉd̼e 
-kydantidɛ  >  kʉdantidɛ 
+abbatʰuo:  >  abbatʰoo: 
+apsedium  >  apsediom 
+abyssimus  >  abyssimos 
+akkum  >  akkom 
+akkumh:ik  >  akkomh:ik 
+akkumille  >  akkomille 
+akkumipse  >  akkomipse 
+akkumiste  >  akkomiste 
+a:krus  >  a:kros 
+a:ktua:lis  >  a:ktoa:lis 
 
 
 CHANGE N°10
 
+If the following conditions were satisfied :  
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((-1, 2, -1), (-1, -1))
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, 2, -1), (-1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((7, (0, 0, 1, 0, 0), -1), (0, -1, 0))
-The feature place of articulation switched values from 7 to 5
+ ((7, (0, 1, 0, 0, 0), -1), (-1, 0, 0))
+The feature place of articulation switched values from 7 to 6
 
 
 Impacted phonems :
-s > ʂ
-z > ʐ
-n͜z > ɳ͜ʐ
+d > ɖ̟
+t > ʈ̟
 
 
 EXAMPLES 
   
-akis  >  akiʂ 
-is  >  iʂ 
-tatos  >  tatoʂ 
-os  >  oʂ 
-ɛɡistʰos  >  ɛɡiʂtʰoʂ 
-ɛtʰalos  >  ɛtʰaloʂ 
-ɛolos  >  ɛoloʂ 
-aʋ̠ɡias  >  aʋ̠ɡiaʂ 
-aʋ̠lis  >  aʋ̠liʂ 
-aʍksun̼on  >  aʍkʂun̼on 
+apsedii:  >  apseɖ̟ii: 
+apsediom  >  apseɖ̟iom 
+assatis  >  assaʈ̟is 
+adak:o  >  aɖ̟ak:o 
+adwitia:re  >  adwiʈ̟ia:re 
+adwitio:  >  adwiʈ̟io: 
+aet:atik:i  >  aeʈ̟:aʈ̟ik:i 
+aet:atikʰom  >  aeʈ̟:aʈ̟ikʰom 
+aθ̼f:id:awit  >  aθ̼f:iɖ̟:awit 
+am:ikit:as  >  am:ikiʈ̟:as 
 
 
 CHANGE N°11
 
 If the following conditions were satisfied :  
-C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((9, -1, -1), (-1, 0, 0))
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, -1, 1), (-1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((2, -1, -1), (1, 0))
-The feature Round switched values from 0 to 1
+ ((4, (0, 0, 0, 0, 0), -1), (0, 0, 0))
+The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 0, 1, 0)
 
 
 Impacted phonems :
-ɛ > œ
+j > ɽ̠
 
 
 EXAMPLES 
   
-tʰɛrn̼e  >  tʰœrn̼e 
-klɛon̼d̼rotoʂ  >  klœon̼d̼rotoʂ 
-tɛln̼eʂʂoʂ  >  tœln̼eʂʂoʂ 
-ɛdɛon̼ɛ  >  ɛdœon̼ɛ 
-datɛon̼ɛ  >  datœon̼ɛ 
-eʍʂɛln̼oʂ  >  eʍʂœln̼oʂ 
-kɛn̼n̼or  >  kœn̼n̼or 
-krɛn̼d̼ala  >  krœn̼d̼ala 
-n̼in̼ɛon̼ɛ  >  n̼in̼œon̼ɛ 
-nɛon̼ɛ  >  nœon̼ɛ 
+adjoks:kare  >  adɽ̠oks:kare 
+adjoks:to  >  adɽ̠oks:to 
+ajj:onos  >  ajɽ̠:onos 
+bajjoliwi  >  bajɽ̠oliwi 
+bajjol:iwos  >  bajɽ̠ol:iwos 
+jok:are  >  ɽ̠ok:are 
+jok:o  >  ɽ̠ok:o 
+j:odaizz:o  >  ɽ̠:odaizz:o 
+joɡasker  >  ɽ̠oɡasker 
+j:osom  >  ɽ̠:osom 
 
 
 CHANGE N°12
 
-If the following conditions were satisfied :  
-C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((6, 1, 1), (1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((0, (0, 0, 1, 0, 0), 0), (0, -1, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((7, (0, 1, 0, 0, 0), 1), (0, -1, 0))
+The feature aspiration switched values from 0 to 1
 
 
 Impacted phonems :
-h > n͜h
+d > dʰ
 
 
 EXAMPLES 
   
-hʉɡropʰtʰoŋɡoʂ  >  n͜hʉɡropʰtʰoŋɡoʂ 
-hʉdrokɛpʰalon  >  n͜hʉdrokɛpʰalon 
-hʉdroʂkopion  >  n͜hʉdroʂkopion 
-hʉpɛrpʰron  >  n͜hʉpɛrpʰron 
-hʉpan͜llaʂʂo  >  n͜hʉpan͜llaʂʂo 
-hʉpɛrnɛpʰɛloʂ  >  n͜hʉpɛrnɛpʰɛloʂ 
-hʉperɛʂia  >  n͜hʉperɛʂia 
-hʉpoklɛpto  >  n͜hʉpoklɛpto 
-hʉpon̼ɛno  >  n͜hʉpon̼ɛno 
-hʉpoʂtateʂ  >  n͜hʉpoʂtateʂ 
+akkord:are  >  akkordʰ:are 
+akkord:o  >  akkordʰ:o 
+adbassom  >  adʰbassom 
+adh:ik  >  adʰh:ik 
+adbassia:re  >  adʰbassia:re 
+adbell:esk:o  >  adʰbell:esk:o 
+adbrakkʰio:  >  adʰbrakkʰio: 
+adɽ̠oks:kare  >  adʰɽ̠oks:kare 
+adɽ̠oks:to  >  adʰɽ̠oks:to 
+admin:akia:re  >  adʰmin:akia:re 
 
 
 CHANGE N°13
 
 If the following conditions were satisfied :  
 C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((7, (1, 0, 0, 0, 0), -1), (0, 0, 0))
+Template :((6, 2, 0), (-1, 0))
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((-1, 2, 0), (-1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((-1, (0, 1, 0, 0, 0), -1), (0, 0, 0))
-The feature Voiced switched values from 1 to 0
+ ((7, (0, 0, 1, 0, 0), 0), (-1, 0, -1))
+The feature secondary place of articulation switched values from 0 to 5
 
 
 Impacted phonems :
-t > t
-k > k
-ɡ > k
-d > t
-d̼ > t̼
-p > p
+s > s
 
 
 EXAMPLES 
   
-ɡɛnneʂarɛt  >  kɛnneʂarɛt 
-dinolokʰoʂ  >  tinolokʰoʂ 
-kard̼on  >  kart̼on 
-kʉdantidɛ  >  kʉtantidɛ 
-ladon  >  laton 
-ʂan͜lɡaneʍʂ  >  ʂan͜lkaneʍʂ 
-ʂoʂiɡɛneʂ  >  ʂoʂikɛneʂ 
-d̼ɛno  >  t̼ɛno 
-d̼uʂtropʰedon  >  d̼uʂtropʰeton 
-ɡɛnɛtor  >  kɛnɛtor 
+adʰbassia:re  >  adʰbassia:re 
+abbassio:  >  abbassio: 
+askiola  >  askiola 
+bassia:re  >  bassia:re 
+bassio:  >  bassio: 
+blastim:o  >  blastim:o 
+f:estizz:o  >  f:estizz:o 
+issimos  >  issimos 
+laʈ̟entissime  >  laʈ̟entissime 
+laʈ̟entissimos  >  laʈ̟entissimos 
 
 
 CHANGE N°14
 
 If the following conditions were satisfied :  
 C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((6, 2, 0), (-1, 0))
-C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((7, (1, 0, 0, 0, 0), 1), (0, 0, -1))
+Template :((4, 2, -1), (1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((9, (0, 0, 1, 0, 0), -1), (0, 0, 0))
-The feature place of articulation switched values from 9 to 8
-
-
-Impacted phonems :
-ð̼ > ð
-
-
-EXAMPLES 
-  
-ðʰanað̼i  >  ðʰanaði 
-
-
-CHANGE N°15
-
-
-The phonemes matching the followin target were modified  : 
- ((7, (1, 0, 0, 0, 0), 1), (0, -1, 0))
+ ((-1, (1, 0, 0, 0, 0), 1), (1, 0, 0))
 The feature aspiration switched values from 0 to 1
 
 
 Impacted phonems :
-n > nʰ
-n͜n > n͜nʰ
+m > mʰ
 
 
 EXAMPLES 
   
-ɛna  >  ɛnʰa 
-aʍtonoe  >  aʍtonʰoe 
-aʍkʂun̼on  >  aʍkʂun̼onʰ 
-d̼etriakon  >  d̼etriakonʰ 
-d̼udion  >  d̼udionʰ 
-d̼rɛnɛ  >  d̼rɛnʰɛ 
-d̼raʋ̠ron  >  d̼raʋ̠ronʰ 
-d̼ʉʐnɛy  >  d̼ʉʐnʰɛy 
-d̼olkon  >  d̼olkonʰ 
-kɛnneʂarɛt  >  kɛnʰnʰeʂarɛt 
+kremere  >  kremʰere 
+dʰismerdʰ:are  >  dʰismʰerdʰ:are 
+indʰiɡiʈ̟:amenta  >  indʰiɡiʈ̟:amʰenta 
+melis  >  mʰelis 
+m:elom  >  mʰ:elom 
+m:elos  >  mʰ:elos 
+mentio:  >  mʰentio: 
+m:eʈ̟io:  >  mʰ:eʈ̟io: 
+meʈ̟ipse  >  mʰeʈ̟ipse 
+smeraldʰa  >  smʰeraldʰa 
+
+
+CHANGE N°15
+
+If the following conditions were satisfied :  
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, -1, -1), (-1, 0, -1))
+
+The phonemes matching the followin target were modified  : 
+ ((6, -1, 0), (-1, 0))
+The feature Height switched values from 6 to 3
+
+
+Impacted phonems :
+i > ɛ̞
+
+
+EXAMPLES 
+  
+abbiber:o  >  abbɛ̞ber:o 
+abyssimos  >  abyssɛ̞mos 
+akkoɡnitʰ:o  >  akkoɡnɛ̞tʰ:o 
+akkolliɡ:o  >  akkollɛ̞ɡ:o 
+akkomp:lire  >  akkomp:lɛ̞re 
+akkomh:ik  >  akkomh:ɛ̞k 
+akkomille  >  akkomɛ̞lle 
+akkomipse  >  akkomɛ̞pse 
+akkomiste  >  akkomɛ̞ste 
+akkaer:ire  >  akkaer:ɛ̞re 
 
 
 CHANGE N°16
 
-If the following conditions were satisfied :  
-C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((4, -1, 1), (-1, -1))
-C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((7, -1, 1), (0, -1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((-1, (0, 0, 1, 0, 0), 0), (-1, 0, 0))
-The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 1, 0, 0, 0)
+ ((11, (1, 0, 0, 0, 0), -1), (1, 0, 0))
+The feature pre_nasal switched values from 0 to 1
 
 
 Impacted phonems :
-ʂ > ʈ
+m > m͜m
 
 
 EXAMPLES 
   
-ɛtʰaloʂ  >  ɛtʰaloʈ 
-ɛoloʂ  >  ɛoloʈ 
-den̼opʰiloʂ  >  den̼opʰiloʈ 
-ʐd̼ɛltʰiurdoʂ  >  ʐd̼ɛltʰiurdoʈ 
-kritod̼uloʂ  >  kritod̼uloʈ 
-lɛd̼ɛdoʂ  >  lɛd̼ɛdoʈ 
-n̼aɡdoloʂ  >  n̼aɡdoloʈ 
-nʰaɡidoʂ  >  nʰaɡidoʈ 
-pʉloʂ  >  pʉloʈ 
-troɡiloʂ  >  troɡiloʈ 
+abyssɛ̞mos  >  abyssɛ̞m͜mos 
+akkomp:lesk:o  >  akkom͜mp:lesk:o 
+akkomp:lɛ̞re  >  akkom͜mp:lɛ̞re 
+akkomɛ̞lle  >  akkom͜mɛ̞lle 
+akkomɛ̞ste  >  akkom͜mɛ̞ste 
+adʰmɛ̞n:akia:re  >  adʰm͜mɛ̞n:akia:re 
+adʰmɛ̞n:akio:  >  adʰm͜mɛ̞n:akio: 
+adʰmort:esk:o  >  adʰm͜mort:esk:o 
+adʰmork:ɛ̞re  >  adʰm͜mork:ɛ̞re 
+aθ̼f:om:are  >  aθ̼f:om͜m:are 
 
 
 CHANGE N°17
 
 
 The phonemes matching the followin target were modified  : 
- ((0, -1, -1), (0, 0, 0))
-The feature place of articulation switched values from 0 to 2
+ ((11, (0, 1, 0, 0, 0), -1), (0, 0, 1))
+The feature Voiced switched values from 0 to 1
 
 
 Impacted phonems :
-h > χ
+pʰ > bʰ
 
 
 EXAMPLES 
   
-n̼ɛɡalehɛn͜llaʂ  >  n̼ɛɡaleχɛn͜llaʂ 
-pnʰeʋ̠n̼atohaɡionʰ  >  pnʰeʋ̠n̼atoχaɡionʰ 
-hɛrɛʂioteʂ  >  χɛrɛʂioteʂ 
-hin̼atanʰopɛrid̼alloʈ  >  χin̼atanʰopɛrid̼alloʈ 
-hioʂ  >  χioʂ 
-hyoʂ  >  χyoʂ 
-hunʰɛka  >  χunʰɛka 
-hyonʰoʂ  >  χyonʰoʂ 
-had̼rodiɛtoʂ  >  χad̼rodiɛtoʂ 
-haɡnʰiʐn̼oʂ  >  χaɡnʰiʐn̼oʂ 
+akkapʰ:o  >  akkabʰ:o 
+apʰozzema  >  abʰozzema 
+arr:ɛ̞pʰ:o  >  arr:ɛ̞bʰ:o 
+kapʰom  >  kabʰom 
+klapʰ:o  >  klabʰ:o 
+k:rapʰolor  >  k:rabʰolor 
+k:rapʰol:osos  >  k:rabʰol:osos 
+dʰer:ɛ̞pʰ:o  >  dʰer:ɛ̞bʰ:o 
+epʰesios  >  ebʰesios 
+epʰopta  >  ebʰopta 
 
 
 CHANGE N°18
 
 
 The phonemes matching the followin target were modified  : 
- ((5, (0, 0, 1, 0, 0), 1), (0, -1, -1))
-The feature aspiration switched values from 0 to 1
+ ((-1, (0, 0, 1, 0, 0), 0), (0, 0, 0))
+The feature Voiced switched values from 0 to 1
 
 
 Impacted phonems :
-ʐ > ʐʰ
-ɳ͜ʐ > ɳ͜ʐʰ
+s > z
+h > ɦ
+f > v
 
 
 EXAMPLES 
   
-d̼ʉʐnʰɛy  >  d̼ʉʐʰnʰɛy 
-ʐaŋkle  >  ʐʰaŋkle 
-ʐanʰ  >  ʐʰanʰ 
-ʐd̼ɛltʰiurdoʈ  >  ʐʰd̼ɛltʰiurdoʈ 
-ʐɛn͜lpʰa  >  ʐʰɛn͜lpʰa 
-ʐekaʂ  >  ʐʰekaʂ 
-ʐenʰod̼ioʂ  >  ʐʰenʰod̼ioʂ 
-tʰiʐd̼e  >  tʰiʐʰd̼e 
-pɛlaʐɡikoʂ  >  pɛlaʐʰɡikoʂ 
-ʐn̼ila  >  ʐʰn̼ila 
+apseɖ̟ii:  >  apzeɖ̟ii: 
+apseɖ̟iom  >  apzeɖ̟iom 
+abyssɛ̞m͜mos  >  abyzzɛ̞m͜moz 
+akkom͜mp:lesk:o  >  akkom͜mp:lezk:o 
+akkomh:ɛ̞k  >  akkomɦ:ɛ̞k 
+akkomɛ̞pse  >  akkomɛ̞pze 
+akkom͜mɛ̞ste  >  akkom͜mɛ̞zte 
+a:kros  >  a:kroz 
+a:ktoa:lɛ̞s  >  a:ktoa:lɛ̞z 
+adʰbassom  >  adʰbazzom 
 
 
 CHANGE N°19
 
 
 The phonemes matching the followin target were modified  : 
- ((2, -1, 0), (0, -1, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((-1, 2, 0), (1, 0))
+The feature Nasal switched values from 0 to 1
 
 
 Impacted phonems :
-χ > ɴ͜χ
+a > ã
+e > ẽ
+ɛ̞ > ɛ̞̃
+i > ĩ
 
 
 EXAMPLES 
   
-n̼ɛɡaleχɛn͜llaʂ  >  n̼ɛɡaleɴ͜χɛn͜llaʂ 
-pnʰeʋ̠n̼atoχaɡionʰ  >  pnʰeʋ̠n̼atoɴ͜χaɡionʰ 
-χɛrɛʂioteʂ  >  ɴ͜χɛrɛʂioteʂ 
-χin̼atanʰopɛrid̼alloʈ  >  ɴ͜χin̼atanʰopɛrid̼alloʈ 
-χioʂ  >  ɴ͜χioʂ 
-χyoʂ  >  ɴ͜χyoʂ 
-χunʰɛka  >  ɴ͜χunʰɛka 
-χyonʰoʂ  >  ɴ͜χyonʰoʂ 
-χad̼rodiɛtoʂ  >  ɴ͜χad̼rodiɛtoʂ 
-χaɡnʰiʐʰn̼oʂ  >  ɴ͜χaɡnʰiʐʰn̼oʂ 
+abante  >  ãbãntẽ 
+abanteo:  >  ãbãntẽo: 
+abbatʰ:o  >  ãbbãtʰ:o 
+abbatʰoo:  >  ãbbãtʰoo: 
+abbɛ̞ber:o  >  ãbbɛ̞̃bẽr:o 
+apzeɖ̟ii:  >  ãpzẽɖ̟ĩĩ: 
+apzeɖ̟iom  >  ãpzẽɖ̟ĩom 
+abyzzɛ̞m͜moz  >  ãbyzzɛ̞̃m͜moz 
+akka  >  ãkkã 
+akkabʰ:o  >  ãkkãbʰ:o 
 
 
 CHANGE N°20
 
+If the following conditions were satisfied :  
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((0, 2, 0), (1, 1))
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((-1, -1, -1), (1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((-1, 2, 1), (-1, 0))
-The feature Voiced switched values from 1 to 0
+ ((11, (1, 0, 0, 0, 0), 1), (0, -1, 0))
+The feature aspiration switched values from 0 to 1
 
 
 Impacted phonems :
-y > y̥
-œ > œ̥
+m > mʰ
 
 
 EXAMPLES 
   
-d̼yotoʂ  >  d̼y̥otoʂ 
-d̼ottiɛy  >  d̼ottiɛy̥ 
-d̼reʍky  >  d̼reʍky̥ 
-d̼ʉʐʰnʰɛy  >  d̼ʉʐʰnʰɛy̥ 
-ɡeryonʰaʂ  >  ɡery̥onʰaʂ 
-deruʂiɛy  >  deruʂiɛy̥ 
-ilitʰya  >  ilitʰy̥a 
-tʰœrn̼e  >  tʰœ̥rn̼e 
-kad̼iry  >  kad̼iry̥ 
-kan͜nʰtad̼ry  >  kan͜nʰtad̼ry̥ 
+kombãtkẽrẽ  >  komʰbãtkẽrẽ 
+kombãtt:o  >  komʰbãtt:o 
+komm͜mãndʰ:ãrẽ  >  komʰm͜mãndʰ:ãrẽ 
+komm͜mãndʰ:o  >  komʰm͜mãndʰ:o 
+dʰãmn:ãʈ̟ɛ̞̃kʰom  >  dʰãmʰn:ãʈ̟ɛ̞̃kʰom 
+dʰomnã  >  dʰomʰnã 
+zãmbãtʰom  >  zãmʰbãtʰom 
+tãmmãɡnoz  >  tãmʰmãɡnoz 
 
 
 CHANGE N°21
 
+If the following conditions were satisfied :  
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((7, -1, -1), (0, -1, -1))
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((-1, 2, 0), (1, 1))
 
 The phonemes matching the followin target were modified  : 
- ((5, (0, 0, 1, 0, 0), -1), (0, -1, 1))
-The feature aspiration switched values from 1 to 0
+ ((7, -1, 1), (0, 0, 0))
+The feature aspiration switched values from 0 to 1
 
 
 Impacted phonems :
-ʐʰ > ʐ
-ɳ͜ʐʰ > ɳ͜ʐ
+r > rʰ
+l > lʰ
+n > nʰ
+z > zʰ
 
 
 EXAMPLES 
   
-d̼ʉʐʰnʰɛy̥  >  d̼ʉʐnʰɛy̥ 
-ʐʰaŋkle  >  ʐaŋkle 
-ʐʰanʰ  >  ʐanʰ 
-ʐʰd̼ɛltʰiurdoʈ  >  ʐd̼ɛltʰiurdoʈ 
-ʐʰɛn͜lpʰa  >  ʐɛn͜lpʰa 
-ʐʰekaʂ  >  ʐekaʂ 
-ʐʰenʰod̼ioʂ  >  ʐenʰod̼ioʂ 
-tʰiʐʰd̼e  >  tʰiʐd̼e 
-pɛlaʐʰɡikoʂ  >  pɛlaʐɡikoʂ 
-ʐʰn̼ila  >  ʐn̼ila 
+ãkkãẽr:ɛ̞̃rẽ  >  ãkkãẽrʰ:ɛ̞̃rẽ 
+ã:ktoã:lɛ̞̃z  >  ã:ktoã:lʰɛ̞̃z 
+ãdʰw:ẽr:ãrẽ  >  ãdʰw:ẽrʰ:ãrẽ 
+ãẽr:ozoz  >  ãẽrʰ:ozoz 
+ãlɛ̞̃znã  >  ãlʰɛ̞̃znã 
+ãll:om͜mɛ̞̃n:ãrẽ  >  ãll:om͜mɛ̞̃nʰ:ãrẽ 
+ãnk:onɛ̞̃ʈ̟:ãnoz  >  ãnk:onɛ̞̃ʈ̟:ãnʰoz 
+ãntẽã:noz  >  ãntẽã:nʰoz 
+ãrbãlɛ̞̃ztã  >  ãrbãlʰɛ̞̃ztã 
+ãrbãlɛ̞̃zt:ẽ  >  ãrbãlʰɛ̞̃zt:ẽ 
 
 
 CHANGE N°22
 
-If the following conditions were satisfied :  
-C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (-1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((6, 2, -1), (1, -1))
-The feature Backness switched values from 2 to 1
+ ((4, -1, 1), (0, 0, 0))
+The feature Voiced switched values from 1 to 0
 
 
 Impacted phonems :
-i > ɨ
+ɽ̠ > ɽ̠̊
+j > j̊
+ɟ > c
 
 
 EXAMPLES 
   
-akiʂ  >  akɨʂ 
-ɛɡiʂtʰoʂ  >  ɛɡɨʂtʰoʂ 
-d̼udionʰ  >  d̼udɨonʰ 
-ɡɛrenʰioʂ  >  ɡɛrenʰɨoʂ 
-ɡorillɛ  >  ɡorɨllɛ 
-ðʰanʰaði  >  ðʰanʰaðɨ 
-den̼opʰiloʈ  >  den̼opʰɨloʈ 
-deruʂiɛy̥  >  deruʂɨɛy̥ 
-dionʰʉʂioʂ  >  dionʰʉʂɨoʂ 
-don̼itioʂ  >  don̼ɨtɨoʂ 
+ãdʰɽ̠okz:kãrẽ  >  ãdʰɽ̠̊okz:kãrẽ 
+ãdʰɽ̠okz:to  >  ãdʰɽ̠̊okz:to 
+ãjɽ̠:onoz  >  ãj̊ɽ̠̊:onoz 
+bãjɽ̠olɛ̞̃wĩ  >  bãj̊ɽ̠̊olɛ̞̃wĩ 
+bãjɽ̠ol:ɛ̞̃woz  >  bãj̊ɽ̠̊ol:ɛ̞̃woz 
+ɟ:rẽktoz  >  c:rẽktoz 
+ɦyɟrom͜mãnt:ĩã  >  ɦycrom͜mãnt:ĩã 
+ɦyɟrom͜mãntɛ̞̃z  >  ɦycrom͜mãntɛ̞̃z 
+j:ãnã  >  j̊:ãnã 
+j:ãnoẽllã  >  j̊:ãnoẽllã 
 
 
 CHANGE N°23
 
 If the following conditions were satisfied :  
-C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (-1, -1))
 C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((2, (0, 0, 1, 0, 0), 0), (-1, 1, 0))
+Template :((7, -1, 0), (-1, -1, -1))
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((-1, -1, 1), (0, 0, 0))
 
 The phonemes matching the followin target were modified  : 
- ((-1, 0, 1), (1, 0))
-The feature Voiced switched values from 1 to 0
+ ((3, 2, -1), (-1, 1))
+The feature Backness switched values from 2 to 1
 
 
 Impacted phonems :
-o > o̥
+ɛ̞̃ > ə̃
 
 
 EXAMPLES 
   
-ɴ͜χy̥onʰoʂ  >  ɴ͜χy̥o̥nʰoʂ 
+v:ẽstɛ̞̃zz:o  >  v:ẽstə̃zz:o 
 
 
 CHANGE N°24
 
+If the following conditions were satisfied :  
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, -1, -1), (1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((-1, (0, 0, 1, 0, 0), -1), (0, 0, 1))
-The feature aspiration switched values from 1 to 0
+ ((11, -1, 0), (0, 0, 0))
+The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (1, 0, 0, 0, 0)
 
 
 Impacted phonems :
-ðʰ > ð
-ɸʰ > ɸ
+p > m̥
 
 
 EXAMPLES 
   
-ðʰanʰaðɨ  >  ðanʰaðɨ 
-lɛkʂiɸʰanʰeʂ  >  lɛkʂiɸanʰeʂ 
-alɛkʂiɸʰarn̼akonʰ  >  alɛkʂiɸarn̼akonʰ 
-areiɸʰɨloʈ  >  areiɸɨloʈ 
-alɨɸʰar  >  alɨɸar 
-iɸʰɨɡɛn͜nʰɨa  >  iɸɨɡɛn͜nʰɨa 
+ãtp:ãk:ãrẽ  >  ãtm̥:ãk:ãrẽ 
+ãp:ẽlĩo:t:ẽz  >  ãm̥:ẽlĩo:t:ẽz 
+ãpɛ̞̃klã  >  ãm̥ɛ̞̃klã 
+ãpp:ãk:ãrẽ  >  ãpm̥:ãk:ãrẽ 
+ãpp:ãkʰ:o  >  ãpm̥:ãkʰ:o 
+ãppodʰĩã:rẽ  >  ãpm̥odʰĩã:rẽ 
+ãppodʰĩo:  >  ãpm̥odʰĩo: 
+kãpɛ̞̃ʈ̟:ɛ̞̃nã  >  kãm̥ɛ̞̃ʈ̟:ɛ̞̃nã 
+kãppẽllã  >  kãpm̥ẽllã 
+kãppẽlloz  >  kãpm̥ẽlloz 
 
 
 CHANGE N°25
 
+If the following conditions were satisfied :  
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((4, 2, 0), (-1, 1))
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((4, -1, 1), (1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((9, (1, 0, 0, 0, 0), 1), (-1, -1, 0))
-The feature place of articulation switched values from 9 to 7
-
-
-Impacted phonems :
-n̼ > n
-
-
-EXAMPLES 
-  
-aʍkʂun̼onʰ  >  aʍkʂunonʰ 
-dan̼aʂkoʂ  >  danaʂkoʂ 
-den̼aratoʂ  >  denaratoʂ 
-den̼oklideʂ  >  denoklideʂ 
-den̼opʰɨloʈ  >  denopʰɨloʈ 
-don̼ɨtɨoʂ  >  donɨtɨoʂ 
-dorɨn̼akʰoʂ  >  dorɨnakʰoʂ 
-eʍtʰʉn̼ɛnʰeʂ  >  eʍtʰʉnɛnʰeʂ 
-eʋ̠n̼ɛoʂ  >  eʋ̠nɛoʂ 
-tʰɛn̼ɨʂ  >  tʰɛnɨʂ 
-
-
-CHANGE N°26
-
-
-The phonemes matching the followin target were modified  : 
- ((9, (0, 0, 1, 0, 0), 1), (-1, -1, 0))
-The feature secondary place of articulation switched values from 0 to 1
-
-
-Impacted phonems :
-ð̼ > ð̼
-
-
-EXAMPLES 
-  
-ð̼attoloŋ͜ʟ̆ɨa  >  ð̼attoloŋ͜ʟ̆ɨa 
-elð̼iðɨoʂ  >  elð̼iðɨoʂ 
-
-
-CHANGE N°27
-
-
-The phonemes matching the followin target were modified  : 
- ((2, 2, 0), (-1, -1))
-The feature Height switched values from 2 to 0
-
-
-Impacted phonems :
-ɛ > a
-
-
-EXAMPLES 
-  
-ɛnʰa  >  anʰa 
-ɛɡɛ  >  aɡa 
-ɛɡɨʂtʰoʂ  >  aɡɨʂtʰoʂ 
-ɛtʰaloʈ  >  atʰaloʈ 
-ɛoloʈ  >  aoloʈ 
-d̼ɛrɡa  >  d̼arɡa 
-d̼ottiɛy̥  >  d̼ottiay̥ 
-d̼rɛnʰɛ  >  d̼ranʰa 
-d̼ʉʐnʰɛy̥  >  d̼ʉʐnʰay̥ 
-ɡatʰɛɛ  >  ɡatʰaa 
-
-
-CHANGE N°28
-
-
-The phonemes matching the followin target were modified  : 
- ((9, (0, 0, 1, 0, 0), 1), (1, -1, 0))
+ ((7, -1, 1), (0, -1, 0))
 The feature aspiration switched values from 0 to 1
 
 
 Impacted phonems :
-ð̼ > ð̼ʰ
+z > zʰ
+r > rʰ
+n > nʰ
+l > lʰ
 
 
 EXAMPLES 
   
-ð̼attoloŋ͜ʟ̆ɨa  >  ð̼ʰattoloŋ͜ʟ̆ɨa 
-elð̼iðɨoʂ  >  elð̼ʰiðɨoʂ 
+ãkkom͜mp:lẽzk:o  >  ãkkom͜mp:lẽzʰk:o 
+ãkkãẽrĩo:  >  ãkkãẽrʰĩo: 
+ãdʰbẽll:ẽzk:o  >  ãdʰbẽll:ẽzʰk:o 
+ãdʰm͜mort:ẽzk:o  >  ãdʰm͜mort:ẽzʰk:o 
+ãkprẽzzom  >  ãkprẽzʰzom 
+ãdʰwẽnk:orã  >  ãdʰwẽnʰk:orã 
+ãɡ:ẽzk:o  >  ãɡ:ẽzʰk:o 
+ãm̥:ẽlĩo:t:ẽz  >  ãm̥:ẽlʰĩo:t:ẽz 
+ãrrẽzt:o  >  ãrrẽzʰt:o 
+ãzkẽrɡ:o  >  ãzkẽrʰɡ:o 
 
 
-CHANGE N°29
+CHANGE N°26
 
 If the following conditions were satisfied :  
 C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((6, 2, 0), (1, -1))
-C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (-1, -1))
+Template :((-1, -1, -1), (0, -1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((3, (1, 0, 0, 0, 0), 1), (-1, 0, 0))
+ ((0, (0, 0, 1, 0, 0), -1), (0, 0, 0))
+The feature aspiration switched values from 0 to 1
+
+
+Impacted phonems :
+ɦ > ɦʰ
+
+
+EXAMPLES 
+  
+ãkkomɦ:ɛ̞̃k  >  ãkkomɦʰ:ɛ̞̃k 
+ãdʰɦ:ɛ̞̃k  >  ãdʰɦʰ:ɛ̞̃k 
+ẽkkoɦ:ɛ̞̃k  >  ẽkkoɦʰ:ɛ̞̃k 
+ɦãb:otoz  >  ɦʰãb:otoz 
+ɦãlĩoronnã  >  ɦʰãlĩoronnã 
+ɦãlzbẽrʰɡoz  >  ɦʰãlzbẽrʰɡoz 
+ɦãrm̥ã  >  ɦʰãrm̥ã 
+ɦ:ẽmɛ̞̃k:rãnĩã  >  ɦʰ:ẽmɛ̞̃k:rãnĩã 
+ɦɛ̞̃zm̥:ãnĩoloz  >  ɦʰɛ̞̃zm̥:ãnĩoloz 
+ɦ:ontã  >  ɦʰ:ontã 
+
+
+CHANGE N°27
+
+If the following conditions were satisfied :  
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((4, 2, 0), (1, -1))
+
+The phonemes matching the followin target were modified  : 
+ ((3, (0, 1, 0, 0, 0), -1), (5, 0, 0))
 The feature pre_nasal switched values from 0 to 1
 
 
 Impacted phonems :
-ŋ > ŋ͜ŋ
+k > ŋ͜k
 
 
 EXAMPLES 
   
-ʂtʉn͜llaŋɡionʰ  >  ʂtʉn͜llaŋ͜ŋɡionʰ 
-koŋɡionʰ  >  koŋ͜ŋɡionʰ 
-laŋkia  >  laŋ͜ŋkia 
-aŋkʰiʂtia  >  aŋ͜ŋkʰiʂtia 
+ãkkãẽrʰĩo:  >  ãkŋ͜kãẽrʰĩo: 
+ãkkãẽrʰ:ɛ̞̃rẽ  >  ãkŋ͜kãẽrʰ:ɛ̞̃rẽ 
+
+
+CHANGE N°28
+
+If the following conditions were satisfied :  
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((7, (1, 0, 0, 0, 0), 1), (0, 0, 1))
+
+The phonemes matching the followin target were modified  : 
+ ((3, 2, 0), (1, -1))
+The feature Voiced switched values from 1 to 0
+
+
+Impacted phonems :
+ɛ̞̃ > ɛ̞̥̃
+
+
+EXAMPLES 
+  
+ãll:om͜mɛ̞̃nʰ:ãrẽ  >  ãll:om͜mɛ̞̥̃nʰ:ãrẽ 
+kãmm͜m:ɛ̞̃nʰoz  >  kãmm͜m:ɛ̞̥̃nʰoz 
+kɛ̞̃nʰ:ozĩã  >  kɛ̞̥̃nʰ:ozĩã 
+kok:ɛ̞̃nʰ:ãrĩoz  >  kok:ɛ̞̥̃nʰ:ãrĩoz 
+kolomb:ɛ̞̃nʰoz  >  kolomb:ɛ̞̥̃nʰoz 
+v:ẽm͜mɛ̞̃nʰoz  >  v:ẽm͜mɛ̞̥̃nʰoz 
+v:ɛ̞̃nʰ:ẽzʰk:o  >  v:ɛ̞̥̃nʰ:ẽzʰk:o 
+v:ɛ̞̃nʰ:ɛ̞̃rẽ  >  v:ɛ̞̥̃nʰ:ɛ̞̃rẽ 
+ɛ̞̃nʰãlb:o  >  ɛ̞̥̃nʰãlb:o 
+ɛ̞̃nʰãltĩo:  >  ɛ̞̥̃nʰãltĩo: 
+
+
+CHANGE N°29
+
+
+The phonemes matching the followin target were modified  : 
+ ((-1, (0, 0, 1, 0, 0), 1), (0, 0, 1))
+The feature place of articulation switched values from 7 to 6
+
+
+Impacted phonems :
+zʰ > ʒʰ
+ɦʰ > ʒʰ
+
+
+EXAMPLES 
+  
+ãkkom͜mp:lẽzʰk:o  >  ãkkom͜mp:lẽʒʰk:o 
+ãkkomɦʰ:ɛ̞̃k  >  ãkkomʒʰ:ɛ̞̃k 
+ãdʰɦʰ:ɛ̞̃k  >  ãdʰʒʰ:ɛ̞̃k 
+ãdʰbẽll:ẽzʰk:o  >  ãdʰbẽll:ẽʒʰk:o 
+ãdʰm͜mort:ẽzʰk:o  >  ãdʰm͜mort:ẽʒʰk:o 
+ãkprẽzʰzom  >  ãkprẽʒʰzom 
+ãɡ:ẽzʰk:o  >  ãɡ:ẽʒʰk:o 
+ãrrẽzʰt:o  >  ãrrẽʒʰt:o 
+ãzʰklã  >  ãʒʰklã 
+ãzʰk:lẽ  >  ãʒʰk:lẽ 
 
 
 CHANGE N°30
 
 If the following conditions were satisfied :  
-C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((0, 2, 0), (1, -1))
 C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((6, 1, -1), (-1, -1))
+Template :((7, (0, 0, 0, 2, 0), 1), (0, 0, 0))
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((0, -1, -1), (-1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((-1, (0, 0, 0, 1, 1), 1), (0, 1, 0))
-The feature pre_nasal switched values from 1 to 0
+ ((3, (0, 1, 0, 0, 0), 1), (0, 0, -1))
+The feature secondary place of articulation switched values from 0 to 5
 
 
 Impacted phonems :
-ŋ͜ʟ̆ > ʟ̆
+ɡ > ɡ
 
 
 EXAMPLES 
   
-ð̼ʰattoloŋ͜ʟ̆ɨa  >  ð̼ʰattoloʟ̆ɨa 
+ɡrãb:o  >  ɡrãb:o 
+ɡrãẽkĩã  >  ɡrãẽkĩã 
+ɡrãẽkʰoz  >  ɡrãẽkʰoz 
+ɛ̞̃:ɡrãẽkã  >  ɛ̞̃:ɡrãẽkã 
 
 
 CHANGE N°31
 
-If the following conditions were satisfied :  
-C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((6, 1, 1), (1, 0))
-C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((7, (0, 1, 0, 0, 0), 1), (0, 0, 0))
 
 The phonemes matching the followin target were modified  : 
- ((-1, (1, 0, 0, 0, 0), 1), (0, 0, 1))
-The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 0, 2, 0)
+ ((-1, (0, 0, 1, 0, 0), -1), (0, 0, 0))
+The feature pre_nasal switched values from 0 to 1
 
 
 Impacted phonems :
-nʰ > rʰ
+z > n͜z
+v > ɱ͜v
+ɦ > n͜ɦ
 
 
 EXAMPLES 
   
-kʉnʰɨdɨonʰ  >  kʉrʰɨdɨonʰ 
-kʂʉnʰɨdoʈ  >  kʂʉrʰɨdoʈ 
+ãpzẽɖ̟ĩĩ:  >  ãpn͜zẽɖ̟ĩĩ: 
+ãpzẽɖ̟ĩom  >  ãpn͜zẽɖ̟ĩom 
+ãbyzzɛ̞̃m͜moz  >  ãbyn͜zn͜zɛ̞̃m͜mon͜z 
+ãkkomɛ̞̃pzẽ  >  ãkkomɛ̞̃pn͜zẽ 
+ãkkom͜mɛ̞̃ztẽ  >  ãkkom͜mɛ̞̃n͜ztẽ 
+ã:kroz  >  ã:kron͜z 
+ã:ktoã:lʰɛ̞̃z  >  ã:ktoã:lʰɛ̞̃n͜z 
+ãdʰbãzzom  >  ãdʰbãn͜zn͜zom 
+ãzzãʈ̟ɛ̞̃z  >  ãn͜zn͜zãʈ̟ɛ̞̃n͜z 
+ãdʰbãszĩã:rẽ  >  ãdʰbãsn͜zĩã:rẽ 
 
 
 CHANGE N°32
 
 If the following conditions were satisfied :  
-C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (-1, -1))
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((0, 2, 0), (-1, 1))
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((7, (0, 0, 0, 0, 1), 1), (0, 0, 1))
 
 The phonemes matching the followin target were modified  : 
- ((8, (0, 0, 1, 0, 0), 1), (0, -1, 0))
-The feature place of articulation switched values from 8 to 10
+ ((0, (0, 0, 1, 0, 0), -1), (0, 1, 0))
+The feature secondary place of articulation switched values from 0 to 1
 
 
 Impacted phonems :
-ð > v
+n͜ɦ > n͜ɦ
 
 
 EXAMPLES 
   
-ðanʰaðɨ  >  ðanʰavɨ 
-elð̼ʰiðɨoʂ  >  elð̼ʰivɨoʂ 
+n͜ɦãlʰẽnʰ:ãrẽ  >  n͜ɦãlʰẽnʰ:ãrẽ 
+n͜ɦãlʰẽn:o  >  n͜ɦãlʰẽn:o 
 
 
 CHANGE N°33
 
-If the following conditions were satisfied :  
-C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((-1, -1, 0), (-1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((11, -1, 0), (-1, 0, 1))
-The feature place of articulation switched values from 11 to 10
+ ((7, -1, 1), (-1, 0, 0))
+The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 1, 0, 0)
 
 
 Impacted phonems :
-pʰ > p̪ʰ
+n > z
+r > z
+l > z
 
 
 EXAMPLES 
   
-dapʰnʰe  >  dap̪ʰnʰe 
-kaiapʰaʂ  >  kaiap̪ʰaʂ 
-kepʰɨʂoʂ  >  kep̪ʰɨʂoʂ 
-papʰlaɡon͜nʰɨa  >  pap̪ʰlaɡon͜nʰɨa 
-telapʰoʂ  >  telap̪ʰoʂ 
-n͜diapʰanʰeʂ  >  n͜diap̪ʰanʰeʂ 
-tʰanʰatepʰoroʂ  >  tʰanʰatep̪ʰoroʂ 
-katapapʰnʰonʰ  >  katapap̪ʰnʰonʰ 
-katapʰronʰetɨkoʂ  >  katap̪ʰronʰetɨkoʂ 
-lapʰoʂ  >  lap̪ʰoʂ 
+ãbãntẽ  >  ãbãztẽ 
+ãbãntẽo:  >  ãbãztẽo: 
+ãbbɛ̞̃bẽr:o  >  ãbbɛ̞̃bẽz:o 
+ãkkoɡnɛ̞̃tʰ:o  >  ãkkoɡzɛ̞̃tʰ:o 
+ãkkollɛ̞̃ɡ:o  >  ãkkozzɛ̞̃ɡ:o 
+ãkkoll:o  >  ãkkozz:o 
+ãkkom͜mp:lẽʒʰk:o  >  ãkkom͜mp:zẽʒʰk:o 
+ãkkom͜mp:lɛ̞̃rẽ  >  ãkkom͜mp:zɛ̞̃zẽ 
+ãkkordʰ:ãrẽ  >  ãkkozdʰ:ãzẽ 
+ãkkordʰ:o  >  ãkkozdʰ:o 
 
 
 CHANGE N°34
 
 If the following conditions were satisfied :  
+C:   Rel pos :  -1    Abs_pos : -1         Continu : False
+Template :((4, 0, -1), (1, 0))
 C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((-1, 2, 0), (-1, 0))
+Template :((-1, -1, -1), (-1, -1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((7, (0, 1, 0, 0, 0), 1), (0, 0, -1))
-The feature Voiced switched values from 1 to 0
+ ((11, -1, 1), (0, 0, 0))
+The feature secondary place of articulation switched values from 0 to 11
 
 
 Impacted phonems :
-d > t
+m > mʷ
+b > bʷ
+w > wʷ
 
 
 EXAMPLES 
   
-kan͜nʰdake  >  kan͜nʰtake 
-naɡdoloʈ  >  naɡtoloʈ 
-narakan͜nʰda  >  narakan͜nʰta 
-uinʰdikʂ  >  uinʰtikʂ 
-ʂardiʂ  >  ʂartiʂ 
-pʰilaida  >  pʰilaita 
-tanʰdillo  >  tanʰtillo 
-eʋ̠danonʰ  >  eʋ̠tanonʰ 
-ʂan͜nʰdalotʰeke  >  ʂan͜nʰtalotʰeke 
-ʂkan͜nʰdalɨʐo  >  ʂkan͜nʰtalɨʐo 
+ãkkom  >  ãkkomʷ 
+ãkkomʒʰ:ɛ̞̃k  >  ãkkomʷʒʰ:ɛ̞̃k 
+ãkkomɛ̞̃pn͜zẽ  >  ãkkomʷɛ̞̃pn͜zẽ 
+ãdʰbãn͜zn͜zom  >  ãdʰbãn͜zn͜zomʷ 
+ãkpzẽʒʰn͜zom  >  ãkpzẽʒʰn͜zomʷ 
+ãθ̼ɱ͜v:om:o  >  ãθ̼ɱ͜v:omʷ:o 
+ãotomzon͜z  >  ãotomʷzon͜z 
+bãkkɛ̞̃zom  >  bãkkɛ̞̃zomʷ 
+bãzzom  >  bãzzomʷ 
+bãʈ̟ãkzom  >  bãʈ̟ãkzomʷ 
 
 
 CHANGE N°35
 
+If the following conditions were satisfied :  
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((-1, -1, 1), (-1, -1, 0))
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, 2, -1), (1, 1))
 
 The phonemes matching the followin target were modified  : 
- ((11, (0, 0, 0, 0, 0), 0), (-1, 0, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((7, (0, 1, 0, 0, 0), -1), (0, 0, 1))
+The feature place of articulation switched values from 7 to 9
 
 
 Impacted phonems :
-ʍ > m͜ʍ
+dʰ > d̼ʰ
+tʰ > t̼ʰ
 
 
 EXAMPLES 
   
-aʍtonʰoe  >  am͜ʍtonʰoe 
-aʍkʂunonʰ  >  am͜ʍkʂunonʰ 
-d̼reʍky̥  >  d̼rem͜ʍky̥ 
-deʍʂ  >  dem͜ʍʂ 
-eʍtʰʉnanʰeʂ  >  em͜ʍtʰʉnanʰeʂ 
-eʍkleʂ  >  em͜ʍkleʂ 
-eʍkʰenʰor  >  em͜ʍkʰenʰor 
-leʍkanoʂ  >  lem͜ʍkanoʂ 
-leʍkotʰaa  >  lem͜ʍkotʰaa 
-nanʰtinʰeʍʂ  >  nanʰtinʰem͜ʍʂ 
+ãkkozdʰ:ãzẽ  >  ãkkozd̼ʰ:ãzẽ 
+ãẽtʰ:ẽz  >  ãẽt̼ʰ:ẽz 
+ãθ̼ɱ͜vozdʰ:ãzẽ  >  ãθ̼ɱ͜vozd̼ʰ:ãzẽ 
+ã:zdʰẽzẽ  >  ã:zd̼ʰẽzẽ 
+komʰm͜mãzdʰ:ãzẽ  >  komʰm͜mãzd̼ʰ:ãzẽ 
+kozdʰ:ãzĩon͜z  >  kozd̼ʰ:ãzĩon͜z 
+dʰãzkĩo:  >  d̼ʰãzkĩo: 
+dʰ:ẽz:ẽbɛ̞̃lʰɛ̞̃n͜z  >  d̼ʰ:ẽz:ẽbɛ̞̃lʰɛ̞̃n͜z 
+dʰ:ẽz:ẽʈ̟ĩo:  >  d̼ʰ:ẽz:ẽʈ̟ĩo: 
+dʰẽzɛ̞̃kãʈ̟ĩã:zẽ  >  d̼ʰẽzɛ̞̃kãʈ̟ĩã:zẽ 
 
 
 CHANGE N°36
 
 If the following conditions were satisfied :  
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((7, -1, 1), (-1, 0, 0))
 C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((0, 2, -1), (1, 0))
+Template :((-1, -1, -1), (-1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((3, (0, 1, 0, 0, 0), 1), (0, -1, 0))
-The feature aspiration switched values from 0 to 1
+ ((11, (1, 0, 0, 0, 0), 1), (1, -1, 0))
+The feature secondary place of articulation switched values from 1 to 0
 
 
 Impacted phonems :
-ɡ > ɡʰ
+m͜m > m͜m
 
 
 EXAMPLES 
   
-aɡa  >  aɡʰa 
-aɡɨʂtʰoʂ  >  aɡʰɨʂtʰoʂ 
-naɡtoloʈ  >  naɡʰtoloʈ 
-naɡnʰeʂɨa  >  naɡʰnʰeʂɨa 
-naɡaleɴ͜χan͜llaʂ  >  naɡʰaleɴ͜χan͜llaʂ 
-nʰaɡɨdoʈ  >  nʰaɡʰɨdoʈ 
-y̥aɡroʂ  >  y̥aɡʰroʂ 
-pap̪ʰlaɡon͜nʰɨa  >  pap̪ʰlaɡʰon͜nʰɨa 
-pnʰeʋ̠natoɴ͜χaɡɨonʰ  >  pnʰeʋ̠natoɴ͜χaɡʰɨonʰ 
-pʉtʰaɡorɨkoʂ  >  pʉtʰaɡʰorɨkoʂ 
+ãkkom͜mp:zẽʒʰk:o  >  ãkkom͜mp:zẽʒʰk:o 
+ãkkom͜mp:zɛ̞̃zẽ  >  ãkkom͜mp:zɛ̞̃zẽ 
+ãkkom͜mɛ̞̃zzẽ  >  ãkkom͜mɛ̞̃zzẽ 
+ãθ̼ɱ͜v:om͜m:ãzẽ  >  ãθ̼ɱ͜v:om͜m:ãzẽ 
+ãzz:om͜mɛ̞̃z:o  >  ãzz:om͜mɛ̞̃z:o 
+ãm͜m:ãzɛ̞̃kʰon͜z  >  ãm͜m:ãzɛ̞̃kʰon͜z 
+kom͜mɛ̞̃zɛ̞̃ʈ̟ĩo:  >  kom͜mɛ̞̃zɛ̞̃ʈ̟ĩo: 
+kom͜mp:zẽʒʰk:o  >  kom͜mp:zẽʒʰk:o 
+kom͜mp:zɛ̞̃zẽ  >  kom͜mp:zɛ̞̃zẽ 
+dʰẽkẽm͜mbzĩon͜z  >  dʰẽkẽm͜mbzĩon͜z 
 
 
 CHANGE N°37
 
 If the following conditions were satisfied :  
-C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((0, -1, -1), (1, -1))
-
-The phonemes matching the followin target were modified  : 
- ((7, (0, 1, 0, 0, 0), 1), (-1, 1, 0))
-The feature pre_nasal switched values from 1 to 0
-
-
-Impacted phonems :
-n͜d > d
-
-
-EXAMPLES 
-  
-kaʂʂanʰn͜dra  >  kaʂʂanʰdra 
-potɨn͜daa  >  potɨdaa 
-n͜diad̼oloʈ  >  diad̼oloʈ 
-n͜diaʐona  >  diaʐona 
-n͜dialɨnna  >  dialɨnna 
-n͜diaʂtaʂɨʂ  >  diaʂtaʂɨʂ 
-n͜diakonʰao  >  diakonʰao 
-n͜dialy̥o  >  dialy̥o 
-n͜dianʰy̥o  >  dianʰy̥o 
-n͜diar̥r̥ao  >  diar̥r̥ao 
-
-
-CHANGE N°38
-
-If the following conditions were satisfied :  
-C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((-1, -1, 1), (-1, -1, -1))
-
-The phonemes matching the followin target were modified  : 
- ((9, (0, 0, 0, 0, 0), 1), (0, 0, -1))
-The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 1, 0, 1)
-
-
-Impacted phonems :
-ʋ̠ > ɮ̟̟
-
-
-EXAMPLES 
-  
-d̼raʋ̠ronʰ  >  d̼raɮ̟̟ronʰ 
-nnʰeʋ̠ɨʂ  >  nnʰeɮ̟̟ɨʂ 
-pnʰeʋ̠natoɴ͜χaɡʰɨonʰ  >  pnʰeɮ̟̟natoɴ͜χaɡʰɨonʰ 
-d̼aʂɨleʋ̠o  >  d̼aʂɨleɮ̟̟o 
-ʐeʋ̠ɡnʰʉnɨ  >  ʐeɮ̟̟ɡnʰʉnɨ 
-tʰraʋ̠na  >  tʰraɮ̟̟na 
-laʋ̠ra  >  laɮ̟̟ra 
-leʋ̠roʂ  >  leɮ̟̟roʂ 
-nʰeʋ̠ra  >  nʰeɮ̟̟ra 
-poreʋ̠o  >  poreɮ̟̟o 
-
-
-CHANGE N°39
-
-If the following conditions were satisfied :  
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((7, -1, 1), (0, 1, -1))
 C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((4, 2, 0), (1, -1))
-C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((7, (1, 0, 0, 0, 0), 1), (-1, 0, -1))
+Template :((0, -1, 0), (-1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((-1, -1, 0), (0, 0, 0))
+ ((11, (0, 1, 0, 0, 0), 0), (0, -1, 0))
 The feature secondary place of articulation switched values from 0 to 11
 
 
 Impacted phonems :
-ʂ > ʂʷ
-t > tʷ
-k > kʷ
 p > pʷ
 
 
 EXAMPLES 
   
-kanʰnʰeʂarat  >  kanʰnʰeʂʷarat 
-em͜ʍtʰʉnanʰeʂ  >  em͜ʍtʰʉnanʰeʂʷ 
-tʰerananʰeʂ  >  tʰerananʰeʂʷ 
-lakʂiɸanʰeʂ  >  lakʂiɸanʰeʂʷ 
-naɡʰnʰeʂɨa  >  naɡʰnʰeʂʷɨa 
-paloponʰnʰeʂɨoʂ  >  paloponʰnʰeʂʷɨoʂ 
-prokonʰnʰeʂoʂ  >  prokonʰnʰeʂʷoʂ 
-ʂoʂɨkanʰeʂ  >  ʂoʂɨkanʰeʂʷ 
-tœ̥lneʂʂoʂ  >  tœ̥lneʂʷʂoʂ 
-pʂannetɨkʰoʂ  >  pʂannetʷɨkʰoʂ 
+ãpn͜zẽɖ̟ĩĩ:  >  ãpʷn͜zẽɖ̟ĩĩ: 
+ãpn͜zẽɖ̟ĩom  >  ãpʷn͜zẽɖ̟ĩom 
 
 
-CHANGE N°40
+CHANGE N°38
 
 
 The phonemes matching the followin target were modified  : 
- ((-1, (0, 1, 0, 0, 0), 0), (0, 0, 1))
-The feature aspiration switched values from 1 to 0
+ ((4, -1, 0), (1, 1))
+The feature Round switched values from 0 to 1
 
 
 Impacted phonems :
-tʰ > t
-p̪ʰ > p̪
-pʰ > p
-kʰ > k
+ẽ > ø̃
 
 
 EXAMPLES 
   
-aɡʰɨʂtʰoʂ  >  aɡʰɨʂtoʂ 
-atʰaloʈ  >  ataloʈ 
-ɡatʰaa  >  ɡataa 
-ɡolɡotʰa  >  ɡolɡota 
-dap̪ʰnʰe  >  dap̪nʰe 
-dirpʰʉʂ  >  dirpʉʂ 
-tinʰolokʰoʂ  >  tinʰolokoʂ 
-denopʰɨloʈ  >  denopɨloʈ 
-dorɨnakʰoʂ  >  dorɨnakoʂ 
-ilɨtʰy̥a  >  ilɨty̥a 
+ãbãztẽ  >  ãbãztø̃ 
+ãbãztẽo:  >  ãbãztø̃o: 
+ãbbɛ̞̃bẽz:o  >  ãbbɛ̞̃bø̃z:o 
+ãpʷn͜zẽɖ̟ĩĩ:  >  ãpʷn͜zø̃ɖ̟ĩĩ: 
+ãpʷn͜zẽɖ̟ĩom  >  ãpʷn͜zø̃ɖ̟ĩom 
+ãkkom͜mp:zẽʒʰk:o  >  ãkkom͜mp:zø̃ʒʰk:o 
+ãkkom͜mp:zɛ̞̃zẽ  >  ãkkom͜mp:zɛ̞̃zø̃ 
+ãkkozd̼ʰ:ãzẽ  >  ãkkozd̼ʰ:ãzø̃ 
+ãkkom͜mɛ̞̃zzẽ  >  ãkkom͜mɛ̞̃zzø̃ 
+ãkkomʷɛ̞̃pn͜zẽ  >  ãkkomʷɛ̞̃pn͜zø̃ 
+
+
+CHANGE N°39
+
+If the following conditions were satisfied :  
+C:   Rel pos :  -2    Abs_pos : -1         Continu : False
+Template :((-1, -1, 0), (-1, -1, 0))
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((4, 0, -1), (1, 0))
+
+The phonemes matching the followin target were modified  : 
+ ((7, (1, 0, 0, 0, 0), -1), (0, 0, 1))
+The feature secondary place of articulation switched values from 0 to 1
+
+
+Impacted phonems :
+nʰ > nʰ
+
+
+EXAMPLES 
+  
+ãzk:ozɛ̞̃ʈ̟:ãnʰon͜z  >  ãzk:ozɛ̞̃ʈ̟:ãnʰon͜z 
+kɛ̞̥̃nʰ:on͜zĩã  >  kɛ̞̥̃nʰ:on͜zĩã 
+zãʈ̟:ɛ̞̥̃nʰon͜z  >  zãʈ̟:ɛ̞̥̃nʰon͜z 
+zozɡɛ̞̃ʈ̟:ãnʰon͜z  >  zozɡɛ̞̃ʈ̟:ãnʰon͜z 
+zø̃ã:bʰoz:ɛ̞̃ʈ̟:ãnʰon͜z  >  zø̃ã:bʰoz:ɛ̞̃ʈ̟:ãnʰon͜z 
+m̥ãnʰozm͜mɛ̞̃ʈ̟:ãnʰon͜z  >  m̥ãnʰozm͜mɛ̞̃ʈ̟:ãnʰon͜z 
+zø̃ã:ʈ̟:ɛ̞̥̃nʰon͜z  >  zø̃ã:ʈ̟:ɛ̞̥̃nʰon͜z 
+tø̃ã:ʈ̟:ɛ̞̥̃nʰon͜z  >  tø̃ã:ʈ̟:ɛ̞̥̃nʰon͜z 
+
+
+CHANGE N°40
+
+If the following conditions were satisfied :  
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((4, 2, 1), (1, 1))
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((0, 2, 0), (1, 1))
+
+The phonemes matching the followin target were modified  : 
+ ((-1, (0, 1, 0, 0, 0), 1), (0, 0, 1))
+The feature pre_nasal switched values from 0 to 1
+
+
+Impacted phonems :
+bʰ > m͜bʰ
+
+
+EXAMPLES 
+  
+m̥:ãn͜zɛ̞̃bʰãø̃:  >  m̥:ãn͜zɛ̞̃m͜bʰãø̃: 
 
 
 CHANGE N°41
 
 If the following conditions were satisfied :  
-C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (-1, -1))
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((6, 2, 0), (-1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((7, (1, 0, 0, 0, 0), 1), (-1, 1, 1))
-The feature Voiced switched values from 1 to 0
+ ((6, -1, 1), (-1, 0, 1))
+The feature secondary place of articulation switched values from 0 to 5
 
 
 Impacted phonems :
-n͜nʰ > n͜n̥ʰ
+ʒʰ > ʒʰ
 
 
 EXAMPLES 
   
-kan͜nʰtad̼ry̥  >  kan͜n̥ʰtad̼ry̥ 
-kan͜nʰtake  >  kan͜n̥ʰtake 
-kʉdon͜nʰɨa  >  kʉdon͜n̥ʰɨa 
-likɨnʰn͜nʰia  >  likɨnʰn͜n̥ʰia 
-narakan͜nʰta  >  narakan͜n̥ʰta 
-nʰarn͜nʰia  >  nʰarn͜n̥ʰia 
-n͜nʰaarkoʂ  >  n͜n̥ʰaarkoʂ 
-ʉn͜nʰɨada  >  ʉn͜n̥ʰɨada 
-pap̪laɡʰon͜nʰɨa  >  pap̪laɡʰon͜n̥ʰɨa 
-tʉn͜nʰdaraoʂ  >  tʉn͜n̥ʰdaraoʂ 
+ø̃bʰø̃ʒʰĩon͜z  >  ø̃bʰø̃ʒʰĩon͜z 
 
 
 CHANGE N°42
 
 If the following conditions were satisfied :  
-C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (0, 0, -1))
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((-1, -1, -1), (1, 1))
 
 The phonemes matching the followin target were modified  : 
- ((3, -1, 1), (0, 1, 0))
-The feature place of articulation switched values from 3 to 4
+ ((7, -1, 1), (0, 0, 0))
+The feature place of articulation switched values from 7 to 6
 
 
 Impacted phonems :
-ŋ͜ŋ > ɲ͜ɲ
+z > ʒ
 
 
 EXAMPLES 
   
-ʂtʉn͜llaŋ͜ŋɡionʰ  >  ʂtʉn͜llaɲ͜ɲɡionʰ 
-koŋ͜ŋɡionʰ  >  koɲ͜ɲɡionʰ 
-laŋ͜ŋkia  >  laɲ͜ɲkia 
-aŋ͜ŋkiʂtia  >  aɲ͜ɲkiʂtia 
+ãbãztø̃  >  ãbãʒtø̃ 
+ãbãztø̃o:  >  ãbãʒtø̃o: 
+ãkkozzɛ̞̃ɡ:o  >  ãkkoʒzɛ̞̃ɡ:o 
+ãkkozd̼ʰ:ãzø̃  >  ãkkoʒd̼ʰ:ãzø̃ 
+ãkkom͜mɛ̞̃zzø̃  >  ãkkom͜mɛ̞̃ʒzø̃ 
+ãkʰ:okzãø̃  >  ãkʰ:okʒãø̃ 
+ãzzø̃c:zo  >  ãʒzø̃c:zo 
+ãdʰbø̃zz:ø̃ʒʰk:o  >  ãdʰbø̃ʒz:ø̃ʒʰk:o 
+ãdʰm͜mozt:ø̃ʒʰk:o  >  ãdʰm͜moʒt:ø̃ʒʰk:o 
+ãdʰm͜mozk:ɛ̞̃zø̃  >  ãdʰm͜moʒk:ɛ̞̃zø̃ 
 
 
 CHANGE N°43
 
 If the following conditions were satisfied :  
-C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((6, 2, 0), (1, 0))
 C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((7, -1, 1), (0, -1, 0))
+Template :((0, 2, 0), (1, -1))
+C:   Rel pos :  -2    Abs_pos : -1         Continu : False
+Template :((3, (0, 1, 0, 0, 0), -1), (0, 0, -1))
 
 The phonemes matching the followin target were modified  : 
- ((7, (1, 0, 0, 0, 0), 1), (-1, 0, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((-1, (0, 1, 0, 0, 0), 0), (0, -1, 0))
+The feature Voiced switched values from 0 to 1
 
 
 Impacted phonems :
-n > n͜n
+k > ɡ
+t > d
+ʈ̟ > ɖ̟
+p > b
 
 
 EXAMPLES 
   
-ʐnila  >  ʐn͜nila 
-nidaʂ  >  n͜nidaʂ 
-nilɨɡna  >  n͜nilɨɡna 
-ninœ̥ona  >  n͜ninœ̥ona 
+ãkʰ:okzã  >  ãkʰ:oɡzã 
+ãkʰ:okʒãø̃  >  ãkʰ:oɡʒãø̃ 
+ãkʰ:otĩã:zø̃  >  ãkʰ:odĩã:zø̃ 
+d̼ʰø̃zɛ̞̃kãʈ̟ĩã:zø̃  >  d̼ʰø̃zɛ̞̃kãɖ̟ĩã:zø̃ 
+ɱ͜vok:ãkĩã  >  ɱ͜vok:ãɡĩã 
+ʒø̃ø̃kn͜zkãpk:ãzø̃  >  ʒø̃ø̃kn͜zkãbk:ãzø̃ 
 
 
 CHANGE N°44
 
-If the following conditions were satisfied :  
-C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (-1, -1))
-C:   Rel pos :  2    Abs_pos : -1         Continu : False
-Template :((0, 2, 0), (-1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((3, (0, 0, 0, 1, 1), 1), (0, -1, -1))
-The feature secondary place of articulation switched values from 0 to 1
+ ((11, -1, 1), (0, -1, 0))
+The feature Voiced switched values from 1 to 0
 
 
 Impacted phonems :
-ʟ̆ > ʟ̆
+b > p
+m > m̥
+m͜m > m͜m̥
+w > ʍ
 
 
 EXAMPLES 
   
-ð̼ʰattoloʟ̆ɨa  >  ð̼ʰattoloʟ̆ɨa 
+ãbãʒtø̃  >  ãpãʒtø̃ 
+ãbãʒtø̃o:  >  ãpãʒtø̃o: 
+ãbbãtʰ:o  >  ãppãtʰ:o 
+ãbbãtʰoo:  >  ãppãtʰoo: 
+ãbbɛ̞̃bø̃z:o  >  ãppɛ̞̃pø̃z:o 
+ãpʷn͜zø̃ɖ̟ĩom  >  ãpʷn͜zø̃ɖ̟ĩom̥ 
+ãbyn͜zn͜zɛ̞̃m͜mon͜z  >  ãpyn͜zn͜zɛ̞̃m͜mon͜z 
+ãkkom͜mp:zø̃ʒʰk:o  >  ãkkom͜m̥p:zø̃ʒʰk:o 
+ãkkom͜mp:zɛ̞̃zø̃  >  ãkkom͜m̥p:zɛ̞̃zø̃ 
+ãkkom͜mɛ̞̃ʒzø̃  >  ãkkom͜m̥ɛ̞̃ʒzø̃ 
 
 
 CHANGE N°45
 
 
 The phonemes matching the followin target were modified  : 
- ((3, (1, 0, 0, 0, 0), 1), (-1, 0, 0))
-The feature Voiced switched values from 1 to 0
+ ((-1, (0, 1, 0, 0, 0), 1), (0, -1, 1))
+The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 0, 1, 1)
 
 
 Impacted phonems :
-ŋ > ŋ̊
+bʰ > ɺ̟̟̟̟ʰ
+d̼ʰ > ɺ̟̟ʰ
+dʰ > ɺʰ
+m͜bʰ > m͜ɺ̟̟̟̟ʰ
 
 
 EXAMPLES 
   
-ʐaŋkle  >  ʐaŋ̊kle 
-kaŋkraa  >  kaŋ̊kraa 
-ʂaraŋɡa  >  ʂaraŋ̊ɡa 
-d̼raŋkoʂ  >  d̼raŋ̊koʂ 
-ɡiŋɡroʂ  >  ɡiŋ̊ɡroʂ 
-ʐiŋɡoʂ  >  ʐiŋ̊ɡoʂ 
-kiŋkloʈ  >  kiŋ̊kloʈ 
-katanʰaŋke  >  katanʰaŋ̊ke 
-nalaŋkorʉpoʂ  >  nalaŋ̊korʉpoʂ 
-parɨtʉŋkanʰo  >  parɨtʉŋ̊kanʰo 
+ãkkãbʰ:o  >  ãkkãɺ̟̟̟̟ʰ:o 
+ãkkoʒd̼ʰ:ãzø̃  >  ãkkoʒɺ̟̟ʰ:ãzø̃ 
+ãkkozdʰ:o  >  ãkkozɺʰ:o 
+ãdʰpãn͜zn͜zomʷ  >  ãɺʰpãn͜zn͜zomʷ 
+ãdʰʒʰ:ɛ̞̃k  >  ãɺʰʒʰ:ɛ̞̃k 
+ãdʰpãsn͜zĩã:zø̃  >  ãɺʰpãsn͜zĩã:zø̃ 
+ãdʰpø̃ʒz:ø̃ʒʰk:o  >  ãɺʰpø̃ʒz:ø̃ʒʰk:o 
+ãdʰpzãkkʰĩo:  >  ãɺʰpzãkkʰĩo: 
+ãdʰɽ̠̊okn͜z:kãzø̃  >  ãɺʰɽ̠̊okn͜z:kãzø̃ 
+ãdʰɽ̠̊okn͜z:to  >  ãɺʰɽ̠̊okn͜z:to 
 
 
 CHANGE N°46
 
-If the following conditions were satisfied :  
-C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((-1, (0, 0, 1, 0, 0), -1), (-1, -1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((-1, (0, 1, 0, 0, 0), 0), (0, 0, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((-1, (0, 1, 0, 0, 0), 0), (5, -1, 0))
+The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 0, 1, 0)
 
 
 Impacted phonems :
-t > n͜t
-p > m͜p
-k > ŋ͜k
+ŋ͜k > ŋ͜ɢ̥̟̆
+k > ɢ̥̟̆
 
 
 EXAMPLES 
   
-aɡʰɨʂtoʂ  >  aɡʰɨʂn͜toʂ 
-d̼oʂporoʂ  >  d̼oʂm͜poroʂ 
-danaʂkoʂ  >  danaʂŋ͜koʂ 
-dioʂkuroʂ  >  dioʂŋ͜kuroʂ 
-taʂprotoʂ  >  taʂm͜protoʂ 
-taopraʂtoʂ  >  taopraʂn͜toʂ 
-kaʂtad̼oʂ  >  kaʂn͜tad̼oʂ 
-lʉʂtra  >  lʉʂn͜tra 
-palaʂtinʰe  >  palaʂn͜tinʰe 
-paraʂkeʋ̠e  >  paraʂŋ͜keʋ̠e 
+ãkŋ͜kãø̃rʰĩo:  >  ãkŋ͜ɢ̥̟̆ãø̃rʰĩo: 
+ãkŋ͜kãø̃rʰ:ɛ̞̃zø̃  >  ãkŋ͜ɢ̥̟̆ãø̃rʰ:ɛ̞̃zø̃ 
+ãɖ̟ãk:o  >  ãɖ̟ãɢ̥̟̆:o 
+ãzɛ̞̃kɛ̞̃n͜z  >  ãzɛ̞̃ɢ̥̟̆ɛ̞̃n͜z 
+ãn͜zn͜zø̃koz  >  ãn͜zn͜zø̃ɢ̥̟̆oz 
+k:ɛ̞̃ʒk:ãɡɛ̞̃ʒt:ã  >  k:ɛ̞̃ʒɢ̥̟̆:ãɡɛ̞̃ʒt:ã 
+k:ɛ̞̃ʒkø̃  >  k:ɛ̞̃ʒɢ̥̟̆ø̃ 
+ɛ̞̃z:ãkĩã  >  ɛ̞̃z:ãɢ̥̟̆ĩã 
+m̥ø̃ɖ̟ɛ̞̃n͜zø̃kon͜z  >  m̥ø̃ɖ̟ɛ̞̃n͜zø̃ɢ̥̟̆on͜z 
+kãzɺʰ:o  >  ɢ̥̟̆ãzɺʰ:o 
 
 
 CHANGE N°47
 
 If the following conditions were satisfied :  
 C:   Rel pos :  -2    Abs_pos : -1         Continu : False
-Template :((-1, -1, 1), (0, -1, 0))
+Template :((6, (0, 1, 0, 0, 0), -1), (0, 0, 0))
 C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((-1, -1, -1), (-1, -1))
+Template :((4, 0, -1), (1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((7, (1, 0, 0, 0, 0), -1), (-1, 0, 1))
-The feature place of articulation switched values from 7 to 9
+ ((-1, (1, 0, 0, 0, 0), 1), (1, 0, 1))
+The feature Voiced switched values from 1 to 0
 
 
 Impacted phonems :
-nʰ > n̼ʰ
+nʰ > n̥ʰ
 
 
 EXAMPLES 
   
-ðanʰavɨ  >  ðan̼ʰavɨ 
-em͜ʍtʉnanʰeʂʷ  >  em͜ʍtʉnan̼ʰeʂʷ 
-ʐenʰod̼ɨoʂ  >  ʐen̼ʰod̼ɨoʂ 
-terananʰeʂʷ  >  teranan̼ʰeʂʷ 
-linenʰarɡooʂ  >  linen̼ʰarɡooʂ 
-nanʰaʂʂeʂ  >  nan̼ʰaʂʂeʂ 
-nunʰʉkɨonʰ  >  nun̼ʰʉkɨonʰ 
-pallenʰe  >  pallen̼ʰe 
-parɨklʉnanʰoʂ  >  parɨklʉnan̼ʰoʂ 
-ʂalonʰɨoʂ  >  ʂalon̼ʰɨoʂ 
+ãzk:ozɛ̞̃ʈ̟:ãnʰon͜z  >  ãzk:ozɛ̞̃ʈ̟:ãn̥ʰon͜z 
+zãʈ̟:ɛ̞̥̃nʰon͜z  >  zãʈ̟:ɛ̞̥̃n̥ʰon͜z 
+zoʒɡɛ̞̃ʈ̟:ãnʰon͜z  >  zoʒɡɛ̞̃ʈ̟:ãn̥ʰon͜z 
+ʒø̃ã:ɺ̟̟̟̟ʰoz:ɛ̞̃ʈ̟:ãnʰon͜z  >  ʒø̃ã:ɺ̟̟̟̟ʰoz:ɛ̞̃ʈ̟:ãn̥ʰon͜z 
+m̥ãnʰoʒm͜mɛ̞̃ʈ̟:ãnʰon͜z  >  m̥ãnʰoʒm͜mɛ̞̃ʈ̟:ãn̥ʰon͜z 
+ʒø̃ã:ʈ̟:ɛ̞̥̃nʰon͜z  >  ʒø̃ã:ʈ̟:ɛ̞̥̃n̥ʰon͜z 
+tø̃ã:ʈ̟:ɛ̞̥̃nʰon͜z  >  tø̃ã:ʈ̟:ɛ̞̥̃n̥ʰon͜z 
 
 
 CHANGE N°48
 
 If the following conditions were satisfied :  
-C:   Rel pos :  1    Abs_pos : -1         Continu : False
-Template :((-1, 2, -1), (1, -1))
-C:   Rel pos :  -1    Abs_pos : -1         Continu : False
-Template :((-1, 2, 0), (-1, -1))
+C:   Rel pos :  -2    Abs_pos : -1         Continu : False
+Template :((11, (1, 0, 0, 0, 0), 1), (1, 1, 0))
 
 The phonemes matching the followin target were modified  : 
- ((3, -1, 0), (-1, 0, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((7, -1, 1), (0, 0, 0))
+The feature place of articulation switched values from 7 to 8
 
 
 Impacted phonems :
-k > ŋ͜k
+z > ð
 
 
 EXAMPLES 
   
-d̼rʉklike  >  d̼rʉkliŋ͜ke 
-dadakeʂ  >  dadaŋ͜keʂ 
-ʐekaʂ  >  ʐeŋ͜kaʂ 
-kan͜n̥ʰtake  >  kan͜n̥ʰtaŋ͜ke 
-lanpʂakenoʂ  >  lanpʂaŋ͜kenoʂ 
-nakarɨa  >  naŋ͜karɨa 
-narakan͜n̥ʰta  >  naraŋ͜kan͜n̥ʰta 
-nakanʰɨdaʂ  >  naŋ͜kanʰɨdaʂ 
-nʰikarkoʂ  >  nʰiŋ͜karkoʂ 
-pelekaʂ  >  peleŋ͜kaʂ 
+ãɺʰm͜mɛ̞̃z:ãkĩã:zø̃  >  ãɺʰm͜mɛ̞̃ð:ãkĩã:zø̃ 
+ãɺʰm͜mɛ̞̃z:ãkĩo:  >  ãɺʰm͜mɛ̞̃ð:ãkĩo: 
+komʰm͜mãzɺʰ:o  >  komʰm͜mãðɺʰ:o 
+ø̃kn͜zkãʒm͜mɛ̞̃z:o  >  ø̃kn͜zkãʒm͜mɛ̞̃ð:o 
+ɛ̞̃ʒkø̃ʒm͜mɛ̞̃z:ãpɛ̞̃lʰɛ̞̃n͜z  >  ɛ̞̃ʒkø̃ʒm͜mɛ̞̃ð:ãpɛ̞̃lʰɛ̞̃n͜z 
+m͜mãzɛ̞̃ɱ͜v:ãʈ̟ĩon͜z  >  m͜mãðɛ̞̃ɱ͜v:ãʈ̟ĩon͜z 
+m͜mãzã  >  m͜mãðã 
+m͜mɛ̞̃z:ãkĩã  >  m͜mɛ̞̃ð:ãkĩã 
+m͜mɛ̞̃z:ãkĩã:zø̃  >  m͜mɛ̞̃ð:ãkĩã:zø̃ 
+m͜mɛ̞̃z:ãkĩo:  >  m͜mɛ̞̃ð:ãkĩo: 
 
 
 CHANGE N°49
 
+If the following conditions were satisfied :  
+C:   Rel pos :  -2    Abs_pos : -1         Continu : False
+Template :((-1, -1, -1), (-1, 0))
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((6, -1, -1), (0, 0, -1))
 
 The phonemes matching the followin target were modified  : 
- ((10, (0, 0, 1, 0, 0), 1), (-1, 0, 0))
-The feature pre_nasal switched values from 0 to 1
+ ((-1, (1, 0, 0, 0, 0), 1), (1, 1, 0))
+The feature Voiced switched values from 1 to 0
 
 
 Impacted phonems :
-v > ɱ͜v
+m͜m > m͜m̥
 
 
 EXAMPLES 
   
-ðan̼ʰavɨ  >  ðan̼ʰaɱ͜vɨ 
-elð̼ʰivɨoʂ  >  elð̼ʰiɱ͜vɨoʂ 
+komʰm͜mãʒɺ̟̟ʰ:ãzø̃  >  komʰm͜m̥ãʒɺ̟̟ʰ:ãzø̃ 
+m̥ãnʰoʒm͜mɛ̞̃ʈ̟:ãn̥ʰon͜z  >  m̥ãnʰoʒm͜m̥ɛ̞̃ʈ̟:ãn̥ʰon͜z 
 
 
 CHANGE N°50
 
+If the following conditions were satisfied :  
+C:   Rel pos :  1    Abs_pos : -1         Continu : False
+Template :((-1, -1, -1), (-1, -1))
+C:   Rel pos :  2    Abs_pos : -1         Continu : False
+Template :((7, -1, 1), (0, -1, -1))
 
 The phonemes matching the followin target were modified  : 
- ((5, (0, 0, 1, 0, 0), 0), (0, -1, 0))
-The feature aspiration switched values from 0 to 1
+ ((9, (0, 0, 0, 1, 1), 1), (-1, 0, -1))
+The feature ('nasal', 'plosive', 'fricative', 'trill', 'lateral') switched values from 1 to (0, 0, 1, 0, 0)
 
 
 Impacted phonems :
-ʂ > ʂʰ
+ɺ̟̟ʰ > ð̼ʰ
 
 
 EXAMPLES 
   
-akɨʂ  >  akɨʂʰ 
-iʂ  >  iʂʰ 
-tatoʂ  >  tatoʂʰ 
-oʂ  >  oʂʰ 
-aɡʰɨʂn͜toʂ  >  aɡʰɨʂʰn͜toʂʰ 
-aʋ̠ɡiaʂ  >  aʋ̠ɡiaʂʰ 
-aʋ̠liʂ  >  aʋ̠liʂʰ 
-am͜ʍkʂunonʰ  >  am͜ʍkʂʰunonʰ 
-d̼y̥otoʂ  >  d̼y̥otoʂʰ 
-d̼oʂm͜poroʂ  >  d̼oʂʰm͜poroʂʰ 
+ãkkoʒɺ̟̟ʰ:ãzø̃  >  ãkkoʒð̼ʰ:ãzø̃ 
+ãθ̼ɱ͜voʒɺ̟̟ʰ:ãzø̃  >  ãθ̼ɱ͜voʒð̼ʰ:ãzø̃ 
+ã:ʒɺ̟̟ʰø̃zø̃  >  ã:ʒð̼ʰø̃zø̃ 
+komʰm͜m̥ãʒɺ̟̟ʰ:ãzø̃  >  komʰm͜m̥ãʒð̼ʰ:ãzø̃ 
+koʒɺ̟̟ʰ:ãzĩon͜z  >  koʒð̼ʰ:ãzĩon͜z 
+ɺ̟̟ʰ:ø̃z:ø̃pɛ̞̃lʰɛ̞̃n͜z  >  ð̼ʰ:ø̃z:ø̃pɛ̞̃lʰɛ̞̃n͜z 
+ɺ̟̟ʰ:ø̃z:ø̃ʈ̟ĩo:  >  ð̼ʰ:ø̃z:ø̃ʈ̟ĩo: 
+ɺ̟̟ʰø̃zɛ̞̃kãɖ̟ĩã:zø̃  >  ð̼ʰø̃zɛ̞̃kãɖ̟ĩã:zø̃ 
+ɺ̟̟ʰø̃zɛ̞̃kãʈ̟ĩo:  >  ð̼ʰø̃zɛ̞̃kãʈ̟ĩo: 
+ɺ̟̟ʰ:ø̃z:ø̃ktĩã:zø̃  >  ð̼ʰ:ø̃z:ø̃ktĩã:zø̃ 

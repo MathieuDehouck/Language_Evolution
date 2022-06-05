@@ -3,7 +3,10 @@
 Created on Tue May 17 16:02:54 2022
 
 @author: 3b13j
+
+Contains some side methods to write the state of some objects and describe the execution of the program  in log files
 """
+
 from utilitaries import feature_match, feature_indices, tpl_2_candidates
 from IPA import IPA
 from encoder_decoder import encode_f
@@ -16,23 +19,36 @@ ift = ipa.cfeatures
 #TODO
 #ccl = ipa.classes
 
-def tpl2phons(tpl, alph = ipa.phonemes) :
-    phons = []
-    for phon in ipa.phonemes : 
-        if feature_match(tpl, phon.features) : phons.append(phon)
-    return phons
-
-
-
-
         
 
 def target2str (feat):
+    """
+    Encode the target of a change to write it latter in the log
+
+    Parameters
+    ----------
+    feat : list 
+        description of a feature template
+
+    
+    -------
+    s : qtring describing it 
+    
+    """
     s = "Target : "
     s+= encode_f(feat)
     return s 
 
+
+
+
+
 def create_breviary() :
+    """
+    Creates a user friendly document that describes all the natural classes that exist with regard to the
+    IPA we use at the heart of the program""
+
+    """
     folder = Path("phonetic/")
     
     f = open (folder /"breviary.txt", "w", encoding = "utf8")
@@ -62,41 +78,36 @@ def create_breviary() :
         f.write("\n")
         f.write("\n")
         
-def effect2str(ci, cf) :
-    s = "Effect : " 
-    ci = ci.state
-    cf = cf.state
-    for i in range(len(ci)) :
         
-        if ci[i] != -1  :
-            if s != "Effect : " : s+= "  &  "
+    
             
-            s+= str ( ift[i]) + " : " 
-            if cf[i]>ci[i] : s += "+1"
-            else : s += "-1" 
-    return s
-            
-            
+        
+def effect_to_string():
+    NotImplemented
+    
+    
+    
+    
+    
 def cond2str(cond) :
-    s = "cond : "
-    
-    #TODOmake a difference between c cond and p cond. 
-    
-    
-    s+= encode_f(cond.template)
-     
-    return s
+    NotImplemented
+
+
+
+
 
 def change2str(change) : 
+    # TODO white a new change2str method regarding the new encadong of changes. 
+    
+    
     print(change)
     s = "Change :  \n "
     # avant target.template
-    s+= target2str(change.target) +" " +effect2str(change.config_initiale, change.config_finale) 
+    s+= target2str(change.target) +" " 
     if len(change.conditions)>1 :
         for j in range (1, len(change.conditions))  :
             s+= cond2str (change.conditions[j])
     return s
-
 
 
 
@@ -107,14 +118,16 @@ def change2str(change) :
 
 
 
+
 def write_in_log(path, string):
-    """ Takes as input the name of a log file and the sentence that it sould add in it"""
-    
+    """ Takes as input the name of a log file and the sentence that it sould add in it"""    
     folder = Path("logs/")
     path = folder / path
     f = open(path, 'a',  encoding='utf8')
     f.write(string)
     f.write("\n")
+
+
 
 
 
@@ -125,9 +138,10 @@ def phon2log (phon, path) :
     Parameters
     ----------
     phon : phoneme to write in the script
-        DESCRIPTION.
-    path : TYPE
-        DESCRIPTION.
+        
+    path : str 
+        path to the target file
+        
 
     Returns
     -------
@@ -138,10 +152,8 @@ def phon2log (phon, path) :
     folder = Path("logs/")
     path = folder / path
     
-    
     f = open (path, "a",encoding='utf8')
     f.write (str(phon.ipa))
-    
     f.write("   :  ")
     f.write( phon.description )
     
@@ -201,6 +213,8 @@ def purge_log(path) :
 
 
 
+
+
 def change2log (change, path,lang,  print_phons = True, i = 0 ) :
     
     
@@ -250,23 +264,10 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
             f.write (str(values[1]))
             f.write("\n")
     
-    #f.write(str(change))
     f.write("\n")
-    
-    
-   
-    
-    #TODO this version of impacted phonem selects the impacted phonems an und für sich , not the imacted phonems i nthe language
-    # we need to access the language and create functions to update it.
-    
-
-    
     
     if print_phons :
         f.write("\n")
-        #phons = tpl_2_candidates(lang, change.target)
-        
-    
         f.write('Impacted phonems :')
         
         for phon in change.impacted_phonemes :
@@ -278,25 +279,18 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
             f.write(change.impacted_phonemes[phon][1])
         f.write("\n")
         
-            
-    
-    
     f.write("\n")
     f.write("\n")
     f.close()
     
-    return 
    
     
    
     
-   
-    
-   
 def langcomp2log (l1, l2, path) :
     """
-    Comapres the vobulary of two languages and writes it in a log (subfunction used to trace the evolution between two language state)
-    
+    Comapres the vobulary of two languages and writes the comparison in a log (subfunction used to trace the evolution between two language state)
+    BE CAREFUL, we excpect the two languages to be related / at least to have the same voc size for this operation to make sense.
 
     Parameters
     ----------
@@ -318,15 +312,13 @@ def langcomp2log (l1, l2, path) :
     path = folder / path
     
    
-    f = open (path, "a",encoding='utf8')
-    
+    f = open (path, "a",encoding='utf8')  
     f.write("We are going to solemnly compare the evolution between ")
     f.write (l1.name)
     f.write (" and ")
     f.write (l2.name)
     f.write("\n")
     f.write("\n")
-    
     for word in l1.voc :
         f.write(l1.voc[word].ipa) 
         f.write ('   ->    ')
@@ -340,11 +332,11 @@ def langcomp2log (l1, l2, path) :
     
 def lgs2log(liste) :
     """
-    I honestly currently forgot what it did
+    print the evolution of a language step by step. 
 
     Parameters
     ----------
-    liste : ?
+    liste : list of languages where the i+1 th element is the result of the evolution of the ith
 
     Returns
     -------
@@ -355,9 +347,8 @@ def lgs2log(liste) :
     
     for i in range (len(liste) -1) :
         langcomp2log (liste[0], liste[i+1], "comp_lat_rom.txt")
-        langcomp2log (liste[0], liste[i+1], "comp_rom_rom.txt")
+        langcomp2log (liste[i], liste[i+1], "comp_rom_rom.txt")
         
-    
     
     
     
@@ -409,6 +400,3 @@ def extract_changed_words(path, write = False) :
         
     f.close()
     return chg_wds
-    
-    
-    

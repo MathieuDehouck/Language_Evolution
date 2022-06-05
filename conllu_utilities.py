@@ -4,7 +4,7 @@ Created on Mon May  2 16:34:02 2022
 
 @author: 3b13j
 
-contains usefull function to extract data from conllu files
+contains usefull functions to extract data from conllu files
 """
 import os 
 import re

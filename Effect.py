@@ -17,7 +17,8 @@ class Effect (object) :
     A class representing the effect of a change
     
     The effect is encoded as a dictionnary, taking as key the index of the feature to be modified, and
-    as value the new value it sould have.
+    as value a couple [initial value, new value]
+    This representation will allow to modelize cyclic change. 
     
     An effect could be built using a target
     
@@ -36,7 +37,7 @@ class Effect (object) :
     random_effect 
     
     """
-    
+#TODO éliminer add effect et gérer ailleurs (dans le générateur) 
     def __init__(self, target, r = False, index = None)  :
 
         self.target = target
@@ -55,16 +56,35 @@ class Effect (object) :
             self.set_output( inde)
 
 
+
+
+
     def add_effect (self, key, value) :
+        """ 
+        Adds a possible change to the Effect object
+        """
         self.effect[key] = value
 
-        
+    
+    #TODO réflechir à délocaliser cette méthode dans le générateur de changement ? Ou lui donner en champ un target. 
+    # déléguer au moins son application . L'object effect ne devrait conceptuellement pas avoir de target / être lié à lui/ 
     def set_output(self, index) :
+        """
+        Automatically computes the outcome 
+
+        Parameters
+        ----------
+        index : TYPE
+            DESCRIPTION.
+
+        Returns
+        -------
+        None.
+
+        """
 
         if self.isV : Trinity = MatricesV 
         else : Trinity = MatricesC
-        
-        
         
         original_value = self.target[index[0]][index[1]]
         manner = False
@@ -98,14 +118,11 @@ class Effect (object) :
         if sec_manner :  output_value = secondary_place[output_value]
         value = ( original_value, output_value) 
         self.effect[index] = value
+    
         
-    def __str__(self) :
-        
-        s =  str(self.effect)
+    
+    
+    
+    def __str__(self) : 
+        s =  " index of the modified feature :" + str(self.effect[0]) + " old vs new value : " + str(self.effect[1])
         return s
-        
-
-        
-        
-        
-        
