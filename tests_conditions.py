@@ -7,10 +7,10 @@ Created on Thu Jun  2 14:22:59 2022
 
 
 from utilitaries import *
-from IPA import IPA  , linearize
+from IPA import IPA 
 from Natural_class import *
 from wiki_utilities import get_language
-from Configuration import Configuration 
+
 from P_change_generator import Baby_P_change_generator
 from Phoneme import list_2_tuple , tuple_2_list
 from Effect import Effect
@@ -73,7 +73,31 @@ l2, chw = ch.apply_language(lang)
 print(chw)
 
 
+print("we add another condition")
 
+ch = P_change(target, effect)
+
+target_cong =  wd2.phonemes[0].features
+
+
+cond = P_condition(target_cong, 0, 0)
+
+ch.add_condition(cond)
+
+
+print("WD2", wd2)
+print(ch)
+
+nw = ch.apply_word(wd2)
+print(nw)
+print()
+nw = ch.apply_word(wd3)
+print(nw)
+
+
+
+
+cond.test(wd2, 2, True)
 
 
 
@@ -85,7 +109,7 @@ print(chw)
 
 #PB 
 
-
+"""
 wd = lang.voc["deiformis"]
 
 
@@ -121,6 +145,6 @@ condi = change.conditions[0]
 
 condi.test(wd, 1, True)
 
-
+"""
 
 

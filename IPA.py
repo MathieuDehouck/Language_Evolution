@@ -13,38 +13,6 @@ from Phoneme import Vowel, Consonant
 
 
 
-def linearize (LISTE, liste = [], reset = True) :
-    """
-    transforme une liste complexe en une liste linéarisée
-
-    Parameters
-    ----------
-    LISTE : TYPE
-        DESCRIPTION.
-    liste : TYPE, optional
-        DESCRIPTION. The default is [].
-    reset : TYPE, optional
-        DESCRIPTION. The default is True.
-
-    Returns
-    -------
-    liste : TYPE
-        DESCRIPTION.
-
-    """
-    if reset : liste = []
-    for ft in list(LISTE) : 
-        if type(ft) == int : 
-            liste.append(ft)
-            LISTE.remove(ft)
-        else :
-            
-            liste = linearize (list(ft), liste, False)      
-    return liste
-
-
-
-
 class archetype(object) :
     """
     A class to represent an archetypal phoneme (phoneme belonging to the IPA)
@@ -56,9 +24,7 @@ class archetype(object) :
     ----------
     ipa : str
         character representing the phoneme in the IPA
-    features : list
-        list of integers following a template we defined to represent a phoneme ;
-        each index of the list stores a numerical value which can be interpreted as a phonetic feature
+    features : tuple in a format we defined that represent key informations to define a phoneme's property'
     description : str
         precise description of the phoneme (obtained using the IPA python module)
 
@@ -66,6 +32,11 @@ class archetype(object) :
     -------
     __init__(str, liste) 
         the constructor, that takes the ipa and features as attributes
+        
+        
+    is_Vowel
+    is_Consonant
+    get_one
     """
     
     def __init__(self, string, feats, vow):
@@ -77,25 +48,36 @@ class archetype(object) :
         except:
             self.description = 'No description'
        
+        
+       
 
 
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
 
+
+
     def is_Vowel(self):
         return self.vow
+
+
+
+
 
     def is_Consonant(self):
         return not self.vow
     
+
+
+
 
     def get_one(self, extra_feats, syllabic):
         """
         I'll change this eventually
         """
         base = self.features[0]
-        #print(self.features, extra_feats)
+        
         if self.vow:
             extra = [1, 0]
             if 'nasalised' in extra_feats:
@@ -131,7 +113,12 @@ def cons_dist(features, consonants):
     return dists
 
 
+
+
 def vowel_dist(features, vowels):
+    """
+    computes the distance between a vow features and a set of vowells
+    """
     dists = []
     (xh, xb, xr), _ = features
     for ((yh, yb, yr), _), ch in vowels.items():
@@ -139,6 +126,8 @@ def vowel_dist(features, vowels):
     dists.sort()
 
     return dists
+        
+        
         
         
 
@@ -150,8 +139,8 @@ class IPA() :
 
     Attributes
     ----------
-    features : list
-        list of the str corresponding to the name of the features used in this IPA to describe the phonemes
+    cfeatures or vfeatures : list
+        list of the str corresponding to the name of the features used in this IPA to describe the phonemes . it describe their semantics
     phonemes : list
         list of archetypes objects , representing the canonical phonemes of the IPA 
     alphabet : dic
@@ -188,7 +177,6 @@ class IPA() :
     def __init__(self) :
         self.vfeatures = ( 'Height','Backness', 'Round'), ('Voiced', 'Nasal')
         self.cfeatures = ('place of articulation', ('nasal', 'plosive', 'fricative', 'trill', 'lateral'), 'Voiced'), ('secondary place of articulation', 'pre_nasal' , 'aspiration')
-                        
         self.phonemes = [] 
         self.alphabet = {}
         self.feat2ipa = {}
@@ -241,6 +229,9 @@ class IPA() :
                 self.alphabet[ch] = phon
                 self.feat2ipa[fts] = ch
                 self.vow2ipa[fts] = ch
+
+
+
 
 
     def get_char(self, phon, verbose=False):
@@ -343,8 +334,7 @@ class IPA() :
 
                 else:
                     dist = cons_dist(feats, self.cons2ipa)
-                    #print(dist)
-                    #print(feats)
+                    
                     _, (part, voice), out = dist[0]
                     
                     if feats[0][2] == 1 and feats[0][2] != voice:

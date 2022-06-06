@@ -52,9 +52,9 @@ class Syllable(object) :
         self.length = length
         self.tone = tone
     
+        # way to know which of the syllable's phoneme bears the accent / tone 
         i_center = 0
         for phon in self.phonemes :   
-            #updated
             if phon.syl == 1 :
                 i_center = self.phonemes.index(phon)
                 self.i_center = i_center
@@ -63,7 +63,6 @@ class Syllable(object) :
           
         s = ""
         for phoneme in self.phonemes :
-            #TODO
             phoneme.ipa = ip.get_char(phoneme)
             s += phoneme.ipa
             if phoneme == self.center and self.length :
@@ -73,11 +72,14 @@ class Syllable(object) :
        
         
         
+        
+        
     def __str__(self) :
         return self.ipa  + "\nstress : "+str(self.stress)+"    length : "+ str(self.length)
     
     
     def set_rank_in_wd(self, rk) :
+        """ small setter for the rank in word if it changes durong an I change) """
         self.rank_in_wd = rk
         
         
@@ -119,7 +121,9 @@ class Syllable(object) :
         
     
     def __eq__(self, other ) :
-       
+            """ a syllable is equal to antoher syllable if it contains the same phonemes ,and have same stress, length and tone
+            
+            """
             for i, phon in enumerate ( self.phonemes ) :
                 
                 if phon.features != other.phonemes[i].features :
@@ -132,8 +136,3 @@ class Syllable(object) :
                 
                 
             return True
-    
-    
-    
-    
-        

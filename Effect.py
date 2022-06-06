@@ -124,5 +124,5 @@ class Effect (object) :
     
     
     def __str__(self) : 
-        s =  " index of the modified feature :" + str(self.effect[0]) + " old vs new value : " + str(self.effect[1])
+        s =  " index of the modified feature :" + str(self.effect.keys()) + " old vs new value : " + str(self.effect.values())
         return s

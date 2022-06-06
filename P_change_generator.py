@@ -199,47 +199,65 @@ class Baby_P_change_generator(P_change_generator) :
         return effect 
         
     
-    
-    
-    
-    def set_conditions(self, language, change, verbose = False ) :
+    def set_abs_Pcondition(self, potential_contexts, change, verbose = False) :
         
         
-        #TODO dirty work incoming
+        # TODO we make a first approximation considering that only the very beginning and the very end of the word provide specific positions
+        # with abs positions, our goal is to make sure the target is in a certain abs position so the target of the change is simply the target itself.
         
-        potential_contexts = words_containing(change.target, language)
+        #we set which position is going to be absolute
+        sign = random.randint(0,1) 
+        if sign : rel_pos = random.randint(0,2)
+        else : rel_pos = -1 * random.randint(1, 3)
         
-       
+        #we need to sort out possibles context :
+        candidates = []
+        for cand in potential_contexts :
+            #TODON  pb short wds
+            if len(cand.phonemes) <= abs(rel_pos) : continue
+            
+            if  mask_match(change.target, cand.phonemes[rel_pos].features ,change.concerns_V) : candidates.append(cand)
+        
+        if len(candidates) != 0 :
+            cond  = P_condition(change.target, 0, rel_pos)
+            return cond, candidates
+        
+        
+        else : return None, potential_contexts
+        
+        
+    def set_rel_Pconditions (self, potential_contexts, change, nb_cond, verbose = False) :
+        
+        
+        # we pick a context
         rd_context = random.choice(potential_contexts)
         
+        # we find the position of a targetted phoneme in the context word
         for i, pho in enumerate(rd_context.phonemes ) : 
             if mask_match(change.target, pho.features , change.concerns_V ): 
                 idx_in_wd = i
                 break
-        
         if verbose : 
             print( rd_context)
             print("THIS IS THE INDEX OF THE CHANGED WD", i)
+            
         
-        
-        #TODO we set randomly between 1 and 3 conditions . to be parametrized 
-        
-        nb_cond  = random.randint(0,2) 
-        if verbose : print("We will add ", nb_cond, " conditions")
-        
+        conditions = []
         forbidden_rel_pos = [] 
+        
         for loop in range(nb_cond) :
             
             print("setting condition ", loop)
-            
             rel_pos = -666
             index = i +rel_pos
-            while index not in range(len(rd_context.phonemes)) or rel_pos in forbidden_rel_pos :
+            avoid_inf_loops = 0
+            while index not in range(len(rd_context.phonemes)) or rel_pos in forbidden_rel_pos and avoid_inf_loops< 100 :
                 rel_pos = rd_rel_pos()
+                avoid_inf_loops += 1
                 index = i +rel_pos
-            
             forbidden_rel_pos.append(rel_pos)
             
+            if avoid_inf_loops == 100 : break
             
             
             conditioner = rd_context.phonemes[index].features
@@ -270,22 +288,47 @@ class Baby_P_change_generator(P_change_generator) :
             continu = random.randint(0,1)
             
             
-            cond = P_condition(conditioner, rel_pos )
-            if verbose : 
-                print()
-                print("conditions settled")
-                print(cond)
+            conditions.append ( P_condition(conditioner, rel_pos ) )
+            
+        return conditions
         
-      
-            change.add_condition(cond)
+        
         
             
             
-            #TODO délocaliser la génération des P_conditions ailleurs (dans le générateur général ? )
+            
+    
+    def set_conditions(self, language, change, verbose = False ) :
         
-       
-    
-    
+        
+        #Due to implemetation strategies , we will generate conditions in a spectific order 
+        
+        # *  if necessary : abs pos P conditions 
+        
+        # * at last casual P conditions, for they need a very specific context to be studied
+        
+        # we only want to generate legit conditions, that 's why we ll decrease at each step of the function the number of potential context, still checking the change applies in at least one context
+        
+        #TODO paramétriser le nombre de condition par changement
+        
+        potential_contexts = words_containing(change.target, language) 
+        
+        # abs P_condition ?
+        rd = random.randint(0, 6)
+        if not rd :
+            cond, potential_contexts = self.set_abs_Pcondition(potential_contexts, change)
+            if cond != None : 
+                change.add_condition(cond)
+        
+        
+        # rel_pos P_condition 
+        else :
+            nb_cond = random.randint(1, 3) 
+            if nb_cond :
+                conditions = self.set_rel_Pconditions(potential_contexts, change,  nb_cond)    
+                for c in conditions : change.add_condition(c)
+        
+        
         
         
 def rd_rel_pos()  :

@@ -3,30 +3,13 @@ Created on Wed May  4 14:39:58 2022
 
 @author: 3b13j
 
-Contains the word class and some methods used specifically to work with it
+Contains the Word class and some methods used specifically to work with it
 """
 
 
 
 
-def get_structure(syllabes):
-    """ transform a list of syllables into a string representing its structure (in the CVC format)"""
-    s = '#'
-    for syl in syllabes :
-        for phon in syl.phonemes :
-            if phon.is_Vowel() :
-                if syl.stress :
-                    s+= "v"
-                else :
-                    s+= "V"
-                if syl.length :
-                    s+= ":"
-            else :
-                s +="C"
-        s += "/"
-    s = s[:-1]
-    s+="#"
-    return s
+
 
 
 
@@ -60,8 +43,8 @@ class Word :
         s = ""
         for x in self.syllables : s += x.ipa
         self.ipa = s
-        self.structure = get_structure(self.syllables)
-        #TODO  peut être codée  ds structure 
+        self.structure = self.get_structure()
+        self.stress_pattern = self.get_stess_pattern()
         
         phon = []
         phon2syl = {}
@@ -81,48 +64,59 @@ class Word :
         
         
         
+        
+        
     def __eq__(self, other) :
         
-        
-        #TODO  objet
         for i, phon in enumerate ( self.phonemes ) :
-            
             if phon.features != other.phonemes[i].features :
-                
                 return False
-        """
-        for i, phon in enumerate ( self.syllables ) :
-            
-            if phon.syllables != other.syllables[i].features :
-                
-                return False
-        """
-        
-            
         return True
         
+    
+    
         
         
     def __str__(self)  :
-        print()
+        
         s =self.ipa + "\n"    +'syllabation : '
         for x in self.syllables : s += x.ipa + "/"
         if s[-1] =="\"" :
             s = s [:-2]
         s += "\n"    + "structure : "+ str(self.structure)
-        
+        s += "\n"    + "stress pattern : "+ str(self.stress_pattern)
         return s
     
     
     
-    def get_stess_patter(self) :
+    
+    
+    def get_structure(self):
+        """ transform a list of syllables into a string representing its structure (in the CVC format)"""
+        s = '#'
+        for syl in self.syllables :
+            for phon in syl.phonemes :
+                if phon.is_Vowel() :
+                    if syl.stress :
+                        s+= "v"
+                    else :
+                        s+= "V"
+                    if syl.length :
+                        s+= ":"
+                else :
+                    s +="C"
+            s += "/"
+        s = s[:-1]
+        s+="#"
+        return s
+    
+    
+    
+    
+    
+    def get_stess_pattern(self) :
         """
         Returns a string representing the stress pattern of the word
-
-        Returns
-        -------
-        s : str.
-
         """
         s = ""
         for syllable in self.syllables :

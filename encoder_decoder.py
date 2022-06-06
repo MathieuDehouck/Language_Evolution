@@ -7,7 +7,6 @@ Created on Fri May 20 11:15:50 2022
 
 from IPA import IPA
 from Condition import P_condition
-from Configuration import Configuration
 from Change import P_change
 
 ipa = IPA()
@@ -31,42 +30,95 @@ def encode_f (feat) :
     """
     
     
-    s = ""
-    for i in range (len(feat)) :
-        if feat[i] == 0 :
-            s+= ift[i][0].lower() 
-        elif feat[i] >= 1 :
-            s+= ift[i][0].upper()
-            if feat[i] > 1  : s+= str(feat[i])
-            
-        elif feat[i] == -1 :
-            s+= "?"
+    if len(feat[1]) == 2  :
+        s = "V: "
+        semantics =  ( 'Height','Backness', 'Round'), ('Voiced', 'Nasal')
         
-                   
+    else : 
+        s = "C: "
+        semantics = ('place of articulation', 'manner of articulation', 'Voiced'), ('secondary place of articulation', 'nasal' , 'aspiration')
+        
+        
+    for i , tp in enumerate (feat) :
+        for j, el  in enumerate(tp) :
+            #TODO faire plus rafiné pour manner
+            if type(el)== int :
+                if el == -1 : 
+                    s+= "*"
+                    break
+            s+= semantics[i][j][0].upper()
+            s+= str(el) + " "
+        
     return s
 
+
+
+
+
 def decode_f (string) :
+    """
+    Decode a string we encoded earlier
+
+    Parameters
+    ----------
+    string : to be decoded
+
+
+    """
+    string = string.split(":") 
+    if string[0] == "V" : decoder  =  ( 'Height','Backness', 'Round'), ('Voiced', 'Nasal')
+    else : decoder = ('place of articulation', 'manner of articulation', 'Voiced'), ('secondary place of articulation', 'nasal' , 'aspiration')
+    
+    string = string[1]
+    
+    string =  string.replace(' ','')
     
     
-    decoder = ift
-    feature = [-1] *12
-    
-    for j, char in enumerate(string) : 
-        
-        for ind, nam in enumerate(decoder) :
+    dic = {}
+    for i, letter in enumerate (string) :
+        if i == len(string)-1 : break
+        if string[i+1] == '(' :
+            for j, let in enumerate (string) : 
+                if string[j]== ')'  : 
+                    break
             
-            if char == nam[0].lower() :
-                feature[ind] = 0
+            
+            tupl = tuple [int(i+1) : int(j+1)]
+            #tupl = tuple (el for el in tupl)
+            dic[letter] = tupl
+            #for h in range (i, j-1) :
+              #  string = string.replace(string[i], "")
+            
+        else :
+            chiffre = ""
+            for  k in range (i+1, len(string)-1) :
+                if string[k].isdigit() : 
+                    chiffre += string[k]
                 
-            elif char == nam[0].upper() : 
-                feature[ind] = 1
-                
-                if j + 1 in range(len(string)) :
-                    
-                    if string[j+1].isdigit() : feature[ind] = int(string[j+1])
+                else : 
+                    print("oops", k, string[k])
+                    break
+                if chiffre != "" : dic[letter] =  chiffre
+            
+    # check if str is int to end encoding. *
+    return dic
+    """
+    feature = tuple() 
+    for i,  tpl in enumerate(decoder) :
+        part = tuple()
+        for j, ft in enumerate(tpl) :
+            lettre = j[0].upper() 
+            if lettre in non_wild :
+                for sub in string : 
+                    if sub[0] == lettre : part += sub[1:]
+            else : 
+                part += -1
+        feature += part
     return feature
             
-            
+    
+    """
+    
     
 def encode_p_change(change) :
     s = ""
@@ -127,10 +179,8 @@ def decode_change(string) :
         return
     else :
         str_eff = str_eff[7:].split(">")
-        ci = Configuration(decode_f(str_eff[0]))
-        cf = Configuration(decode_f(str_eff[1]))
-    
-    change = P_change(ci, cf)
+        
+    change = P_change()
     
     change.set_target(trg)
     print("reste à traiter")

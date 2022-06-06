@@ -4,8 +4,7 @@ to fill
 import random
 from wiki_utilities import get_language 
 latin = get_language('latin_classique.txt', "latin")
-from utilitaries import printl, feature_match,  tpl_2_candidates
-from Configuration import Configuration
+from utilitaries import printl,  tpl_2_candidates
 from Condition import P_condition , S_condition 
 from Change import P_change
 

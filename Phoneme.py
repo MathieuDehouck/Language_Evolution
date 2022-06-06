@@ -178,14 +178,16 @@ class Vowel(Phoneme) :
     is_round
     is_nasal
     is_palatal
-    
-    linearize : get a representation of the phoneme as a single vector
+    is_voiced
+
     
     """
     
     def __init__(self, features, syllabic, speller):
         super().__init__(features, syllabic, speller)
         self.isV = True
+        self.semantics =  ( 'Height','Backness', 'Round'), ('Voiced', 'Nasal')
+        
         
         
         
@@ -273,6 +275,8 @@ class Consonant(Phoneme) :
     def __init__(self, features, syllabic, speller):
         super().__init__(features, syllabic, speller)
         self.isV = False
+        self.semantics = ('place of articulation', 'manner of articulation', 'Voiced'), ('secondary place of articulation', 'nasal' , 'aspiration')
+        
     
 
     def is_round (self) :

@@ -5,20 +5,16 @@ Created on Sun May 29 21:36:10 2022
 @author: 3b13j
 """
 from utilitaries import *
-from IPA import IPA  , linearize
-from Natural_class import *
+from IPA import IPA  
 from wiki_utilities import get_language
-from Configuration import Configuration 
 from P_change_generator import Baby_P_change_generator
-from Phoneme import list_2_tuple , tuple_2_list
-from Effect import Effect
-from Condition import P_condition, rd_p_condition
-from log_utilities import change2log, langcomp2log, lgs2log, samples2log, extract_changed_words, purge_log
+from log_utilities import change2log, langcomp2log,  samples2log, extract_changed_words, purge_log
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, decode_change, encode_p_change, encode_f , decode_log
-
+from pathlib import Path
 
 import os 
+
 
 i = IPA.get_IPA()
 
@@ -29,11 +25,11 @@ path = "friday"
 
 # We choose a language to play with 
 
-lang = get_language("latin_classique.txt", "latin")
+#lang = get_language("latin_classique.txt", "latin")
 
 #lang = get_language("tokipona.txt", "tokipona")
 
-#lang = get_language("greek.txt", "greek")
+lang = get_language("greek.txt", "greek")
 
 
 
@@ -42,7 +38,7 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, 50,True)
+new_language , changes, wc = time.change(lang, 400,True)
 origin.print_both(new_language)
 #origin.compare(nlp)
 

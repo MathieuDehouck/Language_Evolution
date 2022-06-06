@@ -15,7 +15,7 @@ maxV = [2, 6, 1 , 1 , 1]
 
 
 import Sampling
-from utilitaries import get_random_pattern, mask_match, feature_indices
+from utilitaries import get_random_pattern, mask_match, feature_indices, printl
 import random
 
 class Condition():
@@ -75,7 +75,7 @@ class P_condition (Condition) :
         checks whether the condition is satisfied.
     """
     
-    def __init__(self, feature_template,  rel_pos = 0 , absol_pos = -1, continu = False):
+    def __init__(self, feature_template,  rel_pos = 0 , absol_pos = 42, continu = False):
         
         self.template = feature_template 
         self.rel_pos = rel_pos
@@ -163,10 +163,27 @@ class P_condition (Condition) :
             return False 
         """
         # does the condition have an absolute position to be checked on ?
-        if self.absol_pos  != - 1 :
-            if  self.absol_pos != rank :
-                if verbose : print("The condition is not applied on the phoneme "+ phon.ipa)
-                return  False
+        #TODO in the implementation,  a condition is either absolute or relative.
+        if self.absol_pos  != 42 :
+            
+            #small words do resist.
+            
+            if abs(self.absol_pos) >= len(word.phonemes) : return False
+            
+            
+            if verbose : 
+                print(word)
+                print(self.absol_pos)
+                printl(word.phonemes)
+            phon_to_test = word.phonemes[self.absol_pos]
+            if verbose : print("absolute position requirement tested on "+ phon_to_test.ipa)
+            answ =  mask_match(self.template, phon_to_test.features,self.concerns_V)
+        
+            if verbose : 
+                print (self.template )
+                print (phon_to_test.features)
+                print ("MATCH : ", answ)
+            return answ
         
         # we check if the relative positions match 
         index = rank + self.rel_pos 
@@ -243,13 +260,15 @@ def rd_p_condition( language, rel_pos = 0, abs_pos = -1, continu = False):
         
         pattern = get_random_pattern(language)
         cond = P_condition(pattern, sign)
-        
-        
-        
+         
         return cond
     
     
     
+    
+    
+    
+
     
     
     
