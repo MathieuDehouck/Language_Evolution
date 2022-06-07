@@ -18,7 +18,7 @@ import os
 
 i = IPA.get_IPA()
 
-path = "friday"
+path = "tuesday"
 
 
 
