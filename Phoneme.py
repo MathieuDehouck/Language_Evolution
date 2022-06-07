@@ -64,6 +64,7 @@ class Phoneme(object) :
         self.description = ''
         
         
+        
     def __str__(self):
         return str(self.ipa )+  " : " + str(self.description ) + "\n" + str(self.features)
 
@@ -73,6 +74,8 @@ class Phoneme(object) :
     def set_rank_in_wd(self, rk) :
         self.set_word_rank(rk)
     
+    def set_in_syl(self, i) : 
+        self.in_syl = i
 
     def is_Consonant(self) :
         return type(self) == Consonant

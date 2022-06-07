@@ -55,7 +55,8 @@ def mask_match(mask, phon, voy):
         
     return True 
     
-
+def syl_match(s1, s2):
+    return s1.stress == s2.stress and s1.length == s2.length and s1.tone == s2.tone
 
 def get_random_pattern(language) :
     

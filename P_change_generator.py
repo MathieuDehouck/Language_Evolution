@@ -9,9 +9,9 @@ Created on Mon May 30 11:58:54 2022
 import random 
 from Effect import Effect
 from Change import P_change
-from Condition import rd_p_condition, P_condition
+from Condition import rd_p_condition, P_condition, S_condition
 
-from utilitaries import mask_match,  change_pattern, tpl_2_candidates, words_containing, bewilder_pattern, printl, feature_indices
+from utilitaries import mask_match,  change_pattern, tpl_2_candidates, words_containing, bewilder_pattern, syl_match,  printl, feature_indices
 
 idxC = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
 idxV = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), ]
@@ -197,7 +197,34 @@ class Baby_P_change_generator(P_change_generator) :
         
         effect = Effect(target, True)
         return effect 
+    
+    
+    def set_S_condition (self, potential_contexts, change, verbose = False ) : 
         
+        rd_context = random.choice(potential_contexts) 
+        
+        
+        # TODO baby phase, checke a l indice fixe
+        for phon in rd_context.phonemes :
+            if mask_match(change.target, phon.features, change.concerns_V) : break
+        syl = rd_context.syllables[phon.in_syl]
+        
+        candidates = []
+        for cand in potential_contexts :
+            ok = False 
+            for s in cand.syllables :
+                if syl_match(s, syl) :
+                    #TODO approx
+                    for pho in s.phonemes :
+                        if mask_match(change.target, pho.features, change.concerns_V) : ok = True
+            
+            
+            
+            if ok : candidates.append(cand)
+        
+        return   S_condition(42, 0, syl.length, syl.stress, syl.tone), candidates
+    
+    
     
     def set_abs_Pcondition(self, potential_contexts, change, verbose = False) :
         
@@ -247,7 +274,7 @@ class Baby_P_change_generator(P_change_generator) :
         
         for loop in range(nb_cond) :
             
-            print("setting condition ", loop)
+            if verbose : print("setting condition ", loop)
             rel_pos = -666
             index = i +rel_pos
             avoid_inf_loops = 0
@@ -313,6 +340,16 @@ class Baby_P_change_generator(P_change_generator) :
         
         potential_contexts = words_containing(change.target, language) 
         
+        #add syl condition :
+        
+        """
+        rds = 0
+        if not rds : 
+            cond, potential_contexts = self.set_S_condition(potential_contexts, change)
+            change.add_condition(cond)
+        
+        """
+        
         # abs P_condition ?
         rd = random.randint(0, 6)
         if not rd :
@@ -328,7 +365,7 @@ class Baby_P_change_generator(P_change_generator) :
                 conditions = self.set_rel_Pconditions(potential_contexts, change,  nb_cond)    
                 for c in conditions : change.add_condition(c)
         
-        
+        print("CONDITIONS SETTED")
         
         
 def rd_rel_pos()  :

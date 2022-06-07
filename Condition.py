@@ -367,5 +367,5 @@ class S_condition (Condition) :
          
     def __str__(self) :
         
-        return "condition :" + "\nabsolute position : " + str(self.abs_position) + "         relative position : " +str(self.rel_pos) + "\nlength : " + str(self.length) + "         stress : " +str(self.stress)
+        return "C Syl :" + "\nabsolute position : " + str(self.abs_position) + "         relative position : " +str(self.rel_pos) + "\nlength : " + str(self.length) + "         stress : " +str(self.stress)
         

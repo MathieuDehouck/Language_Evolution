@@ -38,7 +38,7 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, 400,True)
+new_language , changes, wc = time.change(lang, 5)
 origin.print_both(new_language)
 #origin.compare(nlp)
 

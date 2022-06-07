@@ -21,28 +21,10 @@ class Changer () :
         if gen == None : self.generator = Change_Generator() 
         else : self.generator = gen
     
+    
    def change_u (self, lang) :
        
-       
-       
-       lang = copy.deepcopy(lang)
-       change = P_change.rd_change(lang, False)
-       while change.applicable(lang) != True :
-           change = None
-           change = P_change.rd_change(lang, False)
-       
-           
-       
-       nl , changed_words = change.apply_language(lang)
-       
-      
-       #change = None 
-       dif = nl.compare(lang)
-       if len(dif) == 0 :
-           nl, change = self.change_u( lang)
-           return nl, change, changed_words
-       else :
-           return nl, change, changed_words
+      NotImplemented
     
    def change(self,lang, n, verbose = False) :
        
@@ -52,11 +34,20 @@ class Changer () :
        lang = copy.deepcopy(lang)
        # we program n aleatory changes
        for i in range(n):
-           if verbose : print("currently generating change", i)
+           
+           if verbose : 
+               print()
+               print("currently generating change", i)
+               print()
            lang , change , changed_words = self.change_u ( lang)
+           
+           
            changes.append(change) 
+           
+           
            wc.append(changed_words)
            
+           print("CHANGE ", i, " DONE")
     
        return lang, changes, wc
        
@@ -71,23 +62,28 @@ class Tree_changer(Changer) :
     
     def change_u (self, lang) :
         
-        
+        print("WE CAN CHANGE")
         
         
         change = self.generator.generate_P_change(lang)
+        
+        """
         while change.applicable(lang) != True :
             change = None
             change = self.generator.generate_P_change(lang)
             
-            
+        """    
         
         nl, wc = change.apply_language(lang)
         
        
-        #change = None 
+        """
+        
         dif = nl.compare(lang)
         if len(dif) == 0 :
             nl, change, wc = self.change_u( lang)
+            
+        """
         node = L_node(self.tree.last, nl)
         self.tree.graft(self.tree.last, node)
             

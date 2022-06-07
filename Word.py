@@ -50,9 +50,10 @@ class Word :
         phon2syl = {}
         inds = 0 #index of syllables
         indp = 0 # index of phonemes
-        for syl in syls :
+        for j , syl in enumerate(syls) :
             syl.set_rank_in_wd(inds)
             for po in syl.phonemes :
+                po.set_in_syl(j)
                 phon.append(po)
                 phon2syl[indp] = inds
                 po.set_rank_in_wd(indp)
