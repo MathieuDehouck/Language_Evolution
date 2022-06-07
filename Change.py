@@ -10,6 +10,7 @@ from Syllable import Syllable
 from Word import Word
 from Language import Language
 from Condition import P_condition
+from encoder_decoder import encode_f, decode_f
 
 from regularizations import regularize_stress, regularize_structure
 from IPA import IPA
@@ -435,6 +436,11 @@ class P_change(Change) :
             s+= str(i) + "  " +str(condition) + " \n"
         return s
     
+    
+    
+        
+        
+        
     
     """
     def rd_change (lang, verbose = False ):

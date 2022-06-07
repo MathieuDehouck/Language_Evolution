@@ -10,7 +10,7 @@ from wiki_utilities import get_language
 from P_change_generator import Baby_P_change_generator
 from log_utilities import change2log, langcomp2log,  samples2log, extract_changed_words, purge_log
 from rd_changer import Tree_changer, Log_changer
-from encoder_decoder import encoded_changes2log, decode_change, encode_p_change, encode_f , decode_log
+from encoder_decoder import encoded_changes2log, encode_f 
 from pathlib import Path
 
 import os 
@@ -25,11 +25,11 @@ path = "tuesday"
 
 # We choose a language to play with 
 
-#lang = get_language("latin_classique.txt", "latin")
+lang = get_language("latin_classique.txt", "latin")
 
 #lang = get_language("tokipona.txt", "tokipona")
 
-lang = get_language("greek.txt", "greek")
+#lang = get_language("greek.txt", "greek")
 
 
 
@@ -38,7 +38,7 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, 5)
+new_language , changes, wc = time.change(lang, 50)
 origin.print_both(new_language)
 #origin.compare(nlp)
 

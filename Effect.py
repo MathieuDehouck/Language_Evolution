@@ -119,10 +119,76 @@ class Effect (object) :
         value = ( original_value, output_value) 
         self.effect[index] = value
     
+    
+    
+    
+    
+    def encode_e(self):
         
+        
+        #TODO histoire des manners
+        s = "E:"
+        for key, value in self.effect.items() :
+            s += str(key[0]) + str(key[1])
+            s+= ":"
+            s += str(value[0]) +'>'+ str(value[1])
+            s += "|"
+        
+        return s
+            
+    
+    
+    
+            
+    def decode_e(string) :
+        
+        effect ={}
+        string = string[2:]
+        string = string.split("|")
+        
+        for sub in string :
+            
+            print(sub)
+            key = (sub[0], sub[1])
+            values = sub[2:].split(">")
+            effect[key] = values
+            
+        return effect
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
     def __str__(self) : 
         s =  " index of the modified feature :" + str(self.effect.keys()) + " old vs new value : " + str(self.effect.values())
         return s
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

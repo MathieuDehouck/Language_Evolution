@@ -7,7 +7,7 @@ Created on Tue May 17 13:04:22 2022
 
 from Change  import P_change
 from Tree import Root, L_tree, L_node
-from encoder_decoder import decode_change
+
 from Generator import Change_Generator
 
 import copy
@@ -105,9 +105,9 @@ class Log_changer(Changer) :
         
     
     def change_u (self, lang, index ) :
-        
+      """"  
         lang = copy.deepcopy(lang)
-        change = decode_change(self.file[index])
+       # change = decode_change(self.file[index])
         print(self.file[index])
         nl, wc  = change.apply_language(lang)
         return nl, change, wc
@@ -122,4 +122,4 @@ class Log_changer(Changer) :
             changes.append(change) 
             i+=1
         return lang, changes
-        
+        """

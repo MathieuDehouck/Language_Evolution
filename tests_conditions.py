@@ -152,3 +152,20 @@ condi.test(wd, 1, True)
 """
 
 
+
+
+
+lang = get_language("latin_classique.txt", "latin")
+
+wd = lang.voc['virdia']
+
+wd2 = lang.voc['tripaliare']
+
+wd3 = lang.voc['sapere']
+
+target = wd2.phonemes[3].features
+
+target_cong =  wd2.phonemes[2].features
+
+
+cond = P_condition(target_cong, -1, -1)

@@ -17,6 +17,7 @@ maxV = [2, 6, 1 , 1 , 1]
 import Sampling
 from utilitaries import get_random_pattern, mask_match, feature_indices, printl
 import random
+from encoder_decoder import encode_f, decode_f
 
 class Condition():
     
@@ -233,6 +234,32 @@ class P_condition (Condition) :
     
     
     
+    def encode_P_cond(self) :
+        
+        s= "PCond:"
+        s+= "T:" +encode_f(self.template)
+        s+= "|" + "Rel:"+str(self.rel_pos)
+        s+= "|" + "Abs:"+str(self.absol_pos)
+        s+= "|" + "Cont:" + str(self.continu)
+        
+        return s
+    
+    
+    
+    
+    
+    def decode_Pc_ond(string) :
+        
+        string = string [8:]
+        string = string.split("|")
+        
+        print(string)
+        template = decode_f(string[0])
+        rel_pos = int(string[1][4:])
+        abs_pos = int(string[2][4:])
+        b = ((string[3][5:])) == 'True'
+    
+        return P_condition(template, rel_pos, abs_pos, b)
         
     
 def rd_p_condition( language, rel_pos = 0, abs_pos = -1, continu = False):
@@ -369,3 +396,35 @@ class S_condition (Condition) :
         
         return "C Syl :" + "\nabsolute position : " + str(self.abs_position) + "         relative position : " +str(self.rel_pos) + "\nlength : " + str(self.length) + "         stress : " +str(self.stress)
         
+    
+    
+    def encode_S_cond(self) :
+        
+        s= "SCond:"
+        s+= "Str:" + str(self.stress)
+        s+= "|" + "Len:"+str(self.length)
+        s+= "|" + "Ton:"+str(self.Tone)
+        s+= "|" + "Rel:"+str(self.rel_pos)
+        s+= "|" + "Abs:"+str(self.absol_pos)
+        
+        return s
+    
+    
+    
+    
+    
+    def decode_S_cond(string) :
+        
+        string = string [8:]
+        string = string.split("|")
+        
+        stress = ((string[0][5:])) == 'True'
+        length =  ((string[1][5:])) == 'True'
+        
+        tone = (string[2][5:]) == 'True'
+        if  (string[2][5:]) == "None" : tone = None
+        rel_pos = int(string[3][4:])
+        abs_pos = int(string[4][4:])
+        
+    
+        return S_condition(abs_pos, rel_pos, stress, length, tone)
