@@ -8,6 +8,7 @@ Created on Wed Jun  1 09:55:33 2022
 
 from Sampling import MatricesV, MatricesC, manner_2_ind, manner_list, sec_place_2_ind, secondary_place 
 from Phoneme import feature_indices
+from encoder_decoder import letter_2_manner, manner_2_letter
 import random
 
 
@@ -127,11 +128,20 @@ class Effect (object) :
         
         
         #TODO histoire des manners
-        s = "E:"
+        print("semper ")
+        s = ""
         for key, value in self.effect.items() :
             s += str(key[0]) + str(key[1])
             s+= ":"
-            s += str(value[0]) +'>'+ str(value[1])
+            if type(value[0]) == tuple  :
+                s+= manner_2_letter[value[0]]
+            else  : s += str(value[0])
+            
+            s += ">"   
+            
+            if  type(value[1]) == tuple:
+                s+=   manner_2_letter[value[1]]
+            else :  s+= str(value[1])
             s += "|"
         
         return s
@@ -143,15 +153,25 @@ class Effect (object) :
     def decode_e(string) :
         
         effect ={}
-        string = string[2:]
-        string = string.split("|")
         
-        for sub in string :
+        string = string.split(":")
+        
+        string = string[1]
             
-            print(sub)
-            key = (sub[0], sub[1])
-            values = sub[2:].split(">")
-            effect[key] = values
+        
+        for sub in string.split("|") :
+            if len(sub) > 0 :
+            
+                key = (sub[0], sub[1])
+                
+                
+                values = sub[2:].split(">")
+                    
+                for v in values :
+                        
+                        if not v.isnumeric() :
+                            v = letter_2_manner[v]
+                effect[key] = values
             
         return effect
         

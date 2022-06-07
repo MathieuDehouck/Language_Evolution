@@ -73,8 +73,8 @@ def encode_f (feat) :
             
             if type(el)== int :
                 if el == -1 : 
-                    s+= "*"
-                    break
+                    el = "*"
+                    
             s+= semantics[i][j][0].upper()
             s+= str(el) # +" "
         
@@ -99,8 +99,8 @@ def decode_f (string) :
         decoder  =  ( 'Height','Backness', 'Round'), ('Voiced', 'Nasal') 
         string = string[1]
         print(string)
-        tupl1 = (string[1], string[3], string[5])
-        tupl2 = (string[7], string[9])
+        tupl1 = (int(string[1]), int(string[3]), int(string[5]))
+        tupl2 = (int(string[7]), int(string[9]))
         
     
     
@@ -117,8 +117,8 @@ def decode_f (string) :
         
         manner = letter_2_manner[string[4+dec]]
         
-        tupl1 = (place, manner, string[5+dec])
-        tupl2 = (string[7+dec],  string[9+dec],  string[11+dec])
+        tupl1 = (place, manner, int(string[5+dec]))
+        tupl2 = (int(string[7+dec]),  int(string[9+dec]),  int(string[11+dec]))
    
             
     tupl = (tupl1, tupl2)

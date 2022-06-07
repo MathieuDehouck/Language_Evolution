@@ -47,7 +47,7 @@ class Changer () :
            
            wc.append(changed_words)
            
-           print("CHANGE ", i, " DONE")
+           if verbose : print("CHANGE ", i, " DONE")
     
        return lang, changes, wc
        
@@ -60,9 +60,9 @@ class Tree_changer(Changer) :
         self.tree = tree
         
     
-    def change_u (self, lang) :
+    def change_u (self, lang, verbose = False) :
         
-        print("WE CAN CHANGE")
+        if verbose : print("WE CAN CHANGE")
         
         
         change = self.generator.generate_P_change(lang)

@@ -97,7 +97,7 @@ class Baby_P_change_generator(P_change_generator) :
         
         return target
     
-    def extends_target(self, change, language) :
+    def extends_target(self, change, language, verbose = False) :
         
         
         
@@ -116,10 +116,11 @@ class Baby_P_change_generator(P_change_generator) :
             if mask_match(change.target, phon.features, phon.is_Vowel) :
                 impacted.append(phon.ipa)
                 
-        print()
-        print("impacted", impacted)
-        print()
-        print(change.target)
+        if verbose :       
+            print()
+            print("impacted", impacted)
+            print()
+            print(change.target)
     
     def generate_P_change( self,language, rd = True, target = None, ci = None, verbose = False ) :
         
@@ -365,7 +366,7 @@ class Baby_P_change_generator(P_change_generator) :
                 conditions = self.set_rel_Pconditions(potential_contexts, change,  nb_cond)    
                 for c in conditions : change.add_condition(c)
         
-        print("CONDITIONS SETTED")
+        if verbose : print("CONDITIONS SETTED")
         
         
 def rd_rel_pos()  :

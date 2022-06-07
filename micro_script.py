@@ -8,7 +8,7 @@ from utilitaries import *
 from IPA import IPA  
 from wiki_utilities import get_language
 from P_change_generator import Baby_P_change_generator
-from log_utilities import change2log, langcomp2log,  samples2log, extract_changed_words, purge_log
+from log_utilities import change2log, langcomp2log,  samples2log, extract_changed_words, purge_log, changes2machinelog
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, encode_f 
 from pathlib import Path
@@ -46,9 +46,11 @@ origin.print_both(new_language)
 # we write two logs to keep track of the changes
 purge_log(path+"_changes.txt")
 purge_log(path+"_dic.txt")
+purge_log(path+"_machine_log.txt")
 for i in range(len(changes))  :
     change2log(changes[i], path+"_changes.txt" ,new_language,  True, i+1)
     samples2log(path+"_changes.txt", wc[i])
+    changes2machinelog(path+"_machine_log.txt", changes[i])
 langcomp2log (origin, new_language, path + "_dic.txt")
 extract_changed_words(path + "_dic.txt", True)
 
@@ -57,11 +59,15 @@ folder = Path("logs/")
 
 path1 = path+"_changes.txt"
 path2 = path + "_dic.txt"
+path3 = path + "_machine_log.txt"
 
 path1 = folder / path1
 path2 = folder / path2
+path3 = folder / path3
+
 os.startfile(path1 )
 os.startfile(path2 )
+os.startfile(path3 )
 
 
 

@@ -189,9 +189,13 @@ def samples2log(path, liste, n =10 ) :
         f.write (str(liste[loop][0]) + "  >  "+str( liste[loop][1]) +" \n" )
         
         
-        
-        
-        
+def changes2machinelog(path, change)     :
+    folder = Path("logs/")
+    path = folder / path
+    f = open (path, "a",encoding='utf8')   
+    f.write(change.encode_change())
+    f.write("\n")
+    f.close()
         
 def purge_log(path) :
     """

@@ -11,6 +11,7 @@ from Word import Word
 from Language import Language
 from Condition import P_condition
 from encoder_decoder import encode_f, decode_f
+from Effect import Effect
 
 from regularizations import regularize_stress, regularize_structure
 from IPA import IPA
@@ -438,9 +439,29 @@ class P_change(Change) :
     
     
     
+
+    def encode_change(self):
+        s = "PC\t"
+        s+=  "Tar:" + encode_f(self.target) +"\t"
+        s+= "Eff:" +self.effect.encode_e() +"\t"
+        s+= "Con:" 
+        for cond in self.conditions : 
+            s+= cond.encode_condition()
+        return s
         
+    
+    
+    
+    
+    def decode_change(string) :
+        # the string coding a change encompass four parts. 
+        s = string.split("\t")
         
+        target = decode_f(s[1][4:])
+        effect = Effect.decode_e(s[2][4:])
+        #cond = #
         
+        #if s[0] = "PC " 
     
     """
     def rd_change (lang, verbose = False ):

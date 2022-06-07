@@ -42,6 +42,17 @@ class Condition():
         return "condition :"
     
     
+    def encode_condition(self):
+        if type(self) == P_condition :
+            return self.encode_P_cond()
+        else  : return self.encode_S_cond()
+        
+    """
+    def decode_condition(string) : 
+        if type() == P_condition :
+            return self.encode_P_cond()
+        else  : return self.encode_S_cond()
+    """
     
 class P_condition (Condition) :
     """
@@ -238,9 +249,9 @@ class P_condition (Condition) :
         
         s= "PCond:"
         s+= "T:" +encode_f(self.template)
-        s+= "|" + "Rel:"+str(self.rel_pos)
-        s+= "|" + "Abs:"+str(self.absol_pos)
-        s+= "|" + "Cont:" + str(self.continu)
+        s+= " | " + "Rel:"+str(self.rel_pos)
+        s+= " | " + "Abs:"+str(self.absol_pos)
+        s+= " | " + "Cont:" + str(self.continu)
         
         return s
     
@@ -248,10 +259,10 @@ class P_condition (Condition) :
     
     
     
-    def decode_Pc_ond(string) :
+    def decode_P_cond(string) :
         
         string = string [8:]
-        string = string.split("|")
+        string = string.split(" | ")
         
         print(string)
         template = decode_f(string[0])
@@ -403,9 +414,9 @@ class S_condition (Condition) :
         s= "SCond:"
         s+= "Str:" + str(self.stress)
         s+= "|" + "Len:"+str(self.length)
-        s+= "|" + "Ton:"+str(self.Tone)
+        s+= "|" + "Ton:"+str(self.tone)
         s+= "|" + "Rel:"+str(self.rel_pos)
-        s+= "|" + "Abs:"+str(self.absol_pos)
+        s+= "|" + "Abs:"+str(self.abs_position)
         
         return s
     
