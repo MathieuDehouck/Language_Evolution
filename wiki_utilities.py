@@ -126,7 +126,8 @@ def segm2syl(dic) :
                     syllables.append(s)
                     double = True
                     syl2 = bric [1]
-                    s2 = treat_syl(syl2, stress)
+                    #if ' ' ' replaces the point, the accent is ont the word after
+                    s2 = treat_syl(syl2, True)
                     syllables.append(s2)
                 else : 
                     s = treat_syl(syl, stress)

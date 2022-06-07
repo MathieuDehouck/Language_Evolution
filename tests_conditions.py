@@ -17,6 +17,7 @@ from Effect import Effect
 from Condition import P_condition, rd_p_condition
 from Change import P_change
 from Effect import  Effect
+from Condition import S_condition
 
 i = IPA.get_IPA()
 
@@ -74,7 +75,7 @@ print(chw)
 
 
 print("we add another condition")
-
+"""
 ch = P_change(target, effect)
 
 target_cong =  wd2.phonemes[0].features
@@ -94,16 +95,19 @@ print()
 nw = ch.apply_word(wd3)
 print(nw)
 
+"""
+print(wd2)
+print(wd3)
 
+ch = P_change(target, effect)
+cond = S_condition(42, 0, False, True, None)
+ch.add_condition(cond)
 
-
-cond.test(wd2, 2, True)
-
-
-
-
-
-
+nw = ch.apply_word(wd2)
+print(nw)
+print()
+nw = ch.apply_word(wd3)
+print(nw)
 
 
 
