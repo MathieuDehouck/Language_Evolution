@@ -34,13 +34,13 @@ lang = get_language("latin_classique.txt", "latin")
 #lang = get_language("greek.txt", "greek")
 
 
-
+nb_changes = 30
 
 origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, 50, True)
+new_language , changes, wc = time.change(lang, nb_changes, True)
 #origin.print_both(new_language)
 #origin.compare(nlp)
 
@@ -72,11 +72,14 @@ os.startfile(path1 )
 os.startfile(path2 )
 os.startfile(path3 )
 
-
+"""
 print("We will now retro engineer the changes")
 
 lc = Log_changer(origin, path3)
-test_retro , ch = lc.change(origin, 50)
-
-
+test_retro , ch = lc.change(origin, nb_changes)
 test_retro.print_both(new_language)
+"""
+
+time.octopus(15, nb_changes)
+time.tree.print_history_to_graph("virdia")
+#time.tree.print_history_to_graph_reduced("virdia")

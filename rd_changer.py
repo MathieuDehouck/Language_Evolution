@@ -6,7 +6,7 @@ Created on Tue May 17 13:04:22 2022
 """
 
 from Change  import P_change
-from Tree import Root, L_tree, L_node
+from Tree import  L_tree
 
 from Generator import Change_Generator
 
@@ -55,9 +55,10 @@ class Tree_changer(Changer) :
     
     def __init__(self, lang, gen = None) :
         super().__init__(gen)
-        rt = Root(lang)
-        tree = L_tree(rt)
+        
+        tree = L_tree(lang)
         self.tree = tree
+        self.current_tree = self.tree
         
     
     def change_u (self, lang, verbose = False) :
@@ -84,10 +85,38 @@ class Tree_changer(Changer) :
             nl, change, wc = self.change_u( lang)
             
         """
-        node = L_node(self.tree.last, nl)
-        self.tree.graft(self.tree.last, node)
+        self.current_tree.change = change
+        new_tree = L_tree(nl, self.current_tree)
+        self.current_tree = new_tree
+        
             
         return nl, change, wc
+    
+    
+    def pursue_evolution(self, wanted_depth , node = None) :
+        
+       dic = self.tree.get_ad_2_tree()
+        
+       if node == None : node = self.tree.pick_a_node()
+       #node is an adress 
+       
+       expanded_tree = dic[node]
+       
+       for nch in range(wanted_depth -expanded_tree.depth) :
+           change = self.generator.generate_P_change(expanded_tree.language)
+           nl, wc = change.apply_language(expanded_tree.language)
+           new_tree = L_tree(nl, expanded_tree)
+           expanded_tree = new_tree
+    
+    def octopus(self, nb_branches, depth) :
+        
+        for i in range(nb_branches -1) :
+            self.pursue_evolution(depth)
+    
+    
+    
+    
+    
       
 class Log_changer(Changer) :
     
@@ -123,3 +152,14 @@ class Log_changer(Changer) :
             i+=1
         return lang, changes
         
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
