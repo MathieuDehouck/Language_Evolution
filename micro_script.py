@@ -12,6 +12,8 @@ from log_utilities import change2log, langcomp2log,  samples2log, extract_change
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, encode_f 
 from pathlib import Path
+from Condition import Condition
+from Change import P_change 
 
 import os 
 
@@ -38,8 +40,8 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, 50)
-origin.print_both(new_language)
+new_language , changes, wc = time.change(lang, 50, True)
+#origin.print_both(new_language)
 #origin.compare(nlp)
 
 
@@ -65,10 +67,16 @@ path1 = folder / path1
 path2 = folder / path2
 path3 = folder / path3
 
+
 os.startfile(path1 )
 os.startfile(path2 )
 os.startfile(path3 )
 
 
+print("We will now retro engineer the changes")
+
+lc = Log_changer(origin, path3)
+test_retro , ch = lc.change(origin, 50)
 
 
+test_retro.print_both(new_language)

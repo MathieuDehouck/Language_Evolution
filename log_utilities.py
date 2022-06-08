@@ -100,7 +100,6 @@ def change2str(change) :
     # TODO white a new change2str method regarding the new encadong of changes. 
     
     
-    print(change)
     s = "Change :  \n "
     # avant target.template
     s+= target2str(change.target) +" " 
@@ -260,12 +259,14 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
             else : feat_semantics = ipa.cfeatures
         
             f.write ( "The feature ")
-            f.write ( str(feat_semantics[key[0]][key[1]])) 
+            
+            
+            f.write ( str(feat_semantics[change.effect.domain[0]][change.effect.domain[1]])) 
             # For the manner of articulation , it is possible that the result is in fact a tuple 
             f.write (' switched values from ')
-            f.write (str(values[0]))
+            f.write (str(key))
             f.write (' to ')
-            f.write (str(values[1]))
+            f.write (str(values))
             f.write("\n")
     
     f.write("\n")
@@ -385,7 +386,7 @@ def extract_changed_words(path, write = False) :
     
     for line in f :
         line = line.split() 
-        print(line)
+        
         if len(line) == 3 : 
             if line[0] != line[2] : chg_wds .append(line[2])
    

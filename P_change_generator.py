@@ -10,6 +10,7 @@ import random
 from Effect import Effect
 from Change import P_change
 from Condition import rd_p_condition, P_condition, S_condition
+from Sampling import *
 
 from utilitaries import mask_match,  change_pattern, tpl_2_candidates, words_containing, bewilder_pattern, syl_match,  printl, feature_indices
 
@@ -122,6 +123,10 @@ class Baby_P_change_generator(P_change_generator) :
             print()
             print(change.target)
     
+    
+    
+    
+    
     def generate_P_change( self,language, rd = True, target = None, ci = None, verbose = False ) :
         
         
@@ -169,13 +174,66 @@ class Baby_P_change_generator(P_change_generator) :
     
     
     
+
     
+
+    def compute_outcome (self,index, input_value, matrix, isV) :
+       
+       manner = False
+       sec_manner = False 
+       if type(input_value) == tuple :
+           input_value = manner_2_ind[input_value]
+           manner = True
+       if not isV and index == (1, 0) :
+           input_value = sec_place_2_ind [input_value]
+           sec_manner = True
+        
+       
+       line = matrix [input_value]
+       output_value = random.choices(range(len(line)), weights = line, k=1)[0]
+       if manner : output_value  = manner_list [output_value]
+       if sec_manner :  output_value = secondary_place[output_value]
+      
+   
+       return  output_value
+   
     
-    
-    
-    
-    
-    
+   
+    def set_funct( self, index, target  ) :
+       """
+       Automatically computes the outcome 
+
+       #sampler colonner ?
+
+
+
+       Parameters
+       ----------
+       index : TYPE
+           DESCRIPTION.
+
+       Returns
+       -------
+       None.
+
+       """
+       effect={}
+       
+       isV = len(feature_indices(target)) == 5 
+       if isV : Trinity = MatricesV 
+       else : Trinity = MatricesC
+       matrix =  Trinity[index[0]][index[1]]
+       
+       #TODO implement cyclic / multiplu changes
+       input_val = target[index[0]][index[1]]
+       outcome = self.compute_outcome( index, input_val, matrix, isV)
+       
+       effect[input_val] = outcome
+       
+       return effect
+       
+       
+       
     
     
     
@@ -196,7 +254,14 @@ class Baby_P_change_generator(P_change_generator) :
     
     def select_effect(self, language, target) :
         
-        effect = Effect(target, True)
+        idx = feature_indices(target)
+        domain = random.choice(idx)
+        ef = self.set_funct(domain, target)
+        
+        
+       
+        effect = Effect(domain, ef)
+        
         return effect 
     
     
@@ -254,11 +319,16 @@ class Baby_P_change_generator(P_change_generator) :
         else : return None, potential_contexts
         
         
-    def set_rel_Pconditions (self, potential_contexts, change, nb_cond, verbose = False) :
+    def set_rel_Pconditions (self, potential_contexts, change, nb_cond, verbose =  False) :
         
         
         # we pick a context
         rd_context = random.choice(potential_contexts)
+        
+        if verbose : 
+            print("RD_context")
+            print(rd_context)
+            
         
         # we find the position of a targetted phoneme in the context word
         for i, pho in enumerate(rd_context.phonemes ) : 
@@ -366,7 +436,7 @@ class Baby_P_change_generator(P_change_generator) :
                 conditions = self.set_rel_Pconditions(potential_contexts, change,  nb_cond)    
                 for c in conditions : change.add_condition(c)
         
-        if verbose : print("CONDITIONS SETTED")
+        if verbose : print("Conditions setted")
         
         
 def rd_rel_pos()  :

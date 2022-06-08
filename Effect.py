@@ -8,8 +8,8 @@ Created on Wed Jun  1 09:55:33 2022
 
 from Sampling import MatricesV, MatricesC, manner_2_ind, manner_list, sec_place_2_ind, secondary_place 
 from Phoneme import feature_indices
-from encoder_decoder import letter_2_manner, manner_2_letter
-import random
+from encoder_decoder import letter_2_manner, manner_2_letter, dt
+
 
 
 
@@ -39,86 +39,28 @@ class Effect (object) :
     
     """
 #TODO éliminer add effect et gérer ailleurs (dans le générateur) 
-    def __init__(self, target, r = False, index = None)  :
+    def __init__(self, domain, effect)  :
 
-        self.target = target
-        t = target 
-        if type(t) == list : t = t [0]
+      
+       # self.isV = (len(self.idx) == 5)
+        self.domain = domain
+        self.effect = effect
         
-        
-        self.idx = feature_indices( self.target) 
-        self.isV = (len(self.idx) == 5)
-        self.effect = {}
-        self.impacted_idx = []
          
-        if r : 
-            inde = self.idx[random.randint(0, len(self.idx)-1)]
         
-            self.set_output( inde)
+           
+    def __eq__(self, other) :
+        return self.domain == other.domain and self.effect == other.effect
+            
 
 
 
 
-
-    def add_effect (self, key, value) :
-        """ 
-        Adds a possible change to the Effect object
-        """
-        self.effect[key] = value
 
     
-    #TODO réflechir à délocaliser cette méthode dans le générateur de changement ? Ou lui donner en champ un target. 
-    # déléguer au moins son application . L'object effect ne devrait conceptuellement pas avoir de target / être lié à lui/ 
-    def set_output(self, index) :
-        """
-        Automatically computes the outcome 
 
-        Parameters
-        ----------
-        index : TYPE
-            DESCRIPTION.
-
-        Returns
-        -------
-        None.
-
-        """
-
-        if self.isV : Trinity = MatricesV 
-        else : Trinity = MatricesC
-        
-        original_value = self.target[index[0]][index[1]]
-        manner = False
-        sec_manner = False 
-        
-        if type(original_value) == tuple :
-            original_value = manner_2_ind[original_value]
-            manner = True
-        if not self.isV and index == (1, 0) :
-            original_value = sec_place_2_ind [original_value]
-            sec_manner = True
-        
-        matrix =  Trinity[index[0]][index[1]]
-        
-        print()
-        print(self.target)
-        print(index)
-        print(original_value)
-        
-        line = matrix [original_value]
-        
-        # we pick an element depending on the weights we gave
-        
-        output_value = random.choices(range(len(line)), weights = line, k=1)[0]
-        
-        
-        self.impacted_idx .append(index)
-        
-        
-        if manner : output_value  = manner_list [output_value]
-        if sec_manner :  output_value = secondary_place[output_value]
-        value = ( original_value, output_value) 
-        self.effect[index] = value
+    
+   
     
     
     
@@ -128,21 +70,21 @@ class Effect (object) :
         
         
         #TODO histoire des manners
-        print("semper ")
+   
         s = ""
         for key, value in self.effect.items() :
-            s += str(key[0]) + str(key[1])
+            s += str(self.domain)
             s+= ":"
-            if type(value[0]) == tuple  :
-                s+= manner_2_letter[value[0]]
-            else  : s += str(value[0])
+            if type(key) == tuple  :
+                s+= manner_2_letter[key]
+            else  : s += str(key)
             
             s += ">"   
             
-            if  type(value[1]) == tuple:
-                s+=   manner_2_letter[value[1]]
-            else :  s+= str(value[1])
-            s += "|"
+            if  type(value) == tuple:
+                s+=   manner_2_letter[value]
+            else :  s+= str(value)
+            s += " | "
         
         return s
             
@@ -156,33 +98,22 @@ class Effect (object) :
         
         string = string.split(":")
         
-        string = string[1]
+        st =  [int(string[0][1]) ] +[int(string[0][4])]
+        domain = tuple(st)
+        
+        string = string[1].split(" | ")
+        for sub in string :
+            if len(sub)>0 :
+                sub = sub.split(">")
+                if sub[0].isnumeric() : sub[0] = int(sub[0])
+                else : sub[0] = letter_2_manner[sub[0]]
+                if sub[1].isnumeric() : sub[1] = int(sub[1])
+                else : sub[1] = letter_2_manner[sub[1]]
+                effect[sub[0]] = sub[1]
             
         
-        for sub in string.split("|") :
-            if len(sub) > 0 :
             
-                key = (sub[0], sub[1])
-                
-                
-                values = sub[2:].split(">")
-                    
-                for v in values :
-                        
-                        if not v.isnumeric() :
-                            v = letter_2_manner[v]
-                effect[key] = values
-            
-        return effect
-        
-    
-    
-    
-    
-    
-    
-    
-    
+        return Effect(domain, effect)
     
     
     
@@ -190,7 +121,7 @@ class Effect (object) :
     
     
     def __str__(self) : 
-        s =  " index of the modified feature :" + str(self.effect.keys()) + " old vs new value : " + str(self.effect.values())
+        s =  " index of the modified feature :" + str(self.domain) + " old  value : " + str(list(self.effect.keys()))+ "new value : "+  str( list(self.effect.values()))
         return s
     
     

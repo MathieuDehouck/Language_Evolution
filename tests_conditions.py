@@ -40,8 +40,7 @@ target_cong =  wd2.phonemes[2].features
 cond = P_condition(target_cong, -1, -1)
 
 
-effect = Effect(target)
-effect.add_effect( (0,2) , (0,1))
+effect = Effect((0,2 ), {0:1})
 
 
 
@@ -58,6 +57,7 @@ nw = ch.apply_word(wd3)
 print(nw)
 
 
+"""
 
 print("we add a condition")
 ch.add_condition(cond)
@@ -75,7 +75,7 @@ print(chw)
 
 
 print("we add another condition")
-"""
+
 ch = P_change(target, effect)
 
 target_cong =  wd2.phonemes[0].features
@@ -95,7 +95,7 @@ print()
 nw = ch.apply_word(wd3)
 print(nw)
 
-"""
+
 print(wd2)
 print(wd3)
 
@@ -113,7 +113,7 @@ print(nw)
 
 #PB 
 
-"""
+
 wd = lang.voc["deiformis"]
 
 
@@ -149,7 +149,7 @@ condi = change.conditions[0]
 
 condi.test(wd, 1, True)
 
-"""
+
 
 
 
@@ -169,3 +169,4 @@ target_cong =  wd2.phonemes[2].features
 
 
 cond = P_condition(target_cong, -1, -1)
+"""

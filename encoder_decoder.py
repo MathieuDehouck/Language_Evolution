@@ -82,7 +82,11 @@ def encode_f (feat) :
 
 
 
-
+def dt(string, x) :
+    # for decoding trick
+    if string[x] =='*' : return-1
+    if string[x].isnumeric() : return int(string[x])
+    
 
 def decode_f (string) :
     """
@@ -94,13 +98,15 @@ def decode_f (string) :
 
 
     """
+   
+    
     string = string.split(":") 
     if string[0] == "V" : 
         decoder  =  ( 'Height','Backness', 'Round'), ('Voiced', 'Nasal') 
         string = string[1]
-        print(string)
-        tupl1 = (int(string[1]), int(string[3]), int(string[5]))
-        tupl2 = (int(string[7]), int(string[9]))
+        
+        tupl1 = (dt(string, 1), dt(string, 3), dt(string, 5))
+        tupl2 = (dt(string, 7), dt(string, 9))
         
     
     
@@ -108,17 +114,31 @@ def decode_f (string) :
     else : 
         decoder = ('place of articulation', 'manner of articulation', 'Voiced'), ('secondary place of articulation', 'nasal' , 'aspiration')
         string = string[1]
-    
+       
         dec = 0
-        if type(string[2]) == int :
-            dec = 1
-            place = int(string[1:3])
-        else : place = string[1]
+        if string[1] == '*' : place = -1
+        else :
+            if string[2].isnumeric() :
+                dec = 1
+                place = int(string[1:3])
+            else : place = int(string[1])
+        print(dec)
+        if string[3+dec] == "*" : manner = -1
+        else : manner = letter_2_manner[string[3+dec]]
         
-        manner = letter_2_manner[string[4+dec]]
         
-        tupl1 = (place, manner, int(string[5+dec]))
-        tupl2 = (int(string[7+dec]),  int(string[9+dec]),  int(string[11+dec]))
+        if string[7+dec] == '*' : sec_place = -1
+        else :
+            if string[8+dec].isnumeric() :
+                sec_place = int(string[7+dec : 9 +dec])
+                dec += 1
+            else : sec_place = int(string[7+dec])
+        
+        
+        
+        print(string)
+        tupl1 = (place, manner, dt(string,5+dec))
+        tupl2 = (  dt(string,7+dec),  dt(string,9+dec),  dt(string,11+dec)) 
    
             
     tupl = (tupl1, tupl2)

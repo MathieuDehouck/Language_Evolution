@@ -54,6 +54,13 @@ class Condition():
         else  : return self.encode_S_cond()
     """
     
+    
+    def decode_condition(string) :
+        if string[0] == "P" : return P_condition.decode_P_cond(string)
+        if string[0] == "S" : return P_condition.decode_S_cond(string)
+    
+    
+    
 class P_condition (Condition) :
     """
     A class to represent a condition regarding the nature of the phoneme that undergoes a change 
@@ -96,7 +103,11 @@ class P_condition (Condition) :
         self.concerns_V = (len(feature_template) == 5)
     
     
-    
+    def __eq__(self, other) :
+        if other == None or self == None : return False
+        return self.template == other.template and self.rel_pos == other.rel_pos and self.absol_pos == other.absol_pos and self.continu == self.continu     
+        
+        
     def set_absol_pos(self, value) :
         """
         set the condition's absol pos with a new value'
@@ -264,7 +275,7 @@ class P_condition (Condition) :
         string = string [8:]
         string = string.split(" | ")
         
-        print(string)
+        
         template = decode_f(string[0])
         rel_pos = int(string[1][4:])
         abs_pos = int(string[2][4:])
@@ -353,6 +364,9 @@ class S_condition (Condition) :
         self.abs_position = abs_position
         self.rel_pos = rel_pos
         
+    def __eq__(self, other ) :
+        return self.stress == other.stress and self.length == other.length and self.tone == other.tone and self.abs_position == other.abs_position and self.rel_pos == other.rel_pos 
+        
     def test(self, word, rank, verbose = False) :
         """
         Test if the change can be applied on the word regarding the syllabic configuration
@@ -391,7 +405,7 @@ class S_condition (Condition) :
         #test of absolute position : 
         if self.abs_position != 42 :
             if word.syllables[self.abs_position] != word.syllables[index] : return False 
-            else : print ( word.syllables[rank] .ipa , " vs ", word.syllables[index] )
+            #else : print ( word.syllables[rank] .ipa , " vs ", word.syllables[index] )
         
         
         return  self.length == word.syllables[index].length and self.stress == word.syllables[index].stress and self.tone == word.syllables[index].tone

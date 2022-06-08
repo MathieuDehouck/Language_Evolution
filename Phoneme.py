@@ -60,6 +60,7 @@ class Phoneme(object) :
         self.word_rank = None
         
         self.features = features
+        
         self.ipa = speller.get_char(self)
         self.description = ''
         

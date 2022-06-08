@@ -5,7 +5,7 @@ Created on Thu May  5 10:22:10 2022
 @author: 3b13j
 """
 from utilitaries import feature_match,  tpl_2_candidates, mask_match, feature_indices, printl, printd, phon_in_dic
-from Phoneme import Phoneme, Vowel , Consonant, list_2_tuple
+from Phoneme import Phoneme, Vowel , Consonant, list_2_tuple, tuple_2_list
 from Syllable import Syllable
 from Word import Word
 from Language import Language
@@ -182,7 +182,8 @@ class P_change(Change) :
         #TODO : rustine un bu fait que qd on crée plusieurs changements à la suite du même nom (dans une boucle par ex)
         # la liste des changements n'est pas remise à 0
         
-        
+    def __eq__ (self, other) :
+        return self.target == other.target and self.effect == other.effect and self.conditions == other.conditions
         
     def applicable (self, language) :
         """
@@ -259,6 +260,9 @@ class P_change(Change) :
         
         
     def apply_phon (self,  phon, index , word, verbose = False):
+        
+        
+        
         """
         Applies the change on a phoneme
 
@@ -282,6 +286,7 @@ class P_change(Change) :
 
         """
         
+        
         if verbose :
             print ()
             print("we study the phoneme : ", index , phon.ipa)
@@ -293,35 +298,46 @@ class P_change(Change) :
             return phon, index+1
         
         
-        if phon.isV != self.effect.isV : 
+        if phon.isV != self.concerns_V : 
             if verbose : print ("wrong side")
             
             return phon, index+1
         
         
-        if not phon.isV : ft = [[0, 0, 0],[0,0,0]]
+        #TODO  essayer de réécrire la méthode en ne partant pas de 0 mais de l'état
+        """ faire une copie des features du son courant. en faisant une liste de liste.
+        tuple pour pt d articulation. 
+        on créer un tuple qui correspond aux valeurs correspondants aux index 
+        copier les valeurs du son courant et créer une clé. 
         
-        else : ft =  [[ 0, 0 , 0],[0,0]]
+        domain tuple 2 truc; entrées dy dico, des paires
         
-        for ind in self.effect.idx : 
+        """
+        
+        
+        
+        
+        
+        base =  tuple_2_list( phon.features)
+        idx = feature_indices(self.target)
+        
+        for ind in idx : 
             
            
+            if ind == self.effect.domain : 
+                
+                
+                if phon.features[ind[0]][ind[1]] in self.effect.effect : 
+                    
+                    
+                    base[ind[0]][ind[1]] = self.effect.effect[phon.features[ind[0]][ind[1]]] 
+                    #print("new res",  self.effect.effect[ft[ind[0]][ind[1]]] )
+                
+                
+                
             
-            if ind in self.effect.effect : 
-                
-                ft[ind[0]][ind[1]] = self.effect.effect[ind]  [1]
-                
-                
-                if verbose : 
-                    print()
-                    print(ft)
-                    print("becomes")
-                    print(ft)
-            else :
-                ft[ind[0]][ind[1]] = phon.features[ind[0]][ind[1]]
-
-        
-        ft = list_2_tuple(ft)
+       
+        ft = list_2_tuple(base)
         
         if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
         else : new_phon = Consonant(ft, phon.syl, phon.speller)
@@ -384,6 +400,7 @@ class P_change(Change) :
         
         phonemes = []
         for phon in syl.phonemes :
+            
             phon2 , index = self.apply_phon( phon, index , wd , verbose)
             phonemes. append(phon2)
         return Syllable(phonemes, syl.stress, syl.length), index
@@ -446,22 +463,49 @@ class P_change(Change) :
         s+= "Eff:" +self.effect.encode_e() +"\t"
         s+= "Con:" 
         for cond in self.conditions : 
-            s+= cond.encode_condition()
+            s+= cond.encode_condition()+"  &  "
         return s
         
     
     
     
     
-    def decode_change(string) :
+    def decode_change(string, verbose = False) :
         # the string coding a change encompass four parts. 
         s = string.split("\t")
-        
+        if verbose : print(s[1][4:])
         target = decode_f(s[1][4:])
+        if verbose : print(s[2][4:])
         effect = Effect.decode_e(s[2][4:])
-        #cond = #
         
+        if verbose : print(s[3][4:].split("  &  "))
+        if s[0][0] == 'P' :
+            change = P_change(target, effect)
+        
+        
+        for cond in s[3][4:].split("  &  ") :
+            
+            if len(cond)>0 :
+                if verbose : 
+                    print("we study a codn")
+                    print(cond)
+                add = False
+                if cond[0] == "P" :
+                    c = P_condition.decode_P_cond(cond)
+                    add = True
+                    
+                elif cond[0] == "S" : 
+                    c = P_condition.decode_S_cond(cond)
+                    add = True
+                    
+                    
+                if add : change.add_condition(c)
+        
+        
+        return (change)
         #if s[0] = "PC " 
+        
+        
     
     """
     def rd_change (lang, verbose = False ):

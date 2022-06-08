@@ -338,7 +338,7 @@ class IPA() :
                     _, (part, voice), out = dist[0]
                     
                     if feats[0][2] == 1 and feats[0][2] != voice:
-                        print(out)
+                        #print(out)
                         out += u'\u032C'
                     elif feats[0][2] == 0 and feats[0][2] != voice:
                         out += u'\u0325'

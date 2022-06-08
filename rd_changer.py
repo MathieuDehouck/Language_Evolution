@@ -37,7 +37,7 @@ class Changer () :
            
            if verbose : 
                print()
-               print("currently generating change", i)
+               print("Currently generating change", i+1)
                print()
            lang , change , changed_words = self.change_u ( lang)
            
@@ -47,7 +47,7 @@ class Changer () :
            
            wc.append(changed_words)
            
-           if verbose : print("CHANGE ", i, " DONE")
+           if verbose : print("Change ", i+1, " created")
     
        return lang, changes, wc
        
@@ -62,7 +62,7 @@ class Tree_changer(Changer) :
     
     def change_u (self, lang, verbose = False) :
         
-        if verbose : print("WE CAN CHANGE")
+        
         
         
         change = self.generator.generate_P_change(lang)
@@ -105,15 +105,15 @@ class Log_changer(Changer) :
         
     
     def change_u (self, lang, index ) :
-      """"  
-        lang = copy.deepcopy(lang)
-       # change = decode_change(self.file[index])
+      
+        
+        change = P_change.decode_change(self.file[index])
         print(self.file[index])
         nl, wc  = change.apply_language(lang)
         return nl, change, wc
     
     def change(self,lang, n, verbose = False) :
-        lang = copy.deepcopy(lang)
+        
         changes = []
         i = 0 
         for i in range(n):
@@ -122,4 +122,4 @@ class Log_changer(Changer) :
             changes.append(change) 
             i+=1
         return lang, changes
-        """
+        
