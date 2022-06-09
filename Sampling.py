@@ -14,6 +14,13 @@ parameter, following a proba weighting represented by a matrix.
 import numpy  as np
 
 
+
+# PARAMETRISATION OF THE PHONETIC CHANGE. 
+
+
+
+
+
 def fill_matrix(rang) :
     
     mat = np.zeros((rang+1, rang+1))
@@ -243,16 +250,16 @@ crer matrices,  on les met dans des structures qui ont la même forme que les fe
 
 
 
+# PARAMETRISATION OF THE CHANGE GENERATION
+
+
+featureV_weights = [4, 4, 2, 3, 2]
+featureC_weights = []
 
 
 
-#
-
-
-
-
-
-
+nb_rel_cond = [0 , 1, 2, 3 , 4]
+weights_nb__rel_cond = [ 3, 8, 7, 1]
 
 
 
