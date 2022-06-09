@@ -4,6 +4,9 @@ Created on Sun May 29 21:36:10 2022
 
 @author: 3b13j
 """
+
+from sys import platform
+
 from utilitaries import *
 from IPA import IPA  
 from wiki_utilities import get_language
@@ -32,7 +35,6 @@ lang = get_language("latin_classique.txt", "latin")
 #lang = get_language("tokipona.txt", "tokipona")
 
 #lang = get_language("greek.txt", "greek")
-
 
 nb_changes = 30
 
@@ -68,9 +70,10 @@ path2 = folder / path2
 path3 = folder / path3
 
 
-os.startfile(path1 )
-os.startfile(path2 )
-os.startfile(path3 )
+if platform != 'linux':
+    os.startfile(path1 )
+    os.startfile(path2 )
+    os.startfile(path3 )
 
 """
 print("We will now retro engineer the changes")
