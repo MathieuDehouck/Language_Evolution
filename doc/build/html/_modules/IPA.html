@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>IPA &mdash; Evolution 0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Evolution
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>IPA</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for IPA</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Thu May  5 00:01:15 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">ipapy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">IPA_utils</span> <span class="kn">import</span> <span class="n">manner_enc</span>
+<span class="kn">from</span> <span class="nn">Phoneme</span> <span class="kn">import</span> <span class="n">Vowel</span><span class="p">,</span> <span class="n">Consonant</span>
+
+
+
+<div class="viewcode-block" id="archetype"><a class="viewcode-back" href="../index.html#IPA.archetype">[docs]</a><span class="k">class</span> <span class="nc">archetype</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to represent an archetypal phoneme (phoneme belonging to the IPA)</span>
+<span class="sd">    These objects are not mutable</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ipa : str</span>
+<span class="sd">        character representing the phoneme in the IPA</span>
+<span class="sd">    features : tuple in a format we defined that represent key informations to define a phoneme&#39;s property&#39;</span>
+<span class="sd">    description : str</span>
+<span class="sd">        precise description of the phoneme (obtained using the IPA python module)</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__(str, liste) </span>
+<span class="sd">        the constructor, that takes the ipa and features as attributes</span>
+<span class="sd">        </span>
+<span class="sd">        </span>
+<span class="sd">    is_Vowel</span>
+<span class="sd">    is_Consonant</span>
+<span class="sd">    get_one</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">feats</span><span class="p">,</span> <span class="n">vow</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ipa</span> <span class="o">=</span> <span class="n">string</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">feats</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vow</span> <span class="o">=</span> <span class="n">vow</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">UNICODE_TO_IPA</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="o">.</span><span class="n">_IPAChar__canonical_string</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;No description&#39;</span>
+       
+        
+       
+
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ipa</span> <span class="o">+</span>  <span class="s2">&quot; :  &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
+
+
+
+
+    <span class="k">def</span> <span class="nf">is_Vowel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vow</span>
+
+
+
+
+
+    <span class="k">def</span> <span class="nf">is_Consonant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">vow</span>
+    
+
+
+
+
+<div class="viewcode-block" id="archetype.get_one"><a class="viewcode-back" href="../index.html#IPA.archetype.get_one">[docs]</a>    <span class="k">def</span> <span class="nf">get_one</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extra_feats</span><span class="p">,</span> <span class="n">syllabic</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        I&#39;ll change this eventually</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vow</span><span class="p">:</span>
+            <span class="n">extra</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="k">if</span> <span class="s1">&#39;nasalised&#39;</span> <span class="ow">in</span> <span class="n">extra_feats</span><span class="p">:</span>
+                <span class="n">extra</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">Vowel</span><span class="p">((</span><span class="n">base</span> <span class="p">,</span><span class="nb">tuple</span><span class="p">(</span><span class="n">extra</span><span class="p">)),</span> <span class="n">syllabic</span><span class="p">,</span> <span class="n">IPA</span><span class="o">.</span><span class="n">get_IPA</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">extra</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="k">if</span> <span class="s1">&#39;pre_nasal&#39;</span> <span class="ow">in</span> <span class="n">extra_feats</span><span class="p">:</span>
+                <span class="n">extra</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="s1">&#39;aspirated&#39;</span> <span class="ow">in</span> <span class="n">extra_feats</span><span class="p">:</span>
+                <span class="n">extra</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="s1">&#39;labialised&#39;</span> <span class="ow">in</span> <span class="n">extra_feats</span><span class="p">:</span>
+                <span class="n">extra</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">11</span>
+            <span class="k">if</span> <span class="s1">&#39;unvoiced&#39;</span> <span class="ow">in</span> <span class="n">extra_feats</span><span class="p">:</span>
+                <span class="n">base</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">base</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span>
+
+            <span class="k">return</span> <span class="n">Consonant</span><span class="p">((</span><span class="n">base</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">extra</span><span class="p">)),</span> <span class="n">syllabic</span><span class="p">,</span> <span class="n">IPA</span><span class="o">.</span><span class="n">get_IPA</span><span class="p">())</span></div></div>
+
+
+
+
+<div class="viewcode-block" id="cons_dist"><a class="viewcode-back" href="../index.html#IPA.cons_dist">[docs]</a><span class="k">def</span> <span class="nf">cons_dist</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">consonants</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    computes the distance between a cons features and a set of consonants</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dists</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="p">(</span><span class="n">xplace</span><span class="p">,</span> <span class="n">xmanner</span><span class="p">,</span> <span class="n">xvoice</span><span class="p">),</span> <span class="n">_</span> <span class="o">=</span> <span class="n">features</span>
+    <span class="k">for</span> <span class="p">((</span><span class="n">place</span><span class="p">,</span> <span class="n">manner</span><span class="p">,</span> <span class="n">voice</span><span class="p">),</span> <span class="n">_</span><span class="p">),</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">consonants</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">manner</span> <span class="o">==</span> <span class="n">xmanner</span><span class="p">:</span>
+            <span class="n">dists</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="n">place</span> <span class="o">-</span> <span class="n">xplace</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">voice</span> <span class="o">-</span> <span class="n">xvoice</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">place</span><span class="p">,</span> <span class="n">voice</span><span class="p">),</span> <span class="n">ch</span><span class="p">))</span>
+    <span class="n">dists</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">dists</span></div>
+
+
+
+
+<div class="viewcode-block" id="vowel_dist"><a class="viewcode-back" href="../index.html#IPA.vowel_dist">[docs]</a><span class="k">def</span> <span class="nf">vowel_dist</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">vowels</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    computes the distance between a vow features and a set of vowells</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dists</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="p">(</span><span class="n">xh</span><span class="p">,</span> <span class="n">xb</span><span class="p">,</span> <span class="n">xr</span><span class="p">),</span> <span class="n">_</span> <span class="o">=</span> <span class="n">features</span>
+    <span class="k">for</span> <span class="p">((</span><span class="n">yh</span><span class="p">,</span> <span class="n">yb</span><span class="p">,</span> <span class="n">yr</span><span class="p">),</span> <span class="n">_</span><span class="p">),</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">vowels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">dists</span><span class="o">.</span><span class="n">append</span><span class="p">(((</span><span class="n">xh</span><span class="o">-</span><span class="n">yh</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">xb</span><span class="o">-</span><span class="n">yb</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">xr</span><span class="o">-</span><span class="n">yr</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="n">yh</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="n">yh</span><span class="p">,</span> <span class="n">yb</span><span class="p">,</span> <span class="n">yr</span><span class="p">),</span> <span class="n">ch</span><span class="p">))</span>
+    <span class="n">dists</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">dists</span></div>
+        
+        
+        
+        
+
+<div class="viewcode-block" id="IPA"><a class="viewcode-back" href="../index.html#IPA.IPA">[docs]</a><span class="k">class</span> <span class="nc">IPA</span><span class="p">()</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A singleton class to represent the IPA viewed as a set of archetypal phonemes.</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    cfeatures or vfeatures : list</span>
+<span class="sd">        list of the str corresponding to the name of the features used in this IPA to describe the phonemes . it describe their semantics</span>
+<span class="sd">    phonemes : list</span>
+<span class="sd">        list of archetypes objects , representing the canonical phonemes of the IPA </span>
+<span class="sd">    alphabet : dic</span>
+<span class="sd">        dictionnary mapping an ipa character to the phoneme it describes</span>
+<span class="sd">    f2ipa : dic</span>
+<span class="sd">        dictionnary mapping a feature list to its ipa character </span>
+<span class="sd">    classes : list</span>
+<span class="sd">        list of the name of the different natural classes we consider in our phonology (built using a csv file)</span>
+<span class="sd">    dic_class : dic</span>
+<span class="sd">        dictionnary mapping a class name to the class object that represents it</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__() no argument, automatically generates the IPA from a CSV file we created</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">__instance</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+
+
+
+<div class="viewcode-block" id="IPA.get_IPA"><a class="viewcode-back" href="../index.html#IPA.IPA.get_IPA">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_IPA</span><span class="p">():</span>
+      <span class="sd">&quot;&quot;&quot; Static access method. &quot;&quot;&quot;</span>
+      <span class="k">if</span> <span class="n">IPA</span><span class="o">.</span><span class="n">__instance</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+         <span class="n">IPA</span><span class="o">.</span><span class="n">__instance</span> <span class="o">=</span> <span class="n">IPA</span><span class="p">()</span>
+      <span class="k">return</span> <span class="n">IPA</span><span class="o">.</span><span class="n">__instance</span></div>
+
+
+
+
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vfeatures</span> <span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;Height&#39;</span><span class="p">,</span><span class="s1">&#39;Backness&#39;</span><span class="p">,</span> <span class="s1">&#39;Round&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Voiced&#39;</span><span class="p">,</span> <span class="s1">&#39;Nasal&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfeatures</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;place of articulation&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;nasal&#39;</span><span class="p">,</span> <span class="s1">&#39;plosive&#39;</span><span class="p">,</span> <span class="s1">&#39;fricative&#39;</span><span class="p">,</span> <span class="s1">&#39;trill&#39;</span><span class="p">,</span> <span class="s1">&#39;lateral&#39;</span><span class="p">),</span> <span class="s1">&#39;Voiced&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;secondary place of articulation&#39;</span><span class="p">,</span> <span class="s1">&#39;pre_nasal&#39;</span> <span class="p">,</span> <span class="s1">&#39;aspiration&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span> <span class="o">=</span> <span class="p">[]</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">alphabet</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feat2ipa</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vow2ipa</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># reading consonants</span>
+        <span class="n">consonants</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;phonetic/consonants.tsv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+        <span class="n">arts</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">consonants</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]]</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">consonants</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="n">manner</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">if</span> <span class="s1">&#39;v&#39;</span> <span class="ow">in</span> <span class="n">manner</span><span class="p">:</span>
+                <span class="n">voiced</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">manner</span> <span class="o">=</span> <span class="n">manner</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">voiced</span> <span class="o">=</span> <span class="mi">0</span>
+                
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+                <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">fts</span> <span class="o">=</span> <span class="p">(</span><span class="n">arts</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">manner_enc</span><span class="p">[</span><span class="n">manner</span><span class="p">],</span> <span class="n">voiced</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">phon</span> <span class="o">=</span> <span class="n">archetype</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">fts</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">fts</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feat2ipa</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phon</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">alphabet</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">phon</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">feat2ipa</span><span class="p">[</span><span class="n">fts</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">[</span><span class="n">fts</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch</span>
+
+        <span class="c1"># reading vowels</span>
+        <span class="n">vows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;phonetic/vowels.tsv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+        <span class="n">front</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vows</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]]</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">vows</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="n">height</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">if</span> <span class="s1">&#39;r&#39;</span> <span class="ow">in</span> <span class="n">height</span><span class="p">:</span>
+                <span class="n">rounded</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rounded</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+                <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">fts</span> <span class="o">=</span> <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">front</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rounded</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">phon</span> <span class="o">=</span> <span class="n">archetype</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">fts</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phon</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">alphabet</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">phon</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">feat2ipa</span><span class="p">[</span><span class="n">fts</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">vow2ipa</span><span class="p">[</span><span class="n">fts</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch</span>
+
+
+
+
+
+<div class="viewcode-block" id="IPA.get_char"><a class="viewcode-back" href="../index.html#IPA.IPA.get_char">[docs]</a>    <span class="k">def</span> <span class="nf">get_char</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phon</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        returns a string representing the input phoneme&#39;s features</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        phon : </span>
+<span class="sd">            A phoneme</span>
+<span class="sd">        verbose : bool, optional</span>
+<span class="sd">            As usual. Verbose with me means verry verbose. The default is False.</span>
+
+<span class="sd">        Returns </span>
+<span class="sd">        -------</span>
+<span class="sd">        string</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># We look directly in the dict of features to ipa if we find something</span>
+        <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feat2ipa</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">feat2ipa</span><span class="p">[</span><span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">]</span>
+
+        <span class="c1"># We did not find a perfect match, so we build it</span>
+        <span class="n">feats</span> <span class="o">=</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span>
+        <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_Vowel</span><span class="p">():</span>
+            <span class="c1"># a basic vowel is voiced and unnasalised</span>
+            <span class="n">base</span> <span class="o">=</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">base</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vow2ipa</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vow2ipa</span><span class="p">[</span><span class="n">base</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># try flip round</span>
+                <span class="n">base</span> <span class="o">=</span> <span class="p">(</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="o">-</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">base</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vow2ipa</span><span class="p">:</span>
+                    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vow2ipa</span><span class="p">[</span><span class="n">base</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u0339</span><span class="s1">&#39;</span>
+                    <span class="k">elif</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u031C</span><span class="s1">&#39;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># compute distance in the vowel space</span>
+                    <span class="n">dist</span> <span class="o">=</span> <span class="n">vowel_dist</span><span class="p">(</span><span class="n">feats</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vow2ipa</span><span class="p">)</span>
+                    <span class="n">xh</span><span class="p">,</span> <span class="n">xb</span><span class="p">,</span> <span class="n">xr</span> <span class="o">=</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="c1">#print(dist)</span>
+                    <span class="n">_</span><span class="p">,</span> <span class="p">(</span><span class="n">yh</span><span class="p">,</span> <span class="n">yb</span><span class="p">,</span> <span class="n">yr</span><span class="p">),</span> <span class="n">out</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+                    <span class="k">if</span> <span class="n">xh</span> <span class="o">&gt;</span> <span class="n">yh</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u031E</span><span class="s1">&#39;</span>
+                    <span class="k">elif</span> <span class="n">xh</span> <span class="o">&lt;</span> <span class="n">yh</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u031D</span><span class="s1">&#39;</span>
+
+                    <span class="k">if</span> <span class="n">xr</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">xr</span> <span class="o">!=</span> <span class="n">yr</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u0339</span><span class="s1">&#39;</span>
+                    <span class="k">elif</span> <span class="n">xr</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">xr</span> <span class="o">!=</span> <span class="n">yr</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u031C</span><span class="s1">&#39;</span>
+
+                
+            <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_nasal</span><span class="p">():</span> <span class="c1"># nasal</span>
+                <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u0303</span><span class="s1">&#39;</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_voiced</span><span class="p">():</span> <span class="c1"># unvoiced</span>
+                <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u0325</span><span class="s1">&#39;</span>
+
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">base</span> <span class="o">=</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">base</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">[</span><span class="n">base</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="c1"># thats an affricate</span>
+                <span class="n">plos</span> <span class="o">=</span> <span class="p">(</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">fric</span> <span class="o">=</span> <span class="p">(</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">plos</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">:</span>
+                    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">[</span><span class="n">plos</span><span class="p">]</span>
+
+                <span class="k">elif</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]:</span>
+                    <span class="n">plos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="o">-</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">[</span><span class="n">plos</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">plos</span> <span class="o">=</span> <span class="p">(</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="o">-</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">[</span><span class="n">plos</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">fric</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">:</span>
+                    <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u035c</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">[</span><span class="n">fric</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">fric</span> <span class="o">=</span> <span class="p">(</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="o">-</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u035c</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">[</span><span class="n">fric</span><span class="p">]</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># try flipping voicing</span>
+                <span class="n">base</span> <span class="o">=</span> <span class="p">(</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">base</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="o">-</span><span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">base</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">:</span>
+                    <span class="c1">#print(base, feats)</span>
+                    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">[</span><span class="n">base</span><span class="p">]</span>
+
+                    <span class="k">if</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u032C</span><span class="s1">&#39;</span>
+                    <span class="k">elif</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u0325</span><span class="s1">&#39;</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">dist</span> <span class="o">=</span> <span class="n">cons_dist</span><span class="p">(</span><span class="n">feats</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cons2ipa</span><span class="p">)</span>
+                    
+                    <span class="n">_</span><span class="p">,</span> <span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="n">voice</span><span class="p">),</span> <span class="n">out</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    
+                    <span class="k">if</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="n">voice</span><span class="p">:</span>
+                        <span class="c1">#print(out)</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u032C</span><span class="s1">&#39;</span>
+                    <span class="k">elif</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="n">voice</span><span class="p">:</span>
+                        <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u0325</span><span class="s1">&#39;</span>
+                    
+                    <span class="n">direction</span> <span class="o">=</span> <span class="n">feats</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">part</span>
+                    <span class="c1">#print(direction)</span>
+                    <span class="k">if</span> <span class="n">direction</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">direction</span><span class="p">)):</span>
+                            <span class="c1">#out += u&#39;\u034F&#39;</span>
+                            <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u0320</span><span class="s1">&#39;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">direction</span><span class="p">)):</span>
+                            <span class="c1">#out += u&#39;\u034F&#39;</span>
+                            <span class="n">out</span> <span class="o">+=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u031F</span><span class="s1">&#39;</span>
+
+
+
+            <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_labialised</span><span class="p">()</span> <span class="p">:</span> <span class="c1"># round w</span>
+                <span class="n">out</span> <span class="o">+=</span> <span class="s1">&#39;ʷ&#39;</span>
+            
+            <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_aspirated</span><span class="p">()</span> <span class="p">:</span> <span class="c1"># aspirated</span>
+                <span class="n">out</span> <span class="o">+=</span> <span class="s1">&#39;ʰ&#39;</span>
+
+            <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_pre_nasalised</span><span class="p">()</span> <span class="p">:</span> <span class="c1"># prenasal</span>
+                <span class="n">nasal</span> <span class="o">=</span> <span class="p">(</span><span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">feat2ipa</span><span class="p">[</span><span class="n">nasal</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">n</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span>
+                <span class="n">out</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\u035c</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">out</span>
+                    
+        <span class="k">return</span> <span class="n">out</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
