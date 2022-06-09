@@ -34,7 +34,7 @@ lang = get_language("latin_classique.txt", "latin")
 #lang = get_language("greek.txt", "greek")
 
 
-nb_changes = 30
+nb_changes = 100
 
 origin = lang
 bb = Baby_P_change_generator()
@@ -67,11 +67,11 @@ path1 = folder / path1
 path2 = folder / path2
 path3 = folder / path3
 
-
+"""
 os.startfile(path1 )
 os.startfile(path2 )
 os.startfile(path3 )
-
+"""
 """
 print("We will now retro engineer the changes")
 
@@ -80,6 +80,10 @@ test_retro , ch = lc.change(origin, nb_changes)
 test_retro.print_both(new_language)
 """
 
-time.octopus(15, nb_changes)
+time.octopus(40, nb_changes)
 time.tree.print_history_to_graph("virdia")
+
+k,e = time.tree.elaborate_history_graph('virdia')
+time.tree.history_to_graph('virdia')
+
 #time.tree.print_history_to_graph_reduced("virdia")

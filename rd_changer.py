@@ -110,7 +110,9 @@ class Tree_changer(Changer) :
     
     def octopus(self, nb_branches, depth) :
         
+        
         for i in range(nb_branches -1) :
+            print("grafting branch ",i+1)
             self.pursue_evolution(depth)
     
     

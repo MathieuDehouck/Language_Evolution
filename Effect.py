@@ -6,9 +6,8 @@ Created on Wed Jun  1 09:55:33 2022
 """
 
 
-from Sampling import MatricesV, MatricesC, manner_2_ind, manner_list, sec_place_2_ind, secondary_place 
-from Phoneme import feature_indices
-from encoder_decoder import letter_2_manner, manner_2_letter, dt
+
+from encoder_decoder import letter_2_manner, manner_2_letter
 
 
 

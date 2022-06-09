@@ -46,6 +46,17 @@ class L_tree :
         if self.parent != None : self.depth = self.parent.depth +1
         self.change = None
         
+        
+        
+    
+        
+    def __str__(self):
+        if self.parent == None : return "The Root" 
+        
+        s= self.adress + "   parent " + self.parent.adress + "    nodes  : "
+        for n in self.nodes : s+= n.adress + "   "
+        return s
+        
     def get_depth(self, dic = {}):
         
         dic[self.adress] = self.depth
@@ -69,12 +80,22 @@ class L_tree :
             
         return liste, scores
     
+    
+    
+    
+    
+    
     def get_nodes (self, liste=[]) :
         liste.append(self)
         for tree in self.nodes :
             tree.get_nodes(liste)
         return liste
         
+    
+    
+    
+    
+    
     def get_ad_2_tree(self, dic = {} ):
         dic[self.adress] = self
         for tree in self.nodes :
@@ -92,6 +113,29 @@ class L_tree :
         liste, scores = self.get_all_nodes()
         
         return random.choices(liste, weights=scores, k=1)[0]
+    
+    
+    
+    
+    def get_leaves(self, liste =[]) :
+        
+        if len(self.nodes) == 0 :
+            liste.append(self)
+        else :
+            for node in self.nodes :
+                node.get_leaves(liste)
+        return liste
+    
+    def get_path_to_root(self) :
+        
+        liste = []
+        parent = self.parent 
+        while self.parent != None :
+            liste.append(parent)
+            parent = parent.parent
+        return liste
+    
+    
     
     
     def get_history_word(self, word , liste = [] ):
@@ -163,17 +207,110 @@ class L_tree :
         im.show()   
         
         
+    
+    def elaborate_history_graph (self, word) :
+        
+        nodes = self.get_nodes()
+        
+        splits = [n for n in nodes if len(n.nodes)>1] + [self]
+        
+        leaves = self.get_leaves()
+        
+        keep = []
+        edges = []
+        
+        
+        
+        
+        for a in splits + leaves :
+            
+            last = a
+            if a not in keep  : keep.append(a)
+            b = a.parent
+            while b not in splits and b != None and last != None :
+                 
+                 if b.language.voc[word] != last.language.voc[word] :
+                    
+                    if b not in keep : 
+                        keep.append(b)
+                        if [last, b] not in edges :  edges.append([last, b])
+                    
+                    last = b
+                 b = b.parent
+                 
+            if b != None and last != None : edges.append([last, b])
+            
+            
+        return list(tuple(keep)), list(tuple( edges))
+        
+      
         
     
+    def history_to_graph(self, word) :
         
         
+        keep, edges =  self.elaborate_history_graph(word) 
+        
+ 
+        
+        if None in keep  : keep.remove(None)
+    
+        f = open ( 'graphe.dot','w', encoding = "utf8") 
+        f.write("digraph \" " + "We display the history of a word" + "\" {\n")
+        
+        f.write(" label = \"" + word+ "\" \n")
+        f.write("graph[rankdir=\"LR\"];\n")
         
         
-        
+        f.write("node [style=\"filled\", fillcolor = \"white\"];\n")
+        f.write("edge [style=\"solid\", color=\"purple\"];\n")
         
     
+       
+        
+        for tree in keep :
+            
+            s = ""
+            s += str(keep.index(tree))
+            s += " [label=\""
+            s += tree.language.voc[word].ipa
+            s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
+           
+            f.write(s)
+            
+        numeric_edges = []
+        
+        for edge in edges :
+            
+                num = [str(keep.index(edge[0])), str(keep.index(edge[1]))]
+                
+                
+                if num not in numeric_edges :
+                    
+                    s = ""
+                    s += num[0]
+                    s += " -> "
+                    s += num[1]
+                    s+=";\n"
+                    f.write(s)
+                    
+                    numeric_edges.append(num)
+                    
+        print(numeric_edges)         
+        f.write("}")
+        f.close()
+        
+        print("execution commande")
+        commande = "dot -Tpng  graphe.dot  >  graphe.png"
+        
+        os.system(commande) #os.system(cmd) exécute cmd
+        
+        from PIL import Image
+        im = Image.open("graphe.png")
+        im.show()   
         
         
+    """
     def print_history_to_graph_reduced(self, word ) :
 
         
@@ -203,9 +340,7 @@ class L_tree :
         
         words.append(self.language.voc[word])
         
-        t2a = self.get_tree_2_add()
-        print(t2a)
-        
+    
         for tree in liste :
             for subtree in tree.nodes :
                 if tree.language.voc[word] != subtree.language.voc[word] :
@@ -216,15 +351,13 @@ class L_tree :
                     s += " [label=\""
                     s += subtree.language.voc[word].ipa
                     s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
+
+                    f.write(s)
                     
-                
-                    
-           
-            f.write(s)
-            
+        # TODO idée générale à revoir 
         for tree in liste :
             for subtree in tree.nodes :
-                if tree.language.voc[word] != subtree.language.voc[word] :
+                if tree.language.voc[word].phonemes != subtree.language.voc[word].phonemes :
                     s = ""
                     
                     
@@ -249,7 +382,7 @@ class L_tree :
         
         
         
-            
+        """
     
     
    

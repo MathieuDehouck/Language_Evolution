@@ -219,6 +219,7 @@ class Baby_P_change_generator(P_change_generator) :
        """
        effect={}
        
+       #TODO isV doit etre passéc en argument 
        isV = len(feature_indices(target)) == 5 
        if isV : Trinity = MatricesV 
        else : Trinity = MatricesC
@@ -256,6 +257,7 @@ class Baby_P_change_generator(P_change_generator) :
         
         idx = feature_indices(target)
         domain = random.choice(idx)
+        #TODO paramétriser 
         ef = self.set_funct(domain, target)
         
         
