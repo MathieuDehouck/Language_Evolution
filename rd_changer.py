@@ -16,19 +16,19 @@ import copy
 
 class Changer () :
     
-   def  __init__(self, gen = None) :
+   def  __init__(self, gen = Change_Generator()) :
        #TODO modified for the new micro script
-        if gen == None : self.generator = Change_Generator() 
-        else : self.generator = gen
+      self.generator = gen
     
     
    def change_u (self, lang) :
+       """
+       What that does ?
+       """
+       NotImplemented
+
        
-      NotImplemented
-    
-   def change(self,lang, n, verbose = False) :
-       
-       
+   def change(self, lang, n, verbose = False) :
        changes = []
        wc = []
        lang = copy.deepcopy(lang)
@@ -50,7 +50,8 @@ class Changer () :
            if verbose : print("Change ", i+1, " created")
     
        return lang, changes, wc
-       
+
+
 class Tree_changer(Changer) :
     
     def __init__(self, lang, gen = None) :
@@ -62,10 +63,7 @@ class Tree_changer(Changer) :
         
     
     def change_u (self, lang, verbose = False) :
-        
-        
-        
-        
+
         change = self.generator.generate_P_change(lang)
         
         """
