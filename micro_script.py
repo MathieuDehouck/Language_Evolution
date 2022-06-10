@@ -37,7 +37,6 @@ lang = get_language("latin_classique.txt", "latin")
 
 st = State(lang)
 
-exit()
 
 
 #lang = get_language("tokipona.txt", "tokipona")
