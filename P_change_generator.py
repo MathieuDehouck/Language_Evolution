@@ -175,6 +175,7 @@ class Baby_P_change_generator(P_change_generator) :
         #selection of the effect
         effect = self.select_effect(language, target)
         change = P_change(target, effect)
+        change.reset_condition()
         
         if verbose : print("Effect", effect)
         
@@ -427,7 +428,8 @@ class Baby_P_change_generator(P_change_generator) :
             
             
             conditions.append ( P_condition(conditioner, rel_pos ) )
-            
+        
+        print("there are", len(conditions), " conditions")
         return conditions
         
         
@@ -436,7 +438,25 @@ class Baby_P_change_generator(P_change_generator) :
             
             
     
-    def set_conditions(self, language, change, verbose = False ) :
+
+    def set_conditions(self, language, chang, verbose = False ) :
+        """
+        Adds a parametrized number of condition to the change
+        
+        Parameters
+        ----------
+        language : TYPE
+            DESCRIPTION.
+        change : TYPE
+            DESCRIPTION.
+        verbose : TYPE, optional
+            DESCRIPTION. The default is False.
+
+    
+
+        """
+    
+
         
         
         #Due to implemetation strategies , we will generate conditions in a spectific order 
@@ -449,7 +469,7 @@ class Baby_P_change_generator(P_change_generator) :
         
         #TODO paramétriser le nombre de condition par changement
         
-        potential_contexts = words_containing(change.target, language) 
+        potential_contexts = words_containing(chang.target, language) 
         
         #add syl condition :
         
@@ -460,21 +480,23 @@ class Baby_P_change_generator(P_change_generator) :
             change.add_condition(cond)
         
         """
+        conditions = []
         
         # abs P_condition ?
         rd = random.randint(0, 6)
         if not rd :
-            cond, potential_contexts = self.set_abs_Pcondition(potential_contexts, change)
+            cond, potential_contexts = self.set_abs_Pcondition(potential_contexts, chang)
             if cond != None : 
-                change.add_condition(cond)
+                chang.add_condition(cond)
         
         
         # rel_pos P_condition 
         else :
             nb_cond = random.randint(1, 3) 
             if nb_cond :
-                conditions = self.set_rel_Pconditions(potential_contexts, change,  nb_cond)    
-                for c in conditions : change.add_condition(c)
+                
+                conditions = self.set_rel_Pconditions(potential_contexts, chang,  nb_cond)    
+                for c in conditions : chang.add_condition(c)
         
         if verbose : print("Conditions setted")
         

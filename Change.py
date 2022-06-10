@@ -69,7 +69,9 @@ class Change():
         self.conditions.append(condition)
     
     
-    
+    def reset_condition(self) :
+        self.conditions = [] 
+        
     def set_target(self, cond) :
         self.target = cond
         
