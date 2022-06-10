@@ -39,7 +39,7 @@ class Word :
         self.syllables = syls 
         #s = ""
         #for x in self.syllables : s += x.ipa
-        self.ipa = '.'.join([syl.ipa for syl in self.syllables])
+        self.ipa = '.'.join([syl.ipa for syl in self.syllables]).replace(".'", "'")
         self.structure = self.get_structure()
         self.stress_pattern = self.get_stess_pattern()
         
@@ -61,12 +61,8 @@ class Word :
         self.phon2syl = phon2syl
         
 
-    def __eq__(self, other) :
-        
-        for i, phon in enumerate ( self.phonemes ) :
-            if phon.features != other.phonemes[i].features :
-                return False
-        return True
+    def __eq__(self, other):
+        return self.syllables == other.syllables
 
         
     def __str__(self)  :
@@ -229,17 +225,14 @@ class Syllable(object) :
         
     
     def __eq__(self, other ) :
-            """ a syllable is equal to antoher syllable if it contains the same phonemes ,and have same stress, length and tone
+        """ 
+        a syllable is equal to antoher syllable if it contains the same phonemes ,and have same stress, length and tone
             
-            """
-            for i, phon in enumerate ( self.phonemes ) :
+        """
+        if self.phonemes != other.phonemes:                    
+            return False
+        if self.length != other.length : return False
+        if self.stress != other.stress : return False 
+        if self.tone != other.tone : return False
                 
-                if phon.features != other.phonemes[i].features :
-                    
-                    return False
-        
-            if self.length != other.length : return False
-            if self.stress != other.stress : return False 
-            if self.tone != other.tone : return False
-                
-            return True
+        return True
