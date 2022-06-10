@@ -29,7 +29,7 @@ influence_C_on_C = {}
 
 
 
-class Change :
+class Change():
     """
     An abstract class representing a phonetic change.
     They can be of three kinds : 
@@ -43,7 +43,7 @@ class Change :
     ----------
     conditions : list
         list of conditions required for the change to be applied
-    imacted_phonems : dic
+    impacted_phonems : dic
         dictionnary stocking the phonemes that have been impacted by a change during its application
         #TODO check it works
     target : condition
@@ -59,7 +59,7 @@ class Change :
     """
     def __init__(self) :
         self.conditions = []
-        self.impacted_phonemes ={}
+        self.impacted_phonemes = {}
         self.target = None
         
         
@@ -154,14 +154,10 @@ class P_change(Change) :
     
     rd_change ; creates a random change
     
-    
-    
     """
     
     
-    
-    
-    def __init__(self, target, effect) :
+    def __init__(self, target, effect, conditions=[]):
         """ 
         a Phonetic change deals with the modification of a phonem, therefore the object P_change need
         information about the phoneme to modify. The two configurations object encode these informations,
@@ -169,9 +165,9 @@ class P_change(Change) :
         during the process of its application
         """
         super().__init__()
-        
-        
+
         self.target = target
+        self.conditions = conditions
         self.idx = feature_indices(target)
         
         self.effect = effect
@@ -207,7 +203,8 @@ class P_change(Change) :
                 print(phoneme)
                 return True
         return False
-        
+
+
     def effective (self, language, verbose = False) :     
         lg, cw = self.apply_language(language)
         bol = len(cw) == 0 
@@ -260,9 +257,7 @@ class P_change(Change) :
         
         
     def apply_phon (self,  phon, index , word, verbose = False):
-        
-        
-        
+
         """
         Applies the change on a phoneme
 
@@ -314,28 +309,15 @@ class P_change(Change) :
         
         """
         
-        
-        
-        
-        
         base =  tuple_2_list( phon.features)
         idx = feature_indices(self.target)
         
         for ind in idx : 
-            
-           
             if ind == self.effect.domain : 
-                
-                
                 if phon.features[ind[0]][ind[1]] in self.effect.effect : 
-                    
-                    
                     base[ind[0]][ind[1]] = self.effect.effect[phon.features[ind[0]][ind[1]]] 
                     #print("new res",  self.effect.effect[ft[ind[0]][ind[1]]] )
                 
-                
-                
-            
        
         ft = list_2_tuple(base)
         

@@ -161,8 +161,9 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">ipapy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">abspath</span>
+<span class="c1">#from ipapy import *</span>
+
 <span class="kn">from</span> <span class="nn">IPA_utils</span> <span class="kn">import</span> <span class="n">manner_enc</span>
 <span class="kn">from</span> <span class="nn">Phoneme</span> <span class="kn">import</span> <span class="n">Vowel</span><span class="p">,</span> <span class="n">Consonant</span>
 
@@ -330,7 +331,7 @@
 
     
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vfeatures</span> <span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;Height&#39;</span><span class="p">,</span><span class="s1">&#39;Backness&#39;</span><span class="p">,</span> <span class="s1">&#39;Round&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Voiced&#39;</span><span class="p">,</span> <span class="s1">&#39;Nasal&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vfeatures</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Height&#39;</span><span class="p">,</span><span class="s1">&#39;Backness&#39;</span><span class="p">,</span> <span class="s1">&#39;Round&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Voiced&#39;</span><span class="p">,</span> <span class="s1">&#39;Nasal&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cfeatures</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;place of articulation&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;nasal&#39;</span><span class="p">,</span> <span class="s1">&#39;plosive&#39;</span><span class="p">,</span> <span class="s1">&#39;fricative&#39;</span><span class="p">,</span> <span class="s1">&#39;trill&#39;</span><span class="p">,</span> <span class="s1">&#39;lateral&#39;</span><span class="p">),</span> <span class="s1">&#39;Voiced&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;secondary place of articulation&#39;</span><span class="p">,</span> <span class="s1">&#39;pre_nasal&#39;</span> <span class="p">,</span> <span class="s1">&#39;aspiration&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span> <span class="o">=</span> <span class="p">[]</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">alphabet</span> <span class="o">=</span> <span class="p">{}</span>

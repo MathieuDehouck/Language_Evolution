@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Welcome to Evolution&#39;s documentation! &mdash; Evolution 0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Evolution
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to Evolution's documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Evolution</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Welcome to Evolution's documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-evolution-s-documentation">
+<h1>Welcome to Evolution's documentation!<a class="headerlink" href="#welcome-to-evolution-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+<span class="target" id="module-IPA"></span><p>Created on Thu May  5 00:01:15 2022</p>
+<p>&#64;author: 3b13j</p>
+<dl class="class">
+<dt id="IPA.IPA">
+<em class="property">class </em><code class="descclassname">IPA.</code><code class="descname">IPA</code><a class="reference internal" href="_modules/IPA.html#IPA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IPA.IPA" title="Permalink to this definition">¶</a></dt>
+<dd><p>A singleton class to represent the IPA viewed as a set of archetypal phonemes.</p>
+<p>...</p>
+<dl class="docutils">
+<dt>cfeatures or vfeatures <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>list of the str corresponding to the name of the features used in this IPA to describe the phonemes . it describe their semantics</dd>
+<dt>phonemes <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>list of archetypes objects , representing the canonical phonemes of the IPA</dd>
+<dt>alphabet <span class="classifier-delimiter">:</span> <span class="classifier">dic</span></dt>
+<dd>dictionnary mapping an ipa character to the phoneme it describes</dd>
+<dt>f2ipa <span class="classifier-delimiter">:</span> <span class="classifier">dic</span></dt>
+<dd>dictionnary mapping a feature list to its ipa character</dd>
+<dt>classes <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>list of the name of the different natural classes we consider in our phonology (built using a csv file)</dd>
+<dt>dic_class <span class="classifier-delimiter">:</span> <span class="classifier">dic</span></dt>
+<dd>dictionnary mapping a class name to the class object that represents it</dd>
+</dl>
+<p>__init__() no argument, automatically generates the IPA from a CSV file we created</p>
+<dl class="staticmethod">
+<dt id="IPA.IPA.get_IPA">
+<em class="property">static </em><code class="descname">get_IPA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#IPA.get_IPA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IPA.IPA.get_IPA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Static access method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IPA.IPA.get_char">
+<code class="descname">get_char</code><span class="sig-paren">(</span><em>phon</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#IPA.get_char"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IPA.IPA.get_char" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a string representing the input phoneme's features</p>
+<dl class="docutils">
+<dt>phon <span class="classifier-delimiter">:</span> <span class="classifier"></span></dt>
+<dd>A phoneme</dd>
+<dt>verbose <span class="classifier-delimiter">:</span> <span class="classifier">bool, optional</span></dt>
+<dd>As usual. Verbose with me means verry verbose. The default is False.</dd>
+</dl>
+<p>string</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="IPA.archetype">
+<em class="property">class </em><code class="descclassname">IPA.</code><code class="descname">archetype</code><span class="sig-paren">(</span><em>string</em>, <em>feats</em>, <em>vow</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#archetype"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IPA.archetype" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class to represent an archetypal phoneme (phoneme belonging to the IPA)
+These objects are not mutable</p>
+<p>...</p>
+<dl class="docutils">
+<dt>ipa <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>character representing the phoneme in the IPA</dd>
+</dl>
+<p>features : tuple in a format we defined that represent key informations to define a phoneme's property'
+description : str</p>
+<blockquote>
+<div>precise description of the phoneme (obtained using the IPA python module)</div></blockquote>
+<dl class="docutils">
+<dt>__init__(str, liste) </dt>
+<dd>the constructor, that takes the ipa and features as attributes</dd>
+</dl>
+<p>is_Vowel
+is_Consonant
+get_one</p>
+<dl class="method">
+<dt id="IPA.archetype.get_one">
+<code class="descname">get_one</code><span class="sig-paren">(</span><em>extra_feats</em>, <em>syllabic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#archetype.get_one"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IPA.archetype.get_one" title="Permalink to this definition">¶</a></dt>
+<dd><p>I'll change this eventually</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="IPA.cons_dist">
+<code class="descclassname">IPA.</code><code class="descname">cons_dist</code><span class="sig-paren">(</span><em>features</em>, <em>consonants</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#cons_dist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IPA.cons_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes the distance between a cons features and a set of consonants</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="IPA.vowel_dist">
+<code class="descclassname">IPA.</code><code class="descname">vowel_dist</code><span class="sig-paren">(</span><em>features</em>, <em>vowels</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#vowel_dist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IPA.vowel_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes the distance between a vow features and a set of vowells</p>
+</dd></dl>
+
+<span class="target" id="module-Phoneme"></span><p>Created on Tue May  3 00:08:43 2022</p>
+<p>&#64;author: 3b13j</p>
+<dl class="class">
+<dt id="Phoneme.Consonant">
+<em class="property">class </em><code class="descclassname">Phoneme.</code><code class="descname">Consonant</code><span class="sig-paren">(</span><em>features</em>, <em>syllabic</em>, <em>speller</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Phoneme.Consonant" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class representing a Consonant</p>
+<p>Semantic of a feature ;</p>
+<p>syl : field of the Phoneme
+voice : filed of the Phoneme</p>
+<dl class="docutils">
+<dt>Features :</dt>
+<dd><dl class="first docutils">
+<dt>First tuple :</dt>
+<dd><p class="first">0 : 
+&quot;place of articulation&quot; : int 
+1 : list of 5 manner of articulation , each coded by a boolean</p>
+<blockquote class="last">
+<div>&quot;plosive&quot;
+&quot;fricative&quot;
+&quot;nasal&quot;
+&quot;trill&quot;
+&quot;lateral&quot;</div></blockquote>
+</dd>
+</dl>
+<p>Second tuple :</p>
+<blockquote class="last">
+<div>&quot;secondary place of articulation&quot;  int (3 or 4 possibilities, same semantics as in place of articulation)
+&quot;pren_nasal&quot;  bool
+&quot;aspiration&quot; bool</div></blockquote>
+</dd>
+</dl>
+<p>...</p>
+<dl class="docutils">
+<dt>ipa <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>the ipa representation of a phoneme</dd>
+<dt>features <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>a list representing the features associated to the phonem</dd>
+<dt>description <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>the verbose descritption of the phoneme</dd>
+<dt>voice <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>states if the phoneme is voiced or not</dd>
+<dt>syl <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>states if the phoneme is center of a syllable</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>update_IPA  : finds the closest ipa character to represent a new phoneme</p>
+<p>is_round
+is_nasal
+is_palatal</p>
+<p>get_place
+get_manner</p>
+<p>linearize : get the representation of the phoneme as a list of integers</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Phoneme.Phoneme">
+<em class="property">class </em><code class="descclassname">Phoneme.</code><code class="descname">Phoneme</code><span class="sig-paren">(</span><em>features</em>, <em>syllabic</em>, <em>speller=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Phoneme.Phoneme" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class representing a phoneme</p>
+<p>...</p>
+<dl class="docutils">
+<dt>ipa <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>the ipa representation of a phoneme</dd>
+<dt>features <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>a list representing the features associated to the phonem</dd>
+<dt>description <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>the verbose descritption of the phoneme</dd>
+<dt>voice <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>states if the phoneme is voiced or not</dd>
+<dt>syl <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>states if the phoneme is center of a syllable</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>update_IPA  : finds the closest ipa character to represent a new phoneme</p>
+<dl class="method">
+<dt id="Phoneme.Phoneme.update_IPA">
+<code class="descname">update_IPA</code><span class="sig-paren">(</span><em>config</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme.update_IPA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Phoneme.Phoneme.update_IPA" title="Permalink to this definition">¶</a></dt>
+<dd><p>updates the ipa field of the Phoneme it is applied to.</p>
+<dl class="docutils">
+<dt>config <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>A list representingthe feature we want</dd>
+<dt>verbose <span class="classifier-delimiter">:</span> <span class="classifier">bool, optional</span></dt>
+<dd>As usual. Verbose with me means verry verbose. The default is False.</dd>
+</dl>
+<p>None.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Phoneme.Vowel">
+<em class="property">class </em><code class="descclassname">Phoneme.</code><code class="descname">Vowel</code><span class="sig-paren">(</span><em>features</em>, <em>syllabic</em>, <em>speller</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Vowel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Phoneme.Vowel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class representing a Vowel</p>
+<p>Semantic of a feature ;</p>
+<p>syl : field of the Phoneme
+voice : filed of the Phoneme</p>
+<dl class="docutils">
+<dt>Features :</dt>
+<dd><p class="first">First tuple :</p>
+<blockquote>
+<div>&quot;fronting&quot; : int  btw 0 and 2
+&quot;height&quot;, int btw 0 and 6</div></blockquote>
+<p>Second tuple :</p>
+<blockquote class="last">
+<div>&quot;round&quot; : bool
+&quot;nasal&quot; : bool</div></blockquote>
+</dd>
+</dl>
+<p>...</p>
+<dl class="docutils">
+<dt>ipa <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>the ipa representation of a phoneme</dd>
+<dt>features <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>a list representing the features associated to the phonem</dd>
+<dt>description <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>the verbose descritption of the phoneme</dd>
+<dt>voice <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>states if the phoneme is voiced or not</dd>
+<dt>syl <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>states if the phoneme is center of a syllable</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>update_IPA  : finds the closest ipa character to represent a new phoneme</p>
+<p>get_height
+get_front</p>
+<p>is_round
+is_nasal
+is_palatal
+is_voiced</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Phoneme.get_phon">
+<code class="descclassname">Phoneme.</code><code class="descname">get_phon</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#get_phon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Phoneme.get_phon" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform a string (we excpect the user to enter an ipa character) into the Phoneme object representing this character</p>
+</dd></dl>
+
+<span class="target" id="module-Change"></span><p>Created on Thu May  5 10:22:10 2022</p>
+<p>&#64;author: 3b13j</p>
+<dl class="class">
+<dt id="Change.Change">
+<em class="property">class </em><code class="descclassname">Change.</code><code class="descname">Change</code><a class="reference internal" href="_modules/Change.html#Change"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.Change" title="Permalink to this definition">¶</a></dt>
+<dd><p>An abstract class representing a phonetic change.
+They can be of three kinds :</p>
+<blockquote>
+<div><ul class="simple">
+<li>Phonetics (<a href="#id1"><span class="problematic" id="id2">P_</span></a>)</li>
+<li>Syllabic (<a href="#id3"><span class="problematic" id="id4">I_</span></a>)</li>
+<li>Wordzddzqd (?_)</li>
+</ul>
+</div></blockquote>
+<p>...</p>
+<dl class="docutils">
+<dt>conditions <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>list of conditions required for the change to be applied</dd>
+<dt>impacted_phonems <span class="classifier-delimiter">:</span> <span class="classifier">dic</span></dt>
+<dd>dictionnary stocking the phonemes that have been impacted by a change during its application
+#TODO check it works</dd>
+<dt>target <span class="classifier-delimiter">:</span> <span class="classifier">condition</span></dt>
+<dd>a special kind of condition that contraint the category of the phoneme that undergo the change</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>add_condition
+set_target
+check : checks if all the conditions are satisfied before the application of the change</p>
+<dl class="method">
+<dt id="Change.Change.add_condition">
+<code class="descname">add_condition</code><span class="sig-paren">(</span><em>condition</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.add_condition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.Change.add_condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>used to add a condition to an already built change</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Change.Change.check">
+<code class="descname">check</code><span class="sig-paren">(</span><em>phon</em>, <em>index</em>, <em>word</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.Change.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if a Change can be applied or not</p>
+<dl class="docutils">
+<dt>phon <span class="classifier-delimiter">:</span> <span class="classifier">Phoneme</span></dt>
+<dd>phoneme we want to apply a change on</dd>
+</dl>
+<p>index :int.
+word : Word</p>
+<blockquote>
+<div>Context</div></blockquote>
+<dl class="docutils">
+<dt>verbose <span class="classifier-delimiter">:</span> <span class="classifier">TYPE, optional</span></dt>
+<dd>DESCRIPTION. The default is False.</dd>
+</dl>
+<dl class="docutils">
+<dt>apply <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>whether the change can be applied or not</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Change.I_change">
+<em class="property">class </em><code class="descclassname">Change.</code><code class="descname">I_change</code><span class="sig-paren">(</span><em>deletion=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#I_change"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.I_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>class allowing insertion or deletion of phonemes
+We examine</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Change.P_change">
+<em class="property">class </em><code class="descclassname">Change.</code><code class="descname">P_change</code><span class="sig-paren">(</span><em>target</em>, <em>effect</em>, <em>conditions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.P_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>subclass of change 
+A class modelling a phonological change .</p>
+<p>...</p>
+<dl class="docutils">
+<dt>conditiosn <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>list of the conditions that need to be satisfied for the change to be applied</dd>
+<dt>config_initiale <span class="classifier-delimiter">:</span> <span class="classifier">configuration</span></dt>
+<dd>template of the configuration selecting the feature(s) to be modified</dd>
+<dt>config_finale <span class="classifier-delimiter">:</span> <span class="classifier">configuration</span></dt>
+<dd>template with the modification applied</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<dl class="docutils">
+<dt>apply_phon :</dt>
+<dd>input : a phoneme (among other onformations)
+outputs a phoneme with the change umpload</dd>
+</dl>
+<p>variants :</p>
+<p>apply_word
+apply_syl
+apply_language</p>
+<dl class="docutils">
+<dt>add_condition :</dt>
+<dd>input : a condition
+adds it to the condition list.</dd>
+</dl>
+<p>rd_change ; creates a random change</p>
+<dl class="method">
+<dt id="Change.P_change.applicable">
+<code class="descname">applicable</code><span class="sig-paren">(</span><em>language</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.applicable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.P_change.applicable" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks if a change would modufy a language given as input. 
+if that s not the case, it is not usefull to apply it.</p>
+<dl class="docutils">
+<dt>language <span class="classifier-delimiter">:</span> <span class="classifier">Language</span></dt>
+<dd>the language we would like to apply the change on</dd>
+</dl>
+<dl class="docutils">
+<dt>bool</dt>
+<dd>DESCRIPTION.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Change.P_change.apply_language">
+<code class="descname">apply_language</code><span class="sig-paren">(</span><em>lang</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_language"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.P_change.apply_language" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the change on every word in the langugage</p>
+<p>lang : language</p>
+<p>a new language with the change applied on every of its word</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Change.P_change.apply_phon">
+<code class="descname">apply_phon</code><span class="sig-paren">(</span><em>phon</em>, <em>index</em>, <em>word</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_phon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.P_change.apply_phon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the change on a phoneme</p>
+<dl class="docutils">
+<dt>phon <span class="classifier-delimiter">:</span> <span class="classifier">phoneme</span></dt>
+<dd>phone</dd>
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier">int </span></dt>
+<dd>rank of the phoneme in the overall word</dd>
+<dt>word <span class="classifier-delimiter">:</span> <span class="classifier">word </span></dt>
+<dd>wird that encompass the phoneme we are studying, plays the role of a contest</dd>
+<dt>verbose <span class="classifier-delimiter">:</span> <span class="classifier">bool, optional</span></dt>
+<dd>Enable or disable the verbose mode . The default is True.</dd>
+</dl>
+<dl class="docutils">
+<dt>index</dt>
+<dd>the updated index at the end of the process</dd>
+<dt>phon </dt>
+<dd>the new phoneme obtained after the applciation of the change</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Change.P_change.apply_syl">
+<code class="descname">apply_syl</code><span class="sig-paren">(</span><em>syl</em>, <em>index</em>, <em>wd</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_syl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.P_change.apply_syl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the change to a Syllable</p>
+<dl class="docutils">
+<dt>syl <span class="classifier-delimiter">:</span> <span class="classifier">syllable</span></dt>
+<dd>the syllable we are going to apply the change to</dd>
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>index encoding the phoneme that will undergo the change</dd>
+<dt>wd <span class="classifier-delimiter">:</span> <span class="classifier">TYPE</span></dt>
+<dd>word of origin of the syllable, plays the role of the context</dd>
+</dl>
+<dl class="docutils">
+<dt>syl <span class="classifier-delimiter">:</span> <span class="classifier"></span></dt>
+<dd>the updated syllable</dd>
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>the index updated</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Change.P_change.apply_word">
+<code class="descname">apply_word</code><span class="sig-paren">(</span><em>wd</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_word"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.P_change.apply_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the change to a word</p>
+<p>wd : word</p>
+<p>word : a new word with the change applied</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Change.P_change.just_transform">
+<code class="descname">just_transform</code><span class="sig-paren">(</span><em>phon</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.just_transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.P_change.just_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a change to transform a phoneme whithout taking care of any kind of condition</p>
+<p>phon : Phoneme</p>
+<p>new_phon : Phoneme</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Change.S_change">
+<em class="property">class </em><code class="descclassname">Change.</code><code class="descname">S_change</code><span class="sig-paren">(</span><em>config_initiale</em>, <em>config_finale</em>, <em>conditions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.S_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>subclass of change 
+A class modelling a structural change in the syllable .</p>
+<p>...</p>
+<dl class="docutils">
+<dt>conditiosn <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>list of the conditions that need to be satisfied for the change to be applied</dd>
+<dt>config_initiale <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>a list of 3 boleans coding stress , length and tone (None for now)</dd>
+<dt>config_finale <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>a list of 3 boleans coding stress ,length (None for now)</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>apply_word
+apply_syl
+apply_lang</p>
+<dl class="docutils">
+<dt>add_condition :</dt>
+<dd>input : a condition
+adds it to the condition list.</dd>
+</dl>
+<dl class="method">
+<dt id="Change.S_change.check">
+<code class="descname">check</code><span class="sig-paren">(</span><em>word</em>, <em>rank</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change.check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Change.S_change.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks if a change can ba applied to a word</p>
+<dl class="docutils">
+<dt>word <span class="classifier-delimiter">:</span> <span class="classifier">word </span></dt>
+<dd>word that we test</dd>
+<dt>rank <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>rank of the phoneme</dd>
+</dl>
+<dl class="docutils">
+<dt>bool</dt>
+<dd>whether it is applicable</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-Condition"></span><p>Created on Thu May  5 15:09:17 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>Contains the condition class and some methodes that could be applied to them.
+A condition is associated to a change object and states whether a change can be applied or not.</p>
+<dl class="class">
+<dt id="Condition.Cond_AND">
+<em class="property">class </em><code class="descclassname">Condition.</code><code class="descname">Cond_AND</code><span class="sig-paren">(</span><em>conditions</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_AND"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.Cond_AND" title="Permalink to this definition">¶</a></dt>
+<dd><p>AND for conditions logic.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Condition.Cond_NOT">
+<em class="property">class </em><code class="descclassname">Condition.</code><code class="descname">Cond_NOT</code><span class="sig-paren">(</span><em>condition</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_NOT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.Cond_NOT" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOT for conditions logic.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Condition.Cond_OR">
+<em class="property">class </em><code class="descclassname">Condition.</code><code class="descname">Cond_OR</code><span class="sig-paren">(</span><em>conditions</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_OR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.Cond_OR" title="Permalink to this definition">¶</a></dt>
+<dd><p>OR for conditions logic.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="Condition.Condition">
+<em class="property">class </em><code class="descclassname">Condition.</code><code class="descname">Condition</code><a class="reference internal" href="_modules/Condition.html#Condition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.Condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>MOTHER CLASS</p>
+<p>A class to represent a condition.
+This is an abstract class.</p>
+<p>In our implementation of phonetic change, we distinguished 3 different subclasses of conditions :</p>
+<blockquote>
+<div><ul class="simple">
+<li>phonemic condition</li>
+<li>stress and syllable weight condition</li>
+<li>metathesis and mechanical conditions</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="class">
+<dt id="Condition.P_condition">
+<em class="property">class </em><code class="descclassname">Condition.</code><code class="descname">P_condition</code><span class="sig-paren">(</span><em>feature_template</em>, <em>rel_pos=0</em>, <em>absol_pos=42</em>, <em>continu=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.P_condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class to represent a condition regarding the nature of the phoneme that undergoes a change 
+and its neighbours.</p>
+<p>...</p>
+<dl class="docutils">
+<dt>template <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>the feature template that need to be satisfied (-1 means  wildcard) for the condition to be satisfied</dd>
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str (optionnal)</span></dt>
+<dd>used to name usual changes</dd>
+<dt>absol_pos <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>absolute offset, checks the position of the phoneme inside the word.
+-1 means wildcard</dd>
+<dt>rel_pos <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>defines the position of the phoneme conditionning the change regarding the phoneme undergoing it
+0 means the condition applies to the phonemes that changes itself</dd>
+<dt>continu <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><dl class="first last docutils">
+<dt>states if the condition needs to be satisfied by at least one of the phoneme in the range of rel_pos or </dt>
+<dd>if just the phoneme at &quot;rel pos &quot; is concerned.</dd>
+</dl>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<dl class="docutils">
+<dt>test :</dt>
+<dd>input : a word and an index.
+checks whether the condition is satisfied.</dd>
+</dl>
+<dl class="method">
+<dt id="Condition.P_condition.set_absol_pos">
+<code class="descname">set_absol_pos</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.set_absol_pos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.P_condition.set_absol_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the condition's absol pos with a new value'</p>
+<p>value : int</p>
+<p>None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Condition.P_condition.set_rel_pos">
+<code class="descname">set_rel_pos</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.set_rel_pos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.P_condition.set_rel_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the condition's relative pos with a new value'</p>
+<p>value : int</p>
+<p>None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Condition.P_condition.test">
+<code class="descname">test</code><span class="sig-paren">(</span><em>word</em>, <em>rank</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.P_condition.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a condition is satisfied on a given word.
+Key method of the Condition class</p>
+<dl class="docutils">
+<dt>word <span class="classifier-delimiter">:</span> <span class="classifier">word</span></dt>
+<dd>word on which we check the condition</dd>
+<dt>rank <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>rank of the word we examine the condition on</dd>
+<dt>verbose <span class="classifier-delimiter">:</span> <span class="classifier">TYPE, optional</span></dt>
+<dd>as usual. The default is False.</dd>
+</dl>
+<p>a boolean</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Condition.S_condition">
+<em class="property">class </em><code class="descclassname">Condition.</code><code class="descname">S_condition</code><span class="sig-paren">(</span><em>abs_position=42</em>, <em>rel_pos=0</em>, <em>length=None</em>, <em>stress=None</em>, <em>tone=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#S_condition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.S_condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class to represent a condition regarding the Syllabic structure of the word</p>
+<p>...</p>
+<dl class="docutils">
+<dt>absol_pos <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>absolute offset, checks the position of the syllable  inside the word.
+-1 means wildcard</dd>
+<dt>rel_pos <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>defines the position of the phoneme conditionning the change regarding the syllable undergoing it
+0 means the condition applies to the phonemes that changes itself</dd>
+<dt>stress <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>Checks a condition on the stress</dd>
+<dt>length <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>Checks a condition on the length</dd>
+<dt>tone <span class="classifier-delimiter">:</span> <span class="classifier">bool </span></dt>
+<dd>Checks a condition on the tone</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<dl class="docutils">
+<dt>test :</dt>
+<dd>input : a word and an index.
+checks whether the condition is satisfied.</dd>
+</dl>
+<dl class="method">
+<dt id="Condition.S_condition.test">
+<code class="descname">test</code><span class="sig-paren">(</span><em>word</em>, <em>rank</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#S_condition.test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.S_condition.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if the change can be applied on the word regarding the syllabic configuration</p>
+<dl class="docutils">
+<dt>word <span class="classifier-delimiter">:</span> <span class="classifier">word</span></dt>
+<dd>the word that undergoes the change</dd>
+<dt>rank <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>rank of the syllable that is being examined</dd>
+<dt>verbose <span class="classifier-delimiter">:</span> <span class="classifier">bool, optional</span></dt>
+<dd>enable the verbose mode. The default is False.</dd>
+</dl>
+<dl class="docutils">
+<dt>bool</dt>
+<dd>boolean, if the change has to be applied</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="Condition.rd_p_condition">
+<code class="descclassname">Condition.</code><code class="descname">rd_p_condition</code><span class="sig-paren">(</span><em>language</em>, <em>rel_pos=0</em>, <em>abs_pos=-1</em>, <em>continu=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#rd_p_condition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Condition.rd_p_condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates a random P_condition</p>
+<dl class="docutils">
+<dt>rel_pos <span class="classifier-delimiter">:</span> <span class="classifier">int, optional</span></dt>
+<dd>indicates the relative position of the condition</dd>
+<dt>abs_pos <span class="classifier-delimiter">:</span> <span class="classifier">TYPE, int</span></dt>
+<dd>cf condition class</dd>
+<dt>continu <span class="classifier-delimiter">:</span> <span class="classifier">TYPE, optional</span></dt>
+<dd>cf condition class</dd>
+</dl>
+<p>None.</p>
+</dd></dl>
+
+<span class="target" id="module-Effect"></span><p>Created on Wed Jun  1 09:55:33 2022</p>
+<p>&#64;author: 3b13j</p>
+<dl class="class">
+<dt id="Effect.Effect">
+<em class="property">class </em><code class="descclassname">Effect.</code><code class="descname">Effect</code><span class="sig-paren">(</span><em>domain</em>, <em>effect</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Effect.html#Effect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Effect.Effect" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class representing the effect of a change</p>
+<p>The effect is encoded as a dictionnary, taking as key the index of the feature to be modified, and
+as value a couple [initial value, new value]
+This representation will allow to modelize cyclic change.</p>
+<p>An effect could be built using a target</p>
+<p>...</p>
+<dl class="docutils">
+<dt>target <span class="classifier-delimiter">:</span> <span class="classifier">(optionnal ) tuple</span></dt>
+<dd>a feature pattern representing the phonemes the change can be applied to</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>random_effect</p>
+</dd></dl>
+
+<span class="target" id="module-Generator"></span><p>to fill</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

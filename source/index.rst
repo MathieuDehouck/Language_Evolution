@@ -20,8 +20,20 @@ Indices and tables
 * :ref:`search`
 
 
+.. automodule:: IPA
+	:members:
+
 .. automodule:: Phoneme
 	:members:
 
-.. automodule:: IPA
+.. automodule:: Change
+	:members:
+
+.. automodule:: Condition
+	:members:
+	
+.. automodule:: Effect
+	:members:
+
+.. automodule:: Generator
 	:members:
