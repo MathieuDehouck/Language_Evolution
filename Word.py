@@ -77,6 +77,12 @@ class Word :
         s += "\n"    + "structure : "+ str(self.structure)
         s += "\n"    + "stress pattern : "+ str(self.stress_pattern)
         return s
+
+    
+    def __repr__(self):       
+        s = self.ipa
+        return s
+
     
     
     def get_structure(self):

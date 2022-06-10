@@ -4,8 +4,8 @@ Created on Thu May  5 10:22:10 2022
 
 @author: 3b13j
 """
-from utilitaries import feature_match,  tpl_2_candidates, mask_match, feature_indices, printl, printd, phon_in_dic
-from Phoneme import Phoneme, Vowel , Consonant, list_2_tuple, tuple_2_list
+from utilitaries import feature_match, tpl_2_candidates, mask_match, feature_indices, printl, printd, phon_in_dic
+from Phoneme import Phoneme, Vowel, Consonant, list_2_tuple, tuple_2_list
 
 from Word import Word, Syllable
 from Language import Language
@@ -61,22 +61,20 @@ class Change():
         self.conditions = []
         self.impacted_phonemes = {}
         self.target = None
-        
-        
+    
         
     def add_condition(self, condition) :
         """ used to add a condition to an already built change """
         self.conditions.append(condition)
     
-    
+
     def reset_condition(self) :
         self.conditions = [] 
         
     def set_target(self, cond) :
         self.target = cond
         
-    
-    
+
     def check(self,  phon, index , word, verbose = False):
         """
         check if a Change can be applied or not
@@ -97,7 +95,7 @@ class Change():
             whether the change can be applied or not
 
         """
-        if len(self.conditions ) == 0  : return True 
+        if len(self.conditions) == 0 : return True 
         
         for condition in self.conditions :
             if verbose : 
@@ -111,8 +109,40 @@ class Change():
                     print ("following condition not satisfied : ")
                     print(condition)
         return True
-    
-    
+
+
+    def apply_word(self, word):
+        """
+        Apply the change to a word
+
+        Parameters
+        ----------
+        word : Word
+
+        Returns
+        -------
+        nword : a new word with the change applied
+
+        """
+        NotImplemented
+
+    def apply_syl(self, syl):
+        """
+        Apply the change to a syllable
+
+        Parameters
+        ----------
+        syl : Syllable
+
+        Returns
+        -------
+        nsyl : Syllable
+
+        """
+        NotImplemented
+
+    def apply_phon(self):
+        NotImplemented
     
     
 
@@ -243,7 +273,6 @@ class P_change(Change) :
         
         for ind in self.effect.idx : 
             if ind in self.effect.effect : 
-                
                 ft[ind[0]][ind[1]] = self.effect.effect[ind]  [1]
 
             else :
@@ -314,10 +343,10 @@ class P_change(Change) :
         base =  tuple_2_list( phon.features)
         idx = feature_indices(self.target)
         
-        for ind in idx : 
+        for ind in idx:
             if ind == self.effect.domain : 
-                if phon.features[ind[0]][ind[1]] in self.effect.effect : 
-                    base[ind[0]][ind[1]] = self.effect.effect[phon.features[ind[0]][ind[1]]] 
+                if phon.features[ind[0]][ind[1]] in self.effect.effect :
+                    base[ind[0]][ind[1]] = self.effect.effect[phon.features[ind[0]][ind[1]]]
                     #print("new res",  self.effect.effect[ft[ind[0]][ind[1]]] )
                 
        
@@ -350,8 +379,6 @@ class P_change(Change) :
         
         syls = []
         index = 0 #used to parse the whole structure of the word
-        
-
         for syl in wd.syllables :
             syl, index  = self.apply_syl(syl, index, wd, verbose)
             syls.append(syl)
@@ -359,7 +386,7 @@ class P_change(Change) :
          
     
     
-    def apply_syl(self,syl, index, wd, verbose = False):
+    def apply_syl(self, syl, index, wd, verbose = False):
         """
         Apply the change to a Syllable
 
@@ -384,9 +411,8 @@ class P_change(Change) :
         
         phonemes = []
         for phon in syl.phonemes :
-            
             phon2 , index = self.apply_phon( phon, index , wd , verbose)
-            phonemes. append(phon2)
+            phonemes.append(phon2)
         return Syllable(phonemes, syl.stress, syl.length), index
     
     
@@ -578,15 +604,7 @@ class P_change(Change) :
                     cond2 = P_condition.constrained_rd_condition( conf_i , direction)
                     if verbose : print("F A I L", j)
                     j += 1  
-                
-                
-                
-                
-                
-                
-                
-                
-                
+
             
             
             # Those ligns create the P_change with the elements obtained at each step
@@ -632,10 +650,8 @@ class S_change(Change) :
         input : a condition
         adds it to the condition list.
     
-    
-    
-    
     """
+
     
     def check(self, word, rank) :
         """
@@ -677,7 +693,7 @@ class S_change(Change) :
         
         # Un peu brouillon ,  à améliorer 
         #mettre à jour la rpz de l'accent dans l IPA  / structure de syllabe
-        applicable = self.check (word, index)
+        applicable = self.check(word, index)
         if not applicable : return syl
         n_syll = Syllable(syl.phonemes, self.config_finale[0],self.config_finale[1],self.config_finale[2] )
         
@@ -687,13 +703,12 @@ class S_change(Change) :
         return n_syll
     
     def apply_word (self, wd) :
-        
         syls = []
-        for i, s in enumerate( wd.syllables) :
-            ns = self.apply_syl ( s, wd, i)
+        for i, s in enumerate(wd.syllables) :
+            ns = self.apply_syl(s, wd, i)
             syls.append(ns)
         w =  Word(syls)
-        for ind in self.reconfig_stress :
+        for ind in self.reconfig_stress:
             regularize_stress(ind, w)
         return w
     
@@ -706,32 +721,26 @@ class S_change(Change) :
         s+= str(self.effect) + "\n"
         
         return s
+
     
     
-    
-    
-class I_change(Change) :
-    
+class D_change(Change) :    
     """
-    class allowing insertion or deletion of phonemes
-    We examine
-    
-    
-    
+    class allowing deletion of phonemes (monophtongisation a.o.)
     """
-    
-    def __init__(self, deletion = True ) :
-        self.delete = deletion
-        
-        
+
+    def __init__(self, target, conditions):
+        Change.__init__()
+        self.target = target
+        self.conditions = conditions
+
       
-    def apply_word(self,wd) :
+    def apply_word(self, wd):
         if self.delete : 
             self.deletion(wd)
   
     
-    def deletion(self, wd) :
-        
+    def deletion(self, wd) :        
         flag_change =  False
         syls = []
         for syl in wd.syllables :
@@ -742,5 +751,78 @@ class I_change(Change) :
                 syls.append(syl)
         new_wd = Word(syls)
         if flag_change : regularize_structure(new_wd)
+
+
     
+class I_change(Change) :    
+    """
+    class for insertion changes (diphtongisation)
+    """
+
+    def __init__(self, target, effects, conditions):
+        Change.__init__()
+        self.target = target
+        self.effect = effects # there are several since we create new sounds
+        self.conditions = conditions
+
+      
+    def apply_word(self, word):
+        nsyls = [self.apply_syl(syl) for syl in word.syllables]
+        w = Word(nsyls)
+        return w
+
     
+    def apply_syl(self, syl, word):
+        nphons = []
+        for phon in syl.phonemes:
+            nphons.extend(self.apply_phon(phon, syl, word))
+        s = Syllable(nphons)
+        return s
+
+    
+    def apply_phon(self, phon, syl, word):
+        """
+        we always return a list, a singleton list if the change does not apply, a pair of more otherwise
+        """
+        if mask_match(self.target, phon.features, False):
+            phons = [eff.affect(phon) for eff in self.effects]
+        else:
+            phons = [phon]
+
+        return phons
+
+
+    def check(self, phon, index, word, verbose=False):
+        """
+        check if a Change can be applied or not
+
+        Parameters
+        ----------
+        phon : Phoneme
+            phoneme we want to apply a change on
+        index :int.
+        word : Word
+            Context
+        verbose : TYPE, optional
+            DESCRIPTION. The default is False.
+
+        Returns
+        -------
+        apply : bool 
+            whether the change can be applied or not
+
+        """
+        if len(self.conditions) == 0 : return True 
+        
+        for condition in self.conditions :
+            if verbose : 
+                print("we test the following condition  ")
+                print(condition)
+            res = condition.test(word, index, verbose)
+            # this structure of the loop allow to print all the unsatisied conditions, not just the one making the program crash
+            if res == False :
+                return False
+                if verbose :
+                    print ("following condition not satisfied : ")
+                    print(condition)
+        return True

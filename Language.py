@@ -157,3 +157,42 @@ class Language() :
     def print_both (self,lang) :
         for word in self.voc :
             print(self.voc[word].ipa, "  vs  ", lang.voc[word].ipa)
+
+
+
+
+class State():
+    """
+    
+    A condensed representation of a language for faster interaction and change generation
+
+    ...
+
+    Attributes
+    ----------    
+    phonemes : dict
+        list of all the phonemes belonging to the language
+    syllables : dict
+        a dict of syllables
+
+    Methods
+    -------
+    __init__() the constructor
+    
+    
+    """
+
+    def __init__(self, language):
+        self.phonems = {}
+        self.syllables = {}
+
+        for form, word in language.voc.items():
+            for syl in word.syllables:
+                try:
+                    self.syllables[syl].append(word)
+                except:
+                    self.syllables[syl] = []
+                    self.syllables[syl].append(word)
+
+        #for syl, words in sorted(self.syllables.items()):
+        #    print(syl.ipa, words)
