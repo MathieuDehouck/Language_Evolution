@@ -28,7 +28,7 @@ class Changer () :
        NotImplemented
 
        
-   def change(self, lang, n, verbose = False) :
+   def change(self, lang, n, verbose=False) :
        changes = []
        wc = []
        lang = copy.deepcopy(lang)
@@ -52,13 +52,13 @@ class Changer () :
        return lang, changes, wc
 
 
+
 class Tree_changer(Changer) :
     
-    def __init__(self, lang, gen = None) :
+    def __init__(self, lang, gen=None) :
         super().__init__(gen)
-        
-        tree = L_tree(lang)
-        self.tree = tree
+
+        self.tree = L_tree(lang)
         self.current_tree = self.tree
         
     
@@ -75,7 +75,6 @@ class Tree_changer(Changer) :
         
         nl, wc = change.apply_language(lang)
         
-       
         """
         
         dif = nl.compare(lang)
@@ -105,11 +104,10 @@ class Tree_changer(Changer) :
            nl, wc = change.apply_language(expanded_tree.language)
            new_tree = L_tree(nl, expanded_tree)
            expanded_tree = new_tree
-    
-    def octopus(self, nb_branches, depth) :
-        
-        
-        for i in range(nb_branches -1) :
+
+
+    def octopus(self, nb_branches, depth):
+        for i in range(nb_branches - 1) :
             print("grafting branch ",i+1)
             self.pursue_evolution(depth)
     
