@@ -6,6 +6,9 @@ Created on Wed May  4 14:39:58 2022
 Contains the Word class and some methods used specifically to work with it
 """
 
+from IPA import IPA
+ipa = IPA.get_IPA()
+
 
 class Word :
     """
@@ -162,7 +165,7 @@ class Syllable(object) :
           
         s = ""
         for phoneme in self.phonemes :
-            phoneme.ipa = ip.get_char(phoneme)
+            phoneme.ipa = ipa.get_char(phoneme)
             s += phoneme.ipa
             if phoneme == self.center and self.length :
                 s += ":"
