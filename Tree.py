@@ -7,6 +7,9 @@ Created on Wed May 18 17:00:17 2022
 
 import os
 import random
+from sys import platform
+from PIL import Image
+
 """
 class L_node :
    
@@ -28,7 +31,7 @@ class Root (L_node) :
 
 class L_tree :
     """ 
-    a special kind of phylogentic tree stocking our languages
+    a special kind of phylogentic tree storing our languages
     as defined, the structure should be names "forward tree" since the change is unidirectionnal
     
     """
@@ -81,20 +84,12 @@ class L_tree :
         return liste, scores
     
     
-    
-    
-    
-    
     def get_nodes (self, liste=[]) :
         liste.append(self)
         for tree in self.nodes :
             tree.get_nodes(liste)
         return liste
         
-    
-    
-    
-    
     
     def get_ad_2_tree(self, dic = {} ):
         dic[self.adress] = self
@@ -108,15 +103,11 @@ class L_tree :
             tree.get_tree_2_add(dic)
         return dic
     
-    def pick_a_node(self)  :
-       
+    def pick_a_node(self)  :       
         liste, scores = self.get_all_nodes()
-        
         return random.choices(liste, weights=scores, k=1)[0]
     
-    
-    
-    
+   
     def get_leaves(self, liste =[]) :
         
         if len(self.nodes) == 0 :
@@ -149,8 +140,6 @@ class L_tree :
     
     def print_history_to_graph(self, word ) :
 
-        
-      
         f = open ( 'graphe.dot','w', encoding = "utf8") 
         f.write("digraph \" " + "We display the history of a word" + "\" {\n")
         
@@ -185,8 +174,6 @@ class L_tree :
             for subtree in tree.nodes :
                 
                 s = ""
-                
-                
                 s += str(dic[tree])
                 s += " -> "
                 s += str(dic[subtree])
@@ -202,28 +189,22 @@ class L_tree :
         
         os.system(commande) #os.system(cmd) exécute cmd
         
-        from PIL import Image
-        im = Image.open("graphe.png")
-        im.show()   
+        if platform != 'linux':
+            im = Image.open("graphe.png")
+            im.show()   
         
         
     
     def elaborate_history_graph (self, word) :
         
         nodes = self.get_nodes()
-        
-        splits = [n for n in nodes if len(n.nodes)>1] + [self]
-        
+        splits = [n for n in nodes if len(n.nodes)>1] + [self]        
         leaves = self.get_leaves()
         
         keep = []
         edges = []
         
-        
-        
-        
-        for a in splits + leaves :
-            
+        for a in splits + leaves:
             last = a
             if a not in keep  : keep.append(a)
             b = a.parent
@@ -247,11 +228,7 @@ class L_tree :
         
     
     def history_to_graph(self, word) :
-        
-        
         keep, edges =  self.elaborate_history_graph(word) 
-        
- 
         
         if None in keep  : keep.remove(None)
     
@@ -261,15 +238,10 @@ class L_tree :
         f.write(" label = \"" + word+ "\" \n")
         f.write("graph[rankdir=\"LR\"];\n")
         
-        
         f.write("node [style=\"filled\", fillcolor = \"white\"];\n")
         f.write("edge [style=\"solid\", color=\"purple\"];\n")
         
-    
-       
-        
         for tree in keep :
-            
             s = ""
             s += str(keep.index(tree))
             s += " [label=\""
@@ -279,22 +251,17 @@ class L_tree :
             f.write(s)
             
         numeric_edges = []
-        
         for edge in edges :
-            
-                num = [str(keep.index(edge[0])), str(keep.index(edge[1]))]
+            num = [str(keep.index(edge[0])), str(keep.index(edge[1]))]
+            change = edge[0].language.voc[word] != edge[1].language.voc[word]
+            if num not in numeric_edges :
+                s = num[1] + " -> " + num[0]
+                if change:
+                    s += '[style=\"solid\", color=\"green\"]'
+                s += ";\n"
+                f.write(s)
                 
-                
-                if num not in numeric_edges :
-                    
-                    s = ""
-                    s += num[0]
-                    s += " -> "
-                    s += num[1]
-                    s+=";\n"
-                    f.write(s)
-                    
-                    numeric_edges.append(num)
+                numeric_edges.append(num)
                     
         print(numeric_edges)         
         f.write("}")
@@ -304,10 +271,10 @@ class L_tree :
         commande = "dot -Tpng  graphe.dot  >  graphe.png"
         
         os.system(commande) #os.system(cmd) exécute cmd
-        
-        from PIL import Image
-        im = Image.open("graphe.png")
-        im.show()   
+
+        if platform != 'linux':
+            im = Image.open("graphe.png")
+            im.show()   
         
         
     """
