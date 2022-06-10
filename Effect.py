@@ -39,31 +39,39 @@ class Effect (object) :
     """
 #TODO éliminer add effect et gérer ailleurs (dans le générateur) 
     def __init__(self, domain, effect)  :
-
       
        # self.isV = (len(self.idx) == 5)
         self.domain = domain
         self.effect = effect
         
-         
+
+    def __str__(self) : 
+        s =  " index of the modified feature :" + str(self.domain) + " old  value : " + str(list(self.effect.keys()))+ "new value : "+  str( list(self.effect.values()))
+        return s
+    
         
-           
     def __eq__(self, other) :
         return self.domain == other.domain and self.effect == other.effect
-            
-
-
-
-
-
     
 
-    
-   
-    
-    
-    
-    
+    def affect(self, phoneme):
+        key = [phoneme.features[x][y] for (x,y) in self.domain]
+        values = self.effect[key]
+        kvs = {k:v for (k, v) in zip((self.domain, values))}
+
+        fts = []
+        for x, fs in enumerate(phoneme.features):
+            fts.append([])
+            for y, v in enumerate(fs):
+                if (x,y) in kvs:
+                    fts[-1].append(kvs[x, y])
+                else:
+                    fts[-1].append(v)
+            fts[-1] = tuple(fts[-1])
+
+        return tuple(fts)
+
+
     
     def encode_e(self):
         
@@ -86,9 +94,6 @@ class Effect (object) :
             s += " | "
         
         return s
-            
-    
-    
     
             
     def decode_e(string) :
@@ -113,32 +118,4 @@ class Effect (object) :
         
             
         return Effect(domain, effect)
-    
-    
-    
-    
-    
-    
-    def __str__(self) : 
-        s =  " index of the modified feature :" + str(self.domain) + " old  value : " + str(list(self.effect.keys()))+ "new value : "+  str( list(self.effect.values()))
-        return s
-    
-    
-    
-    
-    
-    
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
