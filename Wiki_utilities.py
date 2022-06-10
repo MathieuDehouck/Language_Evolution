@@ -8,9 +8,8 @@ Contains some functions that help handling phonetically transcribed words availa
 
 """
 from IPA import IPA
-from Word import Word
+from Word import Word, Syllable
 from Phoneme import Phoneme, Vowel, Consonant
-from Syllable import Syllable
 from Language import Language
 from pathlib import Path
 from IPA_utils import diacritics

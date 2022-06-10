@@ -6,8 +6,8 @@ Created on Thu May  5 10:22:10 2022
 """
 from utilitaries import feature_match,  tpl_2_candidates, mask_match, feature_indices, printl, printd, phon_in_dic
 from Phoneme import Phoneme, Vowel , Consonant, list_2_tuple, tuple_2_list
-from Syllable import Syllable
-from Word import Word
+
+from Word import Word, Syllable
 from Language import Language
 from Condition import P_condition
 from encoder_decoder import encode_f, decode_f
