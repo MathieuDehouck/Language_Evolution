@@ -5,20 +5,13 @@ Created on Tue May  3 00:08:43 2022
 @author: 3b13j
 """
 
-from utilitaries import *
 import os
-from numpy.linalg import norm
 from ipapy import UNICODE_TO_IPA
 import numpy as np
 
+from utilitaries import *
 
 
-
-
-
-
-
-    
 
 class Phoneme(object) :
     """

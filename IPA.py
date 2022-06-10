@@ -56,22 +56,12 @@ class archetype(object) :
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
-
-
-
     def is_Vowel(self):
         return self.vow
-
-
-
-
 
     def is_Consonant(self):
         return not self.vow
     
-
-
-
 
     def get_one(self, extra_feats, syllabic):
         """

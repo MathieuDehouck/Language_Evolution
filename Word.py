@@ -37,9 +37,9 @@ class Word :
     def __init__(self, syls):
         
         self.syllables = syls 
-        s = ""
-        for x in self.syllables : s += x.ipa
-        self.ipa = s
+        #s = ""
+        #for x in self.syllables : s += x.ipa
+        self.ipa = '.'.join([syl.ipa for syl in self.syllables])
         self.structure = self.get_structure()
         self.stress_pattern = self.get_stess_pattern()
         
@@ -148,27 +148,33 @@ class Syllable(object) :
     
     
     
-    def __init__(self, phonemes , stress = False, length = False, tone = None) :
+    def __init__(self, phonemes, stress=False, length=False, tone=None) :
         self.phonemes = phonemes
         self.stress = stress 
         self.length = length
         self.tone = tone
     
         # way to know which of the syllable's phoneme bears the accent / tone 
-        i_center = 0
-        for phon in self.phonemes :   
-            if phon.syl == 1 :
-                i_center = self.phonemes.index(phon)
-                self.i_center = i_center
-                break 
-        self.center = self.phonemes[i_center]
-          
-        s = ""
-        for phoneme in self.phonemes :
+        syl = [phon.syl for phon in self.phonemes]
+        print(syl)
+        if True in syl:
+            id_center = syl.index(True)
+        else:
+            vow = [phon.is_Vowel() for phon in self.phonemes]
+            id_center = vow.index(True)
+
+        self.center = self.phonemes[id_center]
+
+        if self.stress:
+            s = "'"
+        else:
+            s = ''
+        for i, phoneme in enumerate(self.phonemes):
             phoneme.ipa = ipa.get_char(phoneme)
             s += phoneme.ipa
-            if phoneme == self.center and self.length :
-                s += ":"
+            if i == id_center and self.length:
+                s += ':'
+
         self.ipa = s
         self.rank_in_wd = None
        
