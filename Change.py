@@ -61,19 +61,14 @@ class Change():
         self.conditions = []
         self.impacted_phonemes = {}
         self.target = None
-        
-        
+    
         
     def add_condition(self, condition) :
         """ used to add a condition to an already built change """
         self.conditions.append(condition)
     
-    
-    
-    def set_target(self, cond) :
-        self.target = cond
-        
-    
+    #def set_target(self, cond) :
+    #    self.target = cond
     
     def check(self,  phon, index , word, verbose = False):
         """
@@ -109,8 +104,40 @@ class Change():
                     print ("following condition not satisfied : ")
                     print(condition)
         return True
-    
-    
+
+
+    def apply_word(self, word):
+        """
+        Apply the change to a word
+
+        Parameters
+        ----------
+        word : Word
+
+        Returns
+        -------
+        nword : a new word with the change applied
+
+        """
+        NotImplemented
+
+    def apply_syl(self, syl):
+        """
+        Apply the change to a syllable
+
+        Parameters
+        ----------
+        syl : Syllable
+
+        Returns
+        -------
+        nsyl : Syllable
+
+        """
+        NotImplemented
+
+    def apply_phon(self):
+        NotImplemented
     
     
 
@@ -576,15 +603,7 @@ class P_change(Change) :
                     cond2 = P_condition.constrained_rd_condition( conf_i , direction)
                     if verbose : print("F A I L", j)
                     j += 1  
-                
-                
-                
-                
-                
-                
-                
-                
-                
+
             
             
             # Those ligns create the P_change with the elements obtained at each step
@@ -630,10 +649,8 @@ class S_change(Change) :
         input : a condition
         adds it to the condition list.
     
-    
-    
-    
     """
+
     
     def check(self, word, rank) :
         """
@@ -685,13 +702,12 @@ class S_change(Change) :
         return n_syll
     
     def apply_word (self, wd) :
-        
         syls = []
-        for i, s in enumerate( wd.syllables) :
-            ns = self.apply_syl ( s, wd, i)
+        for i, s in enumerate(wd.syllables) :
+            ns = self.apply_syl(s, wd, i)
             syls.append(ns)
         w =  Word(syls)
-        for ind in self.reconfig_stress :
+        for ind in self.reconfig_stress:
             regularize_stress(ind, w)
         return w
     
@@ -704,32 +720,26 @@ class S_change(Change) :
         s+= str(self.effect) + "\n"
         
         return s
+
     
     
-    
-    
-class I_change(Change) :
-    
+class D_change(Change) :    
     """
-    class allowing insertion or deletion of phonemes
-    We examine
-    
-    
-    
+    class allowing deletion of phonemes (monophtongisation a.o.)
     """
-    
-    def __init__(self, deletion = True ) :
-        self.delete = deletion
-        
-        
+
+    def __init__(self, target, conditions):
+        Change.__init__()
+        self.target = target
+        self.conditions = conditions
+
       
-    def apply_word(self,wd) :
+    def apply_word(self, wd):
         if self.delete : 
             self.deletion(wd)
   
     
-    def deletion(self, wd) :
-        
+    def deletion(self, wd) :        
         flag_change =  False
         syls = []
         for syl in wd.syllables :
@@ -740,5 +750,25 @@ class I_change(Change) :
                 syls.append(syl)
         new_wd = Word(syls)
         if flag_change : regularize_structure(new_wd)
+
+
     
+class D_change(Change) :    
+    """
+    class for insertion changes (diphtongisation)
+    """
+
+    def __init__(self, target, effects, conditions):
+        Change.__init__()
+        self.target = target
+        self.effect = effects # there are several since we create new sounds
+        self.conditions = conditions
+
+      
+    def apply_word(self, word):
+        nsyls = [self.apply_syl(syl) for syl in word.syllables]
+        w = Word(nsyls)
+        
     
+    def apply_syl(self, syl):
+        

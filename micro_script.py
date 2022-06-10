@@ -6,6 +6,8 @@ Created on Sun May 29 21:36:10 2022
 """
 
 from sys import platform
+from pathlib import Path
+import os
 
 from utilitaries import *
 from IPA import IPA  
@@ -14,11 +16,10 @@ from P_change_generator import Baby_P_change_generator
 from log_utilities import change2log, langcomp2log,  samples2log, extract_changed_words, purge_log, changes2machinelog
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, encode_f 
-from pathlib import Path
 from Condition import Condition
 from Change import P_change 
 
-import os 
+from Language import State
 
 
 i = IPA.get_IPA()
@@ -33,6 +34,11 @@ nbranches = 5 # number of branches
 # We choose a language to play with 
 
 lang = get_language("latin_classique.txt", "latin")
+
+st = State(lang)
+
+exit()
+
 
 #lang = get_language("tokipona.txt", "tokipona")
 
@@ -60,7 +66,7 @@ for i in range(len(changes))  :
 langcomp2log (origin, new_language, path + "_dic.txt")
 extract_changed_words(path + "_dic.txt", True)
 
- # we open
+# we open
 folder = Path("logs/")
 
 path1 = path+"_changes.txt"
