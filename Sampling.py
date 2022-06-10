@@ -259,15 +259,12 @@ featureC_weights = []
 
 
 nb_rel_cond = [0 , 1, 2, 3 , 4]
-weights_nb__rel_cond = [ 3, 8, 7, 1]
+weights_nb__rel_cond = [ 3, 8, 7, 3, 1]
 
 
 
-
-
-
-
-
+weights_rel_pos = [4, 2, 1]
+weights_abs_pos = [4, 2, 1]
 
 
 

@@ -23,5 +23,11 @@ Indices and tables
 .. automodule:: Phoneme
 	:members:
 
+.. automodule:: Condition
+	:members:
+
+.. automodule:: Change
+	:members:
+
 .. automodule:: IPA
 	:members:

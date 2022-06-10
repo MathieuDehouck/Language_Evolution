@@ -57,35 +57,44 @@ class L_tree :
         for n in self.nodes : s+= n.adress + "   "
         return s
         
+    
+    
+    
+    
     def get_depth(self, dic = {}):
+        """
+        return a dictionarry mapping the address of a tree to its depth
+        """
         
         dic[self.adress] = self.depth
         for tree in self.nodes :
             tree.get_depth(dic)
         return dic
         
-    def get_languages(self, liste = []):
+    
+    
+    
+    
+    def get_languages(self, liste = {}):
+        """
+        Returns a dictionnary mapping the adress of a tree to the language it stores
+
+        """
         
-        liste.append([self.adress, self.language, self.change])
+        liste[self.adress] = [ self.language, self.change]
         for tree in self.nodes :
             tree.get_languages(liste)
         return liste
    
-    def get_all_nodes(self,liste=[], scores =[]) :
-        
-        liste.append(self.adress)
-        scores.append(self.weight)
-        for tree in self.nodes :
-            tree.get_all_nodes(liste, scores)
-            
-        return liste, scores
     
-    
-    
-    
+   
     
     
     def get_nodes (self, liste=[]) :
+        """
+        returns a list containing all the tree object that are nodes in the mother tree
+
+        """
         liste.append(self)
         for tree in self.nodes :
             tree.get_nodes(liste)
@@ -97,10 +106,17 @@ class L_tree :
     
     
     def get_ad_2_tree(self, dic = {} ):
+        """ 
+        returns a dictionnary mapping an adress to the tree object
+        """
         dic[self.adress] = self
         for tree in self.nodes :
             tree.get_ad_2_tree(dic)
         return dic
+    
+    
+    
+    
     
     def get_tree_2_add(self, dic = {} ):
         dic[self] = self.adress
@@ -108,17 +124,40 @@ class L_tree :
             tree.get_tree_2_add(dic)
         return dic
     
+    
+    def get_scores(self,liste=[], scores =[]) :
+        """ 
+        Get a mapping between change objects and the chance they have to appear
+        """
+        #TODO ; paramétriser le fait que les embranchements ne se fassent pas forcément à trop peu de distance
+        liste.append(self.adress)
+        scores.append(self.weight)
+        for tree in self.nodes :
+            tree.get_scores(liste, scores)
+            
+        return liste, scores
+    
+    
+    
+    
+    
     def pick_a_node(self)  :
-       
-        liste, scores = self.get_all_nodes()
+        """
+        Pick a random node from a tree
+
+        """
+        liste, scores = self.get_scores()
         
         return random.choices(liste, weights=scores, k=1)[0]
     
     
     
     
+    
     def get_leaves(self, liste =[]) :
-        
+        """ 
+        Get the list of the leaves of a language
+        """
         if len(self.nodes) == 0 :
             liste.append(self)
         else :
@@ -126,8 +165,25 @@ class L_tree :
                 node.get_leaves(liste)
         return liste
     
-    def get_path_to_root(self) :
+    
+    
+    
+    def get_final_state_of_the_evolution(self): 
+        """
+        Returns the languages at the end of our evolution tree
+        """
         
+        leaves = self.get_leaves()
+        return [leaf.language for leaf in leaves]
+    
+    
+    
+    
+    
+    def get_path_to_root(self) :
+        """ 
+        Returns the list of all the nodes leading from the target node to the root of the tree
+        """
         liste = []
         parent = self.parent 
         while self.parent != None :
@@ -139,6 +195,10 @@ class L_tree :
     
     
     def get_history_word(self, word , liste = [] ):
+        """
+        Stores the state of the word in the histtory of all the generated languages
+
+        """
         liste.append([self.adress, self.language.voc[word]])
         for st in self.nodes :
             self.get_history_word(word, liste)
@@ -148,16 +208,15 @@ class L_tree :
     
     
     def print_history_to_graph(self, word ) :
+        """
+        Display a graph in which the nodes represent a word at a certain langugage state, and the edges the link between two languages
 
-        
+        """
       
         f = open ( 'graphe.dot','w', encoding = "utf8") 
-        f.write("digraph \" " + "We display the history of a word" + "\" {\n")
-        
+        f.write("digraph \" " + "We display the history of a word" + "\" {\n")       
         f.write(" label = \"" + word+ "\" \n")
-        f.write("graph[rankdir=\"LR\"];\n")
-        
-        
+        f.write("graph[rankdir=\"LR\"];\n")     
         f.write("node [style=\"filled\", fillcolor = \"white\"];\n")
         f.write("edge [style=\"solid\", color=\"purple\"];\n")
         
@@ -165,9 +224,7 @@ class L_tree :
         
         dic = {}
         for i,  el in enumerate(liste) : dic[el] = i
-        
         print(liste)
-        
         t2a = self.get_tree_2_add()
         print(t2a)
         
@@ -178,28 +235,23 @@ class L_tree :
             s += " [label=\""
             s += tree.language.voc[word].ipa
             s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
-           
             f.write(s)
             
         for tree in liste :
             for subtree in tree.nodes :
                 
                 s = ""
-                
-                
                 s += str(dic[tree])
                 s += " -> "
-                s += str(dic[subtree])
-               
-                
+                s += str(dic[subtree])        
                 s+=";\n"
                 f.write(s)
+                
         f.write("}")
         f.close()
         
-        print("execution commande")
+        print("order executed")
         commande = "dot -Tpng  graphe.dot  >  graphe.png"
-        
         os.system(commande) #os.system(cmd) exécute cmd
         
         from PIL import Image
@@ -208,19 +260,19 @@ class L_tree :
         
         
     
+    
+    
     def elaborate_history_graph (self, word) :
         
+        """
+        Extracts a subgraph representing the history of the evolution of a particular word in all the languages we generated 
+        """
+        
         nodes = self.get_nodes()
-        
         splits = [n for n in nodes if len(n.nodes)>1] + [self]
-        
         leaves = self.get_leaves()
-        
         keep = []
         edges = []
-        
-        
-        
         
         for a in splits + leaves :
             
@@ -245,28 +297,27 @@ class L_tree :
         
       
         
+      
     
     def history_to_graph(self, word) :
+        """
+        print a graph only displaying the informations on the evolution of a single word
+        """
+        
+        
         
         
         keep, edges =  self.elaborate_history_graph(word) 
-        
- 
-        
+
         if None in keep  : keep.remove(None)
     
         f = open ( 'graphe.dot','w', encoding = "utf8") 
-        f.write("digraph \" " + "We display the history of a word" + "\" {\n")
-        
+        f.write("digraph \" " + "We display the history of a word" + "\" {\n")    
         f.write(" label = \"" + word+ "\" \n")
-        f.write("graph[rankdir=\"LR\"];\n")
-        
-        
+        f.write("graph[rankdir=\"LR\"];\n")   
         f.write("node [style=\"filled\", fillcolor = \"white\"];\n")
         f.write("edge [style=\"solid\", color=\"purple\"];\n")
         
-    
-       
         
         for tree in keep :
             
@@ -275,16 +326,14 @@ class L_tree :
             s += " [label=\""
             s += tree.language.voc[word].ipa
             s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
-           
             f.write(s)
             
         numeric_edges = []
         
+        
         for edge in edges :
             
                 num = [str(keep.index(edge[0])), str(keep.index(edge[1]))]
-                
-                
                 if num not in numeric_edges :
                     
                     s = ""
@@ -293,7 +342,6 @@ class L_tree :
                     s += num[1]
                     s+=";\n"
                     f.write(s)
-                    
                     numeric_edges.append(num)
                     
         print(numeric_edges)         
@@ -308,87 +356,3 @@ class L_tree :
         from PIL import Image
         im = Image.open("graphe.png")
         im.show()   
-        
-        
-    """
-    def print_history_to_graph_reduced(self, word ) :
-
-        
-      
-        f = open ( 'graphe.dot','w', encoding = "utf8") 
-        f.write("digraph \" " + "We display the history of a word" + "\" {\n")
-        
-        f.write(" label = \"" + word+ "\" \n")
-        f.write("graph[rankdir=\"LR\"];\n")
-        
-        
-        f.write("node [style=\"filled\", fillcolor = \"white\"];\n")
-        f.write("edge [style=\"solid\", color=\"purple\"];\n")
-        
-        liste = self.get_nodes()
-        
-       
-        s = ""
-        s += str(self.adress)
-        s += " [label=\""
-        s += self.language.voc[word].ipa
-        s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
-        
-        
-        
-        words = []
-        
-        words.append(self.language.voc[word])
-        
-    
-        for tree in liste :
-            for subtree in tree.nodes :
-                if tree.language.voc[word] != subtree.language.voc[word] :
-                    words.append(subtree.language.voc[word])
-                   
-                    s = ""
-                    s += str(words.index(subtree.language.voc[word]))
-                    s += " [label=\""
-                    s += subtree.language.voc[word].ipa
-                    s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
-
-                    f.write(s)
-                    
-        # TODO idée générale à revoir 
-        for tree in liste :
-            for subtree in tree.nodes :
-                if tree.language.voc[word].phonemes != subtree.language.voc[word].phonemes :
-                    s = ""
-                    
-                    
-                    s += str(words.index(tree.language.voc[word]))
-                    s += " -> "
-                    s += str(words.index(subtree.language.voc[word]))
-                   
-                    
-                    s+=";\n"
-                    f.write(s)
-        f.write("}")
-        f.close()
-        
-        print("execution commande")
-        commande = "dot -Tpng  graphe.dot  >  graphe.png"
-        
-        os.system(commande) #os.system(cmd) exécute cmd
-        
-        from PIL import Image
-        im = Image.open("graphe.png")
-        im.show()   
-        
-        
-        
-        """
-    
-    
-   
-        
-        
-        
-        
-    
-    
