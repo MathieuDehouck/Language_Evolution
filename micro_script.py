@@ -9,7 +9,7 @@ from sys import platform
 
 from utilitaries import *
 from IPA import IPA  
-from wiki_utilities import get_language
+from Wiki_utilities import get_language
 from P_change_generator import Baby_P_change_generator
 from log_utilities import change2log, langcomp2log,  samples2log, extract_changed_words, purge_log, changes2machinelog
 from rd_changer import Tree_changer, Log_changer

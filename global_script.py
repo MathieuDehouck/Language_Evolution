@@ -4,7 +4,7 @@ Created on Wed May  4 11:09:46 2022
 
 @author: 3b13j
 """
-from wiki_utilities import get_language
+from Wiki_utilities import get_language
 from log_utilities import change2log, langcomp2log, lgs2log, samples2log
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, decode_change, encode_p_change, encode_f , decode_log
