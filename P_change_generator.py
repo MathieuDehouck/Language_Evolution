@@ -2,6 +2,9 @@
 """
 Created on Mon May 30 11:58:54 2022
 
+
+A file used to generate instances of different kind of P_change_generator
+
 @author: 3b13j
 """
 
@@ -10,14 +13,26 @@ import random
 from Effect import Effect
 from Change import P_change
 from Condition import rd_p_condition, P_condition, S_condition
-from Sampling import *
+import Sampling
 
 from utilitaries import mask_match,  change_pattern, tpl_2_candidates, words_containing, bewilder_pattern, syl_match,  printl, feature_indices
 
 idxC = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
 idxV = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), ]
 
+
+
+
+
 class P_change_generator(object) :
+    """
+    A class representing a generator that randomly generates P changes
+    
+    The way webuild the random changes heavily depend on choices of implementation. 
+    Several kinds of generators could be implemented since this is an abstract class.
+    """
+    
+    
     
     
     def __init__(self):
@@ -25,10 +40,10 @@ class P_change_generator(object) :
         
 
 
+
+
     def select_target(self,language) :
         """
-        
-
         Parameters
         ----------
         language : Language
@@ -38,18 +53,15 @@ class P_change_generator(object) :
         targets : list of the phonemes we want to apply a change to
 
         """
-        
-        
         targets = []
-        
         return targets
         
         
     
+    
+    
     def select_effect(self, language, target) :
         """
-        
-
         Parameters
         ----------
         language : Language
@@ -66,21 +78,30 @@ class P_change_generator(object) :
     
     
     
-    
-    
-  
-        
-        
-        
+           
     def create_change( self,language, random = True, target = None, ci = None)  :
-        
+        """
+        Central method of a class, where the Change is generated
+
+        """
         
         NotImplemented
         
        
         
+       
+        
 class Baby_P_change_generator(P_change_generator) :
     
+    """
+    First instance of the abstract class.
+    
+    We make a first approximation of the way to generate a change.
+    We stick to the following recipee :
+        - we pick a target among the phonemes 
+        - we choose an effect following specific parameters (choice of a domain and an effect)
+        - we choose a range of conditions after that.
+    """
     
     
     def __init__(self) :
@@ -91,12 +112,29 @@ class Baby_P_change_generator(P_change_generator) :
         
         
     def select_target(self, language) :
+        """
+        We randomy pick a phoneme among all the phonemes of a language.
+        #TODO parametrize : do not pick a phoneme twice . ponder the chance to pick a phoneme ???
+
+        Parameters
+        ----------
+        language : Language 
+            The language we want to evoluate
+
+        the pattern of the feature we will modify
+
+        """
+        
+        #TODO Is there a way to parametrize the 
         
         index = random.randint(0, len(language.phonemes)-1)
         target = language.phonemes[index]
         
-        
         return target
+    
+    
+    
+    
     
     def extends_target(self, change, language, verbose = False) :
         
@@ -182,17 +220,17 @@ class Baby_P_change_generator(P_change_generator) :
        manner = False
        sec_manner = False 
        if type(input_value) == tuple :
-           input_value = manner_2_ind[input_value]
+           input_value = Sampling.manner_2_ind[input_value]
            manner = True
        if not isV and index == (1, 0) :
-           input_value = sec_place_2_ind [input_value]
+           input_value = Sampling.sec_place_2_ind [input_value]
            sec_manner = True
         
        
        line = matrix [input_value]
        output_value = random.choices(range(len(line)), weights = line, k=1)[0]
-       if manner : output_value  = manner_list [output_value]
-       if sec_manner :  output_value = secondary_place[output_value]
+       if manner : output_value  = Sampling.manner_list [output_value]
+       if sec_manner :  output_value = Sampling.secondary_place[output_value]
       
    
        return  output_value
@@ -221,8 +259,8 @@ class Baby_P_change_generator(P_change_generator) :
        
        #TODO isV doit etre passéc en argument 
        isV = len(feature_indices(target)) == 5 
-       if isV : Trinity = MatricesV 
-       else : Trinity = MatricesC
+       if isV : Trinity = Sampling.MatricesV 
+       else : Trinity = Sampling.MatricesC
        matrix =  Trinity[index[0]][index[1]]
        
        #TODO implement cyclic / multiplu changes

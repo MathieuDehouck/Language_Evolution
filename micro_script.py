@@ -98,5 +98,7 @@ time.tree.print_history_to_graph("virdia")
 
 k,e = time.tree.elaborate_history_graph('virdia')
 time.tree.history_to_graph('virdia')
+t = time.tree.get_final_state_of_the_evolution()
+for l in t : print (l.language.voc['virdia'])
 
 #time.tree.print_history_to_graph_reduced("virdia")

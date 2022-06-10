@@ -26,6 +26,7 @@ Indices and tables
 .. automodule:: Phoneme
 	:members:
 
+
 .. automodule:: Change
 	:members:
 
@@ -36,4 +37,3 @@ Indices and tables
 	:members:
 
 .. automodule:: Generator
-	:members:
