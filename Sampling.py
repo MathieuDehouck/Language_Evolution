@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue May 31 12:42:01 2022
 
@@ -252,9 +251,13 @@ crer matrices,  on les met dans des structures qui ont la même forme que les fe
 
 # PARAMETRISATION OF THE CHANGE GENERATION
 
+weights_nb_cond = [3, 5, 3, 2]
+
+weights_same_feature = [5, 5]
+
 
 featureV_weights = [4, 4, 2, 3, 2]
-featureC_weights = []
+featureC_weights = [5,5, 5, 4, 2, 4]
 
 
 
@@ -266,9 +269,11 @@ weights_nb__rel_cond = [ 3, 8, 7, 3, 1]
 weights_rel_pos = [4, 2, 1]
 weights_abs_pos = [4, 2, 1]
 
+nb_extensions = [0, 1, 2, 3, 4, 5]
+weights_extensions = [8, 4, 6, 3,2, 2]
 
 
 
-
-
+weight_Scond = [2, 8]
+weigt_A_R = [2, 4]
 
