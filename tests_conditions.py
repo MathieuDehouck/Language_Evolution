@@ -9,7 +9,7 @@ Created on Thu Jun  2 14:22:59 2022
 from utilitaries import *
 from IPA import IPA 
 from Natural_class import *
-from wiki_utilities import get_language
+from Wiki_utilities import get_language
 
 from P_change_generator import Baby_P_change_generator
 from Phoneme import list_2_tuple , tuple_2_list

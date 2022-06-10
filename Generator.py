@@ -2,8 +2,6 @@
 to fill
 """
 import random
-from wiki_utilities import get_language 
-latin = get_language('latin_classique.txt', "latin")
 from utilitaries import printl,  tpl_2_candidates
 from Condition import P_condition , S_condition 
 from Change import P_change
@@ -19,6 +17,7 @@ def restrict(phon, sub_classes, classe2 = None) :
     sub_classes.remove(classe)
     if classe2 != None : classe = list ( set(classe ) .intersection( set( classe2)))
     return sub_classes, classe
+
 
 class Change_Generator():
 

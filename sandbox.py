@@ -5,7 +5,7 @@ Created on Tue May 24 14:54:48 2022
 @author: 3b13j
 """
 from utilitaries import printl
-from wiki_utilities import get_language
+from Wiki_utilities import get_language
 from log_utilities import change2log, langcomp2log, lgs2log, samples2log, tpl2phons
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, decode_change, encode_p_change, encode_f , decode_log

@@ -7,7 +7,7 @@ Created on Sun May 29 21:36:10 2022
 from utilitaries import *
 from IPA import IPA  , linearize
 from Natural_class import *
-from wiki_utilities import get_language
+from Wiki_utilities import get_language
 from Configuration import Configuration 
 
 i = IPA()

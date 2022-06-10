@@ -5,20 +5,13 @@ Created on Tue May  3 00:08:43 2022
 @author: 3b13j
 """
 
-from utilitaries import *
 import os
-from numpy.linalg import norm
 from ipapy import UNICODE_TO_IPA
 import numpy as np
 
+from utilitaries import *
 
 
-
-
-
-
-
-    
 
 class Phoneme(object) :
     """
@@ -69,6 +62,17 @@ class Phoneme(object) :
     def __str__(self):
         return str(self.ipa )+  " : " + str(self.description ) + "\n" + str(self.features)
 
+    def to_int(self):
+        h = int('1010'+str(self.features).replace(' ','').replace('(','').replace(')','').replace(',',''))
+
+        h *= 4
+        if self.is_Vowel():
+            h += 1
+        if self.syl:
+            h += 2
+        return h
+
+
     def set_word_rank(self, rk) :
         self.word_rank = rk 
 
@@ -84,7 +88,7 @@ class Phoneme(object) :
     def is_Vowel(self) :
         return type(self) == Vowel
 
-    def __eq__(self, other) :
+    def __eq__(self, other):
         return self.features == other.features
 
 
@@ -194,7 +198,6 @@ class Vowel(Phoneme) :
         
         
         
-        
     def get_height(self) :
         return self.features[0][0]
 
@@ -213,6 +216,11 @@ class Vowel(Phoneme) :
     def is_palatal(self, threshold):
         return self.features[0][1] > threshold
 
+
+    def __lt__(self, other):
+        if other.is_Consonant():
+            return True
+        return self.features < other.features
     
 
 class Consonant(Phoneme) : 
@@ -309,3 +317,9 @@ class Consonant(Phoneme) :
  
     def has_sec_articulation (self) :
         return self.features[1][2]
+
+
+    def __lt__(self, other):
+        if other.is_Vowel():
+            return False
+        return self.features < other.features

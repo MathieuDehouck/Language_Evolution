@@ -1,0 +1,710 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Condition &mdash; Evolution 0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Evolution
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>Condition</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for Condition</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Thu May  5 15:09:17 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+
+
+<span class="sd">Contains the condition class and some methodes that could be applied to them.</span>
+<span class="sd">A condition is associated to a change object and states whether a change can be applied or not. </span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">maxC</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">maxV</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+
+<span class="kn">import</span> <span class="nn">Sampling</span>
+<span class="kn">from</span> <span class="nn">utilitaries</span> <span class="kn">import</span> <span class="n">get_random_pattern</span><span class="p">,</span> <span class="n">mask_match</span><span class="p">,</span> <span class="n">feature_indices</span><span class="p">,</span> <span class="n">printl</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">encoder_decoder</span> <span class="kn">import</span> <span class="n">encode_f</span><span class="p">,</span> <span class="n">decode_f</span>
+
+<div class="viewcode-block" id="Condition"><a class="viewcode-back" href="../index.html#Condition.Condition">[docs]</a><span class="k">class</span> <span class="nc">Condition</span><span class="p">():</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    MOTHER CLASS</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    A class to represent a condition.</span>
+<span class="sd">    This is an abstract class.</span>
+<span class="sd">    </span>
+<span class="sd">    In our implementation of phonetic change, we distinguished 3 different subclasses of conditions :</span>
+<span class="sd">        </span>
+<span class="sd">        * phonemic condition</span>
+<span class="sd">        </span>
+<span class="sd">        * stress and syllable weight condition</span>
+<span class="sd">        </span>
+<span class="sd">        * metathesis and mechanical conditions</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;condition :&quot;</span>
+
+
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">NotImplemented</span>
+    
+    
+    <span class="k">def</span> <span class="nf">encode_condition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="n">P_condition</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode_P_cond</span><span class="p">()</span>
+        <span class="k">else</span>  <span class="p">:</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode_S_cond</span><span class="p">()</span>
+        
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    def decode_condition(string) : </span>
+<span class="sd">        if type() == P_condition :</span>
+<span class="sd">            return self.encode_P_cond()</span>
+<span class="sd">        else  : return self.encode_S_cond()</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    
+    <span class="k">def</span> <span class="nf">decode_condition</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;P&quot;</span> <span class="p">:</span> <span class="k">return</span> <span class="n">P_condition</span><span class="o">.</span><span class="n">decode_P_cond</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;S&quot;</span> <span class="p">:</span> <span class="k">return</span> <span class="n">P_condition</span><span class="o">.</span><span class="n">decode_S_cond</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Cond_OR"><a class="viewcode-back" href="../index.html#Condition.Cond_OR">[docs]</a><span class="k">class</span> <span class="nc">Cond_OR</span><span class="p">(</span><span class="n">Condition</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    OR for conditions logic.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conditions</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
+
+
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">cond</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+
+<div class="viewcode-block" id="Cond_AND"><a class="viewcode-back" href="../index.html#Condition.Cond_AND">[docs]</a><span class="k">class</span> <span class="nc">Cond_AND</span><span class="p">(</span><span class="n">Condition</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    AND for conditions logic.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conditions</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
+
+
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cond</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+
+<div class="viewcode-block" id="Cond_NOT"><a class="viewcode-back" href="../index.html#Condition.Cond_NOT">[docs]</a><span class="k">class</span> <span class="nc">Cond_NOT</span><span class="p">(</span><span class="n">Condition</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    NOT for conditions logic.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">condition</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">condition</span> <span class="o">=</span> <span class="n">condition</span>
+
+
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span></div>
+
+
+        
+    
+    
+<div class="viewcode-block" id="P_condition"><a class="viewcode-back" href="../index.html#Condition.P_condition">[docs]</a><span class="k">class</span> <span class="nc">P_condition</span><span class="p">(</span><span class="n">Condition</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to represent a condition regarding the nature of the phoneme that undergoes a change </span>
+<span class="sd">    and its neighbours.</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    template : list</span>
+<span class="sd">        the feature template that need to be satisfied (-1 means  wildcard) for the condition to be satisfied</span>
+<span class="sd">    name : str (optionnal)</span>
+<span class="sd">        used to name usual changes</span>
+<span class="sd">    absol_pos : int</span>
+<span class="sd">        absolute offset, checks the position of the phoneme inside the word.</span>
+<span class="sd">        -1 means wildcard</span>
+<span class="sd">    rel_pos : int</span>
+<span class="sd">        defines the position of the phoneme conditionning the change regarding the phoneme undergoing it</span>
+<span class="sd">        0 means the condition applies to the phonemes that changes itself</span>
+<span class="sd">    continu : bool</span>
+<span class="sd">        states if the condition needs to be satisfied by at least one of the phoneme in the range of rel_pos or </span>
+<span class="sd">            if just the phoneme at &quot;rel pos &quot; is concerned. </span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__() constructor taking all these information as input</span>
+<span class="sd">    </span>
+<span class="sd">    test :</span>
+<span class="sd">        input : a word and an index.</span>
+<span class="sd">        checks whether the condition is satisfied.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_template</span><span class="p">,</span>  <span class="n">rel_pos</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">,</span> <span class="n">absol_pos</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span> <span class="n">continu</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">template</span> <span class="o">=</span> <span class="n">feature_template</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span> <span class="o">=</span> <span class="n">rel_pos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span> <span class="o">=</span> <span class="n">absol_pos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">continu</span> <span class="o">=</span> <span class="n">continu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">feature_template</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+    
+    
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">other</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">template</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">template</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">rel_pos</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">absol_pos</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">continu</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">continu</span>     
+        
+        
+<div class="viewcode-block" id="P_condition.set_absol_pos"><a class="viewcode-back" href="../index.html#Condition.P_condition.set_absol_pos">[docs]</a>    <span class="k">def</span> <span class="nf">set_absol_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set the condition&#39;s absol pos with a new value&#39;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : int</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span> <span class="o">=</span> <span class="n">value</span> </div>
+        
+        
+        
+<div class="viewcode-block" id="P_condition.set_rel_pos"><a class="viewcode-back" href="../index.html#Condition.P_condition.set_rel_pos">[docs]</a>    <span class="k">def</span> <span class="nf">set_rel_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set the condition&#39;s relative pos with a new value&#39;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : int</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span> <span class="o">=</span> <span class="n">value</span> </div>
+    
+    
+    
+    <span class="k">def</span> <span class="nf">set_ft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">template</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span> 
+       
+        
+       
+    <span class="k">def</span> <span class="nf">set_continu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">continu</span> <span class="o">=</span> <span class="n">value</span>
+    
+    
+    
+<div class="viewcode-block" id="P_condition.test"><a class="viewcode-back" href="../index.html#Condition.P_condition.test">[docs]</a>    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Checks if a condition is satisfied on a given word.</span>
+<span class="sd">        Key method of the Condition class</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        word : word</span>
+<span class="sd">            word on which we check the condition</span>
+<span class="sd">        rank : int</span>
+<span class="sd">            rank of the word we examine the condition on</span>
+<span class="sd">        verbose : TYPE, optional</span>
+<span class="sd">            as usual. The default is False.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        a boolean</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;word on which the condition is being tested &quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;we test the condition on the &quot;</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span><span class="s2">&quot;th phonem&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">rank</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">()</span>
+            
+        <span class="n">phon</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">rank</span><span class="p">]</span>
+        
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        if phon.isV != self.concerns_V:</span>
+<span class="sd">            if verbose : print(&quot;not applicable on the target&quot;)</span>
+<span class="sd">            return False </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># does the condition have an absolute position to be checked on ?</span>
+        <span class="c1">#TODO in the implementation,  a condition is either absolute or relative.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span>  <span class="o">!=</span> <span class="mi">42</span> <span class="p">:</span>
+            
+            <span class="c1">#small words do resist.</span>
+            
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+            
+            
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+                <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span><span class="p">)</span>
+                <span class="n">printl</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span>
+            <span class="n">phon_to_test</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;absolute position requirement tested on &quot;</span><span class="o">+</span> <span class="n">phon_to_test</span><span class="o">.</span><span class="n">ipa</span><span class="p">)</span>
+            <span class="n">answ</span> <span class="o">=</span>  <span class="n">mask_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template</span><span class="p">,</span> <span class="n">phon_to_test</span><span class="o">.</span><span class="n">features</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span><span class="p">)</span>
+        
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+                <span class="nb">print</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template</span> <span class="p">)</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="n">phon_to_test</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;MATCH : &quot;</span><span class="p">,</span> <span class="n">answ</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">answ</span>
+        
+        <span class="c1"># we check if the relative positions match </span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">rank</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span> 
+        <span class="c1">#TODO</span>
+        <span class="k">if</span> <span class="n">rank</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">))</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;conditioning phoneme not in range&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;we need to satisfy the following pattern&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Template :&quot;</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">template</span> <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Phoneme :&quot;</span> <span class="p">,</span> <span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">ipa</span><span class="p">,</span> <span class="s2">&quot;    &quot;</span> <span class="p">,</span> <span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+            
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">continu</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">))</span> <span class="p">:</span> <span class="n">bol</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">else</span> <span class="p">:</span> <span class="n">bol</span> <span class="o">=</span> <span class="n">mask_match</span> <span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">template</span> <span class="p">,</span> <span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">features</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span> <span class="p">)</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="n">bol</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CONDITION SATISFIED&quot;</span><span class="p">)</span> 
+                <span class="k">else</span> <span class="p">:</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;CONDITION NOT SATISFIED&quot;</span><span class="p">)</span>
+            
+            <span class="k">return</span> <span class="n">bol</span>
+        
+        
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">rank</span><span class="p">)</span> <span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">rank</span><span class="p">)</span> <span class="p">)</span> <span class="p">:</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="n">mask_match</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">template</span> <span class="p">,</span> <span class="n">word</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">features</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span>  <span class="p">)</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;we test &quot;</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">val</span> <span class="p">:</span> 
+                    <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CONDITION SATISFIED&quot;</span><span class="p">)</span> 
+                    <span class="k">return</span> <span class="kc">True</span>
+                
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;CONDITION NOT SATISFIED&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+    
+    
+    
+    
+    
+         
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    
+        <span class="k">return</span> <span class="s2">&quot;C:   Rel pos :  &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;    Abs_pos : &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span><span class="p">)</span> <span class="o">+</span>  <span class="s2">&quot;         Continu : &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">continu</span><span class="p">)</span> <span class="o">+</span>  <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Template :&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template</span><span class="p">)</span>
+          
+    
+    
+    
+    
+    <span class="k">def</span> <span class="nf">encode_P_cond</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        
+        <span class="n">s</span><span class="o">=</span> <span class="s2">&quot;PCond:&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;T:&quot;</span> <span class="o">+</span><span class="n">encode_f</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot; | &quot;</span> <span class="o">+</span> <span class="s2">&quot;Rel:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot; | &quot;</span> <span class="o">+</span> <span class="s2">&quot;Abs:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">absol_pos</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot; | &quot;</span> <span class="o">+</span> <span class="s2">&quot;Cont:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">continu</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">s</span>
+    
+    
+    
+    
+    
+    <span class="k">def</span> <span class="nf">decode_P_cond</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="p">:</span>
+        
+        <span class="n">string</span> <span class="o">=</span> <span class="n">string</span> <span class="p">[</span><span class="mi">8</span><span class="p">:]</span>
+        <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; | &quot;</span><span class="p">)</span>
+        
+        
+        <span class="n">template</span> <span class="o">=</span> <span class="n">decode_f</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">rel_pos</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">abs_pos</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="p">((</span><span class="n">string</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">:]))</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span>
+    
+        <span class="k">return</span> <span class="n">P_condition</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="n">rel_pos</span><span class="p">,</span> <span class="n">abs_pos</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></div>
+        
+    
+<div class="viewcode-block" id="rd_p_condition"><a class="viewcode-back" href="../index.html#Condition.rd_p_condition">[docs]</a><span class="k">def</span> <span class="nf">rd_p_condition</span><span class="p">(</span> <span class="n">language</span><span class="p">,</span> <span class="n">rel_pos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">abs_pos</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">continu</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        generates a random P_condition</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        rel_pos : int, optional</span>
+<span class="sd">            indicates the relative position of the condition</span>
+<span class="sd">        abs_pos : TYPE, int</span>
+<span class="sd">             cf condition class</span>
+<span class="sd">        continu : TYPE, optional</span>
+<span class="sd">            cf condition class</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+         
+        
+        <span class="n">sign</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> 
+        <span class="k">if</span> <span class="n">sign</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span> <span class="n">sign</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        
+        <span class="n">pattern</span> <span class="o">=</span> <span class="n">get_random_pattern</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
+        <span class="n">cond</span> <span class="o">=</span> <span class="n">P_condition</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">sign</span><span class="p">)</span>
+         
+        <span class="k">return</span> <span class="n">cond</span></div>
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+<span class="c1"># premier essai d&#39;implémentation, en lien étroit avec la façon donc on a implémenté la structure dans la classe mot</span>
+<div class="viewcode-block" id="S_condition"><a class="viewcode-back" href="../index.html#Condition.S_condition">[docs]</a><span class="k">class</span> <span class="nc">S_condition</span> <span class="p">(</span><span class="n">Condition</span><span class="p">)</span> <span class="p">:</span> 
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to represent a condition regarding the Syllabic structure of the word</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    absol_pos : int</span>
+<span class="sd">        absolute offset, checks the position of the syllable  inside the word.</span>
+<span class="sd">        -1 means wildcard</span>
+<span class="sd">    rel_pos : int</span>
+<span class="sd">        defines the position of the phoneme conditionning the change regarding the syllable undergoing it</span>
+<span class="sd">        0 means the condition applies to the phonemes that changes itself</span>
+<span class="sd">    stress : bool </span>
+<span class="sd">        Checks a condition on the stress </span>
+<span class="sd">    length : bool </span>
+<span class="sd">        Checks a condition on the length </span>
+<span class="sd">    tone : bool </span>
+<span class="sd">        Checks a condition on the tone</span>
+<span class="sd">        </span>
+<span class="sd">    </span>
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__() constructor taking all these information as input</span>
+<span class="sd">    </span>
+<span class="sd">    test :</span>
+<span class="sd">        input : a word and an index.</span>
+<span class="sd">        checks whether the condition is satisfied.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1">#TODO implement tones </span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">abs_position</span> <span class="o">=</span> <span class="mi">42</span> <span class="p">,</span> <span class="n">rel_pos</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">stress</span> <span class="o">=</span> <span class="kc">None</span>  <span class="p">,</span><span class="n">tone</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="p">):</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">stress</span> <span class="o">=</span> <span class="n">stress</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tone</span> <span class="o">=</span> <span class="n">tone</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">abs_position</span> <span class="o">=</span> <span class="n">abs_position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span> <span class="o">=</span> <span class="n">rel_pos</span>
+        
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stress</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">stress</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">length</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">tone</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">tone</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">abs_position</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">abs_position</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">rel_pos</span> 
+        
+<div class="viewcode-block" id="S_condition.test"><a class="viewcode-back" href="../index.html#Condition.S_condition.test">[docs]</a>    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test if the change can be applied on the word regarding the syllabic configuration</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        word : word</span>
+<span class="sd">            the word that undergoes the change</span>
+<span class="sd">        rank : int</span>
+<span class="sd">            rank of the syllable that is being examined</span>
+<span class="sd">        verbose : bool, optional</span>
+<span class="sd">            enable the verbose mode. The default is False.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            boolean, if the change has to be applied</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        
+        
+        <span class="n">nb_syl</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">)</span>
+        
+        <span class="c1"># we test the condition on absolute positions.</span>
+        <span class="c1"># in the semantic of our programm -1 means the last , -2 the penultian and so on</span>
+        
+        
+        <span class="c1"># index of the syllable we need to study</span>
+        <span class="n">index</span>  <span class="o">=</span> <span class="n">rank</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span>
+        
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_syl</span><span class="p">)</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>  
+        <span class="c1">#TODO modif</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">abs_position</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">nb_syl</span><span class="p">)</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+        
+        <span class="c1">#test of absolute position : </span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">abs_position</span> <span class="o">!=</span> <span class="mi">42</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">abs_position</span><span class="p">]</span> <span class="o">!=</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span> 
+            <span class="c1">#else : print ( word.syllables[rank] .ipa , &quot; vs &quot;, word.syllables[index] )</span>
+        
+        
+        <span class="k">return</span>  <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">length</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">stress</span> <span class="o">==</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">stress</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">tone</span> <span class="o">==</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">tone</span></div>
+        
+        
+      
+            
+            
+            
+            
+         
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        
+        <span class="k">return</span> <span class="s2">&quot;C Syl :&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">absolute position : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">abs_position</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;         relative position : &quot;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">length : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;         stress : &quot;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stress</span><span class="p">)</span>
+        
+    
+    
+    <span class="k">def</span> <span class="nf">encode_S_cond</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        
+        <span class="n">s</span><span class="o">=</span> <span class="s2">&quot;SCond:&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Str:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stress</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;|&quot;</span> <span class="o">+</span> <span class="s2">&quot;Len:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;|&quot;</span> <span class="o">+</span> <span class="s2">&quot;Ton:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tone</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;|&quot;</span> <span class="o">+</span> <span class="s2">&quot;Rel:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rel_pos</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;|&quot;</span> <span class="o">+</span> <span class="s2">&quot;Abs:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">abs_position</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">s</span>
+    
+    
+    
+    
+    
+    <span class="k">def</span> <span class="nf">decode_S_cond</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="p">:</span>
+        
+        <span class="n">string</span> <span class="o">=</span> <span class="n">string</span> <span class="p">[</span><span class="mi">8</span><span class="p">:]</span>
+        <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+        
+        <span class="n">stress</span> <span class="o">=</span> <span class="p">((</span><span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">:]))</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span>
+        <span class="n">length</span> <span class="o">=</span>  <span class="p">((</span><span class="n">string</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">5</span><span class="p">:]))</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span>
+        
+        <span class="n">tone</span> <span class="o">=</span> <span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">:])</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span>
+        <span class="k">if</span>  <span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">:])</span> <span class="o">==</span> <span class="s2">&quot;None&quot;</span> <span class="p">:</span> <span class="n">tone</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">rel_pos</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">abs_pos</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        
+    
+        <span class="k">return</span> <span class="n">S_condition</span><span class="p">(</span><span class="n">abs_pos</span><span class="p">,</span> <span class="n">rel_pos</span><span class="p">,</span> <span class="n">stress</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">tone</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

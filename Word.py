@@ -6,11 +6,11 @@ Created on Wed May  4 14:39:58 2022
 Contains the Word class and some methods used specifically to work with it
 """
 
+from IPA import IPA
+ipa = IPA.get_IPA()
 
-
-
-
-
+primes = [137, 139, 149, 157, 167,
+          179, 181, 191, 197, 199]
 
 
 class Word :
@@ -40,15 +40,15 @@ class Word :
     def __init__(self, syls):
         
         self.syllables = syls 
-        s = ""
-        for x in self.syllables : s += x.ipa
-        self.ipa = s
+        #s = ""
+        #for x in self.syllables : s += x.ipa
+        self.ipa = '.'.join([syl.ipa for syl in self.syllables]).replace(".'", "'")
         self.structure = self.get_structure()
         self.stress_pattern = self.get_stess_pattern()
         
         phon = []
         phon2syl = {}
-        inds = 0 #index of syllables
+        inds = 0 # index of syllables
         indp = 0 # index of phonemes
         for j , syl in enumerate(syls) :
             syl.set_rank_in_wd(inds)
@@ -63,20 +63,10 @@ class Word :
         self.phonemes = phon
         self.phon2syl = phon2syl
         
-        
-        
-        
-        
-    def __eq__(self, other) :
-        
-        for i, phon in enumerate ( self.phonemes ) :
-            if phon.features != other.phonemes[i].features :
-                return False
-        return True
-        
-    
-    
-        
+
+    def __eq__(self, other):
+        return self.syllables == other.syllables
+
         
     def __str__(self)  :
         
@@ -87,9 +77,6 @@ class Word :
         s += "\n"    + "structure : "+ str(self.structure)
         s += "\n"    + "stress pattern : "+ str(self.stress_pattern)
         return s
-    
-    
-    
     
     
     def get_structure(self):
@@ -109,10 +96,7 @@ class Word :
             s += "/"
         s = s[:-1]
         s+="#"
-        return s
-    
-    
-    
+        return s    
     
     
     def get_stess_pattern(self) :
@@ -125,3 +109,152 @@ class Word :
             else : s += "_/"
         s = s[:-1]
         return s
+
+
+
+
+class Syllable(object) :
+    """
+    A class to represent a syllable.
+
+    ...
+
+    Attributes
+    ----------
+    phonemes : list
+        list of the phonemes composing the syllable
+    stress : bool 
+        indicate whether the syllable bears stress or not
+    length : bool 
+        indicate if the vowell in the syllable have more than 2 mora.
+    i_center : int
+        index of the phoneme which is at the heart of the syllable
+    center: phoneme : 
+        phoneme which is at the heart of the syllable
+
+    Methods
+    -------
+    init__()__
+        constructor that takes as input the list of phonemes in the syllable
+        
+    set_stress(bool) :
+        allow the programm to change the stress of a syllable
+        
+    set_length(bool) : 
+        allow the programm to change thelength of a syllable
+    
+    """
+    
+    
+    
+    def __init__(self, phonemes, stress=False, length=False, tone=None) :
+        self.phonemes = phonemes
+        self.stress = stress 
+        self.length = length
+        self.tone = tone
+    
+        # way to know which of the syllable's phoneme bears the accent / tone 
+        syl = [phon.syl for phon in self.phonemes]
+        if True in syl:
+            id_center = syl.index(True)
+        else:
+            vow = [phon.is_Vowel() for phon in self.phonemes]
+            id_center = vow.index(True)
+
+        self.center = self.phonemes[id_center]
+
+        if self.stress:
+            s = "'"
+        else:
+            s = ''
+        for i, phoneme in enumerate(self.phonemes):
+            phoneme.ipa = ipa.get_char(phoneme)
+            s += phoneme.ipa
+            if i == id_center and self.length:
+                s += ':'
+
+        self.ipa = s
+        self.rank_in_wd = None
+       
+
+    def __hash__(self):
+        """
+        a silly function to compute a hash value for a syllable
+        """
+        h = 0
+        for i, phon in enumerate(self.phonemes):
+            h += phon.to_int()
+            h *= primes[i]
+        h *= 4
+        if self.stress:
+            h += 1
+        if self.length:
+            h += 2
+ 
+        return h
+        
+        
+        
+    def __str__(self) :
+        return self.ipa  + "\nstress : "+str(self.stress)+"    length : "+ str(self.length)
+    
+    
+    def set_rank_in_wd(self, rk) :
+        """ small setter for the rank in word if it changes durong an I change) """
+        self.rank_in_wd = rk
+        
+        
+    def set_stress(self, stress) :
+        """
+        Allow the program to change the stress of a syllable
+
+        Parameters
+        ----------
+        stress : bool
+            The new value 
+
+        Returns
+        -------
+        None.
+
+        """
+        
+        self.stress = stress
+        
+        
+        
+    def set_length(self, length) :
+        """
+        Allow the program to change the stress of a syllable
+
+        Parameters
+        ----------
+        stress : bool
+            The new value 
+
+        Returns
+        -------
+        None.
+
+        """
+        
+        self.length =  length
+        
+    
+    def __eq__(self, other ) :
+        """ 
+        a syllable is equal to antoher syllable if it contains the same phonemes ,and have same stress, length and tone
+            
+        """
+        if self.phonemes != other.phonemes:                    
+            return False
+        if self.length != other.length : return False
+        if self.stress != other.stress : return False 
+        if self.tone != other.tone : return False
+                
+        return True
+
+
+    def __lt__(self, other):
+        return self.phonemes < other.phonemes
+    

@@ -6,8 +6,9 @@ Created on Thu May  5 00:01:15 2022
 """
 
 import numpy as np
-from ipapy import *
-from copy import deepcopy
+from os.path import abspath
+#from ipapy import *
+
 from IPA_utils import manner_enc
 from Phoneme import Vowel, Consonant
 
@@ -55,22 +56,12 @@ class archetype(object) :
     def __str__(self):
         return self.ipa +  " :  " + self.description + "\n" + str(self.features)
 
-
-
-
     def is_Vowel(self):
         return self.vow
-
-
-
-
 
     def is_Consonant(self):
         return not self.vow
     
-
-
-
 
     def get_one(self, extra_feats, syllabic):
         """
@@ -175,7 +166,7 @@ class IPA() :
 
     
     def __init__(self) :
-        self.vfeatures = ( 'Height','Backness', 'Round'), ('Voiced', 'Nasal')
+        self.vfeatures = ('Height','Backness', 'Round'), ('Voiced', 'Nasal')
         self.cfeatures = ('place of articulation', ('nasal', 'plosive', 'fricative', 'trill', 'lateral'), 'Voiced'), ('secondary place of articulation', 'pre_nasal' , 'aspiration')
         self.phonemes = [] 
         self.alphabet = {}

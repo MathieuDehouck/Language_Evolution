@@ -8,9 +8,8 @@ Contains some functions that help handling phonetically transcribed words availa
 
 """
 from IPA import IPA
-from Word import Word
+from Word import Word, Syllable
 from Phoneme import Phoneme, Vowel, Consonant
-from Syllable import Syllable
 from Language import Language
 from pathlib import Path
 from IPA_utils import diacritics
@@ -73,10 +72,15 @@ def treat_syl(syl, stress = False) :
 
     """
 
-    length = 'ː' in syl
-    syl = syl.replace('ː', '')
+    length = False
+    nucleus = -1
+    if 'ː' in syl:
+        length = True
+        nucleus = syl.index('ː') - 1
+        syl = syl.replace('ː', '')
+
     syl = syl.replace('g', 'ɡ')
-    syl = syl.replace('̯', '')
+    syl = syl.replace('̯', '')   # FIX THIS
     phones = []
     feats = []
     
@@ -88,10 +92,15 @@ def treat_syl(syl, stress = False) :
 
         phones.append(ipa.alphabet[ch])
         feats.append([])
+        if i == nucleus:
+            nucleus = len(phones) - 1
     
     phonemes = []
-    for i, pho in enumerate(phones):
-        phonemes.append(pho.get_one(feats[i], False))
+    for i, phon in enumerate(phones):
+        if i == nucleus:
+            phonemes.append(phon.get_one(feats[i], True))
+        else:
+            phonemes.append(phon.get_one(feats[i], False))
 
     syl = Syllable(phonemes, stress, length)
     return syl
