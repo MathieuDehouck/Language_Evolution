@@ -234,6 +234,7 @@ class Baby_P_change_generator(P_change_generator) :
         #selection of the effect
         effect = self.select_effect(language, target, concerns_V)
         change = P_change(target, effect)
+        change.reset_condition()
         
         if verbose : print("Effect", effect)
         
