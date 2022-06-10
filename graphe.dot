@@ -3,6 +3,7 @@ digraph " We display the history of a word" {
 graph[rankdir="LR"];
 node [style="filled", fillcolor = "white"];
 edge [style="solid", color="purple"];
+<<<<<<< Updated upstream
 0 [label="wirdia", fillcolor= white, color="purple",  fontcolor="red"];
 1 [label="wirdia", fillcolor= white, color="purple",  fontcolor="red"];
 2 [label="wirdia", fillcolor= white, color="purple",  fontcolor="red"];
@@ -192,4 +193,47 @@ edge [style="solid", color="purple"];
 92 -> 47;
 93 -> 47;
 94 -> 0;
+=======
+0 [label="'wʰɯdʰ.dʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+1 [label="'wʰɯrʰ.dʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+2 [label="'wɯr.dɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+3 [label="'wʰɯdʰ.dʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+4 [label="'ʍʰɯ̥dʰ.dʰɯ̥.ɑ̥", fillcolor= white, color="purple",  fontcolor="red"];
+5 [label="'wʰɯ̥dʰ.dʰɯ̥.ɑ̥", fillcolor= white, color="purple",  fontcolor="red"];
+6 [label="'wʰɯdʰ.dʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+7 [label="'ʍʰɯ̥dʰ.dʰɯ̥.ɑ̥", fillcolor= white, color="purple",  fontcolor="red"];
+8 [label="'wir.di.a", fillcolor= white, color="purple",  fontcolor="red"];
+9 [label="'wɯ̃d͜z.d͜zɯ̃.ɑ̃", fillcolor= white, color="purple",  fontcolor="red"];
+10 [label="'wɯd͜z.d͜zɯ.ɑ̃", fillcolor= white, color="purple",  fontcolor="red"];
+11 [label="'wɯd͜z.d͜zɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+12 [label="'wʰɯd͜zʰ.d͜zʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+13 [label="'wʰɯdʰ.dʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+14 [label="'ʋ̥ʰɯdʰ.dʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+15 [label="'ʍʰɯdʰ.dʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+16 [label="'wʰɯdʰ.dʰɯ.ɑ", fillcolor= white, color="purple",  fontcolor="red"];
+17 [label="'ʍʰɯ̥dʰ.dʰɯ̥.ɑ̥", fillcolor= white, color="purple",  fontcolor="red"];
+18 [label="'ʍʰɯ̥dʰ.dʰɯ̥.ɑ̥", fillcolor= white, color="purple",  fontcolor="red"];
+19 [label="'ʋ̥ʰɯ̥dʰ.dʰɯ̥.ɑ̥", fillcolor= white, color="purple",  fontcolor="red"];
+20 [label="'ʍʰɯ̥dʰ.dʰɯ̥.ɑ̥", fillcolor= white, color="purple",  fontcolor="red"];
+0 -> 1;
+1 -> 2;
+2 -> 8;
+3 -> 0;
+4 -> 5;
+5 -> 6;
+6 -> 0;
+7 -> 4;
+9 -> 10;
+10 -> 11;
+11 -> 12;
+12 -> 13;
+13 -> 3;
+14 -> 15;
+15 -> 16;
+16 -> 3;
+17 -> 7;
+18 -> 7;
+19 -> 20;
+20 -> 4;
+>>>>>>> Stashed changes
 }
