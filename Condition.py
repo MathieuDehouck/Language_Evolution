@@ -40,6 +40,10 @@ class Condition():
     
     def __str__(self) :
         return "condition :"
+
+
+    def test(self, word, rank) :
+        NotImplemented
     
     
     def encode_condition(self):
@@ -58,10 +62,60 @@ class Condition():
     def decode_condition(string) :
         if string[0] == "P" : return P_condition.decode_P_cond(string)
         if string[0] == "S" : return P_condition.decode_S_cond(string)
+
+
+
+class Cond_OR(Condition):
+    """
+    OR for conditions logic.
+    """
+
+    def __init__(self, conditions):
+        self.conditions = conditions
+
+
+    def test(self, word, rank, verbose=False):
+        for cond in self.conditions:
+            if cond.test(word, rank, verbose):
+                return True
+        return False
+
+
+
+class Cond_AND(Condition):
+    """
+    AND for conditions logic.
+    """
+
+    def __init__(self, conditions):
+        self.conditions = conditions
+
+
+    def test(self, word, rank, verbose=False):
+        for cond in self.conditions:
+            if not cond.test(word, rank, verbose):
+                return False
+        return True
+
+
+
+class Cond_NOT(Condition):
+    """
+    NOT for conditions logic.
+    """
+
+    def __init__(self, condition):
+        self.condition = condition
+
+
+    def test(self, word, rank, verbose=False):
+        return not self.condition(word, rank, verbose)
+
+
+        
     
     
-    
-class P_condition (Condition) :
+class P_condition(Condition) :
     """
     A class to represent a condition regarding the nature of the phoneme that undergoes a change 
     and its neighbours.
