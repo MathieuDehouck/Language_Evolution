@@ -9,6 +9,9 @@ Contains the Word class and some methods used specifically to work with it
 from IPA import IPA
 ipa = IPA.get_IPA()
 
+primes = [137, 139, 149, 157, 167,
+          179, 181, 191, 197, 199]
+
 
 class Word :
     """
@@ -152,7 +155,6 @@ class Syllable(object) :
     
         # way to know which of the syllable's phoneme bears the accent / tone 
         syl = [phon.syl for phon in self.phonemes]
-        print(syl)
         if True in syl:
             id_center = syl.index(True)
         else:
@@ -174,7 +176,22 @@ class Syllable(object) :
         self.ipa = s
         self.rank_in_wd = None
        
-        
+
+    def __hash__(self):
+        """
+        a silly function to compute a hash value for a syllable
+        """
+        h = 0
+        for i, phon in enumerate(self.phonemes):
+            h += phon.to_int()
+            h *= primes[i]
+        h *= 4
+        if self.stress:
+            h += 1
+        if self.length:
+            h += 2
+ 
+        return h
         
         
         
@@ -236,3 +253,8 @@ class Syllable(object) :
         if self.tone != other.tone : return False
                 
         return True
+
+
+    def __lt__(self, other):
+        return self.phonemes < other.phonemes
+    
