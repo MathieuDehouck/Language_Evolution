@@ -26,7 +26,7 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 50 # depth of a branch
+depth = 20 # depth of a branch
 nbranches = 5 # number of branches
 
 
@@ -49,7 +49,7 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, depth, True)
+new_language , changes, wc = time.change(lang, depth)
 #origin.print_both(new_language)
 #origin.compare(nlp)
 

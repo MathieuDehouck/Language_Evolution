@@ -1,0 +1,11 @@
+#pass,approx,nasal,plosive,fricative,flap,trill,lateral,lateral frix,lateral tril, afr
+approx,0,5,5,5,5,5,5,1,1,1
+nasal,5,0,5,1,1,5,1,1,1,1
+plosive,5,5,0,5,3,3,5,1,1,5
+fricative,5,3,5,0,5,5,1,5,1,5
+flap,5,1,1,3,0,5,1,1,1,1
+trill,3,1,1,3,5,0,1,1,1,1
+lateral,5,1,3,3,3,3,0,5,5,1
+lateral fric,1,1,1,5,1,1,5,0,1,1
+lateral trill,1,1,1,1,1,5,5,1,0,1
+africate,1,1,5,5,1,1,1,1,1,0

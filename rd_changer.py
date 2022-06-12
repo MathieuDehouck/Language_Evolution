@@ -7,10 +7,11 @@ Created on Tue May 17 13:04:22 2022
 
 from Change  import P_change
 from Tree import  L_tree
-
+from tqdm import tqdm
 from Generator import Change_Generator
 
 import copy
+
 
 
 
@@ -33,7 +34,7 @@ class Changer () :
        wc = []
        lang = copy.deepcopy(lang)
        # we program n aleatory changes
-       for i in range(n):
+       for i in tqdm (range(n), "generating " + str(n) + " changes"):
            
            if verbose : 
                print()
@@ -99,7 +100,7 @@ class Tree_changer(Changer) :
        
        expanded_tree = dic[node]
        
-       for nch in range(wanted_depth -expanded_tree.depth) :
+       for nch in tqdm(range(wanted_depth -expanded_tree.depth), "generating " +str(wanted_depth -expanded_tree.depth)+"changes") :
            change = self.generator.generate_P_change(expanded_tree.language)
            nl, wc = change.apply_language(expanded_tree.language)
            new_tree = L_tree(nl, expanded_tree)
@@ -107,6 +108,7 @@ class Tree_changer(Changer) :
 
 
     def octopus(self, nb_branches, depth):
+        
         for i in range(nb_branches - 1) :
             print("grafting branch ",i+1)
             self.pursue_evolution(depth)

@@ -129,7 +129,7 @@ manner_list  =  [ (0, 0, 0, 0, 0), # approximant
                 (1, 0, 0, 0, 0), # nasal
                 (0, 1, 0, 0, 0), # plosive
                 (0, 0, 1, 0, 0), # fricative / sibilant
-                (0, 0, 1, 0, 0), # fricative
+                
                 (0, 0, 0, 1, 0), # flap
                 (0, 0, 0, 2, 0), # trill
                 (0, 0, 0, 0, 1), # lateral
@@ -147,6 +147,22 @@ sec_place_2_ind = { 11 : 3 , 1 : 1 , 0:0 , 5 : 2}
 l = len(manner_list) 
 f2c = np.ones((l, l))
 
+f = open("f2c.csv", "r", encoding = 'utf8')
+mat = []
+for line in f :
+    
+    if line[0] == '#' : continue
+    line.replace('\\n', '')
+    line = line.split("," )
+    line = line [1:]
+    
+    lin = []
+    for n in line : 
+        lin.append(int(n))
+    mat.append(lin)
+f2c = np.array(mat)
+
+        
 
 def interpret_manner (mat) :
     dic = mat_to_adj(mat)

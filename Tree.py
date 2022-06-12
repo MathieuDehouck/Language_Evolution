@@ -351,9 +351,9 @@ class L_tree :
                 if num not in numeric_edges :
                     
                     s = ""
-                    s += num[0]
-                    s += " -> "
                     s += num[1]
+                    s += " -> "
+                    s += num[0]
                     s+=";\n"
                     f.write(s)
                     numeric_edges.append(num)
