@@ -109,6 +109,40 @@ class Change():
         return True
 
 
+    def apply_language(self, lang, verbose = False):
+        """
+        Apply the change on every word in the langugage
+
+        Parameters
+        ----------
+        lang : language
+
+        Returns
+        -------
+        a new language with the change applied on every of its word
+
+        """
+        changed_words = []
+        
+        dic = {}
+        for key, word in lang.voc.items() :
+            
+            #save = copy.deepcopy(word)
+            new_word = self.apply_word(word)
+            if verbose : print(new_word)
+            dic[key] = new_word
+            if  new_word != word : 
+                changed_words.append([  word.ipa, new_word.ipa])
+                
+                if verbose :
+                 print("NW", new_word)
+                 printl(changed_words)
+                
+                
+        return Language(lang.name+"*", dic), changed_words
+        #TODO ; the name of the new language could be parametrizable maybe
+    
+
     def apply_word(self, word):
         """
         Apply the change to a word
@@ -338,7 +372,7 @@ class P_change(Change) :
         idx = feature_indices(self.target)
         
         for ind in idx:
-            if ind == self.effect.domain : 
+            if ind == self.effect.domain :
                 if phon.features[ind[0]][ind[1]] in self.effect.effect :
                     base[ind[0]][ind[1]] = self.effect.effect[phon.features[ind[0]][ind[1]]]
                     #print("new res",  self.effect.effect[ft[ind[0]][ind[1]]] )
@@ -756,14 +790,12 @@ class I_change(Change) :
     """
 
     def __init__(self, target, effects, conditions):
-        Change.__init__()
-        self.target = target
+        Change.__init__(self, target, effects, conditions)
         self.effect = effects # there are several since we create new sounds
-        self.conditions = conditions
 
       
     def apply_word(self, word):
-        nsyls = [self.apply_syl(syl) for syl in word.syllables]
+        nsyls = [self.apply_syl(syl, word) for syl in word.syllables]
         w = Word(nsyls)
         return w
 
@@ -781,9 +813,12 @@ class I_change(Change) :
         we always return a list, a singleton list if the change does not apply, a pair of more otherwise
         """
         if mask_match(self.target, phon.features, False):
-            phons = [eff.affect(phon) for eff in self.effects]
+            phons = [eff.affect(phon) for eff in self.effect]
         else:
-            phons = [phon]
+            phons = [phon.features]
+            
+        if phon.isV : phons = [Vowel(ft, phon.syl, phon.speller) for ft in phons]
+        else : phons = [Consonant(ft, phon.syl, phon.speller) for ft in phons]
 
         return phons
 

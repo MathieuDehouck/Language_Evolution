@@ -26,20 +26,18 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 200 # depth of a branch
-nbranches = 50 # number of branches
+depth = 50 # depth of a branch
+nbranches = 10 # number of branches
 
 
 
 # We choose a language to play with 
 
-lang = get_language("latin_classique.txt", "latin")
+#lang = get_language("latin_classique.txt", "latin")
 
 #st = State(lang)
 
-
-
-#lang = get_language("tokipona.txt", "tokipona")
+lang = get_language("tokipona.txt", "tokipona")
 
 #lang = get_language("greek.txt", "greek")
 
@@ -97,8 +95,8 @@ time.octopus(nbranches, depth)
 
 #k,e = time.tree.elaborate_history_graph('virdia')
 print(lang.voc)
-#time.tree.history_to_graph(['ˈsi.te.len', 'ˈpi.me.ja'])
-time.tree.history_to_graph(['virdia', 'abante'])
+time.tree.history_to_graph(['ˈsi.te.len', 'ˈpi.me.ja'])
+#time.tree.history_to_graph(['virdia', 'abante'])
 #t = time.tree.get_final_state_of_the_evolution()
 #for l in t : print (l.voc['virdia'])
 

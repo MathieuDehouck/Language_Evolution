@@ -37,7 +37,7 @@ class Effect (object) :
     random_effect 
     
     """
-#TODO éliminer add effect et gérer ailleurs (dans le générateur) 
+    #TODO éliminer add effect et gérer ailleurs (dans le générateur) 
     def __init__(self, domain, effect)  :
       
        # self.isV = (len(self.idx) == 5)
@@ -55,9 +55,16 @@ class Effect (object) :
     
 
     def affect(self, phoneme):
-        key = [phoneme.features[x][y] for (x,y) in self.domain]
-        values = self.effect[key]
-        kvs = {k:v for (k, v) in zip((self.domain, values))}
+        #key = [phoneme.features[x][y] for (x,y) in self.domain]
+        x, y = self.domain
+        key = phoneme.features[x][y]
+        try:
+            values = self.effect[key]
+        except:
+            print(self.effect, key)
+            values = key
+        #kvs = {k:v for (k, v) in zip((self.domain, values))}
+        kvs = {key:values}
 
         fts = []
         for x, fs in enumerate(phoneme.features):
