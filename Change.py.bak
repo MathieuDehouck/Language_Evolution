@@ -67,14 +67,20 @@ class Change():
         """ used to add a condition to an already built change """
         self.conditions.append(condition)
     
-
+<<<<<<< HEAD
+    
     def reset_condition(self) :
         self.conditions = [] 
         
     def set_target(self, cond) :
         self.target = cond
         
-
+    
+=======
+    #def set_target(self, cond) :
+    #    self.target = cond
+>>>>>>> 609455d0185731e6245b286599f8a673f1bcc40e
+    
     def check(self,  phon, index , word, verbose = False):
         """
         check if a Change can be applied or not

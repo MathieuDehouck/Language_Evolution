@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue May 31 12:42:01 2022
 
@@ -130,7 +129,7 @@ manner_list  =  [ (0, 0, 0, 0, 0), # approximant
                 (1, 0, 0, 0, 0), # nasal
                 (0, 1, 0, 0, 0), # plosive
                 (0, 0, 1, 0, 0), # fricative / sibilant
-                (0, 0, 1, 0, 0), # fricative
+                
                 (0, 0, 0, 1, 0), # flap
                 (0, 0, 0, 2, 0), # trill
                 (0, 0, 0, 0, 1), # lateral
@@ -148,6 +147,22 @@ sec_place_2_ind = { 11 : 3 , 1 : 1 , 0:0 , 5 : 2}
 l = len(manner_list) 
 f2c = np.ones((l, l))
 
+f = open("f2c.csv", "r", encoding = 'utf8')
+mat = []
+for line in f :
+    
+    if line[0] == '#' : continue
+    line.replace('\\n', '')
+    line = line.split("," )
+    line = line [1:]
+    
+    lin = []
+    for n in line : 
+        lin.append(int(n))
+    mat.append(lin)
+f2c = np.array(mat)
+
+        
 
 def interpret_manner (mat) :
     dic = mat_to_adj(mat)
@@ -252,9 +267,13 @@ crer matrices,  on les met dans des structures qui ont la même forme que les fe
 
 # PARAMETRISATION OF THE CHANGE GENERATION
 
+weights_nb_cond = [3, 5, 3, 2]
+
+weights_same_feature = [5, 5]
+
 
 featureV_weights = [4, 4, 2, 3, 2]
-featureC_weights = []
+featureC_weights = [5,5, 5, 4, 2, 4]
 
 
 
@@ -266,9 +285,11 @@ weights_nb__rel_cond = [ 3, 8, 7, 3, 1]
 weights_rel_pos = [4, 2, 1]
 weights_abs_pos = [4, 2, 1]
 
+nb_extensions = [0, 1, 2, 3, 4, 5]
+weights_extensions = [8, 4, 6, 3,2, 2]
 
 
 
-
-
+weight_Scond = [2, 8]
+weigt_A_R = [2, 4]
 

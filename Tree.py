@@ -324,6 +324,7 @@ class L_tree :
             s += tree.language.voc[word].ipa
             s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
             f.write(s)
+
             
         for edge in edges :
             num = [str(keep.index(edge[0])), str(keep.index(edge[1]))]

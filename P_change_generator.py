@@ -128,72 +128,120 @@ class Baby_P_change_generator(P_change_generator) :
         #TODO Is there a way to parametrize the 
         
         index = random.randint(0, len(language.phonemes)-1)
-        target = language.phonemes[index]
+        target = language.phonemes[index].features
         
-        return target
+        return target, language.phonemes[index].is_Vowel()
     
     
     
     
     
-    def extends_target(self, change, language, verbose = False) :
+    def extends_target(self, change, language, n, verbose = False) :
+        """
+        Replaces some of the index values of the target with wildcards
+
+        Parameters
+        ----------
+        change : the change we study
+        .
+        language : Language
+        .
+        n : Number of wildcards (randomly chosen but parametrized we integrate)
+        
+        verbose : TYPE, optional
+            DESCRIPTION. The default is False.
+
+       
+
+        """
+        
+        
+        # we make sure n corresponds to the number of wildcards will get at the end. 
+        impossible_idx = []
         
         
         
-        if change.concerns_V : idx = idxV
-        else : idx = idxC
+        for i in range(n) :
         
-        
-        
-        feature_index = idx [ random.randint (0, len(idx)-1)]
-        
-        
-        change.target = change_pattern (change.target, change.concerns_V, feature_index, -1) 
+            if change.concerns_V : 
+                idx = idxV
+                w = Sampling.featureV_weights
+            else : 
+                idx = idxC
+                w = Sampling.featureC_weights
             
-        impacted = []
-        for phon in language.phonemes :
-            if mask_match(change.target, phon.features, phon.is_Vowel) :
-                impacted.append(phon.ipa)
+            
+            
+            feature_index = random.choices(idx, w)[0]
+            
+            while feature_index in impossible_idx : feature_index = random.choices(idx, w)[0]
+            impossible_idx . append(feature_index)
+            
+            change.target = change_pattern (change.target, change.concerns_V, feature_index, -1) 
                 
-        if verbose :       
-            print()
-            print("impacted", impacted)
-            print()
-            print(change.target)
+            impacted = []
+            for phon in language.phonemes :
+                if mask_match(change.target, phon.features, phon.is_Vowel) :
+                    impacted.append(phon.ipa)
+                    
+            if verbose :       
+                print()
+                print("impacted", impacted)
+                print()
+                print(change.target)
+        
+        
     
     
+        
     
     
     
     def generate_P_change( self,language, rd = True, target = None, ci = None, verbose = False ) :
+        """
         
+
+        Parameters
+        ----------
+        language : Language
+        
+        All the other values are optional, but can be manually selected if provided as parameter
+        
+        rd : bool : is the change random ?
+            DESCRIPTION. The default is True.
+        target : TYPE, optional
+            DESCRIPTION. The default is None.
+        ci : TYPE, optional
+            DESCRIPTION. The default is None.
+        verbose : TYPE, optional
+            DESCRIPTION. The default is False.
+
+        Returns
+        -------
+        change : TYPE
+            DESCRIPTION.
+
+        """
         
         #selection of the target
-        target = self.select_target(language).features 
+        target, concerns_V  = self.select_target(language)
         if verbose : print("Target", target)
         
+        
+       
+        
+        
         #selection of the effect
-        effect = self.select_effect(language, target)
+        effect = self.select_effect(language, target, concerns_V)
         change = P_change(target, effect)
+        change.reset_condition()
         
         if verbose : print("Effect", effect)
         
-        self.extends_target(change, language)
         
+        nb_ext = random.choices (range(0,6), Sampling.weights_extensions)[0]
+        self.extends_target(change, language, nb_ext)
         
-        
-        r = random.randint(0,1)
-        #TODO paramétrisable
-        
-        if r : 
-            self.extends_target(change, language)
-            if verbose : 
-                print()
-                print("Generalization")
-        
-       
-        
-       
         
        
         #we add conditions
@@ -216,6 +264,25 @@ class Baby_P_change_generator(P_change_generator) :
     
 
     def compute_outcome (self,index, input_value, matrix, isV) :
+       """
+        Computes the output value of a feature value, given its original value and the parameter matrix we chose
+
+        Parameters
+        ----------
+        index : TYPE
+            DESCRIPTION.
+        input_value : TYPE
+            DESCRIPTION.
+        matrix : TYPE
+            DESCRIPTION.
+        isV : TYPE
+            DESCRIPTION.
+
+        Returns
+        -------
+        output_value 
+
+        """
        
        manner = False
        sec_manner = False 
@@ -234,6 +301,8 @@ class Baby_P_change_generator(P_change_generator) :
       
    
        return  output_value
+   
+    
    
     
    
@@ -261,7 +330,9 @@ class Baby_P_change_generator(P_change_generator) :
        isV = len(feature_indices(target)) == 5 
        if isV : Trinity = Sampling.MatricesV 
        else : Trinity = Sampling.MatricesC
-       matrix =  Trinity[index[0]][index[1]]
+       
+       
+       matrix =  Trinity[index[0]] [index[1]]
        
        #TODO implement cyclic / multiplu changes
        input_val = target[index[0]][index[1]]
@@ -291,13 +362,32 @@ class Baby_P_change_generator(P_change_generator) :
     
     
     
-    def select_effect(self, language, target) :
+    def select_effect(self, language, target, concerns_V) :
+        """
+        Randomly builds an effect from a target we already know
+
+        Parameters
+        ----------
+        language : TYPE
+            DESCRIPTION.
+        target : TYPE
+            DESCRIPTION.
+        concerns_V : bool
+
+        
+        """
+        
         
         idx = feature_indices(target)
-        domain = random.choice(idx)
+        
+        if concerns_V : 
+            w = Sampling.featureV_weights 
+        else : 
+            w = Sampling.featureC_weights 
+            
+        domain = random.choices(idx, w )[0]
         #TODO paramétriser 
         ef = self.set_funct(domain, target)
-        
         
        
         effect = Effect(domain, ef)
@@ -305,7 +395,31 @@ class Baby_P_change_generator(P_change_generator) :
         return effect 
     
     
+    
+    
+    
     def set_S_condition (self, potential_contexts, change, verbose = False ) : 
+        """
+        Generates a possible S_condition given potential contexts it could be applied to in a given language
+
+        Parameters
+        ----------
+        potential_contexts : TYPE
+            DESCRIPTION.
+        change : TYPE
+            DESCRIPTION.
+        verbose : TYPE, optional
+            DESCRIPTION. The default is False.
+
+        Returns
+        -------
+        Condition
+        
+        Potential candidates provided that they satisfy the new condition
+
+        """
+        
+        
         
         rd_context = random.choice(potential_contexts) 
         
@@ -332,7 +446,32 @@ class Baby_P_change_generator(P_change_generator) :
     
     
     
+    
+    
+    
     def set_abs_Pcondition(self, potential_contexts, change, verbose = False) :
+        """
+        Generate a P_condition with an absolute condition
+
+        Parameters
+        ----------
+        potential_contexts : TYPE
+            DESCRIPTION.
+        change : TYPE
+            DESCRIPTION.
+        verbose : TYPE, optional
+            DESCRIPTION. The default is False.
+
+        Returns
+        -------
+        cond : TYPE
+            DESCRIPTION.
+        candidates : TYPE
+            DESCRIPTION.
+
+        """
+        
+        
         
         
         # TODO we make a first approximation considering that only the very beginning and the very end of the word provide specific positions
@@ -340,8 +479,9 @@ class Baby_P_change_generator(P_change_generator) :
         
         #we set which position is going to be absolute
         sign = random.randint(0,1) 
-        if sign : rel_pos = random.randint(0,2)
-        else : rel_pos = -1 * random.randint(1, 3)
+        
+        if sign : rel_pos = random.choices(range(0,3), Sampling.weights_rel_pos)[0]
+        else : rel_pos = -1 * random.choices(range(1, 4), Sampling.weights_rel_pos )[0]
         
         #we need to sort out possibles context :
         candidates = []
@@ -359,7 +499,32 @@ class Baby_P_change_generator(P_change_generator) :
         else : return None, potential_contexts
         
         
+        
+        
+        
     def set_rel_Pconditions (self, potential_contexts, change, nb_cond, verbose =  False) :
+        """
+        Generates a set of P conditions concerning a change
+
+        Parameters
+        ----------
+        potential_contexts : TYPE
+            DESCRIPTION.
+        change : TYPE
+            DESCRIPTION.
+        nb_cond : TYPE
+            DESCRIPTION.
+        verbose : TYPE, optional
+            DESCRIPTION. The default is False.
+
+        Returns
+        -------
+        conditions : list of Rel_P_conditions
+
+        """
+        
+        
+        #TODO : faire en sorte de privilégier le même feature que l'effect. Assimilation / dissimilation
         
         
         # we pick a context
@@ -397,6 +562,8 @@ class Baby_P_change_generator(P_change_generator) :
             
             if avoid_inf_loops == 100 : break
             
+            same_as_target = random.choices([0,1], Sampling.weights_same_feature)[0]
+        
             
             conditioner = rd_context.phonemes[index].features
             idx_cond = feature_indices(conditioner)
@@ -408,17 +575,21 @@ class Baby_P_change_generator(P_change_generator) :
                 print(rd_context.phonemes[index].features)
                 print()
             
-            #TODO second approximation : one change over 2 the effect is selected.
+            if rd_context.phonemes[index].is_Vowel()  : w = Sampling.featureV_weights
+            else :w = Sampling.featureC_weights
+            
+            
             effect_tf_id = random.choice( list( change.effect.effect.keys()))
-            rd_ft_id = random.choice (feature_indices(rd_context.phonemes[index].features))
-            ft_id = random.choice( [effect_tf_id, rd_ft_id])
+            rd_ft_id = random.choices (feature_indices(rd_context.phonemes[index].features), w)[0]
+            
+            ft_id = random.choices( [effect_tf_id, rd_ft_id], Sampling.weights_same_feature) [0]
             
         
             #TODO third approximation, the number of wildcards
             nb_wild = random.randint(0,5) 
             for l in range  (nb_wild) :
                 
-                effect_tf_id = random.choice( list( change.effect.effect.keys()))
+                effect_tf_id = random.choices( list( change.effect.effect.keys()))
                 rd_ft_id = random.choice (feature_indices(rd_context.phonemes[index].features))
                 ft_id = random.choice( [effect_tf_id, rd_ft_id])
                 if ft_id in idx_cond : conditioner = bewilder_pattern(conditioner, ft_id)
@@ -437,6 +608,22 @@ class Baby_P_change_generator(P_change_generator) :
             
     
     def set_conditions(self, language, change, verbose = False ) :
+        """
+        Adds a parametrized number of condition to the change
+        
+        Parameters
+        ----------
+        language : TYPE
+            DESCRIPTION.
+        change : TYPE
+            DESCRIPTION.
+        verbose : TYPE, optional
+            DESCRIPTION. The default is False.
+
+    
+
+        """
+    
         
         
         #Due to implemetation strategies , we will generate conditions in a spectific order 
@@ -462,7 +649,7 @@ class Baby_P_change_generator(P_change_generator) :
         """
         
         # abs P_condition ?
-        rd = random.randint(0, 6)
+        rd = random.choices([0,1], Sampling.weigt_A_R)[0]
         if not rd :
             cond, potential_contexts = self.set_abs_Pcondition(potential_contexts, change)
             if cond != None : 
@@ -471,7 +658,7 @@ class Baby_P_change_generator(P_change_generator) :
         
         # rel_pos P_condition 
         else :
-            nb_cond = random.randint(1, 3) 
+            nb_cond = random.choices(range(0,4), Sampling.weights_nb_cond)[0]
             if nb_cond :
                 conditions = self.set_rel_Pconditions(potential_contexts, change,  nb_cond)    
                 for c in conditions : change.add_condition(c)
@@ -479,16 +666,12 @@ class Baby_P_change_generator(P_change_generator) :
         if verbose : print("Conditions setted")
         
         
-def rd_rel_pos()  :
-    
-        #TODO first approximation, we estimate that dissimilation has a max range of 3
         
-        ran = random.randint (1, 2) 
+        
+def rd_rel_pos()  :
+        """ returns a random rel position """
+
+        ran = random.choices(range(1,4), Sampling.weights_rel_pos ) [0]
         sign = random.choice ([-1, 1])
         rel_pos = ran * sign
         return rel_pos
-        #TODO simplifie pour test
-        
-        
-
-        

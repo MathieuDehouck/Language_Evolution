@@ -26,7 +26,7 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 50 # depth of a branch
+depth = 20 # depth of a branch
 nbranches = 5 # number of branches
 
 
@@ -37,7 +37,6 @@ lang = get_language("latin_classique.txt", "latin")
 
 st = State(lang)
 
-exit()
 
 
 #lang = get_language("tokipona.txt", "tokipona")
@@ -50,7 +49,7 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, depth, True)
+new_language , changes, wc = time.change(lang, depth)
 #origin.print_both(new_language)
 #origin.compare(nlp)
 
@@ -99,6 +98,6 @@ time.tree.print_history_to_graph("virdia")
 k,e = time.tree.elaborate_history_graph('virdia')
 time.tree.history_to_graph('virdia')
 t = time.tree.get_final_state_of_the_evolution()
-for l in t : print (l.language.voc['virdia'])
+for l in t : print (l.voc['virdia'])
 
 #time.tree.print_history_to_graph_reduced("virdia")
