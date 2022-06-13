@@ -740,14 +740,16 @@ class D_change(Change) :
         for syl in wd.syllables :
             for phon in syl :
                 if phon.features == syl.target :
-                    syl = Syllable ( [pho for pho in syl if pho != phon  ], not phon.is_Vow and syl.stress, not phon.is_Vow and syl.length, None)
+                    syl = Syllable ( [pho for pho in syl if pho != phon], not phon.is_Vow and syl.stress, not phon.is_Vow and syl.length, None)
                     flag_change = False
                 syls.append(syl)
         new_wd = Word(syls)
         if flag_change : regularize_structure(new_wd)
 
 
-    
+
+
+
 class I_change(Change) :    
     """
     class for insertion changes (diphtongisation)
