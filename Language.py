@@ -80,6 +80,8 @@ class Language() :
     
     
     
+    
+    
     def get_subclasses(self) :
         
         subclasses = {} 
@@ -95,6 +97,17 @@ class Language() :
             subclasses[phoneme] = subclass
         return subclasses
     
+    
+    def print_phonetic_inventory(self) :
+        """
+        Prints a simple version of the inventory of the language's phonemes.
+
+        """
+        print()
+        print("PHONOLOGICAL INVENTORY OF",self.name)
+        print()
+        for phon in sorted(self.phonemes) : 
+            print(phon.ipa, "   ", phon.description)
     
     
     
@@ -158,8 +171,39 @@ class Language() :
         for word in self.voc :
             print(self.voc[word].ipa, "  vs  ", lang.voc[word].ipa)
 
+    
 
-
+    def inventory_comparison(self, other) :
+        
+        tot = [x for x in self.phonemes if x not in other.phonemes] + [x for x in other.phonemes if x not in self.phonemes]
+        
+        
+        match = len( [x for x in self.phonemes if x in other.phonemes ] )
+        total = len(tot)
+        
+        diff = []
+        
+        ina = [x .ipa for x in self.phonemes if x not in other.phonemes ]
+        for p in ina : diff.append([p, "only in "+str(self.name)])
+        inb = [x.ipa for x in other.phonemes if x not in self.phonemes ]
+        for p in inb : diff.append([p, "only in "+str(other.name)])
+    
+        return (match  + total)/ total , diff
+        
+        
+    
+    def evaluate_proximity(self, other ) :
+        
+        
+        invent_sim , diff = self.inventary_comparison(other)
+        print("Phonetic inventory similarity ", )
+        
+        return 
+    
+    
+    
+    
+    
 
 class State():
     """

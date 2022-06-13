@@ -11,7 +11,7 @@ from os.path import abspath
 
 from IPA_utils import manner_enc
 from Phoneme import Vowel, Consonant
-
+from ipapy import UNICODE_TO_IPA
 
 
 class archetype(object) :

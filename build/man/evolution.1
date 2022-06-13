@@ -1,0 +1,1617 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "EVOLUTION" "1" "Jun 13, 2022" "0" "Evolution"
+.SH NAME
+evolution \- Evolution Documentation
+.INDENT 0.0
+.IP \(bu 2
+genindex
+.IP \(bu 2
+modindex
+.IP \(bu 2
+search
+.UNINDENT
+.sp
+Created on Thu May  5 00:01:15 2022
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B class IPA.IPA
+A singleton class to represent the IPA viewed as a set of archetypal phonemes.
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B cfeatures or vfeatures
+list
+list of the str corresponding to the name of the features used in this IPA to describe the phonemes . it describe their semantics
+.TP
+.B phonemes
+list
+list of archetypes objects , representing the canonical phonemes of the IPA
+.TP
+.B alphabet
+dic
+dictionnary mapping an ipa character to the phoneme it describes
+.TP
+.B f2ipa
+dic
+dictionnary mapping a feature list to its ipa character
+.TP
+.B classes
+list
+list of the name of the different natural classes we consider in our phonology (built using a csv file)
+.TP
+.B dic_class
+dic
+dictionnary mapping a class name to the class object that represents it
+.UNINDENT
+.sp
+__init__() no argument, automatically generates the IPA from a CSV file we created
+.INDENT 7.0
+.TP
+.B static get_IPA()
+Static access method.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_char(phon, verbose=False)
+returns a string representing the input phoneme\(aqs features
+.INDENT 7.0
+.TP
+.B phon
+A phoneme
+.TP
+.B verbose
+bool, optional
+As usual. Verbose with me means verry verbose. The default is False.
+.UNINDENT
+.sp
+string
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class IPA.archetype(string, feats, vow)
+A class to represent an archetypal phoneme (phoneme belonging to the IPA)
+These objects are not mutable
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B ipa
+str
+character representing the phoneme in the IPA
+.UNINDENT
+.sp
+features : tuple in a format we defined that represent key informations to define a phoneme\(aqs property\(aq
+description : str
+.INDENT 7.0
+.INDENT 3.5
+precise description of the phoneme (obtained using the IPA python module)
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B __init__(str, liste) 
+the constructor, that takes the ipa and features as attributes
+.UNINDENT
+.sp
+is_Vowel
+is_Consonant
+get_one
+.INDENT 7.0
+.TP
+.B get_one(extra_feats, syllabic)
+I\(aqll change this eventually
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B IPA.cons_dist(features, consonants)
+computes the distance between a cons features and a set of consonants
+.UNINDENT
+.INDENT 0.0
+.TP
+.B IPA.vowel_dist(features, vowels)
+computes the distance between a vow features and a set of vowells
+.UNINDENT
+.sp
+Created on Tue May  3 00:08:43 2022
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B class Phoneme.Consonant(features, syllabic, speller)
+A class representing a Consonant
+.sp
+Semantic of a feature ;
+.sp
+syl : field of the Phoneme
+voice : filed of the Phoneme
+.INDENT 7.0
+.TP
+.B Features :
+.INDENT 7.0
+.TP
+.B First tuple :
+0 : 
+"place of articulation" : int 
+1 : list of 5 manner of articulation , each coded by a boolean
+.INDENT 7.0
+.INDENT 3.5
+"plosive"
+"fricative"
+"nasal"
+"trill"
+"lateral"
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+Second tuple :
+.INDENT 7.0
+.INDENT 3.5
+"secondary place of articulation"  int (3 or 4 possibilities, same semantics as in place of articulation)
+"pren_nasal"  bool
+"aspiration" bool
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B ipa
+str
+the ipa representation of a phoneme
+.TP
+.B features
+list
+a list representing the features associated to the phonem
+.TP
+.B description
+str
+the verbose descritption of the phoneme
+.TP
+.B voice
+bool 
+states if the phoneme is voiced or not
+.TP
+.B syl
+bool 
+states if the phoneme is center of a syllable
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.sp
+update_IPA  : finds the closest ipa character to represent a new phoneme
+.sp
+is_round
+is_nasal
+is_palatal
+.sp
+get_place
+get_manner
+.sp
+linearize : get the representation of the phoneme as a list of integers
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Phoneme.Phoneme(features, syllabic, speller=None)
+A class representing a phoneme
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B ipa
+str
+the ipa representation of a phoneme
+.TP
+.B features
+list
+a list representing the features associated to the phonem
+.TP
+.B description
+str
+the verbose descritption of the phoneme
+.TP
+.B voice
+bool 
+states if the phoneme is voiced or not
+.TP
+.B syl
+bool 
+states if the phoneme is center of a syllable
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.sp
+update_IPA  : finds the closest ipa character to represent a new phoneme
+.INDENT 7.0
+.TP
+.B update_IPA(config, verbose=False)
+updates the ipa field of the Phoneme it is applied to.
+.INDENT 7.0
+.TP
+.B config
+list
+A list representingthe feature we want
+.TP
+.B verbose
+bool, optional
+As usual. Verbose with me means verry verbose. The default is False.
+.UNINDENT
+.sp
+None.
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Phoneme.Vowel(features, syllabic, speller)
+A class representing a Vowel
+.sp
+Semantic of a feature ;
+.sp
+syl : field of the Phoneme
+voice : filed of the Phoneme
+.INDENT 7.0
+.TP
+.B Features :
+First tuple :
+.INDENT 7.0
+.INDENT 3.5
+"fronting" : int  btw 0 and 2
+"height", int btw 0 and 6
+.UNINDENT
+.UNINDENT
+.sp
+Second tuple :
+.INDENT 7.0
+.INDENT 3.5
+"round" : bool
+"nasal" : bool
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B ipa
+str
+the ipa representation of a phoneme
+.TP
+.B features
+list
+a list representing the features associated to the phonem
+.TP
+.B description
+str
+the verbose descritption of the phoneme
+.TP
+.B voice
+bool 
+states if the phoneme is voiced or not
+.TP
+.B syl
+bool 
+states if the phoneme is center of a syllable
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.sp
+update_IPA  : finds the closest ipa character to represent a new phoneme
+.sp
+get_height
+get_front
+.sp
+is_round
+is_nasal
+is_palatal
+is_voiced
+.UNINDENT
+.INDENT 0.0
+.TP
+.B Phoneme.get_phon(string)
+transform a string (we excpect the user to enter an ipa character) into the Phoneme object representing this character
+.UNINDENT
+.sp
+Created on Thu May  5 10:22:10 2022
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B class Change.Change(target, effect, conditions)
+An abstract class representing a phonetic change.
+They can be of three kinds :
+.INDENT 7.0
+.INDENT 3.5
+.INDENT 0.0
+.IP \(bu 2
+Phonetics (
+.nf
+P_
+.fi
+)
+.IP \(bu 2
+Syllabic (
+.nf
+I_
+.fi
+)
+.IP \(bu 2
+Wordzddzqd (?_)
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B conditions
+list
+list of conditions required for the change to be applied
+.TP
+.B impacted_phonems
+dic
+dictionnary stocking the phonemes that have been impacted by a change during its application
+#TODO check it works
+.TP
+.B target
+condition
+a special kind of condition that contraint the category of the phoneme that undergo the change
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.sp
+add_condition
+set_target
+check : checks if all the conditions are satisfied before the application of the change
+.INDENT 7.0
+.TP
+.B add_condition(condition)
+used to add a condition to an already built change
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_syl(syl)
+Apply the change to a syllable
+.sp
+syl : Syllable
+.sp
+nsyl : Syllable
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_word(word)
+Apply the change to a word
+.sp
+word : Word
+.sp
+nword : a new word with the change applied
+.UNINDENT
+.INDENT 7.0
+.TP
+.B check(phon, index, word, verbose=False)
+check if a Change can be applied or not
+.INDENT 7.0
+.TP
+.B phon
+Phoneme
+phoneme we want to apply a change on
+.UNINDENT
+.sp
+index :int.
+word : Word
+.INDENT 7.0
+.INDENT 3.5
+Context
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B verbose
+TYPE, optional
+DESCRIPTION. The default is False.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply
+bool 
+whether the change can be applied or not
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Change.D_change(target, conditions)
+class allowing deletion of phonemes (monophtongisation a.o.)
+.INDENT 7.0
+.TP
+.B apply_word(wd)
+Apply the change to a word
+.sp
+word : Word
+.sp
+nword : a new word with the change applied
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Change.I_change(target, effects, conditions)
+class for insertion changes (diphtongisation)
+.INDENT 7.0
+.TP
+.B apply_phon(phon, syl, word)
+we always return a list, a singleton list if the change does not apply, a pair of more otherwise
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_syl(syl, word)
+Apply the change to a syllable
+.sp
+syl : Syllable
+.sp
+nsyl : Syllable
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_word(word)
+Apply the change to a word
+.sp
+word : Word
+.sp
+nword : a new word with the change applied
+.UNINDENT
+.INDENT 7.0
+.TP
+.B check(phon, index, word, verbose=False)
+check if a Change can be applied or not
+.INDENT 7.0
+.TP
+.B phon
+Phoneme
+phoneme we want to apply a change on
+.UNINDENT
+.sp
+index :int.
+word : Word
+.INDENT 7.0
+.INDENT 3.5
+Context
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B verbose
+TYPE, optional
+DESCRIPTION. The default is False.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply
+bool 
+whether the change can be applied or not
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Change.P_change(target, effect, conditions=None)
+subclass of change 
+A class modelling a phonological change .
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B conditiosn
+list
+list of the conditions that need to be satisfied for the change to be applied
+.TP
+.B config_initiale
+configuration
+template of the configuration selecting the feature(s) to be modified
+.TP
+.B config_finale
+configuration
+template with the modification applied
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.INDENT 7.0
+.TP
+.B apply_phon :
+input : a phoneme (among other onformations)
+outputs a phoneme with the change umpload
+.UNINDENT
+.sp
+variants :
+.sp
+apply_word
+apply_syl
+apply_language
+.INDENT 7.0
+.TP
+.B add_condition :
+input : a condition
+adds it to the condition list.
+.UNINDENT
+.sp
+rd_change ; creates a random change
+.INDENT 7.0
+.TP
+.B applicable(language)
+checks if a change would modufy a language given as input. 
+if that s not the case, it is not usefull to apply it.
+.INDENT 7.0
+.TP
+.B language
+Language
+the language we would like to apply the change on
+.UNINDENT
+.INDENT 7.0
+.TP
+.B bool
+DESCRIPTION.
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_language(lang, verbose=False)
+Apply the change on every word in the langugage
+.sp
+lang : language
+.sp
+a new language with the change applied on every of its word
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_phon(phon, index, word, verbose=False)
+Applies the change on a phoneme
+.INDENT 7.0
+.TP
+.B phon
+phoneme
+phone
+.TP
+.B index
+int 
+rank of the phoneme in the overall word
+.TP
+.B word
+word 
+wird that encompass the phoneme we are studying, plays the role of a contest
+.TP
+.B verbose
+bool, optional
+Enable or disable the verbose mode . The default is True.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B index
+the updated index at the end of the process
+.TP
+.B phon 
+the new phoneme obtained after the applciation of the change
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_syl(syl, index, wd, verbose=False)
+Apply the change to a Syllable
+.INDENT 7.0
+.TP
+.B syl
+syllable
+the syllable we are going to apply the change to
+.TP
+.B index
+int
+index encoding the phoneme that will undergo the change
+.TP
+.B wd
+TYPE
+word of origin of the syllable, plays the role of the context
+.UNINDENT
+.INDENT 7.0
+.TP
+.B syl
+the updated syllable
+.TP
+.B index
+int
+the index updated
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_word(wd, verbose=False)
+Apply the change to a word
+.sp
+wd : word
+.sp
+word : a new word with the change applied
+.UNINDENT
+.INDENT 7.0
+.TP
+.B just_transform(phon)
+Applies a change to transform a phoneme whithout taking care of any kind of condition
+.sp
+phon : Phoneme
+.sp
+new_phon : Phoneme
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Change.S_change(config_initiale, config_finale, conditions=[])
+subclass of change 
+A class modelling a structural change in the syllable .
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B conditiosn
+list
+list of the conditions that need to be satisfied for the change to be applied
+.TP
+.B config_initiale
+list
+a list of 3 boleans coding stress , length and tone (None for now)
+.TP
+.B config_finale
+list
+a list of 3 boleans coding stress ,length (None for now)
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.sp
+apply_word
+apply_syl
+apply_lang
+.INDENT 7.0
+.TP
+.B add_condition :
+input : a condition
+adds it to the condition list.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_syl(syl, word, index)
+Apply the change to a syllable
+.sp
+syl : Syllable
+.sp
+nsyl : Syllable
+.UNINDENT
+.INDENT 7.0
+.TP
+.B apply_word(wd)
+Apply the change to a word
+.sp
+word : Word
+.sp
+nword : a new word with the change applied
+.UNINDENT
+.INDENT 7.0
+.TP
+.B check(word, rank)
+checks if a change can ba applied to a word
+.INDENT 7.0
+.TP
+.B word
+word 
+word that we test
+.TP
+.B rank
+int
+rank of the phoneme
+.UNINDENT
+.INDENT 7.0
+.TP
+.B bool
+whether it is applicable
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+Created on Thu May  5 15:09:17 2022
+.sp
+@author: 3b13j
+.sp
+Contains the condition class and some methodes that could be applied to them.
+A condition is associated to a change object and states whether a change can be applied or not.
+.INDENT 0.0
+.TP
+.B class Condition.Cond_AND(conditions)
+AND for conditions logic.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Condition.Cond_NOT(condition)
+NOT for conditions logic.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Condition.Cond_OR(conditions)
+OR for conditions logic.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Condition.Condition
+MOTHER CLASS
+.sp
+A class to represent a condition.
+This is an abstract class.
+.sp
+In our implementation of phonetic change, we distinguished 3 different subclasses of conditions :
+.INDENT 7.0
+.INDENT 3.5
+.INDENT 0.0
+.IP \(bu 2
+phonemic condition
+.IP \(bu 2
+stress and syllable weight condition
+.IP \(bu 2
+metathesis and mechanical conditions
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Condition.P_condition(feature_template, rel_pos=0, absol_pos=42, continu=False)
+A class to represent a condition regarding the nature of the phoneme that undergoes a change 
+and its neighbours.
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B template
+list
+the feature template that need to be satisfied (\-1 means  wildcard) for the condition to be satisfied
+.TP
+.B name
+str (optionnal)
+used to name usual changes
+.TP
+.B absol_pos
+int
+absolute offset, checks the position of the phoneme inside the word.
+\-1 means wildcard
+.TP
+.B rel_pos
+int
+defines the position of the phoneme conditionning the change regarding the phoneme undergoing it
+0 means the condition applies to the phonemes that changes itself
+.TP
+.B continu
+bool.INDENT 7.0
+.TP
+.B states if the condition needs to be satisfied by at least one of the phoneme in the range of rel_pos or 
+if just the phoneme at "rel pos " is concerned.
+.UNINDENT
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.INDENT 7.0
+.TP
+.B test :
+input : a word and an index.
+checks whether the condition is satisfied.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_absol_pos(value)
+set the condition\(aqs absol pos with a new value\(aq
+.sp
+value : int
+.sp
+None.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_rel_pos(value)
+set the condition\(aqs relative pos with a new value\(aq
+.sp
+value : int
+.sp
+None.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B test(word, rank, verbose=False)
+Checks if a condition is satisfied on a given word.
+Key method of the Condition class
+.INDENT 7.0
+.TP
+.B word
+word
+word on which we check the condition
+.TP
+.B rank
+int
+rank of the word we examine the condition on
+.TP
+.B verbose
+TYPE, optional
+as usual. The default is False.
+.UNINDENT
+.sp
+a boolean
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Condition.S_condition(abs_position=42, rel_pos=0, length=None, stress=None, tone=None)
+A class to represent a condition regarding the Syllabic structure of the word
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B absol_pos
+int
+absolute offset, checks the position of the syllable  inside the word.
+\-1 means wildcard
+.TP
+.B rel_pos
+int
+defines the position of the phoneme conditionning the change regarding the syllable undergoing it
+0 means the condition applies to the phonemes that changes itself
+.TP
+.B stress
+bool 
+Checks a condition on the stress
+.TP
+.B length
+bool 
+Checks a condition on the length
+.TP
+.B tone
+bool 
+Checks a condition on the tone
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.INDENT 7.0
+.TP
+.B test :
+input : a word and an index.
+checks whether the condition is satisfied.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B test(word, rank, verbose=False)
+Test if the change can be applied on the word regarding the syllabic configuration
+.INDENT 7.0
+.TP
+.B word
+word
+the word that undergoes the change
+.TP
+.B rank
+int
+rank of the syllable that is being examined
+.TP
+.B verbose
+bool, optional
+enable the verbose mode. The default is False.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B bool
+boolean, if the change has to be applied
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B Condition.rd_p_condition(language, rel_pos=0, abs_pos=\- 1, continu=False)
+generates a random P_condition
+.INDENT 7.0
+.TP
+.B rel_pos
+int, optional
+indicates the relative position of the condition
+.TP
+.B abs_pos
+TYPE, int
+cf condition class
+.TP
+.B continu
+TYPE, optional
+cf condition class
+.UNINDENT
+.sp
+None.
+.UNINDENT
+.sp
+Created on Wed Jun  1 09:55:33 2022
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B class Effect.Effect(domain, effect)
+A class representing the effect of a change
+.sp
+The effect is encoded as a dictionnary, taking as key the index of the feature to be modified, and
+as value a couple [initial value, new value]
+This representation will allow to modelize cyclic change.
+.sp
+An effect could be built using a target
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B target
+(optionnal ) tuple
+a feature pattern representing the phonemes the change can be applied to
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.sp
+random_effect
+.UNINDENT
+.sp
+to fill
+.sp
+Created on Mon May  2 16:34:02 2022
+.sp
+@author: 3b13j
+.sp
+contains usefull functions to extract data from conllu files
+.INDENT 0.0
+.TP
+.B conllu_utilities.GetKey(val, dic)
+to get the key giving as input the value and a dictionnary
+.UNINDENT
+.INDENT 0.0
+.TP
+.B conllu_utilities.extract_conllu(path)
+Extracts data from a conllu file
+.INDENT 7.0
+.TP
+.B path
+str
+a path to the origin file
+.UNINDENT
+.INDENT 7.0
+.TP
+.B res
+a list 
+the result of a successful extraction
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B conllu_utilities.word_2_phoneme_lat(string, alph)
+A useless thing that treats latin
+.UNINDENT
+.sp
+Created on Wed Jun  1 09:55:33 2022
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B class Effect.Effect(domain, effect)
+A class representing the effect of a change
+.sp
+The effect is encoded as a dictionnary, taking as key the index of the feature to be modified, and
+as value a couple [initial value, new value]
+This representation will allow to modelize cyclic change.
+.sp
+An effect could be built using a target
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B target
+(optionnal ) tuple
+a feature pattern representing the phonemes the change can be applied to
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.sp
+random_effect
+.UNINDENT
+.sp
+Created on Fri May 20 11:15:50 2022
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B encoder_decoder.decode_f(string)
+Decode a string we encoded earlier
+.sp
+string : to be decoded
+.UNINDENT
+.INDENT 0.0
+.TP
+.B encoder_decoder.encode_f(feat)
+encode a feature into the format we chose
+.INDENT 7.0
+.TP
+.B feat
+list
+the feature rpz of a template
+.UNINDENT
+.sp
+s : str
+.UNINDENT
+.sp
+Created on Thu May  5 09:28:54 2022
+.sp
+@author: 3b13j
+.sp
+Contains the languge class
+.INDENT 0.0
+.TP
+.B class Language.Language(name, dic)
+A class to represent a language, considered as the list of the phonems it possesses.
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B name
+str
+name of the language
+.TP
+.B voc
+dic 
+dicitonnary storing all the words of the language
+.TP
+.B phonemes
+list
+list of all the phonemes belonging to the language
+.TP
+.B dic_phonemes
+dic
+a dic mapping a character to a phoneme
+.UNINDENT
+.sp
+__init__() the constructor
+.INDENT 7.0
+.TP
+.B compare(language, verbose=False)
+.INDENT 7.0
+.TP
+.B language
+another Language object
+DESCRIPTION.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B differents
+list 
+the list of word that have been modified in the new language
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Language.State(language)
+A condensed representation of a language for faster interaction and change generation
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B phonemes
+dict
+list of all the phonemes belonging to the language
+.TP
+.B syllables
+dict
+a dict of syllables
+.UNINDENT
+.sp
+__init__() the constructor
+.UNINDENT
+.sp
+Created on Tue May 17 16:02:54 2022
+.sp
+@author: 3b13j
+.sp
+Contains some side methods to write the state of some objects and describe the execution of the program  in log files
+.INDENT 0.0
+.TP
+.B log_utilities.create_breviary()
+Creates a user friendly document that describes all the natural classes that exist with regard to the
+IPA we use at the heart of the program""
+.UNINDENT
+.INDENT 0.0
+.TP
+.B log_utilities.extract_changed_words(path, write=False)
+Analyses a dictionnary log and extracts only the words that were changed.
+.sp
+The function the can if the user wants it write the modified words at the end of the same document
+.INDENT 7.0
+.TP
+.B path
+str
+path to the file
+.TP
+.B write
+bool
+Does the user want to write down the modified words at the end of the document ?
+.UNINDENT
+.sp
+chg_wds :list
+.UNINDENT
+.INDENT 0.0
+.TP
+.B log_utilities.langcomp2log(l1, l2, path)
+Comapres the vobulary of two languages and writes the comparison in a log (subfunction used to trace the evolution between two language state)
+BE CAREFUL, we excpect the two languages to be related / at least to have the same voc size for this operation to make sense.
+.sp
+l1 : Language
+.sp
+l2 :Language
+.INDENT 7.0
+.TP
+.B path
+str
+path to destination file
+.UNINDENT
+.sp
+None.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B log_utilities.lgs2log(liste)
+print the evolution of a language step by step.
+.sp
+liste : list of languages where the i+1 th element is the result of the evolution of the ith
+.sp
+None.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B log_utilities.phon2log(phon, path)
+writes a phoneme in the log format we defined
+.sp
+phon : phoneme to write in the script
+.INDENT 7.0
+.TP
+.B path
+str 
+path to the target file
+.UNINDENT
+.sp
+None.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B log_utilities.purge_log(path)
+Clears a log file
+.sp
+path :
+.sp
+None.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B log_utilities.samples2log(path, liste, n=10)
+Method that writes down only some of the words modified by a change.
+.INDENT 7.0
+.TP
+.B path
+str
+path to the file you want tp write in.
+.UNINDENT
+.sp
+liste : list of changed words :
+n : int, optional
+.INDENT 7.0
+.INDENT 3.5
+number of words that will be printed. The default is 10.
+.UNINDENT
+.UNINDENT
+.sp
+None.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B log_utilities.target2str(feat)
+Encode the target of a change to write it latter in the log
+.INDENT 7.0
+.TP
+.B feat
+list 
+description of a feature template
+.UNINDENT
+.sp
+s : qtring describing it
+.UNINDENT
+.INDENT 0.0
+.TP
+.B log_utilities.write_in_log(path, string)
+Takes as input the name of a log file and the sentence that it sould add in it
+.UNINDENT
+.sp
+Created on Tue May  3 12:20:06 2022
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B class Natural_class.Natural_class(name, feat, vow, lin)
+An object representing a natural class
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B name
+str 
+The name of a class
+.TP
+.B members
+list
+list of the phonemes belonging to a class
+.TP
+.B template
+list
+list of the feature template representing the class. initiated with full wildcards
+.UNINDENT
+.sp
+__init__() constructor taking all these information as input
+.sp
+add_phon
+set_template
+.UNINDENT
+.INDENT 0.0
+.TP
+.B Natural_class.create_classes(alphabet)
+creates the natural classes from an ipa alphabet
+definded outside the class to be used once and for all
+.sp
+alphabet : an ipa alphabet
+.INDENT 7.0
+.TP
+.B dic_class
+dic
+dictionnary mapping the name of a natural class to the class object
+.TP
+.B classes
+list
+list of the natural classes we want to work with
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B Natural_class.list2class(name, clas)
+Creates a Natural_class with the name given as input and add all the phonemes givent in the second input (list)
+.UNINDENT
+.sp
+Created on Tue May 17 13:04:22 2022
+.sp
+@author: 3b13j
+.sp
+Created on Tue May 31 12:42:01 2022
+.sp
+sampling :
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B Sampling.MatricesC = ((array([[0., 4., 2., 1., 0., 0., 0., 0., 0., 0., 0., 0.],        [4., 0., 4., 2., 1., 0., 0., 0., 0., 0., 0., 0.],        [2., 4., 0., 4., 2., 1., 0., 0., 0., 0., 0., 0.],        [1., 2., 4., 0., 4., 2., 1., 0., 0., 0., 0., 0.],        [0., 1., 2., 4., 0., 4., 2., 1., 0., 0., 0., 0.],        [0., 0., 1., 2., 4., 0., 4., 2., 1., 0., 0., 0.],        [0., 0., 0., 1., 2., 4., 0., 4., 2., 1., 0., 0.],        [0., 0., 0., 0., 1., 2., 4., 0., 4., 2., 1., 0.],        [0., 0., 0., 0., 0., 1., 2., 4., 0., 4., 2., 1.],        [0., 0., 0., 0., 0., 0., 1., 2., 4., 0., 4., 2.],        [0., 0., 0., 0., 0., 0., 0., 1., 2., 4., 0., 4.],        [0., 0., 0., 0., 0., 0., 0., 0., 1., 2., 4., 0.]]), array([[0, 5, 5, 5, 5, 5, 5, 1, 1, 1],        [5, 0, 5, 1, 1, 5, 1, 1, 1, 1],        [5, 5, 0, 5, 3, 3, 5, 1, 1, 5],        [5, 3, 5, 0, 5, 5, 1, 5, 1, 5],        [5, 1, 1, 3, 0, 5, 1, 1, 1, 1],        [3, 1, 1, 3, 5, 0, 1, 1, 1, 1],        [5, 1, 3, 3, 3, 3, 0, 5, 5, 1],        [1, 1, 1, 5, 1, 1, 5, 0, 1, 1],        [1, 1, 1, 1, 1, 5, 5, 1, 0, 1],        [1, 1, 5, 5, 1, 1, 1, 1, 1, 0]]), array([[0., 4.],        [4., 0.]])), (array([[0., 4., 2., 1.],        [4., 0., 4., 2.],        [2., 4., 0., 4.],        [1., 2., 4., 0.]]), array([[0., 4.],        [4., 0.]]), array([[0., 4.],        [4., 0.]])))
+être generique, choisir une manière
+.sp
+manière de remplir, vitef
+.sp
+mais manière de les construire
+design fort,  choix qui a un sens , cohérent et on le tient , ou qqc de numérique, générique
+.sp
+le vecteur de feats est composé de deux bouts. 
+ds ces 2 bouts, on a des index,
+.sp
+chaque attribut à deu
+.sp
+deux boucles for imbriquées. enumeration des turcs du premier niveau ,ceux du second niceau. 
+faire des paires 
+on tire au hasard une paire A B 
+phon.feature (A B )
+.sp
+crer matrices,  on les met dans des structures qui ont la même forme que les features
+.UNINDENT
+.sp
+Created on Wed May 18 17:00:17 2022
+.sp
+@author: 3b13j
+.INDENT 0.0
+.TP
+.B class Tree.L_tree(language, parent=None)
+a special kind of phylogentic tree storing our languages
+as defined, the structure should be names "forward tree" since the change is unidirectionnal
+.INDENT 7.0
+.TP
+.B elaborate_history_graph(word)
+Extracts a subgraph representing the history of the evolution of a particular word in all the languages we generated
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_ad_2_tree(dic={})
+returns a dictionnary mapping an adress to the tree object
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_depth(dic={})
+return a dictionarry mapping the address of a tree to its depth
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_final_state_of_the_evolution()
+Returns the languages at the end of our evolution tree
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_history_word(word, liste=[])
+Stores the state of the word in the histtory of all the generated languages
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_languages(liste={})
+Returns a dictionnary mapping the adress of a tree to the language it stores
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_leaves(liste=None)
+Get the list of the leaves of a language
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_nodes(liste=None)
+returns a list containing all the tree object that are nodes in the mother tree
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_path_to_root()
+Returns the list of all the nodes leading from the target node to the root of the tree
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_scores(liste=[], scores=[])
+Get a mapping between change objects and the chance they have to appear
+.UNINDENT
+.INDENT 7.0
+.TP
+.B history_to_graph(word)
+print a graph only displaying the informations on the evolution of a single word
+.UNINDENT
+.INDENT 7.0
+.TP
+.B pick_a_node()
+Pick a random node from a tree
+.UNINDENT
+.INDENT 7.0
+.TP
+.B print_history_to_graph(word)
+Display a graph in which the nodes represent a word at a certain langugage state, and the edges the link between two languages
+.UNINDENT
+.UNINDENT
+.sp
+Created on Wed May  4 14:39:58 2022
+.sp
+@author: 3b13j
+.sp
+Contains the Word class and some methods used specifically to work with it
+.INDENT 0.0
+.TP
+.B class Word.Syllable(phonemes, stress=False, length=False, tone=None)
+A class to represent a syllable.
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B phonemes
+list
+list of the phonemes composing the syllable
+.TP
+.B stress
+bool 
+indicate whether the syllable bears stress or not
+.TP
+.B length
+bool 
+indicate if the vowell in the syllable have more than 2 mora.
+.TP
+.B i_center
+int
+index of the phoneme which is at the heart of the syllable
+.TP
+.B center: phoneme
+phoneme which is at the heart of the syllable
+.UNINDENT
+.INDENT 7.0
+.TP
+.B init__()__
+constructor that takes as input the list of phonemes in the syllable
+.TP
+.B set_stress(bool) :
+allow the programm to change the stress of a syllable
+.TP
+.B set_length(bool)
+allow the programm to change thelength of a syllable
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_length(length)
+Allow the program to change the stress of a syllable
+.INDENT 7.0
+.TP
+.B stress
+bool
+The new value
+.UNINDENT
+.sp
+None.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_rank_in_wd(rk)
+small setter for the rank in word if it changes durong an I change)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_stress(stress)
+Allow the program to change the stress of a syllable
+.INDENT 7.0
+.TP
+.B stress
+bool
+The new value
+.UNINDENT
+.sp
+None.
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class Word.Word(syls)
+A class to represent a word.
+.sp
+\&...
+.INDENT 7.0
+.TP
+.B ipa
+str
+phonological transcription of the word using the IPA
+.TP
+.B structure
+str 
+structure of the word (using a CVC format)
+.TP
+.B syllables
+list
+list of the syllable object the word contains
+.TP
+.B phonemes
+list
+list of the phonemes the word contains
+.TP
+.B phon2syl
+dic
+dictionnary mapping the index of a phoneme to the index of the syllable it is in
+.UNINDENT
+.INDENT 7.0
+.TP
+.B info(additional=""):
+Prints the person\(aqs name and age.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_stess_pattern()
+Returns a string representing the stress pattern of the word
+.UNINDENT
+.INDENT 7.0
+.TP
+.B get_structure()
+transform a list of syllables into a string representing its structure (in the CVC format)
+.UNINDENT
+.UNINDENT
+.sp
+Created on Wed May  4 11:30:09 2022
+.sp
+@author: 3b13j
+.sp
+Module containing general functions used to print complex objects or write logs
+.INDENT 0.0
+.TP
+.B utilitaries.feature_indices(features)
+Gives the coordinates of the indices of a template
+.INDENT 7.0
+.TP
+.B features
+TYPE
+DESCRIPTION.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B idx
+TYPE
+DESCRIPTION.
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B utilitaries.feature_match(f1, f2, verbose=False)
+input : two feature list 
+returns whether the second is compatible with the first.
+It is therefore required to give the most general one as first input.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B utilitaries.feature_random_generator()
+Used to generate a feature randomly
+.INDENT 7.0
+.TP
+.B feature
+feature
+randomly generated
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B utilitaries.printd(liste)
+Takes a dictionnary as input and print the first object and the second object, and not the address in memory of the object
+.UNINDENT
+.INDENT 0.0
+.TP
+.B utilitaries.printl(liste)
+Takes a list of complex objects as input and prints them, one per line
+.UNINDENT
+.INDENT 0.0
+.TP
+.B utilitaries.tpl_2_candidates(lang, tpl, verbose=False)
+gives the list of the phonemes of a language that satisfy a conditionned feature template
+.INDENT 7.0
+.TP
+.B lang
+language
+the language we want to extract candidates from
+.TP
+.B tpl
+list
+feature template that we want to be satisfieds
+.UNINDENT
+.sp
+cands : list
+.UNINDENT
+.INDENT 0.0
+.TP
+.B utilitaries.vowell(feat)
+checks wether or not the feature given as input encodes a vowell.
+.UNINDENT
+.SH AUTHOR
+Louis Jourdain, Mathieu Dehouck
+.SH COPYRIGHT
+2022, Louis Jourdain, Mathieu Dehouck
+.\" Generated by docutils manpage writer.
+.

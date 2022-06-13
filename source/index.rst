@@ -37,3 +37,46 @@ Indices and tables
 	:members:
 
 .. automodule:: Generator
+	:members:
+
+.. automodule:: conllu_utilities
+	:members:
+
+.. automodule:: Effect
+	:members:
+
+.. automodule:: encoder_decoder
+	:members:
+
+.. automodule:: IPA_utils
+	:members:
+
+.. automodule:: Language
+	:members:
+
+.. automodule:: log_utilities
+	:members:
+
+.. automodule:: Natural_class
+	:members:
+
+.. automodule:: rd_changer
+	:members:
+
+.. automodule:: Sampling
+	:members:
+
+.. automodule:: Syllable
+	:members
+
+.. automodule:: Tree
+	:members:
+
+.. automodule:: wiki_utilities
+	:members:
+
+.. automodule:: Word
+	:members:
+
+.. automodule:: utilitaries
+	:members:

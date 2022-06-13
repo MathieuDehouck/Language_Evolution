@@ -55,8 +55,10 @@ class Phoneme(object) :
         self.features = features
         
         self.ipa = speller.get_char(self)
-        self.description = ''
-        
+        try:
+            self.description = UNICODE_TO_IPA[str(self.ipa)]._IPAChar__canonical_string
+        except:
+            self.description = 'No description'
         
         
     def __str__(self):
