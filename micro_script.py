@@ -26,18 +26,18 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 50 # depth of a branch
-nbranches = 10 # number of branches
+depth = 5 # depth of a branch
+nbranches = 4 # number of branches
 
 
 
 # We choose a language to play with 
 
-#lang = get_language("latin_classique.txt", "latin")
+lang = get_language("latin_classique.txt", "latin")
 
 #st = State(lang)
 
-lang = get_language("tokipona.txt", "tokipona")
+#lang = get_language("tokipona.txt", "tokipona")
 
 #lang = get_language("greek.txt", "greek")
 

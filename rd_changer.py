@@ -93,16 +93,11 @@ class Tree_changer(Changer) :
 
         print('Just trying an insertion before the rest')
         change = self.generator.generate_P_change(expanded_tree.language)
-
+        
         change = I_change(change.target,
                           [change.effect,
                            self.generator.select_effect(expanded_tree.language, change.target, len(change.target[1]) == 2),
-                           self.generator.select_effect(expanded_tree.language, change.target, len(change.target[1]) == 2),
-                           self.generator.select_effect(expanded_tree.language, change.target, len(change.target[1]) == 2),
-                           self.generator.select_effect(expanded_tree.language, change.target, len(change.target[1]) == 2),
-                           self.generator.select_effect(expanded_tree.language, change.target, len(change.target[1]) == 2),
-                           self.generator.select_effect(expanded_tree.language, change.target, len(change.target[1]) == 2),
-                           self.generator.select_effect(expanded_tree.language, change.target, len(change.target[1]) == 2),
+                           
                            self.generator.select_effect(expanded_tree.language, change.target, len(change.target[1]) == 2),],
                           change.conditions)
         

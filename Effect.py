@@ -64,7 +64,7 @@ class Effect (object) :
             print(self.effect, key)
             values = key
         #kvs = {k:v for (k, v) in zip((self.domain, values))}
-        kvs = {key:values}
+        kvs = {self.domain:values}
 
         fts = []
         for x, fs in enumerate(phoneme.features):

@@ -7,7 +7,7 @@ Created on Thu May  5 09:28:54 2022
 Contains the languge class
 """
 
-from utilitaries import printl, feature_match
+from utilitaries import printl, feature_match, feature_indices
 
 
 class Language() :
@@ -190,15 +190,61 @@ class Language() :
     
         return (match  + total)/ total , diff
         
+
+    def phoneme_comparison(self, other) :
         
+        match = 0
+        total = 0
+        
+        for key, wd in self.voc.items() :
+            
+            for i , pho in enumerate(wd.phonemes) :
+                total += 1 
+                if pho == other.voc[key].phonemes[i] : total += 1 
+        
+        return match /total 
+                
+    def feature_comparison(self, other) :
+        
+        match = 0
+        total = 0
+        
+        for key, wd in self.voc.items() :
+            
+            for i , pho in enumerate(wd.phonemes) :
+                
+                other_pho  =  other.voc[key].phonemes[i] 
+                
+               
+                idx = feature_indices(pho.features)
+                
+                for j, ids in enumerate(idx) :
+                    total += 1
+                    if pho.features[ids[0]][ids[1]] == other_pho.features[ids[0]][ids[1]] : match += 1
     
+                    
+                
+                
+                
+        
+        return match /total 
+        
+        
     def evaluate_proximity(self, other ) :
         
         
-        invent_sim , diff = self.inventary_comparison(other)
-        print("Phonetic inventory similarity ", )
+        invent_sim , diff = self.inventory_comparison(other)
         
-        return 
+        phon_sim = self.phoneme_comparison(other)
+    
+        feat_sim = self.feature_comparison(other)
+    
+    
+        print("Phonetic inventory similarity ", invent_sim, "%")
+        print()
+        print("Phoneme match similarity ", phon_sim, "%")
+        print()
+        print("Feature match similarity", feat_sim, "%")
     
     
     
