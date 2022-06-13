@@ -154,12 +154,9 @@ class Baby_P_change_generator(P_change_generator) :
        
 
         """
-        
-        
+                
         # we make sure n corresponds to the number of wildcards will get at the end. 
         impossible_idx = []
-        
-        
         
         for i in range(n) :
         
@@ -170,11 +167,11 @@ class Baby_P_change_generator(P_change_generator) :
                 idx = idxC
                 w = Sampling.featureC_weights
             
-            
-            
             feature_index = random.choices(idx, w)[0]
-            
-            while feature_index in impossible_idx : feature_index = random.choices(idx, w)[0]
+
+            #print(impossible_idx)
+            while feature_index in impossible_idx:
+                feature_index = random.choices(idx, w)[0]
             impossible_idx . append(feature_index)
             
             change.target = change_pattern (change.target, change.concerns_V, feature_index, -1) 
@@ -226,11 +223,7 @@ class Baby_P_change_generator(P_change_generator) :
         #selection of the target
         target, concerns_V  = self.select_target(language)
         if verbose : print("Target", target)
-        
-        
-       
-        
-        
+         
         #selection of the effect
         effect = self.select_effect(language, target, concerns_V)
         change = P_change(target, effect)
@@ -239,9 +232,7 @@ class Baby_P_change_generator(P_change_generator) :
         
         nb_ext = random.choices (range(0,6), Sampling.weights_extensions)[0]
         self.extends_target(change, language, nb_ext)
-        
-        
-       
+               
         #we add conditions
         if verbose : print('Conditions')
         
@@ -552,10 +543,10 @@ class Baby_P_change_generator(P_change_generator) :
             rel_pos = -666
             index = i +rel_pos
             avoid_inf_loops = 0
-            while index not in range(len(rd_context.phonemes)) or rel_pos in forbidden_rel_pos and avoid_inf_loops< 100 :
+            while (index not in range(len(rd_context.phonemes)) or rel_pos in forbidden_rel_pos) and avoid_inf_loops < 100:
                 rel_pos = rd_rel_pos()
                 avoid_inf_loops += 1
-                index = i +rel_pos
+                index = i + rel_pos
             forbidden_rel_pos.append(rel_pos)
             
             if avoid_inf_loops == 100 : break
@@ -617,8 +608,6 @@ class Baby_P_change_generator(P_change_generator) :
             DESCRIPTION.
         verbose : TYPE, optional
             DESCRIPTION. The default is False.
-
-    
 
         """
     

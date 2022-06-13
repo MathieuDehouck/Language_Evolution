@@ -257,11 +257,10 @@ class L_tree :
     
     
     
-    def elaborate_history_graph(self, word) :
+    def elaborate_history_graph(self, words):
         """
         Extracts a subgraph representing the history of the evolution of a particular word in all the languages we generated 
-        """
-        
+        """        
         nodes = self.get_nodes()
 
         splits = [n for n in nodes if len(n.nodes) > 1]
@@ -281,8 +280,9 @@ class L_tree :
             keep.add(a)
 
             b = a.parent
-            while b not in splits and b != None and last != None :     
-                if b.language.voc[word] != last.language.voc[word] :
+            while b not in splits and b != None and last != None:
+                changes = [b.language.voc[w] != last.language.voc[w] for w in words]
+                if True in changes:
                     keep.add(b)
                     edges.append([last, b])
                     last = b
@@ -299,18 +299,18 @@ class L_tree :
         
       
     
-    def history_to_graph(self, word) :
+    def history_to_graph(self, words) :
         """
         print a graph only displaying the informations on the evolution of a single word
         """
-        keep, edges = self.elaborate_history_graph(word) 
+        keep, edges = self.elaborate_history_graph(words)
         
-
-        if None in keep  : keep.remove(None)
+        if None in keep:
+            keep.remove(None)
     
         f = open ('graphe.dot','w', encoding = "utf8") 
         f.write("digraph \" " + "We display the history of a word" + "\" {\n")    
-        f.write("label = \"" + word+ "\" \n")
+        f.write("label = \"" + '\n'.join(words) + "\" \n")
 
         f.write("graph[rankdir=\"LR\"];\n")   
         f.write("node [style=\"filled\", fillcolor = \"white\"];\n")
@@ -321,16 +321,16 @@ class L_tree :
             s = ""
             s += str(keep.index(tree))
             s += " [label=\""
-            s += tree.language.voc[word].ipa
+            s += '\n'.join([tree.language.voc[w].ipa for w in words])
             s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
             f.write(s)
 
             
         for edge in edges :
-            num = [str(keep.index(edge[0])), str(keep.index(edge[1]))]
-            change = edge[0].language.voc[word] != edge[1].language.voc[word]
+            x, y = [str(keep.index(edge[0])), str(keep.index(edge[1]))]
+            change = True in [edge[0].language.voc[w] != edge[1].language.voc[w] for w in words]
 
-            s = num[1] + " -> " + num[0]
+            s = y + " -> " + x
             if change:
                 s += '[style=\"solid\", color=\"green\"]'
             s += ";\n"
