@@ -57,23 +57,21 @@ class Change():
     set_target
     check : checks if all the conditions are satisfied before the application of the change
     """
-    def __init__(self) :
-        self.conditions = []
+    def __init__(self, target, effect, conditions):
+        if conditions == None:
+            self.conditions = []
+        else:
+            self.conditions = conditions
+    
         self.impacted_phonemes = {}
-        self.target = None
+        self.target = target
+        self.effect = effect
     
         
     def add_condition(self, condition) :
         """ used to add a condition to an already built change """
         self.conditions.append(condition)
-    
 
-    def reset_condition(self) :
-        self.conditions = [] 
-        
-    def set_target(self, cond) :
-        self.target = cond
-        
 
     def check(self,  phon, index , word, verbose = False):
         """
@@ -189,20 +187,16 @@ class P_change(Change) :
     """
     
     
-    def __init__(self, target, effect, conditions=[]):
+    def __init__(self, target, effect, conditions=None):
         """ 
         a Phonetic change deals with the modification of a phonem, therefore the object P_change need
         information about the phoneme to modify. The two configurations object encode these informations,
         while the impacted_phonemes dictionnary stores the phonem of the language that underwent the change
         during the process of its application
         """
-        super().__init__()
+        super().__init__(target, effect, conditions)
 
-        self.target = target
-        self.conditions = conditions
         self.idx = feature_indices(target)
-        
-        self.effect = effect
         self.impacted_phonemes ={}
         self.concerns_V  = len(self.idx) == 5
         
@@ -670,8 +664,8 @@ class S_change(Change) :
             whether it is applicable
 
         """
-    
-        for condition in self.conditions :
+        
+        for condition in self.conditions:
             if not condition.test(word, rank) : return False
                 
         for s in word.syllables :
