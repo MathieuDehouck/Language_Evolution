@@ -209,12 +209,32 @@ def tuple_2_list(tupl) :
     return liste
 
 
-def list_2_tuple(tupl) :
+
+
+
+
+def list_2_tuple(liste) :
+    
+    
+    tpl1 = ()
+    for el in liste[0] : 
+        if type(el) == list : el = tuple(el)
+        tpl1+= ( el,)
+        
+    
+    tpl2 = ()
+    for el in liste [1] : tpl2+= ( el,)
+    
+    return (tpl1, tpl2)
+
+
+
+def list_2_tuple2(tupl) :
     
     liste = tuple([])
     for el in tupl : 
         if type(el) == list : 
-            liste += (list_2_tuple(el),)
+            liste += (list_2_tuple2(el),)
         else : liste +=(el,)
         
     return tuple(liste)

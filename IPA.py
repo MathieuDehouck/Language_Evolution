@@ -242,6 +242,7 @@ class IPA() :
 
         """
         # We look directly in the dict of features to ipa if we find something
+       
         if phon.features in self.feat2ipa:
             return self.feat2ipa[phon.features]
 

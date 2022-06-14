@@ -26,8 +26,8 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 100 # depth of a branch
-nbranches = 40 # number of branches
+depth = 20 # depth of a branch
+nbranches = 10 # number of branches
 
 
 

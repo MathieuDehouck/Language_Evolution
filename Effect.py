@@ -55,18 +55,27 @@ class Effect (object) :
     
 
     def affect(self, phoneme):
-        #key = [phoneme.features[x][y] for (x,y) in self.domain]
+        
+        key = [phoneme.features[x][y] for (x,y) in self.domain]
+        
         x, y = self.domain
-        key = phoneme.features[x][y]
+        #key = phoneme.features[x][y]
         try:
             values = self.effect[key]
         except:
             print(self.effect, key)
             values = key
-        #kvs = {k:v for (k, v) in zip((self.domain, values))}
-        kvs = {self.domain:values}
+        
+        kvs = {k:v for (k, v) in zip((self.domain, values))}
+        #kvs = {self.domain:values}
 
         fts = []
+        
+        
+        
+        
+        
+        
         for x, fs in enumerate(phoneme.features):
             fts.append([])
             for y, v in enumerate(fs):

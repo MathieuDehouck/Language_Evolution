@@ -219,9 +219,6 @@ class L_tree :
         
         dic = {}
         for i,  el in enumerate(liste) : dic[el] = i
-        print(liste)
-        t2a = self.get_tree_2_add()
-        print(t2a)
         
         for tree in liste :
             
@@ -271,11 +268,9 @@ class L_tree :
         keep = set()
         edges = []
 
-        print(keep)
-        print(edges)
 
         for a in splits + leaves:
-            print(a)
+            
             last = a
             keep.add(a)
 
@@ -291,7 +286,7 @@ class L_tree :
             if b != None and last != None :
                 edges.append([last, b])
 
-        print(len(edges))
+       
             
         return list(keep), list(edges)
         
