@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Tue May 31 12:42:01 2022
 
@@ -11,16 +12,14 @@ parameter, following a proba weighting represented by a matrix.
 
 """
 import numpy  as np
+import random
 
 
 
 # PARAMETRISATION OF THE PHONETIC CHANGE. 
 
 
-def listes_2_dic (l1, l2) :
-    dic = {}
-    for i, el in enumerate(l1) :
-        dic[el] = l2[i]
+
 
 
 def fill_matrix(rang) :
@@ -54,6 +53,15 @@ def mat_to_adj (mat) :
 
 
 
+def dislike (liste, mat, coef = 3) :
+    
+    x, y = mat.shape
+    for j in range(0, x) : 
+      for i in range(0,y) :
+        if j in liste :
+            mat[i][j] = mat[i][j]  / coef
+    return mat
+
 
 
 # VOWELS
@@ -68,13 +76,19 @@ def mat_to_adj (mat) :
 
 f1v = fill_matrix(6)
 
-f1i = range(0, 6)
+
+
+
+disliked_heights = [5, 2, 1]
+
+f1v = dislike(disliked_heights, f1v)
+
 
 #feature 2 : weight, values btw 0 and 6
 
 f2v = fill_matrix(2)
 
-f2i = range(0, 2)
+
 
 #Tuple2 
 
@@ -82,8 +96,6 @@ f2i = range(0, 2)
 # feature 3 : round 
 
 f3v = fill_matrix(1)
-
-
 
 #feature 4 : nasalised
 
@@ -96,7 +108,8 @@ f5v = fill_matrix(1)
 
 MatricesV = ((f1v, f2v, f3v),( f4v, f5v))
 
-inputsV = ((range(0,6), range(0, 2), range(0,1) ), (range(0,1), range(0,1)))
+
+inputsV = ((range(0,7), range(0, 4), range(0,2) ), (range(0,2), range(0,2)))
 
 
 
@@ -116,12 +129,16 @@ inputsV = ((range(0,6), range(0, 2), range(0,1) ), (range(0,1), range(0,1)))
 
 f1c = fill_matrix(11)
 
+disliked_articulation_place  = [0, 1, 2, 6]
+ 
+f1c = dislike(disliked_articulation_place, f1c)
+
 #feature 2 : manner of articulation
 
 manner_2_ind  =  { (0, 0, 0, 0, 0) : 1, # approximant
                 (1, 0, 0, 0, 0) : 1, # nasal
                 (0, 1, 0, 0, 0) : 1, # plosive
-                #(0, 0, 2, 0, 0) : 1, # fricative / sibilant
+                (0, 0, 1, 0, 0) : 1, # fricative / sibilant
                 (0, 0, 1, 0, 0) : 1, # fricative
                 (0, 0, 0, 1, 0) : 1, # flap
                 (0, 0, 0, 2, 0) : 1, # trill
@@ -136,7 +153,7 @@ manner_list  =  [ (0, 0, 0, 0, 0), # approximant
                 (1, 0, 0, 0, 0), # nasal
                 (0, 1, 0, 0, 0), # plosive
                 (0, 0, 1, 0, 0), # fricative / sibilant
-                
+                (0, 0, 1, 0, 0), # fricative
                 (0, 0, 0, 1, 0), # flap
                 (0, 0, 0, 2, 0), # trill
                 (0, 0, 0, 0, 1), # lateral
@@ -154,22 +171,6 @@ sec_place_2_ind = { 11 : 3 , 1 : 1 , 0:0 , 5 : 2}
 l = len(manner_list) 
 f2c = np.ones((l, l))
 
-f = open("f2c.csv", "r", encoding = 'utf8')
-mat = []
-for line in f :
-    
-    if line[0] == '#' : continue
-    line.replace('\\n', '')
-    line = line.split("," )
-    line = line [1:]
-    
-    lin = []
-    for n in line : 
-        lin.append(int(n))
-    mat.append(lin)
-f2c = np.array(mat)
-
-        
 
 def interpret_manner (mat) :
     dic = mat_to_adj(mat)
@@ -231,7 +232,8 @@ f6c = fill_matrix(1)
 MatricesC = ((f1c, f2c, f3c),( f4c, f5c, f6c))
 
 
-inputsC = ((range(0,11), manner_list, range(0,1) ), (secondary_place, range(0,1), range(0,1)))
+
+inputsC = ((range(0,11), manner_list, range(0,2) ), (secondary_place, range(0,2), range(0,2)))
 
 
 
@@ -280,12 +282,18 @@ weights_same_feature = [5, 5]
 
 
 featureV_weights = [4, 4, 2, 3, 2]
-featureC_weights = [5,5, 5, 4, 2, 4]
+featureC_weights = [5,5, 4, 4, 1, 3]
 
 
 
 nb_rel_cond = [0 , 1, 2, 3 , 4]
-weights_nb__rel_cond = [ 3, 8, 7, 3, 1]
+weights_nb_rel_cond = [ 2, 8, 7, 3, 1]
+weights_nb_rel_cond_normal = np.random.normal(
+    loc= 2.0,       # The mean of the distribution
+    scale=1.0,      # The standard deviation 
+    size=5     # The size or shape of your array
+)
+
 
 
 
@@ -294,6 +302,14 @@ weights_abs_pos = [4, 2, 1]
 
 nb_extensions = [0, 1, 2, 3, 4, 5]
 weights_extensions = [8, 4, 6, 3,2, 2]
+weights_extensions2 = [8, 4, 2, 1,1, 1]
+
+
+weights_extensions_normal = np.random.normal(
+    loc= 2.0,       # The mean of the distribution
+    scale=1.0,      # The standard deviation 
+    size=6       # The size or shape of your array
+)
 
 
 
