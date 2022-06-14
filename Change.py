@@ -751,6 +751,41 @@ class S_change(Change) :
         return s
 
     
+
+
+
+
+def M_change(Change) :
+
+    
+    def __init__(self, target, swapped,  conditions) :
+        Change.__init__()
+        self.target = target 
+        self.swapped = swapped
+        self.conditions = conditions
+        
+     #we consider that methathesis only happen once in a word, and in a linear order (aspiration report..)  
+    def apply_word(self, wd):
+         
+         for phon in wd.phonemes : 
+             applicable = self.check (phon, phon.word_rank , wd, verbose = False)
+             
+         self.swap(wd)
+        
+    def swap(self, wd) : 
+        
+        return wd
+    
+# do a method rebuild word
+        
+    
+    
+
+
+
+
+
+
     
 class D_change(Change) :    
     """
