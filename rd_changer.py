@@ -90,9 +90,11 @@ class Tree_changer(Changer) :
         #node is an adress 
 
         expanded_tree = dic[node]
-
+        
+        """
         print('Just trying an insertion before the rest')
         change = self.generator.generate_P_change(expanded_tree.language)
+        
         
         change = I_change(change.target,
                           [change.effect,
@@ -104,7 +106,7 @@ class Tree_changer(Changer) :
         nl, wc = change.apply_language(expanded_tree.language)
         new_tree = L_tree(nl, expanded_tree)
         expanded_tree = new_tree
-        
+        """
         for nch in trange((wanted_depth - expanded_tree.depth), desc="generating " +str(wanted_depth -expanded_tree.depth)+"changes") :
             change = self.generator.generate_P_change(expanded_tree.language)
             nl, wc = change.apply_language(expanded_tree.language)

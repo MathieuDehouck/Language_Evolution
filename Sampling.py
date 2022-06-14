@@ -17,7 +17,10 @@ import numpy  as np
 # PARAMETRISATION OF THE PHONETIC CHANGE. 
 
 
-
+def listes_2_dic (l1, l2) :
+    dic = {}
+    for i, el in enumerate(l1) :
+        dic[el] = l2[i]
 
 
 def fill_matrix(rang) :
@@ -65,11 +68,13 @@ def mat_to_adj (mat) :
 
 f1v = fill_matrix(6)
 
+f1i = range(0, 6)
+
 #feature 2 : weight, values btw 0 and 6
 
 f2v = fill_matrix(2)
 
-
+f2i = range(0, 2)
 
 #Tuple2 
 
@@ -77,6 +82,8 @@ f2v = fill_matrix(2)
 # feature 3 : round 
 
 f3v = fill_matrix(1)
+
+
 
 #feature 4 : nasalised
 
@@ -89,7 +96,7 @@ f5v = fill_matrix(1)
 
 MatricesV = ((f1v, f2v, f3v),( f4v, f5v))
 
-
+inputsV = ((range(0,6), range(0, 2), range(0,1) ), (range(0,1), range(0,1)))
 
 
 
@@ -114,7 +121,7 @@ f1c = fill_matrix(11)
 manner_2_ind  =  { (0, 0, 0, 0, 0) : 1, # approximant
                 (1, 0, 0, 0, 0) : 1, # nasal
                 (0, 1, 0, 0, 0) : 1, # plosive
-                (0, 0, 1, 0, 0) : 1, # fricative / sibilant
+                #(0, 0, 2, 0, 0) : 1, # fricative / sibilant
                 (0, 0, 1, 0, 0) : 1, # fricative
                 (0, 0, 0, 1, 0) : 1, # flap
                 (0, 0, 0, 2, 0) : 1, # trill
@@ -224,7 +231,7 @@ f6c = fill_matrix(1)
 MatricesC = ((f1c, f2c, f3c),( f4c, f5c, f6c))
 
 
-
+inputsC = ((range(0,11), manner_list, range(0,1) ), (secondary_place, range(0,1), range(0,1)))
 
 
 

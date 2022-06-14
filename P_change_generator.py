@@ -279,6 +279,7 @@ class Baby_P_change_generator(P_change_generator) :
            input_value = Sampling.manner_2_ind[input_value]
            manner = True
        if not isV and index == (1, 0) :
+           
            input_value = Sampling.sec_place_2_ind [input_value]
            sec_manner = True
         
@@ -317,17 +318,34 @@ class Baby_P_change_generator(P_change_generator) :
        
        #TODO isV doit etre passéc en argument 
        isV = len(feature_indices(target)) == 5 
-       if isV : Trinity = Sampling.MatricesV 
-       else : Trinity = Sampling.MatricesC
+       if isV : 
+           Trinity = Sampling.MatricesV 
+           inputs = Sampling.inputsV
+       else :
+           Trinity = Sampling.MatricesC
+           inputs = Sampling.inputsC
        
        
        matrix =  Trinity[index[0]] [index[1]]
        
        #TODO implement cyclic / multiplu changes
        input_val = target[index[0]][index[1]]
-       outcome = self.compute_outcome( index, input_val, matrix, isV)
        
-       effect[input_val] = outcome
+       #Identity
+       for inp in inputs[index[0]][index[1]] :
+           effect[inp] = inp
+       
+       
+       # except the one value changed
+       if input_val != -1 :
+           outcome = self.compute_outcome( index, input_val, matrix, isV)
+           effect[input_val] = outcome
+       
+        # or all the value if we get a wildcard
+       else : 
+            for inp in inputs[index[0]][index[1]] :
+                outcome = self.compute_outcome( index, inp, matrix, isV)
+                effect[inp] = outcome
        
        return effect
        

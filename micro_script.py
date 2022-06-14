@@ -26,8 +26,8 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 5 # depth of a branch
-nbranches = 4 # number of branches
+depth = 100 # depth of a branch
+nbranches = 40 # number of branches
 
 
 
@@ -95,9 +95,9 @@ time.octopus(nbranches, depth)
 
 #k,e = time.tree.elaborate_history_graph('virdia')
 print(lang.voc)
-time.tree.history_to_graph(['ˈsi.te.len', 'ˈpi.me.ja'])
+time.tree.history_to_graph(['virdia', 'abante'])
 #time.tree.history_to_graph(['virdia', 'abante'])
-#t = time.tree.get_final_state_of_the_evolution()
+t = time.tree.get_final_state_of_the_evolution()
 #for l in t : print (l.voc['virdia'])
 
 #time.tree.print_history_to_graph_reduced("virdia")
