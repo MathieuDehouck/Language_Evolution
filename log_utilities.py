@@ -255,6 +255,8 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
     
     for key, values in change.effect.effect.items() :
         
+        if key != values :
+        
             if target_vow : feat_semantics = ipa.vfeatures
             else : feat_semantics = ipa.cfeatures
         

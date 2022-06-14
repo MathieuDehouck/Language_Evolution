@@ -96,19 +96,21 @@ class Effect (object) :
    
         s = ""
         for key, value in self.effect.items() :
-            s += str(self.domain)
-            s+= ":"
-            if type(key) == tuple  :
-                s+= manner_2_letter[key]
-            else  : s += str(key)
             
-            s += ">"   
+            if key != value :
+                s += str(self.domain)
+                s+= ":"
+                if type(key) == tuple  :
+                    s+= manner_2_letter[key]
+                else  : s += str(key)
+                
+                s += ">"   
+                
+                if  type(value) == tuple:
+                    s+=   manner_2_letter[value]
+                else :  s+= str(value)
+                s += " | "
             
-            if  type(value) == tuple:
-                s+=   manner_2_letter[value]
-            else :  s+= str(value)
-            s += " | "
-        
         return s
     
             
