@@ -4,7 +4,7 @@ Created on Thu May  5 10:22:10 2022
 
 @author: 3b13j
 """
-from utilitaries import feature_match, tpl_2_candidates, mask_match, feature_indices, printl, printd, phon_in_dic
+from utilitaries import feature_match, tpl_2_candidates, mask_match, bewilder_pattern, feature_indices, printl, printd, phon_in_dic
 from Phoneme import Phoneme, Vowel, Consonant, list_2_tuple, tuple_2_list
 
 from Word import Word, Syllable
@@ -131,6 +131,7 @@ class Change():
             new_word = self.apply_word(word)
             if verbose : print(new_word)
             dic[key] = new_word
+            
             if  new_word != word : 
                 changed_words.append([  word.ipa, new_word.ipa])
                 
@@ -755,14 +756,16 @@ class S_change(Change) :
 
 
 
-def M_change(Change) :
+
+class M_change(Change) :
 
     
-    def __init__(self, target, swapped,  conditions) :
-        Change.__init__()
+    def __init__(self, target, index,  conditions) :
+        super().__init__(target, None, conditions)
         self.target = target 
-        self.swapped = swapped
+        self.index = index
         self.conditions = conditions
+        self.concerns_V =  (len(target[1] ) == 2 )
         
      #we consider that methathesis only happen once in a word, and in a linear order (aspiration report..)  
     def apply_word(self, wd):
@@ -770,12 +773,60 @@ def M_change(Change) :
          for phon in wd.phonemes : 
              applicable = self.check (phon, phon.word_rank , wd, verbose = False)
              
-         self.swap(wd)
+         return self.swap(wd)
         
+    # cut into swapable and swap 
+    
+    
     def swap(self, wd) : 
         
-        return wd
-    
+        target_bis = bewilder_pattern(self.target, self.index )
+        
+        swap_flag = False 
+        i1 = None
+        i2 = None 
+        for i,  ph in enumerate( wd.phonemes) :
+            if mask_match(self.target, ph.features, self.concerns_V) :
+                
+                for pho2 in wd.phonemes :
+                    if mask_match(target_bis, pho2.features, self.concerns_V) and pho2.features[self.index[0]][self.index[1]] != ph.features[self.index[0]][self.index[1]] :
+                        
+                        
+                        swap_flag = True
+                        i1 = ph.word_rank  
+                        i2 = pho2.word_rank
+                        break
+        
+        if not swap_flag : 
+            #print("we do the same sad things")
+            #print(wd.ipa)
+            return wd
+        if swap_flag : 
+            i = 0
+            
+            new_syls = []
+            for syl in wd.syllables : 
+                phon_in_syl = []
+                for p in syl.phonemes : 
+                    if i == i1 : 
+                        phon_in_syl.append(pho2) 
+                    elif i == i2 :
+                        phon_in_syl.append(ph) 
+                    else :      
+                        phon_in_syl.append(wd.phonemes[i])
+                    i +=1
+                #printl(phon_in_syl)
+                new_syls.append(Syllable(phon_in_syl, syl.stress, syl.length, syl.tone))
+               # printl(new_syls)
+            
+            new_wd = Word(new_syls)
+            #print("this is a neeeewword", new_wd.ipa)
+            return new_wd
+        
+        
+        
+# add a range for the metathesis  -1 means the whole word
+
 # do a method rebuild word
         
     
@@ -793,7 +844,7 @@ class D_change(Change) :
     """
 
     def __init__(self, target, conditions):
-        Change.__init__()
+        Change.__init__(target, None, conditions)
         self.target = target
         self.conditions = conditions
 

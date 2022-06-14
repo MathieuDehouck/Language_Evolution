@@ -302,7 +302,7 @@ weights_abs_pos = [4, 2, 1]
 
 nb_extensions = [0, 1, 2, 3, 4, 5]
 weights_extensions = [8, 4, 6, 3,2, 2]
-weights_extensions2 = [8, 4, 2, 1,1, 1]
+weights_extensions2 = [12, 8, 3, 1,1, 1]
 
 
 weights_extensions_normal = np.random.normal(

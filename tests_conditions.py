@@ -15,7 +15,7 @@ from P_change_generator import Baby_P_change_generator
 from Phoneme import list_2_tuple , tuple_2_list
 from Effect import Effect
 from Condition import P_condition, rd_p_condition
-from Change import P_change
+from Change import P_change, M_change
 from Effect import  Effect
 from Condition import S_condition
 
@@ -25,6 +25,8 @@ i = IPA.get_IPA()
 
 
 lang = get_language("latin_classique.txt", "latin")
+
+"""
 
 wd = lang.voc['virdia']
 
@@ -57,7 +59,7 @@ nw = ch.apply_word(wd3)
 print(nw)
 
 
-"""
+
 
 print("we add a condition")
 ch.add_condition(cond)
@@ -170,3 +172,21 @@ target_cong =  wd2.phonemes[2].features
 
 cond = P_condition(target_cong, -1, -1)
 """
+
+
+
+
+
+
+
+
+
+sop = lang.voc["Sophocle"]
+ft = ((-1, -1, -1), (-1, -1, 0))
+ch = M_change(ft, (1,2), [])
+
+
+
+nlang, cw = ch.apply_language(lang)
+
+print(cw)

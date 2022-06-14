@@ -65,8 +65,9 @@ class Word :
         
 
     def __eq__(self, other):
-        return self.syllables == other.syllables
-
+        
+        if type(other) == Word : return self.syllables == other.syllables
+        else : return False
         
     def __str__(self)  :
         
