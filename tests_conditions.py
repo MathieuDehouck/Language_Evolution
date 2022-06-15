@@ -190,3 +190,13 @@ ch = M_change(ft, (1,2), [])
 nlang, cw = ch.apply_language(lang)
 
 print(cw)
+
+print()
+
+s=ch.encode_change()
+print(s)
+
+
+chc = M_change.decode_change(s)
+print(chc)
+print(ch)

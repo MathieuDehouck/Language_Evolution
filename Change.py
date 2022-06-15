@@ -760,12 +760,17 @@ class S_change(Change) :
 class M_change(Change) :
 
     
-    def __init__(self, target, index,  conditions) :
+    def __init__(self, target, index,  conditions, regressive = True, progressive = True) :
         super().__init__(target, None, conditions)
         self.target = target 
         self.index = index
+        #TODO
+        self.effect = self.index
+        
         self.conditions = conditions
         self.concerns_V =  (len(target[1] ) == 2 )
+        self.progressive = progressive
+        self.regressive  = regressive
         
      #we consider that methathesis only happen once in a word, and in a linear order (aspiration report..)  
     def apply_word(self, wd):
@@ -778,7 +783,10 @@ class M_change(Change) :
     # cut into swapable and swap 
     
     
-    def swap(self, wd) : 
+    #TODO its the swapable method we have to modify to have different metathesis option. 
+    def swapable(self, wd) :
+        
+     
         
         target_bis = bewilder_pattern(self.target, self.index )
         
@@ -787,15 +795,30 @@ class M_change(Change) :
         i2 = None 
         for i,  ph in enumerate( wd.phonemes) :
             if mask_match(self.target, ph.features, self.concerns_V) :
-                
-                for pho2 in wd.phonemes :
+                d = 0
+                f = -1
+                if not  self.progressive : d = i
+                if not self.regressive : f = i
+                for pho2 in wd.phonemes[d:f] :
                     if mask_match(target_bis, pho2.features, self.concerns_V) and pho2.features[self.index[0]][self.index[1]] != ph.features[self.index[0]][self.index[1]] :
                         
                         
                         swap_flag = True
                         i1 = ph.word_rank  
                         i2 = pho2.word_rank
-                        break
+                        return swap_flag, i1, i2
+        return  swap_flag, 0, 0
+    
+    
+    
+    
+    
+    def swap(self, wd,) :
+        
+        
+        swap_flag, i1, i2 = self.swapable(wd )
+        ph = wd.phonemes[i1]
+        pho2 = wd.phonemes[i2]
         
         if not swap_flag : 
             #print("we do the same sad things")
@@ -829,11 +852,71 @@ class M_change(Change) :
 
 # do a method rebuild word
         
+    def __str__(self) :
+        s= "if following conditions are satisfied : \n"
+        for condition in self.conditions :
+            s+= str(condition) + "\:n"
+        s+= "The phonemes matching the following target   :\n "
+        s+= str(self.target) + "\n"
+        s+= "swap with some other that has a different value for feature "
+        s+= str(self.index)
+        return s
     
     
-
-
-
+    
+    
+    def encode_change(self):
+        s = "MC\t"
+        s+=  "Tar:" + encode_f(self.target) +"\t"
+        s+= "Eff:" + str(self.effect ) +"\t"
+        s+= "Pro:" + str( self.progressive) +"\t"
+        s+= "Reg:" + str( self.regressive) +"\t"
+        s+= "Con:" 
+        for cond in self.conditions : 
+            s+= cond.encode_condition()+"  &  "
+        return s
+        
+    
+    
+    
+    
+    def decode_change(string, verbose = False) :
+        # the string coding a change encompass four parts. 
+        s = string.split("\t")
+        if verbose : print(s[1][4:])
+        target = decode_f(s[1][4:])
+        if verbose : print(s[2][4:])
+        effect = s[2][4:]
+        
+        pro = ( "True" in  s[3][4:] )
+        
+        reg =  pro = ( "True" in  s[4][4:] )
+        
+        if verbose : print(s[5][4:].split("  &  "))
+        if s[0][0] == 'M' :
+            change = M_change(target, effect, [], reg, pro)
+        
+        
+        for cond in s[5][4:].split("  &  ") :
+            
+            if len(cond)>0 :
+                if verbose : 
+                    print("we study a codn")
+                    print(cond)
+                add = False
+                if cond[0] == "P" :
+                    c = P_condition.decode_P_cond(cond)
+                    add = True
+                    
+                elif cond[0] == "S" : 
+                    c = P_condition.decode_S_cond(cond)
+                    add = True
+                    
+                    
+                if add : change.add_condition(c)
+        
+        
+        return change
 
 
 
