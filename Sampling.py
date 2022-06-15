@@ -278,7 +278,7 @@ crer matrices,  on les met dans des structures qui ont la même forme que les fe
 
 
 change_types = ["P", "M"]
-weights_change_type = [8, 2]
+weights_change_type = [8, 4]
 
 
 

@@ -11,6 +11,7 @@ import random
 #from usual_conditions import class_conditions
 import copy 
 
+#TODO représenter 
 
 idxC = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1) , (1,2)]
 idxV = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1) ]
@@ -44,11 +45,16 @@ def feature_indices(features):
 
 def mask_match(mask, phon, voy):
    
-    idx = feature_indices(mask)
-    idx2 = feature_indices(phon) 
-    if idx != idx2 : return False
+    
+    if voy :  idx =  idxV
+    else : idx = idxC
+        
+        
+    if len(mask[1]) != len(phon[1]) : return False
     
     for ind in idx :
+        
+       
         if mask[ind[0]][ind[1]] != -1 and mask[ind[0]][ind[1]] != phon[ind[0]][ind[1]] :
              
             return False

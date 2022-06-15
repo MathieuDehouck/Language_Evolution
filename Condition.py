@@ -154,7 +154,7 @@ class P_condition(Condition) :
         self.rel_pos = rel_pos
         self.absol_pos = absol_pos
         self.continu = continu
-        self.concerns_V = (len(feature_template) == 5)
+        self.concerns_V = (len(feature_template[1]) == 2)
     
     
     def __eq__(self, other) :

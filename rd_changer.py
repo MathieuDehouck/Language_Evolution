@@ -135,7 +135,7 @@ class Tree_changer(Changer) :
             self.pursue_evolution(depth)
      
      
-    def evoluate(self, lang , nb_branches, depth) :
+    def make_evolution(self, lang , nb_branches, depth) :
          self.change( lang, depth)
          self.octopus(nb_branches, depth)
      
