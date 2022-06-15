@@ -276,6 +276,14 @@ crer matrices,  on les met dans des structures qui ont la même forme que les fe
 
 # PARAMETRISATION OF THE CHANGE GENERATION
 
+
+change_types = ["P", "M"]
+weights_change_type = [8, 2]
+
+
+
+
+
 weights_nb_cond = [3, 5, 3, 2]
 
 weights_same_feature = [5, 5]

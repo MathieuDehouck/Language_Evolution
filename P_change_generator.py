@@ -11,7 +11,7 @@ A file used to generate instances of different kind of P_change_generator
 
 import random 
 from Effect import Effect
-from Change import P_change
+from Change import P_change, M_change
 from Condition import rd_p_condition, P_condition, S_condition
 import Sampling
 
@@ -249,7 +249,36 @@ class Baby_P_change_generator(P_change_generator) :
     
     
     
-
+    def generate_M_change(self, language, target = None, verbose = False) : 
+        
+        if target == None : target, concerns_V  = self.select_target(language)
+        if verbose : print("Target", target)
+            
+        #metathesis do not concern every feature.
+        if concerns_V : wap = [(0, 0), (0, 1), (1, 1), (1, 0)]
+        else : wap = [ (0, 1), (1, 2), (1, 0)]
+        
+        #TODO SAMPLING
+        index = random.choice(wap)
+        reg = True
+        pro = True
+        
+        limitation = random.randint(0,1)
+        if limitation : reg = bool(random.randint(0,1))
+        rel = not reg
+        
+        ch = M_change(target, index, [], reg, pro)
+        
+        #TODO profiling : ameliorer perf de calcul ici
+        
+        nl, wc = ch.apply_language(language)
+        if len(wc) == 0 : ch = self.generate_M_change(language)
+        
+        return ch
+    
+    
+    
+    
     
 
     def compute_outcome (self,index, input_value, matrix, isV) :

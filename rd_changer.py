@@ -10,6 +10,8 @@ from Tree import  L_tree
 from tqdm import tqdm, trange
 from Generator import Change_Generator
 
+import random
+import Sampling
 import copy
 
 
@@ -60,7 +62,19 @@ class Tree_changer(Changer) :
 
 
     def change_u (self, lang, verbose = False) :
-        change = self.generator.generate_P_change(lang)
+        
+        
+        type_of_change = random.choices(Sampling.change_types, Sampling.weights_change_type )[0]
+        
+        #print("type_of_change    ",  type_of_change)
+        
+        
+        if type_of_change == "M" : 
+            change = self.generator.generate_M_change(lang)
+            #print("M_generated")
+        else  : 
+            change = self.generator.generate_P_change(lang)
+            #print("P_generated")
 
         """
         while change.applicable(lang) != True :

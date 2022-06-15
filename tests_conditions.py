@@ -200,3 +200,22 @@ print(s)
 chc = M_change.decode_change(s)
 print(chc)
 print(ch)
+
+
+
+
+
+
+
+bb = Baby_P_change_generator()
+
+
+
+
+
+ch3 = bb.generate_M_change(lang)
+
+nl, wc = ch3.apply_language(lang)
+
+print(wc)
+

@@ -94,7 +94,7 @@ time.octopus(nbranches, depth)
 #time.tree.print_history_to_graph("virdia")
 
 #k,e = time.tree.elaborate_history_graph('virdia')
-print(lang.voc)
+#print(lang.voc)
 time.tree.history_to_graph(['virdia', 'abante'])
 #time.tree.history_to_graph(['virdia', 'abante'])
 t = time.tree.get_final_state_of_the_evolution()

@@ -11,6 +11,7 @@ from utilitaries import feature_match, feature_indices, tpl_2_candidates
 from IPA import IPA
 from encoder_decoder import encode_f
 from pathlib import Path
+from Effect import Effect
 
 
 
@@ -253,7 +254,9 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
     idx  = feature_indices(change.target)
     target_vow = (len(idx) == 5)
     
-    for key, values in change.effect.effect.items() :
+    #RUSTINE, a implementer pour M
+    if type(change.effect) == Effect : 
+      for key, values in change.effect.effect.items() :
         
         if key != values :
         
