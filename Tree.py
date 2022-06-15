@@ -9,6 +9,7 @@ import os
 import random
 from sys import platform
 from PIL import Image
+from Change import M_change
 
 """
 class L_node :
@@ -325,9 +326,17 @@ class L_tree :
             x, y = [str(keep.index(edge[0])), str(keep.index(edge[1]))]
             change = True in [edge[0].language.voc[w] != edge[1].language.voc[w] for w in words]
 
+
+
             s = y + " -> " + x
-            if change:
-                s += '[style=\"solid\", color=\"green\"]'
+            if change: 
+                
+                if type(edge[1].change) == M_change :
+                    s += '[style=\"solid\", color=\"red\"]'
+                    
+                else : 
+                    s += '[style=\"solid\", color=\"green\"]'
+                   
             s += ";\n"
             f.write(s)
 

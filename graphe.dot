@@ -4,75 +4,135 @@ abante"
 graph[rankdir="LR"];
 node [style="filled", fillcolor = "white"];
 edge [style="solid", color="purple"];
-0 [label="'wʰir.di.a
-a'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-1 [label="'wʰir.di.a
-ɑ'bʰanʰ.dʰe", fillcolor= white, color="purple",  fontcolor="red"];
-2 [label="'wʰir.di.a
-a'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-3 [label="'m͜wʰir.di.a
-ɑ'm͜bʰan͜nʰ.n͜dʰe", fillcolor= white, color="purple",  fontcolor="red"];
-4 [label="'wʰir.di.a
-a'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-5 [label="'wir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-6 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-7 [label="'wir.di.a
+0 [label="'wĩl.dĩ.ã
+ã'bʰãn.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+1 [label="'wʰẽlʰ.dʰẽ.ã
+ã'bãn.dẽ", fillcolor= white, color="purple",  fontcolor="red"];
+2 [label="'wĩl.dĩ.ã
+ã'bãn.tẽ", fillcolor= white, color="purple",  fontcolor="red"];
+3 [label="'wĩd.ɹĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+4 [label="'wɯ̃d.lɯ̃.ʌ̞̃
+ʌ̞̃'m͜pʰʌ̞̃n͜ɺ.n͜tʌ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+5 [label="'wỹd.ɹỹ.œ̞̃
+œ̞̃'bʰœ̞̃ɺ.tœ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+6 [label="'ʋĩɖ.ɳĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɭ̆.ʈɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+7 [label="'wỹd.ɹỹ.œ̞̃
+œ̞̃'bʰœ̞̃ɺ.tœ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+8 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+9 [label="'ʋĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+10 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+11 [label="'wɯ̃d.lɯ̃.ʌ̞̃
+ʌ̞̃'bʰʌ̞̃ɺ.tʌ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+12 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'m͜pʰɛ̞̃n͜ɺ.n͜tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+13 [label="'wĩl.dĩ.ã
+ã'bãn.tẽ", fillcolor= white, color="purple",  fontcolor="red"];
+14 [label="'wʰẽlʰ.dʰẽ.ã
+ã'bãn.tẽ", fillcolor= white, color="purple",  fontcolor="red"];
+15 [label="'wil.di.a
 a'ban.te", fillcolor= white, color="purple",  fontcolor="red"];
-8 [label="'m͜wʰir.di.a
-ɑ'm͜bʰan͜nʰ.n͜dʰe", fillcolor= white, color="purple",  fontcolor="red"];
-9 [label="'wʰir.di.a
+16 [label="'wir.di.a
 a'ban.te", fillcolor= white, color="purple",  fontcolor="red"];
-10 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-11 [label="'wʰir.di.a
-a'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-12 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-13 [label="'wʰir.di.a
-a'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-14 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-15 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-16 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-17 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-18 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-19 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-20 [label="'wʰir.di.a
-a'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-21 [label="'m͜wʰir.di.a
-ɑ'm͜bʰan͜nʰ.n͜dʰe", fillcolor= white, color="purple",  fontcolor="red"];
-22 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-23 [label="'wʰir.di.a
-ɑ'ban.de", fillcolor= white, color="purple",  fontcolor="red"];
-0 -> 4[style="solid", color="green"];
-2 -> 0[style="solid", color="green"];
-9 -> 2[style="solid", color="green"];
-7 -> 9[style="solid", color="green"];
-11 -> 19[style="solid", color="green"];
-4 -> 11;
-19 -> 6;
-1 -> 21[style="solid", color="green"];
-6 -> 1[style="solid", color="green"];
-6 -> 15;
-19 -> 14;
-14 -> 17;
-21 -> 8;
-21 -> 3;
-15 -> 22;
-15 -> 10;
-17 -> 18;
-17 -> 12;
-14 -> 23;
-16 -> 5[style="solid", color="green"];
-19 -> 16;
-20 -> 13[style="solid", color="green"];
-4 -> 20;
+17 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+18 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+19 [label="'wʰĩlʰ.dʰĩ.ã
+ã'bãn.tẽ", fillcolor= white, color="purple",  fontcolor="red"];
+20 [label="'ʋĩd.nĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+21 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+22 [label="'wĩl.dĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃n.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+23 [label="'wĩl.dĩ.ã
+ã'bãn.tẽ", fillcolor= white, color="purple",  fontcolor="red"];
+24 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'m͜bʰɛ̞̃n͜ɺ.n͜tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+25 [label="'m͜wʰẽl̟ʰ.dʰẽ.ã
+ã'bãn.dẽ", fillcolor= white, color="purple",  fontcolor="red"];
+26 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+27 [label="'wỹd.ɹỹ.œ̞̃
+œ̞̃'bʰœ̞̃ɺ.tœ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+28 [label="'wĩl.dĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+29 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+30 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+31 [label="'wĩd.lĩ.ø̃
+ø̃'bʰø̃ɺ.tø̃", fillcolor= white, color="purple",  fontcolor="red"];
+32 [label="'wĩl.dĩ.ã
+ã'bãn.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+33 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+34 [label="'wʰẽlʰ.dʰẽ.ã
+ã'bãn.dẽ", fillcolor= white, color="purple",  fontcolor="red"];
+35 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+36 [label="'wĩd.lĩ.ẽ
+ẽ'bʰẽɺ.tẽ", fillcolor= white, color="purple",  fontcolor="red"];
+37 [label="'wʰẽl̟ʰ.dʰẽ.ã
+ã'bãn.dẽ", fillcolor= white, color="purple",  fontcolor="red"];
+38 [label="'wʰẽl̟ʰ.dʰẽ.ã
+ã'bãn.dẽ", fillcolor= white, color="purple",  fontcolor="red"];
+39 [label="'wĩd.lĩ.œ̞̃
+œ̞̃'bʰœ̞̃ɺ.tœ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+40 [label="'wʰẽlʰ.dʰẽ.ã
+ã'bãn.dẽ", fillcolor= white, color="purple",  fontcolor="red"];
+41 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+42 [label="'wir.di.a
+a'ban.te", fillcolor= white, color="purple",  fontcolor="red"];
+43 [label="'wĩd.lĩ.ɛ̞̃
+ɛ̞̃'bʰɛ̞̃ɺ.tɛ̞̃", fillcolor= white, color="purple",  fontcolor="red"];
+15 -> 13[style="solid", color="green"];
+16 -> 15[style="solid", color="green"];
+42 -> 16;
+28 -> 26[style="solid", color="red"];
+22 -> 28[style="solid", color="green"];
+0 -> 22[style="solid", color="green"];
+32 -> 0[style="solid", color="green"];
+23 -> 32[style="solid", color="green"];
+13 -> 23;
+26 -> 33;
+3 -> 5[style="solid", color="green"];
+17 -> 3[style="solid", color="green"];
+33 -> 17;
+33 -> 10;
+26 -> 18;
+18 -> 30;
+14 -> 34[style="solid", color="green"];
+19 -> 14[style="solid", color="green"];
+2 -> 19[style="solid", color="green"];
+13 -> 2[style="solid", color="green"];
+5 -> 7;
+5 -> 27;
+39 -> 31[style="solid", color="green"];
+10 -> 39[style="solid", color="green"];
+29 -> 11[style="solid", color="green"];
+10 -> 29;
+35 -> 8[style="solid", color="green"];
+10 -> 35;
+12 -> 4[style="solid", color="green"];
+24 -> 12[style="solid", color="green"];
+43 -> 24[style="solid", color="green"];
+30 -> 43;
+41 -> 36[style="solid", color="green"];
+30 -> 41;
+20 -> 6[style="solid", color="green"];
+9 -> 20[style="solid", color="green"];
+21 -> 9[style="solid", color="green"];
+18 -> 21;
+34 -> 1;
+37 -> 25[style="solid", color="green"];
+38 -> 37[style="solid", color="green"];
+40 -> 38[style="solid", color="green"];
+34 -> 40;
 }
