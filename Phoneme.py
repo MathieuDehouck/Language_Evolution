@@ -5,11 +5,9 @@ Created on Tue May  3 00:08:43 2022
 @author: 3b13j
 """
 
-import os
 from ipapy import UNICODE_TO_IPA
-import numpy as np
 
-from utilitaries import *
+from utilitaries import ipa
 
 
 
@@ -114,18 +112,6 @@ class Phoneme(object) :
 
 
     
-
-    def apply_effect(self , effect) :
-        return
-        
-    def get_mofified (self, index, value ) :
-        
-        new_ft = change_feature(self, index, value) 
-        
-        if phon.is_Vowel : new_phon = Vowel(new_ft, phon.syl, phon.speller)
-        else : new_phon = Consonant(new_ft, phon.syl, phon.speller)
-
-        
 
 def get_phon(string) :
     """

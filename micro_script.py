@@ -26,7 +26,7 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 42 # depth of a branch
+depth = 100 # depth of a branch
 nbranches = 42 # number of branches
 
 
@@ -47,7 +47,7 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-new_language , changes, wc = time.change(lang, depth)
+time.make_evolution( lang , nbranches, depth) 
 #origin.print_both(new_language)
 #origin.compare(nlp)
 
@@ -90,14 +90,16 @@ test_retro , ch = lc.change(origin, nb_changes)
 test_retro.print_both(new_language)
 """
 
-time.octopus(nbranches, depth)
+
 #time.tree.print_history_to_graph("virdia")
 
 #k,e = time.tree.elaborate_history_graph('virdia')
 #print(lang.voc)
-time.tree.history_to_graph(['virdia', 'abante'])
+#time.tree.history_to_graph(['virdia', 'abante'])
 #time.tree.history_to_graph(['virdia', 'abante'])
 t = time.tree.get_final_state_of_the_evolution()
 #for l in t : print (l.voc['virdia'])
 
 #time.tree.print_history_to_graph_reduced("virdia")
+
+time.show_of_the_evolution(5)

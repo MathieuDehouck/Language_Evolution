@@ -4,10 +4,12 @@ Created on Thu May  5 09:28:54 2022
 
 @author: 3b13j
 
-Contains the languge class
+Contains the Languge class
 """
-
 from utilitaries import printl, feature_match, feature_indices
+
+
+
 
 
 class Language() :
@@ -35,17 +37,18 @@ class Language() :
     
     """
     
-    def __init__(self, name,  dic) :
+    def __init__(self, dic, name = "unnamed") :
         """
         take as input the name of the language and a dictionnary of words. it is going to create a Language 
         object automatically from this object
 
         Parameters
         ----------
-        name : str
-            name of the language.
+        
         dic : dic
             voc of the language
+        name : str (optional)
+            name of the language.
 
         Returns
         -------
@@ -55,11 +58,11 @@ class Language() :
                 
         self.voc = dic 
         self.name = name
-        # To simplify we are going to state that phonemes are a list of features
         phonemes = []
         features = []
         dic_phonemes = {}
         
+        # get an overview of the phonetic inventory of a language
         for word in dic.values() :
             for syl in word.syllables :
                 for feat in syl.phonemes :
@@ -69,10 +72,14 @@ class Language() :
                         
         self.phonemes   = list(tuple(phonemes)) # we eliminate doubles
         self.features = features
+        #TODO is the following dic necessary? 
         for phoneme in phonemes :
             dic_phonemes[phoneme.ipa] = phoneme        
         self.dic_phonemes = dic_phonemes
         #self.subclasses = self.get_subclasses()
+
+
+
 
 
     def __str__(self) :
@@ -81,8 +88,11 @@ class Language() :
     
     
     
-    
+    #TODO check if necessary in the code
     def get_subclasses(self) :
+        """
+        Try to isolate the fondamental class of the 
+        """
         
         subclasses = {} 
         for phoneme in self.phonemes :
@@ -96,6 +106,9 @@ class Language() :
                 subclass.append(classe)
             subclasses[phoneme] = subclass
         return subclasses
+    
+    
+    
     
     
     def print_phonetic_inventory(self) :

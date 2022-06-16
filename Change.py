@@ -140,7 +140,7 @@ class Change():
                  printl(changed_words)
                 
                 
-        return Language(lang.name+"*", dic), changed_words
+        return Language(dic, lang.name+"*"), changed_words
         #TODO ; the name of the new language could be parametrizable maybe
     
 
@@ -476,7 +476,7 @@ class P_change(Change) :
                  printl(changed_words)
                 
                 
-        return Language(lang.name+"*", dic), changed_words
+        return Language(dic , lang.name+"*"), changed_words
         #TODO ; the name of the new language could be parametrizable maybe
     
     

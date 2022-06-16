@@ -9,7 +9,6 @@ Contains some functions that help handling phonetically transcribed words availa
 """
 from IPA import IPA
 from Word import Word, Syllable
-from Phoneme import Phoneme, Vowel, Consonant
 from Language import Language
 from pathlib import Path
 from IPA_utils import diacritics
@@ -110,8 +109,10 @@ def treat_syl(syl, stress = False) :
 
 
 def segm2syl(dic) :
-    """ take as input the dictionnary created out of the wiki data and used the info concerning syllabification
-    to create syllables in out IPA format"""
+    """ 
+    take as input the dictionnary created out of the wiki data and used the info concerning syllabification
+    to create syllables in our IPA format
+    """
     dic_syl = {}
     for word, segm in dic.items() :
         #print(word, segm)
@@ -124,8 +125,6 @@ def segm2syl(dic) :
                 syl = syl [1:]  
                 s = treat_syl(syl, stress)
                 syllables.append(s)
-                
-            double = False
             
             if not stress :
                 if "ˈ" in syl :
@@ -133,7 +132,6 @@ def segm2syl(dic) :
                     syl = bric[0]
                     s = treat_syl(syl, stress)
                     syllables.append(s)
-                    double = True
                     syl2 = bric [1]
                     #if ' ' ' replaces the point, the accent is ont the word after
                     s2 = treat_syl(syl2, True)
@@ -180,9 +178,8 @@ def get_language(path, name) :
     lg : Language
 
     """
-    al = IPA()
     gaffiot = wiki_lexicon(path)
     dic = dic2word(gaffiot) 
-    lg = Language(name, dic)
+    lg = Language(dic, name)
     
     return lg

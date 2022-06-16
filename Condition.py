@@ -10,8 +10,7 @@ A condition is associated to a change object and states whether a change can be 
 
 """
 
-maxC = [11, 1, 1, 1, 1, 2, 1, 1 , 1 , 1]
-maxV = [2, 6, 1 , 1 , 1]
+
 
 
 import Sampling
