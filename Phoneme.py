@@ -7,8 +7,6 @@ Created on Tue May  3 00:08:43 2022
 
 from ipapy import UNICODE_TO_IPA
 
-from utilitaries import ipa
-
 
 
 class Phoneme(object) :
@@ -38,30 +36,34 @@ class Phoneme(object) :
 
     update_IPA  : finds the closest ipa character to represent a new phoneme
     
+    lot of setters, most of which will be useful in I / D change when the position of a phoneme in the word structure might change. 
+    
     """
-    
-    
     def __init__(self, features, syllabic, speller=None): 
         """
         a gentle Phoneme constructor
         """
         self.speller = speller
-
         self.syl = syllabic
         self.word_rank = None
-        
         self.features = features
-        
         self.ipa = speller.get_char(self)
         try:
             self.description = UNICODE_TO_IPA[str(self.ipa)]._IPAChar__canonical_string
         except:
             self.description = 'No description'
+       
+        
+       
         
         
     def __str__(self):
         return str(self.ipa )+  " : " + str(self.description ) + "\n" + str(self.features)
 
+
+
+
+#TODO : still useful ?  What for ?
     def to_int(self):
         h = int('1010'+str(self.features).replace(' ','').replace('(','').replace(')','').replace(',',''))
 
@@ -71,6 +73,9 @@ class Phoneme(object) :
         if self.syl:
             h += 2
         return h
+
+
+
 
 
     def set_word_rank(self, rk) :
@@ -90,6 +95,9 @@ class Phoneme(object) :
 
     def __eq__(self, other):
         return self.features == other.features
+
+
+
 
 
     def update_IPA(self, config, verbose = False) :
@@ -113,15 +121,17 @@ class Phoneme(object) :
 
     
 
+
+"""
 def get_phon(string) :
-    """
-    transform a string (we excpect the user to enter an ipa character) into the Phoneme object representing this character
-    """
+"""
+    #transform a string (we excpect the user to enter an ipa character) into the Phoneme object representing this character
+"""
     if string not in ipa.alphabet.keys() :
         return
     return Phoneme(string, list(ipa.alphabet[string].features))
 
-
+"""
 
 
 
@@ -157,8 +167,6 @@ class Vowel(Phoneme) :
         a list representing the features associated to the phonem
     description : str
         the verbose descritption of the phoneme
-    voice : bool 
-        states if the phoneme is voiced or not
     syl : bool 
         states if the phoneme is center of a syllable
     
@@ -186,6 +194,8 @@ class Vowel(Phoneme) :
         
         
         
+        
+        
     def get_height(self) :
         return self.features[0][0]
 
@@ -204,12 +214,14 @@ class Vowel(Phoneme) :
     def is_palatal(self, threshold):
         return self.features[0][1] > threshold
 
-
     def __lt__(self, other):
         if other.is_Consonant():
             return True
         return self.features < other.features
     
+
+
+
 
 class Consonant(Phoneme) : 
     """
@@ -250,9 +262,7 @@ class Consonant(Phoneme) :
         the verbose descritption of the phoneme
     voice : bool 
         states if the phoneme is voiced or not
-    syl : bool 
-        states if the phoneme is center of a syllable
-    
+
     Methods
     -------
     __init__() constructor taking all these information as input
@@ -305,7 +315,6 @@ class Consonant(Phoneme) :
  
     def has_sec_articulation (self) :
         return self.features[1][2]
-
 
     def __lt__(self, other):
         if other.is_Vowel():

@@ -6,9 +6,6 @@ Created on Thu May  5 00:01:15 2022
 """
 
 import numpy as np
-from os.path import abspath
-#from ipapy import *
-
 from IPA_utils import manner_enc
 from Phoneme import Vowel, Consonant
 from ipapy import UNICODE_TO_IPA

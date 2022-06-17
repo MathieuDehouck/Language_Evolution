@@ -12,10 +12,10 @@ A file used to generate instances of different kind of P_change_generator
 import random 
 from Effect import Effect
 from Change import P_change, M_change
-from Condition import rd_p_condition, P_condition, S_condition
+from Condition import  P_condition, S_condition
 import Sampling
 
-from utilitaries import mask_match,  change_pattern, tpl_2_candidates, words_containing, bewilder_pattern, syl_match,  printl, feature_indices
+from utilitaries import mask_match,  change_pattern, words_containing, bewilder_pattern, syl_match,  feature_indices
 
 idxC = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
 idxV = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), ]
@@ -125,13 +125,21 @@ class Baby_P_change_generator(P_change_generator) :
 
         """
         
+        
+        # First way to do, expensive ; get a random phoneme from the language
+        """
         #TODO Is there a way to parametrize the 
         
         index = random.randint(0, len(language.phonemes)-1)
         target = language.phonemes[index].features
         
         return target, language.phonemes[index].is_Vowel()
-    
+        """
+        
+        #Second way to to things : we pick a random word in the language and thena random phoneme.
+        wd = random.choice( list(language.voc.values()))
+        phoneme = random.choice(wd.phonemes)
+        return phoneme.features, phoneme.is_Vowel()
     
     
     
@@ -177,6 +185,7 @@ class Baby_P_change_generator(P_change_generator) :
             change.target = change_pattern (change.target, change.concerns_V, feature_index, -1) 
                 
             impacted = []
+            if language.phonemes == None : language.set_phonetic_inventory()
             for phon in language.phonemes :
                 if mask_match(change.target, phon.features, phon.is_Vowel) :
                     impacted.append(phon.ipa)
@@ -265,7 +274,6 @@ class Baby_P_change_generator(P_change_generator) :
         
         limitation = random.randint(0,1)
         if limitation : reg = bool(random.randint(0,1))
-        rel = not reg
         
         ch = M_change(target, index, [], reg, pro)
         

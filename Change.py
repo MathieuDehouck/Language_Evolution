@@ -4,8 +4,8 @@ Created on Thu May  5 10:22:10 2022
 
 @author: 3b13j
 """
-from utilitaries import feature_match, tpl_2_candidates, mask_match, bewilder_pattern, feature_indices, printl, printd, phon_in_dic
-from Phoneme import Phoneme, Vowel, Consonant, list_2_tuple, tuple_2_list
+from utilitaries import mask_match, bewilder_pattern, feature_indices, printl, tuple_2_list, list_2_tuple
+from Phoneme import  Vowel, Consonant
 
 from Word import Word, Syllable
 from Language import Language
@@ -14,11 +14,6 @@ from encoder_decoder import encode_f, decode_f
 from Effect import Effect
 
 from regularizations import regularize_stress, regularize_structure
-from IPA import IPA
-
-
-import random
-import copy
 
 
 
@@ -773,7 +768,9 @@ class M_change(Change) :
         self.regressive  = regressive
         
      #we consider that methathesis only happen once in a word, and in a linear order (aspiration report..)  
+    
     def apply_word(self, wd):
+         
          
          for phon in wd.phonemes : 
              applicable = self.check (phon, phon.word_rank , wd, verbose = False)

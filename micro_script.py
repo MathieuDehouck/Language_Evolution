@@ -56,12 +56,14 @@ time.make_evolution( lang , nbranches, depth)
 purge_log(path+"_changes.txt")
 purge_log(path+"_dic.txt")
 purge_log(path+"_machine_log.txt")
+"""
 for i in range(len(changes))  :
     change2log(changes[i], path+"_changes.txt" ,new_language,  True, i+1)
     samples2log(path+"_changes.txt", wc[i])
     changes2machinelog(path+"_machine_log.txt", changes[i])
 langcomp2log (origin, new_language, path + "_dic.txt")
 extract_changed_words(path + "_dic.txt", True)
+
 
 # we open
 folder = Path("logs/")
@@ -81,7 +83,7 @@ if platform != 'linux':
     os.startfile(path2 )
     os.startfile(path3 )
 
-
+"""
 """
 print("We will now retro engineer the changes")
 

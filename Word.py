@@ -50,6 +50,8 @@ class Word :
         phon2syl = {}
         inds = 0 # index of syllables
         indp = 0 # index of phonemes
+        
+        #TODO : do we want to compute that every time we create a syllable ? We could have a separate method only called in a I / D situation
         for j , syl in enumerate(syls) :
             syl.set_rank_in_wd(inds)
             for po in syl.phonemes :
@@ -62,12 +64,19 @@ class Word :
             inds += 1
         self.phonemes = phon
         self.phon2syl = phon2syl
-        
+    
+    
+
+
 
     def __eq__(self, other):
         
         if type(other) == Word : return self.syllables == other.syllables
         else : return False
+        
+        
+        
+        
         
     def __str__(self)  :
         
@@ -80,10 +89,15 @@ class Word :
         return s
 
     
+
+
+
     def __repr__(self):       
         s = self.ipa
         return s
 
+    
+    
     
     
     def get_structure(self):
@@ -106,6 +120,9 @@ class Word :
         return s    
     
     
+    
+    
+    
     def get_stess_pattern(self) :
         """
         Returns a string representing the stress pattern of the word
@@ -116,6 +133,7 @@ class Word :
             else : s += "_/"
         s = s[:-1]
         return s
+
 
 
 
@@ -154,12 +172,14 @@ class Syllable(object) :
     
     
     
+    
     def __init__(self, phonemes, stress=False, length=False, tone=None) :
         self.phonemes = phonemes
         self.stress = stress 
         self.length = length
         self.tone = tone
     
+        # TODO do profiling here ? 
         # way to know which of the syllable's phoneme bears the accent / tone 
         syl = [phon.syl for phon in self.phonemes]
         if True in syl:
@@ -183,6 +203,9 @@ class Syllable(object) :
         self.ipa = s
         self.rank_in_wd = None
        
+        
+       
+        
 
     def __hash__(self):
         """
@@ -202,8 +225,13 @@ class Syllable(object) :
         
         
         
+        
+        
     def __str__(self) :
         return self.ipa  + "\nstress : "+str(self.stress)+"    length : "+ str(self.length)
+    
+    
+    
     
     
     def set_rank_in_wd(self, rk) :
@@ -228,8 +256,7 @@ class Syllable(object) :
         
         self.stress = stress
         
-        
-        
+
     def set_length(self, length) :
         """
         Allow the program to change the stress of a syllable
@@ -264,4 +291,3 @@ class Syllable(object) :
 
     def __lt__(self, other):
         return self.phonemes < other.phonemes
-    

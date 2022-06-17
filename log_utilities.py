@@ -7,20 +7,21 @@ Created on Tue May 17 16:02:54 2022
 Contains some side methods to write the state of some objects and describe the execution of the program  in log files
 """
 
-from utilitaries import feature_match, feature_indices, tpl_2_candidates
-from IPA import IPA
+from utilitaries import feature_indices
 from encoder_decoder import encode_f
 from pathlib import Path
 from Effect import Effect
+from IPA import IPA
 
 
-
-ipa = IPA()
+ipa = IPA.get_IPA()
 ift = ipa.cfeatures
 #TODO
 #ccl = ipa.classes
 
         
+
+
 
 def target2str (feat):
     """
@@ -80,36 +81,6 @@ def create_breviary() :
         f.write("\n")
         
         
-    
-            
-        
-def effect_to_string():
-    NotImplemented
-    
-    
-    
-    
-    
-def cond2str(cond) :
-    NotImplemented
-
-
-
-
-
-def change2str(change) : 
-    # TODO white a new change2str method regarding the new encadong of changes. 
-    
-    
-    s = "Change :  \n "
-    # avant target.template
-    s+= target2str(change.target) +" " 
-    if len(change.conditions)>1 :
-        for j in range (1, len(change.conditions))  :
-            s+= cond2str (change.conditions[j])
-    return s
-
-
 
 
 
@@ -120,7 +91,9 @@ def change2str(change) :
 
 
 def write_in_log(path, string):
-    """ Takes as input the name of a log file and the sentence that it sould add in it"""    
+    """ 
+    Takes as input the name of a log file and the sentence that it sould add in it
+    """    
     folder = Path("logs/")
     path = folder / path
     f = open(path, 'a',  encoding='utf8')
@@ -141,17 +114,10 @@ def phon2log (phon, path) :
         
     path : str 
         path to the target file
-        
-
-    Returns
-    -------
-    None.
 
     """
-    
     folder = Path("logs/")
     path = folder / path
-    
     f = open (path, "a",encoding='utf8')
     f.write (str(phon.ipa))
     f.write("   :  ")
@@ -172,14 +138,7 @@ def samples2log(path, liste, n =10 ) :
     liste : list of changed words :
     n : int, optional
         number of words that will be printed. The default is 10.
-
-    Returns
-    -------
-    None.
-
     """
-
-    
     folder = Path("logs/")
     path = folder / path
     f = open (path, "a",encoding='utf8')   
@@ -187,6 +146,9 @@ def samples2log(path, liste, n =10 ) :
     f.write (" \n  \n")
     for loop in range(min(n, len(liste))) :
         f.write (str(liste[loop][0]) + "  >  "+str( liste[loop][1]) +" \n" )
+        
+        
+        
         
         
 def changes2machinelog(path, change)     :
@@ -220,13 +182,21 @@ def purge_log(path) :
 
 
 def change2log (change, path,lang,  print_phons = True, i = 0 ) :
-    
-    
+    """
+    Writes a description of a change into a log file
+
+    Parameters
+    ----------
+    change : Change
+    path : str
+    lang : Language
+    print_phons : TYPE, optional
+        DESCRIPTION. The default is True.
+    i : TYPE, optional
+        DESCRIPTION. The default is 0.
+    """
     folder = Path("logs/")
     path = folder / path
-    
-    
-    
     f = open (path, "a",encoding='utf8')
     
     if i != 0 : 
@@ -247,7 +217,7 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
     
     
     f.write("\n")
-    f.write("The phonemes matching the followin target were modified  : \n ")
+    f.write("The phonemes matching the following target were modified  : \n ")
     f.write(str(change.target))
     f.write("\n")
     
@@ -281,8 +251,6 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
         f.write('Impacted phonems :')
         
         for phon in change.impacted_phonemes :
-            
-            #new_phon = change.just_transform(phon)
             f.write("\n")
             f.write(phon[1]) 
             f.write(" > ")
@@ -300,7 +268,7 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
 def langcomp2log (l1, l2, path) :
     """
     Comapres the vobulary of two languages and writes the comparison in a log (subfunction used to trace the evolution between two language state)
-    BE CAREFUL, we excpect the two languages to be related / at least to have the same voc size for this operation to make sense.
+    BE CAREFUL, we expect the two languages to be related / at least to have the same voc size for this operation to make sense.
 
     Parameters
     ----------
@@ -310,17 +278,9 @@ def langcomp2log (l1, l2, path) :
     
     path : str
         path to destination file
-
-    Returns
-    -------
-    None.
-
     """
-    
-    
     folder = Path("logs/")
     path = folder / path
-    
    
     f = open (path, "a",encoding='utf8')  
     f.write("We are going to solemnly compare the evolution between ")
@@ -347,14 +307,7 @@ def lgs2log(liste) :
     Parameters
     ----------
     liste : list of languages where the i+1 th element is the result of the evolution of the ith
-
-    Returns
-    -------
-    None.
-
     """
-    
-    
     for i in range (len(liste) -1) :
         langcomp2log (liste[0], liste[i+1], "comp_lat_rom.txt")
         langcomp2log (liste[i], liste[i+1], "comp_rom_rom.txt")
