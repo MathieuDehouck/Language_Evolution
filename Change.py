@@ -440,6 +440,58 @@ class P_change(Change) :
         return Syllable(phonemes, syl.stress, syl.length), index
     
     
+    
+    
+    
+    
+    # Tentative 2 : on évalue si le changement peut s'appliquer avant de lancer quoi que ce soit.
+    def apply_language2(self, lang, verbose = False):
+        """
+        Apply the change on every word in the langugage
+
+        Parameters
+        ----------
+        lang : language
+
+        Returns
+        -------
+        a new language with the change applied on every of its word
+
+        """
+        
+        
+        
+        changed_words = []
+        
+        dic = {}
+        for key, word in lang.voc.items() :
+            
+            change = False 
+            for pho in word.phonemes :
+                if mask_match(self.target, pho.features, pho.is_Vowel() ) : 
+                    change = True
+                    break 
+            
+            if change : 
+                new_word = self.apply_word(word)
+                if verbose : print(new_word)
+                
+            else : new_word = word
+            
+            dic[key] = new_word
+                
+            if  new_word != word : 
+                changed_words.append([  word.ipa, new_word.ipa])
+                
+            if verbose :
+                 print("NW", new_word)
+                 printl(changed_words)
+        
+                
+        return Language(dic , lang.name+"*"), changed_words
+        #TODO ; the name of the new language could be parametrizable maybe
+    
+    
                 
     def apply_language(self, lang, verbose = False):
         """
@@ -459,7 +511,7 @@ class P_change(Change) :
         dic = {}
         for key, word in lang.voc.items() :
             
-            #save = copy.deepcopy(word)
+           
             new_word = self.apply_word(word)
             if verbose : print(new_word)
             dic[key] = new_word
