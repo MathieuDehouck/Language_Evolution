@@ -11,7 +11,7 @@ A file used to generate instances of different kind of P_change_generator
 
 import random 
 from Effect import Effect
-from Change import P_change, M_change
+from Change import P_change, M_change, S_change
 from Condition import  P_condition, S_condition
 import Sampling
 
@@ -274,16 +274,34 @@ class Baby_P_change_generator(P_change_generator) :
         
         limitation = random.randint(0,1)
         if limitation : reg = bool(random.randint(0,1))
-        
         ch = M_change(target, index, [], reg, pro)
         
         #TODO profiling : ameliorer perf de calcul ici
-        
         nl, wc = ch.apply_language(language)
         if len(wc) == 0 : ch = self.generate_M_change(language)
         
         return ch
     
+    
+    
+    
+    
+    def generate_S_change(self, language, verbose = False): 
+        
+        # first and ugly version, we consider there is no tone. 
+        b1 = bool(random.getrandbits(1))
+        b2 = bool(random.getrandbits(1))
+        b3 = bool(random.getrandbits(1))
+        b4 = bool(random.getrandbits(1))
+        
+        ci = [b1, b2, None]
+        cf = [b3, b4, None]
+    
+        ch = S_change(ci, cf)
+    
+        return ch
+    
+# TODO worl necessary to improve set_conditions and adapt this function to be able to generalize over every type of change
     
     
     

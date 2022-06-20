@@ -8,14 +8,13 @@ Created on Thu Jun  2 14:22:59 2022
 
 from utilitaries import *
 from IPA import IPA 
-from Natural_class import *
 from Wiki_utilities import get_language
 
 from P_change_generator import Baby_P_change_generator
-from Phoneme import list_2_tuple , tuple_2_list
+
 from Effect import Effect
-from Condition import P_condition, rd_p_condition
-from Change import P_change, M_change
+from Condition import P_condition
+from Change import S_change, P_change, M_change
 from Effect import  Effect
 from Condition import S_condition
 
@@ -171,7 +170,7 @@ target_cong =  wd2.phonemes[2].features
 
 
 cond = P_condition(target_cong, -1, -1)
-"""
+
 
 
 
@@ -218,4 +217,16 @@ ch3 = bb.generate_M_change(lang)
 nl, wc = ch3.apply_language(lang)
 
 print(wc)
+"""
 
+
+
+ch4 = S_change([True, False, None], [True, True, None] )
+#printd(lang.voc)
+l2, cw = ch4.apply_language(lang)
+#printd(l2.voc)
+for wd in cw : 
+    print(wd[0], "=>" ,wd[1])
+    
+s = ch4.encode_change()
+c = S_change.decode_change(s)

@@ -10,10 +10,8 @@ from Phoneme import  Vowel, Consonant
 from Word import Word, Syllable
 from Language import Language
 from Condition import P_condition
-from encoder_decoder import encode_f, decode_f
+from encoder_decoder import encode_f, decode_f, encode_bool, decode_bool 
 from Effect import Effect
-
-from regularizations import regularize_stress, regularize_structure
 
 
 
@@ -28,9 +26,11 @@ class Change():
     """
     An abstract class representing a phonetic change.
     They can be of three kinds : 
-        * Phonetics (P_)
-        * Syllabic (I_)
-        * Wordzddzqd (?_)
+        * Phonetics (P_) ( a phoneme gets modified, one of its features being influenced by anothe). This encodes assimilation and dissimilation.
+        * Syllabic (S_) the stress or tone of a syllable moves
+        * Metathesis (?_) two close phonemes get interverted
+        * insertion : a phoneme is inserted in some specific conditions
+        * Deletion : a phoneme is deleted in specific conditions
 
     ...
 
@@ -40,7 +40,6 @@ class Change():
         list of conditions required for the change to be applied
     impacted_phonems : dic
         dictionnary stocking the phonemes that have been impacted by a change during its application
-        #TODO check it works
     target : condition
         a special kind of condition that contraint the category of the phoneme that undergo the change
     
@@ -52,7 +51,7 @@ class Change():
     set_target
     check : checks if all the conditions are satisfied before the application of the change
     """
-    def __init__(self, target, effect, conditions):
+    def __init__(self, target, effect, conditions = []):
         if conditions == None:
             self.conditions = []
         else:
@@ -63,14 +62,20 @@ class Change():
         self.effect = effect
     
         
+    
+    
+    
     def add_condition(self, condition) :
         """ used to add a condition to an already built change """
         self.conditions.append(condition)
 
 
+
+
+
     def check(self,  phon, index , word, verbose = False):
         """
-        check if a Change can be applied or not
+        check if a Change can be applied or not in a word
 
         Parameters
         ----------
@@ -97,11 +102,14 @@ class Change():
             res = condition.test(word, index, verbose)
             # this structure of the loop allow to print all the unsatisied conditions, not just the one making the program crash
             if res == False :
-                return False
                 if verbose :
                     print ("following condition not satisfied : ")
                     print(condition)
+                return False
         return True
+
+
+
 
 
     def apply_language(self, lang, verbose = False):
@@ -126,7 +134,6 @@ class Change():
             new_word = self.apply_word(word)
             if verbose : print(new_word)
             dic[key] = new_word
-            
             if  new_word != word : 
                 changed_words.append([  word.ipa, new_word.ipa])
                 
@@ -136,8 +143,10 @@ class Change():
                 
                 
         return Language(dic, lang.name+"*"), changed_words
-        #TODO ; the name of the new language could be parametrizable maybe
+        
     
+
+
 
     def apply_word(self, word):
         """
@@ -154,6 +163,10 @@ class Change():
         """
         NotImplemented
 
+
+
+
+
     def apply_syl(self, syl):
         """
         Apply the change to a syllable
@@ -169,14 +182,18 @@ class Change():
         """
         NotImplemented
 
+
+
+
+
     def apply_phon(self):
         NotImplemented
-    
-    
 
-class P_change(Change) :
-    
-    
+
+
+
+
+class P_change(Change) :    
     """
     subclass of change 
     A class modelling a phonological change .
@@ -225,18 +242,20 @@ class P_change(Change) :
         during the process of its application
         """
         super().__init__(target, effect, conditions)
-
+        
         self.idx = feature_indices(target)
         self.impacted_phonemes ={}
         self.concerns_V  = len(self.idx) == 5
         
         
-        #TODO : rustine un bu fait que qd on crée plusieurs changements à la suite du même nom (dans une boucle par ex)
-        # la liste des changements n'est pas remise à 0
         
     def __eq__ (self, other) :
         return self.target == other.target and self.effect == other.effect and self.conditions == other.conditions
         
+    
+    
+    
+    
     def applicable (self, language) :
         """
         checks if a change would modufy a language given as input. 
@@ -261,6 +280,9 @@ class P_change(Change) :
         return False
 
 
+
+
+
     def effective (self, language, verbose = False) :     
         lg, cw = self.apply_language(language)
         bol = len(cw) == 0 
@@ -270,12 +292,9 @@ class P_change(Change) :
         return bol
             
         
-    def compensate(self, phon) :
-        
-        #TODO
-        return phon
-        
-    
+
+
+  #  TODO : really useul ?
     def just_transform (self, phon) :
         """
         Applies a change to transform a phoneme whithout taking care of any kind of condition
@@ -291,17 +310,14 @@ class P_change(Change) :
         """
         
         if not phon.isV : ft = [[0, 0, 0],[0,0,0]]
-        
         else : ft =  [[ 0, 0 , 0],[0,0]]
-        
         
         for ind in self.effect.idx : 
             if ind in self.effect.effect : 
-                ft[ind[0]][ind[1]] = self.effect.effect[ind]  [1]
+                ft[ind[0]][ind[1]] = self.effect.effect[ind][ind[0]][ind[1]]
 
             else :
                 ft[ind[0]][ind[1]] = phon.features[ind[0]][ind[1]]
-
         
         ft = list_2_tuple(ft)
         
@@ -310,9 +326,10 @@ class P_change(Change) :
         return new_phon
        
         
+       
+        
         
     def apply_phon (self,  phon, index , word, verbose = False):
-
         """
         Applies the change on a phoneme
 
@@ -335,22 +352,25 @@ class P_change(Change) :
             the new phoneme obtained after the applciation of the change
 
         """
-        
-        
+
         if verbose :
             print ()
             print("we study the phoneme : ", index , phon.ipa)
             print()
-        applicable = self.check (phon, index , word, verbose = False)
-        
-        if not applicable or not mask_match(self.target, phon.features, self.concerns_V):
+       
+        if not mask_match(self.target, phon.features, self.concerns_V):
+            
+            
+        #better profiling
             if verbose : print("the condition is not respected, nothing is changed", phon.ipa)
             return phon, index+1
         
+        else : 
+            applicable = self.check (phon, index , word, verbose = False)
+            if not applicable : return phon, index+1
         
         if phon.isV != self.concerns_V : 
             if verbose : print ("wrong side")
-            
             return phon, index+1
         
         
@@ -386,6 +406,8 @@ class P_change(Change) :
         return new_phon, index+1
 
     
+
+
     
     def apply_word(self, wd , verbose = False) :
         """
@@ -400,7 +422,8 @@ class P_change(Change) :
         word : a new word with the change applied
 
         """
-        
+        #TODO : computation : to improve
+        #if not self.applicable(wd) : return wd
         syls = []
         index = 0 #used to parse the whole structure of the word
         for syl in wd.syllables :
@@ -408,6 +431,8 @@ class P_change(Change) :
             syls.append(syl)
         return Word(syls)
          
+    
+    
     
     
     def apply_syl(self, syl, index, wd, verbose = False):
@@ -458,9 +483,6 @@ class P_change(Change) :
         a new language with the change applied on every of its word
 
         """
-        
-        
-        
         changed_words = []
         
         dic = {}
@@ -489,7 +511,8 @@ class P_change(Change) :
         
                 
         return Language(dic , lang.name+"*"), changed_words
-        #TODO ; the name of the new language could be parametrizable maybe
+    
+    
     
     
                 
@@ -542,6 +565,7 @@ class P_change(Change) :
     
     
     
+    
 
     def encode_change(self):
         s = "PC\t"
@@ -568,7 +592,6 @@ class P_change(Change) :
         if s[0][0] == 'P' :
             change = P_change(target, effect)
         
-        
         for cond in s[3][4:].split("  &  ") :
             
             if len(cond)>0 :
@@ -589,110 +612,9 @@ class P_change(Change) :
         
         
         return (change)
-        #if s[0] = "PC " 
-        
-        
+   
     
-    """
-    def rd_change (lang, verbose = False ):
-            #""
-        generates a randomly parametrized change that can be applied and will surely modify the 
-        Language given in input.
-    
-        Parameters
-        ----------
-        lang : Language
-            the language for which we want to create an applicable change.
-            We ignore changes that coulnd t be applied
-        verbose : TYPE, optional
-            DESCRIPTION. The default is False.
-
-        Returns
-        -------
-        ch : TYPE
-            DESCRIPTION.
-
-            #""
-            if verbose : print("we create a rd change")
-            li = lang.phonemes
-            
-        # this block list the phonemes creates a condition on the target and checks that this target can
-        # be affected by the change. if that s not the case, we find another target       
-            trg = P_condition. rd_p_condition()
-            tpl = trg.template
-            candidates2 = tpl2candidates(li, tpl, verbose)
-            i = 0
-            while len(candidates2 ) == 0 :
-                trg = P_condition.rd_p_condition()
-                tpl = trg.template
-                candidates2 = tpl2candidates(li, tpl, verbose)
-                if verbose : print("fail bis ", i)
-                
-                if i> 100 :  # trick to avoid the program never terminating in difficult configurations
-                    break
-                i+=1
-                
-        # this block of code fixes the nature of the change we generate
-            conf_i = Configuration()
-            conf_f = conf_i.get_output()
-            candidates = []
-            i=0
-            while len(candidates) == 0 :
-                candidates = tpl2candidates(candidates2, conf_i.state, verbose)
-                conf_i = Configuration()
-                conf_f = conf_i.get_output()
-                if verbose : print("fail", i)
-                i+=1
-                # if the program is not able to find a change to apply to the phoneme , we generate another target
-                if i> 100 :
-                    trg = P_condition. rd_p_condition()
-                    tpl = trg.template
-                    candidates2 = tpl2candidates(li, tpl, verbose)
-            
-            
-           ## in this third block, we add new p_conditions on our change.
-           # we still want this condition to be applicable.
-           
-           # first we choose if the assimilation / dissimilation is progressive or not.
-           
-           
-            #TODO refactor cette partie en une sous fonction callable
-            direction= random.randint(0,1) 
-            if direction == 0 : direction = -1 
-            cond = P_condition.constrained_rd_condition( conf_i , direction)
-            candidates3 = []
-            j = 0
-            while len(candidates3 ) == 0 :
-                candidates3 = tpl2candidates(candidates, cond.template, verbose)
-                cond = P_condition.constrained_rd_condition( conf_i , direction)
-                if verbose : print("F A I L", j)
-                j += 1
-            
-            #second condition ?
-            sc = random.randint(0,1) 
-            if sc :
-                direction = -direction  # on conditionne le changement de l'autre côté
-                cond2 = P_condition.constrained_rd_condition( conf_i , direction)
-                candidates3 = []
-                j = 0
-                while len(candidates3 ) == 0 and j<100:
-                    candidates3 = tpl2candidates(candidates, cond.template, verbose)
-                    cond2 = P_condition.constrained_rd_condition( conf_i , direction)
-                    if verbose : print("F A I L", j)
-                    j += 1  
-
-            
-            
-            # Those ligns create the P_change with the elements obtained at each step
-            ch = P_change(conf_i, conf_f)
-            ch.set_target(trg)
-            #ch.add_condition(trg)
-            ch.add_condition(cond)
-            if sc : ch.add_condition(cond2)
-            return ch 
-                
-        """        
-      
+   
     
     
 class S_change(Change) :
@@ -725,13 +647,13 @@ class S_change(Change) :
     add_condition :
         input : a condition
         adds it to the condition list.
-    
     """
-
+    def __eq__(self, o) :
+        return self.config_initiale == o.config_initiale and self.config_finale == o.config_finale and self.conditions == o.conditions
     
     def check(self, word, rank) :
         """
-        checks if a change can ba applied to a word
+        checks if a change can be applied to a word
 
         Parameters
         ----------
@@ -749,11 +671,13 @@ class S_change(Change) :
         
         for condition in self.conditions:
             if not condition.test(word, rank) : return False
-                
-        for s in word.syllables :
-            if s.stress == self.config_initiale[0] and s.length == self.config_initiale[1] and  s.tone == self.config_initiale[2] :
-                    return True
+        s = word.syllables[rank] 
+        if s.stress == self.config_initiale[0] and s.length == self.config_initiale[1] and  s.tone == self.config_initiale[2] :
+            return True
         return False
+    
+    
+    
     
     
     def __init__(self, config_initiale, config_finale, conditions = []) :
@@ -762,21 +686,23 @@ class S_change(Change) :
         self.config_finale = config_finale
         self.reconfig_stress = []
       
+        
     
     
         
     def apply_syl (self, syl, word, index) :
         
-        # Un peu brouillon ,  à améliorer 
-        #mettre à jour la rpz de l'accent dans l IPA  / structure de syllabe
         applicable = self.check(word, index)
         if not applicable : return syl
         n_syll = Syllable(syl.phonemes, self.config_finale[0],self.config_finale[1],self.config_finale[2] )
-        
         if self.config_initiale[0] != self.config_finale[0] and syl.stress == self.config_initiale[0] :
             self.reconfig_stress.append(index)
             
         return n_syll
+    
+    
+    
+    
     
     def apply_word (self, wd) :
         syls = []
@@ -784,59 +710,139 @@ class S_change(Change) :
             ns = self.apply_syl(s, wd, i)
             syls.append(ns)
         w =  Word(syls)
-        for ind in self.reconfig_stress:
-            regularize_stress(ind, w)
         return w
+    
+    
+    
     
     
     def __str__(self) :
         s= "if following conditions are satisfied : \n"
         for condition in self.conditions :
             s+= str(condition) + "\:n"
-        s+= "following effect  :\n "
-        s+= str(self.effect) + "\n"
-        
+        s+=   "A syllable with : stress : " + str(self.config_initiale[0]) + "  length : " + str(self.config_initiale[1]) +"  tone : " + str(self.config_initiale[2]) + " \n"
+        s += "aquires the following pattern : stress : "+ str(self.config_finale[0]) + "  length : " + str(self.config_finale[1]) +"  tone : " + str(self.config_finale[2]) + " \n"
         return s
 
     
+
+
+   
+    def encode_triplet(self, triplet) :
+        """Encode the triplet of booleans that represents the supplementary information we have about a vowell"""
+        s = "S"+ encode_bool(triplet[0]) + "|"
+        s += "L"+ encode_bool(triplet[1]) + "|"
+        s += "T"+ encode_bool(triplet[2]) 
+        return s 
+    
+    
+    
+    def decode_triplet( s) :
+        """Decode the triplet of booleans that represents the supplementary information we have about a vowell"""
+        s = s.split("|")
+        triplet = []
+        for truc in s : 
+            triplet.append(decode_bool(truc[1]))
+        return triplet
+        
+        
+        
+        
+    def encode_change(self):
+        s = "SC" + "\t"
+        s+=  "Tar:" + self.encode_triplet(self.config_initiale)+ "\t"
+        s+= "Eff:" + self.encode_triplet(self.config_finale)+ "\t"
+        s+= "Con:" 
+        for cond in self.conditions : 
+            s+= cond.encode_condition()+"  &  "
+        return s
+        
+    
+    
+    
+    
+    def decode_change(string, verbose = False) :
+        # the string coding a change encompass four parts. 
+        s = string.split("\t")
+        if verbose : print(s[1][4:])
+        ci = S_change.decode_triplet(s[1][4:])
+        if verbose : print(s[2][4:])
+        cf = S_change.decode_triplet(s[2][4:])
+        if verbose : print(s[3][4:].split("  &  "))
+        if s[0][0] == 'S' :
+            change = S_change(ci, cf) 
+        
+        for cond in s[3][4:].split("  &  ") :
+            if len(cond)>0 :
+                if verbose : 
+                    print("we study a cond")
+                    print(cond)
+                add = False
+                if cond[0] == "P" :
+                    c = P_condition.decode_P_cond(cond)
+                    add = True
+                    
+                elif cond[0] == "S" : 
+                    c = P_condition.decode_S_cond(cond)
+                    add = True
+                if add : change.add_condition(c)
+        
+        return change
 
 
 
 
 
 class M_change(Change) :
+    """
+    subclass of change 
+    A class modelling the inversion of two phonemes in a word
+    ...
+
+    Attributes
+    ----------
+    target: list
+        pattern of the phoneme that can undergo the metathesis
+    index : int
+        index of the feature that links the two phonemes that will swap
+    conditiosn : list
+        list of the conditions that need to be satisfied for the change to be applied
+    progressive / regressive : bools 
+        to determine the direction of the change
+
+    """
 
     
     def __init__(self, target, index,  conditions, regressive = True, progressive = True) :
         super().__init__(target, None, conditions)
         self.target = target 
         self.index = index
-        #TODO
         self.effect = self.index
-        
         self.conditions = conditions
         self.concerns_V =  (len(target[1] ) == 2 )
         self.progressive = progressive
         self.regressive  = regressive
-        
      #we consider that methathesis only happen once in a word, and in a linear order (aspiration report..)  
     
+    
+    
+    
     def apply_word(self, wd):
-         
-         
-         for phon in wd.phonemes : 
-             applicable = self.check (phon, phon.word_rank , wd, verbose = False)
-             
-         return self.swap(wd)
+        """
+        Simple call to the swap method that exaclty does what a M change is supposed to. 
+        """
+        return self.swap(wd)
         
-    # cut into swapable and swap 
+    
+    
     
     
     #TODO its the swapable method we have to modify to have different metathesis option. 
     def swapable(self, wd) :
-        
-     
-        
+        """
+        check if a word satisfies the conditions and target selection of the change.
+        """       
+        #TODO can be quesitonned : we could also pick a particular value for the index. 
         target_bis = bewilder_pattern(self.target, self.index )
         
         swap_flag = False 
@@ -850,8 +856,6 @@ class M_change(Change) :
                 if not self.regressive : f = i
                 for pho2 in wd.phonemes[d:f] :
                     if mask_match(target_bis, pho2.features, self.concerns_V) and pho2.features[self.index[0]][self.index[1]] != ph.features[self.index[0]][self.index[1]] :
-                        
-                        
                         swap_flag = True
                         i1 = ph.word_rank  
                         i2 = pho2.word_rank
@@ -863,6 +867,10 @@ class M_change(Change) :
     
     
     def swap(self, wd,) :
+        """
+        Apllies the metathesis following the target and conditions stored in the Change object.
+
+        """
         
         
         swap_flag, i1, i2 = self.swapable(wd )
@@ -870,36 +878,30 @@ class M_change(Change) :
         pho2 = wd.phonemes[i2]
         
         if not swap_flag : 
-            #print("we do the same sad things")
-            #print(wd.ipa)
             return wd
+        
         if swap_flag : 
             i = 0
-            
             new_syls = []
             for syl in wd.syllables : 
                 phon_in_syl = []
                 for p in syl.phonemes : 
+                    #TODO attentio aux cas de répétitions dans le mot à gérer. ajouter 2 flags ? 
                     if i == i1 : 
                         phon_in_syl.append(pho2) 
                     elif i == i2 :
                         phon_in_syl.append(ph) 
                     else :      
                         phon_in_syl.append(wd.phonemes[i])
-                    i +=1
-                #printl(phon_in_syl)
+                    i +=1          
                 new_syls.append(Syllable(phon_in_syl, syl.stress, syl.length, syl.tone))
-               # printl(new_syls)
-            
             new_wd = Word(new_syls)
-            #print("this is a neeeewword", new_wd.ipa)
+            
             return new_wd
         
         
         
-# add a range for the metathesis  -1 means the whole word
 
-# do a method rebuild word
         
     def __str__(self) :
         s= "if following conditions are satisfied : \n"
@@ -910,6 +912,7 @@ class M_change(Change) :
         s+= "swap with some other that has a different value for feature "
         s+= str(self.index)
         return s
+    
     
     
     
@@ -936,21 +939,18 @@ class M_change(Change) :
         target = decode_f(s[1][4:])
         if verbose : print(s[2][4:])
         effect = s[2][4:]
-        
         pro = ( "True" in  s[3][4:] )
-        
         reg =  pro = ( "True" in  s[4][4:] )
         
         if verbose : print(s[5][4:].split("  &  "))
         if s[0][0] == 'M' :
-            change = M_change(target, effect, [], reg, pro)
-        
+            change = M_change(target, effect, [], reg, pro) 
         
         for cond in s[5][4:].split("  &  ") :
             
             if len(cond)>0 :
                 if verbose : 
-                    print("we study a codn")
+                    print("we study a cond")
                     print(cond)
                 add = False
                 if cond[0] == "P" :
@@ -961,9 +961,7 @@ class M_change(Change) :
                     c = P_condition.decode_S_cond(cond)
                     add = True
                     
-                    
                 if add : change.add_condition(c)
-        
         
         return change
 
@@ -996,7 +994,7 @@ class D_change(Change) :
                     flag_change = False
                 syls.append(syl)
         new_wd = Word(syls)
-        if flag_change : regularize_structure(new_wd)
+        #if flag_change : regularize_structure(new_wd)
 
 
 

@@ -89,6 +89,11 @@ class Language() :
             dic_phonemes[phoneme.ipa] = phoneme        
         self.dic_phonemes = dic_phonemes
 
+
+
+
+
+
     def __str__(self) :
         return self.name + str(self.phonemes)
 
@@ -189,7 +194,6 @@ class Language() :
         for p in ina : diff.append([p, "only in "+str(self.name)])
         inb = [x.ipa for x in other.phonemes if x not in self.phonemes ]
         for p in inb : diff.append([p, "only in "+str(other.name)])
-        
         
         return (match)/ total , diff
         

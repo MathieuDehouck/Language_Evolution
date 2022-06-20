@@ -255,8 +255,8 @@ inputsC = ((range(0,11), manner_list, range(0,2) ), (secondary_place, range(0,2)
 
 
 #Parametrisation of the type of change applied
-change_types = ["P", "M"]
-weights_change_type = [8, 4]
+change_types = ["P", "M", "S"]
+weights_change_type = [8, 4, 2 ]
 
 
 

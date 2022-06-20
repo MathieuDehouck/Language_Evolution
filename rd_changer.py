@@ -124,6 +124,9 @@ class Tree_changer(Changer) :
         if type_of_change == "M" : 
             change = self.generator.generate_M_change(lang)
             #print("M_generated")
+        if type_of_change == "S" : 
+            change = self.generator.generate_S_change(lang)
+            #print("S_generated")
         else  : 
             change = self.generator.generate_P_change(lang)
             #print("P_generated")

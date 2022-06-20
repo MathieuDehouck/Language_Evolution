@@ -26,8 +26,8 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 2000 # depth of a branch
-nbranches = 1 # number of branches
+depth = 20 # depth of a branch
+nbranches = 10 # number of branches
 
 
 
@@ -104,7 +104,7 @@ t = time.tree.get_final_state_of_the_evolution()
 
 #time.tree.print_history_to_graph_reduced("virdia")
 
-time.show_of_the_evolution(5)
+time.show_of_the_evolution(2)
 
 lf = random.choice(t)
 lf.evaluate_proximity(origin)

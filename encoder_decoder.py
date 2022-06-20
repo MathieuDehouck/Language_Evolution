@@ -80,7 +80,15 @@ def encode_f (feat) :
         
     return s
 
-
+def encode_bool(bol) :
+    if bol == True : return "T"
+    elif bol == None : return "N"
+    else : return "F"
+    
+def decode_bool(bol) :
+    if bol == "T": return True
+    elif bol == "N" : return None
+    else : return False
 
 def dt(string, x) :
     # for decoding trick
@@ -162,6 +170,12 @@ def encoded_changes2log(changes, path, rewind = False ):
         f.write(encode_p_change(change))
         f.write("\n")
     f.close()
+
+
+
+
+
+
 
 """    
 def decode_log(path, copy_back = False) :
