@@ -14,7 +14,7 @@ from Generator import Change_Generator
 
 import random
 import Sampling
-
+import copy
 
 
 
@@ -133,10 +133,11 @@ class Tree_changer(Changer) :
         
         nl, wc = change.apply_language(lang)
         self.current_tree.change = change
-        self.changed_words = wc
+        self.current_tree.changed_words = wc
         new_tree = L_tree(nl, self.current_tree)
         self.current_tree = new_tree
-          
+         
+        
         return nl, change, wc
      
      
@@ -157,13 +158,16 @@ class Tree_changer(Changer) :
                 print("Currently generating change", i+1)
                 print()
             lang , change , changed_words = self.change_u ( lang)
-              
+            
+            
             changes.append(change) 
               
             wc.append(changed_words)
               
             if verbose : print("Change ", i+1, " created")
-        return lang, changes, wc, self.current_tree
+            lf = copy.copy(self.current_tree)
+            
+        return lang, changes, wc, lf
      
      
      

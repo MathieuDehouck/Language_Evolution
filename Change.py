@@ -183,38 +183,17 @@ class Change():
     def apply_phon(self):
         NotImplemented
 
-
     
 
-    # Constrained
-    def decode_log(path, copy_back = False) :
-        
-        f = open(path + "_encoded.txt", "r", encoding = "utf8") 
-        
-        copych = []
-        j= 0
-        for line in f : 
-            print(line)
-            print(j)
-            j = j+1
-            chan =  Change.decode_change(line)
-            copych.append(chan)
-        f.close()
-        if copy_back : return 
-        
-        f2 = open(path + "_encoded_decoded.txt", "w", encoding = "utf8")
-        for chain in copych :
-            string = Change.encode_change(chain) 
-            f2.write(string)
-            f2.write("\n")
-        f2.close()
 
-
-
-
-
-
-
+    def decode_change(string, verbose = False) :
+        """
+        Hub to determine which decoder to use
+        """
+        determiner = string[0] 
+        if determiner == "M" : return M_change.decode_change(string, verbose)
+        elif determiner == "S" : return S_change.decode_change(string, verbose)
+        elif determiner == "P" : return P_change.decode_change(string, verbose)
 
 
 
@@ -1095,3 +1074,70 @@ class I_change(Change) :
                     print ("following condition not satisfied : ")
                     print(condition)
         return True
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    # Constrained to put it here due to circular import pb
+def decode_log(path, copy_back = False) :
+        """
+        decodes a log file,  and converts the long written in it in changes.
+        optionnaly can write them back in another log to check there is no difference
+    
+        """
+    
+    
+        
+        f = open(path , "r", encoding = "utf8") 
+        copych = []
+        j= 0
+        for line in f : 
+            #print(line)
+            #print(j)
+            j = j+1
+            chan =  Change.decode_change(line)
+            copych.append(chan)
+        f.close()
+        
+        if copy_back : return 
+        f2 = open(path + "_encoded_decoded.txt", "w", encoding = "utf8")
+        for chan in copych :
+            string = chan.encode_change() 
+            f2.write(string)
+            f2.write("\n")
+        f2.close()
+
+
+
+        print("check similarity")
+        f = open(path , "r", encoding = "utf8") 
+        lf = [] 
+        for line in f : lf.append[line]
+        f2 = open(path + "_encoded_decoded.txt", "w", encoding = "utf8")
+        lf2 = [] 
+        for line in f2 : lf2.append[line]
+        for i , el in enumerate(lf) : 
+            if el != lf2[i] :  
+                print("error on change ", i)
+                return  False
+        return True
+        
+
+
+
+
+
+
+
+

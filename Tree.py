@@ -65,6 +65,9 @@ class L_tree :
         s = self.adress + "   parent " + self.parent.adress + "    nodes  : "
         for n in self.nodes:
             s += n.adress + "   "
+            s += "\n"
+            s += str(self.change)
+            s += str(self.changed_words)
         return s
         
     
@@ -184,7 +187,7 @@ class L_tree :
         """ 
         Returns the list of all the nodes leading from the target node to the root of the tree
         """
-        liste = []
+        liste = [self]
         parent = self.parent 
         while parent.parent != None :
             liste.append(parent)
@@ -206,7 +209,7 @@ class L_tree :
         chs = []
         wcs = []
         ptr.reverse()
-        for tr in ptr :
+        for tr in ptr[:-1] :
             lgs.append(tr.language)
             chs.append(tr.change)
             wcs.append(tr.changed_words)
