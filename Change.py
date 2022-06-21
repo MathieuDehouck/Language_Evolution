@@ -935,7 +935,7 @@ class M_change(Change) :
         if verbose : print(s[2][4:])
         effect = s[2][4:]
         pro = ( "True" in  s[3][4:] )
-        reg =  pro = ( "True" in  s[4][4:] )
+        reg = ( "True" in  s[4][4:] )
         
         if verbose : print(s[5][4:].split("  &  "))
         if s[0][0] == 'M' :
@@ -1119,17 +1119,21 @@ def decode_log(path, copy_back = False) :
         f2.close()
 
 
-
+        # strange bug, it should normally work
         print("check similarity")
         f = open(path , "r", encoding = "utf8") 
         lf = [] 
-        for line in f : lf.append[line]
-        f2 = open(path + "_encoded_decoded.txt", "w", encoding = "utf8")
+        for line in f : 
+            
+            lf.append(line)
+        f2 = open(path + "_encoded_decoded.txt", "r", encoding = "utf8")
         lf2 = [] 
-        for line in f2 : lf2.append[line]
+        for line in f2 : lf2.append(line)
         for i , el in enumerate(lf) : 
             if el != lf2[i] :  
                 print("error on change ", i)
+                print(el)
+                print(lf2[i])
                 return  False
         return True
         

@@ -17,7 +17,7 @@ from log_utilities import change2log, langcomp2log,  samples2log, extract_change
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, encode_f 
 from Condition import Condition
-from Change import P_change 
+from Change import decode_log
 
 from Language import State
 
@@ -26,8 +26,8 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 20 # depth of a branch
-nbranches = 1 # number of branches
+depth = 100 # depth of a branch
+nbranches = 2 # number of branches
 
 
 
@@ -113,3 +113,5 @@ time.show_of_the_evolution(2)
 
 #lf = random.choice(t)
 #lf.evaluate_proximity(origin)
+
+print(decode_log("logs/tuesday_machine_log.txt"))
