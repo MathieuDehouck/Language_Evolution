@@ -116,23 +116,24 @@ class Tree_changer(Changer) :
 
 
     def change_u (self, lang, verbose = False) :
-        type_of_change = random.choices(Sampling.change_types, Sampling.weights_change_type )[0]
         
-        #print("type_of_change    ",  type_of_change)
+        type_of_change = random.choices(Sampling.change_types, Sampling.weights_change_type )[0]
         
         
         if type_of_change == "M" : 
             change = self.generator.generate_M_change(lang)
-            #print("M_generated")
-        if type_of_change == "S" : 
+            if verbose : print("M_generated")
+        elif type_of_change == "S" : 
             change = self.generator.generate_S_change(lang)
-            #print("S_generated")
-        else  : 
+            if verbose : print("S_generated")
+        elif  type_of_change == "P" : 
             change = self.generator.generate_P_change(lang)
-            #print("P_generated")
+            if verbose : print("P_generated")
 
+        
         nl, wc = change.apply_language(lang)
         self.current_tree.change = change
+        self.changed_words = wc
         new_tree = L_tree(nl, self.current_tree)
         self.current_tree = new_tree
           
@@ -142,7 +143,31 @@ class Tree_changer(Changer) :
      
      
      
-    def pursue_evolution(self, wanted_depth , node = None) :
+    def change(self, lang, n, verbose=False) :
+        """
+        Apply n changes
+        """
+        changes = []
+        wc = []
+        #lang = copy.deepcopy(lang)
+        # we program n random changes
+        for i in tqdm (range(n), "generating " + str(n) + " changes"):
+            if verbose : 
+                print()
+                print("Currently generating change", i+1)
+                print()
+            lang , change , changed_words = self.change_u ( lang)
+              
+            changes.append(change) 
+              
+            wc.append(changed_words)
+              
+            if verbose : print("Change ", i+1, " created")
+        return lang, changes, wc, self.current_tree
+     
+     
+     
+    def pursue_evolution(self, wanted_depth , node = None, verbose = False) :
         """
         
 
@@ -162,8 +187,23 @@ class Tree_changer(Changer) :
         expanded_tree = dic[node]
         
         for nch in trange((wanted_depth - expanded_tree.depth), desc="generating " +str(wanted_depth -expanded_tree.depth)+"changes") :
-            change = self.generator.generate_P_change(expanded_tree.language)
+            
+            type_of_change = random.choices(Sampling.change_types, Sampling.weights_change_type )[0]
+            
+            
+            if type_of_change == "M" : 
+                change = self.generator.generate_M_change(expanded_tree.language)
+                if verbose : print("M_generated")
+            elif type_of_change == "S" : 
+                change = self.generator.generate_S_change(expanded_tree.language)
+                if verbose : print("S_generated")
+            elif type_of_change == "P" :
+                change = self.generator.generate_P_change(expanded_tree.language)
+                if verbose : print("P_generated")
+    
             nl, wc = change.apply_language(expanded_tree.language)
+            expanded_tree.change = change
+            expanded_tree.changed_words = wc
             new_tree = L_tree(nl, expanded_tree)
             expanded_tree = new_tree
 
@@ -203,9 +243,9 @@ class Tree_changer(Changer) :
          from a untouched language, derives the given number of branches, and pushes forward until the trees all have the same depth
          
          """
-         self.change( lang, depth)
+         lang, changes, wc, main_leaf = self.change( lang, depth)
          self.octopus(nb_branches, depth)
-         
+         return main_leaf
          
          
          

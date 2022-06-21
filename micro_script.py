@@ -26,7 +26,7 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 20 # depth of a branch
+depth = 30 # depth of a branch
 nbranches = 10 # number of branches
 
 
@@ -47,7 +47,7 @@ origin = lang
 bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
-time.make_evolution( lang , nbranches, depth) 
+ml = time.make_evolution( lang , nbranches, depth) 
 #origin.print_both(new_language)
 #origin.compare(nlp)
 
@@ -56,7 +56,12 @@ time.make_evolution( lang , nbranches, depth)
 purge_log(path+"_changes.txt")
 purge_log(path+"_dic.txt")
 purge_log(path+"_machine_log.txt")
-"""
+
+
+lgs, changes, wc = time.tree.get_a_change_path(ml)
+new_language = lgs[-1]
+
+
 for i in range(len(changes))  :
     change2log(changes[i], path+"_changes.txt" ,new_language,  True, i+1)
     samples2log(path+"_changes.txt", wc[i])
@@ -83,7 +88,7 @@ if platform != 'linux':
     os.startfile(path2 )
     os.startfile(path3 )
 
-"""
+
 """
 print("We will now retro engineer the changes")
 

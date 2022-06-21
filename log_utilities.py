@@ -12,7 +12,7 @@ from encoder_decoder import encode_f
 from pathlib import Path
 from Effect import Effect
 from IPA import IPA
-
+from Change import P_change , S_change, M_change
 
 ipa = IPA.get_IPA()
 ift = ipa.cfeatures
@@ -142,11 +142,15 @@ def samples2log(path, liste, n =10 ) :
     folder = Path("logs/")
     path = folder / path
     f = open (path, "a",encoding='utf8')   
-    f.write("EXAMPLES")
-    f.write (" \n  \n")
-    for loop in range(min(n, len(liste))) :
-        f.write (str(liste[loop][0]) + "  >  "+str( liste[loop][1]) +" \n" )
-        
+    
+    
+    if liste != [] :
+        f.write("EXAMPLES")
+        f.write (" \n  \n")
+        for loop in range(min(n, len(liste))) :
+            f.write (str(liste[loop][0]) + "  >  "+str( liste[loop][1]) +" \n" )
+    else : f.write ("The branch we study is the one that was not impacted by the change")
+    
         
         
         
@@ -208,6 +212,7 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
     f.write("\n")
     f.write("\n")
     
+    
     if len(change.conditions) != 0 : 
         f.write ( "If the following conditions were satisfied :  ")
         f.write("\n")
@@ -215,53 +220,81 @@ def change2log (change, path,lang,  print_phons = True, i = 0 ) :
           f.write(str(cond))  
           f.write("\n")
     
-    
-    f.write("\n")
-    f.write("The phonemes matching the following target were modified  : \n ")
-    f.write(str(change.target))
-    f.write("\n")
-    
-    idx  = feature_indices(change.target)
-    target_vow = (len(idx) == 5)
-    
-    #RUSTINE, a implementer pour M
-    if type(change.effect) == Effect : 
-      for key, values in change.effect.effect.items() :
-        
-        if key != values :
-        
-            if target_vow : feat_semantics = ipa.vfeatures
-            else : feat_semantics = ipa.cfeatures
-        
-            f.write ( "The feature ")
-            
-            
-            f.write ( str(feat_semantics[change.effect.domain[0]][change.effect.domain[1]])) 
-            # For the manner of articulation , it is possible that the result is in fact a tuple 
-            f.write (' switched values from ')
-            f.write (str(key))
-            f.write (' to ')
-            f.write (str(values))
-            f.write("\n")
-    
-    f.write("\n")
-    
-    if print_phons :
+    if type(change) == P_change : 
         f.write("\n")
-        f.write('Impacted phonems :')
-        
-        for phon in change.impacted_phonemes :
-            f.write("\n")
-            f.write(phon[1]) 
-            f.write(" > ")
-            f.write(change.impacted_phonemes[phon][1])
+        f.write("The phonemes matching the following target were modified  : \n ")
+        f.write(str(change.target))
         f.write("\n")
         
+        
+        
+        idx  = feature_indices(change.target)
+        target_vow = (len(idx) == 5)
+        
+        #RUSTINE, a implementer pour M
+        if type(change.effect) == Effect : 
+          for key, values in change.effect.effect.items() :
+            
+            if key != values :
+            
+                if target_vow : feat_semantics = ipa.vfeatures
+                else : feat_semantics = ipa.cfeatures
+            
+                f.write ( "The feature ")
+                
+                
+                f.write ( str(feat_semantics[change.effect.domain[0]][change.effect.domain[1]])) 
+                # For the manner of articulation , it is possible that the result is in fact a tuple 
+                f.write (' switched values from ')
+                f.write (str(key))
+                f.write (' to ')
+                f.write (str(values))
+                f.write("\n")
+        
+        f.write("\n")
+        
+        if print_phons :
+            f.write("\n")
+            f.write('Impacted phonems :')
+            
+            for phon in change.impacted_phonemes :
+                f.write("\n")
+                f.write(phon[1]) 
+                f.write(" > ")
+                f.write(change.impacted_phonemes[phon][1])
+            f.write("\n")
+    
+    elif type(change) == M_change : 
+        f.write("\n")
+        f.write("The phonemes matching the following target suffered a metathesis  : \n ")
+        f.write(str(change.target))
+        f.write("\n")
+        f.write("switching position with a phoneme displaying a different value for feature ")
+        
+        idx  = feature_indices(change.target)
+        target_vow = (len(idx) == 5)
+        if target_vow : feat_semantics = ipa.vfeatures
+        else : feat_semantics = ipa.cfeatures
+        f.write ( str(feat_semantics[change.effect[0]][change.effect[1]])) 
+        f.write("\n")
+        f.write("\n")
+        
+        
+        
+    elif type(change) == S_change : 
+        f.write("\n")
+        f.write("The syllables with a configuration   : \n ")
+        f.write(str(change.config_initiale))
+        f.write("\n")
+        f.write("moved to a new configuration  ")
+        f.write(str(change.config_finale))
+        
+    
     f.write("\n")
     f.write("\n")
     f.close()
     
-   
+
     
    
     

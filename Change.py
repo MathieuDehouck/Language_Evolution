@@ -15,12 +15,6 @@ from Effect import Effect
 
 
 
-# TODO gérer l'interaction entre V et C 
-influence_V_on_C = {}
-influence_C_on_C = {}
-
-
-
 
 class Change():
     """
@@ -190,6 +184,39 @@ class Change():
         NotImplemented
 
 
+    
+
+    # Constrained
+    def decode_log(path, copy_back = False) :
+        
+        f = open(path + "_encoded.txt", "r", encoding = "utf8") 
+        
+        copych = []
+        j= 0
+        for line in f : 
+            print(line)
+            print(j)
+            j = j+1
+            chan =  Change.decode_change(line)
+            copych.append(chan)
+        f.close()
+        if copy_back : return 
+        
+        f2 = open(path + "_encoded_decoded.txt", "w", encoding = "utf8")
+        for chain in copych :
+            string = Change.encode_change(chain) 
+            f2.write(string)
+            f2.write("\n")
+        f2.close()
+
+
+
+
+
+
+
+
+
 
 
 
@@ -249,6 +276,8 @@ class P_change(Change) :
         
         
         
+        
+        
     def __eq__ (self, other) :
         return self.target == other.target and self.effect == other.effect and self.conditions == other.conditions
         
@@ -292,6 +321,7 @@ class P_change(Change) :
         return bol
             
         
+
 
 
   #  TODO : really useul ?
@@ -373,35 +403,17 @@ class P_change(Change) :
             if verbose : print ("wrong side")
             return phon, index+1
         
-        
-        #TODO  essayer de réécrire la méthode en ne partant pas de 0 mais de l'état
-        """ faire une copie des features du son courant. en faisant une liste de liste.
-        tuple pour pt d articulation. 
-        on créer un tuple qui correspond aux valeurs correspondants aux index 
-        copier les valeurs du son courant et créer une clé. 
-        
-        domain tuple 2 truc; entrées dy dico, des paires
-        
-        """
-        
         base =  tuple_2_list( phon.features)
         idx = feature_indices(self.target)
-        
         for ind in idx:
             if ind == self.effect.domain :
                 if phon.features[ind[0]][ind[1]] in self.effect.effect :
                     base[ind[0]][ind[1]] = self.effect.effect[phon.features[ind[0]][ind[1]]]
-                    #print("new res",  self.effect.effect[ft[ind[0]][ind[1]]] )
-                
        
         ft = list_2_tuple(base)
-        
         if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
         else : new_phon = Consonant(ft, phon.syl, phon.speller)
-        
-        if verbose  : print(new_phon)
-      
-        
+        if verbose  : print(new_phon) 
         self.impacted_phonemes[(phon.features, phon.ipa)]= (new_phon.features, new_phon.ipa)
         return new_phon, index+1
 
@@ -605,11 +617,8 @@ class P_change(Change) :
                     
                 elif cond[0] == "S" : 
                     c = P_condition.decode_S_cond(cond)
-                    add = True
-                    
-                    
-                if add : change.add_condition(c)
-        
+                    add = True                        
+                if add : change.add_condition(c) 
         
         return (change)
    
@@ -650,6 +659,10 @@ class S_change(Change) :
     """
     def __eq__(self, o) :
         return self.config_initiale == o.config_initiale and self.config_finale == o.config_finale and self.conditions == o.conditions
+    
+    
+    
+    
     
     def check(self, word, rank) :
         """
@@ -737,6 +750,8 @@ class S_change(Change) :
     
     
     
+    
+    
     def decode_triplet( s) :
         """Decode the triplet of booleans that represents the supplementary information we have about a vowell"""
         s = s.split("|")
@@ -744,6 +759,7 @@ class S_change(Change) :
         for truc in s : 
             triplet.append(decode_bool(truc[1]))
         return triplet
+        
         
         
         
@@ -967,6 +983,9 @@ class M_change(Change) :
 
 
 
+
+
+# TODO WORK IN PROGRESS
     
 class D_change(Change) :    
     """
@@ -1037,6 +1056,9 @@ class I_change(Change) :
         else : phons = [Consonant(ft, phon.syl, phon.speller) for ft in phons]
 
         return phons
+
+
+
 
 
     def check(self, phon, index, word, verbose=False):

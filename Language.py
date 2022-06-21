@@ -186,7 +186,7 @@ class Language() :
         print()
         printl(other.phonemes)
         
-        tot = [x for x in self.phonemes if x not in other.phonemes] + [x for x in other.phonemes if x not in self.phonemes]
+        tot = [x for x in self.phonemes ] + [x for x in other.phonemes if x not in self.phonemes]
         match = len( [x for x in self.phonemes if x in other.phonemes ] )
         total = len(tot)
         diff = []  

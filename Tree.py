@@ -9,7 +9,7 @@ import os
 import random
 from sys import platform
 from PIL import Image
-from Change import M_change
+from Change import M_change, S_change, P_change
 
 """
 class L_node :
@@ -55,6 +55,7 @@ class L_tree :
         if self.parent != None :
             self.depth = self.parent.depth +1
         self.change = None
+        self.changed_words = []
         
         
     def __str__(self):
@@ -176,16 +177,41 @@ class L_tree :
         return [leaf.language for leaf in leaves]
 
 
+
+
+
     def get_path_to_root(self) :
         """ 
         Returns the list of all the nodes leading from the target node to the root of the tree
         """
         liste = []
         parent = self.parent 
-        while self.parent != None :
+        while parent.parent != None :
             liste.append(parent)
             parent = parent.parent
         return liste
+    
+    
+    
+    
+    
+    def get_a_change_path(self, lf = None) :
+        """
+        gives the list of all the changes and languages from a randomly selected leaf
+        """
+        lvs =  self.get_leaves()
+        if lf == None  : lf = random.choice(lvs)
+        ptr = lf.get_path_to_root()
+        lgs = []
+        chs = []
+        wcs = []
+        ptr.reverse()
+        for tr in ptr :
+            lgs.append(tr.language)
+            chs.append(tr.change)
+            wcs.append(tr.changed_words)
+        return lgs, chs, wcs
+    
     
     
     
@@ -334,8 +360,11 @@ class L_tree :
                 if type(edge[1].change) == M_change :
                     s += '[style=\"solid\", color=\"red\"]'
                     
-                else : 
+                elif type(edge[1].change) == P_change :
                     s += '[style=\"solid\", color=\"green\"]'
+                
+                elif type(edge[1].change) == S_change :
+                    s += '[style=\"solid\", color=\"blue\"]'
                    
             s += ";\n"
             f.write(s)
