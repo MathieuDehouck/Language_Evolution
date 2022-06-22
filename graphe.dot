@@ -1,1246 +1,1323 @@
 digraph " We display the history of a word" {
-label = "paresco
-sorbire
-nivo
-appodio
-fortia
-fortio
-Latina
-advero
-dismerdare
-adnecai" 
+label = "appariculo
+tasto
+tripaliare
+odorus
+Sophocli
+ando
+abyssimus
+puppa
+sufferio
+scribio" 
 graph[rankdir="LR"];
 node [style="filled", fillcolor = "white"];
 edge [style="solid", color="purple"];
-0 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ɾ̥i:.na
-ad'we:.ro:
-dis.mer'ɾa:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-1 [label="'pa:'res'ʈo:
-sor'bi:.re
-'ni'wo:
-ap'po.di'o:
-'for.ta.i
-'for.ti'o:
-na'ta:.ni
-ad'we:'ro:
-das.mer'di:.re
-ad.na'ʈe:'i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-2 [label="'pa:'res'ʈo:
-sor'bi:.re
-'ni'wo:
-ap'po.di'o:
-'for.ta.i
-'for.ti'o:
-na'ta:.ni
-ad'we:'ro:
-das.mer'di:.re
-an.da'ʈe:'i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-3 [label="pa:'res.ko:
-sor'bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-4 [label="'pa'res'ko
-sor'bi.re
-'ni'ɹ̟o
-ip'po.da'o
-'for.ti.a
-'for.ti'o
-ni'ta.la
-ad'we'ro
-des.mir'da.re
-id.ne'ka'a", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-5 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.t̟a.i
-'for.t̟i.o:
-na't̟a:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-6 [label="'pa:'res'ʈo:
-sor'bi:.re
-'ni'wo:
-ap'po.di'o:
-'for.ta.i
-'for.ti'o:
-na'ta:.ni
-ad'we:'ro:
-das.mer'di:.re
-ad.na'ʈe:'i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-7 [label="pe:'ras.ko:
-sor'pi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ta.i
-'for.ti.o:
-ni'ta:.la
-ed'ʍa:.ro:
-dãs.m̥er'ti:.re
-ed.na'k͜xa:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-8 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-9 [label="pʷa:'resʷ.kʷo:
-sor'bi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ti.a
-'for.ti.o:
-n͜li'ta:.na
-ad'we:.ro:
-dis.mer'da:.re
-edʷ.na'kʷa:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-10 [label="pe:'ras.ko:
-sor'pi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ta.i
-'for.ti.o:
-ni'ta:.la
-ed'ʍa:.ro:
-das.m̥er'ti:.re
-ed.na'k͜xa:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-11 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ɑp'po.di.o:
-'for.ta.i
-'for.ti.o:
-la'ta:.ni
-ɑd'we:.ro:
-das.mer'di:.re
-ɑd.nɑ'ʈe:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-12 [label="pa:'res.ʈo:
-sør'bi:.re
-'ni.wø:
-ɑp'po.di.o:
-'for.ta.i
-'for.ti.o:
-la'ta:.ni
-ad'we:.rø:
-das.mer'di:.re
-ɑd.nɑ'ʈe:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-13 [label="pɛ:'res.ko:
-sor.bi̥:.re
-'ni̥.ɹ̟o:
-ap'po.di̥.o:
-'for.ti̥.a
-'for.ti̥.o:
-la.ti̥:.na
-ad.we:.ro:
-di̥s.mer.dɛ:.re
-ad.ne.ka:.i̥:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-14 [label="pä:'rɘs.ko:
-sor.bi:.re
-'nɨ.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-lä.sɨ:.nä
-ad.we:.ro:
-dɨs.mɘr.dä:.rɘ
-ad.ne.ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-15 [label="pa:'res.ko:
-'sor'bi:'re
-'ni.wu:
-'ap'po'di.o:
-'for'ti'a
-'for'ti.o:
-'na'ɾ̥i:'la
-'ad'we:.ro:
-'dis'mer'ɾa:'re
-'an'de'ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-16 [label="pa:'rɤs.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.t̟a.i
-'for.t̟i.o:
-na't̟a:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-17 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ta.i
-'for.ti.o:
-la'ta:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-18 [label="pä:'rɘs.ko:
-sor.bi:.re
-'nɨ.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-lä.tɨ:.nä
-ar.we:.do:
-rɨs.mɘd.dä:.rɘ
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-19 [label="pa'res.ko
-sor'bi:.re
-'ni.wo
-ap'po.di.o
-'for.ti.a
-'for.ti.o
-la'ti:.na
-ad'we:.ro
-dis.mer'da:.re
-ad.ne'ka:.i", fillcolor= white, color="purple",  fontcolor="red"];
-20 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-21 [label="pe:'ras.ko:
-sor'pi:.re
-'ni.wo:
-ip'po.dɛ̞.o:
-'for.ta.i
-'for.ti.o:
-ni'ta:.la
-ed'ʍɛ̞:.ro:
-dãs.m̥er'ti:.re
-ed.nɛ̞'k͜xɛ̞:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-22 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-23 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-24 [label="pa:.re:s.ko:
-sor.bi:.re
-ni:.ɹ̟o:
-ap.po:.di.o:
-fo:r.ti.a
-fo:r.ti.o:
-na.ti:.la
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-25 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ta.i
-'for.ti.o:
-la'ta:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-26 [label="pa:'res.ko:
-so:r'bi:.re:
-'ni.wo:
-a:p'po.di:.o:
-'for.ta:.i:
-'for.ti:.o:
-la:'tɶ:.ni:
-a:d'we:.ro:
-da:s.me:r'di:.re:
-a:d.na:'ke:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-27 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ɑp'po.di.o:
-'for.ta.i
-'for.ti.o:
-la'ta:.ni
-ɑd'we:.ro:
-das.mer'di:.re
-ɑd.nɑ'ʈe:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-28 [label="pa:'res.ko:
-sor'bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-29 [label="pa'res.ko
-sor'bi:.re
-'ni.wo
-i̥p'po.dḁ.o
-'for.ti.æ
-'for.ti.o
-li'tæ:.næ
-ḁd'we̥:.ro
-dæs.mer'di:.re
-e̥d.næ̥'kæ̥:.i̥", fillcolor= white, color="purple",  fontcolor="red"];
-30 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-31 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ip'po.ɟa.o:
-'for.ti.a
-'for.ti.o:
-ni'ta:.la
-aɟ'we:.ro:
-ɟes.mir'ɟa:.re
-iɟ.ne'ʈa:.a:", fillcolor= white, color="purple",  fontcolor="red"];
-32 [label="pe:'ras.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.ɟi.o:
-'for.ta.i
-'for.ti.o:
-na'ti:.la
-eɟ'wa:.ro:
-ɟas.mir'ɟe:.re
-aɟ.ne'ʈi:.a:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-33 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-34 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-35 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ta.i
-'for.ti.o:
-la'ta:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-36 [label="pɶ'røs.ko
-sor'bi:.re
-'ny.wo
-ip'po.da.o
-'for.ta.i
-'for.ti.o
-lɶ'ty:.nɶ
-er'wa:.do
-rɶs.mød'dy:.rø
-ed.na'ka:.i", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-37 [label="pa:'res.ko:
-sor'pi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-na'ti:.la
-ad'ʍe:.ro:
-dis.m̥er'ta:.re
-ad.ne'k͜xa:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-38 [label="pa:'res.ko:
-so:r'bi:.re:
-'ni.wo:
-a:p'po.di:.o:
-'for.ti:.a:
-'for.ti:.o:
-la:'ti:.na:
-a:d'we:.ro:
-di:s.me:r'da:.re:
-a:d.ne:'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-39 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ib'bo.da.o:
-'for.ti.a
-'for.ti.o:
-li'ta:.na
-ad'we:.ro:
-dis.mer'da:.re
-ed.na'ɡa:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-40 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ti.a
-'for.ti.o:
-ni'ta:.la
-ad'we:.ro:
-des.mir'da:.re
-id.ne'ʈa:.a:", fillcolor= white, color="purple",  fontcolor="red"];
-41 [label="pe:'ras.ko:
-sor.be:.ri
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.di.a
-'for.di.o:
-la.di:.na
-ɪd.wa:.ro:
-das.mer.di:.re
-ad.na.ke:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-42 [label="pa:'res.ko:
-sor.bi̥:.re
-'ni̥.ɹ̟o:
-ap'po.di̥.o:
-'for.ti̥.a
-'for.ti̥.o:
-la.ti̥:.na
-ad.we:.ro:
-di̥s.mer.da:.re
-ad.ne.ka:.i̥:", fillcolor= white, color="purple",  fontcolor="red"];
-43 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-44 [label="pø'rɶs.ko
-sor'bi:.re
-'ny.wo
-ip'po.da.o
-'for.ta.i
-'for.ti.o
-ly'tɶ:.nɶ
-ed'wa:.ro
-dɶs.mør'dy:.rø
-ed.na'ka:.i", fillcolor= white, color="purple",  fontcolor="red"];
-45 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-äd.we:.ro:
-dɨs.mer.da:.re
-äd.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-46 [label="pa'res.ko
-sor'bi:.re
-'ni.wo
-ip'po.da.o
-'for.ti.a
-'for.ti.o
-li'ta:.na
-ad'we:.ro
-das.mer'di:.re
-ed.na'ka:.i", fillcolor= white, color="purple",  fontcolor="red"];
-47 [label="pe:'ras.ko:
-sor'bi:.re
-'ni.wo:
-ab'bo.di.o:
-'for.ta.i
-'for.ti.o:
-la'ti:.na
-ed'wa:.ro:
-das.mer'di:.re
-ad.ne'ɡa:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-48 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-lä.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-49 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ti.a
-'for.ti.o:
-li'ta:.na
-ad'we:.ro:
-dis.mer'da:.re
-ed.na'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-50 [label="pe:'ras.ʈo:
-sor'bi:.re
-'ni.wo:
-ip'po.da.o:
-'for.t̟a.i
-'for.t̟i.o:
-na't̟a:.ni
-ed'wa:.ro:
-des.mar'di:.re
-ed.na'ʈa:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-51 [label="pa:'res.ko:
-sor.bi.re
-'ni.wo:
-ib'bo.da.o:
-'for.ti.a
-'for.ti.o:
-li.ta.na
-ad.we.ro:
-dis.mer.da.re
-ed.na.ɡa.i:", fillcolor= white, color="purple",  fontcolor="red"];
-52 [label="'pa'res'ko
-sor'bi.re
-'ni'ɹ̟o
-ap'po.di'o
-'for.ti.a
-'for.ti'o
-na'ti.la
-ad'we'ro
-dis.mer'da.re
-ad.ne'ka'i", fillcolor= white, color="purple",  fontcolor="red"];
-53 [label="'pa'res'ko
-sor'bi.re
-'ni'ɹ̟o
-ap'po.di'o
-'for.ti.a
-'for.ti'o
-na'ti.la
-ad'we'ro
-dis.mer'da.re
-ad.ne'ka'i", fillcolor= white, color="purple",  fontcolor="red"];
-54 [label="pa:'res.ko:
-sor.bi.re
-'ni.wo:
-ib'bo.da.o:
-'for.ti.a
-'for.ti.o:
-li.tɛ̞.na
-ad.we.ro:
-dis.mer.da.re
-ed.na.ɡa.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-55 [label="pɛ:'res.ko:
-sor.bi̥:.re
-'ni̥.ɹ̟o:
-ap'po.di̥.o:
-'for.ti̥.a
-'for.ti̥.o:
-la.ti̥:.na
-ad.we:.ro:
-di̥s.mer.dɛ:.re
-ad.ne.ka:.i̥:", fillcolor= white, color="purple",  fontcolor="red"];
-56 [label="pa:.re:s.ko:
-θ̼or'bi:.re
-n̥i:.wo:
-ḁp.po:.di.o:
-fo:r.ti.a
-fo:r.ti.o:
-la'ti:.na
-ḁd'we:.r̟̟o:
-dis.med'ra:.re
-ḁd.ne'kḁ:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-57 [label="pɶ'røs.ko
-sor'bi:.re
-'ny.wo
-ip'po.da.o
-'for.ta.i
-'for.ti.o
-lɶ'ty:.nɶ
-ed'wa:.ro
-dɶs.mør'dy:.rø
-ed.na'ka:.i", fillcolor= white, color="purple",  fontcolor="red"];
-58 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-59 [label="pe:'ras.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.ɟi.o:
-'for.ta.i
-'for.ti.o:
-na'ti:.la
-eɟ'wa:.ro:
-ɟas.mir'ɟe:.re
-aɟ.ne'ʈi:.a:", fillcolor= white, color="purple",  fontcolor="red"];
-60 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-61 [label="pä:'rɘs.ko:
-sor.bi:.re
-'nɨ.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-nä.tɨ:.lä
-ar.we:.do:
-rɨs.mɘd.dä:.rɘ
-ad.ne.ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-62 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.t̟a.i
-'for.t̟i.o:
-na't̟a:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-63 [label="'pa:'res'ko:
-sor'bi:.re
-'ni'ɹ̟o:
-ap'po.di'o:
-'for.ti.a
-'for.ti'o:
-la'ti:.na
-äd'we:'ro:
-dɨs.mer'da:.re
-äd.ne'ka:'i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-64 [label="pa:'res.ko:
-'sor'bi:'re
-'ni.wu:
-'ap'po'di.o:
-'for'ti'a
-'for'ti.o:
-'na'ɾ̥i:'la
-'ad'we:.ro:
-'dis'mer'ɾa:'re
-'an'de'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-65 [label="pä:'rɘs.ko:
-sor.bi:.re
-'nɨ.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-lä.tɨ:.nä
-ad.we:.ro:
-dɨs.mɘr.dä:.rɘ
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-66 [label="pa:'res.ko:
-so:r'bi:.re:
-'ni.wo:
-a:p'po.di:.o:
-'for.ta:.i:
-'for.ti:.o:
-la:'ta:.ni:
-a:d'we:.ro:
-da:s.me:r'di:.re:
-a:d.na:'ke:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-67 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-na.ti:.la
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-68 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ʈa:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-69 [label="pa:'res.ko:
-so:r'bi:.re:
-'ni.wo:
-a:p'po.di:.o:
-'for.ta:.i:
-'for.ti:.o:
-la:'ta:.ni:
-a:d'we:.ro:
-da:s.me:r'di:.re:
-a:d.na:'ke:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-70 [label="pa'res.ko
-sor'bi:.re
-'ni.wo
-ip'po.da.o
-'for.ti.æ
-'for.ti.o
-li'tæ:.næ
-ad'we:.ro
-dæs.mer'di:.re
-ed.næ'kæ:.i", fillcolor= white, color="purple",  fontcolor="red"];
-71 [label="pe:'ras.ko:
-sor.be:.ri
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ed.wa:.ro:
-das.mer.di:.re
-ad.na.ke:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-72 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-73 [label="pa'res.ko
-sor'bi:.re
-'ni.wo
-i̥p'po.dḁ.o
-'for.ti.æ
-'for.ti.o
-li'tæ:.nʰæ
-ḁd'we̥:.ro
-dæs.mer'di:.re
-e̥d.næ̥'kæ̥:.i̥", fillcolor= white, color="purple",  fontcolor="red"];
-74 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ti.a
-'for.ti.o:
-li'ta:.na
-ad'we:.ro:
-des.mir'da:.re
-id.ne'ʈa:.a:", fillcolor= white, color="purple",  fontcolor="red"];
-75 [label="pä:'rɘs.ko:
-sor.bi:.re
-'nɨ.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-lä.sɨ:.nä
-ad.we:.ro:
-dɨs.mɘr.dä:.rɘ
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-76 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-na'ti:.la
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'k͜xa:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-77 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wu:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-na'ɾ̥i:.la
-ad'we:.ro:
-dis.mer'ɾa:.re
-an.de'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-78 [label="pa'res.ko
-sor'bi:.re
-'ni.wo
-i̥p'po.dḁ.o
-'for.ti.æ
-'for.ti.o
-ɺi'tæ:.nʰæ
-ḁd'we̥:.ro
-dæs.mer'di:.re
-e̥d.næ̥'kæ̥:.i̥", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-79 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wu:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ɾ̥i:.na
-ad'we:.ro:
-dis.mer'ɾa:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-80 [label="pɶ'røs.ko
-sor'bi:.re
-'ny.wo
-ip'po.da.o
-'for.ta.i
-'for.ti.o
-lɶ'ty:.nɶ
-ed'wa:.ro
-dɶs.mør'dy:.rø
-ed.na'ka:.i", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-81 [label="pä:'rɘs.ko:
-sor.bi:.re
-'nɨ.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-lä.sɨ:.nä
-ad.we:.ro:
-dɨs.mɘr.dä:.rɘ
-ad.ne.ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-82 [label="'pa:'res'ʈo:
-sor'bi:.re
-'ni'wo:
-ap'po.di'o:
-'for.ta.i
-'for.ti'o:
-na'ta:.ni
-ad'we:'ro:
-das.mer'di:.re
-ad.na'ʈe:'i:", fillcolor= white, color="purple",  fontcolor="red"];
-83 [label="pe:'ras.ko:
-sor.be:.ri
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ɪd.wa:.ro:
-das.mer.di:.re
-ad.na.ke:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-84 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ta.i
-'for.ti.o:
-na'ta:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-85 [label="pe:'ras.ko:
-sor.be:.ri
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ɪd.wa:.ro:
-das.mer.di:.re
-ad.na.ke:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-86 [label="pa:.re:s.ko:
-θ̼or'bi:.re
-n̥i:.wo:
-ḁp.po:.di.o:
-fo:r.ti.a
-fo:r.ti.o:
-la'ti:.na
-ḁd'we:.r̟̟o:
-dis.mer'da:.re
-ḁd.ne'kḁ:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-87 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ḁp'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ḁd'we:.ro:
-dis.mer'da:.re
-ḁd.ne'kḁ:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-88 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-89 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ib'bo.da.o:
-'for.ti.a
-'for.ti.o:
-li'ta:.na
-ad'we:.ro:
-dis.mer'da:.re
-ed.na'ɡa:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-90 [label="'pa'res'ko
-sor'bi:.re
-'ni'wo
-ḁp'po.di'o
-'for.ti.a
-'for.ti'o
-la'ti:.na
-ḁd'we:'ro
-dis.mer'da:.re
-ḁd.ne'kḁ:'i", fillcolor= white, color="purple",  fontcolor="red"];
-91 [label="pe:'ras.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ip'po.da.o:
-'for.ta.i
-'for.ti.o:
-li.ta:.na
-ed.wa:.ro:
-das.mer.di:.re
-ed.na.ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-92 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ta.i
-'for.ti.o:
-na'ta:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-93 [label="pɛ:'res.ko:
-sor.bi̥:.re
-'ni̥.ɹ̟o:
-ap'po.di̥.o:
-'for.ti̥.a
-'for.ti̥.o:
-la.ti̥:.na
-ad.we:.ro:
-di̥s.mer.dɛ:.re
-ad.ne.ka:.i̥:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-94 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-95 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ta.i
-'for.ti.o:
-na'ta:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-96 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ti.a
-'for.ti.o:
-n͜li'ta:.na
-ad'we:.ro:
-dis.mer'da:.re
-ed.na'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-97 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ta.i
-'for.ti.o:
-na'ta:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-98 [label="pa:.re:s.ko:
-θ̼or'bi:.re
-ni:.wo:
-ḁp.po:.di.o:
-fo:r.ti.a
-fo:r.ti.o:
-la'ti:.na
-ḁd'we:.r̟̟o:
-dis.mer'da:.re
-ḁd.ne'kḁ:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-99 [label="pa:'res.ʈo:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.t̟a.i
-'for.t̟i.o:
-na't̟a:.ni
-ad'we:.ro:
-das.mer'di:.re
-ad.na'ʈe:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-100 [label="'pa'res'ko
-θ̼or'bi:.re
-'ni'wo
-ḁp'po.di'o
-'for.ti.a
-'for.ti'o
-la'ti:.na
-ḁd'we:'r̟̟o
-dis.mer'da:.re
-ḁd.ne'kḁ:'i", fillcolor= white, color="purple",  fontcolor="red"];
-101 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ti.a
-'for.ti.o:
-li'ta:.na
-ad'we:.ro:
-dis.mer'da:.re
-ed.na'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-102 [label="pa:'res.ko:
-sor.bi:.re
-'ni.ɹ̟o:
-ap'po.di.o:
-'for.t̟i.a
-'for.ti.o:
-la.ti:.na
-ad.we:.ro:
-dis.mer̟.da:.re
-ad.ne.ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-103 [label="pa'res.ko
-sor'bi:.re
-'ni.wo
-ap'po.di.o
-'for.ti.a
-'for.ti.o
-la'ti:.na
-ad'we:.ro
-dis.mer'da:.re
-ad.ne'ka:.i", fillcolor= white, color="purple",  fontcolor="red"];
-104 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'k͜xa:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-105 [label="pa:'res.ko:
-so:r'bi:.re:
-'ni.wo:
-i:p'po.da:.o:
-'for.ti:.a:
-'for.ti:.o:
-li:'ta:.na:
-a:d'we:.ro:
-di:s.me:r'da:.re:
-i:d.na:'ke:.a:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-106 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ti.a
-'for.ti.o:
-li'ta:.na
-ad'we:.ro:
-dis.mer'da:.re
-ed.na'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-107 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",  fontcolor="red"];
-108 [label="pa:'res.ko:
-'sor'bi:'re
-'ni.wu:
-'ap'po'di.o:
-'for'ti'a
-'for'ti.o:
-'na'ɾ̥i:'la
-'ad'we:.ro:
-'dis'mer'ɾa:'re
-'an'de'ka:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-109 [label="pe'ras.ko
-sor'bi:.re
-'ni.wo
-ip'po.da.o
-'for.ta.i
-'for.ti.o
-li'ta:.na
-ed'wa:.ro
-das.mer'di:.re
-ed.na'ka:.i", fillcolor= white, color="purple",  fontcolor="red"];
-110 [label="pa:'res.ko:
-sor'bi:.re
-'ni.wo:
-ap'po.di.o:
-'for.ti.a
-'for.ti.o:
-la'ti:.na
-ad'we:.ro:
-dis.mer'da:.re
-ad.ne'ka:.i:", fillcolor= white, color="purple",   shape = doubleoctagon,  fontcolor="red"];
-111 [label="pe:'ras.ko:
-sor'pi:.re
-'ni.wo:
-ip'po.da.o:
-'for.ta.i
-'for.ti.o:
-ni'ta:.la
-ed'ʍa:.ro:
-dãs.m̥er'ti:.re
-ed.na'k͜xa:.i:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-110 -> 107;
-33 -> 3[style="solid", color="green"];
-107 -> 33;
-3 -> 30[style="solid", color="green"];
-42 -> 55[style="solid", color="red"];
-30 -> 42[style="solid", color="green"];
-30 -> 60;
-88 -> 65[style="solid", color="green"];
-60 -> 88;
-65 -> 75[style="solid", color="red"];
-60 -> 72;
-71 -> 83[style="solid", color="red"];
-30 -> 71[style="solid", color="green"];
-67 -> 52[style="solid", color="green"];
-23 -> 67[style="solid", color="blue"];
-30 -> 23;
-107 -> 43;
-38 -> 66[style="solid", color="green"];
-34 -> 38[style="solid", color="red"];
-43 -> 34;
-49 -> 101[style="solid", color="red"];
-43 -> 49[style="solid", color="green"];
-101 -> 39[style="solid", color="blue"];
-107 -> 103[style="solid", color="red"];
-44 -> 57[style="solid", color="red"];
-109 -> 44[style="solid", color="red"];
-19 -> 109[style="solid", color="green"];
-103 -> 19;
-10 -> 7[style="solid", color="green"];
-37 -> 10[style="solid", color="green"];
-76 -> 37[style="solid", color="red"];
-104 -> 76[style="solid", color="green"];
-20 -> 104[style="solid", color="red"];
-107 -> 20;
-110 -> 68[style="solid", color="red"];
-68 -> 17[style="solid", color="green"];
-17 -> 97[style="solid", color="green"];
-97 -> 84;
-84 -> 82[style="solid", color="red"];
-97 -> 62[style="solid", color="green"];
-25 -> 11[style="solid", color="green"];
-17 -> 25;
-77 -> 64[style="solid", color="green"];
-79 -> 77[style="solid", color="blue"];
-0 -> 79[style="solid", color="red"];
-110 -> 0[style="solid", color="green"];
-55 -> 93;
-55 -> 13;
-18 -> 61;
-65 -> 18[style="solid", color="red"];
-75 -> 14;
-75 -> 81;
-8 -> 48;
-72 -> 8;
-94 -> 91;
-72 -> 94;
-83 -> 41;
-83 -> 85;
-52 -> 4;
-53 -> 24;
-52 -> 53;
-45 -> 63;
-22 -> 45[style="solid", color="blue"];
-30 -> 22;
-58 -> 102;
-28 -> 58[style="solid", color="green"];
-3 -> 28;
-66 -> 105;
-69 -> 26;
-66 -> 69;
-89 -> 47;
-39 -> 89;
-51 -> 54;
-39 -> 51[style="solid", color="green"];
-96 -> 9;
-106 -> 96[style="solid", color="green"];
-101 -> 106;
-57 -> 80;
-57 -> 36;
-73 -> 78;
-29 -> 73[style="solid", color="green"];
-70 -> 29[style="solid", color="green"];
-46 -> 70[style="solid", color="green"];
-103 -> 46[style="solid", color="green"];
-86 -> 56;
-98 -> 86[style="solid", color="red"];
-100 -> 98[style="solid", color="green"];
-90 -> 100[style="solid", color="blue"];
-87 -> 90[style="solid", color="green"];
-107 -> 87[style="solid", color="blue"];
-7 -> 111;
-7 -> 21;
-84 -> 92;
-82 -> 6;
-82 -> 1;
-82 -> 2;
-84 -> 95;
-62 -> 50;
-62 -> 99;
-5 -> 16;
-62 -> 5;
-11 -> 12;
-11 -> 27;
-17 -> 35;
-59 -> 32;
-31 -> 59[style="solid", color="green"];
-40 -> 31[style="solid", color="red"];
-74 -> 40[style="solid", color="green"];
-68 -> 74[style="solid", color="red"];
-64 -> 108;
-64 -> 15;
+0 [label="ip.pa'ra.ku'lo
+'tas'to
+tri.pa.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bys.sa.mus
+'pup.pa
+suf'fe.ri'o
+'skri:.bi'o", fillcolor= white, color="purple",  fontcolor="red"];
+1 [label="äm͜p.m͜pä'rʰi.ŋ͜ku.lʰo:
+'n͜tan͜s.n͜to:
+n͜tlʰa.m͜pi.n͜ri'a:.n͜re
+o'rʰo:.dʰun͜s
+'n͜so.m͜pʰo.ŋ͜klʰɯ:
+'änʰ.dʰo:
+ä'bʰyn͜s.n͜si.mʰun͜s
+'m͜pum͜p.m͜pa
+n͜suɱ͜f'ɱ͜fe.rʰi.o:
+'n͜sŋ͜krʰi:.bʰi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+2 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tra.pi.li'a:.re
+o'do:.rus
+'so.pʰo.kli:
+'an.do:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+3 [label="ip.pa'ra.kø.lu:
+'tɛs.tø:
+tri.pa.li'a:.re
+u'rø:.døs
+'sø.pʰø.kli:
+'an.dø:
+i'mys.sa.bus
+'pup.pa
+søf'fe.ri.u:
+'skri:.bi.ø:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+4 [label="ap.pa'li.ku.ro:
+'tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+5 [label="ãp.pã'ri.ɡu.lo:
+'ɬãs.ɬo:
+ɬrã.ɬ̟̟̟̟i.li'ã:.re
+o'do:.rus
+'so.pʰo.ɡli:
+'ãn.do:
+ã'mỹs.si.bus
+'ɬ̟̟̟̟uɬ̟̟̟̟.ɬ̟̟̟̟ã
+suf'fe.ri.o:
+'sɡri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+6 [label="ap.pa'li.ko.ru:
+'tat.so:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+7 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tra.pa.li'i:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'äd.no:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+8 [label="ap.pa'li.ku.ro:
+'tas.to:
+tla.pi.rɨ'a:.rɘ
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mus.si.bys
+'pup.pa
+suf'fe.rɨ.o:
+'skrɨ:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+9 [label="ip.pɶ'ra.cu'lo
+'tas'to
+tri.pɶ.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bys.sa.mus
+'pup.pɶ
+suf'fe.ri'o
+'scri:.by'o", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+10 [label="ap.pa'ri.ku.lo:
+'tas.to:
+td͜za.pi.rɨ'a:.rɘ
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mus.si.bys
+'pup.pa
+suf'fe.rɨ.o:
+'skrɨ:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+11 [label="ap.pa'li.ko.ru:
+'tas.to:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+12 [label="ãp.pã'ri.ɡu.lo:
+'ɬãs.ɬo:
+ɬrã.ɬ̟̟̟̟i.li'ã:.re
+o'do:.rus
+'so.pʰo.ɡli:
+'ãn.do:
+ã'mỹs.si.bus
+'ɬ̟̟̟̟uɬ̟̟̟̟.ɬ̟̟̟̟ã
+suf'fe.ri.o:
+'sɡri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+13 [label="ip.pa'ra.ku.lo:
+'tas.to:
+tri.pa.la'i:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'äd.no:
+i'bys.sa.mus
+'pup.pa
+suf'fi.re.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+14 [label="ap.pa'li.ʈo.ru:
+'tɛs.to:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.ʈli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'sʈri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+15 [label="ãp.pã'ri.ɡu.lo:
+'ɬãs.ɬo:
+ɬrã.ɬ̟̟̟̟e.li'ã:.ri
+o'do:.rus
+'so.pʰo.ɡli:
+'ãn.do:
+ã'mỹs.si.bus
+'ɬ̟̟̟̟uɬ̟̟̟̟.ɬ̟̟̟̟ã
+suf'fi.re.o:
+'sɡri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+16 [label="äm͜p.m͜pä'ri.ŋ͜ku.lo:
+'n͜tan͜s.n͜to:
+n͜tla.m͜pi.ri'a:.re
+o'ro:.dun͜s
+'n͜so.m͜pʰo.ŋ͜klɯ:
+'än.do:
+ä'byn͜s.n͜si.mun͜s
+'m͜pum͜p.m͜pa
+n͜suɱ͜f'ɱ͜fe.ri.o:
+'n͜sŋ͜kri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+17 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tra.pi.li'a:.re
+o'do:.rus
+'so.pʰo.kli:
+'an.do:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+18 [label="ip.pa'za.ko.lu:
+'tas.to:
+tri.pa.li'a:.ze
+u'do:.ros
+'so.pʰo.kli:
+'an.do:
+i'mys.sa.bus
+'pup.pa
+sof'fi.re.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+19 [label="äp.pä'lɨ.ko.ru:
+'sät.to:
+tlä.pɨ.rɨ'ä:.rɘ
+u'ro:.dos
+'so.pʰo.klɨ:
+'än.do:
+ä'bys.sɨ.mus
+'pup.pä
+sof'fɘ.rɨ.u:
+'skrɨ:.bɨ.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+20 [label="ap.pa'li.ko.ru:
+'tat.so:
+tlæ.pi.ri'æ:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pæ
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+21 [label="ap.pi'ra.ku.lo:
+'tas.to:
+tra.pi.li'a:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'ad.no:
+a'bys.si.mus
+'pup.pa
+suf'fi.re.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+22 [label="ip.pa'ra.ku'lo
+'tas'to
+tri.pa.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bus.sa.mys
+'pup.pa
+suf'fe.ri'o
+'skri:.bi'o", fillcolor= white, color="purple",  fontcolor="red"];
+23 [label="ap.pa'li.ko.ru:
+'sat.to:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'ad.no:
+a'mus.si.bys
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+24 [label="ap.pa.li.ku.ro:
+tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+so.pʰo.kli:
+an.do:
+a.mys.si.bus
+pup.pa
+suf.fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+25 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tra.pi.li'a:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'ad.no:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+26 [label="ip.pa'ra.ku.lo:
+'daz.do:
+tri.pa.li'a:.re
+u'ro:.doz
+'so.pʰo.klɯ:
+'ad.no:
+i'mys.sa.mus
+'pup.pa
+zuf'fe.ri.o:
+'skri:.mi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+27 [label="ip.pa'ra.ku.lo:
+'tas.to:
+tri.pa.la'i:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'äd.n̥o:
+i'bys.sa.mus
+'pup.pa
+suf'fi.re.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+28 [label="'i:p'pa:'ra'ku:'lo
+'tas'so
+'tri:'pa:'li:'a:'re:
+'o:'do:'ru:s
+'so'pʰo:'kli
+'an'do
+'i:'bys'sa:'mu:s
+'pup'pa:
+'su:f'fe'ri:'o
+'skri:'bi:'o", fillcolor= white, color="purple",  fontcolor="red"];
+29 [label="ip.pa'ra.ku.lo:
+'tas.to:
+tri.pa.la'i:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'äd.n̥o:
+i'bys.sa.mus
+'pup.pä
+suf'fi.re.o:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+30 [label="ip.pa'la.kø.ru:
+'tɛs.tø:
+tli.pa.ri'a:.re
+u'rø:.døs
+'sø.pʰø.kli:
+'an.dø:
+i'mys.sa.bus
+'pup.pa
+søf'fe.ri.u:
+'skri:.bi.ø:", fillcolor= white, color="purple",  fontcolor="red"];
+31 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tra.pi.li'a:.re
+o'do:.rus
+'so.pʰo.klɯ:
+'an.do:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+32 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tra.pi.li'a:.re
+o'do:.rus
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+33 [label="ap.pa'li.ku.ro:
+'sat.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+'so.pʰo.kli:
+'ad.no:
+a'mus.si.bys
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+34 [label="ap.pa'ri.ko.lu:
+'tas.to:
+tra.pi.li'a:.re
+u'do:.ros
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+35 [label="ap.pa'ri̥.ku.lo:
+'tas.to:
+tra.pi̥.li̥.a.re
+o.do.rus
+'so.pʰo.kli̥:
+'an.do:
+a'mys.si̥.bus
+'pup.pa
+suf'fe.ri̥.o:
+skri̥.bi̥.o:", fillcolor= white, color="purple",  fontcolor="red"];
+36 [label="ap.pa'li.ko.ru:
+'tas.to:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+37 [label="ap.pa.li.ku.ro:
+tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+so.pʰo.kli:
+an.do:
+a.mys.si.bus
+pup.pa
+suf.fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+38 [label="ap.pa'ri.ko.lu:
+'tas.to:
+tra.pi.li'a.re
+u'do.ros
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+39 [label="ãp.pã'ri.ku.lo:
+'ɬãs.ɬo:
+ɬrã.ɬ̟̟̟̟i.li'ã:.re
+o'do:.rus
+'so.pʰo.kli:
+'ãn.do:
+ã'mys.si.bus
+'ɬ̟̟̟̟uɬ̟̟̟̟.ɬ̟̟̟̟ã
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+40 [label="ap.pa'li.ko.ru:
+'sat.to:
+tla.pi.ri'a:.re
+u'rɵ:.dos
+'sɵ.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+41 [label="ap.pa'li.ku.ro:
+'tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+42 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tra.pi.li'a:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'äd.no:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+43 [label="äm͜p.m͜pä'ri.ŋ͜ku.lo:
+'n͜tan͜s.n͜to:
+n͜tla.m͜pi.n͜ri'a:.n͜re
+o'ro:.dun͜s
+'n͜so.m͜pʰo.ŋ͜klɯ:
+'än.do:
+ä'byn͜s.n͜si.mun͜s
+'m͜pum͜p.m͜pa
+n͜suɱ͜f'ɱ͜fe.ri.o:
+'n͜sŋ͜kri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+44 [label="ap.pa'li.ko.ru:
+'sat.tɔ̞:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.dɔ̞:
+a'bys.si.mus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.ɔ̞:", fillcolor= white, color="purple",  fontcolor="red"];
+45 [label="ip.pɶ'ra.ku'lo
+'tas'to
+trɶ.pi.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bys.sa.mus
+'pup.pɶ
+suf'fi.re'o
+'skri:.by'o", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+46 [label="ap.pa'li.ko.ru:
+'tat.so:
+tla.pi.ri'a:.re
+o'ru:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+47 [label="ap.pa'li.kø.ru:
+'tɛs.tø:
+tla.pi.ri'a.re
+u'rø.døs
+'sø.pʰø.kli:
+'an.dø:
+a'mys.si.bus
+'pup.pa
+søf'fe.ri.u:
+'skri.bi.ø:", fillcolor= white, color="purple",  fontcolor="red"];
+48 [label="ap.pa'li.ko̥.ru̥:
+'sat.tɔ̞̥:
+tla.pi.ri'a:.re
+u̥'ro̥:.do̥s
+'so̥.pʰo̥.kli:
+'an.dɔ̞̥:
+a'mys.si.bu̥s
+'pu̥p.pa
+so̥f'fe.ri.u̥:
+'skri:.bi.ɔ̞̥:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+49 [label="ãp.pã'ri.ɡu.lo:
+'ɬãs.ɬo:
+ɬrã.ɬ̟̟̟̟i.li'ã:.re
+o'do:.rus
+'so.pʰo.ɡli:
+'ãn.do:
+ã'mys.si.bus
+'ɬ̟̟̟̟uɬ̟̟̟̟.ɬ̟̟̟̟ã
+suf'fe.ri.o:
+'sɡri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+50 [label="ap.pa'li.ko.ru:
+'tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+51 [label="ip.pa'la.ko.ru:
+'sat.tɔ̞:
+tli.pa.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.dɔ̞:
+i'bys.sa.mus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.ɔ̞:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+52 [label="ap.pi'ra.ko.lu:
+'tas.to:
+tra.pi.li'a:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'ad.no:
+a'bys.si.mus
+'pup.pa
+sof'fi.re.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+53 [label="ap.pa'li.ko.ru:
+'tat.so:
+tla.pi.ri'a:.re
+o'ru:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+54 [label="ap.pa'ri.ko.lu:
+'tɛs.to:
+tla.pi.ri'a:.re
+o'du:.ros
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+55 [label="ipʰ.pʰɶ'rʰa.kʰu'lʰo
+'tʰasʰ'tʰo
+tʰrʰi.pʰɶ.lʰi'a:.rʰe
+o'do:.rus
+'sʰo.pʰo'kʰlʰi
+'anʰ'dʰo
+i'bys.sa.mus
+'pʰupʰ.pʰɶ
+suf'fe.ri'o
+'skri:.by'o", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+56 [label="ip.pɶ'ra.ku'lo
+'tas'to
+tri.pɶ.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bys.sa.mus
+'pup.pɶ
+suf'fe.ri'o
+'skri:.by'o", fillcolor= white, color="purple",  fontcolor="red"];
+57 [label="'i:p'pa:'la'ku:'ro
+'tas'so
+'tli:'pa:'ri:'a:'re:
+'o:'do:'ru:s
+'so'pʰo:'kli
+'an'do
+'i:'bys'sa:'mu:s
+'pup'pa:
+'su:f'fe'ri:'o
+'skri:'bi:'o", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+58 [label="ap.pa'ri.ko.lu:
+'sat.to:
+tra.pi.li'a:.re
+u'ro:.dos
+'so.pʰo.klɯ:
+'äd.no:
+a'bys.si.mus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+59 [label="ip.pa.ra.ku.lo:
+sat.to:
+tri.pa.li'a:.re
+o'do:.rus
+so.pʰo.kli:
+an.do:
+i.mys.sa.bus
+pup.pa
+suf.fi.re.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+60 [label="ap.pa'li.ko.ru:
+'tas.to:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+61 [label="ap.pa'li.ko.ru:
+'tat.so:
+tla.pĩ.ri'a:.re
+o'ru:.dos
+'so.pʰo.kli:
+'an.do:
+a'mỹs.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+62 [label="ap.pa'l̟̟̟i.ku.ro:
+'tas.to:
+td͜za.pi.ʙ̠ɨ'a:.ʙ̠ɘ
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mus.si.bys
+'pup.pa
+suf'fe.ʙ̠ɨ.o:
+'skrɨ:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+63 [label="ap.pa'li.ko.ru:
+'sat.to:
+tle.pi.ri'a:.ra
+u'rɵ:.dos
+'sɵ.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fi.re.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+64 [label="ip.pa'ra.ku.lo:
+'tas.to:
+tri.pa.li'a:.re
+o'do:.rus
+'so.pʰo.kli:
+'an.do:
+i'bys.sa.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+65 [label="äp.pä'lɨ.ko.ru:
+'sät.to:
+tlä.pɨ.rɨ'ä:.rɘ
+u'ro:.dos
+'so.pʰo.klɨ:
+'än.do:
+ä'mys.sɨ.bus
+'pup.pä
+sof'fɘ.rɨ.u:
+'skrɨ:.bɨ.o:", fillcolor= white, color="purple",  fontcolor="red"];
+66 [label="ap.pa'li.kø.ru:
+'tɛs.tø:
+tla.pi.ri'a.re̥
+u'rø.døs
+'sø.pʰø.kli:
+'an.dø:
+a'mys.si.bus
+'pup.pa
+søf'fe̥.ri.u:
+'skri.bi.ø:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+67 [label="ap.pa'li.ko.ru:
+'tas.to:
+tli.pa.ri'a:.re
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fi.re.u:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+68 [label="ap.pa'li.ko.ru:
+'sat.tɔ̞:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.dɔ̞:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.ɔ̞:", fillcolor= white, color="purple",  fontcolor="red"];
+69 [label="ap.pa'li.ko.ru:
+'tɛs.to:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+70 [label="ip.pa.ra.ku.lo:
+sat.to:
+tri.pa.li'a:.re
+o'do:.rus
+so.pʰo.kli:
+an.do:
+i.mys.sa.bus
+pup.pa
+suf.fi.re.o:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+71 [label="ap.pa'ri.ku.lo:
+'sat.to:
+tra.pi.li'a:.re
+o'ru:.dos
+'so.pʰo.klɯ:
+'äd.no:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+72 [label="ap.pa'zi.ko.lu:
+'tas.to:
+tra.pi.li'a:.ze
+u'do:.ros
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+73 [label="ip.pa'ra.ku'lo
+'tas'to
+tɹi.pa.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bus.sa.mys
+'pup.pa
+suf'fe.ri'o̥
+'skɹi:.bi'o̥", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+74 [label="ip.pɶ'ra.ku'lo
+'tas'to
+tri.pɶ.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bys.sa.mus
+'pup.pɶ
+suf'fe.ri'o
+'skri:.by'o", fillcolor= white, color="purple",  fontcolor="red"];
+75 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tri.pa.li'a:.re
+o'do:.rus
+'so.pʰo.kli:
+'an.do:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doubleoctagon,  fontcolor="red"];
+76 [label="ap.pa'li.ku.ro:
+'tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+'so.pʰo.kli:
+'ad.no:
+a'mus.si.bys
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+77 [label="ip.pa'ra.ku'lo
+'tas'to
+tɹi.pa.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bus.sa.mys
+'pup.pa
+suf'fe.ri'o
+'skɹi:.bi'o", fillcolor= white, color="purple",  fontcolor="red"];
+78 [label="äp.pä'lɨ.ko.ru:
+'täs.to:
+tlä.pɨ.rɨ'ä:.rɘ
+u'ro:.dos
+'so.pʰo.klɨ:
+'än.do:
+ä'mys.sɨ.bus
+'pup.pä
+sof'fɘ.rɨ.u:
+'skrɨ:.bɨ.o:", fillcolor= white, color="purple",  fontcolor="red"];
+79 [label="ap.pa.li.ku.ro:
+tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+so.pʰo.kli:
+an.do:
+a.mys.si.bus
+pup.pa
+suf.fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+80 [label="ãp.pã'ri.ku.lo:
+'tãs.to:
+trã.pi.li'ã:.re
+o'do:.rus
+'so.pʰo.kli:
+'ãn.do:
+ã'mys.si.bus
+'pup.pã
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+81 [label="ip.pa.ra.ku.lo:
+sat.to:
+tri.pa.li'a.re
+o'do.rus
+so.pʰo.kli:
+an.do:
+i.mys.sa.bus
+pup.pa
+suf.fi.re.o:
+'skri.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+82 [label="ap.pa'li.ku.ro:
+'tas.to:
+td͜za.pi.rɨ'a:.rɘ
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mus.si.bys
+'pup.pa
+suf'fe.rɨ.o:
+'skrɨ:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+83 [label="ip.pa'ra.ku.lo:
+'daz.do:
+tri.pa.li'a:.re
+o'ro:.duz
+'so.pʰo.klɯ:
+'ad.no:
+i'mys.sa.mus
+'pup.pa
+zuf'fe.ri.o:
+'skri:.mi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+84 [label="ip.pa'ra.ku.lo:
+'daz.do:
+tri.pa.li'a:.re
+o'ro:.duz
+'so.pʰo.klɯ:
+'ad.no:
+i'bys.sa.mus
+'pup.pa
+zuf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+85 [label="ap.pa'li.kø.ru:
+'tɛs.tø:
+tla.pi.ri'a:.re
+u'rø:.døs
+'sø.pʰø.kli:
+'an.dø:
+a'mys.si.bus
+'pup.pa
+søf'fe.ri.u:
+'skri:.bi.ø:", fillcolor= white, color="purple",  fontcolor="red"];
+86 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'an.do:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+87 [label="ap.pa.ri.ku.lo:
+sat.to:
+tra.pi.li'a:.re
+o'do:.rus
+so.pʰo.kli:
+an.do:
+a.mys.si.bus
+pup.pa
+suf.fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+88 [label="ap.pa'li.ko.ru:
+'sat.to:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+89 [label="ap.pa'ri̥.ku.lo:
+'tas.to:
+tra.pi̥.li̥.a.re
+u.do.ros
+'so.pʰo.kli̥:
+'ad.no:
+a'mys.si̥.bus
+'pup.pa
+suf'fe.ri̥.o:
+skri̥.bi̥.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+90 [label="ip.pa'ra.ku.lo:
+'daz.do:
+tri.pa.li'a:.re
+o'ro:.duz
+'so.pʰo.klɯ:
+'ad.no:
+i'mys.sa.mus
+'pup.pa
+zuf'fe.ri.o:
+'skri:.mi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+91 [label="ip.pa.ra.ku.lo:
+sat.to:
+tri.pa.li'a:.re
+o'do:.rus
+so.pʰo.kli:
+ad.no:
+i.mys.sa.bus
+pup.pa
+suf.fi.re.o:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+92 [label="ip.pa'ra.kø.lu:
+'tɛs.tø:
+tri.pa.li'a:.re
+u'rø:.døs
+'sø.pʰø.kli:
+'an.dø:
+i'bys.sa.mus
+'pup.pa
+søf'fe.ri.u:
+'skri:.bi.ø:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+93 [label="ip.pa'ra.kø.lu:
+'tɛs.tø:
+tri.pa.li'a:.re
+u'rø:.døs
+'sø.pʰø.kli:
+'an.dø:
+i'mys.sa.bus
+'pup.pa
+søf'fe.ri.u:
+'skri:.bi.ø:", fillcolor= white, color="purple",  fontcolor="red"];
+94 [label="ap.pa'li.ko'ru
+'tat'so
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo'kli
+'an'do
+a'mys.si.bus
+'pup.pa
+sof'fe.ri'u
+'skri:.bi'o", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+95 [label="ap.pa'li.ku.ro:
+'tas.to:
+tla.pi.ri'a:.re
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mus.si.bys
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+96 [label="ap.pa'li.ku.ro:
+'tas.to:
+td͜za.pi.rɨ'a:.rɘ
+o'ro:.dul̥
+'so.pʰo.kli:
+'an.do:
+a'mul̥.l̥i.byl̥
+'pup.pa
+suf'fe.rɨ.o:
+'skrɨ:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+97 [label="ap.pa.li.ku.ro:
+tas.to:
+tla.pi.ri'a:.re
+o'do:.rus
+so.pʰo.kli:
+ad.no:
+a.mys.si.bus
+pup.pa
+suf.fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+98 [label="ap.pa'ri.ko.lu:
+'tɛs.to:
+tla.pi.ri'a:.re
+u'do:.ros
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+99 [label="ap.pa'ri.ku.lo:
+'tas.to:
+tra.pi.li'a:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'äd.no:
+a'bys.si.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+100 [label="ap.pa'li.ko.ru:
+'tat.so:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+101 [label="ip.pa'ra.ku.lo:
+'tas.to:
+tri.pa.li'a:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'ad.no:
+i'bys.sa.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+102 [label="ap.pa.ri.ku.lo:
+tas.to:
+tra.pi.li'a:.re
+o'do:.rus
+so.pʰo.kli:
+an.do:
+a.mys.si.bus
+pup.pa
+suf.fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+103 [label="ep.pa'ra.ku.lo:
+'daz.do:
+tre.pa.le'a:.re
+o'ro:.duz
+'so.pʰo.klɯ:
+'ad.no:
+e'mys.sa.mus
+'pup.pa
+zuf'fe.re.o:
+'skre:.me.o:", fillcolor= white, color="purple",  fontcolor="red"];
+104 [label="ap.pa'ri̥.ku.lo:
+'tas.to:
+tra.pi̥.li̥.a.re
+o.do.rus
+'so.pʰo.kli̥:
+'ad.no:
+a'mys.si̥.bus
+'pup.pa
+suf'fe.ri̥.o:
+skri̥.bi̥.o:", fillcolor= white, color="purple",  fontcolor="red"];
+105 [label="ep.pa'la.ku.ro:
+'daz.do:
+tle.pa.re'a:.re
+o'ro:.duz
+'so.pʰo.klɯ:
+'ad.no:
+e'mys.sa.mus
+'pup.pa
+zuf'fe.re.o:
+'skre:.me.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+106 [label="ap.pa'li.ko.ru:
+'tɛs.to:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+107 [label="ap.pa'ri.ʈo.lu:
+'tɛs.to:
+tra.pi.li'a:.re
+u'ro:.dos
+'so.pʰo.ʈli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'sʈri:.bi.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+108 [label="ap.pa'ri̥.ku.lo:
+'tas.to:
+tra.pi̥.li̥'a:.re
+o'do:.rus
+'so.pʰo.kli̥:
+'an.do:
+a'mys.si̥.bus
+'pup.pa
+suf'fe.ri̥.o:
+'skri̥:.bi̥.o:", fillcolor= white, color="purple",  fontcolor="red"];
+109 [label="ip.pa'ra.ku'lo
+'tas'to
+tri.pa.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bys.sa.mus
+'pup.pa
+suf'fe.ri'o
+'skri:.bi'o", fillcolor= white, color="purple",  fontcolor="red"];
+110 [label="ip.pa'ra.ku.lo:
+'tas.to:
+tri.pa.li'a:.re
+o'ro:.dus
+'so.pʰo.klɯ:
+'ad.no:
+i'bys.sa.mus
+'pup.pa
+suf'fe.ri.o:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+111 [label="ap.pa'ri.ko.lu:
+'tas.to:
+tra.pi.li'a:.re
+u'ro:.dos
+'so.pʰo.klɯ:
+'äd.no:
+a'bys.si.mus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+112 [label="ap.pa'li.ku.ro:
+'tas.to:
+td͜za.pi.rɨ'a:.rɘ
+o'ro:.dus
+'so.pʰo.kli:
+'an.do:
+a'mus.si.bys
+'pup.pa
+suf'fe.rɨ.o:
+'skrɨ:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+113 [label="ip.pa'ra.ku'lo
+'tas'so
+tri.pa.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bys.sa.mus
+'pup.pa
+suf'fe.ri'o
+'skri:.bi'o", fillcolor= white, color="purple",  fontcolor="red"];
+114 [label="ap.pa'li.ko.ru:
+'tat.so:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.do:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+115 [label="'a:p'pa:'li'ko:.ru:
+'sat.to:
+'tle:'pi:'ri:'a:'ra:
+'u:'rɵ:'do:s
+'sɵ'pʰo:.kli:
+'an.do:
+'a:'mys'si:'bu:s
+'pup'pa:
+'so:f'fi're:.u:
+'skri:'bi:.o:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+116 [label="am͜p.m͜pa'ri.ŋ͜ku.lo:
+'n͜tan͜s.n͜to:
+n͜tla.m͜pi.ri'a:.re
+o'ro:.dun͜s
+'n͜so.m͜pʰo.ŋ͜klɯ:
+'an.do:
+a'byn͜s.n͜si.mun͜s
+'m͜pum͜p.m͜pa
+n͜suɱ͜f'ɱ͜fe.ri.o:
+'n͜sŋ͜kri:.bi.o:", fillcolor= white, color="purple",  fontcolor="red"];
+117 [label="ap.pa'li.ko.ru:
+'sat.tɔ̞:
+tla.pi.ri'a:.re
+u'ro:.dos
+'so.pʰo.kli:
+'an.dɔ̞:
+a'mys.si.bus
+'pup.pa
+sof'fe.ri.u:
+'skri:.bi.ɔ̞:", fillcolor= white, color="purple",  fontcolor="red"];
+118 [label="ip.pa'ra.ku'lo
+'tas'to
+tri.pa.li'a:.re
+o'do:.rus
+'so.pʰo'kli
+'an'do
+i'bys.sa.mus
+'pup.pa
+suf'fe.ri'o
+'skri:.bi'o", fillcolor= white, color="purple",  fontcolor="red"];
+75 -> 17[style="solid", color="green"];
+17 -> 32[style="solid", color="green"];
+32 -> 4[style="solid", color="blue"];
+4 -> 60[style="solid", color="red"];
+60 -> 36;
+36 -> 100[style="solid", color="red"];
+100 -> 114;
+100 -> 53[style="solid", color="green"];
+60 -> 106[style="solid", color="green"];
+106 -> 85[style="solid", color="blue"];
+30 -> 93[style="solid", color="red"];
+85 -> 30[style="solid", color="red"];
+60 -> 88[style="solid", color="green"];
+88 -> 117[style="solid", color="red"];
+11 -> 34[style="solid", color="blue"];
+88 -> 11[style="solid", color="red"];
+41 -> 95[style="solid", color="red"];
+4 -> 41;
+8 -> 112[style="solid", color="green"];
+95 -> 8[style="solid", color="green"];
+112 -> 82;
+79 -> 37[style="solid", color="green"];
+4 -> 79[style="solid", color="green"];
+87 -> 59[style="solid", color="red"];
+102 -> 87[style="solid", color="red"];
+37 -> 102[style="solid", color="red"];
+49 -> 5[style="solid", color="red"];
+39 -> 49[style="solid", color="green"];
+80 -> 39[style="solid", color="green"];
+32 -> 80[style="solid", color="green"];
+17 -> 31[style="solid", color="red"];
+31 -> 25[style="solid", color="green"];
+25 -> 101[style="solid", color="green"];
+84 -> 83[style="solid", color="green"];
+101 -> 84[style="solid", color="green"];
+25 -> 42[style="solid", color="green"];
+64 -> 109[style="solid", color="green"];
+2 -> 64[style="solid", color="blue"];
+17 -> 2;
+109 -> 0;
+118 -> 74[style="solid", color="red"];
+0 -> 118;
+74 -> 56;
+114 -> 6;
+114 -> 94;
+114 -> 20;
+53 -> 61;
+53 -> 46;
+50 -> 67;
+36 -> 50[style="solid", color="red"];
+65 -> 19;
+78 -> 65[style="solid", color="red"];
+36 -> 78[style="solid", color="red"];
+93 -> 3;
+93 -> 92;
+47 -> 66;
+85 -> 47[style="solid", color="green"];
+14 -> 107;
+106 -> 14[style="solid", color="red"];
+98 -> 54;
+69 -> 98[style="solid", color="red"];
+106 -> 69[style="solid", color="red"];
+68 -> 48;
+117 -> 68;
+44 -> 51;
+117 -> 44[style="solid", color="red"];
+72 -> 18;
+34 -> 72[style="solid", color="red"];
+34 -> 38;
+63 -> 115;
+40 -> 63[style="solid", color="blue"];
+88 -> 40[style="solid", color="red"];
+82 -> 10;
+82 -> 96;
+112 -> 62;
+33 -> 23;
+76 -> 33[style="solid", color="red"];
+95 -> 76[style="solid", color="red"];
+59 -> 81;
+59 -> 70;
+59 -> 91;
+24 -> 97;
+37 -> 24;
+5 -> 12;
+5 -> 15;
+104 -> 89;
+35 -> 104[style="solid", color="red"];
+108 -> 35[style="solid", color="red"];
+32 -> 108[style="solid", color="blue"];
+83 -> 26;
+103 -> 105;
+90 -> 103[style="solid", color="red"];
+83 -> 90;
+21 -> 52;
+110 -> 21[style="solid", color="red"];
+101 -> 110;
+58 -> 71;
+111 -> 58[style="solid", color="red"];
+42 -> 111[style="solid", color="red"];
+27 -> 29;
+13 -> 27[style="solid", color="green"];
+7 -> 13[style="solid", color="green"];
+99 -> 7[style="solid", color="red"];
+42 -> 99;
+43 -> 1;
+16 -> 43[style="solid", color="green"];
+116 -> 16[style="solid", color="green"];
+86 -> 116[style="solid", color="green"];
+31 -> 86[style="solid", color="green"];
+56 -> 55;
+56 -> 9;
+74 -> 45;
+77 -> 73;
+22 -> 77[style="solid", color="green"];
+0 -> 22[style="solid", color="green"];
+28 -> 57;
+113 -> 28[style="solid", color="red"];
+109 -> 113[style="solid", color="blue"];
 }
