@@ -276,6 +276,8 @@ class Baby_P_change_generator(P_change_generator) :
         if limitation : reg = bool(random.randint(0,1))
         ch = M_change(target, index, [], reg, pro)
         
+        self.set_conditions(language, ch)
+        
         #TODO profiling : ameliorer perf de calcul ici
         nl, wc = ch.apply_language(language)
         if len(wc) == 0 : ch = self.generate_M_change(language)
@@ -288,6 +290,8 @@ class Baby_P_change_generator(P_change_generator) :
     
     def generate_S_change(self, language, verbose = False): 
         
+        
+        # TODO improvements to be made . Multiple accents are tolerated in this version of the program. Many things are possible to raffine the way accent is treated by the program. 
         # first and ugly version, we consider there is no tone. 
         b1 = bool(random.getrandbits(1))
         b2 = bool(random.getrandbits(1))
@@ -298,6 +302,8 @@ class Baby_P_change_generator(P_change_generator) :
         cf = [b3, b4, None]
     
         ch = S_change(ci, cf)
+        
+        
     
         return ch
     
@@ -486,7 +492,7 @@ class Baby_P_change_generator(P_change_generator) :
         rd_context = random.choice(potential_contexts) 
         
         
-        # TODO baby phase, checke a l indice fixe
+        
         for phon in rd_context.phonemes :
             if mask_match(change.target, phon.features, change.concerns_V) : break
         syl = rd_context.syllables[phon.in_syl]
@@ -496,7 +502,7 @@ class Baby_P_change_generator(P_change_generator) :
             ok = False 
             for s in cand.syllables :
                 if syl_match(s, syl) :
-                    #TODO approx
+                   
                     for pho in s.phonemes :
                         if mask_match(change.target, pho.features, change.concerns_V) : ok = True
             
@@ -640,20 +646,23 @@ class Baby_P_change_generator(P_change_generator) :
             if rd_context.phonemes[index].is_Vowel()  : w = Sampling.featureV_weights
             else :w = Sampling.featureC_weights
             
+            # TODO depuis qu'on a la fonction identité plus de moyen de faire porter plus de poids sur le feature qui change
+            #if type(change) == P_change : effect_tf_id = random.choice( list( change.effect.effect.keys()))
+            #elif type(change) == M_change : effect_tf_id =
+            #rd_ft_id = random.choices (feature_indices(rd_context.phonemes[index].features), w)[0]
+            #ft_id = random.choices( [effect_tf_id, rd_ft_id], Sampling.weights_same_feature) [0]
             
-            effect_tf_id = random.choice( list( change.effect.effect.keys()))
-            rd_ft_id = random.choices (feature_indices(rd_context.phonemes[index].features), w)[0]
-            
-            ft_id = random.choices( [effect_tf_id, rd_ft_id], Sampling.weights_same_feature) [0]
-            
+            ft_id = random.choices (feature_indices(rd_context.phonemes[index].features), w)[0]
         
             #TODO third approximation, the number of wildcards
             nb_wild = random.randint(0,5) 
             for l in range  (nb_wild) :
                 
-                effect_tf_id = random.choices( list( change.effect.effect.keys()))
-                rd_ft_id = random.choice (feature_indices(rd_context.phonemes[index].features))
-                ft_id = random.choice( [effect_tf_id, rd_ft_id])
+               # effect_tf_id = random.choices( list( change.effect.effect.keys()))
+                #rd_ft_id = random.choice (feature_indices(rd_context.phonemes[index].features))
+               # ft_id = random.choice( [effect_tf_id, rd_ft_id])
+               
+                ft_id = random.choice (feature_indices(rd_context.phonemes[index].features))
                 if ft_id in idx_cond : conditioner = bewilder_pattern(conditioner, ft_id)
             
             continu = random.randint(0,1)

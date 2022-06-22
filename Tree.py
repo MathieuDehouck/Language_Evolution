@@ -66,8 +66,8 @@ class L_tree :
         for n in self.nodes:
             s += n.adress + "   "
             s += "\n"
-            s += str(self.change)
-            s += str(self.changed_words)
+            #s += str(self.change)
+            #s += str(self.changed_words)
         return s
         
     
@@ -192,6 +192,8 @@ class L_tree :
         while parent.parent != None :
             liste.append(parent)
             parent = parent.parent
+        #we add the root
+        liste.append(parent)
         return liste
     
     
@@ -341,13 +343,17 @@ class L_tree :
         f.write("node [style=\"filled\", fillcolor = \"white\"];\n")
         f.write("edge [style=\"solid\", color=\"purple\"];\n")
         
+        
 
         for tree in keep :
             s = ""
             s += str(keep.index(tree))
             s += " [label=\""
             s += '\n'.join([tree.language.voc[w].ipa for w in words])
-            s += "\", fillcolor= white, color=\"purple\",  fontcolor=\"red\"];\n"
+            s += "\", fillcolor= white, color=\"purple\", "
+            if tree.depth == self.depth :  s += "  shape = doubleoctagon, "
+            if tree.nodes == [] :  s += "  shape = doublecircle, "
+            s+= " fontcolor=\"red\"];\n"
             f.write(s)
 
             
@@ -360,13 +366,13 @@ class L_tree :
             s = y + " -> " + x
             if change: 
                 
-                if type(edge[1].change) == M_change :
+                if type(edge[0].change) == M_change :
                     s += '[style=\"solid\", color=\"red\"]'
                     
-                elif type(edge[1].change) == P_change :
+                elif type(edge[0].change) == P_change :
                     s += '[style=\"solid\", color=\"green\"]'
                 
-                elif type(edge[1].change) == S_change :
+                elif type(edge[0].change) == S_change :
                     s += '[style=\"solid\", color=\"blue\"]'
                    
             s += ";\n"
