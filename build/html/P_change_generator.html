@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P_change_generator module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">P_change_generator module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>P_change_generator module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/P_change_generator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-P_change_generator">
+<span id="p-change-generator-module"></span><h1>P_change_generator module<a class="headerlink" href="#module-P_change_generator" title="Permalink to this headline"></a></h1>
+<p>Created on Mon May 30 11:58:54 2022</p>
+<p>A file used to generate instances of different kind of P_change_generator</p>
+<p>&#64;author: 3b13j</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">P_change_generator.</span></span><span class="sig-name descname"><span class="pre">Baby_P_change_generator</span></span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#P_change_generator.P_change_generator" title="P_change_generator.P_change_generator"><code class="xref py py-class docutils literal notranslate"><span class="pre">P_change_generator.P_change_generator</span></code></a></p>
+<p>First instance of the abstract class.</p>
+<p>We make a first approximation of the way to generate a change.
+We stick to the following recipee :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>we pick a target among the phonemes</p></li>
+<li><p>we choose an effect following specific parameters (choice of a domain and an effect)</p></li>
+<li><p>we choose a range of conditions after that.</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.compute_outcome">
+<span class="sig-name descname"><span class="pre">compute_outcome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isV</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.compute_outcome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.compute_outcome" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the output value of a feature value, given its original value and the parameter matrix we chose</p>
+<dl class="simple">
+<dt>index<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>input_value<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>matrix<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>isV<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+<p>output_value</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.extends_target">
+<span class="sig-name descname"><span class="pre">extends_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">change</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.extends_target"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.extends_target" title="Permalink to this definition"></a></dt>
+<dd><p>Replaces some of the index values of the target with wildcards</p>
+<p>change : the change we study
+.
+language : Language
+.
+n : Number of wildcards (randomly chosen but parametrized we integrate)</p>
+<dl class="simple">
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.generate_M_change">
+<span class="sig-name descname"><span class="pre">generate_M_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.generate_M_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.generate_M_change" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.generate_P_change">
+<span class="sig-name descname"><span class="pre">generate_P_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.generate_P_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.generate_P_change" title="Permalink to this definition"></a></dt>
+<dd><p>language : Language</p>
+<p>All the other values are optional, but can be manually selected if provided as parameter</p>
+<dl class="simple">
+<dt>rd<span class="classifier">bool</span><span class="classifier">is the change random ?</span></dt><dd><p>DESCRIPTION. The default is True.</p>
+</dd>
+<dt>target<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is None.</p>
+</dd>
+<dt>ci<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is None.</p>
+</dd>
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>change<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.generate_S_change">
+<span class="sig-name descname"><span class="pre">generate_S_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.generate_S_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.generate_S_change" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.select_effect">
+<span class="sig-name descname"><span class="pre">select_effect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concerns_V</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.select_effect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.select_effect" title="Permalink to this definition"></a></dt>
+<dd><p>Randomly builds an effect from a target we already know</p>
+<dl class="simple">
+<dt>language<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>target<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+<p>concerns_V : bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.select_target">
+<span class="sig-name descname"><span class="pre">select_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.select_target"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.select_target" title="Permalink to this definition"></a></dt>
+<dd><p>We randomy pick a phoneme among all the phonemes of a language.
+#TODO parametrize : do not pick a phoneme twice . ponder the chance to pick a phoneme ???</p>
+<dl class="simple">
+<dt>language<span class="classifier">Language </span></dt><dd><p>The language we want to evoluate</p>
+</dd>
+</dl>
+<p>the pattern of the feature we will modify</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.set_S_condition">
+<span class="sig-name descname"><span class="pre">set_S_condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">potential_contexts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.set_S_condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.set_S_condition" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a possible S_condition given potential contexts it could be applied to in a given language</p>
+<dl class="simple">
+<dt>potential_contexts<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>change<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+<p>Condition</p>
+<p>Potential candidates provided that they satisfy the new condition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.set_abs_Pcondition">
+<span class="sig-name descname"><span class="pre">set_abs_Pcondition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">potential_contexts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.set_abs_Pcondition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.set_abs_Pcondition" title="Permalink to this definition"></a></dt>
+<dd><p>Generate a P_condition with an absolute condition</p>
+<dl class="simple">
+<dt>potential_contexts<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>change<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>cond<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>candidates<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.set_conditions">
+<span class="sig-name descname"><span class="pre">set_conditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.set_conditions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.set_conditions" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a parametrized number of condition to the change</p>
+<dl class="simple">
+<dt>language<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>change<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.set_funct">
+<span class="sig-name descname"><span class="pre">set_funct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.set_funct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.set_funct" title="Permalink to this definition"></a></dt>
+<dd><p>Automatically computes the outcome</p>
+<p>#sampler colonner ?</p>
+<dl class="simple">
+<dt>index<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+<p>None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.Baby_P_change_generator.set_rel_Pconditions">
+<span class="sig-name descname"><span class="pre">set_rel_Pconditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">potential_contexts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_cond</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#Baby_P_change_generator.set_rel_Pconditions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.Baby_P_change_generator.set_rel_Pconditions" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a set of P conditions concerning a change</p>
+<dl class="simple">
+<dt>potential_contexts<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>change<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>nb_cond<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+<p>conditions : list of Rel_P_conditions</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="P_change_generator.P_change_generator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">P_change_generator.</span></span><span class="sig-name descname"><span class="pre">P_change_generator</span></span><a class="reference internal" href="_modules/P_change_generator.html#P_change_generator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.P_change_generator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class representing a generator that randomly generates P changes</p>
+<p>The way webuild the random changes heavily depend on choices of implementation. 
+Several kinds of generators could be implemented since this is an abstract class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.P_change_generator.create_change">
+<span class="sig-name descname"><span class="pre">create_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#P_change_generator.create_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.P_change_generator.create_change" title="Permalink to this definition"></a></dt>
+<dd><p>Central method of a class, where the Change is generated</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.P_change_generator.select_effect">
+<span class="sig-name descname"><span class="pre">select_effect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#P_change_generator.select_effect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.P_change_generator.select_effect" title="Permalink to this definition"></a></dt>
+<dd><p>language : Language
+target : list of Phonemes</p>
+<p>Two configurations representing the change we are going to apply</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="P_change_generator.P_change_generator.select_target">
+<span class="sig-name descname"><span class="pre">select_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#P_change_generator.select_target"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.P_change_generator.select_target" title="Permalink to this definition"></a></dt>
+<dd><p>language : Language</p>
+<p>targets : list of the phonemes we want to apply a change to</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="P_change_generator.rd_rel_pos">
+<span class="sig-prename descclassname"><span class="pre">P_change_generator.</span></span><span class="sig-name descname"><span class="pre">rd_rel_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/P_change_generator.html#rd_rel_pos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#P_change_generator.rd_rel_pos" title="Permalink to this definition"></a></dt>
+<dd><p>returns a random rel position</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

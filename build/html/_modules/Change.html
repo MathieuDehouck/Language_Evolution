@@ -1,73 +1,34 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html4" lang="en, fr" >
+<html class="writer-html5" lang="en, fr" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Change &mdash; Evolution 0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Evolution
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -75,83 +36,33 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"></div>
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Evolution</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Module code</a> &raquo;</li>
-        
       <li>Change</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <h1>Source code for Change</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="sd">&quot;&quot;&quot;</span>
@@ -159,27 +70,14 @@
 
 <span class="sd">@author: 3b13j</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">utilitaries</span> <span class="kn">import</span> <span class="n">feature_match</span><span class="p">,</span>  <span class="n">tpl_2_candidates</span><span class="p">,</span> <span class="n">mask_match</span><span class="p">,</span> <span class="n">feature_indices</span><span class="p">,</span> <span class="n">printl</span><span class="p">,</span> <span class="n">printd</span><span class="p">,</span> <span class="n">phon_in_dic</span>
-<span class="kn">from</span> <span class="nn">Phoneme</span> <span class="kn">import</span> <span class="n">Phoneme</span><span class="p">,</span> <span class="n">Vowel</span> <span class="p">,</span> <span class="n">Consonant</span><span class="p">,</span> <span class="n">list_2_tuple</span><span class="p">,</span> <span class="n">tuple_2_list</span>
-<span class="kn">from</span> <span class="nn">Syllable</span> <span class="kn">import</span> <span class="n">Syllable</span>
-<span class="kn">from</span> <span class="nn">Word</span> <span class="kn">import</span> <span class="n">Word</span>
+<span class="kn">from</span> <span class="nn">utilitaries</span> <span class="kn">import</span> <span class="n">mask_match</span><span class="p">,</span> <span class="n">bewilder_pattern</span><span class="p">,</span> <span class="n">feature_indices</span><span class="p">,</span> <span class="n">printl</span><span class="p">,</span> <span class="n">tuple_2_list</span><span class="p">,</span> <span class="n">list_2_tuple</span>
+<span class="kn">from</span> <span class="nn">Phoneme</span> <span class="kn">import</span>  <span class="n">Vowel</span><span class="p">,</span> <span class="n">Consonant</span>
+
+<span class="kn">from</span> <span class="nn">Word</span> <span class="kn">import</span> <span class="n">Word</span><span class="p">,</span> <span class="n">Syllable</span>
 <span class="kn">from</span> <span class="nn">Language</span> <span class="kn">import</span> <span class="n">Language</span>
 <span class="kn">from</span> <span class="nn">Condition</span> <span class="kn">import</span> <span class="n">P_condition</span>
-<span class="kn">from</span> <span class="nn">encoder_decoder</span> <span class="kn">import</span> <span class="n">encode_f</span><span class="p">,</span> <span class="n">decode_f</span>
+<span class="kn">from</span> <span class="nn">encoder_decoder</span> <span class="kn">import</span> <span class="n">encode_f</span><span class="p">,</span> <span class="n">decode_f</span><span class="p">,</span> <span class="n">encode_bool</span><span class="p">,</span> <span class="n">decode_bool</span> 
 <span class="kn">from</span> <span class="nn">Effect</span> <span class="kn">import</span> <span class="n">Effect</span>
-
-<span class="kn">from</span> <span class="nn">regularizations</span> <span class="kn">import</span> <span class="n">regularize_stress</span><span class="p">,</span> <span class="n">regularize_structure</span>
-<span class="kn">from</span> <span class="nn">IPA</span> <span class="kn">import</span> <span class="n">IPA</span>
-
-
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">copy</span>
-
-
-
-<span class="c1"># TODO gérer l&#39;interaction entre V et C </span>
-<span class="n">influence_V_on_C</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">influence_C_on_C</span> <span class="o">=</span> <span class="p">{}</span>
 
 
 
@@ -188,9 +86,11 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An abstract class representing a phonetic change.</span>
 <span class="sd">    They can be of three kinds : </span>
-<span class="sd">        * Phonetics (P_)</span>
-<span class="sd">        * Syllabic (I_)</span>
-<span class="sd">        * Wordzddzqd (?_)</span>
+<span class="sd">        * Phonetics (P_) ( a phoneme gets modified, one of its features being influenced by anothe). This encodes assimilation and dissimilation.</span>
+<span class="sd">        * Syllabic (S_) the stress or tone of a syllable moves</span>
+<span class="sd">        * Metathesis (?_) two close phonemes get interverted</span>
+<span class="sd">        * insertion : a phoneme is inserted in some specific conditions</span>
+<span class="sd">        * Deletion : a phoneme is deleted in specific conditions</span>
 
 <span class="sd">    ...</span>
 
@@ -200,7 +100,6 @@
 <span class="sd">        list of conditions required for the change to be applied</span>
 <span class="sd">    impacted_phonems : dic</span>
 <span class="sd">        dictionnary stocking the phonemes that have been impacted by a change during its application</span>
-<span class="sd">        #TODO check it works</span>
 <span class="sd">    target : condition</span>
 <span class="sd">        a special kind of condition that contraint the category of the phoneme that undergo the change</span>
 <span class="sd">    </span>
@@ -212,27 +111,31 @@
 <span class="sd">    set_target</span>
 <span class="sd">    check : checks if all the conditions are satisfied before the application of the change</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">effect</span><span class="p">,</span> <span class="n">conditions</span> <span class="o">=</span> <span class="p">[]):</span>
+        <span class="k">if</span> <span class="n">conditions</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
+    
         <span class="bp">self</span><span class="o">.</span><span class="n">impacted_phonemes</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">effect</span> <span class="o">=</span> <span class="n">effect</span>
+    
         
-        
-        
+    
+    
+    
 <div class="viewcode-block" id="Change.add_condition"><a class="viewcode-back" href="../index.html#Change.Change.add_condition">[docs]</a>    <span class="k">def</span> <span class="nf">add_condition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">condition</span><span class="p">)</span> <span class="p">:</span>
         <span class="sd">&quot;&quot;&quot; used to add a condition to an already built change &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span></div>
-    
-    
-    
-    <span class="k">def</span> <span class="nf">set_target</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cond</span><span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">cond</span>
-        
-    
-    
+
+
+
+
+
 <div class="viewcode-block" id="Change.check"><a class="viewcode-back" href="../index.html#Change.Change.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="n">phon</span><span class="p">,</span> <span class="n">index</span> <span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        check if a Change can be applied or not</span>
+<span class="sd">        check if a Change can be applied or not in a word</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -250,7 +153,7 @@
 <span class="sd">            whether the change can be applied or not</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>  <span class="p">:</span> <span class="k">return</span> <span class="kc">True</span> 
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conditions</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">True</span> 
         
         <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span>
             <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
@@ -259,19 +162,110 @@
             <span class="n">res</span> <span class="o">=</span> <span class="n">condition</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
             <span class="c1"># this structure of the loop allow to print all the unsatisied conditions, not just the one making the program crash</span>
             <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
-                <span class="k">return</span> <span class="kc">False</span>
                 <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
                     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;following condition not satisfied : &quot;</span><span class="p">)</span>
                     <span class="nb">print</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">True</span></div></div>
-    
-    
-    
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="Change.apply_language"><a class="viewcode-back" href="../index.html#Change.Change.apply_language">[docs]</a>    <span class="k">def</span> <span class="nf">apply_language</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the change on every word in the langugage</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        lang : language</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        a new language with the change applied on every of its word</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">changed_words</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">lang</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+            
+            <span class="c1">#save = copy.deepcopy(word)</span>
+            <span class="n">new_word</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">new_word</span><span class="p">)</span>
+            <span class="n">dic</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_word</span>
+            <span class="k">if</span>  <span class="n">new_word</span> <span class="o">!=</span> <span class="n">word</span> <span class="p">:</span> 
+                <span class="n">changed_words</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>  <span class="n">word</span><span class="o">.</span><span class="n">ipa</span><span class="p">,</span> <span class="n">new_word</span><span class="o">.</span><span class="n">ipa</span><span class="p">])</span>
+                
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NW&quot;</span><span class="p">,</span> <span class="n">new_word</span><span class="p">)</span>
+                 <span class="n">printl</span><span class="p">(</span><span class="n">changed_words</span><span class="p">)</span>
+                
+                
+        <span class="k">return</span> <span class="n">Language</span><span class="p">(</span><span class="n">dic</span><span class="p">,</span> <span class="n">lang</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;*&quot;</span><span class="p">),</span> <span class="n">changed_words</span></div>
+        
     
 
-<div class="viewcode-block" id="P_change"><a class="viewcode-back" href="../index.html#Change.P_change">[docs]</a><span class="k">class</span> <span class="nc">P_change</span><span class="p">(</span><span class="n">Change</span><span class="p">)</span> <span class="p">:</span>
+
+
+<div class="viewcode-block" id="Change.apply_word"><a class="viewcode-back" href="../index.html#Change.Change.apply_word">[docs]</a>    <span class="k">def</span> <span class="nf">apply_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the change to a word</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        word : Word</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        nword : a new word with the change applied</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">NotImplemented</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="Change.apply_syl"><a class="viewcode-back" href="../index.html#Change.Change.apply_syl">[docs]</a>    <span class="k">def</span> <span class="nf">apply_syl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">syl</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the change to a syllable</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        syl : Syllable</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        nsyl : Syllable</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">NotImplemented</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="Change.apply_phon"><a class="viewcode-back" href="../Change.html#Change.Change.apply_phon">[docs]</a>    <span class="k">def</span> <span class="nf">apply_phon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">NotImplemented</span></div>
+
     
-    
+
+
+<div class="viewcode-block" id="Change.decode_change"><a class="viewcode-back" href="../index.html#Change.Change.decode_change">[docs]</a>    <span class="k">def</span> <span class="nf">decode_change</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Hub to determine which decoder to use</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">determiner</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+        <span class="k">if</span> <span class="n">determiner</span> <span class="o">==</span> <span class="s2">&quot;M&quot;</span> <span class="p">:</span> <span class="k">return</span> <span class="n">M_change</span><span class="o">.</span><span class="n">decode_change</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">determiner</span> <span class="o">==</span> <span class="s2">&quot;S&quot;</span> <span class="p">:</span> <span class="k">return</span> <span class="n">S_change</span><span class="o">.</span><span class="n">decode_change</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">determiner</span> <span class="o">==</span> <span class="s2">&quot;P&quot;</span> <span class="p">:</span> <span class="k">return</span> <span class="n">P_change</span><span class="o">.</span><span class="n">decode_change</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span></div></div>
+
+
+
+
+
+<div class="viewcode-block" id="P_change"><a class="viewcode-back" href="../index.html#Change.P_change">[docs]</a><span class="k">class</span> <span class="nc">P_change</span><span class="p">(</span><span class="n">Change</span><span class="p">)</span> <span class="p">:</span>    
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    subclass of change </span>
 <span class="sd">    A class modelling a phonological change .</span>
@@ -312,30 +306,30 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">effect</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">effect</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">        a Phonetic change deals with the modification of a phonem, therefore the object P_change need</span>
 <span class="sd">        information about the phoneme to modify. The two configurations object encode these informations,</span>
 <span class="sd">        while the impacted_phonemes dictionnary stores the phonem of the language that underwent the change</span>
 <span class="sd">        during the process of its application</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">idx</span> <span class="o">=</span> <span class="n">feature_indices</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">effect</span><span class="p">,</span> <span class="n">conditions</span><span class="p">)</span>
         
-        <span class="bp">self</span><span class="o">.</span><span class="n">effect</span> <span class="o">=</span> <span class="n">effect</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idx</span> <span class="o">=</span> <span class="n">feature_indices</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">impacted_phonemes</span> <span class="o">=</span><span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span>  <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
         
         
-        <span class="c1">#TODO : rustine un bu fait que qd on crée plusieurs changements à la suite du même nom (dans une boucle par ex)</span>
-        <span class="c1"># la liste des changements n&#39;est pas remise à 0</span>
+        
+        
         
     <span class="k">def</span> <span class="fm">__eq__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">target</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">effect</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">conditions</span>
         
+    
+    
+    
+    
 <div class="viewcode-block" id="P_change.applicable"><a class="viewcode-back" href="../index.html#Change.P_change.applicable">[docs]</a>    <span class="k">def</span> <span class="nf">applicable</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">)</span> <span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        checks if a change would modufy a language given as input. </span>
@@ -360,21 +354,22 @@
         <span class="k">return</span> <span class="kc">False</span></div>
 
 
-    <span class="k">def</span> <span class="nf">effective</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>     
+
+
+
+<div class="viewcode-block" id="P_change.effective"><a class="viewcode-back" href="../Change.html#Change.P_change.effective">[docs]</a>    <span class="k">def</span> <span class="nf">effective</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>     
         <span class="n">lg</span><span class="p">,</span> <span class="n">cw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_language</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
         <span class="n">bol</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cw</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">bol</span> <span class="ow">and</span> <span class="n">verbose</span> <span class="p">:</span> 
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VICTORY&quot;</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">cw</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">bol</span>
+        <span class="k">return</span> <span class="n">bol</span></div>
             
         
-    <span class="k">def</span> <span class="nf">compensate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phon</span><span class="p">)</span> <span class="p">:</span>
-        
-        <span class="c1">#TODO</span>
-        <span class="k">return</span> <span class="n">phon</span>
-        
-    
+
+
+
+  <span class="c1">#  TODO : really useul ?</span>
 <div class="viewcode-block" id="P_change.just_transform"><a class="viewcode-back" href="../index.html#Change.P_change.just_transform">[docs]</a>    <span class="k">def</span> <span class="nf">just_transform</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phon</span><span class="p">)</span> <span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Applies a change to transform a phoneme whithout taking care of any kind of condition</span>
@@ -390,18 +385,14 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         
         <span class="k">if</span> <span class="ow">not</span> <span class="n">phon</span><span class="o">.</span><span class="n">isV</span> <span class="p">:</span> <span class="n">ft</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
-        
         <span class="k">else</span> <span class="p">:</span> <span class="n">ft</span> <span class="o">=</span>  <span class="p">[[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
-        
         
         <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">idx</span> <span class="p">:</span> 
             <span class="k">if</span> <span class="n">ind</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">effect</span> <span class="p">:</span> 
-                
-                <span class="n">ft</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">effect</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">ft</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">effect</span><span class="p">[</span><span class="n">ind</span><span class="p">][</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
 
             <span class="k">else</span> <span class="p">:</span>
                 <span class="n">ft</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
-
         
         <span class="n">ft</span> <span class="o">=</span> <span class="n">list_2_tuple</span><span class="p">(</span><span class="n">ft</span><span class="p">)</span>
         
@@ -410,9 +401,10 @@
         <span class="k">return</span> <span class="n">new_phon</span></div>
        
         
+       
+        
         
 <div class="viewcode-block" id="P_change.apply_phon"><a class="viewcode-back" href="../index.html#Change.P_change.apply_phon">[docs]</a>    <span class="k">def</span> <span class="nf">apply_phon</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="n">phon</span><span class="p">,</span> <span class="n">index</span> <span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Applies the change on a phoneme</span>
 
@@ -435,57 +427,44 @@
 <span class="sd">            the new phoneme obtained after the applciation of the change</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        
-        
+
         <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
             <span class="nb">print</span> <span class="p">()</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;we study the phoneme : &quot;</span><span class="p">,</span> <span class="n">index</span> <span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">ipa</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">()</span>
-        <span class="n">applicable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check</span> <span class="p">(</span><span class="n">phon</span><span class="p">,</span> <span class="n">index</span> <span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-        
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">applicable</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">mask_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span><span class="p">):</span>
+       
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">mask_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span><span class="p">):</span>
+            
+            
+        <span class="c1">#better profiling</span>
             <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the condition is not respected, nothing is changed&quot;</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">ipa</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">phon</span><span class="p">,</span> <span class="n">index</span><span class="o">+</span><span class="mi">1</span>
         
+        <span class="k">else</span> <span class="p">:</span> 
+            <span class="n">applicable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check</span> <span class="p">(</span><span class="n">phon</span><span class="p">,</span> <span class="n">index</span> <span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">applicable</span> <span class="p">:</span> <span class="k">return</span> <span class="n">phon</span><span class="p">,</span> <span class="n">index</span><span class="o">+</span><span class="mi">1</span>
         
         <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">isV</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span> <span class="p">:</span> 
             <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;wrong side&quot;</span><span class="p">)</span>
-            
             <span class="k">return</span> <span class="n">phon</span><span class="p">,</span> <span class="n">index</span><span class="o">+</span><span class="mi">1</span>
-        
-        
-        <span class="c1">#TODO  essayer de réécrire la méthode en ne partant pas de 0 mais de l&#39;état</span>
-        <span class="sd">&quot;&quot;&quot; faire une copie des features du son courant. en faisant une liste de liste.</span>
-<span class="sd">        tuple pour pt d articulation. </span>
-<span class="sd">        on créer un tuple qui correspond aux valeurs correspondants aux index </span>
-<span class="sd">        copier les valeurs du son courant et créer une clé. </span>
-<span class="sd">        </span>
-<span class="sd">        domain tuple 2 truc; entrées dy dico, des paires</span>
-<span class="sd">        </span>
-<span class="sd">        &quot;&quot;&quot;</span>
         
         <span class="n">base</span> <span class="o">=</span>  <span class="n">tuple_2_list</span><span class="p">(</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
         <span class="n">idx</span> <span class="o">=</span> <span class="n">feature_indices</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
-        
-        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">idx</span> <span class="p">:</span> 
-            <span class="k">if</span> <span class="n">ind</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">domain</span> <span class="p">:</span> 
-                <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">effect</span> <span class="p">:</span> 
-                    <span class="n">base</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">effect</span><span class="p">[</span><span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]]</span> 
-                    <span class="c1">#print(&quot;new res&quot;,  self.effect.effect[ft[ind[0]][ind[1]]] )</span>
-                
+        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">idx</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">ind</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">domain</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">effect</span> <span class="p">:</span>
+                    <span class="n">base</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">effect</span><span class="p">[</span><span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]]</span>
        
         <span class="n">ft</span> <span class="o">=</span> <span class="n">list_2_tuple</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
-        
         <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">isV</span> <span class="p">:</span> <span class="n">new_phon</span> <span class="o">=</span> <span class="n">Vowel</span><span class="p">(</span><span class="n">ft</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">syl</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">speller</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span> <span class="n">new_phon</span> <span class="o">=</span> <span class="n">Consonant</span><span class="p">(</span><span class="n">ft</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">syl</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">speller</span><span class="p">)</span>
-        
-        <span class="k">if</span> <span class="n">verbose</span>  <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">new_phon</span><span class="p">)</span>
-      
-        
+        <span class="k">if</span> <span class="n">verbose</span>  <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">new_phon</span><span class="p">)</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">impacted_phonemes</span><span class="p">[(</span><span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">ipa</span><span class="p">)]</span><span class="o">=</span> <span class="p">(</span><span class="n">new_phon</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">new_phon</span><span class="o">.</span><span class="n">ipa</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">new_phon</span><span class="p">,</span> <span class="n">index</span><span class="o">+</span><span class="mi">1</span></div>
 
     
+
+
     
 <div class="viewcode-block" id="P_change.apply_word"><a class="viewcode-back" href="../index.html#Change.P_change.apply_word">[docs]</a>    <span class="k">def</span> <span class="nf">apply_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span> <span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -500,11 +479,10 @@
 <span class="sd">        word : a new word with the change applied</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        
+        <span class="c1">#TODO : computation : to improve</span>
+        <span class="c1">#if not self.applicable(wd) : return wd</span>
         <span class="n">syls</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#used to parse the whole structure of the word</span>
-        
-
         <span class="k">for</span> <span class="n">syl</span> <span class="ow">in</span> <span class="n">wd</span><span class="o">.</span><span class="n">syllables</span> <span class="p">:</span>
             <span class="n">syl</span><span class="p">,</span> <span class="n">index</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_syl</span><span class="p">(</span><span class="n">syl</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">wd</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
             <span class="n">syls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">syl</span><span class="p">)</span>
@@ -512,7 +490,9 @@
          
     
     
-<div class="viewcode-block" id="P_change.apply_syl"><a class="viewcode-back" href="../index.html#Change.P_change.apply_syl">[docs]</a>    <span class="k">def</span> <span class="nf">apply_syl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">syl</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">wd</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    
+    
+<div class="viewcode-block" id="P_change.apply_syl"><a class="viewcode-back" href="../index.html#Change.P_change.apply_syl">[docs]</a>    <span class="k">def</span> <span class="nf">apply_syl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">syl</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">wd</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Apply the change to a Syllable</span>
 
@@ -537,10 +517,59 @@
         
         <span class="n">phonemes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">phon</span> <span class="ow">in</span> <span class="n">syl</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">:</span>
-            
             <span class="n">phon2</span> <span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_phon</span><span class="p">(</span> <span class="n">phon</span><span class="p">,</span> <span class="n">index</span> <span class="p">,</span> <span class="n">wd</span> <span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
-            <span class="n">phonemes</span><span class="o">.</span> <span class="n">append</span><span class="p">(</span><span class="n">phon2</span><span class="p">)</span>
+            <span class="n">phonemes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phon2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Syllable</span><span class="p">(</span><span class="n">phonemes</span><span class="p">,</span> <span class="n">syl</span><span class="o">.</span><span class="n">stress</span><span class="p">,</span> <span class="n">syl</span><span class="o">.</span><span class="n">length</span><span class="p">),</span> <span class="n">index</span></div>
+    
+    
+    
+    
+    
+    
+    <span class="c1"># Tentative 2 : on évalue si le changement peut s&#39;appliquer avant de lancer quoi que ce soit.</span>
+<div class="viewcode-block" id="P_change.apply_language2"><a class="viewcode-back" href="../index.html#Change.P_change.apply_language2">[docs]</a>    <span class="k">def</span> <span class="nf">apply_language2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the change on every word in the langugage</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        lang : language</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        a new language with the change applied on every of its word</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">changed_words</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">lang</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+            
+            <span class="n">change</span> <span class="o">=</span> <span class="kc">False</span> 
+            <span class="k">for</span> <span class="n">pho</span> <span class="ow">in</span> <span class="n">word</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="n">mask_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">pho</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">pho</span><span class="o">.</span><span class="n">is_Vowel</span><span class="p">()</span> <span class="p">)</span> <span class="p">:</span> 
+                    <span class="n">change</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">break</span> 
+            
+            <span class="k">if</span> <span class="n">change</span> <span class="p">:</span> 
+                <span class="n">new_word</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">new_word</span><span class="p">)</span>
+                
+            <span class="k">else</span> <span class="p">:</span> <span class="n">new_word</span> <span class="o">=</span> <span class="n">word</span>
+            
+            <span class="n">dic</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_word</span>
+                
+            <span class="k">if</span>  <span class="n">new_word</span> <span class="o">!=</span> <span class="n">word</span> <span class="p">:</span> 
+                <span class="n">changed_words</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>  <span class="n">word</span><span class="o">.</span><span class="n">ipa</span><span class="p">,</span> <span class="n">new_word</span><span class="o">.</span><span class="n">ipa</span><span class="p">])</span>
+                
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NW&quot;</span><span class="p">,</span> <span class="n">new_word</span><span class="p">)</span>
+                 <span class="n">printl</span><span class="p">(</span><span class="n">changed_words</span><span class="p">)</span>
+        
+                
+        <span class="k">return</span> <span class="n">Language</span><span class="p">(</span><span class="n">dic</span> <span class="p">,</span> <span class="n">lang</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;*&quot;</span><span class="p">),</span> <span class="n">changed_words</span></div>
+    
+    
     
     
                 
@@ -562,7 +591,7 @@
         <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">lang</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
             
-            <span class="c1">#save = copy.deepcopy(word)</span>
+           
             <span class="n">new_word</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">new_word</span><span class="p">)</span>
             <span class="n">dic</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_word</span>
@@ -574,7 +603,7 @@
                  <span class="n">printl</span><span class="p">(</span><span class="n">changed_words</span><span class="p">)</span>
                 
                 
-        <span class="k">return</span> <span class="n">Language</span><span class="p">(</span><span class="n">lang</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">dic</span><span class="p">),</span> <span class="n">changed_words</span></div>
+        <span class="k">return</span> <span class="n">Language</span><span class="p">(</span><span class="n">dic</span> <span class="p">,</span> <span class="n">lang</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;*&quot;</span><span class="p">),</span> <span class="n">changed_words</span></div>
         <span class="c1">#TODO ; the name of the new language could be parametrizable maybe</span>
     
     
@@ -593,21 +622,22 @@
     
     
     
+    
 
-    <span class="k">def</span> <span class="nf">encode_change</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="P_change.encode_change"><a class="viewcode-back" href="../Change.html#Change.P_change.encode_change">[docs]</a>    <span class="k">def</span> <span class="nf">encode_change</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;PC</span><span class="se">\t</span><span class="s2">&quot;</span>
         <span class="n">s</span><span class="o">+=</span>  <span class="s2">&quot;Tar:&quot;</span> <span class="o">+</span> <span class="n">encode_f</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
         <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Eff:&quot;</span> <span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">encode_e</span><span class="p">()</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
         <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Con:&quot;</span> 
         <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span> 
             <span class="n">s</span><span class="o">+=</span> <span class="n">cond</span><span class="o">.</span><span class="n">encode_condition</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;  &amp;  &quot;</span>
-        <span class="k">return</span> <span class="n">s</span>
+        <span class="k">return</span> <span class="n">s</span></div>
         
     
     
     
     
-    <span class="k">def</span> <span class="nf">decode_change</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+<div class="viewcode-block" id="P_change.decode_change"><a class="viewcode-back" href="../index.html#Change.P_change.decode_change">[docs]</a>    <span class="k">def</span> <span class="nf">decode_change</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
         <span class="c1"># the string coding a change encompass four parts. </span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
@@ -618,7 +648,6 @@
         <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;  &amp;  &quot;</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;P&#39;</span> <span class="p">:</span>
             <span class="n">change</span> <span class="o">=</span> <span class="n">P_change</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">effect</span><span class="p">)</span>
-        
         
         <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;  &amp;  &quot;</span><span class="p">)</span> <span class="p">:</span>
             
@@ -633,125 +662,13 @@
                     
                 <span class="k">elif</span> <span class="n">cond</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;S&quot;</span> <span class="p">:</span> 
                     <span class="n">c</span> <span class="o">=</span> <span class="n">P_condition</span><span class="o">.</span><span class="n">decode_S_cond</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
-                    <span class="n">add</span> <span class="o">=</span> <span class="kc">True</span>
-                    
-                    
-                <span class="k">if</span> <span class="n">add</span> <span class="p">:</span> <span class="n">change</span><span class="o">.</span><span class="n">add_condition</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+                    <span class="n">add</span> <span class="o">=</span> <span class="kc">True</span>                        
+                <span class="k">if</span> <span class="n">add</span> <span class="p">:</span> <span class="n">change</span><span class="o">.</span><span class="n">add_condition</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> 
         
-        
-        <span class="k">return</span> <span class="p">(</span><span class="n">change</span><span class="p">)</span>
-        <span class="c1">#if s[0] = &quot;PC &quot; </span>
-        
-        
+        <span class="k">return</span> <span class="p">(</span><span class="n">change</span><span class="p">)</span></div></div>
+   
     
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    def rd_change (lang, verbose = False ):</span>
-<span class="sd">            #&quot;&quot;</span>
-<span class="sd">        generates a randomly parametrized change that can be applied and will surely modify the </span>
-<span class="sd">        Language given in input.</span>
-<span class="sd">    </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        lang : Language</span>
-<span class="sd">            the language for which we want to create an applicable change.</span>
-<span class="sd">            We ignore changes that coulnd t be applied</span>
-<span class="sd">        verbose : TYPE, optional</span>
-<span class="sd">            DESCRIPTION. The default is False.</span>
-
-<span class="sd">        Returns</span>
-<span class="sd">        -------</span>
-<span class="sd">        ch : TYPE</span>
-<span class="sd">            DESCRIPTION.</span>
-
-<span class="sd">            #&quot;&quot;</span>
-<span class="sd">            if verbose : print(&quot;we create a rd change&quot;)</span>
-<span class="sd">            li = lang.phonemes</span>
-<span class="sd">            </span>
-<span class="sd">        # this block list the phonemes creates a condition on the target and checks that this target can</span>
-<span class="sd">        # be affected by the change. if that s not the case, we find another target       </span>
-<span class="sd">            trg = P_condition. rd_p_condition()</span>
-<span class="sd">            tpl = trg.template</span>
-<span class="sd">            candidates2 = tpl2candidates(li, tpl, verbose)</span>
-<span class="sd">            i = 0</span>
-<span class="sd">            while len(candidates2 ) == 0 :</span>
-<span class="sd">                trg = P_condition.rd_p_condition()</span>
-<span class="sd">                tpl = trg.template</span>
-<span class="sd">                candidates2 = tpl2candidates(li, tpl, verbose)</span>
-<span class="sd">                if verbose : print(&quot;fail bis &quot;, i)</span>
-<span class="sd">                </span>
-<span class="sd">                if i&gt; 100 :  # trick to avoid the program never terminating in difficult configurations</span>
-<span class="sd">                    break</span>
-<span class="sd">                i+=1</span>
-<span class="sd">                </span>
-<span class="sd">        # this block of code fixes the nature of the change we generate</span>
-<span class="sd">            conf_i = Configuration()</span>
-<span class="sd">            conf_f = conf_i.get_output()</span>
-<span class="sd">            candidates = []</span>
-<span class="sd">            i=0</span>
-<span class="sd">            while len(candidates) == 0 :</span>
-<span class="sd">                candidates = tpl2candidates(candidates2, conf_i.state, verbose)</span>
-<span class="sd">                conf_i = Configuration()</span>
-<span class="sd">                conf_f = conf_i.get_output()</span>
-<span class="sd">                if verbose : print(&quot;fail&quot;, i)</span>
-<span class="sd">                i+=1</span>
-<span class="sd">                # if the program is not able to find a change to apply to the phoneme , we generate another target</span>
-<span class="sd">                if i&gt; 100 :</span>
-<span class="sd">                    trg = P_condition. rd_p_condition()</span>
-<span class="sd">                    tpl = trg.template</span>
-<span class="sd">                    candidates2 = tpl2candidates(li, tpl, verbose)</span>
-<span class="sd">            </span>
-<span class="sd">            </span>
-<span class="sd">           ## in this third block, we add new p_conditions on our change.</span>
-<span class="sd">           # we still want this condition to be applicable.</span>
-<span class="sd">           </span>
-<span class="sd">           # first we choose if the assimilation / dissimilation is progressive or not.</span>
-<span class="sd">           </span>
-<span class="sd">           </span>
-<span class="sd">            #TODO refactor cette partie en une sous fonction callable</span>
-<span class="sd">            direction= random.randint(0,1) </span>
-<span class="sd">            if direction == 0 : direction = -1 </span>
-<span class="sd">            cond = P_condition.constrained_rd_condition( conf_i , direction)</span>
-<span class="sd">            candidates3 = []</span>
-<span class="sd">            j = 0</span>
-<span class="sd">            while len(candidates3 ) == 0 :</span>
-<span class="sd">                candidates3 = tpl2candidates(candidates, cond.template, verbose)</span>
-<span class="sd">                cond = P_condition.constrained_rd_condition( conf_i , direction)</span>
-<span class="sd">                if verbose : print(&quot;F A I L&quot;, j)</span>
-<span class="sd">                j += 1</span>
-<span class="sd">            </span>
-<span class="sd">            #second condition ?</span>
-<span class="sd">            sc = random.randint(0,1) </span>
-<span class="sd">            if sc :</span>
-<span class="sd">                direction = -direction  # on conditionne le changement de l&#39;autre côté</span>
-<span class="sd">                cond2 = P_condition.constrained_rd_condition( conf_i , direction)</span>
-<span class="sd">                candidates3 = []</span>
-<span class="sd">                j = 0</span>
-<span class="sd">                while len(candidates3 ) == 0 and j&lt;100:</span>
-<span class="sd">                    candidates3 = tpl2candidates(candidates, cond.template, verbose)</span>
-<span class="sd">                    cond2 = P_condition.constrained_rd_condition( conf_i , direction)</span>
-<span class="sd">                    if verbose : print(&quot;F A I L&quot;, j)</span>
-<span class="sd">                    j += 1  </span>
-<span class="sd">                </span>
-<span class="sd">                </span>
-<span class="sd">                </span>
-<span class="sd">                </span>
-<span class="sd">                </span>
-<span class="sd">                </span>
-<span class="sd">                </span>
-<span class="sd">                </span>
-<span class="sd">                </span>
-<span class="sd">            </span>
-<span class="sd">            </span>
-<span class="sd">            # Those ligns create the P_change with the elements obtained at each step</span>
-<span class="sd">            ch = P_change(conf_i, conf_f)</span>
-<span class="sd">            ch.set_target(trg)</span>
-<span class="sd">            #ch.add_condition(trg)</span>
-<span class="sd">            ch.add_condition(cond)</span>
-<span class="sd">            if sc : ch.add_condition(cond2)</span>
-<span class="sd">            return ch </span>
-<span class="sd">                </span>
-<span class="sd">        &quot;&quot;&quot;</span>        </div>
-      
+   
     
     
 <div class="viewcode-block" id="S_change"><a class="viewcode-back" href="../index.html#Change.S_change">[docs]</a><span class="k">class</span> <span class="nc">S_change</span><span class="p">(</span><span class="n">Change</span><span class="p">)</span> <span class="p">:</span>
@@ -784,15 +701,17 @@
 <span class="sd">    add_condition :</span>
 <span class="sd">        input : a condition</span>
 <span class="sd">        adds it to the condition list.</span>
-<span class="sd">    </span>
-<span class="sd">    </span>
-<span class="sd">    </span>
-<span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span> <span class="o">==</span> <span class="n">o</span><span class="o">.</span><span class="n">config_initiale</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span> <span class="o">==</span> <span class="n">o</span><span class="o">.</span><span class="n">config_finale</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">==</span> <span class="n">o</span><span class="o">.</span><span class="n">conditions</span>
+    
+    
+    
+    
     
 <div class="viewcode-block" id="S_change.check"><a class="viewcode-back" href="../index.html#Change.S_change.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">)</span> <span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        checks if a change can ba applied to a word</span>
+<span class="sd">        checks if a change can be applied to a word</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -807,14 +726,16 @@
 <span class="sd">            whether it is applicable</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-    
-        <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span>
+        
+        <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">condition</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">rank</span><span class="p">)</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
-                
-        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">stress</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">s</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span>  <span class="n">s</span><span class="o">.</span><span class="n">tone</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">:</span>
-                    <span class="k">return</span> <span class="kc">True</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="n">rank</span><span class="p">]</span> 
+        <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">stress</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">s</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span>  <span class="n">s</span><span class="o">.</span><span class="n">tone</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="kc">False</span></div>
+    
+    
+    
     
     
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_initiale</span><span class="p">,</span> <span class="n">config_finale</span><span class="p">,</span> <span class="n">conditions</span> <span class="o">=</span> <span class="p">[])</span> <span class="p">:</span>
@@ -823,123 +744,500 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span> <span class="o">=</span> <span class="n">config_finale</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reconfig_stress</span> <span class="o">=</span> <span class="p">[]</span>
       
+        
     
     
         
-    <span class="k">def</span> <span class="nf">apply_syl</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">syl</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="p">:</span>
+<div class="viewcode-block" id="S_change.apply_syl"><a class="viewcode-back" href="../index.html#Change.S_change.apply_syl">[docs]</a>    <span class="k">def</span> <span class="nf">apply_syl</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">syl</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="p">:</span>
         
-        <span class="c1"># Un peu brouillon ,  à améliorer </span>
-        <span class="c1">#mettre à jour la rpz de l&#39;accent dans l IPA  / structure de syllabe</span>
-        <span class="n">applicable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="n">applicable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">applicable</span> <span class="p">:</span> <span class="k">return</span> <span class="n">syl</span>
         <span class="n">n_syll</span> <span class="o">=</span> <span class="n">Syllable</span><span class="p">(</span><span class="n">syl</span><span class="o">.</span><span class="n">phonemes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
-        
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">syl</span><span class="o">.</span><span class="n">stress</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">reconfig_stress</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
             
-        <span class="k">return</span> <span class="n">n_syll</span>
+        <span class="k">return</span> <span class="n">n_syll</span></div>
     
-    <span class="k">def</span> <span class="nf">apply_word</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span><span class="p">)</span> <span class="p">:</span>
-        
+    
+    
+    
+    
+<div class="viewcode-block" id="S_change.apply_word"><a class="viewcode-back" href="../index.html#Change.S_change.apply_word">[docs]</a>    <span class="k">def</span> <span class="nf">apply_word</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span><span class="p">)</span> <span class="p">:</span>
         <span class="n">syls</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span> <span class="n">wd</span><span class="o">.</span><span class="n">syllables</span><span class="p">)</span> <span class="p">:</span>
-            <span class="n">ns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_syl</span> <span class="p">(</span> <span class="n">s</span><span class="p">,</span> <span class="n">wd</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">wd</span><span class="o">.</span><span class="n">syllables</span><span class="p">)</span> <span class="p">:</span>
+            <span class="n">ns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_syl</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">wd</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
             <span class="n">syls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
         <span class="n">w</span> <span class="o">=</span>  <span class="n">Word</span><span class="p">(</span><span class="n">syls</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">reconfig_stress</span> <span class="p">:</span>
-            <span class="n">regularize_stress</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">w</span>
+        <span class="k">return</span> <span class="n">w</span></div>
+    
+    
+    
     
     
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="n">s</span><span class="o">=</span> <span class="s2">&quot;if following conditions are satisfied : </span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span>
             <span class="n">s</span><span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;\:n&quot;</span>
-        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;following effect  :</span><span class="se">\n</span><span class="s2"> &quot;</span>
-        <span class="n">s</span><span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span>   <span class="s2">&quot;A syllable with : stress : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;  length : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span><span class="s2">&quot;  tone : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; </span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;aquires the following pattern : stress : &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;  length : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span><span class="s2">&quot;  tone : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; </span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">s</span>
+
+    
+
+
+   
+<div class="viewcode-block" id="S_change.encode_triplet"><a class="viewcode-back" href="../index.html#Change.S_change.encode_triplet">[docs]</a>    <span class="k">def</span> <span class="nf">encode_triplet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triplet</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Encode the triplet of booleans that represents the supplementary information we have about a vowell&quot;&quot;&quot;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;S&quot;</span><span class="o">+</span> <span class="n">encode_bool</span><span class="p">(</span><span class="n">triplet</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;L&quot;</span><span class="o">+</span> <span class="n">encode_bool</span><span class="p">(</span><span class="n">triplet</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;T&quot;</span><span class="o">+</span> <span class="n">encode_bool</span><span class="p">(</span><span class="n">triplet</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> 
+        <span class="k">return</span> <span class="n">s</span> </div>
+    
+    
+    
+    
+    
+<div class="viewcode-block" id="S_change.decode_triplet"><a class="viewcode-back" href="../index.html#Change.S_change.decode_triplet">[docs]</a>    <span class="k">def</span> <span class="nf">decode_triplet</span><span class="p">(</span> <span class="n">s</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Decode the triplet of booleans that represents the supplementary information we have about a vowell&quot;&quot;&quot;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+        <span class="n">triplet</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">truc</span> <span class="ow">in</span> <span class="n">s</span> <span class="p">:</span> 
+            <span class="n">triplet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">decode_bool</span><span class="p">(</span><span class="n">truc</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="n">triplet</span></div>
         
+        
+        
+        
+        
+<div class="viewcode-block" id="S_change.encode_change"><a class="viewcode-back" href="../Change.html#Change.S_change.encode_change">[docs]</a>    <span class="k">def</span> <span class="nf">encode_change</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;SC&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span>  <span class="s2">&quot;Tar:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode_triplet</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">)</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Eff:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode_triplet</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_finale</span><span class="p">)</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Con:&quot;</span> 
+        <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span> 
+            <span class="n">s</span><span class="o">+=</span> <span class="n">cond</span><span class="o">.</span><span class="n">encode_condition</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;  &amp;  &quot;</span>
         <span class="k">return</span> <span class="n">s</span></div>
+        
     
     
     
     
-<div class="viewcode-block" id="I_change"><a class="viewcode-back" href="../index.html#Change.I_change">[docs]</a><span class="k">class</span> <span class="nc">I_change</span><span class="p">(</span><span class="n">Change</span><span class="p">)</span> <span class="p">:</span>
-    
+<div class="viewcode-block" id="S_change.decode_change"><a class="viewcode-back" href="../index.html#Change.S_change.decode_change">[docs]</a>    <span class="k">def</span> <span class="nf">decode_change</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="c1"># the string coding a change encompass four parts. </span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">ci</span> <span class="o">=</span> <span class="n">S_change</span><span class="o">.</span><span class="n">decode_triplet</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">cf</span> <span class="o">=</span> <span class="n">S_change</span><span class="o">.</span><span class="n">decode_triplet</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;  &amp;  &quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span> <span class="p">:</span>
+            <span class="n">change</span> <span class="o">=</span> <span class="n">S_change</span><span class="p">(</span><span class="n">ci</span><span class="p">,</span> <span class="n">cf</span><span class="p">)</span> 
+        
+        <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;  &amp;  &quot;</span><span class="p">)</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;we study a cond&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+                <span class="n">add</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="n">cond</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;P&quot;</span> <span class="p">:</span>
+                    <span class="n">c</span> <span class="o">=</span> <span class="n">P_condition</span><span class="o">.</span><span class="n">decode_P_cond</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+                    <span class="n">add</span> <span class="o">=</span> <span class="kc">True</span>
+                    
+                <span class="k">elif</span> <span class="n">cond</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;S&quot;</span> <span class="p">:</span> 
+                    <span class="n">c</span> <span class="o">=</span> <span class="n">P_condition</span><span class="o">.</span><span class="n">decode_S_cond</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+                    <span class="n">add</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">if</span> <span class="n">add</span> <span class="p">:</span> <span class="n">change</span><span class="o">.</span><span class="n">add_condition</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">change</span></div></div>
+
+
+
+
+
+<div class="viewcode-block" id="M_change"><a class="viewcode-back" href="../index.html#Change.M_change">[docs]</a><span class="k">class</span> <span class="nc">M_change</span><span class="p">(</span><span class="n">Change</span><span class="p">)</span> <span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    class allowing insertion or deletion of phonemes</span>
-<span class="sd">    We examine</span>
-<span class="sd">    </span>
-<span class="sd">    </span>
-<span class="sd">    </span>
+<span class="sd">    subclass of change </span>
+<span class="sd">    A class modelling the inversion of two phonemes in a word</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    target: list</span>
+<span class="sd">        pattern of the phoneme that can undergo the metathesis</span>
+<span class="sd">    index : int</span>
+<span class="sd">        index of the feature that links the two phonemes that will swap</span>
+<span class="sd">    conditiosn : list</span>
+<span class="sd">        list of the conditions that need to be satisfied for the change to be applied</span>
+<span class="sd">    progressive / regressive : bools </span>
+<span class="sd">        to determine the direction of the change</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
+
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deletion</span> <span class="o">=</span> <span class="kc">True</span> <span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="o">=</span> <span class="n">deletion</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span>  <span class="n">conditions</span><span class="p">,</span> <span class="n">regressive</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">progressive</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">conditions</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">effect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span> <span class="o">=</span>  <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">target</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">progressive</span> <span class="o">=</span> <span class="n">progressive</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regressive</span>  <span class="o">=</span> <span class="n">regressive</span>
+     <span class="c1">#we consider that methathesis only happen once in a word, and in a linear order (aspiration report..)  </span>
+    
+    
+    
+    
+<div class="viewcode-block" id="M_change.apply_word"><a class="viewcode-back" href="../index.html#Change.M_change.apply_word">[docs]</a>    <span class="k">def</span> <span class="nf">apply_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Simple call to the swap method that exaclty does what a M change is supposed to. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">swap</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span></div>
+        
+    
+    
+    
+    
+    <span class="c1">#TODO its the swapable method we have to modify to have different metathesis option. </span>
+<div class="viewcode-block" id="M_change.swapable"><a class="viewcode-back" href="../index.html#Change.M_change.swapable">[docs]</a>    <span class="k">def</span> <span class="nf">swapable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        check if a word satisfies the conditions and target selection of the change.</span>
+<span class="sd">        &quot;&quot;&quot;</span>       
+        <span class="c1">#TODO can be quesitonned : we could also pick a particular value for the index. </span>
+        <span class="n">target_bis</span> <span class="o">=</span> <span class="n">bewilder_pattern</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="p">)</span>
+        
+        <span class="n">swap_flag</span> <span class="o">=</span> <span class="kc">False</span> 
+        <span class="n">i1</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">i2</span> <span class="o">=</span> <span class="kc">None</span> 
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span>  <span class="n">ph</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span> <span class="n">wd</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">mask_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">ph</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span><span class="p">)</span> <span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+                <span class="k">if</span> <span class="ow">not</span>  <span class="bp">self</span><span class="o">.</span><span class="n">progressive</span> <span class="p">:</span> <span class="n">d</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">regressive</span> <span class="p">:</span> <span class="n">f</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="k">for</span> <span class="n">pho2</span> <span class="ow">in</span> <span class="n">wd</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">d</span><span class="p">:</span><span class="n">f</span><span class="p">]</span> <span class="p">:</span>
+                    <span class="k">if</span> <span class="n">mask_match</span><span class="p">(</span><span class="n">target_bis</span><span class="p">,</span> <span class="n">pho2</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">concerns_V</span><span class="p">)</span> <span class="ow">and</span> <span class="n">pho2</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="n">ph</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="p">:</span>
+                        <span class="n">swap_flag</span> <span class="o">=</span> <span class="kc">True</span>
+                        <span class="n">i1</span> <span class="o">=</span> <span class="n">ph</span><span class="o">.</span><span class="n">word_rank</span>  
+                        <span class="n">i2</span> <span class="o">=</span> <span class="n">pho2</span><span class="o">.</span><span class="n">word_rank</span>
+                        <span class="k">return</span> <span class="n">swap_flag</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span>
+        <span class="k">return</span>  <span class="n">swap_flag</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span></div>
+    
+    
+    
+    
+    
+<div class="viewcode-block" id="M_change.swap"><a class="viewcode-back" href="../index.html#Change.M_change.swap">[docs]</a>    <span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span><span class="p">,)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apllies the metathesis following the target and conditions stored in the Change object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         
         
+        <span class="n">swap_flag</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">swapable</span><span class="p">(</span><span class="n">wd</span> <span class="p">)</span>
+        <span class="n">ph</span> <span class="o">=</span> <span class="n">wd</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span>
+        <span class="n">pho2</span> <span class="o">=</span> <span class="n">wd</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">swap_flag</span> <span class="p">:</span> 
+            <span class="k">return</span> <span class="n">wd</span>
+        
+        <span class="k">if</span> <span class="n">swap_flag</span> <span class="p">:</span> 
+            <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">new_syls</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">syl</span> <span class="ow">in</span> <span class="n">wd</span><span class="o">.</span><span class="n">syllables</span> <span class="p">:</span> 
+                <span class="n">phon_in_syl</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">syl</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">:</span> 
+                    <span class="c1">#TODO attentio aux cas de répétitions dans le mot à gérer. ajouter 2 flags ? </span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">i1</span> <span class="p">:</span> 
+                        <span class="n">phon_in_syl</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pho2</span><span class="p">)</span> 
+                    <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="n">i2</span> <span class="p">:</span>
+                        <span class="n">phon_in_syl</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span> 
+                    <span class="k">else</span> <span class="p">:</span>      
+                        <span class="n">phon_in_syl</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">wd</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                    <span class="n">i</span> <span class="o">+=</span><span class="mi">1</span>          
+                <span class="n">new_syls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Syllable</span><span class="p">(</span><span class="n">phon_in_syl</span><span class="p">,</span> <span class="n">syl</span><span class="o">.</span><span class="n">stress</span><span class="p">,</span> <span class="n">syl</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">syl</span><span class="o">.</span><span class="n">tone</span><span class="p">))</span>
+            <span class="n">new_wd</span> <span class="o">=</span> <span class="n">Word</span><span class="p">(</span><span class="n">new_syls</span><span class="p">)</span>
+            
+            <span class="k">return</span> <span class="n">new_wd</span></div>
+        
+        
+        
+
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">s</span><span class="o">=</span> <span class="s2">&quot;if following conditions are satisfied : </span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span>
+            <span class="n">s</span><span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;\:n&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;The phonemes matching the following target   :</span><span class="se">\n</span><span class="s2"> &quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;swap with some other that has a different value for feature &quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">s</span>
+    
+    
+    
+    
+    
+<div class="viewcode-block" id="M_change.encode_change"><a class="viewcode-back" href="../Change.html#Change.M_change.encode_change">[docs]</a>    <span class="k">def</span> <span class="nf">encode_change</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;MC</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span>  <span class="s2">&quot;Tar:&quot;</span> <span class="o">+</span> <span class="n">encode_f</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Eff:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">effect</span> <span class="p">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Pro:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">progressive</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Reg:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">regressive</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Con:&quot;</span> 
+        <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span> 
+            <span class="n">s</span><span class="o">+=</span> <span class="n">cond</span><span class="o">.</span><span class="n">encode_condition</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;  &amp;  &quot;</span>
+        <span class="k">return</span> <span class="n">s</span></div>
+        
+    
+    
+    
+    
+<div class="viewcode-block" id="M_change.decode_change"><a class="viewcode-back" href="../index.html#Change.M_change.decode_change">[docs]</a>    <span class="k">def</span> <span class="nf">decode_change</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="c1"># the string coding a change encompass four parts. </span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="n">decode_f</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">:])</span>
+        <span class="n">effect</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span>
+        <span class="n">pro</span> <span class="o">=</span> <span class="p">(</span> <span class="s2">&quot;True&quot;</span> <span class="ow">in</span>  <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span> <span class="p">)</span>
+        <span class="n">reg</span> <span class="o">=</span> <span class="p">(</span> <span class="s2">&quot;True&quot;</span> <span class="ow">in</span>  <span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span> <span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;  &amp;  &quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span> <span class="p">:</span>
+            <span class="n">change</span> <span class="o">=</span> <span class="n">M_change</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">effect</span><span class="p">,</span> <span class="p">[],</span> <span class="n">reg</span><span class="p">,</span> <span class="n">pro</span><span class="p">)</span> 
+        
+        <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;  &amp;  &quot;</span><span class="p">)</span> <span class="p">:</span>
+            
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;we study a cond&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+                <span class="n">add</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="n">cond</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;P&quot;</span> <span class="p">:</span>
+                    <span class="n">c</span> <span class="o">=</span> <span class="n">P_condition</span><span class="o">.</span><span class="n">decode_P_cond</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+                    <span class="n">add</span> <span class="o">=</span> <span class="kc">True</span>
+                    
+                <span class="k">elif</span> <span class="n">cond</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;S&quot;</span> <span class="p">:</span> 
+                    <span class="n">c</span> <span class="o">=</span> <span class="n">P_condition</span><span class="o">.</span><span class="n">decode_S_cond</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+                    <span class="n">add</span> <span class="o">=</span> <span class="kc">True</span>
+                    
+                <span class="k">if</span> <span class="n">add</span> <span class="p">:</span> <span class="n">change</span><span class="o">.</span><span class="n">add_condition</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">change</span></div></div>
+
+
+
+
+
+<span class="c1"># TODO WORK IN PROGRESS</span>
+    
+<div class="viewcode-block" id="D_change"><a class="viewcode-back" href="../index.html#Change.D_change">[docs]</a><span class="k">class</span> <span class="nc">D_change</span><span class="p">(</span><span class="n">Change</span><span class="p">)</span> <span class="p">:</span>    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    class allowing deletion of phonemes (monophtongisation a.o.)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">conditions</span><span class="p">):</span>
+        <span class="n">Change</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">conditions</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
+
       
-    <span class="k">def</span> <span class="nf">apply_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">wd</span><span class="p">)</span> <span class="p">:</span>
+<div class="viewcode-block" id="D_change.apply_word"><a class="viewcode-back" href="../index.html#Change.D_change.apply_word">[docs]</a>    <span class="k">def</span> <span class="nf">apply_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span> <span class="p">:</span> 
-            <span class="bp">self</span><span class="o">.</span><span class="n">deletion</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">deletion</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span></div>
   
     
-    <span class="k">def</span> <span class="nf">deletion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span><span class="p">)</span> <span class="p">:</span>
-        
+<div class="viewcode-block" id="D_change.deletion"><a class="viewcode-back" href="../Change.html#Change.D_change.deletion">[docs]</a>    <span class="k">def</span> <span class="nf">deletion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wd</span><span class="p">)</span> <span class="p">:</span>        
         <span class="n">flag_change</span> <span class="o">=</span>  <span class="kc">False</span>
         <span class="n">syls</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">syl</span> <span class="ow">in</span> <span class="n">wd</span><span class="o">.</span><span class="n">syllables</span> <span class="p">:</span>
             <span class="k">for</span> <span class="n">phon</span> <span class="ow">in</span> <span class="n">syl</span> <span class="p">:</span>
                 <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span> <span class="o">==</span> <span class="n">syl</span><span class="o">.</span><span class="n">target</span> <span class="p">:</span>
-                    <span class="n">syl</span> <span class="o">=</span> <span class="n">Syllable</span> <span class="p">(</span> <span class="p">[</span><span class="n">pho</span> <span class="k">for</span> <span class="n">pho</span> <span class="ow">in</span> <span class="n">syl</span> <span class="k">if</span> <span class="n">pho</span> <span class="o">!=</span> <span class="n">phon</span>  <span class="p">],</span> <span class="ow">not</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_Vow</span> <span class="ow">and</span> <span class="n">syl</span><span class="o">.</span><span class="n">stress</span><span class="p">,</span> <span class="ow">not</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_Vow</span> <span class="ow">and</span> <span class="n">syl</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                    <span class="n">syl</span> <span class="o">=</span> <span class="n">Syllable</span> <span class="p">(</span> <span class="p">[</span><span class="n">pho</span> <span class="k">for</span> <span class="n">pho</span> <span class="ow">in</span> <span class="n">syl</span> <span class="k">if</span> <span class="n">pho</span> <span class="o">!=</span> <span class="n">phon</span><span class="p">],</span> <span class="ow">not</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_Vow</span> <span class="ow">and</span> <span class="n">syl</span><span class="o">.</span><span class="n">stress</span><span class="p">,</span> <span class="ow">not</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_Vow</span> <span class="ow">and</span> <span class="n">syl</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
                     <span class="n">flag_change</span> <span class="o">=</span> <span class="kc">False</span>
                 <span class="n">syls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">syl</span><span class="p">)</span>
-        <span class="n">new_wd</span> <span class="o">=</span> <span class="n">Word</span><span class="p">(</span><span class="n">syls</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">flag_change</span> <span class="p">:</span> <span class="n">regularize_structure</span><span class="p">(</span><span class="n">new_wd</span><span class="p">)</span></div>
+        <span class="n">new_wd</span> <span class="o">=</span> <span class="n">Word</span><span class="p">(</span><span class="n">syls</span><span class="p">)</span></div></div>
+        <span class="c1">#if flag_change : regularize_structure(new_wd)</span>
+
+
+
+
+
+<div class="viewcode-block" id="I_change"><a class="viewcode-back" href="../index.html#Change.I_change">[docs]</a><span class="k">class</span> <span class="nc">I_change</span><span class="p">(</span><span class="n">Change</span><span class="p">)</span> <span class="p">:</span>    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    class for insertion changes (diphtongisation)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">effects</span><span class="p">,</span> <span class="n">conditions</span><span class="p">):</span>
+        <span class="n">Change</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">effects</span><span class="p">,</span> <span class="n">conditions</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">effect</span> <span class="o">=</span> <span class="n">effects</span> <span class="c1"># there are several since we create new sounds</span>
+
+      
+<div class="viewcode-block" id="I_change.apply_word"><a class="viewcode-back" href="../index.html#Change.I_change.apply_word">[docs]</a>    <span class="k">def</span> <span class="nf">apply_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+        <span class="n">nsyls</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_syl</span><span class="p">(</span><span class="n">syl</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">syl</span> <span class="ow">in</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">]</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">Word</span><span class="p">(</span><span class="n">nsyls</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">w</span></div>
+
+    
+<div class="viewcode-block" id="I_change.apply_syl"><a class="viewcode-back" href="../index.html#Change.I_change.apply_syl">[docs]</a>    <span class="k">def</span> <span class="nf">apply_syl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">syl</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+        <span class="n">nphons</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">phon</span> <span class="ow">in</span> <span class="n">syl</span><span class="o">.</span><span class="n">phonemes</span><span class="p">:</span>
+            <span class="n">nphons</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_phon</span><span class="p">(</span><span class="n">phon</span><span class="p">,</span> <span class="n">syl</span><span class="p">,</span> <span class="n">word</span><span class="p">))</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Syllable</span><span class="p">(</span><span class="n">nphons</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">s</span></div>
+
+    
+<div class="viewcode-block" id="I_change.apply_phon"><a class="viewcode-back" href="../index.html#Change.I_change.apply_phon">[docs]</a>    <span class="k">def</span> <span class="nf">apply_phon</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phon</span><span class="p">,</span> <span class="n">syl</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        we always return a list, a singleton list if the change does not apply, a pair of more otherwise</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">mask_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">phons</span> <span class="o">=</span> <span class="p">[</span><span class="n">eff</span><span class="o">.</span><span class="n">affect</span><span class="p">(</span><span class="n">phon</span><span class="p">)</span> <span class="k">for</span> <span class="n">eff</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">effect</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">phons</span> <span class="o">=</span> <span class="p">[</span><span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">]</span>
+            
+        <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">isV</span> <span class="p">:</span> <span class="n">phons</span> <span class="o">=</span> <span class="p">[</span><span class="n">Vowel</span><span class="p">(</span><span class="n">ft</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">syl</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">speller</span><span class="p">)</span> <span class="k">for</span> <span class="n">ft</span> <span class="ow">in</span> <span class="n">phons</span><span class="p">]</span>
+        <span class="k">else</span> <span class="p">:</span> <span class="n">phons</span> <span class="o">=</span> <span class="p">[</span><span class="n">Consonant</span><span class="p">(</span><span class="n">ft</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">syl</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">speller</span><span class="p">)</span> <span class="k">for</span> <span class="n">ft</span> <span class="ow">in</span> <span class="n">phons</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">phons</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="I_change.check"><a class="viewcode-back" href="../index.html#Change.I_change.check">[docs]</a>    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phon</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        check if a Change can be applied or not</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        phon : Phoneme</span>
+<span class="sd">            phoneme we want to apply a change on</span>
+<span class="sd">        index :int.</span>
+<span class="sd">        word : Word</span>
+<span class="sd">            Context</span>
+<span class="sd">        verbose : TYPE, optional</span>
+<span class="sd">            DESCRIPTION. The default is False.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        apply : bool </span>
+<span class="sd">            whether the change can be applied or not</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conditions</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">True</span> 
+        
+        <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;we test the following condition  &quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">condition</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+            <span class="c1"># this structure of the loop allow to print all the unsatisied conditions, not just the one making the program crash</span>
+            <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+                    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;following condition not satisfied : &quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span></div></div>
     
     
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="c1"># Constrained to put it here due to circular import pb</span>
+<div class="viewcode-block" id="decode_log"><a class="viewcode-back" href="../index.html#Change.decode_log">[docs]</a><span class="k">def</span> <span class="nf">decode_log</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">copy_back</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        decodes a log file,  and converts the long written in it in changes.</span>
+<span class="sd">        optionnaly can write them back in another log to check there is no difference</span>
+<span class="sd">    </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    
+    
+        
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span> <span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span> 
+        <span class="n">copych</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">j</span><span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span> <span class="p">:</span> 
+            <span class="c1">#print(line)</span>
+            <span class="c1">#print(j)</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+            <span class="n">chan</span> <span class="o">=</span>  <span class="n">Change</span><span class="o">.</span><span class="n">decode_change</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">copych</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+        <span class="k">if</span> <span class="n">copy_back</span> <span class="p">:</span> <span class="k">return</span> 
+        <span class="n">f2</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;_encoded_decoded.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">chan</span> <span class="ow">in</span> <span class="n">copych</span> <span class="p">:</span>
+            <span class="n">string</span> <span class="o">=</span> <span class="n">chan</span><span class="o">.</span><span class="n">encode_change</span><span class="p">()</span> 
+            <span class="n">f2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+            <span class="n">f2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+        <span class="c1"># strange bug, it should normally work</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;check similarity&quot;</span><span class="p">)</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span> <span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span> 
+        <span class="n">lf</span> <span class="o">=</span> <span class="p">[]</span> 
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span> <span class="p">:</span> 
+            
+            <span class="n">lf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">f2</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;_encoded_decoded.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+        <span class="n">lf2</span> <span class="o">=</span> <span class="p">[]</span> 
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f2</span> <span class="p">:</span> <span class="n">lf2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="p">,</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lf</span><span class="p">)</span> <span class="p">:</span> 
+            <span class="k">if</span> <span class="n">el</span> <span class="o">!=</span> <span class="n">lf2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">:</span>  
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;error on change &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">lf2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="k">return</span>  <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+        
+
+
+
+
+
+
+
+
 </pre></div>
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.
-
-    </p>
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

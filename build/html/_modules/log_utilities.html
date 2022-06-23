@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>log_utilities &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>log_utilities</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for log_utilities</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Tue May 17 16:02:54 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+
+<span class="sd">Contains some side methods to write the state of some objects and describe the execution of the program  in log files</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">utilitaries</span> <span class="kn">import</span> <span class="n">feature_indices</span>
+<span class="kn">from</span> <span class="nn">encoder_decoder</span> <span class="kn">import</span> <span class="n">encode_f</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">Effect</span> <span class="kn">import</span> <span class="n">Effect</span>
+<span class="kn">from</span> <span class="nn">IPA</span> <span class="kn">import</span> <span class="n">IPA</span>
+<span class="kn">from</span> <span class="nn">Change</span> <span class="kn">import</span> <span class="n">P_change</span> <span class="p">,</span> <span class="n">S_change</span><span class="p">,</span> <span class="n">M_change</span>
+
+<span class="n">ipa</span> <span class="o">=</span> <span class="n">IPA</span><span class="o">.</span><span class="n">get_IPA</span><span class="p">()</span>
+<span class="n">ift</span> <span class="o">=</span> <span class="n">ipa</span><span class="o">.</span><span class="n">cfeatures</span>
+<span class="c1">#TODO</span>
+<span class="c1">#ccl = ipa.classes</span>
+
+        
+
+
+
+<div class="viewcode-block" id="target2str"><a class="viewcode-back" href="../log_utilities.html#log_utilities.target2str">[docs]</a><span class="k">def</span> <span class="nf">target2str</span> <span class="p">(</span><span class="n">feat</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Encode the target of a change to write it latter in the log</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    feat : list </span>
+<span class="sd">        description of a feature template</span>
+
+<span class="sd">    </span>
+<span class="sd">    -------</span>
+<span class="sd">    s : qtring describing it </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Target : &quot;</span>
+    <span class="n">s</span><span class="o">+=</span> <span class="n">encode_f</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span> </div>
+
+
+
+
+
+<div class="viewcode-block" id="create_breviary"><a class="viewcode-back" href="../log_utilities.html#log_utilities.create_breviary">[docs]</a><span class="k">def</span> <span class="nf">create_breviary</span><span class="p">()</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a user friendly document that describes all the natural classes that exist with regard to the</span>
+<span class="sd">    IPA we use at the heart of the program&quot;&quot;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;phonetic/&quot;</span><span class="p">)</span>
+    
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">folder</span> <span class="o">/</span><span class="s2">&quot;breviary.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s2">&quot;BREVIARY&quot;</span><span class="p">)</span> 
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s2">&quot;PHONEMES&quot;</span><span class="p">)</span> 
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">phoneme</span> <span class="ow">in</span> <span class="n">ipa</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">phoneme</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">encode_f</span><span class="p">(</span><span class="n">phoneme</span><span class="o">.</span><span class="n">features</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s2">&quot;NATURAL CLASSES&quot;</span><span class="p">)</span> 
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">cl</span> <span class="ow">in</span> <span class="n">ipa</span><span class="o">.</span><span class="n">dic_class</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">encode_f</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">template</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+        
+        
+
+
+
+<span class="c1"># functions directly writing in log files</span>
+
+
+
+
+
+<div class="viewcode-block" id="write_in_log"><a class="viewcode-back" href="../log_utilities.html#log_utilities.write_in_log">[docs]</a><span class="k">def</span> <span class="nf">write_in_log</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Takes as input the name of a log file and the sentence that it sould add in it</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;logs/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>  <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="phon2log"><a class="viewcode-back" href="../log_utilities.html#log_utilities.phon2log">[docs]</a><span class="k">def</span> <span class="nf">phon2log</span> <span class="p">(</span><span class="n">phon</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    writes a phoneme in the log format we defined</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    phon : phoneme to write in the script</span>
+<span class="sd">        </span>
+<span class="sd">    path : str </span>
+<span class="sd">        path to the target file</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;logs/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">phon</span><span class="o">.</span><span class="n">ipa</span><span class="p">))</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;   :  &quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">phon</span><span class="o">.</span><span class="n">description</span> <span class="p">)</span></div>
+    
+    
+    
+    
+
+<div class="viewcode-block" id="samples2log"><a class="viewcode-back" href="../log_utilities.html#log_utilities.samples2log">[docs]</a><span class="k">def</span> <span class="nf">samples2log</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">liste</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span><span class="mi">10</span> <span class="p">)</span> <span class="p">:</span> 
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Method that writes down only some of the words modified by a change. </span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : str</span>
+<span class="sd">        path to the file you want tp write in.</span>
+<span class="sd">    liste : list of changed words :</span>
+<span class="sd">    n : int, optional</span>
+<span class="sd">        number of words that will be printed. The default is 10.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;logs/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>   
+    
+    
+    <span class="k">if</span> <span class="n">liste</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;EXAMPLES&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s2">&quot; </span><span class="se">\n</span><span class="s2">  </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">loop</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)))</span> <span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="n">loop</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;  &gt;  &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span> <span class="n">liste</span><span class="p">[</span><span class="n">loop</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span><span class="s2">&quot; </span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s2">&quot;The branch we study is the one that was not impacted by the change&quot;</span><span class="p">)</span></div>
+    
+        
+        
+        
+        
+<div class="viewcode-block" id="changes2machinelog"><a class="viewcode-back" href="../log_utilities.html#log_utilities.changes2machinelog">[docs]</a><span class="k">def</span> <span class="nf">changes2machinelog</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">change</span><span class="p">)</span>     <span class="p">:</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;logs/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>   
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">encode_change</span><span class="p">())</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+        
+<div class="viewcode-block" id="purge_log"><a class="viewcode-back" href="../log_utilities.html#log_utilities.purge_log">[docs]</a><span class="k">def</span> <span class="nf">purge_log</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clears a log file</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : </span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;logs/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="change2log"><a class="viewcode-back" href="../log_utilities.html#log_utilities.change2log">[docs]</a><span class="k">def</span> <span class="nf">change2log</span> <span class="p">(</span><span class="n">change</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span><span class="n">lang</span><span class="p">,</span>  <span class="n">print_phons</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Writes a description of a change into a log file</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    change : Change</span>
+<span class="sd">    path : str</span>
+<span class="sd">    lang : Language</span>
+<span class="sd">    print_phons : TYPE, optional</span>
+<span class="sd">        DESCRIPTION. The default is True.</span>
+<span class="sd">    i : TYPE, optional</span>
+<span class="sd">        DESCRIPTION. The default is 0.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;logs/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span> 
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">1</span> <span class="p">:</span> 
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;CHANGE N°&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">conditions</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span> <span class="s2">&quot;If the following conditions were satisfied :  &quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">cond</span> <span class="ow">in</span> <span class="n">change</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span> 
+          <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cond</span><span class="p">))</span>  
+          <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">change</span><span class="p">)</span> <span class="o">==</span> <span class="n">P_change</span> <span class="p">:</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;The phonemes matching the following target were modified  : </span><span class="se">\n</span><span class="s2"> &quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        
+        
+        <span class="n">idx</span>  <span class="o">=</span> <span class="n">feature_indices</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+        <span class="n">target_vow</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+        
+        <span class="c1">#RUSTINE, a implementer pour M</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">effect</span><span class="p">)</span> <span class="o">==</span> <span class="n">Effect</span> <span class="p">:</span> 
+          <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">change</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+            
+            <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="n">values</span> <span class="p">:</span>
+            
+                <span class="k">if</span> <span class="n">target_vow</span> <span class="p">:</span> <span class="n">feat_semantics</span> <span class="o">=</span> <span class="n">ipa</span><span class="o">.</span><span class="n">vfeatures</span>
+                <span class="k">else</span> <span class="p">:</span> <span class="n">feat_semantics</span> <span class="o">=</span> <span class="n">ipa</span><span class="o">.</span><span class="n">cfeatures</span>
+            
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span> <span class="s2">&quot;The feature &quot;</span><span class="p">)</span>
+                
+                
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="n">feat_semantics</span><span class="p">[</span><span class="n">change</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">domain</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">change</span><span class="o">.</span><span class="n">effect</span><span class="o">.</span><span class="n">domain</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span> 
+                <span class="c1"># For the manner of articulation , it is possible that the result is in fact a tuple </span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s1">&#39; switched values from &#39;</span><span class="p">)</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s1">&#39; to &#39;</span><span class="p">)</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">values</span><span class="p">))</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">print_phons</span> <span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Impacted phonems :&#39;</span><span class="p">)</span>
+            
+            <span class="k">for</span> <span class="n">phon</span> <span class="ow">in</span> <span class="n">change</span><span class="o">.</span><span class="n">impacted_phonemes</span> <span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">phon</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> 
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot; &gt; &quot;</span><span class="p">)</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">impacted_phonemes</span><span class="p">[</span><span class="n">phon</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">change</span><span class="p">)</span> <span class="o">==</span> <span class="n">M_change</span> <span class="p">:</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;The phonemes matching the following target suffered a metathesis  : </span><span class="se">\n</span><span class="s2"> &quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;switching position with a phoneme displaying a different value for feature &quot;</span><span class="p">)</span>
+        
+        <span class="n">idx</span>  <span class="o">=</span> <span class="n">feature_indices</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+        <span class="n">target_vow</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target_vow</span> <span class="p">:</span> <span class="n">feat_semantics</span> <span class="o">=</span> <span class="n">ipa</span><span class="o">.</span><span class="n">vfeatures</span>
+        <span class="k">else</span> <span class="p">:</span> <span class="n">feat_semantics</span> <span class="o">=</span> <span class="n">ipa</span><span class="o">.</span><span class="n">cfeatures</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="n">feat_semantics</span><span class="p">[</span><span class="n">change</span><span class="o">.</span><span class="n">effect</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">change</span><span class="o">.</span><span class="n">effect</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        
+        
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">change</span><span class="p">)</span> <span class="o">==</span> <span class="n">S_change</span> <span class="p">:</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;The syllables with a configuration   : </span><span class="se">\n</span><span class="s2"> &quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">config_initiale</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;moved to a new configuration  &quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">config_finale</span><span class="p">))</span>
+        
+    
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+    
+
+    
+   
+    
+<div class="viewcode-block" id="langcomp2log"><a class="viewcode-back" href="../log_utilities.html#log_utilities.langcomp2log">[docs]</a><span class="k">def</span> <span class="nf">langcomp2log</span> <span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Comapres the vobulary of two languages and writes the comparison in a log (subfunction used to trace the evolution between two language state)</span>
+<span class="sd">    BE CAREFUL, we expect the two languages to be related / at least to have the same voc size for this operation to make sense.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    l1 : Language</span>
+<span class="sd">    </span>
+<span class="sd">    l2 :Language</span>
+<span class="sd">    </span>
+<span class="sd">    path : str</span>
+<span class="sd">        path to destination file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;logs/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+   
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>  
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;We are going to solemnly compare the evolution between &quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="n">l1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s2">&quot; and &quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="n">l2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">l1</span><span class="o">.</span><span class="n">voc</span> <span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">l1</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">.</span><span class="n">ipa</span><span class="p">)</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="s1">&#39;   -&gt;    &#39;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">l2</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">.</span><span class="n">ipa</span><span class="p">)</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+        
+    
+    
+    
+    
+<div class="viewcode-block" id="lgs2log"><a class="viewcode-back" href="../log_utilities.html#log_utilities.lgs2log">[docs]</a><span class="k">def</span> <span class="nf">lgs2log</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    print the evolution of a language step by step. </span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    liste : list of languages where the i+1 th element is the result of the evolution of the ith</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">langcomp2log</span> <span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;comp_lat_rom.txt&quot;</span><span class="p">)</span>
+        <span class="n">langcomp2log</span> <span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;comp_rom_rom.txt&quot;</span><span class="p">)</span></div>
+        
+    
+    
+    
+    
+<div class="viewcode-block" id="extract_changed_words"><a class="viewcode-back" href="../log_utilities.html#log_utilities.extract_changed_words">[docs]</a><span class="k">def</span> <span class="nf">extract_changed_words</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">write</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyses a dictionnary log and extracts only the words that were changed.</span>
+<span class="sd">    </span>
+<span class="sd">    The function the can if the user wants it write the modified words at the end of the same document</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : str</span>
+<span class="sd">        path to the file</span>
+<span class="sd">        </span>
+<span class="sd">    write : bool</span>
+<span class="sd">        Does the user want to write down the modified words at the end of the document ?</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    chg_wds :list </span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;logs/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="n">chg_wds</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span> <span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> 
+        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span> 
+            <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">:</span> <span class="n">chg_wds</span> <span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+   
+    <span class="k">if</span> <span class="n">write</span> <span class="p">:</span>
+        
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;CHANGED WORDS ; &quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">wd</span> <span class="ow">in</span> <span class="n">chg_wds</span> <span class="p">:</span> 
+            
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="n">wd</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;  ;  &quot;</span><span class="p">)</span>
+        
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">chg_wds</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

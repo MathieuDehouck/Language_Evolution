@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiki_utilities &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>Wiki_utilities</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Wiki_utilities</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Wed May  4 14:25:07 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+
+<span class="sd">Contains some functions that help handling phonetically transcribed words available on wikipedia</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">IPA</span> <span class="kn">import</span> <span class="n">IPA</span>
+<span class="kn">from</span> <span class="nn">Word</span> <span class="kn">import</span> <span class="n">Word</span><span class="p">,</span> <span class="n">Syllable</span>
+<span class="kn">from</span> <span class="nn">Language</span> <span class="kn">import</span> <span class="n">Language</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">IPA_utils</span> <span class="kn">import</span> <span class="n">diacritics</span>
+
+<span class="n">ipa</span> <span class="o">=</span> <span class="n">IPA</span><span class="o">.</span><span class="n">get_IPA</span><span class="p">()</span>
+
+
+
+
+
+<div class="viewcode-block" id="wiki_lexicon"><a class="viewcode-back" href="../Wiki_utilities.html#Wiki_utilities.wiki_lexicon">[docs]</a><span class="k">def</span> <span class="nf">wiki_lexicon</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    extracts the information from the iki files</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : str</span>
+<span class="sd">        path to the file we read</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dico : </span>
+<span class="sd">        keys : simple orthograph of the word. </span>
+<span class="sd">        values : the IPA and syllabled representation of the word give by the wiktionnary websiote. </span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;phonetic/&quot;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">folder</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="c1"># Extract the data taken from wikipedia (input : path of the file) and returns a dictionnary &quot;&quot;&quot;</span>
+    <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">doc</span> <span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="p">[]:</span>
+                <span class="k">continue</span>
+            <span class="n">dico</span><span class="p">[</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">dico</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="treat_syl"><a class="viewcode-back" href="../Wiki_utilities.html#Wiki_utilities.treat_syl">[docs]</a><span class="k">def</span> <span class="nf">treat_syl</span><span class="p">(</span><span class="n">syl</span><span class="p">,</span> <span class="n">stress</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a syllable in the syllabled jey of the vocabulary into a syllable object. </span>
+<span class="sd">    Effectuates the actual encoding of data into the objects used in this program. </span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    syl : str</span>
+<span class="sd">    stress : TYPE, optional</span>
+<span class="sd">        DESCRIPTION. The default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    syl : a Syllable object</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">length</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">nucleus</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="s1">&#39;ː&#39;</span> <span class="ow">in</span> <span class="n">syl</span><span class="p">:</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">nucleus</span> <span class="o">=</span> <span class="n">syl</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;ː&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">syl</span> <span class="o">=</span> <span class="n">syl</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ː&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="n">syl</span> <span class="o">=</span> <span class="n">syl</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;ɡ&#39;</span><span class="p">)</span>
+    <span class="n">syl</span> <span class="o">=</span> <span class="n">syl</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;̯&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>   <span class="c1"># FIX THIS</span>
+    <span class="n">phones</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">feats</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">syl</span><span class="p">):</span>
+        
+        <span class="k">if</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">diacritics</span><span class="p">:</span>
+            <span class="n">feats</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diacritics</span><span class="p">[</span><span class="n">ch</span><span class="p">])</span>
+            <span class="k">continue</span>
+
+        <span class="n">phones</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ipa</span><span class="o">.</span><span class="n">alphabet</span><span class="p">[</span><span class="n">ch</span><span class="p">])</span>
+        <span class="n">feats</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">nucleus</span><span class="p">:</span>
+            <span class="n">nucleus</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">phones</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    
+    <span class="n">phonemes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">phon</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">phones</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">nucleus</span><span class="p">:</span>
+            <span class="n">phonemes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phon</span><span class="o">.</span><span class="n">get_one</span><span class="p">(</span><span class="n">feats</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="kc">True</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">phonemes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phon</span><span class="o">.</span><span class="n">get_one</span><span class="p">(</span><span class="n">feats</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="kc">False</span><span class="p">))</span>
+
+    <span class="n">syl</span> <span class="o">=</span> <span class="n">Syllable</span><span class="p">(</span><span class="n">phonemes</span><span class="p">,</span> <span class="n">stress</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">syl</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="segm2syl"><a class="viewcode-back" href="../Wiki_utilities.html#Wiki_utilities.segm2syl">[docs]</a><span class="k">def</span> <span class="nf">segm2syl</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    take as input the dictionnary created out of the wiki data and used the info concerning syllabification</span>
+<span class="sd">    to create syllables in our IPA format</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dic_syl</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">segm</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+        <span class="c1">#print(word, segm)</span>
+        <span class="n">syllables</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">segm</span> <span class="o">=</span> <span class="n">segm</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">syl</span> <span class="ow">in</span> <span class="n">segm</span> <span class="p">:</span>
+            <span class="n">stress</span> <span class="o">=</span> <span class="p">(</span> <span class="n">syl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ˈ&quot;</span> <span class="p">)</span>    
+            <span class="k">if</span> <span class="n">stress</span> <span class="p">:</span> 
+                <span class="n">syl</span> <span class="o">=</span> <span class="n">syl</span> <span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  
+                <span class="n">s</span> <span class="o">=</span> <span class="n">treat_syl</span><span class="p">(</span><span class="n">syl</span><span class="p">,</span> <span class="n">stress</span><span class="p">)</span>
+                <span class="n">syllables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">stress</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="s2">&quot;ˈ&quot;</span> <span class="ow">in</span> <span class="n">syl</span> <span class="p">:</span>
+                    <span class="n">bric</span> <span class="o">=</span> <span class="n">syl</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;ˈ&quot;</span><span class="p">)</span>
+                    <span class="n">syl</span> <span class="o">=</span> <span class="n">bric</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="n">treat_syl</span><span class="p">(</span><span class="n">syl</span><span class="p">,</span> <span class="n">stress</span><span class="p">)</span>
+                    <span class="n">syllables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                    <span class="n">syl2</span> <span class="o">=</span> <span class="n">bric</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="c1">#if &#39; &#39; &#39; replaces the point, the accent is ont the word after</span>
+                    <span class="n">s2</span> <span class="o">=</span> <span class="n">treat_syl</span><span class="p">(</span><span class="n">syl2</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+                    <span class="n">syllables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+                <span class="k">else</span> <span class="p">:</span> 
+                    <span class="n">s</span> <span class="o">=</span> <span class="n">treat_syl</span><span class="p">(</span><span class="n">syl</span><span class="p">,</span> <span class="n">stress</span><span class="p">)</span>
+                    <span class="n">syllables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>              
+        <span class="n">dic_syl</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">syllables</span>
+           
+    <span class="k">return</span> <span class="n">dic_syl</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="dic2word"><a class="viewcode-back" href="../Wiki_utilities.html#Wiki_utilities.dic2word">[docs]</a><span class="k">def</span> <span class="nf">dic2word</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; converts a wiki dic into a dic of &quot;word&quot; objects</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">dic2syl</span> <span class="o">=</span> <span class="n">segm2syl</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+    <span class="n">dic2word</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">dic2syl</span> <span class="p">:</span>
+        <span class="n">wor</span> <span class="o">=</span> <span class="n">Word</span><span class="p">(</span><span class="n">dic2syl</span><span class="p">[</span><span class="n">w</span><span class="p">])</span>
+        <span class="n">dic2word</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">wor</span>
+    <span class="k">return</span> <span class="n">dic2word</span> </div>
+
+
+            
+
+
+<div class="viewcode-block" id="get_language"><a class="viewcode-back" href="../Wiki_utilities.html#Wiki_utilities.get_language">[docs]</a><span class="k">def</span> <span class="nf">get_language</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="p">:</span>   
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    builds a Language object from data found on wiktionnary</span>
+<span class="sd">    Final step of the conversion that reunites all the previous functions.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : str</span>
+<span class="sd">        path to a file extracted from wiktionnary.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    lg : Language</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">gaffiot</span> <span class="o">=</span> <span class="n">wiki_lexicon</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">dic</span> <span class="o">=</span> <span class="n">dic2word</span><span class="p">(</span><span class="n">gaffiot</span><span class="p">)</span> 
+    <span class="n">lg</span> <span class="o">=</span> <span class="n">Language</span><span class="p">(</span><span class="n">dic</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">lg</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

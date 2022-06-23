@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Change module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Change module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Change.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Change">
+<span id="change-module"></span><h1>Change module<a class="headerlink" href="#module-Change" title="Permalink to this headline"></a></h1>
+<p>Created on Thu May  5 10:22:10 2022</p>
+<p>&#64;author: 3b13j</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Change.Change">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Change.</span></span><span class="sig-name descname"><span class="pre">Change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">effect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.Change" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An abstract class representing a phonetic change.
+They can be of three kinds :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Phonetics (<a href="#id1"><span class="problematic" id="id2">P_</span></a>) ( a phoneme gets modified, one of its features being influenced by anothe). This encodes assimilation and dissimilation.</p></li>
+<li><p>Syllabic (<a href="#id3"><span class="problematic" id="id4">S_</span></a>) the stress or tone of a syllable moves</p></li>
+<li><p>Metathesis (?_) two close phonemes get interverted</p></li>
+<li><p>insertion : a phoneme is inserted in some specific conditions</p></li>
+<li><p>Deletion : a phoneme is deleted in specific conditions</p></li>
+</ul>
+</div></blockquote>
+<p>...</p>
+<dl class="simple">
+<dt>conditions<span class="classifier">list</span></dt><dd><p>list of conditions required for the change to be applied</p>
+</dd>
+<dt>impacted_phonems<span class="classifier">dic</span></dt><dd><p>dictionnary stocking the phonemes that have been impacted by a change during its application</p>
+</dd>
+<dt>target<span class="classifier">condition</span></dt><dd><p>a special kind of condition that contraint the category of the phoneme that undergo the change</p>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>add_condition
+set_target
+check : checks if all the conditions are satisfied before the application of the change</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.Change.add_condition">
+<span class="sig-name descname"><span class="pre">add_condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.add_condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.Change.add_condition" title="Permalink to this definition"></a></dt>
+<dd><p>used to add a condition to an already built change</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.Change.apply_language">
+<span class="sig-name descname"><span class="pre">apply_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.apply_language"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.Change.apply_language" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change on every word in the langugage</p>
+<p>lang : language</p>
+<p>a new language with the change applied on every of its word</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.Change.apply_phon">
+<span class="sig-name descname"><span class="pre">apply_phon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.apply_phon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.Change.apply_phon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.Change.apply_syl">
+<span class="sig-name descname"><span class="pre">apply_syl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.apply_syl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.Change.apply_syl" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a syllable</p>
+<p>syl : Syllable</p>
+<p>nsyl : Syllable</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.Change.apply_word">
+<span class="sig-name descname"><span class="pre">apply_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.apply_word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.Change.apply_word" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a word</p>
+<p>word : Word</p>
+<p>nword : a new word with the change applied</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.Change.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.Change.check" title="Permalink to this definition"></a></dt>
+<dd><p>check if a Change can be applied or not in a word</p>
+<dl class="simple">
+<dt>phon<span class="classifier">Phoneme</span></dt><dd><p>phoneme we want to apply a change on</p>
+</dd>
+</dl>
+<p>index :int.
+word : Word</p>
+<blockquote>
+<div><p>Context</p>
+</div></blockquote>
+<dl class="simple">
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>apply<span class="classifier">bool </span></dt><dd><p>whether the change can be applied or not</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.Change.decode_change">
+<span class="sig-name descname"><span class="pre">decode_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#Change.decode_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.Change.decode_change" title="Permalink to this definition"></a></dt>
+<dd><p>Hub to determine which decoder to use</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Change.D_change">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Change.</span></span><span class="sig-name descname"><span class="pre">D_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#D_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.D_change" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Change.Change" title="Change.Change"><code class="xref py py-class docutils literal notranslate"><span class="pre">Change.Change</span></code></a></p>
+<p>class allowing deletion of phonemes (monophtongisation a.o.)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.D_change.apply_word">
+<span class="sig-name descname"><span class="pre">apply_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#D_change.apply_word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.D_change.apply_word" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a word</p>
+<p>word : Word</p>
+<p>nword : a new word with the change applied</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.D_change.deletion">
+<span class="sig-name descname"><span class="pre">deletion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#D_change.deletion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.D_change.deletion" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Change.I_change">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Change.</span></span><span class="sig-name descname"><span class="pre">I_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">effects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#I_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.I_change" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Change.Change" title="Change.Change"><code class="xref py py-class docutils literal notranslate"><span class="pre">Change.Change</span></code></a></p>
+<p>class for insertion changes (diphtongisation)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.I_change.apply_phon">
+<span class="sig-name descname"><span class="pre">apply_phon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#I_change.apply_phon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.I_change.apply_phon" title="Permalink to this definition"></a></dt>
+<dd><p>we always return a list, a singleton list if the change does not apply, a pair of more otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.I_change.apply_syl">
+<span class="sig-name descname"><span class="pre">apply_syl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#I_change.apply_syl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.I_change.apply_syl" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a syllable</p>
+<p>syl : Syllable</p>
+<p>nsyl : Syllable</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.I_change.apply_word">
+<span class="sig-name descname"><span class="pre">apply_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#I_change.apply_word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.I_change.apply_word" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a word</p>
+<p>word : Word</p>
+<p>nword : a new word with the change applied</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.I_change.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#I_change.check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.I_change.check" title="Permalink to this definition"></a></dt>
+<dd><p>check if a Change can be applied or not</p>
+<dl class="simple">
+<dt>phon<span class="classifier">Phoneme</span></dt><dd><p>phoneme we want to apply a change on</p>
+</dd>
+</dl>
+<p>index :int.
+word : Word</p>
+<blockquote>
+<div><p>Context</p>
+</div></blockquote>
+<dl class="simple">
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>apply<span class="classifier">bool </span></dt><dd><p>whether the change can be applied or not</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Change.M_change">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Change.</span></span><span class="sig-name descname"><span class="pre">M_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regressive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progressive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#M_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.M_change" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Change.Change" title="Change.Change"><code class="xref py py-class docutils literal notranslate"><span class="pre">Change.Change</span></code></a></p>
+<p>subclass of change 
+A class modelling the inversion of two phonemes in a word
+...</p>
+<dl class="simple">
+<dt>target: list</dt><dd><p>pattern of the phoneme that can undergo the metathesis</p>
+</dd>
+<dt>index<span class="classifier">int</span></dt><dd><p>index of the feature that links the two phonemes that will swap</p>
+</dd>
+<dt>conditiosn<span class="classifier">list</span></dt><dd><p>list of the conditions that need to be satisfied for the change to be applied</p>
+</dd>
+<dt>progressive / regressive<span class="classifier">bools </span></dt><dd><p>to determine the direction of the change</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.M_change.apply_word">
+<span class="sig-name descname"><span class="pre">apply_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#M_change.apply_word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.M_change.apply_word" title="Permalink to this definition"></a></dt>
+<dd><p>Simple call to the swap method that exaclty does what a M change is supposed to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.M_change.decode_change">
+<span class="sig-name descname"><span class="pre">decode_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#M_change.decode_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.M_change.decode_change" title="Permalink to this definition"></a></dt>
+<dd><p>Hub to determine which decoder to use</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.M_change.encode_change">
+<span class="sig-name descname"><span class="pre">encode_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#M_change.encode_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.M_change.encode_change" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.M_change.swap">
+<span class="sig-name descname"><span class="pre">swap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#M_change.swap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.M_change.swap" title="Permalink to this definition"></a></dt>
+<dd><p>Apllies the metathesis following the target and conditions stored in the Change object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.M_change.swapable">
+<span class="sig-name descname"><span class="pre">swapable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#M_change.swapable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.M_change.swapable" title="Permalink to this definition"></a></dt>
+<dd><p>check if a word satisfies the conditions and target selection of the change.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Change.P_change">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Change.</span></span><span class="sig-name descname"><span class="pre">P_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">effect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Change.Change" title="Change.Change"><code class="xref py py-class docutils literal notranslate"><span class="pre">Change.Change</span></code></a></p>
+<p>subclass of change 
+A class modelling a phonological change .</p>
+<p>...</p>
+<dl class="simple">
+<dt>conditiosn<span class="classifier">list</span></dt><dd><p>list of the conditions that need to be satisfied for the change to be applied</p>
+</dd>
+<dt>config_initiale<span class="classifier">configuration</span></dt><dd><p>template of the configuration selecting the feature(s) to be modified</p>
+</dd>
+<dt>config_finale<span class="classifier">configuration</span></dt><dd><p>template with the modification applied</p>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<dl class="simple">
+<dt>apply_phon :</dt><dd><p>input : a phoneme (among other onformations)
+outputs a phoneme with the change umpload</p>
+</dd>
+</dl>
+<p>variants :</p>
+<p>apply_word
+apply_syl
+apply_language</p>
+<dl class="simple">
+<dt>add_condition :</dt><dd><p>input : a condition
+adds it to the condition list.</p>
+</dd>
+</dl>
+<p>rd_change ; creates a random change</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.applicable">
+<span class="sig-name descname"><span class="pre">applicable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.applicable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.applicable" title="Permalink to this definition"></a></dt>
+<dd><p>checks if a change would modufy a language given as input. 
+if that s not the case, it is not usefull to apply it.</p>
+<dl class="simple">
+<dt>language<span class="classifier">Language</span></dt><dd><p>the language we would like to apply the change on</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>bool</dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.apply_language">
+<span class="sig-name descname"><span class="pre">apply_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_language"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.apply_language" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change on every word in the langugage</p>
+<p>lang : language</p>
+<p>a new language with the change applied on every of its word</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.apply_language2">
+<span class="sig-name descname"><span class="pre">apply_language2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_language2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.apply_language2" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change on every word in the langugage</p>
+<p>lang : language</p>
+<p>a new language with the change applied on every of its word</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.apply_phon">
+<span class="sig-name descname"><span class="pre">apply_phon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_phon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.apply_phon" title="Permalink to this definition"></a></dt>
+<dd><p>Applies the change on a phoneme</p>
+<dl class="simple">
+<dt>phon<span class="classifier">phoneme</span></dt><dd><p>phone</p>
+</dd>
+<dt>index<span class="classifier">int </span></dt><dd><p>rank of the phoneme in the overall word</p>
+</dd>
+<dt>word<span class="classifier">word </span></dt><dd><p>wird that encompass the phoneme we are studying, plays the role of a contest</p>
+</dd>
+<dt>verbose<span class="classifier">bool, optional</span></dt><dd><p>Enable or disable the verbose mode . The default is True.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>index</dt><dd><p>the updated index at the end of the process</p>
+</dd>
+<dt>phon </dt><dd><p>the new phoneme obtained after the applciation of the change</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.apply_syl">
+<span class="sig-name descname"><span class="pre">apply_syl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_syl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.apply_syl" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a Syllable</p>
+<dl class="simple">
+<dt>syl<span class="classifier">syllable</span></dt><dd><p>the syllable we are going to apply the change to</p>
+</dd>
+<dt>index<span class="classifier">int</span></dt><dd><p>index encoding the phoneme that will undergo the change</p>
+</dd>
+<dt>wd<span class="classifier">TYPE</span></dt><dd><p>word of origin of the syllable, plays the role of the context</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>syl<span class="classifier"></span></dt><dd><p>the updated syllable</p>
+</dd>
+<dt>index<span class="classifier">int</span></dt><dd><p>the index updated</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.apply_word">
+<span class="sig-name descname"><span class="pre">apply_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.apply_word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.apply_word" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a word</p>
+<p>wd : word</p>
+<p>word : a new word with the change applied</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.decode_change">
+<span class="sig-name descname"><span class="pre">decode_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.decode_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.decode_change" title="Permalink to this definition"></a></dt>
+<dd><p>Hub to determine which decoder to use</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.effective">
+<span class="sig-name descname"><span class="pre">effective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.effective"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.effective" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.encode_change">
+<span class="sig-name descname"><span class="pre">encode_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.encode_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.encode_change" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.P_change.just_transform">
+<span class="sig-name descname"><span class="pre">just_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phon</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#P_change.just_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.P_change.just_transform" title="Permalink to this definition"></a></dt>
+<dd><p>Applies a change to transform a phoneme whithout taking care of any kind of condition</p>
+<p>phon : Phoneme</p>
+<p>new_phon : Phoneme</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Change.S_change">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Change.</span></span><span class="sig-name descname"><span class="pre">S_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_initiale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_finale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.S_change" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Change.Change" title="Change.Change"><code class="xref py py-class docutils literal notranslate"><span class="pre">Change.Change</span></code></a></p>
+<p>subclass of change 
+A class modelling a structural change in the syllable .</p>
+<p>...</p>
+<dl class="simple">
+<dt>conditiosn<span class="classifier">list</span></dt><dd><p>list of the conditions that need to be satisfied for the change to be applied</p>
+</dd>
+<dt>config_initiale<span class="classifier">list</span></dt><dd><p>a list of 3 boleans coding stress , length and tone (None for now)</p>
+</dd>
+<dt>config_finale<span class="classifier">list</span></dt><dd><p>a list of 3 boleans coding stress ,length (None for now)</p>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>apply_word
+apply_syl
+apply_lang</p>
+<dl class="simple">
+<dt>add_condition :</dt><dd><p>input : a condition
+adds it to the condition list.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.S_change.apply_syl">
+<span class="sig-name descname"><span class="pre">apply_syl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change.apply_syl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.S_change.apply_syl" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a syllable</p>
+<p>syl : Syllable</p>
+<p>nsyl : Syllable</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.S_change.apply_word">
+<span class="sig-name descname"><span class="pre">apply_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change.apply_word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.S_change.apply_word" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the change to a word</p>
+<p>word : Word</p>
+<p>nword : a new word with the change applied</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.S_change.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change.check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.S_change.check" title="Permalink to this definition"></a></dt>
+<dd><p>checks if a change can be applied to a word</p>
+<dl class="simple">
+<dt>word<span class="classifier">word </span></dt><dd><p>word that we test</p>
+</dd>
+<dt>rank<span class="classifier">int</span></dt><dd><p>rank of the phoneme</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>bool</dt><dd><p>whether it is applicable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.S_change.decode_change">
+<span class="sig-name descname"><span class="pre">decode_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change.decode_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.S_change.decode_change" title="Permalink to this definition"></a></dt>
+<dd><p>Hub to determine which decoder to use</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.S_change.decode_triplet">
+<span class="sig-name descname"><span class="pre">decode_triplet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change.decode_triplet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.S_change.decode_triplet" title="Permalink to this definition"></a></dt>
+<dd><p>Decode the triplet of booleans that represents the supplementary information we have about a vowell</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.S_change.encode_change">
+<span class="sig-name descname"><span class="pre">encode_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change.encode_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.S_change.encode_change" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Change.S_change.encode_triplet">
+<span class="sig-name descname"><span class="pre">encode_triplet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">triplet</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#S_change.encode_triplet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.S_change.encode_triplet" title="Permalink to this definition"></a></dt>
+<dd><p>Encode the triplet of booleans that represents the supplementary information we have about a vowell</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Change.decode_log">
+<span class="sig-prename descclassname"><span class="pre">Change.</span></span><span class="sig-name descname"><span class="pre">decode_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_back</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Change.html#decode_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Change.decode_log" title="Permalink to this definition"></a></dt>
+<dd><p>decodes a log file,  and converts the long written in it in changes.
+optionnaly can write them back in another log to check there is no difference</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

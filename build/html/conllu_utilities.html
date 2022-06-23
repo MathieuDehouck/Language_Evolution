@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>conllu_utilities module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">conllu_utilities module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>conllu_utilities module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/conllu_utilities.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-conllu_utilities">
+<span id="conllu-utilities-module"></span><h1>conllu_utilities module<a class="headerlink" href="#module-conllu_utilities" title="Permalink to this headline"></a></h1>
+<p>Created on Mon May  2 16:34:02 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>contains usefull functions to extract data from conllu files</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="conllu_utilities.GetKey">
+<span class="sig-prename descclassname"><span class="pre">conllu_utilities.</span></span><span class="sig-name descname"><span class="pre">GetKey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dic</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conllu_utilities.html#GetKey"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#conllu_utilities.GetKey" title="Permalink to this definition"></a></dt>
+<dd><p>to get the key giving as input the value and a dictionnary</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="conllu_utilities.dic_w2f">
+<span class="sig-prename descclassname"><span class="pre">conllu_utilities.</span></span><span class="sig-name descname"><span class="pre">dic_w2f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conllu_utilities.html#dic_w2f"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#conllu_utilities.dic_w2f" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="conllu_utilities.extract_conllu">
+<span class="sig-prename descclassname"><span class="pre">conllu_utilities.</span></span><span class="sig-name descname"><span class="pre">extract_conllu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conllu_utilities.html#extract_conllu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#conllu_utilities.extract_conllu" title="Permalink to this definition"></a></dt>
+<dd><p>Extracts data from a conllu file</p>
+<dl class="simple">
+<dt>path<span class="classifier">str</span></dt><dd><p>a path to the origin file</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>res<span class="classifier">a list </span></dt><dd><p>the result of a successful extraction</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="conllu_utilities.word_2_phoneme_lat">
+<span class="sig-prename descclassname"><span class="pre">conllu_utilities.</span></span><span class="sig-name descname"><span class="pre">word_2_phoneme_lat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conllu_utilities.html#word_2_phoneme_lat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#conllu_utilities.word_2_phoneme_lat" title="Permalink to this definition"></a></dt>
+<dd><p>A useless thing that treats latin</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

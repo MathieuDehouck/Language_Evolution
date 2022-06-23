@@ -1,73 +1,34 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html4" lang="en, fr" >
+<html class="writer-html5" lang="en, fr" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Phoneme &mdash; Evolution 0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> Evolution
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -75,83 +36,33 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"></div>
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Evolution</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Module code</a> &raquo;</li>
-        
       <li>Phoneme</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <h1>Source code for Phoneme</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="sd">&quot;&quot;&quot;</span>
@@ -160,20 +71,9 @@
 <span class="sd">@author: 3b13j</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">utilitaries</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">norm</span>
 <span class="kn">from</span> <span class="nn">ipapy</span> <span class="kn">import</span> <span class="n">UNICODE_TO_IPA</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
-
-
-
-
-
-
-    
 
 <div class="viewcode-block" id="Phoneme"><a class="viewcode-back" href="../index.html#Phoneme.Phoneme">[docs]</a><span class="k">class</span> <span class="nc">Phoneme</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -202,45 +102,68 @@
 
 <span class="sd">    update_IPA  : finds the closest ipa character to represent a new phoneme</span>
 <span class="sd">    </span>
+<span class="sd">    lot of setters, most of which will be useful in I / D change when the position of a phoneme in the word structure might change. </span>
+<span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
-    
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">syllabic</span><span class="p">,</span> <span class="n">speller</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span> 
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        a gentle Phoneme constructor</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speller</span> <span class="o">=</span> <span class="n">speller</span>
-
         <span class="bp">self</span><span class="o">.</span><span class="n">syl</span> <span class="o">=</span> <span class="n">syllabic</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">word_rank</span> <span class="o">=</span> <span class="kc">None</span>
-        
         <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span>
-        
         <span class="bp">self</span><span class="o">.</span><span class="n">ipa</span> <span class="o">=</span> <span class="n">speller</span><span class="o">.</span><span class="n">get_char</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">UNICODE_TO_IPA</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ipa</span><span class="p">)]</span><span class="o">.</span><span class="n">_IPAChar__canonical_string</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;No description&#39;</span>
+       
         
+       
         
         
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ipa</span> <span class="p">)</span><span class="o">+</span>  <span class="s2">&quot; : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">set_word_rank</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rk</span><span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">word_rank</span> <span class="o">=</span> <span class="n">rk</span> 
 
-    <span class="k">def</span> <span class="nf">set_rank_in_wd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rk</span><span class="p">)</span> <span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_word_rank</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span>
+
+
+<span class="c1">#TODO : still useful ?  What for ?</span>
+<div class="viewcode-block" id="Phoneme.to_int"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Phoneme.to_int">[docs]</a>    <span class="k">def</span> <span class="nf">to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;1010&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+        <span class="n">h</span> <span class="o">*=</span> <span class="mi">4</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_Vowel</span><span class="p">():</span>
+            <span class="n">h</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">syl</span><span class="p">:</span>
+            <span class="n">h</span> <span class="o">+=</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="n">h</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="Phoneme.set_word_rank"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Phoneme.set_word_rank">[docs]</a>    <span class="k">def</span> <span class="nf">set_word_rank</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rk</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">word_rank</span> <span class="o">=</span> <span class="n">rk</span> </div>
+
+<div class="viewcode-block" id="Phoneme.set_rank_in_wd"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Phoneme.set_rank_in_wd">[docs]</a>    <span class="k">def</span> <span class="nf">set_rank_in_wd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rk</span><span class="p">)</span> <span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_word_rank</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span></div>
     
-    <span class="k">def</span> <span class="nf">set_in_syl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="p">:</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">in_syl</span> <span class="o">=</span> <span class="n">i</span>
+<div class="viewcode-block" id="Phoneme.set_in_syl"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Phoneme.set_in_syl">[docs]</a>    <span class="k">def</span> <span class="nf">set_in_syl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="p">:</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_syl</span> <span class="o">=</span> <span class="n">i</span></div>
 
-    <span class="k">def</span> <span class="nf">is_Consonant</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="n">Consonant</span>
+<div class="viewcode-block" id="Phoneme.is_Consonant"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Phoneme.is_Consonant">[docs]</a>    <span class="k">def</span> <span class="nf">is_Consonant</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="n">Consonant</span></div>
 
-    <span class="k">def</span> <span class="nf">is_Vowel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="n">Vowel</span>
+<div class="viewcode-block" id="Phoneme.is_Vowel"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Phoneme.is_Vowel">[docs]</a>    <span class="k">def</span> <span class="nf">is_Vowel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="n">Vowel</span></div>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">features</span>
+
+
+
 
 
 <div class="viewcode-block" id="Phoneme.update_IPA"><a class="viewcode-back" href="../index.html#Phoneme.Phoneme.update_IPA">[docs]</a>    <span class="k">def</span> <span class="nf">update_IPA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
@@ -259,32 +182,22 @@
 <span class="sd">        None.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ipa</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">speller</span><span class="o">.</span><span class="n">get_char</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ipa</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">speller</span><span class="o">.</span><span class="n">get_char</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div></div>
 
 
     
 
-    <span class="k">def</span> <span class="nf">apply_effect</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">effect</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span>
-        
-    <span class="k">def</span> <span class="nf">get_mofified</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="p">)</span> <span class="p">:</span>
-        
-        <span class="n">new_ft</span> <span class="o">=</span> <span class="n">change_feature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> 
-        
-        <span class="k">if</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_Vowel</span> <span class="p">:</span> <span class="n">new_phon</span> <span class="o">=</span> <span class="n">Vowel</span><span class="p">(</span><span class="n">new_ft</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">syl</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">speller</span><span class="p">)</span>
-        <span class="k">else</span> <span class="p">:</span> <span class="n">new_phon</span> <span class="o">=</span> <span class="n">Consonant</span><span class="p">(</span><span class="n">new_ft</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">syl</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">speller</span><span class="p">)</span></div>
 
-        
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">def get_phon(string) :</span>
+<span class="sd">&quot;&quot;&quot;</span>
+    <span class="c1">#transform a string (we excpect the user to enter an ipa character) into the Phoneme object representing this character</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    if string not in ipa.alphabet.keys() :</span>
+<span class="sd">        return</span>
+<span class="sd">    return Phoneme(string, list(ipa.alphabet[string].features))</span>
 
-<div class="viewcode-block" id="get_phon"><a class="viewcode-back" href="../index.html#Phoneme.get_phon">[docs]</a><span class="k">def</span> <span class="nf">get_phon</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    transform a string (we excpect the user to enter an ipa character) into the Phoneme object representing this character</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">string</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ipa</span><span class="o">.</span><span class="n">alphabet</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="p">:</span>
-        <span class="k">return</span>
-    <span class="k">return</span> <span class="n">Phoneme</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">ipa</span><span class="o">.</span><span class="n">alphabet</span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="o">.</span><span class="n">features</span><span class="p">))</span></div>
-
-
+<span class="sd">&quot;&quot;&quot;</span>
 
 
 
@@ -320,8 +233,6 @@
 <span class="sd">        a list representing the features associated to the phonem</span>
 <span class="sd">    description : str</span>
 <span class="sd">        the verbose descritption of the phoneme</span>
-<span class="sd">    voice : bool </span>
-<span class="sd">        states if the phoneme is voiced or not</span>
 <span class="sd">    syl : bool </span>
 <span class="sd">        states if the phoneme is center of a syllable</span>
 <span class="sd">    </span>
@@ -350,25 +261,33 @@
         
         
         
-    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        
+<div class="viewcode-block" id="Vowel.get_height"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Vowel.get_height">[docs]</a>    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">get_front</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<div class="viewcode-block" id="Vowel.get_front"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Vowel.get_front">[docs]</a>    <span class="k">def</span> <span class="nf">get_front</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">is_round</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+<div class="viewcode-block" id="Vowel.is_round"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Vowel.is_round">[docs]</a>    <span class="k">def</span> <span class="nf">is_round</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">is_nasal</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<div class="viewcode-block" id="Vowel.is_nasal"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Vowel.is_nasal">[docs]</a>    <span class="k">def</span> <span class="nf">is_nasal</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span></div>
 
-    <span class="k">def</span> <span class="nf">is_voiced</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<div class="viewcode-block" id="Vowel.is_voiced"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Vowel.is_voiced">[docs]</a>    <span class="k">def</span> <span class="nf">is_voiced</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span></div>
     
-    <span class="k">def</span> <span class="nf">is_palatal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
+<div class="viewcode-block" id="Vowel.is_palatal"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Vowel.is_palatal">[docs]</a>    <span class="k">def</span> <span class="nf">is_palatal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">threshold</span></div>
 
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">is_Consonant</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">features</span></div>
     
+
+
+
 
 <div class="viewcode-block" id="Consonant"><a class="viewcode-back" href="../index.html#Phoneme.Consonant">[docs]</a><span class="k">class</span> <span class="nc">Consonant</span><span class="p">(</span><span class="n">Phoneme</span><span class="p">)</span> <span class="p">:</span> 
     <span class="sd">&quot;&quot;&quot;</span>
@@ -409,9 +328,7 @@
 <span class="sd">        the verbose descritption of the phoneme</span>
 <span class="sd">    voice : bool </span>
 <span class="sd">        states if the phoneme is voiced or not</span>
-<span class="sd">    syl : bool </span>
-<span class="sd">        states if the phoneme is center of a syllable</span>
-<span class="sd">    </span>
+
 <span class="sd">    Methods</span>
 <span class="sd">    -------</span>
 <span class="sd">    __init__() constructor taking all these information as input</span>
@@ -438,75 +355,64 @@
         
     
 
-    <span class="k">def</span> <span class="nf">is_round</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">11</span>
+<div class="viewcode-block" id="Consonant.is_round"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.is_round">[docs]</a>    <span class="k">def</span> <span class="nf">is_round</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">11</span></div>
     
-    <span class="k">def</span> <span class="nf">is_labialised</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">11</span>
+<div class="viewcode-block" id="Consonant.is_labialised"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.is_labialised">[docs]</a>    <span class="k">def</span> <span class="nf">is_labialised</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">11</span></div>
 
-    <span class="k">def</span> <span class="nf">is_palatal</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span>
+<div class="viewcode-block" id="Consonant.is_palatal"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.is_palatal">[docs]</a>    <span class="k">def</span> <span class="nf">is_palatal</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span></div>
 
-    <span class="k">def</span> <span class="nf">is_uvular</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<div class="viewcode-block" id="Consonant.is_uvular"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.is_uvular">[docs]</a>    <span class="k">def</span> <span class="nf">is_uvular</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span></div>
 
-    <span class="k">def</span> <span class="nf">is_nasal</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<div class="viewcode-block" id="Consonant.is_nasal"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.is_nasal">[docs]</a>    <span class="k">def</span> <span class="nf">is_nasal</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span></div>
 
-    <span class="k">def</span> <span class="nf">is_pre_nasalised</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<div class="viewcode-block" id="Consonant.is_pre_nasalised"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.is_pre_nasalised">[docs]</a>    <span class="k">def</span> <span class="nf">is_pre_nasalised</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span></div>
 
-    <span class="k">def</span> <span class="nf">is_aspirated</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<div class="viewcode-block" id="Consonant.is_aspirated"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.is_aspirated">[docs]</a>    <span class="k">def</span> <span class="nf">is_aspirated</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span></div>
     
-    <span class="k">def</span> <span class="nf">is_sonorant</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span>  <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<div class="viewcode-block" id="Consonant.is_sonorant"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.is_sonorant">[docs]</a>    <span class="k">def</span> <span class="nf">is_sonorant</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span>  <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span></div>
  
-    <span class="k">def</span> <span class="nf">has_sec_articulation</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+<div class="viewcode-block" id="Consonant.has_sec_articulation"><a class="viewcode-back" href="../Phoneme.html#Phoneme.Consonant.has_sec_articulation">[docs]</a>    <span class="k">def</span> <span class="nf">has_sec_articulation</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span></div>
+
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">is_Vowel</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">features</span></div>
 </pre></div>
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.
-
-    </p>
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

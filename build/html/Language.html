@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Language module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Language module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Language.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Language">
+<span id="language-module"></span><h1>Language module<a class="headerlink" href="#module-Language" title="Permalink to this headline"></a></h1>
+<p>Created on Thu May  5 09:28:54 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>Contains the Languge class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Language.Language">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Language.</span></span><span class="sig-name descname"><span class="pre">Language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'unnamed'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to represent a language, considered as the list of the phonems it possesses.</p>
+<p>...</p>
+<dl class="simple">
+<dt>name<span class="classifier">str</span></dt><dd><p>name of the language</p>
+</dd>
+<dt>voc<span class="classifier">dic </span></dt><dd><p>dicitonnary storing all the words of the language</p>
+</dd>
+<dt>phonemes<span class="classifier">list</span></dt><dd><p>list of all the phonemes belonging to the language</p>
+</dd>
+<dt>dic_phonemes<span class="classifier">dic</span></dt><dd><p>a dic mapping a character to a phoneme</p>
+</dd>
+</dl>
+<p>__init__() the constructor</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Language.Language.compare">
+<span class="sig-name descname"><span class="pre">compare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language.compare"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language.compare" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>language<span class="classifier">another Language object</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>differents<span class="classifier">list </span></dt><dd><p>the list of word that have been modified in the new language</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Language.Language.evaluate_proximity">
+<span class="sig-name descname"><span class="pre">evaluate_proximity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language.evaluate_proximity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language.evaluate_proximity" title="Permalink to this definition"></a></dt>
+<dd><p>Compare two languages using various metrics.</p>
+<p>other :Language</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Language.Language.feature_comparison">
+<span class="sig-name descname"><span class="pre">feature_comparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language.feature_comparison"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language.feature_comparison" title="Permalink to this definition"></a></dt>
+<dd><p>Compare the feature inventory of two languages</p>
+<p>other :Language</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Language.Language.inventory_comparison">
+<span class="sig-name descname"><span class="pre">inventory_comparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language.inventory_comparison"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language.inventory_comparison" title="Permalink to this definition"></a></dt>
+<dd><p>Compare the phonetic inventory of two language</p>
+<p>other :Language</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Language.Language.phoneme_comparison">
+<span class="sig-name descname"><span class="pre">phoneme_comparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language.phoneme_comparison"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language.phoneme_comparison" title="Permalink to this definition"></a></dt>
+<dd><p>Compare the phonmes</p>
+<p>other :Language</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Language.Language.print_both">
+<span class="sig-name descname"><span class="pre">print_both</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language.print_both"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language.print_both" title="Permalink to this definition"></a></dt>
+<dd><p>print all words of a language close to each other</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Language.Language.print_phonetic_inventory">
+<span class="sig-name descname"><span class="pre">print_phonetic_inventory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language.print_phonetic_inventory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language.print_phonetic_inventory" title="Permalink to this definition"></a></dt>
+<dd><p>Prints a simple version of the inventory of the language's phonemes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Language.Language.set_phonetic_inventory">
+<span class="sig-name descname"><span class="pre">set_phonetic_inventory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#Language.set_phonetic_inventory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.Language.set_phonetic_inventory" title="Permalink to this definition"></a></dt>
+<dd><p>Gives a lot of information about rhe phonetic inventory of a language.
+Extracted from the __init__ lethod in hope for computation time gain</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Language.State">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Language.</span></span><span class="sig-name descname"><span class="pre">State</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Language.html#State"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Language.State" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A condensed representation of a language for faster interaction and change generation</p>
+<p>...</p>
+<dl class="simple">
+<dt>phonemes<span class="classifier">dict</span></dt><dd><p>list of all the phonemes belonging to the language</p>
+</dd>
+<dt>syllables<span class="classifier">dict</span></dt><dd><p>a dict of syllables</p>
+</dd>
+</dl>
+<p>__init__() the constructor</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

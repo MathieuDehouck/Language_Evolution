@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tree module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Tree module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tree module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Tree.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Tree">
+<span id="tree-module"></span><h1>Tree module<a class="headerlink" href="#module-Tree" title="Permalink to this headline"></a></h1>
+<p>Created on Wed May 18 17:00:17 2022</p>
+<p>&#64;author: 3b13j</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Tree.L_tree">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Tree.</span></span><span class="sig-name descname"><span class="pre">L_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>a special kind of phylogentic tree storing our languages
+as defined, the structure should be names &quot;forward tree&quot; since the change is unidirectionnal</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.elaborate_history_graph">
+<span class="sig-name descname"><span class="pre">elaborate_history_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">words</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.elaborate_history_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.elaborate_history_graph" title="Permalink to this definition"></a></dt>
+<dd><p>Extracts a subgraph representing the history of the evolution of a particular word in all the languages we generated</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_a_change_path">
+<span class="sig-name descname"><span class="pre">get_a_change_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_a_change_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_a_change_path" title="Permalink to this definition"></a></dt>
+<dd><p>gives the list of all the changes and languages from a randomly selected leaf</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_ad_2_tree">
+<span class="sig-name descname"><span class="pre">get_ad_2_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_ad_2_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_ad_2_tree" title="Permalink to this definition"></a></dt>
+<dd><p>returns a dictionnary mapping an adress to the tree object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_all_nodes">
+<span class="sig-name descname"><span class="pre">get_all_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_all_nodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_all_nodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_depth">
+<span class="sig-name descname"><span class="pre">get_depth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_depth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_depth" title="Permalink to this definition"></a></dt>
+<dd><p>return a dictionarry mapping the address of a tree to its depth</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_final_state_of_the_evolution">
+<span class="sig-name descname"><span class="pre">get_final_state_of_the_evolution</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_final_state_of_the_evolution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_final_state_of_the_evolution" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the languages at the end of our evolution tree</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_history_word">
+<span class="sig-name descname"><span class="pre">get_history_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">liste</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_history_word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_history_word" title="Permalink to this definition"></a></dt>
+<dd><p>Stores the state of the word in the histtory of all the generated languages</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_languages">
+<span class="sig-name descname"><span class="pre">get_languages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_languages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_languages" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a dictionnary mapping the adress of a tree to the language it stores</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_leaves">
+<span class="sig-name descname"><span class="pre">get_leaves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_leaves"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_leaves" title="Permalink to this definition"></a></dt>
+<dd><p>Get the list of the leaves of a language</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_nodes">
+<span class="sig-name descname"><span class="pre">get_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_nodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_nodes" title="Permalink to this definition"></a></dt>
+<dd><p>returns a list containing all the tree object that are nodes in the mother tree</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_path_to_root">
+<span class="sig-name descname"><span class="pre">get_path_to_root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_path_to_root"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_path_to_root" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the list of all the nodes leading from the target node to the root of the tree</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_scores">
+<span class="sig-name descname"><span class="pre">get_scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_scores"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_scores" title="Permalink to this definition"></a></dt>
+<dd><p>Get a mapping between change objects and the chance they have to appear</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.get_tree_2_add">
+<span class="sig-name descname"><span class="pre">get_tree_2_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.get_tree_2_add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.get_tree_2_add" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.history_to_graph">
+<span class="sig-name descname"><span class="pre">history_to_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">words</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.history_to_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.history_to_graph" title="Permalink to this definition"></a></dt>
+<dd><p>print a graph only displaying the informations on the evolution of a single word</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.pick_a_node">
+<span class="sig-name descname"><span class="pre">pick_a_node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.pick_a_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.pick_a_node" title="Permalink to this definition"></a></dt>
+<dd><p>Pick a random node from a tree</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Tree.L_tree.print_history_to_graph">
+<span class="sig-name descname"><span class="pre">print_history_to_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tree.html#L_tree.print_history_to_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tree.L_tree.print_history_to_graph" title="Permalink to this definition"></a></dt>
+<dd><p>Display a graph in which the nodes represent a word at a certain langugage state, and the edges the link between two languages</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

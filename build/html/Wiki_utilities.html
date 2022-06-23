@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiki_utilities module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Wiki_utilities module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Wiki_utilities module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Wiki_utilities.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Wiki_utilities">
+<span id="wiki-utilities-module"></span><h1>Wiki_utilities module<a class="headerlink" href="#module-Wiki_utilities" title="Permalink to this headline"></a></h1>
+<p>Created on Wed May  4 14:25:07 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>Contains some functions that help handling phonetically transcribed words available on wikipedia</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Wiki_utilities.dic2word">
+<span class="sig-prename descclassname"><span class="pre">Wiki_utilities.</span></span><span class="sig-name descname"><span class="pre">dic2word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Wiki_utilities.html#dic2word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Wiki_utilities.dic2word" title="Permalink to this definition"></a></dt>
+<dd><p>converts a wiki dic into a dic of &quot;word&quot; objects</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Wiki_utilities.get_language">
+<span class="sig-prename descclassname"><span class="pre">Wiki_utilities.</span></span><span class="sig-name descname"><span class="pre">get_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Wiki_utilities.html#get_language"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Wiki_utilities.get_language" title="Permalink to this definition"></a></dt>
+<dd><p>builds a Language object from data found on wiktionnary
+Final step of the conversion that reunites all the previous functions.</p>
+<dl class="simple">
+<dt>path<span class="classifier">str</span></dt><dd><p>path to a file extracted from wiktionnary.</p>
+</dd>
+</dl>
+<p>lg : Language</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Wiki_utilities.segm2syl">
+<span class="sig-prename descclassname"><span class="pre">Wiki_utilities.</span></span><span class="sig-name descname"><span class="pre">segm2syl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Wiki_utilities.html#segm2syl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Wiki_utilities.segm2syl" title="Permalink to this definition"></a></dt>
+<dd><p>take as input the dictionnary created out of the wiki data and used the info concerning syllabification
+to create syllables in our IPA format</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Wiki_utilities.treat_syl">
+<span class="sig-prename descclassname"><span class="pre">Wiki_utilities.</span></span><span class="sig-name descname"><span class="pre">treat_syl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Wiki_utilities.html#treat_syl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Wiki_utilities.treat_syl" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a syllable in the syllabled jey of the vocabulary into a syllable object. 
+Effectuates the actual encoding of data into the objects used in this program.</p>
+<p>syl : str
+stress : TYPE, optional</p>
+<blockquote>
+<div><p>DESCRIPTION. The default is False.</p>
+</div></blockquote>
+<p>syl : a Syllable object</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Wiki_utilities.wiki_lexicon">
+<span class="sig-prename descclassname"><span class="pre">Wiki_utilities.</span></span><span class="sig-name descname"><span class="pre">wiki_lexicon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Wiki_utilities.html#wiki_lexicon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Wiki_utilities.wiki_lexicon" title="Permalink to this definition"></a></dt>
+<dd><p>extracts the information from the iki files</p>
+<dl class="simple">
+<dt>path<span class="classifier">str</span></dt><dd><p>path to the file we read</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>dico<span class="classifier"></span></dt><dd><p>keys : simple orthograph of the word. 
+values : the IPA and syllabled representation of the word give by the wiktionnary websiote.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

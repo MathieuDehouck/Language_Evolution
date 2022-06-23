@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rd_changer module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">rd_changer module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>rd_changer module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/rd_changer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-rd_changer">
+<span id="rd-changer-module"></span><h1>rd_changer module<a class="headerlink" href="#module-rd_changer" title="Permalink to this headline"></a></h1>
+<p>Created on Tue May 17 13:04:22 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>Class representing a changer that applies the linguistic change. It automatically generates changes using the change generator it has been given, and apply them to a given language.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="rd_changer.Changer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">rd_changer.</span></span><span class="sig-name descname"><span class="pre">Changer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">gen=&lt;Generator.Change_Generator</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Changer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Changer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class representing a changer that applies the linguistic change. It automatically generates changes using the change generator it has been given, and apply them to a given language.</p>
+<p>The Changer just deterministically applies a set of changes it recieves. Therefore, several different subclasses of changer can be created, depending on the way changes are generated :</p>
+<dl>
+<dt>Two particulats Changers have been implemented :</dt><dd><ul class="simple">
+<li><p>a first one that uses a random Change_generator  to predict the next change it is going to apply</p></li>
+<li><p>a Log changer that reads the changes from logs (now, changes that have been recorded from a previous random generation, but we wish to elaborate a system that would allow the user to write</p></li>
+</ul>
+<blockquote>
+<div><p>changes in an easy manner</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>...</p>
+<p>#TODO : the generator only concerns the Tree Generator, and could be excluded from the field of the abstract class
+gen : a Change_generator</p>
+<p>__init__() constructor taking all these information as input</p>
+<p>change_u  : applies a unitary change</p>
+<p>change : applies n changes</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Changer.change">
+<span class="sig-name descname"><span class="pre">change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Changer.change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Changer.change" title="Permalink to this definition"></a></dt>
+<dd><p>Apply n changes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Changer.change_u">
+<span class="sig-name descname"><span class="pre">change_u</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Changer.change_u"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Changer.change_u" title="Permalink to this definition"></a></dt>
+<dd><p>applies a unitary change</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rd_changer.Log_changer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">rd_changer.</span></span><span class="sig-name descname"><span class="pre">Log_changer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Log_changer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Log_changer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#rd_changer.Changer" title="rd_changer.Changer"><code class="xref py py-class docutils literal notranslate"><span class="pre">rd_changer.Changer</span></code></a></p>
+<p>A class of changer that reads changes from a log file, in the format we created at different steps of the programm,
+and applying them back.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Log_changer.change">
+<span class="sig-name descname"><span class="pre">change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Log_changer.change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Log_changer.change" title="Permalink to this definition"></a></dt>
+<dd><p>Apply n changes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Log_changer.change_u">
+<span class="sig-name descname"><span class="pre">change_u</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Log_changer.change_u"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Log_changer.change_u" title="Permalink to this definition"></a></dt>
+<dd><p>applies a unitary change</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rd_changer.Tree_changer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">rd_changer.</span></span><span class="sig-name descname"><span class="pre">Tree_changer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Tree_changer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Tree_changer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#rd_changer.Changer" title="rd_changer.Changer"><code class="xref py py-class docutils literal notranslate"><span class="pre">rd_changer.Changer</span></code></a></p>
+<p>A Class applying randomly generated changes and storing each and every change and language state in a tree structure</p>
+<p>We generate the change in a very precise way :  we generate a first row of changes leading from the origin to the wanted depth.
+Then the correct number of branches is grafted.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Tree_changer.change">
+<span class="sig-name descname"><span class="pre">change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Tree_changer.change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Tree_changer.change" title="Permalink to this definition"></a></dt>
+<dd><p>Apply n changes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Tree_changer.change_u">
+<span class="sig-name descname"><span class="pre">change_u</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Tree_changer.change_u"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Tree_changer.change_u" title="Permalink to this definition"></a></dt>
+<dd><p>applies a unitary change</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Tree_changer.make_evolution">
+<span class="sig-name descname"><span class="pre">make_evolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_branches</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Tree_changer.make_evolution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Tree_changer.make_evolution" title="Permalink to this definition"></a></dt>
+<dd><p>from a untouched language, derives the given number of branches, and pushes forward until the trees all have the same depth</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Tree_changer.octopus">
+<span class="sig-name descname"><span class="pre">octopus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_branches</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Tree_changer.octopus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Tree_changer.octopus" title="Permalink to this definition"></a></dt>
+<dd><p>graft nb_branches -1 branches to the first evolution path</p>
+<dl class="simple">
+<dt>nb_branches<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+<dt>depth<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+<p>None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Tree_changer.pursue_evolution">
+<span class="sig-name descname"><span class="pre">pursue_evolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wanted_depth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Tree_changer.pursue_evolution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Tree_changer.pursue_evolution" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>wanted_depth<span class="classifier">int</span></dt><dd><p>final number of changes we want in every branch</p>
+</dd>
+<dt>node<span class="classifier">TYPE, optional</span></dt><dd><p>if we want to select by force a given node to expand</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rd_changer.Tree_changer.show_of_the_evolution">
+<span class="sig-name descname"><span class="pre">show_of_the_evolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_wd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rd_changer.html#Tree_changer.show_of_the_evolution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rd_changer.Tree_changer.show_of_the_evolution" title="Permalink to this definition"></a></dt>
+<dd><p>Gives a nice overview of the changes generated by the programm by picking random words and displaying their evolution on a beautiful and coloured graph.</p>
+<p>nb_wd : Number of word we want to display in our graph</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

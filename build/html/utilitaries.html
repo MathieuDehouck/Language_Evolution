@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>utilitaries module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">utilitaries module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>utilitaries module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/utilitaries.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-utilitaries">
+<span id="utilitaries-module"></span><h1>utilitaries module<a class="headerlink" href="#module-utilitaries" title="Permalink to this headline"></a></h1>
+<p>Created on Wed May  4 11:30:09 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>Module containing general functions used to print complex objects or write logs</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.bewilder_pattern">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">bewilder_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#bewilder_pattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.bewilder_pattern" title="Permalink to this definition"></a></dt>
+<dd><p>Transforms an index of a pattern into a wildcard</p>
+<dl class="simple">
+<dt>pattern<span class="classifier">list</span></dt><dd><p>patter to bewilder</p>
+</dd>
+<dt>index<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is None.</p>
+</dd>
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is False.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>TYPE</dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.change_pattern">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">change_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vowel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#change_pattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.change_pattern" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>pattern<span class="classifier">list</span></dt><dd><p>feature pattern</p>
+</dd>
+<dt>vowel<span class="classifier">bool</span></dt><dd><p>does the pattern match a vowel ?</p>
+</dd>
+</dl>
+<p>index : index that must be modified
+new_value : output value</p>
+<p>ft : the new feature pattern, with the change applied.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.feature_indices">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">feature_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#feature_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.feature_indices" title="Permalink to this definition"></a></dt>
+<dd><p>Gives the coordinates of the indices of a template</p>
+<dl class="simple">
+<dt>features<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>idx<span class="classifier">TYPE</span></dt><dd><p>DESCRIPTION.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.get_random_pattern">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">get_random_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#get_random_pattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.get_random_pattern" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a random feature pattern that can be satisfied in a given language</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.list_2_tuple">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">list_2_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#list_2_tuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.list_2_tuple" title="Permalink to this definition"></a></dt>
+<dd><p>Transforms any kind of list into a tuple.
+Iterative version checking if the list represents a Consonant or a Vowel.
+Proven to be computationnaly speaking better than its recursive counterpart.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.list_2_tuple2">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">list_2_tuple2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tupl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#list_2_tuple2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.list_2_tuple2" title="Permalink to this definition"></a></dt>
+<dd><p>Transforms any kind of list into a tuple.
+Recursive version twice slower than the other one.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.mask_match">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">mask_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#mask_match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.mask_match" title="Permalink to this definition"></a></dt>
+<dd><p>Retuen True if the feature template of a phoneme matches the restriction imposed by a mask</p>
+<dl class="simple">
+<dt>mask<span class="classifier">list</span></dt><dd><p>A feature template (potentially with wildcards)</p>
+</dd>
+<dt>phon<span class="classifier">list </span></dt><dd><p>The feature template of a phoneme.</p>
+</dd>
+<dt>voy<span class="classifier">bool</span></dt><dd><p>does the  feature template examined concerns vowells ?</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.phon_in_dic">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">phon_in_dic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phon</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#phon_in_dic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.phon_in_dic" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether a phoneme is in a dic or not.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.printd">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">printd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#printd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.printd" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a dictionnary as input and print the first object and the second object, and not the address in memory of the object</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.printl">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">printl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#printl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.printl" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a list of complex objects as input and prints them, one per line</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.syl_match">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">syl_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#syl_match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.syl_match" title="Permalink to this definition"></a></dt>
+<dd><p>Computes whether a syllable does have the same stress pattern as another. 
+Less restrictive than the equals method.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.tpl_2_candidates">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">tpl_2_candidates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tpl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#tpl_2_candidates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.tpl_2_candidates" title="Permalink to this definition"></a></dt>
+<dd><p>gives the list of the phonemes of a language that satisfy a conditionned feature template</p>
+<dl class="simple">
+<dt>lang<span class="classifier">language</span></dt><dd><p>the language we want to extract candidates from</p>
+</dd>
+<dt>tpl<span class="classifier">list</span></dt><dd><p>feature template that we want to be satisfieds</p>
+</dd>
+</dl>
+<p>cands : list</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.tuple_2_list">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">tuple_2_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tupl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#tuple_2_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.tuple_2_list" title="Permalink to this definition"></a></dt>
+<dd><p>Transforms a tuple into a list</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utilitaries.words_containing">
+<span class="sig-prename descclassname"><span class="pre">utilitaries.</span></span><span class="sig-name descname"><span class="pre">words_containing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaries.html#words_containing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#utilitaries.words_containing" title="Permalink to this definition"></a></dt>
+<dd><p>Return the list of words in a language that</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

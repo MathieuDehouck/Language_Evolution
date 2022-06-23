@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tree &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>Tree</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Tree</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Wed May 18 17:00:17 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">platform</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">Change</span> <span class="kn">import</span> <span class="n">M_change</span><span class="p">,</span> <span class="n">S_change</span><span class="p">,</span> <span class="n">P_change</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">class L_node :</span>
+<span class="sd">   </span>
+<span class="sd">    </span>
+<span class="sd">    def __init__(self,father, language) :</span>
+<span class="sd">        self.father = father</span>
+<span class="sd">        self.language = language</span>
+<span class="sd">        self.children = []</span>
+<span class="sd">        </span>
+<span class="sd">    def add_child(self, child):</span>
+<span class="sd">        self.children.append(child)</span>
+<span class="sd">        </span>
+<span class="sd">class Root (L_node) :</span>
+<span class="sd">     def __init__(self, language) :</span>
+<span class="sd">         super().__init__(self, language)</span>
+<span class="sd">         </span>
+<span class="sd">&quot;&quot;&quot;</span> 
+
+
+<div class="viewcode-block" id="L_tree"><a class="viewcode-back" href="../index.html#Tree.L_tree">[docs]</a><span class="k">class</span> <span class="nc">L_tree</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    a special kind of phylogentic tree storing our languages</span>
+<span class="sd">    as defined, the structure should be names &quot;forward tree&quot; since the change is unidirectionnal</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="n">language</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adress</span> <span class="o">=</span> <span class="s1">&#39;R&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adress</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">adress</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">depth</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">depth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">depth</span> <span class="o">+</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">change</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">changed_words</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;The Root&quot;</span> 
+        
+        <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">adress</span> <span class="o">+</span> <span class="s2">&quot;   parent &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">adress</span> <span class="o">+</span> <span class="s2">&quot;    nodes  : &quot;</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="n">n</span><span class="o">.</span><span class="n">adress</span> <span class="o">+</span> <span class="s2">&quot;   &quot;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="c1">#s += str(self.change)</span>
+            <span class="c1">#s += str(self.changed_words)</span>
+        <span class="k">return</span> <span class="n">s</span>
+        
+    
+<div class="viewcode-block" id="L_tree.get_depth"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_depth">[docs]</a>    <span class="k">def</span> <span class="nf">get_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dic</span> <span class="o">=</span> <span class="p">{}):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return a dictionarry mapping the address of a tree to its depth</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">dic</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">adress</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depth</span>
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+            <span class="n">tree</span><span class="o">.</span><span class="n">get_depth</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dic</span></div>
+    
+    
+<div class="viewcode-block" id="L_tree.get_languages"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_languages">[docs]</a>    <span class="k">def</span> <span class="nf">get_languages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">{}):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a dictionnary mapping the adress of a tree to the language it stores</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">liste</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">adress</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="bp">self</span><span class="o">.</span><span class="n">language</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">change</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+            <span class="n">tree</span><span class="o">.</span><span class="n">get_languages</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">liste</span></div>
+   
+
+<div class="viewcode-block" id="L_tree.get_all_nodes"><a class="viewcode-back" href="../Tree.html#Tree.L_tree.get_all_nodes">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">liste</span><span class="o">=</span><span class="p">[],</span> <span class="n">scores</span> <span class="o">=</span><span class="p">[])</span> <span class="p">:</span>
+        
+        <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">adress</span><span class="p">)</span>
+        <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+            <span class="n">tree</span><span class="o">.</span><span class="n">get_all_nodes</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">scores</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">liste</span><span class="p">,</span> <span class="n">scores</span></div>
+
+    
+    
+<div class="viewcode-block" id="L_tree.get_nodes"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_nodes">[docs]</a>    <span class="k">def</span> <span class="nf">get_nodes</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        returns a list containing all the tree object that are nodes in the mother tree</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">liste</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">:</span>
+            <span class="n">tree</span><span class="o">.</span><span class="n">get_nodes</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">liste</span></div>
+        
+    
+<div class="viewcode-block" id="L_tree.get_ad_2_tree"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_ad_2_tree">[docs]</a>    <span class="k">def</span> <span class="nf">get_ad_2_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span> <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        returns a dictionnary mapping an adress to the tree object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dic</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">adress</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+            <span class="n">tree</span><span class="o">.</span><span class="n">get_ad_2_tree</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dic</span></div>
+    
+    
+<div class="viewcode-block" id="L_tree.get_tree_2_add"><a class="viewcode-back" href="../Tree.html#Tree.L_tree.get_tree_2_add">[docs]</a>    <span class="k">def</span> <span class="nf">get_tree_2_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span> <span class="p">):</span>
+        <span class="n">dic</span><span class="p">[</span><span class="bp">self</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">adress</span>
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+            <span class="n">tree</span><span class="o">.</span><span class="n">get_tree_2_add</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dic</span></div>
+        
+<div class="viewcode-block" id="L_tree.get_scores"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_scores">[docs]</a>    <span class="k">def</span> <span class="nf">get_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">liste</span><span class="o">=</span><span class="p">[],</span> <span class="n">scores</span> <span class="o">=</span><span class="p">[])</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Get a mapping between change objects and the chance they have to appear</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#TODO ; paramétriser le fait que les embranchements ne se fassent pas forcément à trop peu de distance</span>
+        <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">adress</span><span class="p">)</span>
+        <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+            <span class="n">tree</span><span class="o">.</span><span class="n">get_scores</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">scores</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">liste</span><span class="p">,</span> <span class="n">scores</span></div>
+    
+    
+<div class="viewcode-block" id="L_tree.pick_a_node"><a class="viewcode-back" href="../index.html#Tree.L_tree.pick_a_node">[docs]</a>    <span class="k">def</span> <span class="nf">pick_a_node</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Pick a random node from a tree</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">liste</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_scores</span><span class="p">()</span>
+        
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">scores</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span></div>
+    
+
+<div class="viewcode-block" id="L_tree.get_leaves"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_leaves">[docs]</a>    <span class="k">def</span> <span class="nf">get_leaves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Get the list of the leaves of a language</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">liste</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+            <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">get_leaves</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">liste</span></div>
+    
+    
+<div class="viewcode-block" id="L_tree.get_final_state_of_the_evolution"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_final_state_of_the_evolution">[docs]</a>    <span class="k">def</span> <span class="nf">get_final_state_of_the_evolution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the languages at the end of our evolution tree</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">leaves</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_leaves</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">leaf</span><span class="o">.</span><span class="n">language</span> <span class="k">for</span> <span class="n">leaf</span> <span class="ow">in</span> <span class="n">leaves</span><span class="p">]</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="L_tree.get_path_to_root"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_path_to_root">[docs]</a>    <span class="k">def</span> <span class="nf">get_path_to_root</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Returns the list of all the nodes leading from the target node to the root of the tree</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="p">]</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> 
+        <span class="k">while</span> <span class="n">parent</span><span class="o">.</span><span class="n">parent</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
+            <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+            <span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
+        <span class="c1">#we add the root</span>
+        <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">liste</span></div>
+    
+    
+    
+    
+    
+<div class="viewcode-block" id="L_tree.get_a_change_path"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_a_change_path">[docs]</a>    <span class="k">def</span> <span class="nf">get_a_change_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lf</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        gives the list of all the changes and languages from a randomly selected leaf</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lvs</span> <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">get_leaves</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">lf</span> <span class="o">==</span> <span class="kc">None</span>  <span class="p">:</span> <span class="n">lf</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">lvs</span><span class="p">)</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">lf</span><span class="o">.</span><span class="n">get_path_to_root</span><span class="p">()</span>
+        <span class="n">lgs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">chs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">wcs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ptr</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">ptr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span>
+            <span class="n">lgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
+            <span class="n">chs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">change</span><span class="p">)</span>
+            <span class="n">wcs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">changed_words</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">lgs</span><span class="p">,</span> <span class="n">chs</span><span class="p">,</span> <span class="n">wcs</span></div>
+    
+    
+    
+    
+    
+<div class="viewcode-block" id="L_tree.get_history_word"><a class="viewcode-back" href="../index.html#Tree.L_tree.get_history_word">[docs]</a>    <span class="k">def</span> <span class="nf">get_history_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span> <span class="p">,</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span> <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Stores the state of the word in the histtory of all the generated languages</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">adress</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]])</span>
+        <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_history_word</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">liste</span></div>
+        
+    
+    
+    
+<div class="viewcode-block" id="L_tree.print_history_to_graph"><a class="viewcode-back" href="../index.html#Tree.L_tree.print_history_to_graph">[docs]</a>    <span class="k">def</span> <span class="nf">print_history_to_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Display a graph in which the nodes represent a word at a certain langugage state, and the edges the link between two languages</span>
+
+<span class="sd">        &quot;&quot;&quot;</span> 
+        
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span> <span class="s1">&#39;graphe.dot&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;digraph </span><span class="se">\&quot;</span><span class="s2"> &quot;</span> <span class="o">+</span> <span class="s2">&quot;We display the history of a word&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> {</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>       
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot; label = </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">word</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;graph[rankdir=</span><span class="se">\&quot;</span><span class="s2">LR</span><span class="se">\&quot;</span><span class="s2">];</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>     
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;node [style=</span><span class="se">\&quot;</span><span class="s2">filled</span><span class="se">\&quot;</span><span class="s2">, fillcolor = </span><span class="se">\&quot;</span><span class="s2">white</span><span class="se">\&quot;</span><span class="s2">];</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;edge [style=</span><span class="se">\&quot;</span><span class="s2">solid</span><span class="se">\&quot;</span><span class="s2">, color=</span><span class="se">\&quot;</span><span class="s2">purple</span><span class="se">\&quot;</span><span class="s2">];</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="n">liste</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_nodes</span><span class="p">()</span>
+        
+        <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span>  <span class="n">el</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span> <span class="n">dic</span><span class="p">[</span><span class="n">el</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span>
+            
+            <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="n">tree</span><span class="p">])</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; [label=</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="n">tree</span><span class="o">.</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">.</span><span class="n">ipa</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">, fillcolor= white, color=</span><span class="se">\&quot;</span><span class="s2">purple</span><span class="se">\&quot;</span><span class="s2">,  fontcolor=</span><span class="se">\&quot;</span><span class="s2">red</span><span class="se">\&quot;</span><span class="s2">];</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span>
+            <span class="k">for</span> <span class="n">subtree</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">nodes</span> <span class="p">:</span>
+                
+                <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="n">tree</span><span class="p">])</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; -&gt; &quot;</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="n">subtree</span><span class="p">])</span>        
+                <span class="n">s</span><span class="o">+=</span><span class="s2">&quot;;</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;}&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;order executed&quot;</span><span class="p">)</span>
+        <span class="n">commande</span> <span class="o">=</span> <span class="s2">&quot;dot -Tpng  graphe.dot  &gt;  graphe.png&quot;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">commande</span><span class="p">)</span> <span class="c1">#os.system(cmd) exécute cmd</span>
+        
+        <span class="k">if</span> <span class="n">platform</span> <span class="o">!=</span> <span class="s1">&#39;linux&#39;</span><span class="p">:</span>
+            <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;graphe.png&quot;</span><span class="p">)</span>
+            <span class="n">im</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   </div>
+        
+        
+    
+    
+    
+<div class="viewcode-block" id="L_tree.elaborate_history_graph"><a class="viewcode-back" href="../index.html#Tree.L_tree.elaborate_history_graph">[docs]</a>    <span class="k">def</span> <span class="nf">elaborate_history_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extracts a subgraph representing the history of the evolution of a particular word in all the languages we generated </span>
+<span class="sd">        &quot;&quot;&quot;</span>        
+        <span class="n">nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_nodes</span><span class="p">()</span>
+
+        <span class="n">splits</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">splits</span><span class="p">:</span>
+            <span class="n">splits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="n">leaves</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_leaves</span><span class="p">()</span>
+        <span class="n">keep</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">edges</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">splits</span> <span class="o">+</span> <span class="n">leaves</span><span class="p">:</span>
+            
+            <span class="n">last</span> <span class="o">=</span> <span class="n">a</span>
+            <span class="n">keep</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+            <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">parent</span>
+            <span class="k">while</span> <span class="n">b</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">splits</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">last</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">changes</span> <span class="o">=</span> <span class="p">[</span><span class="n">b</span><span class="o">.</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">!=</span> <span class="n">last</span><span class="o">.</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span>
+                <span class="k">if</span> <span class="kc">True</span> <span class="ow">in</span> <span class="n">changes</span><span class="p">:</span>
+                    <span class="n">keep</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+                    <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">last</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+                    <span class="n">last</span> <span class="o">=</span> <span class="n">b</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">parent</span>
+                 
+            <span class="k">if</span> <span class="n">b</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">last</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
+                <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">last</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+
+       
+            
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">keep</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">edges</span><span class="p">)</span></div>
+        
+      
+        
+      
+    
+<div class="viewcode-block" id="L_tree.history_to_graph"><a class="viewcode-back" href="../index.html#Tree.L_tree.history_to_graph">[docs]</a>    <span class="k">def</span> <span class="nf">history_to_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        print a graph only displaying the informations on the evolution of a single word</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">keep</span><span class="p">,</span> <span class="n">edges</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">elaborate_history_graph</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="kc">None</span> <span class="ow">in</span> <span class="n">keep</span><span class="p">:</span>
+            <span class="n">keep</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="s1">&#39;graphe.dot&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span> 
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;digraph </span><span class="se">\&quot;</span><span class="s2"> &quot;</span> <span class="o">+</span> <span class="s2">&quot;We display the history of a word&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> {</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>    
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;label = </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;graph[rankdir=</span><span class="se">\&quot;</span><span class="s2">LR</span><span class="se">\&quot;</span><span class="s2">];</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>   
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;node [style=</span><span class="se">\&quot;</span><span class="s2">filled</span><span class="se">\&quot;</span><span class="s2">, fillcolor = </span><span class="se">\&quot;</span><span class="s2">white</span><span class="se">\&quot;</span><span class="s2">];</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;edge [style=</span><span class="se">\&quot;</span><span class="s2">solid</span><span class="se">\&quot;</span><span class="s2">, color=</span><span class="se">\&quot;</span><span class="s2">purple</span><span class="se">\&quot;</span><span class="s2">];</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        
+
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">keep</span> <span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">keep</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; [label=</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">tree</span><span class="o">.</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">.</span><span class="n">ipa</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">])</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">, fillcolor= white, color=</span><span class="se">\&quot;</span><span class="s2">purple</span><span class="se">\&quot;</span><span class="s2">, &quot;</span>
+            <span class="k">if</span> <span class="n">tree</span><span class="o">.</span><span class="n">depth</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">depth</span> <span class="p">:</span>  <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;  shape = doubleoctagon, &quot;</span>
+            <span class="k">if</span> <span class="n">tree</span><span class="o">.</span><span class="n">nodes</span> <span class="o">==</span> <span class="p">[]</span> <span class="p">:</span>  <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;  shape = doublecircle, &quot;</span>
+            <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot; fontcolor=</span><span class="se">\&quot;</span><span class="s2">red</span><span class="se">\&quot;</span><span class="s2">];</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+            
+        <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span> <span class="p">:</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">keep</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span> <span class="nb">str</span><span class="p">(</span><span class="n">keep</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="mi">1</span><span class="p">]))]</span>
+            <span class="n">change</span> <span class="o">=</span> <span class="kc">True</span> <span class="ow">in</span> <span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">!=</span> <span class="n">edge</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span>
+
+
+
+            <span class="n">s</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="s2">&quot; -&gt; &quot;</span> <span class="o">+</span> <span class="n">x</span>
+            <span class="k">if</span> <span class="n">change</span><span class="p">:</span> 
+                
+                <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">change</span><span class="p">)</span> <span class="o">==</span> <span class="n">M_change</span> <span class="p">:</span>
+                    <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;[style=</span><span class="se">\&quot;</span><span class="s1">solid</span><span class="se">\&quot;</span><span class="s1">, color=</span><span class="se">\&quot;</span><span class="s1">red</span><span class="se">\&quot;</span><span class="s1">]&#39;</span>
+                    
+                <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">change</span><span class="p">)</span> <span class="o">==</span> <span class="n">P_change</span> <span class="p">:</span>
+                    <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;[style=</span><span class="se">\&quot;</span><span class="s1">solid</span><span class="se">\&quot;</span><span class="s1">, color=</span><span class="se">\&quot;</span><span class="s1">green</span><span class="se">\&quot;</span><span class="s1">]&#39;</span>
+                
+                <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">change</span><span class="p">)</span> <span class="o">==</span> <span class="n">S_change</span> <span class="p">:</span>
+                    <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;[style=</span><span class="se">\&quot;</span><span class="s1">solid</span><span class="se">\&quot;</span><span class="s1">, color=</span><span class="se">\&quot;</span><span class="s1">blue</span><span class="se">\&quot;</span><span class="s1">]&#39;</span>
+                   
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;}&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;execution commande&quot;</span><span class="p">)</span>
+        <span class="n">commande</span> <span class="o">=</span> <span class="s2">&quot;dot -Tpng  graphe.dot  &gt;  graphe.png&quot;</span>
+        
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">commande</span><span class="p">)</span> <span class="c1">#os.system(cmd) exécute cmd</span>
+
+        <span class="k">if</span> <span class="n">platform</span> <span class="o">!=</span> <span class="s1">&#39;linux&#39;</span><span class="p">:</span>
+            <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;graphe.png&quot;</span><span class="p">)</span>
+            <span class="n">im</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   </div></div>
+        
+        
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

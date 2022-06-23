@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>log_utilities module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">log_utilities module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>log_utilities module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/log_utilities.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-log_utilities">
+<span id="log-utilities-module"></span><h1>log_utilities module<a class="headerlink" href="#module-log_utilities" title="Permalink to this headline"></a></h1>
+<p>Created on Tue May 17 16:02:54 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>Contains some side methods to write the state of some objects and describe the execution of the program  in log files</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.change2log">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">change2log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">change</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_phons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#change2log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.change2log" title="Permalink to this definition"></a></dt>
+<dd><p>Writes a description of a change into a log file</p>
+<p>change : Change
+path : str
+lang : Language
+print_phons : TYPE, optional</p>
+<blockquote>
+<div><p>DESCRIPTION. The default is True.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>i<span class="classifier">TYPE, optional</span></dt><dd><p>DESCRIPTION. The default is 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.changes2machinelog">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">changes2machinelog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#changes2machinelog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.changes2machinelog" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.create_breviary">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">create_breviary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#create_breviary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.create_breviary" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a user friendly document that describes all the natural classes that exist with regard to the
+IPA we use at the heart of the program&quot;&quot;</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.extract_changed_words">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">extract_changed_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#extract_changed_words"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.extract_changed_words" title="Permalink to this definition"></a></dt>
+<dd><p>Analyses a dictionnary log and extracts only the words that were changed.</p>
+<p>The function the can if the user wants it write the modified words at the end of the same document</p>
+<dl class="simple">
+<dt>path<span class="classifier">str</span></dt><dd><p>path to the file</p>
+</dd>
+<dt>write<span class="classifier">bool</span></dt><dd><p>Does the user want to write down the modified words at the end of the document ?</p>
+</dd>
+</dl>
+<p>chg_wds :list</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.langcomp2log">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">langcomp2log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#langcomp2log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.langcomp2log" title="Permalink to this definition"></a></dt>
+<dd><p>Comapres the vobulary of two languages and writes the comparison in a log (subfunction used to trace the evolution between two language state)
+BE CAREFUL, we expect the two languages to be related / at least to have the same voc size for this operation to make sense.</p>
+<p>l1 : Language</p>
+<p>l2 :Language</p>
+<dl class="simple">
+<dt>path<span class="classifier">str</span></dt><dd><p>path to destination file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.lgs2log">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">lgs2log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">liste</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#lgs2log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.lgs2log" title="Permalink to this definition"></a></dt>
+<dd><p>print the evolution of a language step by step.</p>
+<p>liste : list of languages where the i+1 th element is the result of the evolution of the ith</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.phon2log">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">phon2log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#phon2log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.phon2log" title="Permalink to this definition"></a></dt>
+<dd><p>writes a phoneme in the log format we defined</p>
+<p>phon : phoneme to write in the script</p>
+<dl class="simple">
+<dt>path<span class="classifier">str </span></dt><dd><p>path to the target file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.purge_log">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">purge_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#purge_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.purge_log" title="Permalink to this definition"></a></dt>
+<dd><p>Clears a log file</p>
+<p>path :</p>
+<p>None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.samples2log">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">samples2log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">liste</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#samples2log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.samples2log" title="Permalink to this definition"></a></dt>
+<dd><p>Method that writes down only some of the words modified by a change.</p>
+<dl class="simple">
+<dt>path<span class="classifier">str</span></dt><dd><p>path to the file you want tp write in.</p>
+</dd>
+</dl>
+<p>liste : list of changed words :
+n : int, optional</p>
+<blockquote>
+<div><p>number of words that will be printed. The default is 10.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.target2str">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">target2str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#target2str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.target2str" title="Permalink to this definition"></a></dt>
+<dd><p>Encode the target of a change to write it latter in the log</p>
+<dl class="simple">
+<dt>feat<span class="classifier">list </span></dt><dd><p>description of a feature template</p>
+</dd>
+</dl>
+<p>s : qtring describing it</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="log_utilities.write_in_log">
+<span class="sig-prename descclassname"><span class="pre">log_utilities.</span></span><span class="sig-name descname"><span class="pre">write_in_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/log_utilities.html#write_in_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#log_utilities.write_in_log" title="Permalink to this definition"></a></dt>
+<dd><p>Takes as input the name of a log file and the sentence that it sould add in it</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

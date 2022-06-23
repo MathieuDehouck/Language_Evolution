@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>Language</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Language</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Thu May  5 09:28:54 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+
+<span class="sd">Contains the Languge class</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">utilitaries</span> <span class="kn">import</span> <span class="n">printl</span><span class="p">,</span> <span class="n">feature_indices</span>
+
+
+
+
+
+<div class="viewcode-block" id="Language"><a class="viewcode-back" href="../index.html#Language.Language">[docs]</a><span class="k">class</span> <span class="nc">Language</span><span class="p">()</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    A class to represent a language, considered as the list of the phonems it possesses.</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name : str</span>
+<span class="sd">        name of the language</span>
+<span class="sd">    voc : dic </span>
+<span class="sd">        dicitonnary storing all the words of the language</span>
+<span class="sd">    phonemes : list</span>
+<span class="sd">        list of all the phonemes belonging to the language</span>
+<span class="sd">    dic_phonemes : dic</span>
+<span class="sd">        a dic mapping a character to a phoneme</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__() the constructor</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dic</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;unnamed&quot;</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        take as input the name of the language and a dictionnary of words. it is going to create a Language </span>
+<span class="sd">        object automatically from this object</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        </span>
+<span class="sd">        dic : dic</span>
+<span class="sd">            voc of the language</span>
+<span class="sd">        name : str (optional)</span>
+<span class="sd">            name of the language.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Self</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+                
+        <span class="bp">self</span><span class="o">.</span><span class="n">voc</span> <span class="o">=</span> <span class="n">dic</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span> <span class="o">=</span> <span class="kc">None</span>
+        
+        
+    
+
+
+<div class="viewcode-block" id="Language.set_phonetic_inventory"><a class="viewcode-back" href="../index.html#Language.Language.set_phonetic_inventory">[docs]</a>    <span class="k">def</span> <span class="nf">set_phonetic_inventory</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gives a lot of information about rhe phonetic inventory of a language.</span>
+<span class="sd">        Extracted from the __init__ lethod in hope for computation time gain</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        
+        <span class="n">phonemes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">dic_phonemes</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1"># get an overview of the phonetic inventory of a language</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="p">:</span>
+            <span class="k">for</span> <span class="n">syl</span> <span class="ow">in</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span> <span class="p">:</span>
+                <span class="k">for</span> <span class="n">feat</span> <span class="ow">in</span> <span class="n">syl</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">:</span>
+                    <span class="k">if</span> <span class="n">feat</span><span class="o">.</span><span class="n">features</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">features</span> <span class="p">:</span>
+                        <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">feat</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
+                        <span class="n">phonemes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
+                        
+        <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span>   <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">phonemes</span><span class="p">))</span> <span class="c1"># we eliminate doubles</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span>
+        <span class="c1">#TODO is the following dic necessary? </span>
+        <span class="k">for</span> <span class="n">phoneme</span> <span class="ow">in</span> <span class="n">phonemes</span> <span class="p">:</span>
+            <span class="n">dic_phonemes</span><span class="p">[</span><span class="n">phoneme</span><span class="o">.</span><span class="n">ipa</span><span class="p">]</span> <span class="o">=</span> <span class="n">phoneme</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">dic_phonemes</span> <span class="o">=</span> <span class="n">dic_phonemes</span></div>
+
+
+
+
+
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span>
+
+    
+    
+    
+    
+<div class="viewcode-block" id="Language.print_phonetic_inventory"><a class="viewcode-back" href="../index.html#Language.Language.print_phonetic_inventory">[docs]</a>    <span class="k">def</span> <span class="nf">print_phonetic_inventory</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Prints a simple version of the inventory of the language&#39;s phonemes.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PHONOLOGICAL INVENTORY OF&quot;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">phon</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span> <span class="p">:</span> 
+            <span class="nb">print</span><span class="p">(</span><span class="n">phon</span><span class="o">.</span><span class="n">ipa</span><span class="p">,</span> <span class="s2">&quot;   &quot;</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">description</span><span class="p">)</span></div>
+    
+    
+    
+    
+    
+<div class="viewcode-block" id="Language.compare"><a class="viewcode-back" href="../index.html#Language.Language.compare">[docs]</a>    <span class="k">def</span> <span class="nf">compare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        language : another Language object</span>
+<span class="sd">            DESCRIPTION.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        differents : list </span>
+<span class="sd">            the list of word that have been modified in the new language</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="c1">#TODO check that it actually works</span>
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;original language&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;there are &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="p">),</span> <span class="s2">&quot; words &quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;target language&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;there are &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">),</span> <span class="s2">&quot; words &quot;</span><span class="p">)</span>
+        <span class="n">differents</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="p">:</span>
+            <span class="n">w1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+            <span class="n">w2</span> <span class="o">=</span> <span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+            
+            <span class="k">if</span>  <span class="ow">not</span> <span class="n">w1</span> <span class="o">==</span> <span class="n">w2</span> <span class="p">:</span>
+                <span class="n">differents</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">],</span><span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="p">])</span>
+        
+        <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">differents</span><span class="p">),</span> <span class="s2">&quot; different words&quot;</span><span class="p">)</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">differents</span><span class="p">),</span> <span class="s2">&quot; unchanged words&quot;</span><span class="p">)</span>
+        <span class="k">if</span>  <span class="n">verbose</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">differents</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;change happened&quot;</span><span class="p">)</span>
+                <span class="n">printl</span><span class="p">(</span><span class="n">differents</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">differents</span></div>
+    
+    
+    
+
+<div class="viewcode-block" id="Language.print_both"><a class="viewcode-back" href="../index.html#Language.Language.print_both">[docs]</a>    <span class="k">def</span> <span class="nf">print_both</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lang</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        print all words of a language close to each other</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">voc</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">.</span><span class="n">ipa</span><span class="p">,</span> <span class="s2">&quot;  vs  &quot;</span><span class="p">,</span> <span class="n">lang</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">.</span><span class="n">ipa</span><span class="p">)</span></div>
+
+
+
+    
+
+<div class="viewcode-block" id="Language.inventory_comparison"><a class="viewcode-back" href="../index.html#Language.Language.inventory_comparison">[docs]</a>    <span class="k">def</span> <span class="nf">inventory_comparison</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compare the phonetic inventory of two language</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other :Language</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">set_phonetic_inventory</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">phonemes</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span> <span class="n">other</span><span class="o">.</span><span class="n">set_phonetic_inventory</span><span class="p">()</span>
+        
+        <span class="n">printl</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="n">printl</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span>
+        
+        <span class="n">tot</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">other</span><span class="o">.</span><span class="n">phonemes</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span><span class="p">]</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">other</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">]</span> <span class="p">)</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tot</span><span class="p">)</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="p">[]</span>  
+        <span class="n">ina</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">.</span><span class="n">ipa</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">other</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">]</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ina</span> <span class="p">:</span> <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">p</span><span class="p">,</span> <span class="s2">&quot;only in &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)])</span>
+        <span class="n">inb</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">ipa</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">other</span><span class="o">.</span><span class="n">phonemes</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">]</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">inb</span> <span class="p">:</span> <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">p</span><span class="p">,</span> <span class="s2">&quot;only in &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">name</span><span class="p">)])</span>
+        
+        <span class="k">return</span> <span class="p">(</span><span class="n">match</span><span class="p">)</span><span class="o">/</span> <span class="n">total</span> <span class="p">,</span> <span class="n">diff</span></div>
+        
+
+
+
+
+<div class="viewcode-block" id="Language.phoneme_comparison"><a class="viewcode-back" href="../index.html#Language.Language.phoneme_comparison">[docs]</a>    <span class="k">def</span> <span class="nf">phoneme_comparison</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compare the phonmes</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other :Language</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">match</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">wd</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+            
+            <span class="k">for</span> <span class="n">i</span> <span class="p">,</span> <span class="n">pho</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">wd</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span> <span class="p">:</span>
+                <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span> 
+                <span class="k">if</span> <span class="n">pho</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">:</span> <span class="n">match</span> <span class="o">+=</span> <span class="mi">1</span> 
+        
+        <span class="k">return</span> <span class="n">match</span> <span class="o">/</span><span class="n">total</span> </div>
+                
+    
+    
+    
+    
+<div class="viewcode-block" id="Language.feature_comparison"><a class="viewcode-back" href="../index.html#Language.Language.feature_comparison">[docs]</a>    <span class="k">def</span> <span class="nf">feature_comparison</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compare the feature inventory of two languages</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other :Language</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">match</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">wd</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+            
+            <span class="k">for</span> <span class="n">i</span> <span class="p">,</span> <span class="n">pho</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">wd</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span> <span class="p">:</span>      
+                <span class="n">other_pho</span>  <span class="o">=</span>  <span class="n">other</span><span class="o">.</span><span class="n">voc</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">phonemes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                      
+                <span class="n">idx</span> <span class="o">=</span> <span class="n">feature_indices</span><span class="p">(</span><span class="n">pho</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">ids</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="p">:</span>
+                    <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">if</span> <span class="n">pho</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ids</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">==</span> <span class="n">other_pho</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ids</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="p">:</span> <span class="n">match</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+        <span class="k">return</span> <span class="n">match</span> <span class="o">/</span><span class="n">total</span> </div>
+        
+        
+        
+        
+        
+<div class="viewcode-block" id="Language.evaluate_proximity"><a class="viewcode-back" href="../index.html#Language.Language.evaluate_proximity">[docs]</a>    <span class="k">def</span> <span class="nf">evaluate_proximity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compare two languages using various metrics. </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other :Language</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        
+        <span class="n">invent_sim</span> <span class="p">,</span> <span class="n">diff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inventory_comparison</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="n">phon_sim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phoneme_comparison</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="n">feat_sim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_comparison</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    
+    
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Phonetic inventory similarity &quot;</span><span class="p">,</span> <span class="n">invent_sim</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Phoneme match similarity &quot;</span><span class="p">,</span> <span class="n">phon_sim</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Feature match similarity&quot;</span><span class="p">,</span> <span class="n">feat_sim</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+    
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;different phonemes :&quot;</span><span class="p">)</span>
+        <span class="n">printl</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span></div></div>
+        
+    
+    
+    
+
+<div class="viewcode-block" id="State"><a class="viewcode-back" href="../index.html#Language.State">[docs]</a><span class="k">class</span> <span class="nc">State</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    A condensed representation of a language for faster interaction and change generation</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------    </span>
+<span class="sd">    phonemes : dict</span>
+<span class="sd">        list of all the phonemes belonging to the language</span>
+<span class="sd">    syllables : dict</span>
+<span class="sd">        a dict of syllables</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__() the constructor</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phonems</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">syllables</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">form</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">syl</span> <span class="ow">in</span> <span class="n">word</span><span class="o">.</span><span class="n">syllables</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="n">syl</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="n">syl</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">syllables</span><span class="p">[</span><span class="n">syl</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span></div>
+
+        <span class="c1">#for syl, words in sorted(self.syllables.items()):</span>
+        <span class="c1">#    print(syl.ipa, words)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

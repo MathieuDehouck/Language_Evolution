@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>utilitaries &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>utilitaries</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for utilitaries</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Wed May  4 11:30:09 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+
+<span class="sd">Module containing general functions used to print complex objects or write logs</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">random</span> 
+<span class="kn">import</span> <span class="nn">Sampling</span>
+<span class="c1">#from usual_conditions import class_conditions</span>
+
+
+<span class="c1">#TODO : remplacer par une instance de Voy ou de C pour éviter la perte de généralisation en cas de changement de la forme générale d&#39;un feature.</span>
+<span class="n">idxC</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
+<span class="n">idxV</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">]</span>
+
+
+<span class="c1"># functions interacting with features.</span>
+
+
+
+
+
+<div class="viewcode-block" id="feature_indices"><a class="viewcode-back" href="../utilitaries.html#utilitaries.feature_indices">[docs]</a><span class="k">def</span> <span class="nf">feature_indices</span><span class="p">(</span><span class="n">features</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gives the coordinates of the indices of a template</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    features : TYPE</span>
+<span class="sd">        DESCRIPTION.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    idx : TYPE</span>
+<span class="sd">        DESCRIPTION.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">fs</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">features</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fs</span><span class="p">):</span>
+            <span class="n">idx</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">idx</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="mask_match"><a class="viewcode-back" href="../utilitaries.html#utilitaries.mask_match">[docs]</a><span class="k">def</span> <span class="nf">mask_match</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">phon</span><span class="p">,</span> <span class="n">voy</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retuen True if the feature template of a phoneme matches the restriction imposed by a mask</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mask : list</span>
+<span class="sd">        A feature template (potentially with wildcards)</span>
+<span class="sd">    phon : list </span>
+<span class="sd">        The feature template of a phoneme.</span>
+<span class="sd">    voy :  bool</span>
+<span class="sd">        does the  feature template examined concerns vowells ? </span>
+
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">voy</span> <span class="p">:</span>  <span class="n">idx</span> <span class="o">=</span>  <span class="n">idxV</span>
+    <span class="k">else</span> <span class="p">:</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">idxC</span>
+             
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mask</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">phon</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">idx</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">mask</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">mask</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">!=</span> <span class="n">phon</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>      
+    <span class="k">return</span> <span class="kc">True</span> </div>
+    
+
+
+
+
+<div class="viewcode-block" id="syl_match"><a class="viewcode-back" href="../utilitaries.html#utilitaries.syl_match">[docs]</a><span class="k">def</span> <span class="nf">syl_match</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Computes whether a syllable does have the same stress pattern as another. </span>
+<span class="sd">    Less restrictive than the equals method. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">s1</span><span class="o">.</span><span class="n">stress</span> <span class="o">==</span> <span class="n">s2</span><span class="o">.</span><span class="n">stress</span> <span class="ow">and</span> <span class="n">s1</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span> <span class="n">s2</span><span class="o">.</span><span class="n">length</span> <span class="ow">and</span> <span class="n">s1</span><span class="o">.</span><span class="n">tone</span> <span class="o">==</span> <span class="n">s2</span><span class="o">.</span><span class="n">tone</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="get_random_pattern"><a class="viewcode-back" href="../utilitaries.html#utilitaries.get_random_pattern">[docs]</a><span class="k">def</span> <span class="nf">get_random_pattern</span><span class="p">(</span><span class="n">language</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a random feature pattern that can be satisfied in a given language</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">phon</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">language</span><span class="o">.</span><span class="n">phonemes</span><span class="p">)</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span>
+    <span class="n">nb_wild</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">Sampling</span><span class="o">.</span><span class="n">nb_extensions</span><span class="p">,</span> <span class="n">Sampling</span><span class="o">.</span><span class="n">weights_extensions</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_wild</span> <span class="p">)</span> <span class="p">:</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="n">bewilder_pattern</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">base</span></div>
+    
+
+
+
+
+<span class="c1">#TODO : can we computationnally improve this part ?</span>
+<div class="viewcode-block" id="change_pattern"><a class="viewcode-back" href="../utilitaries.html#utilitaries.change_pattern">[docs]</a><span class="k">def</span> <span class="nf">change_pattern</span> <span class="p">(</span><span class="n">pattern</span> <span class="p">,</span> <span class="n">vowel</span><span class="p">,</span>  <span class="n">index</span><span class="p">,</span> <span class="n">new_value</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    pattern : list</span>
+<span class="sd">        feature pattern</span>
+<span class="sd">    vowel : bool</span>
+<span class="sd">        does the pattern match a vowel ? </span>
+<span class="sd">    index : index that must be modified</span>
+<span class="sd">    new_value : output value</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ft : the new feature pattern, with the change applied.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">vowel</span> <span class="p">:</span>
+        <span class="n">ft</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="n">idx</span> <span class="o">=</span>  <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+        
+    <span class="k">else</span> <span class="p">:</span> 
+        <span class="n">ft</span> <span class="o">=</span>  <span class="p">[[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">]</span>
+    
+    
+    <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">idx</span> <span class="p">:</span>   
+        <span class="k">if</span> <span class="n">ind</span> <span class="o">==</span> <span class="n">index</span> <span class="p">:</span>
+            <span class="n">ft</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">new_value</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">ft</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+  
+    <span class="n">ft</span> <span class="o">=</span> <span class="n">list_2_tuple</span><span class="p">(</span><span class="n">ft</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ft</span></div>
+    
+   
+    
+    
+   
+<span class="c1">#TODO modify to improve computation efficiency</span>
+<div class="viewcode-block" id="bewilder_pattern"><a class="viewcode-back" href="../utilitaries.html#utilitaries.bewilder_pattern">[docs]</a><span class="k">def</span> <span class="nf">bewilder_pattern</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Transforms an index of a pattern into a wildcard</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    pattern : list</span>
+<span class="sd">        patter to bewilder</span>
+<span class="sd">    index : TYPE, optional</span>
+<span class="sd">        DESCRIPTION. The default is None.</span>
+<span class="sd">    verbose : TYPE, optional</span>
+<span class="sd">        DESCRIPTION. The default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    TYPE</span>
+<span class="sd">        DESCRIPTION.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">feature_indices</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">index</span> <span class="p">)</span> <span class="o">!=</span> <span class="nb">tuple</span> <span class="p">:</span> <span class="n">index</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        
+    <span class="k">while</span> <span class="n">pattern</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">change_pattern</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">==</span><span class="mi">5</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></div>
+    
+    
+
+
+
+<span class="c1"># functions interacting with Language objects</span>
+<div class="viewcode-block" id="tuple_2_list"><a class="viewcode-back" href="../utilitaries.html#utilitaries.tuple_2_list">[docs]</a><span class="k">def</span> <span class="nf">tuple_2_list</span><span class="p">(</span><span class="n">tupl</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Transforms a tuple into a list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">tupl</span> <span class="p">:</span> 
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="o">==</span> <span class="nb">tuple</span> <span class="p">:</span> 
+            <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tuple_2_list</span><span class="p">(</span><span class="n">el</span><span class="p">))</span>
+        <span class="k">else</span> <span class="p">:</span> <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">liste</span></div>
+
+
+
+
+
+
+<div class="viewcode-block" id="list_2_tuple"><a class="viewcode-back" href="../utilitaries.html#utilitaries.list_2_tuple">[docs]</a><span class="k">def</span> <span class="nf">list_2_tuple</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Transforms any kind of list into a tuple.</span>
+<span class="sd">    Iterative version checking if the list represents a Consonant or a Vowel.</span>
+<span class="sd">    Proven to be computationnaly speaking better than its recursive counterpart.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">tpl1</span> <span class="o">=</span> <span class="p">()</span>
+    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> 
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span> <span class="p">:</span> <span class="n">el</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+        <span class="n">tpl1</span><span class="o">+=</span> <span class="p">(</span> <span class="n">el</span><span class="p">,)</span>
+        
+    
+    <span class="n">tpl2</span> <span class="o">=</span> <span class="p">()</span>
+    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="n">tpl2</span><span class="o">+=</span> <span class="p">(</span> <span class="n">el</span><span class="p">,)</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">tpl1</span><span class="p">,</span> <span class="n">tpl2</span><span class="p">)</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="list_2_tuple2"><a class="viewcode-back" href="../utilitaries.html#utilitaries.list_2_tuple2">[docs]</a><span class="k">def</span> <span class="nf">list_2_tuple2</span><span class="p">(</span><span class="n">tupl</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Transforms any kind of list into a tuple.</span>
+<span class="sd">    Recursive version twice slower than the other one.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">liste</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([])</span>
+    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">tupl</span> <span class="p">:</span> 
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span> <span class="p">:</span> 
+            <span class="n">liste</span> <span class="o">+=</span> <span class="p">(</span><span class="n">list_2_tuple2</span><span class="p">(</span><span class="n">el</span><span class="p">),)</span>
+        <span class="k">else</span> <span class="p">:</span> <span class="n">liste</span> <span class="o">+=</span><span class="p">(</span><span class="n">el</span><span class="p">,)</span>
+        
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="phon_in_dic"><a class="viewcode-back" href="../utilitaries.html#utilitaries.phon_in_dic">[docs]</a><span class="k">def</span> <span class="nf">phon_in_dic</span><span class="p">(</span><span class="n">dic</span><span class="p">,</span> <span class="n">phon</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Checks whether a phoneme is in a dic or not.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dic</span> <span class="p">:</span> 
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">phon</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="tpl_2_candidates"><a class="viewcode-back" href="../utilitaries.html#utilitaries.tpl_2_candidates">[docs]</a><span class="k">def</span> <span class="nf">tpl_2_candidates</span><span class="p">(</span><span class="n">lang</span><span class="p">,</span> <span class="n">tpl</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    gives the list of the phonemes of a language that satisfy a conditionned feature template</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    lang : language</span>
+<span class="sd">        the language we want to extract candidates from </span>
+<span class="sd">    tpl : list</span>
+<span class="sd">        feature template that we want to be satisfieds</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    cands : list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">candidates</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">phoneme</span> <span class="ow">in</span> <span class="n">lang</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">mask_match</span><span class="p">(</span><span class="n">tpl</span><span class="p">,</span> <span class="n">phoneme</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">phoneme</span><span class="o">.</span><span class="n">is_Vowel</span><span class="p">()</span> <span class="p">)</span> <span class="p">:</span>
+            <span class="n">candidates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phoneme</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;In &quot;</span><span class="p">,</span> <span class="n">lang</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot; the following pattern is satisfied by the following list of phonems&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">tpl</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        <span class="n">printl</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">candidates</span></div>
+
+
+
+
+<span class="c1">#TODO brute methods that makes the program really slower. Do profiling here</span>
+<span class="c1">#Idea to speed computation, try applying this before changing the word ? Not really better bcs same number of application than mask_match</span>
+<div class="viewcode-block" id="words_containing"><a class="viewcode-back" href="../utilitaries.html#utilitaries.words_containing">[docs]</a><span class="k">def</span> <span class="nf">words_containing</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">language</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the list of words in a language that </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">wds</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">wd</span> <span class="ow">in</span> <span class="n">language</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="p">:</span>    
+        <span class="k">for</span> <span class="n">phon</span> <span class="ow">in</span> <span class="n">wd</span><span class="o">.</span><span class="n">phonemes</span> <span class="p">:</span> 
+            <span class="k">if</span> <span class="n">mask_match</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">phon</span><span class="o">.</span><span class="n">is_Vowel</span><span class="p">)</span> <span class="p">:</span> <span class="n">wds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wds</span></div>
+
+
+
+
+
+<span class="c1"># Functions used to print an object</span>
+
+
+
+
+
+<div class="viewcode-block" id="printl"><a class="viewcode-back" href="../utilitaries.html#utilitaries.printl">[docs]</a><span class="k">def</span> <span class="nf">printl</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Takes a list of complex objects as input and prints them, one per line</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">el</span><span class="p">))</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="printd"><a class="viewcode-back" href="../utilitaries.html#utilitaries.printd">[docs]</a><span class="k">def</span> <span class="nf">printd</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Takes a dictionnary as input and print the first object and the second object, and not the address in memory of the object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">liste</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">el</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">,</span> <span class="s2">&quot;   :   &quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="n">el</span><span class="p">]))</span></div>
+
+
+
+
+
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

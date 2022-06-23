@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Condition module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Condition module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Condition module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Condition.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Condition">
+<span id="condition-module"></span><h1>Condition module<a class="headerlink" href="#module-Condition" title="Permalink to this headline"></a></h1>
+<p>Created on Thu May  5 15:09:17 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>Contains the condition class and some methodes that could be applied to them.
+A condition is associated to a change object and states whether a change can be applied or not.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Condition.Cond_AND">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Condition.</span></span><span class="sig-name descname"><span class="pre">Cond_AND</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conditions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_AND"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Cond_AND" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Condition.Condition" title="Condition.Condition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Condition.Condition</span></code></a></p>
+<p>AND for conditions logic.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.Cond_AND.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_AND.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Cond_AND.test" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Condition.Cond_NOT">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Condition.</span></span><span class="sig-name descname"><span class="pre">Cond_NOT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_NOT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Cond_NOT" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Condition.Condition" title="Condition.Condition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Condition.Condition</span></code></a></p>
+<p>NOT for conditions logic.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.Cond_NOT.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_NOT.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Cond_NOT.test" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Condition.Cond_OR">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Condition.</span></span><span class="sig-name descname"><span class="pre">Cond_OR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conditions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_OR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Cond_OR" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Condition.Condition" title="Condition.Condition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Condition.Condition</span></code></a></p>
+<p>OR for conditions logic.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.Cond_OR.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Cond_OR.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Cond_OR.test" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Condition.Condition">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Condition.</span></span><span class="sig-name descname"><span class="pre">Condition</span></span><a class="reference internal" href="_modules/Condition.html#Condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Condition" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>MOTHER CLASS</p>
+<p>A class to represent a condition.
+This is an abstract class.</p>
+<p>In our implementation of phonetic change, we distinguished 2 different subclasses of conditions :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>phonemic condition</p></li>
+<li><p>stress and syllable weight condition</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.Condition.decode_condition">
+<span class="sig-name descname"><span class="pre">decode_condition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Condition.decode_condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Condition.decode_condition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.Condition.encode_condition">
+<span class="sig-name descname"><span class="pre">encode_condition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Condition.encode_condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Condition.encode_condition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.Condition.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#Condition.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.Condition.test" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Condition.P_condition">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Condition.</span></span><span class="sig-name descname"><span class="pre">P_condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_template</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absol_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.P_condition" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Condition.Condition" title="Condition.Condition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Condition.Condition</span></code></a></p>
+<p>A class to represent a condition regarding the nature of the phoneme that undergoes a change 
+and its neighbours.</p>
+<p>...</p>
+<dl class="simple">
+<dt>template<span class="classifier">list</span></dt><dd><p>the feature template that need to be satisfied (-1 means  wildcard) for the condition to be satisfied</p>
+</dd>
+<dt>absol_pos<span class="classifier">int</span></dt><dd><dl class="simple">
+<dt>absolute offset, checks the position of the phoneme inside the word.</dt><dd><p>42  means wildcard</p>
+</dd>
+</dl>
+</dd>
+<dt>rel_pos<span class="classifier">int</span></dt><dd><p>defines the position of the phoneme conditionning the change regarding the phoneme undergoing it
+0 means the condition applies to the phonemes that changes itself</p>
+</dd>
+<dt>continu<span class="classifier">bool</span></dt><dd><dl class="simple">
+<dt>states if the condition needs to be satisfied by at least one of the phoneme in the range of rel_pos or </dt><dd><p>if just the phoneme at &quot;rel pos &quot; is concerned.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<dl class="simple">
+<dt>test :</dt><dd><p>input : a word and an index.
+checks whether the condition is satisfied.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.P_condition.decode_P_cond">
+<span class="sig-name descname"><span class="pre">decode_P_cond</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.decode_P_cond"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.P_condition.decode_P_cond" title="Permalink to this definition"></a></dt>
+<dd><p>Decodes the change for our machine friendly log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.P_condition.encode_P_cond">
+<span class="sig-name descname"><span class="pre">encode_P_cond</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.encode_P_cond"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.P_condition.encode_P_cond" title="Permalink to this definition"></a></dt>
+<dd><p>Encodes the change for our machine friendly log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.P_condition.set_absol_pos">
+<span class="sig-name descname"><span class="pre">set_absol_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.set_absol_pos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.P_condition.set_absol_pos" title="Permalink to this definition"></a></dt>
+<dd><p>set the condition's absol pos with a new value'</p>
+<p>value : int</p>
+<p>None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.P_condition.set_continu">
+<span class="sig-name descname"><span class="pre">set_continu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.set_continu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.P_condition.set_continu" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.P_condition.set_ft">
+<span class="sig-name descname"><span class="pre">set_ft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.set_ft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.P_condition.set_ft" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.P_condition.set_rel_pos">
+<span class="sig-name descname"><span class="pre">set_rel_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.set_rel_pos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.P_condition.set_rel_pos" title="Permalink to this definition"></a></dt>
+<dd><p>set the condition's relative pos with a new value'</p>
+<p>value : int</p>
+<p>None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.P_condition.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#P_condition.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.P_condition.test" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if a condition is satisfied on a given word.
+Key method of the Condition class</p>
+<dl class="simple">
+<dt>word<span class="classifier">word</span></dt><dd><p>word on which we check the condition</p>
+</dd>
+<dt>rank<span class="classifier">int</span></dt><dd><p>rank of the word we examine the condition on</p>
+</dd>
+<dt>verbose<span class="classifier">TYPE, optional</span></dt><dd><p>as usual. The default is False.</p>
+</dd>
+</dl>
+<p>a boolean</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Condition.S_condition">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Condition.</span></span><span class="sig-name descname"><span class="pre">S_condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abs_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#S_condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.S_condition" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Condition.Condition" title="Condition.Condition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Condition.Condition</span></code></a></p>
+<p>A class to represent a condition concerning the Syllabic structure of the word
+...</p>
+<dl class="simple">
+<dt>absol_pos<span class="classifier">int</span></dt><dd><p>absolute offset, checks the position of the syllable  inside the word.
+-1 means wildcard</p>
+</dd>
+<dt>rel_pos<span class="classifier">int</span></dt><dd><p>defines the position of the phoneme conditionning the change regarding the syllable undergoing it
+0 means the condition applies to the phonemes that changes itself</p>
+</dd>
+<dt>stress<span class="classifier">bool </span></dt><dd><p>Checks a condition on the stress</p>
+</dd>
+<dt>length<span class="classifier">bool </span></dt><dd><p>Checks a condition on the length</p>
+</dd>
+<dt>tone<span class="classifier">bool </span></dt><dd><p>Checks a condition on the tone</p>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<dl class="simple">
+<dt>test :</dt><dd><p>input : a word and an index.
+checks whether the condition is satisfied.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.S_condition.decode_S_cond">
+<span class="sig-name descname"><span class="pre">decode_S_cond</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#S_condition.decode_S_cond"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.S_condition.decode_S_cond" title="Permalink to this definition"></a></dt>
+<dd><p>Decodes the change for our machine friendly log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.S_condition.encode_S_cond">
+<span class="sig-name descname"><span class="pre">encode_S_cond</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#S_condition.encode_S_cond"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.S_condition.encode_S_cond" title="Permalink to this definition"></a></dt>
+<dd><p>Encodes the change for our machine friendly log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.S_condition.match_syl">
+<span class="sig-name descname"><span class="pre">match_syl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syl</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#S_condition.match_syl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.S_condition.match_syl" title="Permalink to this definition"></a></dt>
+<dd><p>States if a given syllable respects the pattern of a condition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Condition.S_condition.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Condition.html#S_condition.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Condition.S_condition.test" title="Permalink to this definition"></a></dt>
+<dd><p>Test if the change can be applied on the word regarding the syllabic configuration</p>
+<dl class="simple">
+<dt>word<span class="classifier">word</span></dt><dd><p>the word that undergoes the change</p>
+</dd>
+<dt>rank<span class="classifier">int</span></dt><dd><p>rank of the syllable that is being examined</p>
+</dd>
+<dt>verbose<span class="classifier">bool, optional</span></dt><dd><p>enable the verbose mode. The default is False.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>bool</dt><dd><p>boolean, if the change has to be applied</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

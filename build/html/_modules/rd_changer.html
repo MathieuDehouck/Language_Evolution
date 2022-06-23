@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rd_changer &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>rd_changer</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for rd_changer</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Tue May 17 13:04:22 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+
+<span class="sd">Class representing a changer that applies the linguistic change. It automatically generates changes using the change generator it has been given, and apply them to a given language.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">Change</span>  <span class="kn">import</span> <span class="n">P_change</span><span class="p">,</span> <span class="n">I_change</span>
+<span class="kn">from</span> <span class="nn">Tree</span> <span class="kn">import</span>  <span class="n">L_tree</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span><span class="p">,</span> <span class="n">trange</span>
+<span class="kn">from</span> <span class="nn">Generator</span> <span class="kn">import</span> <span class="n">Change_Generator</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">Sampling</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+
+
+
+
+<div class="viewcode-block" id="Changer"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Changer">[docs]</a><span class="k">class</span> <span class="nc">Changer</span> <span class="p">()</span> <span class="p">:</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class representing a changer that applies the linguistic change. It automatically generates changes using the change generator it has been given, and apply them to a given language.</span>
+<span class="sd">    </span>
+<span class="sd">    The Changer just deterministically applies a set of changes it recieves. Therefore, several different subclasses of changer can be created, depending on the way changes are generated :</span>
+<span class="sd">    </span>
+<span class="sd">    Two particulats Changers have been implemented :</span>
+<span class="sd">        * a first one that uses a random Change_generator  to predict the next change it is going to apply</span>
+<span class="sd">        </span>
+<span class="sd">        * a Log changer that reads the changes from logs (now, changes that have been recorded from a previous random generation, but we wish to elaborate a system that would allow the user to write </span>
+<span class="sd">         changes in an easy manner</span>
+<span class="sd">    </span>
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    </span>
+<span class="sd">    #TODO : the generator only concerns the Tree Generator, and could be excluded from the field of the abstract class</span>
+<span class="sd">    gen : a Change_generator</span>
+<span class="sd">    </span>
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__() constructor taking all these information as input</span>
+<span class="sd">    </span>
+<span class="sd">    change_u  : applies a unitary change</span>
+<span class="sd">    </span>
+<span class="sd">    change : applies n changes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    
+
+
+
+    <span class="k">def</span>  <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen</span> <span class="o">=</span> <span class="n">Change_Generator</span><span class="p">())</span> <span class="p">:</span>
+        <span class="c1">#TODO modified for the new micro script</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="n">gen</span>
+     
+        
+     
+        
+     
+<div class="viewcode-block" id="Changer.change_u"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Changer.change_u">[docs]</a>    <span class="k">def</span> <span class="nf">change_u</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span> <span class="p">:</span>
+         <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">         applies a unitary change</span>
+<span class="sd">         &quot;&quot;&quot;</span>
+         <span class="bp">NotImplemented</span></div>
+
+
+
+
+         
+<div class="viewcode-block" id="Changer.change"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Changer.change">[docs]</a>    <span class="k">def</span> <span class="nf">change</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply n changes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">changes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">wc</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1">#lang = copy.deepcopy(lang)</span>
+        <span class="c1"># we program n random changes</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="s2">&quot;generating &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; changes&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+                <span class="nb">print</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Currently generating change&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">()</span>
+            <span class="n">lang</span> <span class="p">,</span> <span class="n">change</span> <span class="p">,</span> <span class="n">changed_words</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">change_u</span> <span class="p">(</span> <span class="n">lang</span><span class="p">)</span>
+              
+            <span class="n">changes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">change</span><span class="p">)</span> 
+              
+            <span class="n">wc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">changed_words</span><span class="p">)</span>
+              
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Change &quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot; created&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">lang</span><span class="p">,</span> <span class="n">changes</span><span class="p">,</span> <span class="n">wc</span></div></div>
+
+
+
+
+
+<div class="viewcode-block" id="Tree_changer"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Tree_changer">[docs]</a><span class="k">class</span> <span class="nc">Tree_changer</span><span class="p">(</span><span class="n">Changer</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A Class applying randomly generated changes and storing each and every change and language state in a tree structure</span>
+<span class="sd">    </span>
+<span class="sd">    We generate the change in a very precise way :  we generate a first row of changes leading from the origin to the wanted depth.</span>
+<span class="sd">    Then the correct number of branches is grafted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="n">gen</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">gen</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span> <span class="o">=</span> <span class="n">L_tree</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_tree</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span>
+
+
+
+
+
+<div class="viewcode-block" id="Tree_changer.change_u"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Tree_changer.change_u">[docs]</a>    <span class="k">def</span> <span class="nf">change_u</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        
+        <span class="n">type_of_change</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">Sampling</span><span class="o">.</span><span class="n">change_types</span><span class="p">,</span> <span class="n">Sampling</span><span class="o">.</span><span class="n">weights_change_type</span> <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        
+        
+        <span class="k">if</span> <span class="n">type_of_change</span> <span class="o">==</span> <span class="s2">&quot;M&quot;</span> <span class="p">:</span> 
+            <span class="n">change</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">generate_M_change</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M_generated&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">type_of_change</span> <span class="o">==</span> <span class="s2">&quot;S&quot;</span> <span class="p">:</span> 
+            <span class="n">change</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">generate_S_change</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S_generated&quot;</span><span class="p">)</span>
+        <span class="k">elif</span>  <span class="n">type_of_change</span> <span class="o">==</span> <span class="s2">&quot;P&quot;</span> <span class="p">:</span> 
+            <span class="n">change</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">generate_P_change</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P_generated&quot;</span><span class="p">)</span>
+
+        
+        <span class="n">nl</span><span class="p">,</span> <span class="n">wc</span> <span class="o">=</span> <span class="n">change</span><span class="o">.</span><span class="n">apply_language</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_tree</span><span class="o">.</span><span class="n">change</span> <span class="o">=</span> <span class="n">change</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_tree</span><span class="o">.</span><span class="n">changed_words</span> <span class="o">=</span> <span class="n">wc</span>
+        <span class="n">new_tree</span> <span class="o">=</span> <span class="n">L_tree</span><span class="p">(</span><span class="n">nl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_tree</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_tree</span> <span class="o">=</span> <span class="n">new_tree</span>
+         
+        
+        <span class="k">return</span> <span class="n">nl</span><span class="p">,</span> <span class="n">change</span><span class="p">,</span> <span class="n">wc</span></div>
+     
+     
+     
+     
+     
+<div class="viewcode-block" id="Tree_changer.change"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Tree_changer.change">[docs]</a>    <span class="k">def</span> <span class="nf">change</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply n changes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">changes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">wc</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1">#lang = copy.deepcopy(lang)</span>
+        <span class="c1"># we program n random changes</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="s2">&quot;generating &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; changes&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> 
+                <span class="nb">print</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Currently generating change&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">()</span>
+            <span class="n">lang</span> <span class="p">,</span> <span class="n">change</span> <span class="p">,</span> <span class="n">changed_words</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">change_u</span> <span class="p">(</span> <span class="n">lang</span><span class="p">)</span>
+            
+            
+            <span class="n">changes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">change</span><span class="p">)</span> 
+              
+            <span class="n">wc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">changed_words</span><span class="p">)</span>
+              
+            <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Change &quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot; created&quot;</span><span class="p">)</span>
+            <span class="n">lf</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_tree</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">lang</span><span class="p">,</span> <span class="n">changes</span><span class="p">,</span> <span class="n">wc</span><span class="p">,</span> <span class="n">lf</span></div>
+     
+     
+     
+<div class="viewcode-block" id="Tree_changer.pursue_evolution"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Tree_changer.pursue_evolution">[docs]</a>    <span class="k">def</span> <span class="nf">pursue_evolution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wanted_depth</span> <span class="p">,</span> <span class="n">node</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        wanted_depth : int</span>
+<span class="sd">            final number of changes we want in every branch</span>
+<span class="sd">        node : TYPE, optional</span>
+<span class="sd">            if we want to select by force a given node to expand</span>
+<span class="sd">        -------</span>
+<span class="sd">       </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">dic</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">get_ad_2_tree</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span> <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">pick_a_node</span><span class="p">()</span>
+        
+        <span class="n">expanded_tree</span> <span class="o">=</span> <span class="n">dic</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">nch</span> <span class="ow">in</span> <span class="n">trange</span><span class="p">((</span><span class="n">wanted_depth</span> <span class="o">-</span> <span class="n">expanded_tree</span><span class="o">.</span><span class="n">depth</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;generating &quot;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">wanted_depth</span> <span class="o">-</span><span class="n">expanded_tree</span><span class="o">.</span><span class="n">depth</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;changes&quot;</span><span class="p">)</span> <span class="p">:</span>
+            
+            <span class="n">type_of_change</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">Sampling</span><span class="o">.</span><span class="n">change_types</span><span class="p">,</span> <span class="n">Sampling</span><span class="o">.</span><span class="n">weights_change_type</span> <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            
+            
+            <span class="k">if</span> <span class="n">type_of_change</span> <span class="o">==</span> <span class="s2">&quot;M&quot;</span> <span class="p">:</span> 
+                <span class="n">change</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">generate_M_change</span><span class="p">(</span><span class="n">expanded_tree</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M_generated&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">type_of_change</span> <span class="o">==</span> <span class="s2">&quot;S&quot;</span> <span class="p">:</span> 
+                <span class="n">change</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">generate_S_change</span><span class="p">(</span><span class="n">expanded_tree</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S_generated&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">type_of_change</span> <span class="o">==</span> <span class="s2">&quot;P&quot;</span> <span class="p">:</span>
+                <span class="n">change</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">generate_P_change</span><span class="p">(</span><span class="n">expanded_tree</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P_generated&quot;</span><span class="p">)</span>
+    
+            <span class="n">nl</span><span class="p">,</span> <span class="n">wc</span> <span class="o">=</span> <span class="n">change</span><span class="o">.</span><span class="n">apply_language</span><span class="p">(</span><span class="n">expanded_tree</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
+            <span class="n">expanded_tree</span><span class="o">.</span><span class="n">change</span> <span class="o">=</span> <span class="n">change</span>
+            <span class="n">expanded_tree</span><span class="o">.</span><span class="n">changed_words</span> <span class="o">=</span> <span class="n">wc</span>
+            <span class="n">new_tree</span> <span class="o">=</span> <span class="n">L_tree</span><span class="p">(</span><span class="n">nl</span><span class="p">,</span> <span class="n">expanded_tree</span><span class="p">)</span>
+            <span class="n">expanded_tree</span> <span class="o">=</span> <span class="n">new_tree</span></div>
+
+        <span class="c1"># The method moodify the state of the tree itself, so it do not return any value.</span>
+
+
+
+
+
+<div class="viewcode-block" id="Tree_changer.octopus"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Tree_changer.octopus">[docs]</a>    <span class="k">def</span> <span class="nf">octopus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nb_branches</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        graft nb_branches -1 branches to the first evolution path</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nb_branches : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+<span class="sd">        depth : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+          
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_branches</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;grafting branch &quot;</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pursue_evolution</span><span class="p">(</span><span class="n">depth</span><span class="p">)</span></div>
+     
+        
+     
+        
+     
+<div class="viewcode-block" id="Tree_changer.make_evolution"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Tree_changer.make_evolution">[docs]</a>    <span class="k">def</span> <span class="nf">make_evolution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span> <span class="p">,</span> <span class="n">nb_branches</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span> <span class="p">:</span>
+         <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">         from a untouched language, derives the given number of branches, and pushes forward until the trees all have the same depth</span>
+<span class="sd">         </span>
+<span class="sd">         &quot;&quot;&quot;</span>
+         <span class="n">lang</span><span class="p">,</span> <span class="n">changes</span><span class="p">,</span> <span class="n">wc</span><span class="p">,</span> <span class="n">main_leaf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">change</span><span class="p">(</span> <span class="n">lang</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">octopus</span><span class="p">(</span><span class="n">nb_branches</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span>
+         <span class="k">return</span> <span class="n">main_leaf</span></div>
+         
+         
+         
+         
+<div class="viewcode-block" id="Tree_changer.show_of_the_evolution"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Tree_changer.show_of_the_evolution">[docs]</a>    <span class="k">def</span> <span class="nf">show_of_the_evolution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nb_wd</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gives a nice overview of the changes generated by the programm by picking random words and displaying their evolution on a beautiful and coloured graph. </span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nb_wd : Number of word we want to display in our graph</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">origin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">language</span>
+        
+        <span class="n">wds</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_wd</span><span class="p">)</span> <span class="p">:</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span> <span class="p">(</span> <span class="nb">list</span><span class="p">(</span><span class="n">origin</span><span class="o">.</span><span class="n">voc</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+            <span class="n">wds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">history_to_graph</span><span class="p">(</span><span class="n">wds</span><span class="p">)</span></div></div>
+     
+        
+     
+     
+        
+<div class="viewcode-block" id="Log_changer"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Log_changer">[docs]</a><span class="k">class</span> <span class="nc">Log_changer</span><span class="p">(</span><span class="n">Changer</span><span class="p">)</span> <span class="p">:</span>
+    <span class="c1"># TODO precise logs and test them with other kind of changes</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     A class of changer that reads changes from a log file, in the format we created at different steps of the programm,</span>
+<span class="sd">     and applying them back.</span>
+<span class="sd">     </span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     
+     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span> <span class="p">:</span>
+          
+          <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>     
+          <span class="n">f</span><span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+          <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+          <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span> <span class="p">:</span> <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">lines</span>
+          
+          
+          
+          
+     
+<div class="viewcode-block" id="Log_changer.change_u"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Log_changer.change_u">[docs]</a>     <span class="k">def</span> <span class="nf">change_u</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="n">index</span> <span class="p">)</span> <span class="p">:</span>
+          <span class="n">change</span> <span class="o">=</span> <span class="n">P_change</span><span class="o">.</span><span class="n">decode_change</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+          <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+          <span class="n">nl</span><span class="p">,</span> <span class="n">wc</span>  <span class="o">=</span> <span class="n">change</span><span class="o">.</span><span class="n">apply_language</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">nl</span><span class="p">,</span> <span class="n">change</span><span class="p">,</span> <span class="n">wc</span></div>
+     
+        
+     
+        
+     
+<div class="viewcode-block" id="Log_changer.change"><a class="viewcode-back" href="../rd_changer.html#rd_changer.Log_changer.change">[docs]</a>     <span class="k">def</span> <span class="nf">change</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">lang</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>   
+          <span class="n">changes</span> <span class="o">=</span> <span class="p">[]</span>
+          <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> 
+          <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">verbose</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Retro engeneering change &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="n">lang</span> <span class="p">,</span> <span class="n">change</span><span class="p">,</span> <span class="n">wc</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">change_u</span> <span class="p">(</span> <span class="n">lang</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="n">changes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">change</span><span class="p">)</span> 
+                <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="k">return</span> <span class="n">lang</span><span class="p">,</span> <span class="n">changes</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Word module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Word module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Word.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Word">
+<span id="word-module"></span><h1>Word module<a class="headerlink" href="#module-Word" title="Permalink to this headline"></a></h1>
+<p>Created on Wed May  4 14:39:58 2022</p>
+<p>&#64;author: 3b13j</p>
+<p>Contains the Word class and some methods used specifically to work with it</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Word.Syllable">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Word.</span></span><span class="sig-name descname"><span class="pre">Syllable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phonemes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Word.html#Syllable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Word.Syllable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to represent a syllable.</p>
+<p>...</p>
+<dl class="simple">
+<dt>phonemes<span class="classifier">list</span></dt><dd><p>list of the phonemes composing the syllable</p>
+</dd>
+<dt>stress<span class="classifier">bool </span></dt><dd><p>indicate whether the syllable bears stress or not</p>
+</dd>
+<dt>length<span class="classifier">bool </span></dt><dd><p>indicate if the vowell in the syllable have more than 2 mora.</p>
+</dd>
+<dt>i_center<span class="classifier">int</span></dt><dd><p>index of the phoneme which is at the heart of the syllable</p>
+</dd>
+<dt>center: phoneme<span class="classifier"></span></dt><dd><p>phoneme which is at the heart of the syllable</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>init__()__</dt><dd><p>constructor that takes as input the list of phonemes in the syllable</p>
+</dd>
+<dt>set_stress(bool) :</dt><dd><p>allow the programm to change the stress of a syllable</p>
+</dd>
+<dt>set_length(bool)<span class="classifier"></span></dt><dd><p>allow the programm to change thelength of a syllable</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Word.Syllable.set_length">
+<span class="sig-name descname"><span class="pre">set_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Word.html#Syllable.set_length"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Word.Syllable.set_length" title="Permalink to this definition"></a></dt>
+<dd><p>Allow the program to change the stress of a syllable</p>
+<dl class="simple">
+<dt>stress<span class="classifier">bool</span></dt><dd><p>The new value</p>
+</dd>
+</dl>
+<p>None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Word.Syllable.set_rank_in_wd">
+<span class="sig-name descname"><span class="pre">set_rank_in_wd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Word.html#Syllable.set_rank_in_wd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Word.Syllable.set_rank_in_wd" title="Permalink to this definition"></a></dt>
+<dd><p>small setter for the rank in word if it changes durong an I change)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Word.Syllable.set_stress">
+<span class="sig-name descname"><span class="pre">set_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stress</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Word.html#Syllable.set_stress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Word.Syllable.set_stress" title="Permalink to this definition"></a></dt>
+<dd><p>Allow the program to change the stress of a syllable</p>
+<dl class="simple">
+<dt>stress<span class="classifier">bool</span></dt><dd><p>The new value</p>
+</dd>
+</dl>
+<p>None.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Word.Word">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Word.</span></span><span class="sig-name descname"><span class="pre">Word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syls</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Word.html#Word"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Word.Word" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to represent a word.</p>
+<p>...</p>
+<dl class="simple">
+<dt>ipa<span class="classifier">str</span></dt><dd><p>phonological transcription of the word using the IPA</p>
+</dd>
+<dt>structure<span class="classifier">str </span></dt><dd><p>structure of the word (using a CVC format)</p>
+</dd>
+<dt>syllables<span class="classifier">list</span></dt><dd><p>list of the syllable object the word contains</p>
+</dd>
+<dt>phonemes<span class="classifier">list</span></dt><dd><p>list of the phonemes the word contains</p>
+</dd>
+<dt>phon2syl<span class="classifier">dic</span></dt><dd><p>dictionnary mapping the index of a phoneme to the index of the syllable it is in</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>info(additional=&quot;&quot;):</dt><dd><p>Prints the person's name and age.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Word.Word.get_stess_pattern">
+<span class="sig-name descname"><span class="pre">get_stess_pattern</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Word.html#Word.get_stess_pattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Word.Word.get_stess_pattern" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a string representing the stress pattern of the word</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Word.Word.get_structure">
+<span class="sig-name descname"><span class="pre">get_structure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Word.html#Word.get_structure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Word.Word.get_structure" title="Permalink to this definition"></a></dt>
+<dd><p>transform a list of syllables into a string representing its structure (in the CVC format)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

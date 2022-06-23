@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phoneme module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Phoneme module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Phoneme module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Phoneme.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Phoneme">
+<span id="phoneme-module"></span><h1>Phoneme module<a class="headerlink" href="#module-Phoneme" title="Permalink to this headline"></a></h1>
+<p>Created on Tue May  3 00:08:43 2022</p>
+<p>&#64;author: 3b13j</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Phoneme.Consonant">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Phoneme.</span></span><span class="sig-name descname"><span class="pre">Consonant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syllabic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speller</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Phoneme.Phoneme" title="Phoneme.Phoneme"><code class="xref py py-class docutils literal notranslate"><span class="pre">Phoneme.Phoneme</span></code></a></p>
+<p>A class representing a Consonant</p>
+<p>Semantic of a feature ;</p>
+<p>syl : field of the Phoneme
+voice : filed of the Phoneme</p>
+<dl>
+<dt>Features :</dt><dd><dl>
+<dt>First tuple :</dt><dd><p>0 : 
+&quot;place of articulation&quot; : int 
+1 : list of 5 manner of articulation , each coded by a boolean</p>
+<blockquote>
+<div><p>&quot;plosive&quot;
+&quot;fricative&quot;
+&quot;nasal&quot;
+&quot;trill&quot;
+&quot;lateral&quot;</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>Second tuple :</p>
+<blockquote>
+<div><p>&quot;secondary place of articulation&quot;  int (3 or 4 possibilities, same semantics as in place of articulation)
+&quot;pren_nasal&quot;  bool
+&quot;aspiration&quot; bool</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>...</p>
+<dl class="simple">
+<dt>ipa<span class="classifier">str</span></dt><dd><p>the ipa representation of a phoneme</p>
+</dd>
+<dt>features<span class="classifier">list</span></dt><dd><p>a list representing the features associated to the phonem</p>
+</dd>
+<dt>description<span class="classifier">str</span></dt><dd><p>the verbose descritption of the phoneme</p>
+</dd>
+<dt>voice<span class="classifier">bool </span></dt><dd><p>states if the phoneme is voiced or not</p>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>update_IPA  : finds the closest ipa character to represent a new phoneme</p>
+<p>is_round
+is_nasal
+is_palatal</p>
+<p>get_place
+get_manner</p>
+<p>linearize : get the representation of the phoneme as a list of integers</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.has_sec_articulation">
+<span class="sig-name descname"><span class="pre">has_sec_articulation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.has_sec_articulation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.has_sec_articulation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.is_aspirated">
+<span class="sig-name descname"><span class="pre">is_aspirated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.is_aspirated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.is_aspirated" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.is_labialised">
+<span class="sig-name descname"><span class="pre">is_labialised</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.is_labialised"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.is_labialised" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.is_nasal">
+<span class="sig-name descname"><span class="pre">is_nasal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.is_nasal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.is_nasal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.is_palatal">
+<span class="sig-name descname"><span class="pre">is_palatal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.is_palatal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.is_palatal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.is_pre_nasalised">
+<span class="sig-name descname"><span class="pre">is_pre_nasalised</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.is_pre_nasalised"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.is_pre_nasalised" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.is_round">
+<span class="sig-name descname"><span class="pre">is_round</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.is_round"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.is_round" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.is_sonorant">
+<span class="sig-name descname"><span class="pre">is_sonorant</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.is_sonorant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.is_sonorant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Consonant.is_uvular">
+<span class="sig-name descname"><span class="pre">is_uvular</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Consonant.is_uvular"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Consonant.is_uvular" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Phoneme.Phoneme">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Phoneme.</span></span><span class="sig-name descname"><span class="pre">Phoneme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syllabic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Phoneme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class representing a phoneme</p>
+<p>...</p>
+<dl class="simple">
+<dt>ipa<span class="classifier">str</span></dt><dd><p>the ipa representation of a phoneme</p>
+</dd>
+<dt>features<span class="classifier">list</span></dt><dd><p>a list representing the features associated to the phonem</p>
+</dd>
+<dt>description<span class="classifier">str</span></dt><dd><p>the verbose descritption of the phoneme</p>
+</dd>
+<dt>voice<span class="classifier">bool </span></dt><dd><p>states if the phoneme is voiced or not</p>
+</dd>
+<dt>syl<span class="classifier">bool </span></dt><dd><p>states if the phoneme is center of a syllable</p>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>update_IPA  : finds the closest ipa character to represent a new phoneme</p>
+<p>lot of setters, most of which will be useful in I / D change when the position of a phoneme in the word structure might change.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Phoneme.is_Consonant">
+<span class="sig-name descname"><span class="pre">is_Consonant</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme.is_Consonant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Phoneme.is_Consonant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Phoneme.is_Vowel">
+<span class="sig-name descname"><span class="pre">is_Vowel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme.is_Vowel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Phoneme.is_Vowel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Phoneme.set_in_syl">
+<span class="sig-name descname"><span class="pre">set_in_syl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme.set_in_syl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Phoneme.set_in_syl" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Phoneme.set_rank_in_wd">
+<span class="sig-name descname"><span class="pre">set_rank_in_wd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme.set_rank_in_wd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Phoneme.set_rank_in_wd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Phoneme.set_word_rank">
+<span class="sig-name descname"><span class="pre">set_word_rank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rk</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme.set_word_rank"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Phoneme.set_word_rank" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Phoneme.to_int">
+<span class="sig-name descname"><span class="pre">to_int</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme.to_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Phoneme.to_int" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Phoneme.update_IPA">
+<span class="sig-name descname"><span class="pre">update_IPA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Phoneme.update_IPA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Phoneme.update_IPA" title="Permalink to this definition"></a></dt>
+<dd><p>updates the ipa field of the Phoneme it is applied to.</p>
+<dl class="simple">
+<dt>config<span class="classifier">list</span></dt><dd><p>A list representingthe feature we want</p>
+</dd>
+<dt>verbose<span class="classifier">bool, optional</span></dt><dd><p>As usual. Verbose with me means verry verbose. The default is False.</p>
+</dd>
+</dl>
+<p>None.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Phoneme.Vowel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Phoneme.</span></span><span class="sig-name descname"><span class="pre">Vowel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syllabic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speller</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Vowel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Vowel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#Phoneme.Phoneme" title="Phoneme.Phoneme"><code class="xref py py-class docutils literal notranslate"><span class="pre">Phoneme.Phoneme</span></code></a></p>
+<p>A class representing a Vowel</p>
+<p>Semantic of a feature ;</p>
+<p>syl : field of the Phoneme
+voice : filed of the Phoneme</p>
+<dl>
+<dt>Features :</dt><dd><p>First tuple :</p>
+<blockquote>
+<div><p>&quot;fronting&quot; : int  btw 0 and 2
+&quot;height&quot;, int btw 0 and 6</p>
+</div></blockquote>
+<p>Second tuple :</p>
+<blockquote>
+<div><p>&quot;round&quot; : bool
+&quot;nasal&quot; : bool</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>...</p>
+<dl class="simple">
+<dt>ipa<span class="classifier">str</span></dt><dd><p>the ipa representation of a phoneme</p>
+</dd>
+<dt>features<span class="classifier">list</span></dt><dd><p>a list representing the features associated to the phonem</p>
+</dd>
+<dt>description<span class="classifier">str</span></dt><dd><p>the verbose descritption of the phoneme</p>
+</dd>
+<dt>syl<span class="classifier">bool </span></dt><dd><p>states if the phoneme is center of a syllable</p>
+</dd>
+</dl>
+<p>__init__() constructor taking all these information as input</p>
+<p>update_IPA  : finds the closest ipa character to represent a new phoneme</p>
+<p>get_height
+get_front</p>
+<p>is_round
+is_nasal
+is_palatal
+is_voiced</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Vowel.get_front">
+<span class="sig-name descname"><span class="pre">get_front</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Vowel.get_front"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Vowel.get_front" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Vowel.get_height">
+<span class="sig-name descname"><span class="pre">get_height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Vowel.get_height"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Vowel.get_height" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Vowel.is_nasal">
+<span class="sig-name descname"><span class="pre">is_nasal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Vowel.is_nasal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Vowel.is_nasal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Vowel.is_palatal">
+<span class="sig-name descname"><span class="pre">is_palatal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Vowel.is_palatal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Vowel.is_palatal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Vowel.is_round">
+<span class="sig-name descname"><span class="pre">is_round</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Vowel.is_round"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Vowel.is_round" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Phoneme.Vowel.is_voiced">
+<span class="sig-name descname"><span class="pre">is_voiced</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Phoneme.html#Vowel.is_voiced"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Phoneme.Vowel.is_voiced" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

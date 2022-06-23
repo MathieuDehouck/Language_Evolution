@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>encoder_decoder &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>encoder_decoder</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for encoder_decoder</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Fri May 20 11:15:50 2022</span>
+
+<span class="sd">@author: 3b13j</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">IPA</span> <span class="kn">import</span> <span class="n">IPA</span>
+
+
+
+<span class="n">ipa</span> <span class="o">=</span> <span class="n">IPA</span><span class="p">()</span>
+<span class="n">ift</span> <span class="o">=</span> <span class="n">ipa</span><span class="o">.</span><span class="n">cfeatures</span>
+<span class="c1">#TODO </span>
+
+<span class="n">manner_2_letter</span>  <span class="o">=</span>  <span class="p">{</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="c1"># approximant</span>
+                <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span>  <span class="s1">&#39;n&#39;</span> <span class="p">,</span>  <span class="c1"># nasal</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="c1"># plosive</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="c1"># fricative / sibilant</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="c1"># flap</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="c1"># trill</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="c1"># lateral</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="c1"># lateral fric</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span><span class="c1"># lateral trill</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;A&#39;</span> <span class="p">}</span>  <span class="c1">#Africates</span>
+
+
+<span class="n">letter_2_manner</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">manner_2_letter</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span> <span class="n">letter_2_manner</span><span class="p">[</span><span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="viewcode-block" id="encode_f"><a class="viewcode-back" href="../index.html#encoder_decoder.encode_f">[docs]</a><span class="k">def</span> <span class="nf">encode_f</span> <span class="p">(</span><span class="n">feat</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    encode a feature into the format we chose</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    feat : list</span>
+<span class="sd">        the feature rpz of a template</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    s : str</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">feat</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span>  <span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;V:&quot;</span>
+        <span class="n">semantics</span> <span class="o">=</span>  <span class="p">(</span> <span class="s1">&#39;Height&#39;</span><span class="p">,</span><span class="s1">&#39;Backness&#39;</span><span class="p">,</span> <span class="s1">&#39;Round&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Voiced&#39;</span><span class="p">,</span> <span class="s1">&#39;Nasal&#39;</span><span class="p">)</span>
+        
+    <span class="k">else</span> <span class="p">:</span> 
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;C:&quot;</span>
+        <span class="n">semantics</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;place of articulation&#39;</span><span class="p">,</span> <span class="s1">&#39;manner of articulation&#39;</span><span class="p">,</span> <span class="s1">&#39;Voiced&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;secondary place of articulation&#39;</span><span class="p">,</span> <span class="s1">&#39;nasal&#39;</span> <span class="p">,</span> <span class="s1">&#39;aspiration&#39;</span><span class="p">)</span>
+        
+        
+    <span class="k">for</span> <span class="n">i</span> <span class="p">,</span> <span class="n">tp</span> <span class="ow">in</span> <span class="nb">enumerate</span> <span class="p">(</span><span class="n">feat</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">el</span>  <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="p">:</span>
+            
+
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">el</span><span class="p">)</span><span class="o">==</span> <span class="nb">tuple</span> <span class="p">:</span> <span class="n">el</span> <span class="o">=</span> <span class="n">manner_2_letter</span><span class="p">[</span><span class="n">el</span><span class="p">]</span>
+            
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">el</span><span class="p">)</span><span class="o">==</span> <span class="nb">int</span> <span class="p">:</span>
+                <span class="k">if</span> <span class="n">el</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">:</span> 
+                    <span class="n">el</span> <span class="o">=</span> <span class="s2">&quot;*&quot;</span>
+                    
+            <span class="n">s</span><span class="o">+=</span> <span class="n">semantics</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+            <span class="n">s</span><span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="c1"># +&quot; &quot;</span>
+        
+    <span class="k">return</span> <span class="n">s</span></div>
+
+<div class="viewcode-block" id="encode_bool"><a class="viewcode-back" href="../encoder_decoder.html#encoder_decoder.encode_bool">[docs]</a><span class="k">def</span> <span class="nf">encode_bool</span><span class="p">(</span><span class="n">bol</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">bol</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span> <span class="k">return</span> <span class="s2">&quot;T&quot;</span>
+    <span class="k">elif</span> <span class="n">bol</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span> <span class="k">return</span> <span class="s2">&quot;N&quot;</span>
+    <span class="k">else</span> <span class="p">:</span> <span class="k">return</span> <span class="s2">&quot;F&quot;</span></div>
+    
+<div class="viewcode-block" id="decode_bool"><a class="viewcode-back" href="../encoder_decoder.html#encoder_decoder.decode_bool">[docs]</a><span class="k">def</span> <span class="nf">decode_bool</span><span class="p">(</span><span class="n">bol</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">bol</span> <span class="o">==</span> <span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">bol</span> <span class="o">==</span> <span class="s2">&quot;N&quot;</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="dt"><a class="viewcode-back" href="../encoder_decoder.html#encoder_decoder.dt">[docs]</a><span class="k">def</span> <span class="nf">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="p">:</span>
+    <span class="c1"># for decoding trick</span>
+    <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;*&#39;</span> <span class="p">:</span> <span class="k">return</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="p">:</span> <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="n">x</span><span class="p">])</span></div>
+    
+
+<div class="viewcode-block" id="decode_f"><a class="viewcode-back" href="../index.html#encoder_decoder.decode_f">[docs]</a><span class="k">def</span> <span class="nf">decode_f</span> <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Decode a string we encoded earlier</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    string : to be decoded</span>
+
+
+<span class="sd">    &quot;&quot;&quot;</span>
+   
+    
+    <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;V&quot;</span> <span class="p">:</span> 
+        <span class="n">decoder</span>  <span class="o">=</span>  <span class="p">(</span> <span class="s1">&#39;Height&#39;</span><span class="p">,</span><span class="s1">&#39;Backness&#39;</span><span class="p">,</span> <span class="s1">&#39;Round&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Voiced&#39;</span><span class="p">,</span> <span class="s1">&#39;Nasal&#39;</span><span class="p">)</span> 
+        <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        
+        <span class="n">tupl1</span> <span class="o">=</span> <span class="p">(</span><span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="n">tupl2</span> <span class="o">=</span> <span class="p">(</span><span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+        
+    
+    
+    
+    <span class="k">else</span> <span class="p">:</span> 
+        <span class="n">decoder</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;place of articulation&#39;</span><span class="p">,</span> <span class="s1">&#39;manner of articulation&#39;</span><span class="p">,</span> <span class="s1">&#39;Voiced&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;secondary place of articulation&#39;</span><span class="p">,</span> <span class="s1">&#39;nasal&#39;</span> <span class="p">,</span> <span class="s1">&#39;aspiration&#39;</span><span class="p">)</span>
+        <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+       
+        <span class="n">dec</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span> <span class="p">:</span> <span class="n">place</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="p">:</span>
+                <span class="n">dec</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">place</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+            <span class="k">else</span> <span class="p">:</span> <span class="n">place</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="mi">3</span><span class="o">+</span><span class="n">dec</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;*&quot;</span> <span class="p">:</span> <span class="n">manner</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">else</span> <span class="p">:</span> <span class="n">manner</span> <span class="o">=</span> <span class="n">letter_2_manner</span><span class="p">[</span><span class="n">string</span><span class="p">[</span><span class="mi">3</span><span class="o">+</span><span class="n">dec</span><span class="p">]]</span>
+        
+        
+        <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="mi">7</span><span class="o">+</span><span class="n">dec</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span> <span class="p">:</span> <span class="n">sec_place</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="mi">8</span><span class="o">+</span><span class="n">dec</span><span class="p">]</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="p">:</span>
+                <span class="n">sec_place</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">7</span><span class="o">+</span><span class="n">dec</span> <span class="p">:</span> <span class="mi">9</span> <span class="o">+</span><span class="n">dec</span><span class="p">])</span>
+                <span class="n">dec</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span> <span class="p">:</span> <span class="n">sec_place</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">7</span><span class="o">+</span><span class="n">dec</span><span class="p">])</span>
+        
+        
+        
+        <span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+        <span class="n">tupl1</span> <span class="o">=</span> <span class="p">(</span><span class="n">place</span><span class="p">,</span> <span class="n">manner</span><span class="p">,</span> <span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span><span class="mi">5</span><span class="o">+</span><span class="n">dec</span><span class="p">))</span>
+        <span class="n">tupl2</span> <span class="o">=</span> <span class="p">(</span>  <span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span><span class="mi">7</span><span class="o">+</span><span class="n">dec</span><span class="p">),</span>  <span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span><span class="mi">9</span><span class="o">+</span><span class="n">dec</span><span class="p">),</span>  <span class="n">dt</span><span class="p">(</span><span class="n">string</span><span class="p">,</span><span class="mi">11</span><span class="o">+</span><span class="n">dec</span><span class="p">))</span> 
+   
+            
+    <span class="n">tupl</span> <span class="o">=</span> <span class="p">(</span><span class="n">tupl1</span><span class="p">,</span> <span class="n">tupl2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tupl</span></div>
+    
+    
+    
+<div class="viewcode-block" id="encode_p_change"><a class="viewcode-back" href="../encoder_decoder.html#encoder_decoder.encode_p_change">[docs]</a><span class="k">def</span> <span class="nf">encode_p_change</span><span class="p">(</span><span class="n">change</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Target:&quot;</span> <span class="o">+</span> <span class="n">encode_f</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">target</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot; &quot;</span>
+    <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Effect:&quot;</span> <span class="o">+</span> <span class="n">encode_f</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">config_initiale</span><span class="o">.</span><span class="n">state</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&gt;&quot;</span><span class="o">+</span><span class="n">encode_f</span><span class="p">(</span><span class="n">change</span><span class="o">.</span><span class="n">config_finale</span><span class="o">.</span><span class="n">state</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span>
+    <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="n">change</span><span class="o">.</span><span class="n">conditions</span> <span class="p">:</span>
+        <span class="n">s</span><span class="o">+=</span> <span class="s2">&quot;Condition:&quot;</span><span class="o">+</span><span class="s2">&quot;rp&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span></div>
+
+<div class="viewcode-block" id="encoded_changes2log"><a class="viewcode-back" href="../encoder_decoder.html#encoder_decoder.encoded_changes2log">[docs]</a><span class="k">def</span> <span class="nf">encoded_changes2log</span><span class="p">(</span><span class="n">changes</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">rewind</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">):</span>
+    <span class="n">rew</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+    <span class="k">if</span> <span class="n">rewind</span><span class="p">:</span> <span class="n">rew</span> <span class="o">=</span> <span class="s2">&quot;w&quot;</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;_encoded.txt&quot;</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">change</span> <span class="ow">in</span> <span class="n">changes</span> <span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">encode_p_change</span><span class="p">(</span><span class="n">change</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

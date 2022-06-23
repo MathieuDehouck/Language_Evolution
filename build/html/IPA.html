@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPA module &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">IPA module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>IPA module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/IPA.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-IPA">
+<span id="ipa-module"></span><h1>IPA module<a class="headerlink" href="#module-IPA" title="Permalink to this headline"></a></h1>
+<p>Created on Thu May  5 00:01:15 2022</p>
+<p>&#64;author: 3b13j</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="IPA.IPA">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">IPA.</span></span><span class="sig-name descname"><span class="pre">IPA</span></span><a class="reference internal" href="_modules/IPA.html#IPA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.IPA" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A singleton class to represent the IPA viewed as a set of archetypal phonemes.</p>
+<p>...</p>
+<dl class="simple">
+<dt>cfeatures or vfeatures<span class="classifier">list</span></dt><dd><p>list of the str corresponding to the name of the features used in this IPA to describe the phonemes . it describe their semantics</p>
+</dd>
+<dt>phonemes<span class="classifier">list</span></dt><dd><p>list of archetypes objects , representing the canonical phonemes of the IPA</p>
+</dd>
+<dt>alphabet<span class="classifier">dic</span></dt><dd><p>dictionnary mapping an ipa character to the phoneme it describes</p>
+</dd>
+<dt>f2ipa<span class="classifier">dic</span></dt><dd><p>dictionnary mapping a feature list to its ipa character</p>
+</dd>
+<dt>classes<span class="classifier">list</span></dt><dd><p>list of the name of the different natural classes we consider in our phonology (built using a csv file)</p>
+</dd>
+<dt>dic_class<span class="classifier">dic</span></dt><dd><p>dictionnary mapping a class name to the class object that represents it</p>
+</dd>
+</dl>
+<p>__init__() no argument, automatically generates the IPA from a CSV file we created</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="IPA.IPA.get_IPA">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_IPA</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#IPA.get_IPA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.IPA.get_IPA" title="Permalink to this definition"></a></dt>
+<dd><p>Static access method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IPA.IPA.get_char">
+<span class="sig-name descname"><span class="pre">get_char</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#IPA.get_char"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.IPA.get_char" title="Permalink to this definition"></a></dt>
+<dd><p>returns a string representing the input phoneme's features</p>
+<dl class="simple">
+<dt>phon<span class="classifier"></span></dt><dd><p>A phoneme</p>
+</dd>
+<dt>verbose<span class="classifier">bool, optional</span></dt><dd><p>As usual. Verbose with me means verry verbose. The default is False.</p>
+</dd>
+</dl>
+<p>string</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="IPA.archetype">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">IPA.</span></span><span class="sig-name descname"><span class="pre">archetype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feats</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vow</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#archetype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.archetype" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to represent an archetypal phoneme (phoneme belonging to the IPA)
+These objects are not mutable</p>
+<p>...</p>
+<dl class="simple">
+<dt>ipa<span class="classifier">str</span></dt><dd><p>character representing the phoneme in the IPA</p>
+</dd>
+</dl>
+<p>features : tuple in a format we defined that represent key informations to define a phoneme's property'
+description : str</p>
+<blockquote>
+<div><p>precise description of the phoneme (obtained using the IPA python module)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>__init__(str, liste) </dt><dd><p>the constructor, that takes the ipa and features as attributes</p>
+</dd>
+</dl>
+<p>is_Vowel
+is_Consonant
+get_one</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="IPA.archetype.get_one">
+<span class="sig-name descname"><span class="pre">get_one</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extra_feats</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syllabic</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#archetype.get_one"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.archetype.get_one" title="Permalink to this definition"></a></dt>
+<dd><p>I'll change this eventually</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IPA.archetype.is_Consonant">
+<span class="sig-name descname"><span class="pre">is_Consonant</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#archetype.is_Consonant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.archetype.is_Consonant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IPA.archetype.is_Vowel">
+<span class="sig-name descname"><span class="pre">is_Vowel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#archetype.is_Vowel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.archetype.is_Vowel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="IPA.cons_dist">
+<span class="sig-prename descclassname"><span class="pre">IPA.</span></span><span class="sig-name descname"><span class="pre">cons_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consonants</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#cons_dist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.cons_dist" title="Permalink to this definition"></a></dt>
+<dd><p>computes the distance between a cons features and a set of consonants</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="IPA.vowel_dist">
+<span class="sig-prename descclassname"><span class="pre">IPA.</span></span><span class="sig-name descname"><span class="pre">vowel_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vowels</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IPA.html#vowel_dist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IPA.vowel_dist" title="Permalink to this definition"></a></dt>
+<dd><p>computes the distance between a vow features and a set of vowells</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

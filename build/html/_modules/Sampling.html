@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, fr" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sampling &mdash; Evolution 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Evolution
+          </a>
+              <div class="version">
+                0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Evolution</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>Sampling</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Sampling</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Tue May 31 12:42:01 2022</span>
+
+<span class="sd">sampling : </span>
+
+<span class="sd">@author: 3b13j</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">&quot;&quot;&quot; This file contains matrices (or way to generate them) to rafine phonetic changes. Each feature can be changed according to certain </span>
+<span class="sd">parameter, following a proba weighting represented by a matrix. </span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span>  <span class="k">as</span> <span class="nn">np</span>
+
+
+
+
+
+<span class="c1"># PARAMETRISATION OF THE PHONETIC CHANGE. </span>
+
+
+
+<span class="c1"># First step : small methods to create matrices</span>
+
+<div class="viewcode-block" id="fill_matrix"><a class="viewcode-back" href="../index.html#Sampling.fill_matrix">[docs]</a><span class="k">def</span> <span class="nf">fill_matrix</span><span class="p">(</span><span class="n">rang</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    creates a matrix that simulate the change from a numerical value to another, the change is gradual and have a bigger chance to happen between close values</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>  
+    <span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">rang</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">rang</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">ran</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rang</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span> 
+        <span class="k">for</span> <span class="n">rang2</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">rang</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ran</span><span class="o">-</span><span class="n">rang2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">mat</span><span class="p">[</span><span class="n">ran</span><span class="p">,</span> <span class="n">rang2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span> 
+            <span class="k">elif</span>  <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ran</span><span class="o">-</span><span class="n">rang2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="n">mat</span><span class="p">[</span><span class="n">ran</span><span class="p">,</span> <span class="n">rang2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+            <span class="k">elif</span>  <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ran</span><span class="o">-</span><span class="n">rang2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span> <span class="n">mat</span><span class="p">[</span><span class="n">ran</span><span class="p">,</span> <span class="n">rang2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> 
+            
+    <span class="k">return</span> <span class="n">mat</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="mat_to_adj"><a class="viewcode-back" href="../index.html#Sampling.mat_to_adj">[docs]</a><span class="k">def</span> <span class="nf">mat_to_adj</span> <span class="p">(</span><span class="n">mat</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Converts a matrix into its representation as an adjacency list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">rang</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span> <span class="n">mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="p">)</span>  <span class="p">:</span>
+        <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">enumerate</span> <span class="p">(</span> <span class="n">mat</span><span class="p">[:,</span><span class="n">rang</span><span class="p">])</span>   <span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">el</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span> <span class="n">liste</span><span class="o">.</span><span class="n">append</span> <span class="p">([</span><span class="n">ind</span><span class="p">,</span> <span class="n">el</span><span class="p">])</span>
+        <span class="n">dic</span><span class="p">[</span><span class="n">rang</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span>
+    
+    <span class="k">return</span> <span class="n">dic</span></div>
+    
+
+
+
+
+
+<div class="viewcode-block" id="dislike"><a class="viewcode-back" href="../index.html#Sampling.dislike">[docs]</a><span class="k">def</span> <span class="nf">dislike</span> <span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">mat</span><span class="p">,</span> <span class="n">coef</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Diminish the weight of values we do not want to see too often. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="p">:</span> 
+      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span>
+            <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>  <span class="o">/</span> <span class="n">coef</span>
+            
+    <span class="k">return</span> <span class="n">mat</span></div>
+
+
+
+
+
+<span class="c1"># VOWELS</span>
+
+
+
+<span class="c1">#Tuple 1 </span>
+
+
+
+<span class="c1">#feature 1 : height, values btw 0 and 6</span>
+
+<span class="n">f1v</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">disliked_heights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">f1v</span> <span class="o">=</span> <span class="n">dislike</span><span class="p">(</span><span class="n">disliked_heights</span><span class="p">,</span> <span class="n">f1v</span><span class="p">)</span>
+
+
+
+<span class="c1">#feature 2 : weight, values btw 0 and 6</span>
+
+<span class="n">f2v</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+
+
+<span class="c1"># feature 3 : round </span>
+
+<span class="n">f3v</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+
+<span class="c1">#Tuple2 </span>
+
+
+
+<span class="c1">#feature 4 : nasalised</span>
+
+<span class="n">f4v</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+
+<span class="c1">#feature 5 : nasalised</span>
+
+<span class="n">f5v</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+
+<span class="c1">#All information condensed : </span>
+<span class="n">MatricesV</span> <span class="o">=</span> <span class="p">((</span><span class="n">f1v</span><span class="p">,</span> <span class="n">f2v</span><span class="p">,</span> <span class="n">f3v</span><span class="p">),(</span> <span class="n">f4v</span><span class="p">,</span> <span class="n">f5v</span><span class="p">))</span>
+<span class="n">inputsV</span> <span class="o">=</span> <span class="p">((</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">),</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+
+
+
+
+
+<span class="c1">#CONSONANT</span>
+
+
+
+<span class="c1">#Tuple 1 </span>
+
+
+
+<span class="c1">#feature 1 : place of articulation</span>
+
+<span class="n">f1c</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">disliked_articulation_place</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">f1c</span> <span class="o">=</span> <span class="n">dislike</span><span class="p">(</span><span class="n">disliked_articulation_place</span><span class="p">,</span> <span class="n">f1c</span><span class="p">)</span>
+
+
+
+<span class="c1">#feature 2 : manner of articulation</span>
+
+<span class="n">manner_2_ind</span>  <span class="o">=</span>  <span class="p">{</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># approximant</span>
+                <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># nasal</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># plosive</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># fricative / sibilant</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># fricative</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># flap</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># trill</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># lateral</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># lateral fric</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="c1"># lateral trill</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>  <span class="c1">#Africates</span>
+
+
+
+<span class="n">manner_list</span>  <span class="o">=</span>  <span class="p">[</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># approximant</span>
+                <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># nasal</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># plosive</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># fricative / sibilant</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># fricative</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># flap</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="c1"># trill</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="c1"># lateral</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="c1"># lateral fric</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span><span class="c1"># lateral trill</span>
+                <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]</span>  <span class="c1">#Africates</span>
+
+
+<span class="n">secondary_place</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+
+<span class="n">sec_place_2_ind</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">11</span> <span class="p">:</span> <span class="mi">3</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">0</span> <span class="p">,</span> <span class="mi">5</span> <span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">manner_list</span><span class="p">)</span> 
+<span class="n">f2c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">l</span><span class="p">,</span> <span class="n">l</span><span class="p">))</span>
+
+<div class="viewcode-block" id="interpret_manner"><a class="viewcode-back" href="../index.html#Sampling.interpret_manner">[docs]</a><span class="k">def</span> <span class="nf">interpret_manner</span> <span class="p">(</span><span class="n">mat</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    small function to covnerts non linear values to their position in the matrix</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dic</span> <span class="o">=</span> <span class="n">mat_to_adj</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+    <span class="n">dic_sem</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dic</span> <span class="p">:</span>
+        <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:</span>
+            <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">manner_list</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>  <span class="p">,</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
+        <span class="n">dic_sem</span> <span class="p">[</span><span class="n">manner_list</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span> <span class="o">=</span> <span class="n">liste</span>
+    <span class="k">return</span> <span class="n">dic_sem</span></div>
+
+<span class="n">manner_adj</span> <span class="o">=</span> <span class="n">interpret_manner</span><span class="p">(</span><span class="n">f2c</span><span class="p">)</span>
+
+
+<span class="c1">#feature 3 : voiced </span>
+
+<span class="n">f3c</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+
+<span class="c1">#Tuple2 </span>
+
+
+
+<span class="c1"># feature 4 : secondary articulation</span>
+
+<span class="c1"># 4 valeurs, -1, 11, and two others.TODO conversion of indexes</span>
+<span class="n">f4c</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+
+
+<div class="viewcode-block" id="interpret_sec_manner"><a class="viewcode-back" href="../Sampling.html#Sampling.interpret_sec_manner">[docs]</a><span class="k">def</span> <span class="nf">interpret_sec_manner</span> <span class="p">(</span><span class="n">mat</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">dic</span> <span class="o">=</span> <span class="n">mat_to_adj</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+    <span class="n">dic_sem</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dic</span> <span class="p">:</span>
+        <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:</span>
+            <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">secondary_place</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>  <span class="p">,</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
+        <span class="n">dic_sem</span> <span class="p">[</span><span class="n">secondary_place</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span> <span class="o">=</span> <span class="n">liste</span>
+    <span class="k">return</span> <span class="n">dic_sem</span></div>
+
+<span class="n">sec_manner_adj</span>  <span class="o">=</span>  <span class="n">interpret_sec_manner</span><span class="p">(</span><span class="n">f4c</span><span class="p">)</span>
+
+<span class="c1">#feature 5 : pre nasal</span>
+
+<span class="n">f5c</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+
+<span class="c1">#feature 6 : aspirated</span>
+
+<span class="n">f6c</span> <span class="o">=</span> <span class="n">fill_matrix</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+
+<span class="c1"># Every information sum up</span>
+<span class="n">MatricesC</span> <span class="o">=</span> <span class="p">((</span><span class="n">f1c</span><span class="p">,</span> <span class="n">f2c</span><span class="p">,</span> <span class="n">f3c</span><span class="p">),(</span> <span class="n">f4c</span><span class="p">,</span> <span class="n">f5c</span><span class="p">,</span> <span class="n">f6c</span><span class="p">))</span>
+<span class="n">inputsC</span> <span class="o">=</span> <span class="p">((</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span> <span class="n">manner_list</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">),</span> <span class="p">(</span><span class="n">secondary_place</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+
+
+
+
+
+
+
+
+
+
+<span class="c1"># PARAMETRISATION OF THE CHANGE GENERATION</span>
+
+
+
+<span class="c1">#Parametrisation of the type of change applied</span>
+<span class="n">change_types</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">]</span>
+<span class="n">weights_change_type</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span> <span class="p">]</span>
+
+
+
+<span class="c1">#Parametrisation of the number of condition</span>
+<span class="n">weights_nb_cond</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">weights_same_feature</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+
+
+<span class="c1">#parametrisation of the probability a feature is modified</span>
+<span class="n">featureV_weights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">featureC_weights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+
+
+<span class="n">nb_rel_cond</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">weights_nb_rel_cond</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">weights_nb_rel_cond_normal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span>
+    <span class="n">loc</span><span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>       <span class="c1"># The mean of the distribution</span>
+    <span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>      <span class="c1"># The standard deviation </span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">5</span>     <span class="c1"># The size or shape of your array</span>
+<span class="p">)</span>
+
+
+
+<span class="n">weight_Scond</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">weigt_A_R</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">weights_rel_pos</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">weights_abs_pos</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+
+
+<span class="c1">#Parametrization of the number of condition</span>
+<span class="n">nb_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">weights_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">weights_extensions2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">weights_extensions_normal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span>
+    <span class="n">loc</span><span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>       <span class="c1"># The mean of the distribution</span>
+    <span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>      <span class="c1"># The standard deviation </span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">6</span>       <span class="c1"># The size or shape of your array</span>
+<span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Louis Jourdain, Mathieu Dehouck.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
