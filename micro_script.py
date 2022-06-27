@@ -13,7 +13,7 @@ from utilitaries import *
 from IPA import IPA  
 from Wiki_utilities import get_language
 from P_change_generator import Baby_P_change_generator
-from log_utilities import change2log, langcomp2log,  samples2log, extract_changed_words, purge_log, changes2machinelog
+from log_utilities import change2log, langcomp2log, evolution_2_log, samples2log, extract_changed_words, purge_log, changes2machinelog
 from rd_changer import Tree_changer, Log_changer
 from encoder_decoder import encoded_changes2log, encode_f 
 from Condition import Condition
@@ -24,16 +24,16 @@ from Language import State
 
 i = IPA.get_IPA()
 
-path = "tuesday"
+path = "slava"
 
-depth = 20 # depth of a branch
-nbranches = 42 # number of branches
+depth = 200 # depth of a branch
+nbranches = 30 # number of branches
 
 
 
 # We choose a language to play with 
 
-lang = get_language("latin_classique.txt", "latin")
+lang = get_language("tokipona.txt", "latin")
 
 #st = State(lang)
 
@@ -115,3 +115,6 @@ time.show_of_the_evolution(10)
 #lf.evaluate_proximity(origin)
 
 print(decode_log("logs/tuesday_machine_log.txt"))
+
+
+evolution_2_log(time, "raw_data.txt")

@@ -80,6 +80,11 @@ def treat_syl(syl, stress = False) :
 
     syl = syl.replace('g', 'ɡ')
     syl = syl.replace('̯', '')   # FIX THIS
+    syl = syl.replace('-', "")
+    syl = syl.replace('ˣ', "")
+    syl = syl.replace('ˌ', "")
+    syl = syl.replace('̩', "")
+    syl = syl.replace('ˌ', "")
     phones = []
     feats = []
     

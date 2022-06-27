@@ -396,3 +396,56 @@ def extract_changed_words(path, write = False) :
         
     f.close()
     return chg_wds
+
+
+def languages_2_log(language, path, rewind = False) :
+    """ store a language in a log file """
+    if rewind  : 
+        f = open(path, 'w', encoding = 'utf8')
+    else : 
+        f = open(path, 'a', encoding = 'utf8')
+    
+    for key, value in language.voc.items() :
+        f.write(key)
+        f.write("   ")
+        f.write(value.ipa)
+        f.write("\n")
+    
+    f.write("\n")
+    f.write("\n")
+
+    
+    
+    
+    
+def evolution_2_log(changer, path) :
+    """ stores all the cognates in a log"""
+    
+    f = open(path, 'w', encoding = 'utf8')
+    
+    lvs = changer.tree.get_leaves() 
+    
+    root  = changer.tree.language
+    
+    
+    for key, value in root.voc.items() :
+        f.write("original word : ")
+        f.write("\n")
+        f.write(str(key))
+        f.write("\n")
+        f.write(str(value.ipa))
+        f.write("\n")
+        f.write("\n")
+        form_list = []
+        for lf in lvs : 
+            if lf.language.voc[key].ipa not in form_list :
+                form_list.append(lf.language.voc[key].ipa)
+        for form in form_list : 
+            f.write(str(form))
+            f.write("\n")
+        f.write("\n")
+        f.write("\n")
+    
+    
+    
+    

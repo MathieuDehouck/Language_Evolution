@@ -181,15 +181,16 @@ class Syllable(object) :
     
         # TODO do profiling here ? 
         # way to know which of the syllable's phoneme bears the accent / tone 
+        id_center = 0
         syl = [phon.syl for phon in self.phonemes]
         if True in syl:
             id_center = syl.index(True)
         else:
             vow = [phon.is_Vowel() for phon in self.phonemes]
-            id_center = vow.index(True)
+            if True in vow : id_center = vow.index(True)
 
         self.center = self.phonemes[id_center]
-
+        
         if self.stress:
             s = "'"
         else:
