@@ -8,6 +8,7 @@ Created on Sun May 29 21:36:10 2022
 from sys import platform
 from pathlib import Path
 import os
+import pickle 
 
 from utilitaries import *
 from IPA import IPA  
@@ -26,14 +27,14 @@ i = IPA.get_IPA()
 
 path = "slava"
 
-depth = 200 # depth of a branch
-nbranches = 30 # number of branches
+depth = 42 # depth of a branch
+nbranches = 1 # number of branches
 
 
 
 # We choose a language to play with 
 
-lang = get_language("tokipona.txt", "latin")
+lang = get_language("latin_classique.txt", "latin")
 
 #st = State(lang)
 
@@ -118,3 +119,47 @@ print(decode_log("logs/tuesday_machine_log.txt"))
 
 
 evolution_2_log(time, "raw_data.txt")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# sale 
+
+
+def get_couples(changer) :
+    
+    
+    exs_set = []
+    lvs = changer.tree.get_leaves ()
+    root  = changer.tree.language
+    
+    
+    for key, value in root.voc.items() :
+       
+       
+        form_list = []
+        for lf in lvs : 
+            if lf.language.voc[key].ipa not in form_list :
+                form_list.append(lf.language.voc[key].ipa)
+        for form in form_list : 
+           exs_set.append([value.ipa , form ])
+    
+    return exs_set 
+
+
+couples = get_couples(time)
+
+os.chdir('../')
+fp = open("shared.pkl","wb")
+pickle.dump(couples, fp)
+print("done")
