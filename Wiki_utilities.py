@@ -42,10 +42,12 @@ def wiki_lexicon(path) :
     dico = {}
     with open(path,'r', encoding = 'utf8') as doc :
         for line in doc:
+            print(line)
             line = line.strip()
             line = line.split('\t')
-            if line == []:
+            if len(line) < 2 :
                 continue
+            if "ɚ" in line[1]  : continue
             dico[line[0]] = line[1].replace(' ', '.').replace('(','').replace(')','')
 
     return dico
@@ -85,6 +87,8 @@ def treat_syl(syl, stress = False) :
     syl = syl.replace('ˌ', "")
     syl = syl.replace('̩', "")
     syl = syl.replace('ˌ', "")
+    syl = syl.replace('-', "")
+    
     phones = []
     feats = []
     
@@ -94,7 +98,7 @@ def treat_syl(syl, stress = False) :
             feats[-1].append(diacritics[ch])
             continue
 
-        phones.append(ipa.alphabet[ch])
+        if ch in ipa.alphabet : phones.append(ipa.alphabet[ch])
         feats.append([])
         if i == nucleus:
             nucleus = len(phones) - 1
@@ -123,11 +127,30 @@ def segm2syl(dic) :
         #print(word, segm)
         syllables = []
         segm = segm.split(".")
+        
+        
 
         for syl in segm :
+            
+            syl = syl.replace('ɝ', 'a')
+           
+            syl = syl.replace('g', 'ɡ')
+            syl = syl.replace('̯', '')   # FIX THIS
+            syl = syl.replace('-', "")
+            syl = syl.replace('ˣ', "")
+            #syl = syl.replace('ː', "")
+            syl = syl.replace('ɐ', "a")
+            syl = syl.replace('ˌ', "")
+            syl = syl.replace('̩', "")
+            syl = syl.replace('ˌ', "")
+            syl = syl.replace('-', "")
+            syl = syl.replace('(', ".")
+            syl = syl.replace(')', "")
+            if syl == "" : continue
+            
             stress = ( syl[0] == "ˈ" )    
             if stress : 
-                syl = syl [1:]  
+                syl = syl [1:] 
                 s = treat_syl(syl, stress)
                 syllables.append(s)
             

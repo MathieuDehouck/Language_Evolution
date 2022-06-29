@@ -27,14 +27,14 @@ i = IPA.get_IPA()
 
 path = "slava"
 
-depth = 42 # depth of a branch
+depth = 20 # depth of a branch
 nbranches = 1 # number of branches
 
 
 
 # We choose a language to play with 
 
-lang = get_language("latin_classique.txt", "latin")
+lang = get_language("latin_classique.txt", "Latin")
 
 #st = State(lang)
 
@@ -136,7 +136,7 @@ evolution_2_log(time, "raw_data.txt")
 # sale 
 
 
-def get_couples(changer) :
+def get_couples(changer, clean_diacritics = False) :
     
     
     exs_set = []
@@ -146,18 +146,44 @@ def get_couples(changer) :
     
     for key, value in root.voc.items() :
        
+        
+        val = value.ipa
+        
+        if clean_diacritics :
+        
+            val = val.replace(":", "")
+            val = val.replace("'", "")
+            val = val.replace(".", "")
+            val = val.replace(".", "")
+            val = val.replace("'", "")
+            val = val.replace("'", "")
+        
        
         form_list = []
         for lf in lvs : 
             if lf.language.voc[key].ipa not in form_list :
-                form_list.append(lf.language.voc[key].ipa)
+                form = lf.language.voc[key].ipa
+          
+                if clean_diacritics :
+                
+                    form = form.replace(":", "")
+                    form = form.replace("'", "")
+                    form = form.replace(".", "")
+                    form = form.replace(".", "")
+                    form = form.replace("'", "")
+                    form = form.replace("'", "")
+                    
+                
+                    
+                    
+                form_list.append(form)
         for form in form_list : 
-           exs_set.append([value.ipa , form ])
+           exs_set.append([val , form ])
     
-    return exs_set 
+    return exs_set
 
 
-couples = get_couples(time)
+couples = get_couples(time, True)
 
 os.chdir('../')
 fp = open("shared.pkl","wb")

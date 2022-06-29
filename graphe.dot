@@ -1,311 +1,179 @@
 digraph " We display the history of a word" {
-label = "tropo
-impenetrabilis
-destrugere
-zeugma
-melis
-escarius
-coratio
-odoratus
-paresco
-invirdesco" 
+label = "delicatio
+columbinus
+decembrius
+sennus
+fetiolus
+haunio
+veranum
+hypaethrus
+socra
+latinae" 
 graph[rankdir="LR"];
 node [style="filled", fillcolor = "white"];
 edge [style="solid", color="purple"];
-0 [label="'tro.po:
-im.pe.rẽ.tna:.bi.lis
-rɘ:s'tʰdʉ.ɡɘ.rɘ
-'zeʉɡ.ma
-'me.lis
-ä:s.kɘ:.rɨ.ʉsʰ
-ko.rã:.ti.o:
-o.rõ:.dã:.tʉs
-pa:'res.ko:
-ir.win.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-1 [label="'tro.po:
-im.pe.re.tna:.bi.lis
-rɘ:s'tdu.ɡɘ.rɘ
-'zeuɡ.ma
-'me.lis
-ɘ:s.kä:.rɨ.us
-ko.ra:.ti.o:
-o.ro:.da:.tus
-pa:'res.ko:
-ir.win.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-2 [label="'tro.po:
-ø:b.py:.rẽ:.tnɶ:.my:.ly:s
-dɘ:s'tʰrʉ.ɡɘ:.rɘ:
-'zøʉɡ.mɶ:
-'my.lø:s
-ɘ:s.kä:.rɨ:.ʉ:s
-ko:.rã:.ty:.o:
-o:.dõ:.rã:.tʉ:s
-pɶ:'røs.kʰo:
-ø:d.wy:n.ry:s.kʰo:", fillcolor= white, color="purple",  fontcolor="red"];
-3 [label="'tro.po:
-im.pe.ne'tra:.bi.lis
-de:s'tru.ɡe.re
-'zeuɡ.ma
-'me.lis
-e:s'ka:.ri.us
-ko'ra:.ti.o:
-o.do:'ra:.tus
-pa:'res.ko:
-in.wir'de:s.ko:", fillcolor= white, color="purple",   shape = doubleoctagon,  fontcolor="red"];
-4 [label="'t̟r̟o.po:
-ø:b.py:.rẽ:.tnɶ:.my:.ly:s
-d̟ɘ:θ'tʰr̟ʉ.ɡɘ:.r̟ɘ:
-'ðøʉɡ.mɶ:
-'my.l̟ø:θ
-ɘ:s.kä:.rɨ:.ʉ:s
-ko:.r̟ã:.t̟y:.o:
-o:.dõ:.rã:.tʉ:s
-pɶ:'r̟øθ.kʰo:
-ø:d.wy:n.ry:s.kʰo:", fillcolor= white, color="purple",  fontcolor="red"];
-5 [label="'tro.po:
-e:b.pi:.rẽ:.tna:.mi:.li:s
-dɘ:s'tʰrʉ.ɡɘ:.rɘ:
-'zeʉɡ.ma:
-'mi.le:s
-ä:s.kɘ:.rɨ:.ʉ:s
-ko:.rã:.ti:.o:
-o:.dõ:.rã:.tʉ:s
-pa:'res.ko:
-e:r.wi:n.di:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-6 [label="'tro.po:
-e:m.pi:.nẽ:.tra:.bi:.li:s
-rɘ:s'tʰdʉ.ɡɘ:.rɘ:
-'zeʉɡ.ma:
-'mi.le:s
-ä:s.kɘ:.rɨ:.ʉ:s
-ko:.rã:.ti:.o:
-o:.rõ:.dã:.tʉ:s
-pa:'res.ko:
-e:n.wi:r.di:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-7 [label="'tro.po:
-i:m.pe:.nẽ:.tra:.bi:.li:s
-rɘ:s'tʰdʉ.ɡɘ:.rɘ:
-'zeʉɡ.ma:
-'me.li:s
-ä:s.kɘ:.rɨ:.ʉ:sʰ
-ko:.rã:.ti:.o:
-o:.rõ:.dã:.tʉ:s
-pa:'res.ko:
-i:n.wi:r.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-8 [label="'tro.po:
-e:b.pi:.rẽ:.tna:.mi:.li:s
-dɘ:s'tʰrʉ.ɡɘ:.rɘ:
-'zeʉɡ.ma:
-'mi.le:s
-ɘ:s.kä:.rɨ:.ʉ:s
-ko:.rã:.ti:.o:
-o:.dõ:.rã:.tʉ:s
-pa:'res.kʰo:
-e:r.wi:n.di:s.kʰo:", fillcolor= white, color="purple",  fontcolor="red"];
-9 [label="'tro.po:
-e:b.pi:.rẽ:.tna:.mi:.li:s
-dɘ:s'tʰrʉ.ɡɘ:.rɘ:
-'zeʉɡ.ma:
-'mi.le:s
-ɘ:s.kä:.rɨ:.ʉ:s
-ko:.rã:.ti:.o:
-o:.dõ:.rã:.tʉ:s
-pa:'res.ko:
-e:r.wi:n.di:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-10 [label="'t̟ʰr̟o.pʰo:
-ø:b.pʰy:.rẽ:.tʰnɶ:.my:.ly:s
-d̟ɘ:θ'tʰr̟ʉ.ɡɘ:.r̟ɘ:
-'ðøɨɡ.βɶ:
-'βy.l̟ø:ð
-ɘ:s.kʰä:.rɨ:.ʉ:s
-kʰo:.r̟ã:.t̟ʰy:.o:
-o:.dõ:.rã:.tʰʉ:s
-pʰɶ:'r̟øð.kʰo:
-ø:d.wy:n.ry:s.kʰo:", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-11 [label="'tro.po:
-im.pe.ne.tra:.bi.lis
-dɘ:s'tʰrʉ.ɡɘ.rɘ
-'zeʉɡ.ma
-'me.lis
-ä:s.kɘ:.rɨ.ʉsʰ
-ko.ra:.ti.o:
-o.do:.ra:.tʉs
-pa:'res.ko:
-in.wir.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-12 [label="'tro.po:
-i:m.pe:.rẽ:.tna:.bi:.li:s
-rɘ:s'tʰdʉ.ɡɘ:.rɘ:
-'zeʉɡ.ma:
-'me.li:s
-ä:s.kɘ:.rɨ:.ʉ:sʰ
-ko:.rã:.ti:.o:
-o:.rõ:.dã:.tʉ:s
-pa:'res.ko:
-i:r.wi:n.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-13 [label="'t̟ʰr̟o.pʰo:
-ø:b.pʰy:.rẽ:.tʰnɶ:.my:.ly:s
-d̟ɘ:θ'tʰr̟ʉ.ɡɘ:.r̟ɘ:
-'ðøʉɡ.βɶ:
-'βy.l̟ø:ð
-ɘ:s.kʰä:.rɨ:.ʉ:s
-kʰo:.r̟ã:.t̟ʰy:.o:
-o:.dõ:.rã:.tʰʉ:s
-pʰɶ:'r̟øð.kʰo:
-ø:d.wy:n.ry:s.kʰo:", fillcolor= white, color="purple",  fontcolor="red"];
-14 [label="'tro.po:
-im.pe.ne.tra:.bi.lis
-dɘ:s'trʉ.ɡɘ.rɘ
-'zeʉɡ.ma
-'me.lis
-ä:s.kɘ:.rɨ.ʉs
-ko.ra:.ti.o:
-o.do:.ra:.tʉs
-pa:'res.ko:
-in.wir.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-15 [label="'tro.po:
-ø:b.py:.rẽ:.tnɶ:.my:.ly:s
-dɘ:s'tʰrʉ.ɡɘ:.rɘ:
-'zøʉɡ.mɶ:
-'my.lø:s
-ɘ:s.kä:.rɨ:.ʉ:s
-ko:.rã:.ty:.o:
-o:.dõ:.rã:.tʉ:s
-pɶ:'røs.kʰo:
-ø:r.wy:n.dy:s.kʰo:", fillcolor= white, color="purple",  fontcolor="red"];
-16 [label="'tro.po:
-im.pe.ne.tra:.bi.lis
-de:s'tru.ɡe.re
-'zeuɡ.ma
-'me.lis
-e:s.ka:.ri.us
-ko.ra:.ti.o:
-o.do:.ra:.tus
-pa:'res.ko:
-in.wir.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-17 [label="'tro.po:
-im.pe.re.tna:.bi.lis
-rɘ:s'tʰdʉ.ɡɘ.rɘ
-'zeʉɡ.ma
-'me.lis
-ä:s.kɘ:.rɨ.ʉsʰ
-ko.ra:.ti.o:
-o.ro:.da:.tʉs
-pa:'res.ko:
-ir.win.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-18 [label="'tro.po:
-im.pe.ne.tra:.bi.lis
-dɘ:s'tru.ɡɘ.rɘ
-'zeuɡ.ma
-'me.lis
-ä:s.kɘ:.rɨ.us
-ko.ra:.ti.o:
-o.do:.ra:.tus
-pa:'res.ko:
-in.wir.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-19 [label="'tro.po:
-im.pe.re.tna:.bi.lis
-rɘ:s'tdu.ɡɘ.rɘ
-'zeuɡ.ma
-'me.lis
-ä:s.kɘ:.rɨ.us
-ko.ra:.ti.o:
-o.ro:.da:.tus
-pa:'res.ko:
-ir.win.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-20 [label="'tro.po:
-im.pe.ne.tra:.bi.lis
-dɘ:s'tʰrʉ.ɡɘ.rɘ
-'zeʉɡ.ma
-'me.lis
-ɘ:s.kä:.rɨ.ʉsʰ
-ko.ra:.ti.o:
-o.do:.ra:.tʉs
-pa:'res.ko:
-in.wir.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-21 [label="'tro.po:
-im.pe.re.tna:.bi.lis
-rɘ:s'tʰdʉ.ɡɘ.rɘ
-'zeʉɡ.ma
-'me.lis
-ɘ:s.kä:.rɨ.ʉsʰ
-ko.ra:.ti.o:
-o.ro:.da:.tʉs
-pa:'res.ko:
-ir.win.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-22 [label="'t̟r̟o.po:
-ø:b.py:.rẽ:.tnɶ:.my:.ly:s
-d̟ɘ:θ'tʰr̟ʉ.ɡɘ:.r̟ɘ:
-'ðøʉɡ.βɶ:
-'βy.l̟ø:ð
-ɘ:s.kä:.rɨ:.ʉ:s
-ko:.r̟ã:.t̟y:.o:
-o:.dõ:.rã:.tʉ:s
-pɶ:'r̟øð.kʰo:
-ø:d.wy:n.ry:s.kʰo:", fillcolor= white, color="purple",  fontcolor="red"];
-23 [label="'t̟r̟o.po:
-ø:b.py:.rẽ:.tnɶ:.my:.ly:s
-d̟ɘ:θ'tʰr̟ʉ.ɡɘ:.r̟ɘ:
-'ðøʉɡ.βɶ:
-'βy.l̟ø:θ
-ɘ:s.kä:.rɨ:.ʉ:s
-ko:.r̟ã:.t̟y:.o:
-o:.dõ:.rã:.tʉ:s
-pɶ:'r̟øθ.kʰo:
-ø:d.wy:n.ry:s.kʰo:", fillcolor= white, color="purple",  fontcolor="red"];
-24 [label="'tro.po:
-e:m.pi:.rẽ:.tna:.bi:.li:s
-dɘ:s'tʰrʉ.ɡɘ:.rɘ:
-'zeʉɡ.ma:
-'mi.le:s
-ä:s.kɘ:.rɨ:.ʉ:s
-ko:.rã:.ti:.o:
-o:.dõ:.rã:.tʉ:s
-pa:'res.ko:
-e:r.wi:n.di:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-25 [label="'tro.po:
-e:m.pi:.nẽ:.tra:.bi:.li:s
-rɘ:s'tʰdʉ.ɡɘ:.rɘ:
-'zeʉɡ.ma:
-'mi.le:s
-ä:s.kɘ:.rɨ:.ʉ:sʰ
-ko:.rã:.ti:.o:
-o:.rõ:.dã:.tʉ:s
-pa:'res.ko:
-e:n.wi:r.di:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-26 [label="'tro.po:
-im.pe.ne.tra:.bi.lis
-dɘ:s'tru.ɡɘ.rɘ
-'zeuɡ.ma
-'me.lis
-ɘ:s.kä:.rɨ.us
-ko.ra:.ti.o:
-o.do:.ra:.tus
-pa:'res.ko:
-in.wir.de:s.ko:", fillcolor= white, color="purple",  fontcolor="red"];
-13 -> 10;
-22 -> 13[style="solid", color="green"];
-23 -> 22[style="solid", color="green"];
-4 -> 23[style="solid", color="green"];
-2 -> 4[style="solid", color="green"];
-15 -> 2[style="solid", color="green"];
-8 -> 15[style="solid", color="red"];
-9 -> 8[style="solid", color="green"];
-5 -> 9[style="solid", color="green"];
-24 -> 5[style="solid", color="red"];
-6 -> 24[style="solid", color="red"];
-25 -> 6[style="solid", color="red"];
-7 -> 25[style="solid", color="green"];
-12 -> 7[style="solid", color="red"];
-0 -> 12[style="solid", color="red"];
-17 -> 0[style="solid", color="blue"];
-21 -> 17[style="solid", color="green"];
-20 -> 21[style="solid", color="red"];
-11 -> 20[style="solid", color="red"];
-14 -> 11[style="solid", color="red"];
-18 -> 14[style="solid", color="green"];
-19 -> 18[style="solid", color="green"];
-1 -> 19[style="solid", color="red"];
-26 -> 1[style="solid", color="red"];
-16 -> 26[style="solid", color="red"];
-3 -> 16[style="solid", color="green"];
+0 [label="de.l̥i'ka.ti.o:
+ko.l̥ʊm̥'bi:.n̥ʊs
+de'kem̥.br̥i.us
+'sen̥.nʊs
+fe:'ti.o.lʊs
+'hau.ni.o:
+we:'r̥a:.n̥ʊm̥
+hy'pae.tʰrʊs
+'so.kra
+la'ti:.n̥ae", fillcolor= white, color="purple",  fontcolor="red"];
+1 [label="n͜zi.n̼͜l̥̟̟e'ŋ͜xa.n̼͜θ̼i.o:
+ŋ͜xo.n̼͜n̼̥ʊm͜m̥'m͜βi:.n̼͜l̥̟̟ʊn̼͜θ̼
+n͜zi'ŋ͜xem͜m̥.m͜βn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fi:'n͜se.o.n͜lʊn͜s
+'n͜ħiu.n͜na.o:
+m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
+n͜ħy'm͜ɸae.tʰn͜rʊn͜s
+'n͜so.ŋ͜xn͜ra
+n͜la'n̼͜θ̼e:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
+2 [label="n͜ze.n̼͜l̥̟̟i'ŋ͜xa.n̼͜θ̼i.o:
+ŋ͜xo.n̼͜n̼̥ʊm͜m̥'m͜βi:.n̼͜l̥̟̟ʊn̼͜θ̼
+n͜ze'ŋ͜xim͜m̥.m͜βn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fe:'n͜si.o.n͜lʊn͜s
+'n͜ħiu.n͜na.o:
+m͜wa:'n̼͜r̥̟̟e:.n̼͜n̼̥ʊm͜m̥
+n͜ħy'm͜ɸea.tʰn͜rʊn͜s
+'n͜so.ŋ͜xn͜ra
+n͜le'n̼͜θ̼a:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
+3 [label="n͜zi.n̼͜θ̼e'ŋ͜xa.n̼͜l̥̟̟i.o:
+ŋ͜xo.n̼͜l̥̟̟ʊm͜m̥'m͜βi:.n̼͜n̼̥ʊn̼͜θ̼
+n͜zi'ŋ͜xem͜m̥.m͜βn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fi:'n͜se.o.n͜lʊn͜s
+'n͜ħiu.n͜na.o:
+m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
+n͜ħy'm͜ɸae.tʰn͜rʊn͜s
+'n͜so.ŋ͜xn͜ra
+n͜la'n̼͜θ̼e:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
+4 [label="n͜di.n̼͜t̼e'ŋ͜ka.n̼͜l̥̟̟i.o:
+ŋ͜ko.n̼͜l̥̟̟ʊm͜m̥'m͜bi:.n̼͜n̼̥ʊn̼͜θ̼
+n͜di'ŋ͜kem͜m̥.m͜bn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fi:'n͜te.o.n͜lʊn͜s
+'n͜hiu.n͜na.o:
+m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
+n͜hy'm͜pae.tʰn͜rʊn͜s
+'n͜so.ŋ͜kn͜ra
+n͜li'n̼͜t̼a:.n̼͜n̼̥ae", fillcolor= white, color="purple",  fontcolor="red"];
+5 [label="n͜de.n̼͜t̼i'ŋ͜ka.n̼͜l̥̟̟i.o:
+ŋ͜ko.n̼͜l̥̟̟ʊm͜m̥'m͜bi:.n̼͜n̼̥ʊn̼͜θ̼
+n͜de'ŋ͜kem͜m̥.m͜bn͜r̥i.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fe:'n͜ti.o.n͜lʊn͜s
+'n͜hau.n͜ni.o:
+m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
+n͜hy'm͜pae.tʰn͜rʊn͜s
+'n͜so.ŋ͜kn͜ra
+n͜la'n̼͜t̼i:.n̼͜n̼̥ae", fillcolor= white, color="purple",  fontcolor="red"];
+6 [label="n͜de.n̼͜l̥̟̟i'ŋ͜ka.n̼͜t̼i.o:
+ŋ͜ko.n̼͜l̥̟̟ʊm͜m̥'m͜bi:.n̼͜n̼̥ʊn̼͜θ̼
+n͜de'ŋ͜kem͜m̥.m͜bn͜r̥i.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fe:'n͜ti.o.n͜lʊn͜s
+'n͜hau.n͜ni.o:
+m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
+n͜hy'm͜pae.tʰn͜rʊn͜s
+'n͜so.ŋ͜kn͜ra
+n͜la'n̼͜t̼i:.n̼͜n̼̥ae", fillcolor= white, color="purple",  fontcolor="red"];
+7 [label="n͜ze.n̼͜θ̼i'ŋ͜xa.n̼͜l̥̟̟i.o:
+ŋ͜xo.n̼͜l̥̟̟ʊm͜m̥'m͜βi:.n̼͜n̼̥ʊn̼͜θ̼
+n͜ze'ŋ͜xim͜m̥.m͜βn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fe:'n͜si.o.n͜lʊn͜s
+'n͜hiu.n͜na.o:
+m͜wa:'n̼͜r̥̟̟e:.n̼͜n̼̥ʊm͜m̥
+n͜hy'm͜ɸea.tʰn͜rʊn͜s
+'n͜so.ŋ͜xn͜ra
+n͜le'n̼͜θ̼a:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
+8 [label="n͜ze.n̼͜θ̼i'ŋ͜xa.n̼͜l̥̟̟i.o:
+ŋ͜xo.n̼͜l̥̟̟ʊm͜m̥'m͜βi:.n̼͜n̼̥ʊn̼͜θ̼
+n͜ze'ŋ͜xim͜m̥.m͜βn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fe:'n͜si.o.n͜lʊn͜s
+'n͜ħiu.n͜na.o:
+m͜wa:'n̼͜r̥̟̟e:.n̼͜n̼̥ʊm͜m̥
+n͜ħy'm͜ɸea.tʰn͜rʊn͜s
+'n͜so.ŋ͜xn͜ra
+n͜le'n̼͜θ̼a:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
+9 [label="n͜zi.n̼͜θ̼e'ŋ͜xa.n̼͜l̥̟̟i.o:
+ŋ͜xo.n̼͜l̥̟̟ʊm͜m̥'m͜βi:.n̼͜n̼̥ʊn̼͜θ̼
+n͜zi'ŋ͜xem͜m̥.m͜βn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fi:'n͜se.o.n͜lʊn͜s
+'n͜hiu.n͜na.o:
+m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
+n͜hy'm͜ɸae.tʰn͜rʊn͜s
+'n͜so.ŋ͜xn͜ra
+n͜la'n̼͜θ̼e:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
+10 [label="n͜de.n̼͜t̼i'ŋ͜ka.n̼͜l̥̟̟i.o:
+ŋ͜ko.n̼͜l̥̟̟ʊm͜m̥'m͜bi:.n̼͜n̼̥ʊn̼͜θ̼
+n͜de'ŋ͜kim͜m̥.m͜bn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fe:'n͜ti.o.n͜lʊn͜s
+'n͜hiu.n͜na.o:
+m͜wa:'n̼͜r̥̟̟e:.n̼͜n̼̥ʊm͜m̥
+n͜hy'm͜pea.tʰn͜rʊn͜s
+'n͜so.ŋ͜kn͜ra
+n͜le'n̼͜t̼a:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
+11 [label="de.l̥̟̟i'ka.t̼i.o:
+ko.l̥̟̟ʊm̥'bi:.n̼̥ʊθ̼
+de'kem̥.br̥i.us
+'sen̥.nʊs
+fe:'ti.o.lʊs
+'hau.ni.o:
+we:'r̥̟̟a:.n̼̥ʊm̥
+hy'pae.tʰrʊs
+'so.kra
+la't̼i:.n̼̥ae", fillcolor= white, color="purple",  fontcolor="red"];
+12 [label="n͜zi.n̼͜l̥̟̟e'ŋ͜xa.n̼͜θ̼i.o:
+ŋ͜xo.n̼͜n̼̥ʊm͜m̥'m͜βi:.n̼͜l̥̟̟ʊn̼͜θ̼
+n͜zi'ŋ͜xem͜m̥.m͜βn͜r̥e.un͜s
+'n͜sen͜n̥.n͜nʊn͜s
+ɱ͜fi:'n͜se.o.n͜lʊn͜s
+'n͜ħiu.n͜na.o:
+m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
+n͜ħy'm͜ɸae.tʰn͜rʊn͜s
+'n͜so.ŋ͜xn͜rã
+n͜lã'n̼͜θ̼ẽ:.n̼͜n̼̥ãĩ", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+13 [label="de.li'ka.ti.o:
+ko.lʊm'bi:.nʊs
+de'kem.bri.us
+'sen.nʊs
+fe:'ti.o.lʊs
+'hau.ni.o:
+we:'ra:.nʊm
+hy'pae.tʰrʊs
+'so.kra
+la'ti:.nae", fillcolor= white, color="purple",  fontcolor="red"];
+14 [label="de.li'ka.ti.o:
+ko.lum'bi:.nus
+de'kem.bri.us
+'sen.nus
+fe:'ti.o.lus
+'hau.ni.o:
+we:'ra:.num
+hy'pae.tʰrus
+'so.kra
+la'ti:.nae", fillcolor= white, color="purple",   shape = doubleoctagon,  fontcolor="red"];
+1 -> 12;
+2 -> 1[style="solid", color="green"];
+8 -> 2[style="solid", color="red"];
+3 -> 8[style="solid", color="red"];
+9 -> 3[style="solid", color="red"];
+7 -> 9[style="solid", color="green"];
+10 -> 7[style="solid", color="red"];
+4 -> 10[style="solid", color="green"];
+5 -> 4[style="solid", color="red"];
+6 -> 5[style="solid", color="red"];
+11 -> 6[style="solid", color="red"];
+0 -> 11[style="solid", color="green"];
+13 -> 0[style="solid", color="green"];
+14 -> 13[style="solid", color="green"];
 }

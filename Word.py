@@ -189,6 +189,7 @@ class Syllable(object) :
             vow = [phon.is_Vowel() for phon in self.phonemes]
             if True in vow : id_center = vow.index(True)
 
+        
         self.center = self.phonemes[id_center]
         
         if self.stress:
@@ -281,6 +282,7 @@ class Syllable(object) :
         a syllable is equal to antoher syllable if it contains the same phonemes ,and have same stress, length and tone
             
         """
+        if other == None : return False
         if self.phonemes != other.phonemes:                    
             return False
         if self.length != other.length : return False
