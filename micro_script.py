@@ -90,13 +90,13 @@ if platform != 'linux':
     os.startfile(path3 )
 
 
-"""
+
 print("We will now retro engineer the changes")
 
 lc = Log_changer(origin, path3)
-test_retro , ch = lc.change(origin, nb_changes)
+test_retro , ch = lc.change(origin, depth)
 test_retro.print_both(new_language)
-"""
+
 
 
 #time.tree.print_history_to_graph("virdia")
@@ -105,12 +105,12 @@ test_retro.print_both(new_language)
 #print(lang.voc)
 #time.tree.history_to_graph(['virdia', 'abante'])
 #time.tree.history_to_graph(['virdia', 'abante'])
-t = time.tree.get_final_state_of_the_evolution()
+#t = time.tree.get_final_state_of_the_evolution()
 #for l in t : print (l.voc['virdia'])
 
 #time.tree.print_history_to_graph_reduced("virdia")
 
-time.show_of_the_evolution(10)
+#time.show_of_the_evolution(10)
 
 #lf = random.choice(t)
 #lf.evaluate_proximity(origin)

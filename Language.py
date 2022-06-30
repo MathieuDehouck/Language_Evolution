@@ -7,6 +7,7 @@ Created on Thu May  5 09:28:54 2022
 Contains the Languge class
 """
 from utilitaries import printl, feature_indices
+from nltk.metrics.distance import edit_distance as nltk_dist
 
 
 
@@ -246,6 +247,24 @@ class Language() :
                     if pho.features[ids[0]][ids[1]] == other_pho.features[ids[0]][ids[1]] : match += 1
     
         return match /total 
+    
+    
+    
+    
+    def Levensthein(self, other) :
+        """
+        Use the nltk library edit distance implementation to calculate the averaged Levensthein distance 
+        on all the words of a language
+
+        Parameters
+        ----------
+        other :Language
+        """
+        
+        lev = 0    
+        for key, wd in self.voc.items() :  
+            lev += nltk_dist(wd.ipa, other.voc[key].ipa)     
+        return lev / len(self.voc)
         
         
         
@@ -264,12 +283,13 @@ class Language() :
         invent_sim , diff = self.inventory_comparison(other)
         phon_sim = self.phoneme_comparison(other)
         feat_sim = self.feature_comparison(other)
-    
+        lev = self.Levensthein(other)
     
         print("Phonetic inventory similarity ", invent_sim, "%")
         print()
-        print("Phoneme match similarity ", phon_sim, "%")
+        print("Exact Phoneme match similarity ", phon_sim, "%")
         print()
+        print("Levensthein distance (nltk implementaiton", lev, "%" )
         print("Feature match similarity", feat_sim, "%")
     
         print("different phonemes :")

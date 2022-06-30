@@ -116,6 +116,9 @@ class Effect (object) :
             
     def decode_e(string) :
         
+        print("We decode an effect")
+        print(string)
+        
         effect ={}
         
         string = string.split(":")

@@ -7,7 +7,7 @@ Created on Tue May 17 13:04:22 2022
 Class representing a changer that applies the linguistic change. It automatically generates changes using the change generator it has been given, and apply them to a given language.
 """
 
-from Change  import P_change, I_change
+from Change  import Change, P_change, I_change, M_change, S_change
 from Tree import  L_tree
 from tqdm import tqdm, trange
 from Generator import Change_Generator
@@ -296,7 +296,7 @@ class Log_changer(Changer) :
           
      
      def change_u (self, lang, index ) :
-          change = P_change.decode_change(self.file[index])
+          change = Change.decode_change(self.file[index])
           print(self.file[index])
           nl, wc  = change.apply_language(lang)
           return nl, change, wc

@@ -167,13 +167,13 @@ def bewilder_pattern(pattern, index = None, verbose = False) :
     """
     idx = feature_indices(pattern)
     
-    if type(index ) != tuple : index = random.choices(len(idx))
+    if type(index ) != tuple : index = random.choices(idx)[0]
     
     if verbose : 
         print(pattern)
         print(idx)
         print(index)
-        
+    
     while pattern[index[0]][index[1]] == -1 :
         index = random.choice(idx)
     

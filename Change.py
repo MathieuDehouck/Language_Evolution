@@ -571,7 +571,7 @@ class P_change(Change) :
     
     
     
-    def decode_change(string, verbose = False) :
+    def decode_change(string, verbose = True) :
         # the string coding a change encompass four parts. 
         s = string.split("\t")
         if verbose : print(s[1][4:])
@@ -817,6 +817,12 @@ class M_change(Change) :
         self.concerns_V =  (len(target[1] ) == 2 )
         self.progressive = progressive
         self.regressive  = regressive
+        
+        
+        # to prevent pb in decoding if the effect is considered as a str
+        if type(self.index) != tuple :
+            self.index = tuple([int(self.index[1]), int(self.index[4])])
+        
      #we consider that methathesis only happen once in a word, and in a linear order (aspiration report..)  
     
     
@@ -850,6 +856,7 @@ class M_change(Change) :
                 if not  self.progressive : d = i
                 if not self.regressive : f = i
                 for pho2 in wd.phonemes[d:f] :
+                    
                     if mask_match(target_bis, pho2.features, self.concerns_V) and pho2.features[self.index[0]][self.index[1]] != ph.features[self.index[0]][self.index[1]] :
                         swap_flag = True
                         i1 = ph.word_rank  
@@ -1136,12 +1143,3 @@ def decode_log(path, copy_back = False) :
                 print(lf2[i])
                 return  False
         return True
-        
-
-
-
-
-
-
-
-
