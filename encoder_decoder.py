@@ -135,6 +135,7 @@ def decode_f (string) :
         if string[3+dec] == "*" : manner = -1
         else : manner = letter_2_manner[string[3+dec]]
         
+        voice = dt(string,5+dec)
         
         if string[7+dec] == '*' : sec_place = -1
         else :
@@ -144,10 +145,8 @@ def decode_f (string) :
             else : sec_place = int(string[7+dec])
         
         
-        
-        #print(string)
-        tupl1 = (place, manner, dt(string,5+dec))
-        tupl2 = (  dt(string,7+dec),  dt(string,9+dec),  dt(string,11+dec)) 
+        tupl1 = (place, manner, voice )
+        tupl2 = (  sec_place,  dt(string,9+dec),  dt(string,11+dec)) 
    
             
     tupl = (tupl1, tupl2)
