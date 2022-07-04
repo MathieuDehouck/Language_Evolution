@@ -169,7 +169,7 @@ class Language() :
 
     
 
-    def inventory_comparison(self, other) :
+    def inventory_comparison(self, other, verbose) :
         """
         Compare the phonetic inventory of two language
 
@@ -181,10 +181,11 @@ class Language() :
         if self.phonemes == None : self.set_phonetic_inventory()
         if other.phonemes == None : other.set_phonetic_inventory()
         
-        printl(self.phonemes)
-        print()
-        print()
-        printl(other.phonemes)
+        if verbose :
+            printl(self.phonemes)
+            print()
+            print()
+            printl(other.phonemes)
         
         tot = [x for x in self.phonemes ] + [x for x in other.phonemes if x not in self.phonemes]
         match = len( [x for x in self.phonemes if x in other.phonemes ] )
@@ -270,7 +271,7 @@ class Language() :
         
         
         
-    def evaluate_proximity(self, other ) :
+    def evaluate_proximity(self, other , verbose = False) :
         """
         Compare two languages using various metrics. 
 
@@ -280,7 +281,7 @@ class Language() :
         """
         
         
-        invent_sim , diff = self.inventory_comparison(other)
+        invent_sim , diff = self.inventory_comparison(other, verbose)
         phon_sim = self.phoneme_comparison(other)
         feat_sim = self.feature_comparison(other)
         lev = self.Levensthein(other)
@@ -292,9 +293,12 @@ class Language() :
         print("Levensthein distance (nltk implementaiton", lev )
         print()
         print("Feature match similarity", feat_sim, "%")
-    
-        print("different phonemes :")
-        printl(diff)
+        """
+        if verbose :
+            print("different phonemes :") 
+            printl(diff)
+        """
+        return(phon_sim)
         
     
     

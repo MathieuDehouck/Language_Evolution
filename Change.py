@@ -841,7 +841,13 @@ class M_change(Change) :
     
     def __eq__(self, other) :
         if other == None : return False
-        return self.target == other.target and self.index == other.index and self.conditions == other.conditions and self.effect == other.effect and self.progressive == other.progressive and self.regressive == other.regressive
+        if not self.target == other.target and self.index == other.index  and self.effect == other.effect and self.progressive == other.progressive and self.regressive == other.regressive : return False
+        for i , cond in enumerate (self.conditions) :
+            if cond != other.conditions[i] : return False
+        return True
+    
+    
+    
     
     
     def apply_word(self, wd):
@@ -850,6 +856,7 @@ class M_change(Change) :
         """
         return self.swap(wd)
         
+    
     
     
     

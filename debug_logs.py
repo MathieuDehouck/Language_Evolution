@@ -39,20 +39,14 @@ bb = Baby_P_change_generator()
 time = Tree_changer(lang, bb) 
 
 
-
+"""
+# TEST 1 : debug at each step 
 
 l = lang
 for i in range(depth) :
     nl, ch, w = time.change_u(l)
-    """
-    print()
-    print("we encode this")
-    print()
-    print()
-    print(ch)
-    print()
-    """
-    
+  
+ 
     st = ch.encode_change()
     ncopy_ch = Change.decode_change(st)
     nl2 , cw = ncopy_ch.apply_language(l)
@@ -82,11 +76,77 @@ for i in range(depth) :
         print(ncopy_ch)
         break
 
+
+    diff = nl.evaluate_proximity(nl2)
+    if diff != 1 : break 
     l = nl
 
+"""    
+    
 
 
 
 
-# target qui fait bugger ((7, (0, 0, 0, 2, 0), 1), (11, 0, 0))
 
+# target qui faisaitt bugger ((7, (0, 0, 0, 2, 0), 1), (11, 0, 0))
+
+
+# TEST 2 compute similarity globally 
+
+l = lang
+l2 = lang
+
+for i in range(depth) :
+    
+    nl, ch, w = time.change_u(l)
+    
+    st = ch.encode_change()
+    ncopy_ch = Change.decode_change(st)
+    
+    nl2 , cw = ncopy_ch.apply_language(l2)
+    
+
+    
+    
+    diff = nl.evaluate_proximity(nl2)
+    if diff != 1 :
+        
+        # TODO
+        # Le problème semble venir des métathèses , le changement n'est pas appliqué à la langue 2 
+        # PB during the application of metathesis. 
+        
+        """
+        for key, value in nl2.voc.items() :
+            if value != nl.voc[key] :
+                print()
+                print("dif wd")
+                print()
+                print("l")
+                print(l.voc[key])
+                print("l2")
+                print(l2.voc[key])
+                print("nl")
+                print(nl.voc[key])
+                print("nl2")
+                print(nl2.voc[key])
+                
+                change = True
+                
+            
+        print()
+        print("old)")
+        print(ch)
+        print()
+        print("new")
+        print(ncopy_ch)
+        """
+        
+        print()
+        print("we lost at ",i)
+        
+    
+    l = nl
+    l2 = nl2
+
+print("verdict")
+l.evaluate_proximity(l2)
