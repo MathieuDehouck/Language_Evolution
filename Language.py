@@ -284,12 +284,13 @@ class Language() :
         phon_sim = self.phoneme_comparison(other)
         feat_sim = self.feature_comparison(other)
         lev = self.Levensthein(other)
-    
+        print()
         print("Phonetic inventory similarity ", invent_sim, "%")
         print()
         print("Exact Phoneme match similarity ", phon_sim, "%")
         print()
-        print("Levensthein distance (nltk implementaiton", lev, "%" )
+        print("Levensthein distance (nltk implementaiton", lev )
+        print()
         print("Feature match similarity", feat_sim, "%")
     
         print("different phonemes :")

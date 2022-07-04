@@ -132,6 +132,7 @@ class Tree_changer(Changer) :
 
         
         nl, wc = change.apply_language(lang)
+        # TODO modify the way the branch is grafted
         self.current_tree.change = change
         self.current_tree.changed_words = wc
         new_tree = L_tree(nl, self.current_tree)

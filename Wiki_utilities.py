@@ -42,7 +42,7 @@ def wiki_lexicon(path) :
     dico = {}
     with open(path,'r', encoding = 'utf8') as doc :
         for line in doc:
-            print(line)
+            #print(line)
             line = line.strip()
             line = line.split('\t')
             if len(line) < 2 :

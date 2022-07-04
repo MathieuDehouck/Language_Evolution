@@ -384,11 +384,15 @@ class P_change(Change) :
         
         base =  tuple_2_list( phon.features)
         idx = feature_indices(self.target)
-        for ind in idx:
-            if ind == self.effect.domain :
-                if phon.features[ind[0]][ind[1]] in self.effect.effect :
-                    base[ind[0]][ind[1]] = self.effect.effect[phon.features[ind[0]][ind[1]]]
-       
+        
+        # TODO some P_Changes do not have any effect
+        
+        if self.effect != None : 
+            for ind in idx:
+                if ind == self.effect.domain :
+                    if phon.features[ind[0]][ind[1]] in self.effect.effect :
+                        base[ind[0]][ind[1]] = self.effect.effect[phon.features[ind[0]][ind[1]]]
+           
         ft = list_2_tuple(base)
         if phon.isV : new_phon = Vowel(ft, phon.syl, phon.speller)
         else : new_phon = Consonant(ft, phon.syl, phon.speller)
@@ -571,12 +575,19 @@ class P_change(Change) :
     
     
     
-    def decode_change(string, verbose = True) :
+    def decode_change(string, verbose = False) :
         # the string coding a change encompass four parts. 
         s = string.split("\t")
-        if verbose : print(s[1][4:])
+        if verbose : 
+            print()
+            print("we decode", string)
+            print()
+            print('target')
+            print(s[1][4:])
         target = decode_f(s[1][4:])
-        if verbose : print(s[2][4:])
+        if verbose : 
+            print('effect')
+            print(s[2][4:])
         effect = Effect.decode_e(s[2][4:])
         
         if verbose : print(s[3][4:].split("  &  "))
@@ -826,6 +837,11 @@ class M_change(Change) :
      #we consider that methathesis only happen once in a word, and in a linear order (aspiration report..)  
     
     
+    
+    
+    def __eq__(self, other) :
+        if other == None : return False
+        return self.target == other.target and self.index == other.index and self.conditions == other.conditions and self.effect == other.effect and self.progressive == other.progressive and self.regressive == other.regressive
     
     
     def apply_word(self, wd):

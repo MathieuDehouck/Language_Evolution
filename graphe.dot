@@ -1,179 +1,639 @@
 digraph " We display the history of a word" {
-label = "delicatio
-columbinus
-decembrius
-sennus
-fetiolus
-haunio
-veranum
-hypaethrus
-socra
-latinae" 
+label = "ajakirjanik
+lavendel
+igaüks
+riiklik
+üheksateistkümnendik" 
 graph[rankdir="LR"];
 node [style="filled", fillcolor = "white"];
 edge [style="solid", color="purple"];
-0 [label="de.l̥i'ka.ti.o:
-ko.l̥ʊm̥'bi:.n̥ʊs
-de'kem̥.br̥i.us
-'sen̥.nʊs
-fe:'ti.o.lʊs
-'hau.ni.o:
-we:'r̥a:.n̥ʊm̥
-hy'pae.tʰrʊs
-'so.kra
-la'ti:.n̥ae", fillcolor= white, color="purple",  fontcolor="red"];
-1 [label="n͜zi.n̼͜l̥̟̟e'ŋ͜xa.n̼͜θ̼i.o:
-ŋ͜xo.n̼͜n̼̥ʊm͜m̥'m͜βi:.n̼͜l̥̟̟ʊn̼͜θ̼
-n͜zi'ŋ͜xem͜m̥.m͜βn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fi:'n͜se.o.n͜lʊn͜s
-'n͜ħiu.n͜na.o:
-m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
-n͜ħy'm͜ɸae.tʰn͜rʊn͜s
-'n͜so.ŋ͜xn͜ra
-n͜la'n̼͜θ̼e:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
-2 [label="n͜ze.n̼͜l̥̟̟i'ŋ͜xa.n̼͜θ̼i.o:
-ŋ͜xo.n̼͜n̼̥ʊm͜m̥'m͜βi:.n̼͜l̥̟̟ʊn̼͜θ̼
-n͜ze'ŋ͜xim͜m̥.m͜βn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fe:'n͜si.o.n͜lʊn͜s
-'n͜ħiu.n͜na.o:
-m͜wa:'n̼͜r̥̟̟e:.n̼͜n̼̥ʊm͜m̥
-n͜ħy'm͜ɸea.tʰn͜rʊn͜s
-'n͜so.ŋ͜xn͜ra
-n͜le'n̼͜θ̼a:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
-3 [label="n͜zi.n̼͜θ̼e'ŋ͜xa.n̼͜l̥̟̟i.o:
-ŋ͜xo.n̼͜l̥̟̟ʊm͜m̥'m͜βi:.n̼͜n̼̥ʊn̼͜θ̼
-n͜zi'ŋ͜xem͜m̥.m͜βn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fi:'n͜se.o.n͜lʊn͜s
-'n͜ħiu.n͜na.o:
-m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
-n͜ħy'm͜ɸae.tʰn͜rʊn͜s
-'n͜so.ŋ͜xn͜ra
-n͜la'n̼͜θ̼e:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
-4 [label="n͜di.n̼͜t̼e'ŋ͜ka.n̼͜l̥̟̟i.o:
-ŋ͜ko.n̼͜l̥̟̟ʊm͜m̥'m͜bi:.n̼͜n̼̥ʊn̼͜θ̼
-n͜di'ŋ͜kem͜m̥.m͜bn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fi:'n͜te.o.n͜lʊn͜s
-'n͜hiu.n͜na.o:
-m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
-n͜hy'm͜pae.tʰn͜rʊn͜s
-'n͜so.ŋ͜kn͜ra
-n͜li'n̼͜t̼a:.n̼͜n̼̥ae", fillcolor= white, color="purple",  fontcolor="red"];
-5 [label="n͜de.n̼͜t̼i'ŋ͜ka.n̼͜l̥̟̟i.o:
-ŋ͜ko.n̼͜l̥̟̟ʊm͜m̥'m͜bi:.n̼͜n̼̥ʊn̼͜θ̼
-n͜de'ŋ͜kem͜m̥.m͜bn͜r̥i.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fe:'n͜ti.o.n͜lʊn͜s
-'n͜hau.n͜ni.o:
-m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
-n͜hy'm͜pae.tʰn͜rʊn͜s
-'n͜so.ŋ͜kn͜ra
-n͜la'n̼͜t̼i:.n̼͜n̼̥ae", fillcolor= white, color="purple",  fontcolor="red"];
-6 [label="n͜de.n̼͜l̥̟̟i'ŋ͜ka.n̼͜t̼i.o:
-ŋ͜ko.n̼͜l̥̟̟ʊm͜m̥'m͜bi:.n̼͜n̼̥ʊn̼͜θ̼
-n͜de'ŋ͜kem͜m̥.m͜bn͜r̥i.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fe:'n͜ti.o.n͜lʊn͜s
-'n͜hau.n͜ni.o:
-m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
-n͜hy'm͜pae.tʰn͜rʊn͜s
-'n͜so.ŋ͜kn͜ra
-n͜la'n̼͜t̼i:.n̼͜n̼̥ae", fillcolor= white, color="purple",  fontcolor="red"];
-7 [label="n͜ze.n̼͜θ̼i'ŋ͜xa.n̼͜l̥̟̟i.o:
-ŋ͜xo.n̼͜l̥̟̟ʊm͜m̥'m͜βi:.n̼͜n̼̥ʊn̼͜θ̼
-n͜ze'ŋ͜xim͜m̥.m͜βn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fe:'n͜si.o.n͜lʊn͜s
-'n͜hiu.n͜na.o:
-m͜wa:'n̼͜r̥̟̟e:.n̼͜n̼̥ʊm͜m̥
-n͜hy'm͜ɸea.tʰn͜rʊn͜s
-'n͜so.ŋ͜xn͜ra
-n͜le'n̼͜θ̼a:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
-8 [label="n͜ze.n̼͜θ̼i'ŋ͜xa.n̼͜l̥̟̟i.o:
-ŋ͜xo.n̼͜l̥̟̟ʊm͜m̥'m͜βi:.n̼͜n̼̥ʊn̼͜θ̼
-n͜ze'ŋ͜xim͜m̥.m͜βn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fe:'n͜si.o.n͜lʊn͜s
-'n͜ħiu.n͜na.o:
-m͜wa:'n̼͜r̥̟̟e:.n̼͜n̼̥ʊm͜m̥
-n͜ħy'm͜ɸea.tʰn͜rʊn͜s
-'n͜so.ŋ͜xn͜ra
-n͜le'n̼͜θ̼a:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
-9 [label="n͜zi.n̼͜θ̼e'ŋ͜xa.n̼͜l̥̟̟i.o:
-ŋ͜xo.n̼͜l̥̟̟ʊm͜m̥'m͜βi:.n̼͜n̼̥ʊn̼͜θ̼
-n͜zi'ŋ͜xem͜m̥.m͜βn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fi:'n͜se.o.n͜lʊn͜s
-'n͜hiu.n͜na.o:
-m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
-n͜hy'm͜ɸae.tʰn͜rʊn͜s
-'n͜so.ŋ͜xn͜ra
-n͜la'n̼͜θ̼e:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
-10 [label="n͜de.n̼͜t̼i'ŋ͜ka.n̼͜l̥̟̟i.o:
-ŋ͜ko.n̼͜l̥̟̟ʊm͜m̥'m͜bi:.n̼͜n̼̥ʊn̼͜θ̼
-n͜de'ŋ͜kim͜m̥.m͜bn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fe:'n͜ti.o.n͜lʊn͜s
-'n͜hiu.n͜na.o:
-m͜wa:'n̼͜r̥̟̟e:.n̼͜n̼̥ʊm͜m̥
-n͜hy'm͜pea.tʰn͜rʊn͜s
-'n͜so.ŋ͜kn͜ra
-n͜le'n̼͜t̼a:.n̼͜n̼̥ai", fillcolor= white, color="purple",  fontcolor="red"];
-11 [label="de.l̥̟̟i'ka.t̼i.o:
-ko.l̥̟̟ʊm̥'bi:.n̼̥ʊθ̼
-de'kem̥.br̥i.us
-'sen̥.nʊs
-fe:'ti.o.lʊs
-'hau.ni.o:
-we:'r̥̟̟a:.n̼̥ʊm̥
-hy'pae.tʰrʊs
-'so.kra
-la't̼i:.n̼̥ae", fillcolor= white, color="purple",  fontcolor="red"];
-12 [label="n͜zi.n̼͜l̥̟̟e'ŋ͜xa.n̼͜θ̼i.o:
-ŋ͜xo.n̼͜n̼̥ʊm͜m̥'m͜βi:.n̼͜l̥̟̟ʊn̼͜θ̼
-n͜zi'ŋ͜xem͜m̥.m͜βn͜r̥e.un͜s
-'n͜sen͜n̥.n͜nʊn͜s
-ɱ͜fi:'n͜se.o.n͜lʊn͜s
-'n͜ħiu.n͜na.o:
-m͜we:'n̼͜r̥̟̟a:.n̼͜n̼̥ʊm͜m̥
-n͜ħy'm͜ɸae.tʰn͜rʊn͜s
-'n͜so.ŋ͜xn͜rã
-n͜lã'n̼͜θ̼ẽ:.n̼͜n̼̥ãĩ", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
-13 [label="de.li'ka.ti.o:
-ko.lʊm'bi:.nʊs
-de'kem.bri.us
-'sen.nʊs
-fe:'ti.o.lʊs
-'hau.ni.o:
-we:'ra:.nʊm
-hy'pae.tʰrʊs
-'so.kra
-la'ti:.nae", fillcolor= white, color="purple",  fontcolor="red"];
-14 [label="de.li'ka.ti.o:
-ko.lum'bi:.nus
-de'kem.bri.us
-'sen.nus
-fe:'ti.o.lus
-'hau.ni.o:
-we:'ra:.num
-hy'pae.tʰrus
-'so.kra
-la'ti:.nae", fillcolor= white, color="purple",   shape = doubleoctagon,  fontcolor="red"];
-1 -> 12;
-2 -> 1[style="solid", color="green"];
-8 -> 2[style="solid", color="red"];
-3 -> 8[style="solid", color="red"];
-9 -> 3[style="solid", color="red"];
-7 -> 9[style="solid", color="green"];
-10 -> 7[style="solid", color="red"];
-4 -> 10[style="solid", color="green"];
-5 -> 4[style="solid", color="red"];
-6 -> 5[style="solid", color="red"];
-11 -> 6[style="solid", color="red"];
-0 -> 11[style="solid", color="green"];
-13 -> 0[style="solid", color="green"];
-14 -> 13[style="solid", color="green"];
+0 [label="ɑ̞jɑ̞kirjɑ̞n̪ʰik
+l̟ɑ̞.venʰt̟el
+iɡɑ̞.yks
+r̟'i:kl
+yhikθɑ̞t̟eestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+1 [label="ɑ̞jɑ̞kirjɑ̞n̪ʰik
+l̟ɑ̞.fenʰt̟el
+iɡɑ̞.yks
+r̟'i:kl
+yhikθɑ̞t̟eestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+2 [label="'ɑ̞jɑ̞kirjɑ̞n̪ʰik
+l̟ɑ̞'venʰt̟el
+'iɡɑ̞'yks
+r̟'i:kl
+'yhikt̟ɑ̞θeestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+3 [label="'ɑ̞̃jɑ̞̃kirjɑ̞̃n̪ʰik
+l̟ɑ̞̃'venʰt̟el
+'iɡɑ̞̃'yks
+r̟'i:kl
+'yhikt̟ɑ̞̃θeestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+4 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.ø:ks
+r:'i:kl
+y:hiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+5 [label="ɑ̞jɑ̞kʰir̟jɑ̞n̪ikʰ
+l̟ɑ̞.ven̪tel̟
+iɡɑ̞.yks
+r̟'i:kl̟
+yhekʰtɑ̞siɪstkʰymn̪en̪d̟ikʰ", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+6 [label="'ɑ̞̥j̊æ̥kin̥j̊ɑ̞̥r̥ik
+l̥ɑ̞̥'fen̥tel̥
+'ikɑ̞̥'yks
+r̥'i:kl̥
+'ihɪktɑ̞̥seistkym̥n̥en̥tik", fillcolor= white, color="purple",  fontcolor="red"];
+7 [label="ʌ̞:jɑ̞kinjɑ̞rik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.ø:ks
+r:'i:kl
+y:hɪktɑ̞seistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+8 [label="'ɑ̞̥jæ̥kirjɑ̞̥nik
+lɑ̞̥'ventel
+'iɡɑ̞̥'yks
+r'i:kl
+'ihɪktɑ̞̥seiztkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+9 [label="'ɑ̞jɑ̞ɰ̊erjɑ̞neɰ̊
+lɑ̞:'ventel
+'eɡɑ̞'yks
+r:'i:kl
+'yhiɰ̊sɑ̞teestkymnendiɰ̊", fillcolor= white, color="purple",  fontcolor="red"];
+10 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yhiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+11 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.vɪ:ntɪl
+i:ɡɑ̞.ø:ks
+r:'i:kl
+y:hiksɑ̞tɪɪstkymnɪndik", fillcolor= white, color="purple",  fontcolor="red"];
+12 [label="ä̞:jä̞ki̥rjä̞ni̥k
+lä̞:.ve̥:nte̥l
+i̥:ɡä̞.y̥:ks
+r:'i̥:kl
+y̥:he̥ktä̞si̥ɪ̥stky̥mne̥ndi̥k", fillcolor= white, color="purple",  fontcolor="red"];
+13 [label="'ɑ̞jɑ̞kirjɑ̞n̪ʰik
+l̟ɑ̞'venʰt̟el
+'iɡɑ̞'yks
+r̟'i:kl
+'yhikθɑ̞t̟eestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+14 [label="ɑ̞:jɑ̞kʰir̟jɑ̞n̪ikʰ
+l̟ɑ̞:.ve:n̪tel̟
+i:ɡɑ̞.y:ks
+r̟:'i:kl̟
+y:hekʰtɑ̞siɪstkʰymn̪en̪d̟ikʰ", fillcolor= white, color="purple",  fontcolor="red"];
+15 [label="ɑ̞:jɑ̞̃kirjɑ̞̃nik
+l̥ɑ̞.fe:n̥tel̥
+i:ɡɑ̞.y:ks
+r̥'i:kl̥
+y:hiktɑ̞seestkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+16 [label="ä̞:jä̞ki̥rjä̞ni̥k
+lä̞:.ve̥:nte̥l
+i̥:ɡä̞.y̥:ks
+r:'i̥:kl
+y̥:he̥ktä̞si̥ɪ̥stky̥mne̥ndi̥k", fillcolor= white, color="purple",  fontcolor="red"];
+17 [label="ɑ̞:ɲ͜jɑ̞kin͜rɲ͜jɑ̞n͜nik
+n͜lɑ̞:.ɱ͜vɪ:n͜ntɪn͜l
+i:ŋ͜ɡɑ̞.ø:ks
+n͜r:'i:kn͜l
+y:hiktɑ̞sɪɪstkym͜mn͜nɪn͜nn͜dik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+18 [label="ä̞:jä̞ki̥rjä̞ni̥k
+lä̞:.ve̥:nte̥l
+i̥:ɡä̞.y̥:ks
+r:'i̥:kl
+y̥:hiktä̞seɪstky̥mnendik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+19 [label="'ɑ̞̥j̊æ̥kir̥j̊ɑ̞̥n̥ik
+l̥ɑ̞̥'fen̥tel̥
+'ikɑ̞̥'yks
+r̥'i:kl̥
+'ihɪktɑ̞̥seistkym̥n̥en̥tik", fillcolor= white, color="purple",  fontcolor="red"];
+20 [label="ʌ̞:jɑ̞kinjɑ̞rik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.ø:ks
+r:'i:kl
+y:hiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+21 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'ihɪksɑ̞teiztkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+22 [label="'ɑ̞̥j̊æ̥kir̥j̊ɑ̞̥n̥ik
+l̥ɑ̞̥'fen̥tel̥
+'ikɑ̞̥'yks
+r̥'i:kl̥
+'iʔ͜hɪktɑ̞̥seistkym̥n̥en̥tik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+23 [label="ɯjɑ̞kɑ̞rjɑ̞n̪ʰɯk
+l̟ɑ̞.vɤnʰt̟ɤl
+ɑ̞ɡɯ.yks
+r̟'ɯ:kl
+yhɤkt̟ɯθɑ̞ɤstkymn̪ʰɤnʰd̟ɯk", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+24 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞:'ventel
+'iɡɑ̞'yks
+r:'i:kl
+'yhiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+25 [label="ɑ̞j̊ɑ̞kirj̊ɑ̞nik
+'nɑ̞:.veltel
+iɡɑ̞.yks
+'l:'i:kr
+yhiktɑ̞seɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+26 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:heksɑ̞tiɪstkymnendik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+27 [label="ɑ̞:ɲ͜jɑ̞kin͜rɲ͜jɑ̞n͜nik
+n͜lɑ̞:.ɱ͜vɪ:n͜ntɪn͜l
+i:ŋ͜ɡɑ̞.ø:ks
+n͜r:'i:kn͜l
+y:hiksɑ̞tɪɪstkym͜mn͜nɪn͜nn͜dik", fillcolor= white, color="purple",  fontcolor="red"];
+28 [label="'ɑ̞̃jɑ̞̃kirjɑ̞̃n̪ʰik
+l̟ɑ̞̃'venʰt̟el
+'iɡɑ̞̃'ykʰs
+n̪'i:kl
+'yhikt̟ɑ̞̃θeestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+29 [label="ɑ̞:jɑ̞kirjɑ̞nik
+l̥ɑ̞.fe:n̥tel̥
+i:ɡɑ̞.y:ks
+r̥'i:kl̥
+y:hiktɑ̞seestkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+30 [label="ɑ̞j̊ɑ̞kirj̊ɑ̞nik
+'lɑ̞:.ventel
+iɡɑ̞.yks
+'r:'i:kl
+yhiktɑ̞seɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+31 [label="'ɑ̞jɑ̞kirjɑ̞n̪ʰik
+l̟ɑ̞'venʰt̟el
+'iɡɑ̞'yks
+r̟'i:kl
+'yhikt̟ɑ̞θeestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+32 [label="ɑ̞j̊ɑ̞kirj̊ɑ̞nik
+'lɑ̞:.ventel
+iɡɑ̞.yks
+'r:'i:kl
+yhiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+33 [label="ɑ̞ɲ͜j̊ɑ̞ŋ͜kin͜rɲ͜j̊ɑ̞n͜niŋ͜k
+'n͜lɑ̞:.ɱ͜ven͜nn͜ten͜l
+iŋ͜ɡɑ̞.yŋ͜kn͜z
+'n͜r:'i:ŋ͜kn͜l
+yn͜hiŋ͜kn͜sɑ̞n͜teɪn͜sn͜tŋ͜kym͜mn͜nen͜nn͜diŋ͜k", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+34 [label="ɑ̞jɯkɑ̞rjɑ̞n̪ʰɯk
+l̟ɑ̞.vɤnʰt̟ɤl
+ɯɡɑ̞.yks
+r̟'ɯ:kl
+yhɯkt̟ɤθɑ̞ɤstkymn̪ʰɤnʰd̟ɯk", fillcolor= white, color="purple",  fontcolor="red"];
+35 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yhektɑ̞seistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+36 [label="'ɑ̞jɑ̞kirjɑ̞n̪ʰik
+l̟ɑ̞'venʰt̟el
+'iɡɑ̞'yks
+r̟'i:kl
+'yhikt̟ɑ̞θeestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+37 [label="ʌ̞:jɑ̞kinjɑ̞rik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.ø:ks
+r:'i:kl
+y:hɪksɑ̞teistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+38 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:hiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+39 [label="ɑ̞:ɲ͜jɑ̞kin͜rɲ͜jɑ̞n͜nik
+n͜lɑ̞:.ɱ͜vɪ:n͜ntɪn͜l
+i:ŋ͜ɡɑ̞.ø:ks
+n͜r:'i:kn͜l
+y:hiktɑ̞sɪɪstkym͜mn͜nɪn͜nn͜dik", fillcolor= white, color="purple",  fontcolor="red"];
+40 [label="'ɑ̞jɑ̞kirjɑ̞nʰik
+lɑ̞'venʰtel
+'iɡɑ̞'yks
+r'i:kl
+'yhiksɑ̞teestkymnʰenʰdik", fillcolor= white, color="purple",  fontcolor="red"];
+41 [label="'ɑ̞jɑ̞kɯrjɑ̞n̪ʰɯk
+l̟ɑ̞'vɤnʰt̟ɤl
+'ɯɡɑ̞'yks
+r̟'ɯ:kl
+'yhɯkt̟ɑ̞θɤɤstkymn̪ʰɤnʰd̟ɯk", fillcolor= white, color="purple",  fontcolor="red"];
+42 [label="ä̞:jä̞ki̥rjä̞ni̥k
+lä̞:.ve̥:nte̥l
+i̥:ɡä̞.y̥:ks
+r:'i̥:kl
+y̥:hi̥ktä̞se̥ɪ̥stky̥mne̥ndi̥k", fillcolor= white, color="purple",  fontcolor="red"];
+43 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yhiksɑ̞teestkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+44 [label="ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞:.ventel
+iɡɑ̞.yks
+r:'i:kl
+yhiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+45 [label="'ɑ̞jɑ̞kɯrjɑ̞n̪ʰɯk
+l̟ɤ'vɑ̞nʰt̟ɤl
+'ɯɡɑ̞'yks
+r̟'ɯ:kl
+'yhɤkt̟ɑ̞θɯɤstkymn̪ʰɤnʰd̟ɯk", fillcolor= white, color="purple",  fontcolor="red"];
+46 [label="ɑ̞jɑ̞kinjɑ̞rik
+nɑ̞:.veltel
+iɡɑ̞.yks
+r:'i:kl
+yhiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+47 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yheksɑ̞teistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+48 [label="'ɑjɑkirjɑnik
+lɑ'ventel
+'iɡɑ'yks
+r'i:kl
+'yheksɑteistkymnendik", fillcolor= white, color="purple",   shape = doubleoctagon,  fontcolor="red"];
+49 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:hektɑ̞siɪstkymnendik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+50 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'ihɪksɑ̞teistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+51 [label="'ɑ̞jɑ̞ɰ̊erjɑ̞neɰ̊
+lɑ̞:'ventel
+'eɡɑ̞'yks
+r:'i:kl
+'yhiɰ̊sɑ̞teestkymʰnendiɰ̊", fillcolor= white, color="purple",  fontcolor="red"];
+52 [label="'ɑ̞jɑ̞ɰ̊erjɑ̞neɰ̊
+lɑ̞'ventel
+'eɡɑ̞'yks
+r'i:kl
+'yhiɰ̊sɑ̞teestkymnendiɰ̊", fillcolor= white, color="purple",  fontcolor="red"];
+53 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yhiksɑ̞teestkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+54 [label="ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞:.ventel
+iɡæ.yks
+r:'i:kl
+yhiksɑ̞teɪstkymdennik", fillcolor= white, color="purple",  fontcolor="red"];
+55 [label="ɑ̞:jɑ̞̃kirjɑ̞̃nik
+l̥̟̟̟ɑ̞.fe:n̥tel̥
+i:ɡɑ̞.y:ks
+r̥'i:kl̥
+y:hikp̪ɑ̞seestkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+56 [label="ɑ̞:jɑ̞kinjɑ̞rik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.ø:ks
+r:'i:kl
+y:hiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+57 [label="'ɑ̞jɑ̞ɰ̊erjɑ̞neɰ̊
+lɑ̞'ventel
+'eɡɑ̞'yks
+r'i:kl
+'yhiɰ̊sɑ̞teestkymnendiɰ̊", fillcolor= white, color="purple",  fontcolor="red"];
+58 [label="ä̞:jä̞ki̥rjä̞ni̥k
+lä̞:.ve̥:ntẽ̥l
+i̥:ɡä̞.y̥:ks
+r:'i̥:kl
+y̥:he̥ktä̞si̥ɪ̥stky̥mne̥ndi̥k", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+59 [label="ɑ̞:jɑ̞kir̟jɑ̞n̪ik
+l̟ɑ̞:.ve:n̪tel̟
+i:ɡɑ̞.y:ks
+r̟:'i:kl̟
+y:heksɑ̞tiɪstkymn̪en̪d̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+60 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yhiksɑ̞teestkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+61 [label="ɑ̞jɑ̞kinjɑ̞rik
+lɑ̞:.ventel
+iɡæ.yks
+r:'i:kl
+yhiktɑ̞seɪstkymdennik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+62 [label="ɑ̞jɑ̞kinjɑ̞rik
+lɑ̞:.ventel
+iɡæ.yks
+r:'i:kl
+yhiksɑ̞teɪstkymdennik", fillcolor= white, color="purple",  fontcolor="red"];
+63 [label="'ɑ̞̥j̊æ̥kir̥j̊ɑ̞̥n̥ik
+l̥ɑ̞̥'fen̥tel̥
+'ikɑ̞̥'yks
+r̥'i:kl̥
+'ihɪktɑ̞̥seistkym̥n̥en̥tik", fillcolor= white, color="purple",  fontcolor="red"];
+64 [label="ɑ̞j̊ɑ̞kirj̊ɑ̞nik
+'nɑ̞.veltel
+iɡɑ̞.yks
+'l'ikr
+yhiktɑ̞seɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+65 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:hiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+66 [label="'ɑ̞jɑ̞ɰ̊erjɑ̞neɰ̊
+lɑ̞:'ventel
+'eɡɑ̞'yks
+r:'i:kl
+'yhiɰ̊tɑ̞seestkymʰnendiɰ̊", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+67 [label="'ɑjɑkirjɑnik
+lɑ'ventel
+'iɡɑ'yks
+r'i:kl
+'yheksɑteistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+68 [label="ɑ̞:ɲ͜jɑ̞kin͜rɲ͜jɑ̞n͜nik
+n͜lɑ̞:.ɱ͜vɪ:n͜ntɪn͜l
+i:ŋ͜ɡɑ̞.ø:ks
+n͜r:'i:kn͜l
+y:hiksɑ̞tɪɪstkym͜mn͜nɪn͜nn͜dik", fillcolor= white, color="purple",  fontcolor="red"];
+69 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞.ve:ntel
+i:ɡɑ̞.y:ks
+r'i:kl
+y:hektɑ̞seistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+70 [label="ɑ̞:jɑ̞kir̟jɑ̞n̪ik
+l̟ɑ̞:.ve:n̪tel̟
+i:ɡɑ̞.y:ks
+r̟:'i:kl̟
+y:hektɑ̞siɪstkymn̪en̪d̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+71 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:heksɑ̞tiɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+72 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:hektɑ̞siɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+73 [label="ɑ̞:ɲ͜jɑ̞kin͜rɲ͜jɑ̞n͜nik
+n͜lɑ̞:.ɱ͜vɪ:n͜ntɪn͜l
+i:ŋ͜ɡɑ̞.ø:ks
+n͜r:'i:kn͜l
+y:hiksɑ̞tɪɪstkym͜mn͜nɪn͜nn͜dik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+74 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yhiksɑ̞teestkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+75 [label="ɑ̞jɑ̞kɯrjɑ̞n̪ʰɯk
+l̟ɤ.vɑ̞nʰt̟ɤl
+ɯɡɑ̞.yks
+r̟'ɯ:kl
+yhɤkt̟ɑ̞θɯɤstkymn̪ʰɤnʰd̟ɯk", fillcolor= white, color="purple",  fontcolor="red"];
+76 [label="'ɑ̞̥jɑ̞̥kirjɑ̞̥nik
+lɑ̞̥'ventel
+'iɡɑ̞̥'yks
+r'i:kl
+'ihɪksɑ̞̥teiztkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+77 [label="ɑ̞j̊ɑ̞kirj̊ɑ̞nik
+'nɑ̞.veltel
+iɡɑ̞.yks
+'l'ikr
+yhiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+78 [label="'ɑ̞jɑ̞kerjɑ̞nek
+lɑ̞'ventel
+'eɡɑ̞'yks
+r'i:kl
+'yhiksɑ̞teestkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+79 [label="ɑ̞ɲ͜j̊ɑ̞ŋ͜kin͜rɲ͜j̊ɑ̞n͜niŋ͜k
+'n͜lɑ̞:.ɱ͜ven͜nn͜ten͜l
+iŋ͜ɡɑ̞.yŋ͜kn͜s
+'n͜r:'i:ŋ͜kn͜l
+yn͜hiŋ͜kn͜sɑ̞n͜teɪn͜sn͜tŋ͜kym͜mn͜nen͜nn͜diŋ͜k", fillcolor= white, color="purple",  fontcolor="red"];
+80 [label="'ɑ̞jɑ̞ɰ̊erjɑ̞neɰ̊
+lɑ̞'ventel
+'eɡɑ̞'yks
+r'i:kl
+'yheɰ̊sɑ̞tiestkymnendiɰ̊", fillcolor= white, color="purple",  fontcolor="red"];
+81 [label="ɑ̞:jʰɑ̞̃kʰirʰjʰɑ̞̃nʰikʰ
+ɱ͜l̥̟̟̟ʰɑ̞.fʰe:n̥ʰtʰel̥ʰ
+i:ɡʰɑ̞.y:kʰsʰ
+r̥ʰ'i:kʰl̥ʰ
+y:hʰikʰp̪ʰɑ̞sʰeesʰtʰkʰymʰnʰenʰdʰikʰ", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+82 [label="'ɑ̞̃jɑ̞̃kirjɑ̞̃n̪ʰik
+l̟ɑ̞̃'venʰt̟el
+'iɡɑ̞̃'yks
+n̪'i:kl
+'yhikt̟ɑ̞̃θeestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+83 [label="ɯjɑ̞kɑ̞rjɑ̞n̪ʰɯk
+l̟ɑ̞.vɤnʰt̟ɤl
+ɑ̞ɡɯ.yks
+r̟'ɯ:kl
+yhɑ̞kt̟ɤθɯɤstkymn̪ʰɤnʰd̟ɯk", fillcolor= white, color="purple",  fontcolor="red"];
+84 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:hektɑ̞siɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+85 [label="ʌ̞:jɑ̞kinjɑ̞rik
+lɑ̞:.ve:ntel
+i:ɢɑ̞.ø:ks
+r:'i:kl
+y:hɪktɑ̞seistkymnendik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+86 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:heksɑ̞tiɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+87 [label="ä̞:jä̞kirjä̞nik
+lä̞:.vẽ:ntẽl
+i:ɡä̞.y:ks
+r:'i:kl
+y:hektä̞siɪstkymnendik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+88 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yheksɑ̞teistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+89 [label="ɑ̞ɲ͜jɑ̞kin͜rɲ͜jɑ̞n͜nik
+n͜lɑ̞.ɱ͜vɪn͜ntɪn͜l
+iŋ͜ɡɑ̞.øks
+n͜r'i:kn͜l
+yhiktɑ̞sɪɪstkym͜mn͜nɪn͜nn͜dik", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+90 [label="'ɑ̞jɑ̞kirjɑ̞nik
+lɑ̞'ventel
+'iɡɑ̞'yks
+r'i:kl
+'yhɪksɑ̞teistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+91 [label="ä̞:jä̞kirjä̞nik
+lä̞:.ve:ntel
+i:ɡä̞.y:ks
+r:'i:kl
+y:hektä̞siɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+92 [label="'ɑ̞̥jɑ̞̥kirjɑ̞̥nik
+lɑ̞̥'ventel
+'iɡɑ̞̥'yks
+r'i:kl
+'ihɪktɑ̞̥seiztkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+93 [label="ɑ̞jɑ̞kirjɑ̞n̪ʰik
+l̟ɑ̞.venʰt̟el
+iɡɑ̞.yks
+r̟'i:kl
+yhikt̟ɑ̞θeestkymn̪ʰenʰd̟ik", fillcolor= white, color="purple",  fontcolor="red"];
+94 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:hiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+95 [label="ɑ̞jɑ̞kinjɑ̞rik
+nɑ̞:.veltel
+iɡæ.yks
+r:'i:kl
+yhiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+96 [label="ä̞:jä̞kirjä̞nik
+lä̞:.ve:ntel
+i:ɡä̞.y:ks
+r:'i:kl
+y:hektä̞siɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+97 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.ø:ks
+r:'i:kl
+y:hiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+98 [label="'ɑ̞̥j̊æ̥kir̥j̊ɑ̞̥n̥ik
+l̥ɑ̞̥'fen̥tel̥
+'ikɑ̞̥'yks
+r̥'i:kl̥
+'ihɪktɑ̞̥seistkym̥n̥en̥tik", fillcolor= white, color="purple",  fontcolor="red"];
+99 [label="ɑ̞:jɑ̞kirjɑ̞nik
+l̥ɑ̞.fe:n̥tel̥
+i:ɡɑ̞.y:ks
+r̥'i:kl̥
+y:hektɑ̞seistkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+100 [label="ɑ̞:jɑ̞kirjɑ̞nik
+lɑ̞:.ve:ntel
+i:ɡɑ̞.y:ks
+r:'i:kl
+y:heksɑ̞tiɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+101 [label="ɑ̞j̊ɑ̞kirj̊ɑ̞nik
+lɑ̞:.ventel
+iɡɑ̞.yks
+r:'i:kl
+yhiksɑ̞teɪstkymnendik", fillcolor= white, color="purple",  fontcolor="red"];
+102 [label="ɑ̞:jʰɑ̞̃kʰirʰjʰɑ̞̃nʰikʰ
+l̥̟̟̟ʰɑ̞.fʰe:n̥ʰtʰel̥ʰ
+i:ɡʰɑ̞.y:kʰsʰ
+r̥ʰ'i:kʰl̥ʰ
+y:hʰikʰp̪ʰɑ̞sʰeesʰtʰkʰymʰnʰenʰdʰikʰ", fillcolor= white, color="purple",  fontcolor="red"];
+103 [label="ɑ̞jɑ̞kinjɑ̞rik
+lɑ̞:.ventel
+iɡæ.yks
+r:'i:kl
+yhiktɑ̞seɪstkymdennik", fillcolor= white, color="purple",  fontcolor="red"];
+104 [label="ɑ̞̃jɑ̞̃kĩrjɑ̞̃n̪ʰĩk
+l̟ɑ̞̃.fẽnʰt̟ẽl
+ĩɡɑ̞̃.ỹks
+r̟'ĩ:kl
+ỹhĩkθɑ̞̃t̟ẽẽstkỹmn̪ʰẽnʰd̟ĩk", fillcolor= white, color="purple",   shape = doublecircle,  fontcolor="red"];
+67 -> 88[style="solid", color="red"];
+48 -> 67;
+47 -> 90[style="solid", color="green"];
+88 -> 47;
+10 -> 24[style="solid", color="blue"];
+90 -> 10[style="solid", color="blue"];
+24 -> 65[style="solid", color="red"];
+86 -> 72[style="solid", color="green"];
+94 -> 86[style="solid", color="red"];
+65 -> 94;
+84 -> 100[style="solid", color="red"];
+72 -> 84;
+72 -> 91[style="solid", color="green"];
+91 -> 12[style="solid", color="green"];
+38 -> 4[style="solid", color="green"];
+65 -> 38;
+11 -> 68[style="solid", color="blue"];
+4 -> 11[style="solid", color="green"];
+27 -> 39[style="solid", color="blue"];
+68 -> 27;
+24 -> 44[style="solid", color="red"];
+101 -> 32[style="solid", color="red"];
+44 -> 101[style="solid", color="blue"];
+88 -> 53[style="solid", color="green"];
+13 -> 31[style="solid", color="red"];
+40 -> 13[style="solid", color="red"];
+60 -> 40[style="solid", color="green"];
+53 -> 60;
+31 -> 2[style="solid", color="green"];
+100 -> 26;
+100 -> 49;
+42 -> 18;
+12 -> 42[style="solid", color="green"];
+16 -> 58;
+12 -> 16;
+96 -> 87;
+91 -> 96;
+39 -> 17;
+39 -> 89;
+68 -> 73;
+7 -> 85;
+37 -> 7[style="solid", color="green"];
+20 -> 37[style="solid", color="red"];
+56 -> 20[style="solid", color="red"];
+97 -> 56[style="solid", color="green"];
+4 -> 97;
+14 -> 5;
+70 -> 14[style="solid", color="blue"];
+59 -> 70[style="solid", color="green"];
+71 -> 59[style="solid", color="red"];
+65 -> 71[style="solid", color="green"];
+79 -> 33;
+32 -> 79[style="solid", color="green"];
+64 -> 77;
+25 -> 64[style="solid", color="red"];
+30 -> 25[style="solid", color="blue"];
+32 -> 30[style="solid", color="red"];
+103 -> 61;
+62 -> 103[style="solid", color="green"];
+54 -> 62[style="solid", color="red"];
+95 -> 54[style="solid", color="red"];
+46 -> 95[style="solid", color="red"];
+44 -> 46[style="solid", color="green"];
+98 -> 22;
+19 -> 98[style="solid", color="green"];
+6 -> 19[style="solid", color="green"];
+63 -> 6[style="solid", color="red"];
+8 -> 63[style="solid", color="red"];
+92 -> 8[style="solid", color="green"];
+76 -> 92[style="solid", color="green"];
+21 -> 76[style="solid", color="red"];
+50 -> 21[style="solid", color="green"];
+90 -> 50[style="solid", color="green"];
+1 -> 104;
+0 -> 1[style="solid", color="green"];
+93 -> 0[style="solid", color="green"];
+2 -> 93[style="solid", color="red"];
+82 -> 28;
+3 -> 82[style="solid", color="green"];
+2 -> 3[style="solid", color="green"];
+34 -> 23;
+83 -> 34[style="solid", color="red"];
+75 -> 83[style="solid", color="red"];
+45 -> 75[style="solid", color="red"];
+41 -> 45[style="solid", color="blue"];
+36 -> 41[style="solid", color="red"];
+31 -> 36;
+51 -> 66;
+9 -> 51[style="solid", color="red"];
+57 -> 9[style="solid", color="green"];
+80 -> 57[style="solid", color="blue"];
+52 -> 80[style="solid", color="red"];
+78 -> 52[style="solid", color="red"];
+43 -> 78[style="solid", color="green"];
+74 -> 43[style="solid", color="green"];
+53 -> 74;
+102 -> 81;
+55 -> 102[style="solid", color="green"];
+15 -> 55[style="solid", color="green"];
+29 -> 15[style="solid", color="green"];
+99 -> 29[style="solid", color="green"];
+69 -> 99[style="solid", color="red"];
+35 -> 69[style="solid", color="green"];
+88 -> 35[style="solid", color="blue"];
 }

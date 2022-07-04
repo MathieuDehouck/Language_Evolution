@@ -51,6 +51,8 @@ class Effect (object) :
     
         
     def __eq__(self, other) :
+        if other == None : 
+            return False
         return self.domain == other.domain and self.effect == other.effect
     
 
@@ -114,10 +116,12 @@ class Effect (object) :
         return s
     
             
-    def decode_e(string) :
+    def decode_e(string, verbose = False) :
         
-        print("We decode an effect")
-        print(string)
+        if string == "" : return None 
+        if verbose : 
+              print("We decode an effect")
+              print(string)
         
         effect ={}
         

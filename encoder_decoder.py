@@ -96,6 +96,7 @@ def dt(string, x) :
     if string[x].isnumeric() : return int(string[x])
     
 
+# TODO le pb d encodage des logs vient de là
 def decode_f (string) :
     """
     Decode a string we encoded earlier
@@ -130,7 +131,7 @@ def decode_f (string) :
                 dec = 1
                 place = int(string[1:3])
             else : place = int(string[1])
-        print(dec)
+        #print(dec)
         if string[3+dec] == "*" : manner = -1
         else : manner = letter_2_manner[string[3+dec]]
         
@@ -144,7 +145,7 @@ def decode_f (string) :
         
         
         
-        print(string)
+        #print(string)
         tupl1 = (place, manner, dt(string,5+dec))
         tupl2 = (  dt(string,7+dec),  dt(string,9+dec),  dt(string,11+dec)) 
    

@@ -23,14 +23,14 @@ i = IPA.get_IPA()
 
 path = "tuesday"
 
-depth = 20 # depth of a branch
-nbranches = 10 # number of branches
+depth = 500 # depth of a branch
+nbranches = 1 # number of branches
 
 
 
 # We choose a language to play with 
 
-lang = get_language("latin_classique.txt", "latin")
+lang = get_language("English.txt", "latin")
 
 #st = State(lang)
 
@@ -45,19 +45,11 @@ bb = Baby_P_change_generator()
 
 time = Tree_changer(lang, bb) 
 
-# we open
-folder = Path("logs/")
-
-path1 = path+"_changes.txt"
-path2 = path + "_dic.txt"
-path3 = path + "_machine_log.txt"
-
-path1 = folder / path1
-path2 = folder / path2
-path3 = folder / path3
+ml = time.make_evolution( lang , nbranches, depth) 
 
 
 
+"""
 liste = [[0, [0,0,0,1,0], 1] , [3, 1 ,0]]
 
 from utilitaries import list_2_tuple, list_2_tuple2
@@ -68,7 +60,7 @@ print("imperative")
 cProfile.run("for i in range (100000) : tu = list_2_tuple(liste)")
 #cProfile.run("time.evoluate(lang, 1, 200)")
 
-"""
+
 TEST POUR 200 CHANGEMENTS
 version brute
 216(list_2_tuple)
