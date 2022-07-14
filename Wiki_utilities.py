@@ -206,6 +206,7 @@ def get_language(path, name) :
     lg : Language
 
     """
+    path = "languages\\" + path
     gaffiot = wiki_lexicon(path)
     dic = dic2word(gaffiot) 
     lg = Language(dic, name)

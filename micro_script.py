@@ -34,7 +34,7 @@ nbranches = 1 # number of branches
 
 # We choose a language to play with 
 
-lang = get_language("latin_classique.txt", "Latin")
+lang = get_language("Ukrainian.txt", "Latin")
 
 #st = State(lang)
 

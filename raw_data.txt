@@ -1,5348 +1,7721 @@
 original word : 
-abante
-a'ban.te
+-ійський
+'iiskei
 
-'e:'bɑ:n'tɑ:
+'iiskei
 
 
 original word : 
-abanteo
-a'ban.te.o:
+Іван
+i'ʋan
 
-'e:'bɑ:n'tɑ:'ø:
+i'ʋæn
 
 
 original word : 
-abbato
-'ab.ba.to:
+Амстердам
+amster'dam
 
-'ɶ:b'ba:'to:
+æmtseɖ̟'ræm
 
 
 original word : 
-abbatuo
-ab'ba.tu.o:
+Андрій
+an'drii
 
-'ɶ:b'ba:'tu:'ø:
+æd'rnii
 
 
 original word : 
-abbibero
-ab'bi.be.ro:
+Багамські Острови
+ba'ɦamski.ɔstrɔ'ʋɪ
 
-'ø:b'bi:'ba:'ro:
+mæ̹'ɦæbtki.ɔssrɔ'ʋɪ
 
 
 original word : 
-absedii
-ap'se.di.i:
+Буття
+bʊ't:a
 
-'e:p'sa:'di:'i:
+bʊ't:æ
 
 
 original word : 
-absedium
-ap'se.di.um
+Біг Мак
+biɦ'mak
 
-'e:p'sa:'dɯ:'u:m
+miɦ'bæk
 
 
 original word : 
-abyssimus
-a'bys.si.mus
+Венесуела
+ʋenesʊ'ɛa
 
-'a:'by:s'si:'mu:s
+ʋen̠̥esʊ'ɛæ
 
 
 original word : 
-acca
-'ak.ka
+Волинь
+wɔ'ɪn
 
-'a:k'ka:
+wɔ'ɪn
 
 
 original word : 
-accapo
-'ak.ka.po:
+Вікісловник
+ʋikisɔu'nɪk
 
-'a:k'ka:'po:
+ʋikisuɔ'nɪk
 
 
 original word : 
-accaptio
-ak'kap.ti.o:
+Галич
+'ɦaetʃ
 
-'a:k'ka:p'ti:'ø:
+'ɦæetʃ
 
 
 original word : 
-accapto
-ak'kap.to:
+Генасамблея
+ɦenasam'bɛja
 
-'a:k'ka:p'to:
+ɦen̠̥æsæm̥'bɛjæ
 
 
 original word : 
-accognito
-ak'koɡ.ni.to:
+Георгій
+ɦe'ɔrɦii
 
-'a:k'ko:ɡ'nɯ:'to:
+ɦe'ɔrɦii
 
 
 original word : 
-accolligo
-ak'kol.li.ɡo:
+Гурченко
+'ɦurtʃenkɔ
 
-'a:k'ko:l'lɯ:'ɡo:
+'ɦɔrtʃen̠ku
 
 
 original word : 
-accollo
-ak'kol.lo:
+ДТП
+dɛ.tɛ'pɛ
 
-'a:k'ko:lʰ'lʰo:
+dɛ.tɛ'pɛ
 
 
 original word : 
-accomplesco
-ak.kom'ple:s.ko:
+Давид
+da'ʋɪd
 
-'e:k'ko:m'pla:s'kø:
+dæ'ʋɪd
 
 
 original word : 
-accomplire
-ak.kom'pli:.re
+Дніпро
+dni'prɔ
 
-'e:k'ko:m'plɯ:'ra:
+dri'pnɔ
 
 
 original word : 
-accordare
-ak.kor'da:.re
+Домініка
+dɔmi'nika
 
-'e:k'ko:d'ra:'ra:
+dɔm̥i'n̥ikæ
 
 
 original word : 
-accordo
-ak'kor.do:
+Житомир
+ʒe'tɔmer
 
-'a:k'ko:d'rø:
+ʒe'tɔmeɽr̟
 
 
 original word : 
-accum
-'ak.kum
+Київ
+'kɪjiu
 
-'a:k'ku:m
+'kɪjiu
 
 
 original word : 
-accum hic
-'ak.kum.hi:k
+Краків
+'krakiu
 
-'a:k'ku:m'hi:k
+'krækiu
 
 
 original word : 
-accum ille
-'ak.kum'il.le
+Кримський півострів
+'krɪmskei.pi'wɔstriu
 
-'e:k'ku:m'i:lʰ'lʰa:
+'krɪmtkei.pi'wɔssriu
 
 
 original word : 
-accum ipse
-'ak.kum'ip.se
+Куала-Лумпур
+kʊ'aa'umpʊr
 
-'e:k'ku:m'i:p'sa:
+kʊ'ææ'umpʊr
 
 
 original word : 
-accum iste
-'ak.kum'is.te
+Ленін
+'ɛnin
 
-'e:k'ku:m'i:t'sa:
+'ɛnin
 
 
 original word : 
-acquaerio
-ak'kʷae.ri.o:
+Литвиненко
+etʋe'nɛnkɔ
 
-'e:k'kʷa:a'ri:'o:
+etʋe'n̠ɛnkɔ
 
 
 original word : 
-acquaerire
-ak.kʷae'ri:.re
+Лукашенко
+ʊka'ʃɛnkɔ
 
-'e:k'kʷa:a'rɯ:'re:
+ɔkæ'ʃɛnkʊ
 
 
 original word : 
-acrus
-'a:.krus
+Львів
+lʋiu
 
-'a:'kru:s
+lʋiu
 
 
 original word : 
-actualis
-a:k.tu'a:.lis
+Маастрихт
+maa'strɪxt
 
-'a:k'su:'ã:'li:t
+mææ'tsrɪxt
 
 
 original word : 
-acucla
-a'ku:.kla
+Маланка
+ma'anka
 
-'a:'ku:'klʰa:
+mæ'ænkæ
 
 
 original word : 
-acuclae
-a'ku:.klae
+Могильов
+mɔɦe'lɔu
 
-'e:'ku:'kla:a
+mɔɦe'ɭ̟ɔu
 
 
 original word : 
-acutiare
-a.ku:.ti'a:.re
+Молдова
+mɔ'dɔʋa
 
-'e:'ku:'ti:'a:'ra:
+mɔ'dɔʋæ
 
 
 original word : 
-acutio
-a'ku:.ti.o:
+Монако
+mɔ'nakɔ
 
-'a:'ku:'ti:'ø:
+m̥ɔ'n̥ækɔ
 
 
 original word : 
-ad bassum
-ad'bas.sum
+Москва
+mɔsk'ʋa
 
-'a:dʷ'ba:s'su:m
+mɔsk'ʋæ
 
 
 original word : 
-ad hic
-ad.hi:k
+Навруз
+nau'ruz
 
-'a:dʷ'hi:k
+næu'ruz
 
 
 original word : 
-ad retro
-ar're.tro:
+Нігер
+'niɦer
 
-'e:r'ra:'trø:
+'riɦen̠
 
 
 original word : 
-ad satis
-as'sa.tis
+Олеся
+ɔ'ɛsa
 
-'a:t'sa:'si:s
+ɔ'ɛsæ
 
 
 original word : 
-adaquo
-'a.da.kʷo:
+Пакистан
+pake'stan
 
-'ɑ:'dʷɑ:'kʷo:
+pæke'tsæn
 
 
 original word : 
-adbassiare
-ad.bas.si'a:.re
+Папа
+'papa
 
-'e:dʷ'ba:s'si:'a:'ra:
+'pæpæ
 
 
 original word : 
-adbassio
-ab'bas.si.o:
+Персефона
+perse'fɔna
 
-'ɶ:b'ba:s'si:'ø:
+pe̥ɽr̟se'fɔnæ
 
 
 original word : 
-adbellesco
-ad.bel'le:s.ko:
+Петро
+pe'trɔ
 
-'e:dʷ'ba:l'le:s'kø:
+pe'trɔ
 
 
 original word : 
-adbracchio
-ad'brak.kʰi.o:
+Радянський Союз
+ra'danskei.sɔ'juz
 
-'a:dʷ'bra:kʰ'ki:'o:
+dæ'rænskei.su'jɔz
 
 
 original word : 
-adiuxtare
-ad.juk'sta:.re
+Рейк&#039;явік
+rei'kjaʋik
 
-'e:dʷ'ju:k'tsa:'ra:
+rei'kjæʋik
 
 
 original word : 
-adiuxto
-ad'juk.sto:
+Російська Федерація
+ro'siiska.fede'ratsija
 
-'a:dʷ'ju:k'tsø:
+so'tiiskæ.feɽr̟e'ɽr̟ætsijæ
 
 
 original word : 
-adminaciare
-ad.mi.na:.ki'a:.re
+Сент-Люсія
+sɛnt'lusija
 
-'e:dʷ'mi:'na:'ki:'a:'ra:
+tɛls'n̥usijæ
 
 
 original word : 
-adminacio
-ad.mi'na:.ki.o:
+Соломія
+sɔo'mija
 
-'a:dʷ'mi:'na:'ki:'o:
+soɔ'mijæ
 
 
 original word : 
-admortesco
-ad.mor'te:s.ko:
+Стефанія
+ste'fanija
 
-'e:dʷ'mo:r'sa:t'kø:
+tse'fænijæ
 
 
 original word : 
-admortire
-ad.mor'ti:.re
+Уельс
+ʊ'ɛls
 
-'e:dʷ'mo:r'tɯ:'ra:
+ʊ'ɛls
 
 
 original word : 
-adnecai
-ad.ne'ka:.i:
+Хмельницький
+xmel'nɪtskei
 
-'e:dʷ'na:'ka:'i:
+xmen̠'lɪstkei
 
 
 original word : 
-adnecare
-ad.ne'ka:.re
+Чехословаччина
+tʃexɔsɔ'ʋatʃ:ena
 
-'e:dʷ'na:'ka:'re:
+sʃexɔtɔ'ʋæ̥tʃ:en̠æ
 
 
 original word : 
-adnecatu
-ad.ne'ka:.tu
+Шрі-Ланка
+ʃri.an'ka
 
-'e:dʷ'na:'ka:'tu:
+ʃni.ær'kæ
 
 
 original word : 
-adneco
-'ad.ne.ko:
+Юлія
+'julija
 
-'e:dʷ'na:'ko:
+'julijæ
 
 
 original word : 
-adoclare
-a.do'kla:.re
+абака
+a'baka
 
-'e:'dʷo:'kla:'ra:
+æ'bækæ
 
 
 original word : 
-adoclo
-'a.do.klo:
+абеткування
+abetkʊ'ʋan:a
 
-'a:'dʷo:'klʰo:
+æbetkʊ'ʋæn:æ
 
 
 original word : 
-adpacare
-at.pa:'ka:.re
+аблактування
+abaktʊ'ʋan:a
 
-'e:t'pa:'ka:'ra:
+æbæktʊ'ʋæn:æ
 
 
 original word : 
-adpressum
-ap'pres.sum
+абонентка
+abɔ'nɛntka
 
-'e:p'pra:s'su:m
+æbɔ'nɛntkæ
 
 
 original word : 
-adventura
-ad.wen'tu:.ra
+абразивність
+abra'zɪunist
 
-'e:dʷ'wa:r'tu:'na:
+æbzæ'rɪusin̥t
 
 
 original word : 
-adverare
-ad.we:'ra:.re
+абрикосник
+abre'kɔsnek
 
-'e:dʷ'wa:'ra:'re:
+æbse'kɔ̥n̥rek
 
 
 original word : 
-advero
-ad'we:.ro:
+абсолютизація
+absɔlʊte'zatsija
 
-'e:dʷ'wa:'ro:
+æbtʊlɔse'ʒætsijæ
 
 
 original word : 
-advitiare
-ad.wi.ti'a:.re
+абсорбер
+ab'sɔrber
 
-'e:dʷ'wi:'ti:'a:'ra:
+æb'sɔ̥rbeɽr̟
 
 
 original word : 
-advitio
-ad'wi.ti.o:
+абстрактність
+ab'straktnist
 
-'a:dʷ'wi:'ti:'ø:
+æb'tsnæktr̥ist
 
 
 original word : 
-aer
-'a:.e:r
+абсурдність
+ab'surdnist
 
-'e:'a:r
+æb'n̥udrsist
 
 
 original word : 
-aera
-'ae.ra
+абшит
+ab'ʃɪt
 
-'e:a'ra:
+æb'ʃɪt
 
 
 original word : 
-aerosus
-ae'ro:.sus
+абітурієнт
+abitʊri'jɛnt
 
-'e:a'ro:'su:s
+æbitʊni'jɛrt
 
 
 original word : 
-aetatici
-ae'ta:.ti.ki:
+аванзал
+aʋan'za
 
-'e:a'ta:'tɯ:'kɯ:
+æʋæz'næ
 
 
 original word : 
-aetaticum
-ae'ta:.ti.kum
+авансування
+aʋansʊ'ʋan:a
 
-'e:a'ta:'ti:'ku:m
+æʋænsʊ'ʋæn:æ
 
 
 original word : 
-aether
-'ae.tʰe:r
+авантюристка
+aʋantʊ'rɪstka
 
-'e:a'tʰe:r
+æʋærsʊ'n̥ɪttkæ
 
 
 original word : 
-affidavit
-af.fi:'da:.wit
+аварка
+a'ʋarka
 
-'a:f'fi:'da:'wi:t
+æ'ʋærkæ
 
 
 original word : 
-affumare
-af.fu:'ma:.re
+авлос
+au'ɔs
 
-'e:f'fu:'ma:'ra:
+æɔ'us
 
 
 original word : 
-affumo
-af'fu:.mo:
+австралопітек
+austraɔpi'tɛk
 
-'a:f'fu:'mo:
+æɔtsræupi'tɛk
 
 
 original word : 
-affundare
-af.fun'da:.re
+австрійський
+au'striiskei
 
-'e:f'fu:n'da:'ra:
+æu'tsriiskei
 
 
 original word : 
-affundo
-af'fun.do:
+автоаерозапчастина
+autɔaerɔzaptʃa'stɪna
 
-'a:f'fu:n'dø:
+æɔsuæeɽr̟ɔzæptʃæ'ttɪnæ
 
 
 original word : 
-agesco
-a'ɡe:s.ko:
+автобальзам
+autɔbal'zam
 
-'e:'ɡɑ:s'kø:
+æɔtubæl'zæm
 
 
 original word : 
-aiunus
-aj'ju:.nus
+автобусик
+au'tɔbʊsek
 
-'a:j'ju:'nu:s
+æɔ'subʊtek
 
 
 original word : 
-alemosyna
-a.le:'mo.sy.na
+автовиробник
+autɔʋerɔb'nɪk
 
-'e:'lɑ:'mo:'sy:'nɑ:
+æɔtuʋeɽr̟ɔb'nɪk
 
 
 original word : 
-alemosyne
-a.le'mo.sy.ne:
+автогенник
+autɔ'ɦɛn:ek
 
-'e:'lɑ:'mo:'sy:'ne:
+æɔtu'ɦɛn:ek
 
 
 original word : 
-alicunus
-a.li'ku:.nus
+автоматично
+autɔma'tɪtʃnɔ
 
-'ã:'li:'ku:'nu:s
+æɔtumæ'tɪtʃnɔ
 
 
 original word : 
-alima
-'a.li.ma
+авторитарний
+autɔre'tarnei
 
-'a:'lɯ:'ma:
+æɔtune'tæ̥rrei
 
 
 original word : 
-aliquis
-'a.li.kʷis
+авіавдар
+aʋiau'dar
 
-'ã:'li:'kʷi:s
+æʋiæu'ræd
 
 
 original word : 
-alisna
-a'lis.na
+авіадиспетчер
+aʋiade'spɛtʃ:er
 
-'ã:'li:s'na:
+æʋi̥æse'r̥pɛ̥tʃ:eɖ̟
 
 
 original word : 
-allactare
-al.lak'ta:.re
+авіаквиток
+aʋiakʋe'tɔk
 
-'e:l'la:k'ta:'ra:
+æʋiækʋe'tɔk
 
 
 original word : 
-allacto
-al'lak.to:
+авіамайстерня
+aʋiamai'stɛrna
 
-'a:l'la:k'to:
+æʋiæmæi'tsɛnræ
 
 
 original word : 
-allo
-'al.lo:
+авіамоторобудування
+aʋiamɔtɔrɔbʊdʊ'ʋan:a
 
-'a:lʰ'lʰo:
+æʋiæbʊtɔdɔmɔrʊ'ʋæn:æ
 
 
 original word : 
-alluminare
-al.lu:.mi'na:.re
+авіапатрулювання
+aʋiapatrʊlʊ'ʋan:a
 
-'e:l'l̟̟̟u:'mi:'na:'ra:
+æʋiæpætlʊrʊ'ʋæn:æ
 
 
 original word : 
-allumino
-al'lu:.mi.no:
+авіаракетобудування
+aʋiaraketɔbʊdʊ'ʋan:a
 
-'a:l'l̟̟̟u:'mɯ:'no:
+æʋiædæketʊbɔrʊ'ʋæn:æ
 
 
 original word : 
-altiare
-al.ti'a:.re
+авіатехнік
+aʋia'tɛxnik
 
-'e:l'ti:'a:'ra:
+æʋiæ'tɛxn̠ik
 
 
 original word : 
-altio
-'al.ti.o:
+авіафауна
+aʋia'faʊna
 
-'a:l'ti:'ø:
+æʋiæ'fæʊnæ
 
 
 original word : 
-amaricus
-a'ma:.ri.kus
+авізо
+a'ʋizɔ
 
-'ɑ:'mɑ:'ri:'ku:s
+æ'ʋizɔ
 
 
 original word : 
-ambito
-'am.bi.to:
+агенція
+a'ɦɛntsija
 
-'ɶ:m'bɯ:'to:
+æ̹'ɦɛnstijæ
 
 
 original word : 
-ambosta
-am'bos.ta
+ад&#039;ютант
+adjʊ'tant
 
-'ɶ:m'bo:t'sa:
+ædjʊ'tænt
 
 
 original word : 
-amicitas
-a'mi:.ki.ta:s
+аджика
+a'dʒɪka
 
-'a:'mi:'ki:'sa:t
+æ'dʒɪkæ
 
 
 original word : 
-amicitatis
-a.mi.ki'ta:.tis
+аероскопія
+aerɔsko'pija
 
-'a:'mi:'ki:'sa:'ti:t
+æeɽr̟oskɔ'pijæ
 
 
 original word : 
-Anconitanus
-an.ko:.ni'ta:.nus
+академічний
+akade'mitʃnei
 
-'a:n'kø:'ni:'sa:'nu:t
+ækæde'mitʃnei
 
 
 original word : 
-ando
-'an.do:
+активація
+akte'ʋatsija
 
-'a:n'dø:
+ækse'ʋættijæ
 
 
 original word : 
-anteanus
-an.te'a:.nus
+акціонер
+aktsiɔ'nɛr
 
-'e:n'sa:'a:'nu:t
+ækstiɔ'rɛn
 
 
 original word : 
-apeliotes
-a.pe:.li'o:.te:s
+албанка
+a'banka
 
-'e:'pɑ̃:'li:'ø:'se:t
+æ'bænkæ
 
 
 original word : 
-apicla
-a'pi.kla
+алло
+a'ɔ:
 
-'a:'pi:'klʰa:
+æ'ɔ:
 
 
 original word : 
-apozema
-a'poz.ze.ma
+амбітний
+am'bitnei
 
-'e:'po:z'za:'ma:
+æb'mi̥tnei
 
 
 original word : 
-appacare
-ap.pa:'ka:.re
+анамнії
+a'namniji
 
-'e:p'pa:'ka:'ra:
+æ'næmniji
 
 
 original word : 
-appaco
-ap'pa:.ko:
+англійська
+an'ɦliiska
 
-'a:p'pa:'ko:
+æl'ɦniiskæ
 
 
 original word : 
-appariculare
-ap.pa.ri.ku'la:.re
+ансамбль
+an'sambl
 
-'e:p'pa:'ri:'ku:'la:'ra:
+æn'sæbml
 
 
 original word : 
-appariculo
-ap.pa'ri.ku.lo:
+антиномічний
+anteno'mitʃnei
 
-'a:p'pa:'ri:'ku:'lʰo:
+ænten̠o'mitʃnei
 
 
 original word : 
-appodiare
-ap.po.di'a:.re
+антонім
+an'tɔnim
 
-'e:p'po:'di:'a:'ra:
+æn'tɔnim
 
 
 original word : 
-appodio
-ap'po.di.o:
+апелювати
+apelʊ'ʋate
 
-'a:p'po:'di:'ø:
+æpeɭ̟ʊ'ʋæte
 
 
 original word : 
-arbalista
-ar.ba'lis.ta
+арахнологія
+araxnɔ'ɔɦija
 
-'ɶ:l'bã:'ri:t'sa:
+ænæxrɔ'ɔɦijæ
 
 
 original word : 
-arbaliste
-ar.ba'lis.te:
+арифметичний
+arefme'tɪtʃnei
 
-'ø:l'bã:'ri:t'sa:
+æne̥fme'tɪtʃrei
 
 
 original word : 
-arborus
-'ar.bo.rus
+арсен
+ar'sɛn
 
-'ɶ:r'bø:'ru:s
+ær'sɛn
 
 
 original word : 
-arcio
-'ar.ki.o:
+архонт
+ar'xɔnt
 
-'a:r'ki:'o:
+æn'xɔrt
 
 
 original word : 
-arcionis
-ar.ki'o:.nis
+архівний
+ar'xiunei
 
-'a:n'ki:'o:'ri:s
+æn'xi̥urei
 
 
 original word : 
-ardere
-'a:r.de.re
+аскетично
+aske'tɪtʃnɔ
 
-'e:d'ra:'re:
+ætke'sɪtʃnɔ
 
 
 original word : 
-ardo
-'a:r.do:
+атеїзм
+ate'jizm
 
-'a:d'rø:
+æte'jizm
 
 
 original word : 
-arrestare
-ar.res'ta:.re
+аутсайдер
+aʊ'tsaider
 
-'e:r'ra:t'sa:'re:
+æʊ'stæ̥ireɖ̟
 
 
 original word : 
-arresto
-ar'res.to:
+африканка
+afre'kanka
 
-'e:r'ra:t'sø:
+æfn̥e'kærkæ
 
 
 original word : 
-arripare
-ar.ri:'pa:.re
+б
+b
 
-'e:r'ri:'pa:'ra:
+b
 
 
 original word : 
-arripo
-ar'ri:.po:
+бабка
+'babka
 
-'a:r'rɯ:'po:
+'bæbkæ
 
 
 original word : 
-asciola
-as'ki.o.la
+багатолюдний
+baɦato'ludnei
 
-'a:s'ki:'o:'lʰa:
+bæ̹ɦæto'n̠u̥ldei
 
 
 original word : 
-ascla
-'as.kla
+багнистий
+baɦ'nɪstei
 
-'a:s'klʰa:
+bæ̹ɦ'sɪ̥n̥tei
 
 
 original word : 
-ascle
-'as.kle:
+байдужий
+bai'duʒei
 
-'e:s'klʰa:
+bæi'duʒei
 
 
 original word : 
-aspergo
-as'per.ɡo:
+балістичний
+bali'stɪtʃnei
 
-'e:s'pa:r'ɡø:
+bæsi'n̥tɪtʃlei
 
 
 original word : 
-assalto
-as'sal.to:
+банківський
+'bankiuskei
 
-'a:t'sa:l'sø:
+'bæskiun̥kei
 
 
 original word : 
-assecurare
-as.se.ku:'ra:.re
+барвистий
+bar'ʋɪstei
 
-'e:s'sa:'ku:'ra:'re:
+bær'ʋɪ̥tsei
 
 
 original word : 
-assecuro
-as.se'ku:.ro:
+батальйон
+bata'ljɔn
 
-'e:s'sa:'ku:'ro:
+bætæ'njɔl
 
 
 original word : 
-assequor
-'as.se.kʷor
+бачити
+'batʃete
 
-'e:s'sa:'kʷo:r
+'bæ̥tʃete
 
 
 original word : 
--aster
-'as.ter
+безвихідь
+bez'ʋɪxid
 
-'e:t'sa:r
+beʒ'ʋɪxid
 
 
 original word : 
-attitiare
-at.ti:.ti'a:.re
+бездіяльний
+bezdi'jalnei
 
-'e:t'ti:'ti:'a:'ra:
+ben̠̥li'jæ̥dzei
 
 
 original word : 
-attitio
-at'ti:.ti.o:
+беззахисний
+be'z:axesnei
 
-'a:t'ti:'ti:'ø:
+be'n̠̥æxe̥sz:ei
 
 
 original word : 
-attragere
-at'tra.ɡe.re
+безкраїй
+bez'krajii
 
-'e:t'tra:'ɡa:'re:
+beɽr̟'kzæjii
 
 
 original word : 
-attrago
-'at.tra.ɡo:
+безнадійно
+bezna'diinɔ
 
-'a:t'tra:'ɡo:
+ben̠̥dæ'ziin̥ɔ
 
 
 original word : 
-auca
-'au.ka
+безплідний
+bez'plidnei
 
-'a:u'ka:
+ben̠̥'pdi̥lzei
 
 
 original word : 
-auctorizo
-auk.to:'riz.zo:
+безприкладний
+bez'prɪkadnei
 
-'a:uk'to:'zi:r'zø:
+beɽr̟'pdɪkæ̥nzei
 
 
 original word : 
-auratus
-au'ra:.tus
+безсторонність
+bezstɔ'rɔn:ist
 
-'a:u'ra:'su:t
+beɽr̟tsɔ'n:ɔsist
 
 
 original word : 
-ausare
-au'sa:.re
+безшлюбність
+beʒʃ'lubnist
 
-'e:u'sa:'ra:
+beʒʃ'nubsil̥t
 
 
 original word : 
-auso
-'au.so:
+безіменний
+bezi'mɛn:ei
 
-'a:u'so:
+ben̠̥i'm̥ɛ:zei
 
 
 original word : 
-autumnus
-au'tum.nus
+бензиновий
+ben'zɪnɔʋei
 
-'a:u'su:m'nu:t
+beʒ'nɪnɔʋei
 
 
 original word : 
-avicella
-a.wi'kel.la
+березневий
+berez'nɛʋei
 
-'e:'wi:'ka:lʰ'lʰa:
+beɽr̟eʒ'nɛʋei
 
 
 original word : 
-aviola
-a'wi.o.la
+бетонний
+be'tɔn:ei
 
-'a:'wi:'o:'lʰa:
+be'tɔn:ei
 
 
 original word : 
-aviolus
-a'wi.o.lus
+битися
+'bɪtesa
 
-'a:'wi:'o:'l̟̟̟u:s
+'bɪsetæ
 
 
 original word : 
-axio
-'ak.si.o:
+благородний
+baɦɔ'rɔdnei
 
-'a:k'si:'ø:
+bæ̹ɦɔ'dɔ̥rnei
 
 
 original word : 
-baba
-'ba.ba
+близькість
+'bɪzkist
 
-'ba:'ba:
+'bɪzkist
 
 
 original word : 
-babbus
-'bab.bus
+блоха
+bɔ'xa
 
-'bɶ:b'bu:s
+bɔ'xæ
 
 
 original word : 
-Babylonia
-ba.by'lo:.ni.a
+богатир
+bɔɦa'tɪr
 
-'ba:'by:'lo:'ni:'a:
+bɔɦæ'tɪr
 
 
 original word : 
-baccinum
-'bak.ki.num
+богохульство
+bɔɦo'xulstwɔ
 
-'ba:k'ki:'nu:m
+woɦɔ'xultsbɔ
 
 
 original word : 
-baiulivi
-baj'ju.li.wi
+боліти
+bo'lite
 
-'ba:j'ju:'lɯ:'wɯ:
+bo'ɭ̟ite
 
 
 original word : 
-baiulivus
-baj.ju'li:.wus
+бомбардувати
+bɔmbardʊ'ʋate
 
-'ba:j'ju:'li:'wu:s
+bʊm̥bædrɔ'ʋæte
 
 
 original word : 
-balbo
-'bal.bo:
+борода
+bɔrɔ'da
 
-'bɶ:l'bø:
+bɔdɔ'ræ
 
 
 original word : 
-bannio
-'ban.ni.o:
+бос
+bɔs
 
-'ba:n'ni:'ø:
+bɔs
 
 
 original word : 
-bannire
-ban'ni:.re
+боягузка
+bɔja'ɦuzka
 
-'be:n'nɯ:'ra:
+bujæ̹'ɦɔzkæ
 
 
 original word : 
-barra
-'bar.ra
+брак
+brak
 
-'ba:r'ra:
+bræk
 
 
 original word : 
-barrae
-'bar.rae
+братська могила
+'bratska.mɔ'ɦɪa
 
-'be:r'ra:a
+'mræstkæ.bɔ'ɦɪæ
 
 
 original word : 
-barrum
-'bar.rum
+британський
+bre'tanskei
 
-'ba:r'ru:m
+bne'særtkei
 
 
 original word : 
-bassiare
-bas.si'a:.re
+бронхіт
+bron'xit
 
-'be:s'si:'a:'ra:
+brɔ̞n̠'xit
 
 
 original word : 
-bassio
-'bas.si.o:
+бувати
+bʊ'ʋate
 
-'ba:s'si:'ø:
+bʊ'ʋæte
 
 
 original word : 
-bastare
-bas'ta:.re
+буддійський
+bʊ'd:iiskei
 
-'be:t'sa:'ra:
+bʊ'd:iiskei
 
 
 original word : 
-basto
-'bas.to:
+будьмо
+'budmɔ
 
-'ba:t'sø:
+'mɔdbu
 
 
 original word : 
-bataclum
-ba'ta.klum
+бульба
+'bulba
 
-'ba:'ta:'kl̟̟̟u:m
+'bulbæ
 
 
 original word : 
-bellitas
-'bel.li.ta:s
+бурулька
+bʊ'rulka
 
-'bi:l'le:'sa:t
+bʊ'lurkæ
 
 
 original word : 
-bellitatis
-bel.li'ta:.tis
+бюрократія
+bʊrɔ'kratija
 
-'bi:l'le:'sa:'ti:t
+bɔrʊ'krætijæ
 
 
 original word : 
-bellitia
-bel'li.ti.a
+біженський
+'biʒenskei
 
-'bi:l'le:'ti:'a:
+'biʒen̠skei
 
 
 original word : 
-bene venitus
-'be.ne.we'ni:.tus
+білок
+bi'ɔk
 
-'bi:'ne:'we:'ne:'su:t
+bi'ɔk
 
 
 original word : 
-bene venutus
-'be.ne.we'nu:.tus
+біль
+bil
 
-'be:'ne:'we:'nu:'su:t
+bil
 
 
 original word : 
-bibo
-'bi.bo:
+біографія
+biɔ'ɦrafija
 
-'bɯ:'bo:
+biɔ'ɦræfijæ
 
 
 original word : 
-bisomum
-bi'so:.mum
+біржа
+'birʒa
 
-'bi:'so:'mu:m
+'birʒæ
 
 
 original word : 
-bisonium
-bi'so.ni.um
+в&#039;язень
+'ʋjazen
 
-'bɯ:'so:'nɯ:'u:m
+'ʋjæneʒ
 
 
 original word : 
-blancus
-'blan.kus
+вада
+'ʋada
 
-'blɑ:n'ku:s
+'ʋædæ
 
 
 original word : 
-blastemo
-'blas.te.mo:
+вакцинація
+ʋaktse'natsija
 
-'ble:t'sa:'mo:
+ʋækste'n̠ætsijæ
 
 
 original word : 
-blastimo
-'blas.ti.mo:
+ванна кімната
+'ʋan:a.kim'nata
 
-'blɑ:t'sɯ:'mo:
+'ʋæn̥:æ.kim̥'n̥ætæ
 
 
 original word : 
-blavus
-'bla:.wus
+варити
+ʋa'rɪte
 
-'blɑ:'wu:s
+ʋæ'rɪte
 
 
 original word : 
-boscaticum
-bos'ka:.ti.kum
+ватрушка
+ʋa'truʃka
 
-'bo:t'ka:'si:'ku:m
+ʋæ'truʃkæ
 
 
 original word : 
-bragio
-'bra.ɡi.o:
+введення
+'ʋ:ɛdena
 
-'brɑ:'ɡi:'o:
+'ʋ:ɛn̥eɖ̟æ
 
 
 original word : 
-brandus
-'bran.dus
+вдосвіта
+'wdɔsʋita
 
-'bnɑ:r'du:s
+'wsɔtʋitæ
 
 
 original word : 
-brigna
-'briɡ.na
+ведучий
+ʋe'dutʃei
 
-'bni:ɡ'ra:
+ʋe'ɖ̟u̥tʃei
 
 
 original word : 
-bullicare
-bul.li'ka:.re
+великомученик
+ʋeeko'mutʃenek
 
-'bu:l'le:'ka:'ri:
+ʋe̥eko'mu̥tʃen̠ek
 
 
 original word : 
-bullico
-'bul.li.ko:
+верем&#039;я
+ʋe'rɛmja
 
-'bu:l'lɯ:'ko:
+ʋe'ɽr̟ɛmjæ
 
 
 original word : 
-butyrum
-bu:'ty:.rum
+вертикальний
+ʋerte'kalnei
 
-'bu:'ty:'ru:m
+ʋe̥ɽr̟te'kæ̥lnei
 
 
 original word : 
-Byzantion
-by:z'zan.ti.on
+вершина
+ʋer'ʃɪna
 
-'by:z'za:n'tɯ:'ø:n
+ʋeɽr̟'ʃɪnæ
 
 
 original word : 
-Byzantium
-by:z'zan.ti.um
+вестернізація
+ʋesterni'zatsija
 
-'by:z'za:n'tɯ:'u:m
+ʋe̥tseɽr̟ni'zætsijæ
 
 
 original word : 
-cadentia
-ka'den.ti.a
+вже
+wʒɛ
 
-'ke:'da:n'ti:'a:
+wʒɛ
 
 
 original word : 
-cadentie
-ka'den.ti.e:
+взагалі
+wzaɦa'li
 
-'ke:'da:n'ti:'e:
+wzæ̹ɦæ'li
 
 
 original word : 
-cadeo
-'ka.de.o:
+взаємовплив
+wzajemɔu'pɪu
 
-'ke:'da:'ø:
+wzæjemuɔ'pɪu
 
 
 original word : 
-cadere
-ka'de:.re
+вибачити
+'ʋɪbatʃete
 
-'ke:'da:'re:
+'ʋɪbæ̥tʃete
 
 
 original word : 
-Caesaraugusta
-kae.sa.rau'ɡus.ta
+вибрати
+'ʋɪbrate
 
-'ke:ɑ'tɑ:'rɑ:u'ɡu:s'sɑ:
+'ʋɪbræte
 
 
 original word : 
-Callirhoe
-kal'li.ro.e:
+вивчати
+ʋeu'tʃate
 
-'ke:l'li:'ro:'a:
+ʋeu'tʃæte
 
 
 original word : 
-Callirrhoe
-kal'lir.ro.e:
+виграш
+'ʋɪɦraʃ
 
-'ke:r'li:l'rø:'a:
+'ʋɪɦræʃ
 
 
 original word : 
-cambiare
-kam.bi'a:.re
+видача
+'ʋɪdatʃa
 
-'kø:m'bi:'a:'ra:
+'ʋɪdætʃæ
 
 
 original word : 
-cambiavi
-kam.bi'a:.wi:
+вижити
+'ʋɪʒete
 
-'kɶ:m'bi:'a:'wi:
+'ʋɪʒete
 
 
 original word : 
-cambio
-'kam.bi.o:
+визнати
+'ʋɪznate
 
-'kɶ:m'bi:'o:
+'ʋɪn̥zæte
 
 
 original word : 
-cambire
-kam'bi:.re
+викладач
+ʋeka'datʃ
 
-'kø:m'bɯ:'ra:
+ʋekæ'dætʃ
 
 
 original word : 
-cambium
-'kam.bi.um
+виконати
+'ʋɪkɔnate
 
-'kɶ:m'bɯ:'u:m
+'ʋɪkɔnæte
 
 
 original word : 
-camminus
-kam'mi:.nus
+виліковувати
+ʋeli'kɔwʊʋate
 
-'ka:m'mi:'nu:s
+ʋeɭ̟i'kʊwɔʋæte
 
 
 original word : 
-cancriclus
-kan'kri.klus
+вимирати
+ʋeme'rate
 
-'ka:r'kni:'kl̟̟̟u:s
+ʋem̥e'ɽr̟æte
 
 
 original word : 
-capitina
-ka.pi'ti:.na
+винайти
+'ʋɪnaite
 
-'ka:'pɯ:'tɯ:'na:
+'ʋɪn̥æ̥ite
 
 
 original word : 
-cappella
-kap'pel.la
+винник
+'ʋɪn:ek
 
-'ke:p'pa:lʰ'lʰa:
+'ʋɪn̥:ek
 
 
 original word : 
-cappellus
-kap'pel.lus
+винятковий
+ʋenat'kɔʋei
 
-'ke:p'pa:l'l̟̟̟u:s
+ʋen̠̥æt'kɔʋei
 
 
 original word : 
-capum
-'ka.pum
+виправити
+'ʋɪpraʋete
 
-'ka:'pu:m
+'ʋɪpræʋete
 
 
 original word : 
-carnaceus
-kar'na:.ke.us
+виробити
+'ʋɪrɔbete
 
-'ke:n'ra:'ka:'u:s
+'ʋɪrɔbete
 
 
 original word : 
-casco
-'kas.ko:
+вирушити
+'ʋɪrʊʃete
 
-'ka:s'kø:
+'ʋɪrʊʃete
 
 
 original word : 
-casicare
-ka.si'ka:.re
+вирішення
+'ʋɪriʃen:a
 
-'ke:'si:'ka:'ra:
+'ʋɪriʃen̠:æ
 
 
 original word : 
-casico
-'ka:.si.ko:
+висловлюватися
+ʋes'ɔulʊʋatesa
 
-'ka:'sɯ:'ko:
+ʋet'uɔlʊʋæsesæ
 
 
 original word : 
-catunum
-ka'tu:.num
+високопосадовець
+ʋesɔkɔpɔsa'dɔʋets
 
-'ka:'tu:'nu:m
+ʋetɔkɔpɔsæ'dɔʋess
 
 
 original word : 
-caulae
-'kau.lae
+вистачити
+'ʋɪstatʃete
 
-'ke:u'la:a
+'ʋɪtsæ̥tʃete
 
 
 original word : 
-cauterium
-kau'te:.ri.um
+витлумачити
+'ʋɪtʊmatʃete
 
-'ke:u'ta:'rɯ:'u:m
+'ʋɪtʊmæ̥tʃete
 
 
 original word : 
-caveola
-ka'we.o.la
+вихід
+'ʋɪxid
 
-'ke:'wa:'o:'lʰa:
+'ʋɪxid
 
 
 original word : 
-cavula
-'ka.wu.la
+вичерпувати
+ʋe'tʃɛrpʊʋate
 
-'ka:'wu:'lʰa:
+ʋe'tʃɛrpʊʋæte
 
 
 original word : 
-cawa
-'ka.wa
+виявляти
+ʋejau'late
 
-'ka:'wa:
+ʋejæu'læte
 
 
 original word : 
-cedo
-'ke:.do:
+владний
+'wadnei
 
-'ke:'do:
+'wæ̥dnei
 
 
 original word : 
-chirurgianus
-kʰi:.rur.ɡi'a:.nus
+влаштовувати
+waʃ'tɔwʊʋate
 
-'kʰi:'ru:n'ɡi:'a:'ru:s
+wæʃ'tʊwɔʋæte
 
 
 original word : 
-chronicus
-'kʰro.ni.kus
+внесок
+'wnɛsɔk
 
-'kno:'ri:'kʰu:s
+'wsɛn̥ɔk
 
 
 original word : 
-cicala
-ki:'ka:.la
+водоспад
+wɔdɔ'spad
 
-'ki:'ka:'lʰa:
+wɔsɔ'tpæd
 
 
 original word : 
-cinquaginta
-ki:n.kʷa:'ɡin.ta:
+водій
+wo'dii
 
-'ki:n'kʷa:'ɡi:n'ta:
+wo'ɖ̟ii
 
 
 original word : 
-cinque
-'ki:n.kʷe
+волонтерка
+wɔɔn'tɛrka
 
-'ke:n'kʷi:
+wɔɔn'tɛrkæ
 
 
 original word : 
-cinusia
-ki'nu:.si.a
+воно
+wɔ'nɔ
 
-'ki:'nu:'si:'a:
+wɔ'n̥ɔ
 
 
 original word : 
-circus
-'kir.kus
+восени
+wɔse'nɪ
 
-'ki:r'ku:s
+wɔse'n̠ɪ
 
 
 original word : 
-cito
-'ki.to:
+воєнний
+wɔ'jɛn:ei
 
-'kɯ:'to:
+wɔ'jɛn:ei
 
 
 original word : 
-civis romanus sum
-'ki:.wis.ro:'ma:.nus.sum
+впевненість
+'ʍpɛunenist
 
-'ki:'wi:s'nø:'ma:'ru:s'su:m
+'ʍpɛ̥unen̠ist
 
 
 original word : 
-clapare
-kla'pa:.re
+враження
+'wraʒen:a
 
-'kle:'pa:'ra:
+'wræʒen̠:æ
 
 
 original word : 
-clapo
-'kla.po:
+врятовувати
+wra'tɔwʊʋate
 
-'klɑ:'po:
+wræ'tʊwɔʋæte
 
 
 original word : 
-clubium
-'klu.bi.um
+всесвітній
+ʍses'ʋitnii
 
-'kl̟̟̟u:'bɯ:'u:m
+ʍtes'ʋisnii
 
 
 original word : 
-cnifus
-'kni:.fus
+втрачати
+ʍtra'tʃate
 
-'kni:'fu:s
+ʍtræ'tʃæte
 
 
 original word : 
-coacticare
-ko.ak.ti'ka:.re
+втікач
+ʍti'katʃ
 
-'ko:'e:k'ti:'ka:'ra:
+ʍti'kætʃ
 
 
 original word : 
-coalitio
-ko.a'li.ti.o:
+вугол
+'wuɦɔ
 
-'ko:'ɑ̃:'li:'ti:'ø:
+'wɔɦu
 
 
 original word : 
-cocinarius
-ko.ki:'na:.ri.us
+вулкан
+wʊ'kan
 
-'ko:'kɯ:'na:'rɯ:'u:s
+wʊ'kæn
 
 
 original word : 
-colligo
-'kol.li.ɡo:
+вчитель
+'ʍtʃɪtel
 
-'ko:l'lɯ:'ɡo:
+'ʍtʃɪteɭ̟
 
 
 original word : 
-coloco
-'ko.lo.ko:
+вівтарний
+'ʋiutarnei
 
-'ko:'lo:'ko:
+'ʋiutæ̥nrei
 
 
 original word : 
-columbinus
-ko.lum'bi:.nus
+відбуватися
+ʋidbʊ'ʋatesa
 
-'ko:'l̟̟̟u:m'bi:'nu:s
+ʋidbʊ'ʋæsetæ
 
 
 original word : 
-combattere
-kom'bat.te.re
+відвойовувати
+ʋidwɔ'jɔwʊʋate
 
-'ko:m'be:t'ta:'re:
+ʋidwʊ'jɔwɔʋæte
 
 
 original word : 
-combatto
-kom'bat.to:
+віддаль
+'ʋid:al
 
-'ko:m'ba:t'tø:
+'ʋid:æl
 
 
 original word : 
-cominitio
-ko.mi'ni.ti.o:
+відказати
+ʋidka'zate
 
-'ko:'mi:'ni:'ti:'ø:
+ʋizkæ'dæte
 
 
 original word : 
-commandare
-kom.man'da:.re
+відлічити
+ʋidli'tʃɪte
 
-'ko:m'me:n'da:'ra:
+ʋildi'tʃɪte
 
 
 original word : 
-commando
-kom'man.do:
+відмежувати
+ʋidmeʒʊ'ʋate
 
-'ko:m'ma:n'dø:
+ʋi̥dmeʒʊ'ʋæte
 
 
 original word : 
-complesco
-kom'ple:s.ko:
+відношення
+ʋid'nɔʃen:a
 
-'ko:m'ple:s'kø:
+ʋid'nɔʃen̠:æ
 
 
 original word : 
-complire
-kom'pli:.re
+відповідність
+ʋidpɔ'ʋidnist
 
-'ko:m'ple:'ri:
+ʋidpɔ'ʋinsitt
 
 
 original word : 
-confesso
-kon'fes.so:
+відпустка
+ʋid'pustka
 
-'ko:n'fe:s'sø:
+ʋid'putskæ
 
 
 original word : 
-Constantinopolis
-kon.stan.ti:'no.po.lis
+відсутній
+ʋidz'sutnii
 
-'ko:n'tsa:n'ti:'no:'po:'li:s
+ʋidz'tusnii
 
 
 original word : 
-contingesco
-kon.tin'ɡe:s.ko:
+відсіч
+'ʋidzsitʃ
 
-'ko:n'se:n'ɡi:t'kø:
+'ʋizdtisʃ
 
 
 original word : 
-contio
-'ko:n.ti.o:
+відчинити
+ʋidʒtʃe'nɪte
 
-'ko:n'ti:'ø:
+ʋin̥ʒtʃe'ɖ̟ɪte
 
 
 original word : 
-contrafacio
-kon.tra:'fa.ki.o:
+віза
+'ʋiza
 
-'ko:r'tna:'fa:'ki:'o:
+'ʋizæ
 
 
 original word : 
-convitare
-kon.wi:'ta:.re
+війна
+ʋii'na
 
-'ko:n'we:'ta:'ri:
+ʋii'næ
 
 
 original word : 
-convito
-kon'wi:.to:
+вільний час
+'ʋilnei'tʃas
 
-'ko:n'wɯ:'to:
+'ʋi̥slei'tʃæn̥
 
 
 original word : 
-coratio
-ko'ra:.ti.o:
+вірити
+'ʋirete
 
-'ko:'ra:'ti:'ø:
+'ʋirete
 
 
 original word : 
-corationis
-ko.ra:.ti'o:.nis
+вірш
+ʋirʃ
 
-'ko:'na:'si:'ø:'ri:t
+ʋirʃ
 
 
 original word : 
-cordarius
-kor'da:.ri.us
+віспа
+'ʋispa
 
-'ko:d'ra:'rɯ:'u:s
+'ʋispæ
 
 
 original word : 
-cosere
-'ko:.se.re
+вісімдесят три
+ʋisimde'sat.trɪ
 
-'ko:'se:'re:
+ʋir̥i̥mse'sæt.tdɪ
 
 
 original word : 
-cosio
-'ko:.si.o:
+вітрило
+ʋi'trɪɔ
 
-'ko:'si:'ø:
+ʋi'trɪɔ
 
 
 original word : 
-cosire
-ko:'si:.re
+віяти
+'ʋijate
 
-'ko:'se:'ri:
+'ʋijæte
 
 
 original word : 
-coso
-'ko:.so:
+гадати
+ɦa'date
 
-'ko:'so:
+ɦæ'dæte
 
 
 original word : 
-crapulor
-'kra:.pu.lor
+гай
+ɦai
 
-'klɑ:'pu:'ro:r
+ɦæi
 
 
 original word : 
-crapulosus
-kra:.pu'lo:.sus
+гаманець
+ɦama'nɛts
 
-'klɑ:'pu:'ro:'su:s
+ɦæm̥æ'sɛtn̥
 
 
 original word : 
-crebellum
-kre'bel.lum
+гарантувати
+ɦarantʊ'ʋate
 
-'kle:'be:r'l̟̟̟u:m
+ɦæn̥ærtʊ'ʋæte
 
 
 original word : 
-cremere
-'kre.me.re
+гасло
+'ɦasɔ
 
-'kre:'me:'re:
+'ɦæsɔ
 
 
 original word : 
-cremo
-'kre.mo:
+гвинтівка
+ɦʋen'tiuka
 
-'kre:'mo:
+ɦʋen̠'tiukæ
 
 
 original word : 
-cruralis
-kru:'ra:.lis
+генетичний код
+ɦene'tɪtʃnei.kɔd
 
-'klu:'rã:'ri:s
+ɦen̠̥e'tɪtʃdei.kɔn̥
 
 
 original word : 
-cultus
-'kul.tus
+герой
+ɦe'rɔi
 
-'ku:l'su:t
+ɦe'ɽr̟ɔi
 
 
 original word : 
-cum
-kum
+глибинний
+ɦe'bɪn:ei
 
-'ku:m
+ɦe'bɪn:ei
 
 
 original word : 
-cunicli
-'ku.ni.kli:
+глухар
+ɦʊ'xar
 
-'ku:'ni:'klʰi:
+ɦʊ'xær
 
 
 original word : 
-cuniclus
-ku'ni.klus
+глід
+ɦlid
 
-'ku:'ni:'kl̟̟̟u:s
+ɦdil
 
 
 original word : 
-cyclops
-'ky.klo:ps
+гній
+ɦnii
 
-'ky:'klo:ps
+ɦnii
 
 
 original word : 
-damnaticum
-dam'na:.ti.kum
+говорити
+ɦɔwɔ'rɪte
 
-'da:m'na:'ti:'ku:m
+ɦɔwɔ'rɪte
 
 
 original word : 
-dancio
-'dan.ki.o:
+голка
+'ɦɔka
 
-'da:n'ki:'o:
+'ɦɔkæ
 
 
 original word : 
-decembrius
-de'kem.bri.us
+голод
+'ɦɔɔd
 
-'ri:'kø:m'bde:'u:s
+'ɦɔɔd
 
 
 original word : 
-deexcitare
-de:.ek.ski'ta:.re
+голубий
+ɦɔʊ'bɪi
 
-'di:'e:k'tke:'sa:'re:
+ɦʊɔ'bɪi
 
 
 original word : 
-deexcito
-de:'ek.ski.to:
+гонор
+'ɦɔnɔr
 
-'di:'e:k'tke:'so:
+'ɦɔrɔn
 
 
 original word : 
-deiformis
-de.i'for.mis
+гордитися
+ɦɔr'dɪtesa
 
-'ri:'e:'fo:d'mi:s
+ɦɔd'rɪsetæ
 
 
 original word : 
-deintus
-de'in.tus
+горностай
+ɦɔrnɔ'stai
 
-'di:'e:n'su:t
+ɦɔsr̥ɔ'n̥tæi
 
 
 original word : 
-delebilis
-de:'le:.bi.lis
+господарство
+ɦɔspɔ'darstwɔ
 
-'dĩ:'le:'bẽ:'li:s
+ɦɔtpɔ'dærsswɔ
 
 
 original word : 
-deletio
-de:'le:.ti.o:
+гостювати
+ɦɔstʊ'ʋate
 
-'dĩ:'le:'te:'ø:
+ɦʊtsɔ'ʋæte
 
 
 original word : 
-delicatiare
-de.li.ka.ti'a:.re
+грабіжник
+ɦra'biʒnek
 
-'dĩ:'le:'ka:'ti:'a:'re:
+ɦnæ'bi̥ʒrek
 
 
 original word : 
-delicatio
-de.li'ka.ti.o:
+граматика
+ɦra'mateka
 
-'dĩ:'le:'ka:'ti:'ø:
+ɦræ'mætekæ
 
 
 original word : 
-deorsum
-de'or.sum
+грати
+'ɦrate
 
-'re:'ø:d'su:m
+'ɦræte
 
 
 original word : 
-depanare
-de:.pa:'na:.re
+грець
+ɦrɛts
 
-'da:'pe:'na:'re:
+ɦrɛst
 
 
 original word : 
-depano
-de:'pa:.no:
+григоріанський календар
+ɦreɦɔri'anskei.kaen'dar
 
-'da:'pe:'no:
+ɦdeɦɔri'ærskei.kæen̠'nær
 
 
 original word : 
-derectiare
-de:.re:k.ti'a:.re
+громадсько-політичний
+ɦrɔ'madzskɔ.pɔli'tɪtʃnei
 
-'di:'re:k'te:'a:'re:
+ɦdɔ'mærztkɔ.pɔli'sɪtʃnei
 
 
 original word : 
-derectio
-de:'re:k.ti.o:
+груба
+'ɦruba
 
-'di:'re:k'te:'ø:
+'ɦrubæ
 
 
 original word : 
-derectus
-de:'re:k.tus
+група
+'ɦrupa
 
-'de:'re:k'su:t
+'ɦrupæ
 
 
 original word : 
-deripare
-de.ri:'pa:.re
+грім
+ɦrim
 
-'di:'re:'pa:'re:
+ɦrim
 
 
 original word : 
-deripo
-de'ri:.po:
+гуманізм
+ɦʊma'nizm
 
-'di:'re:'po:
+ɦʊm̥æ'zin̥m̥
 
 
 original word : 
-desiderosus
-de:.si:.de'ro:.sus
+гусятко
+ɦʊ'satkɔ
 
-'di:'se:'de:'ro:'su:s
+ɦɔ'tæskʊ
 
 
 original word : 
-desidium
-de:'si.di.um
+гівноїд
+ɦiunɔ'jid
 
-'dɯ:'se:'dɯ:'u:m
+ɦiɔdu'jin
 
 
 original word : 
-destrugere
-de:s'tru.ɡe.re
+гідрологічний
+ɦidrɔo'ɦitʃnei
 
-'re:t'sdu:'ɡe:'re:
+ɦi̥droɔ'ɦitʃnei
 
 
 original word : 
-destrugo
-'de:s.tru.ɡo:
+гіперінфляція
+ɦiperin'flatsija
 
-'re:t'sdu:'ɡo:
+ɦipeɽr̟in'flæstijæ
 
 
 original word : 
-Deus
-'de.us
+гість
+ɦist
 
-'de:'u:s
+ɦist
 
 
 original word : 
-deviatio
-de:.wi'a:.ti.o:
+дамба
+'damba
 
-'di:'we:'a:'ti:'ø:
+'dæm̥bæ
 
 
 original word : 
-dia
-'di:.a
+дарувати
+darʊ'ʋate
 
-'di:'ɑ:
+dærʊ'ʋæte
 
 
 original word : 
-Diana
-di'a:.na
+двадцять другий
+'dʋadztsat'druɦei
 
-'di:'ɑ:'nɑ:
+'dʋærzstæt'dduɦei
 
 
 original word : 
-diatim
-di'a:.tim
+дванадцять
+dʋa'nadztsat
 
-'di:'ɑ:'ti:m
+dʋæ'nædzstæt
 
 
 original word : 
-dietim
-di'e:.tim
+двоголовий
+dwɔɦɔ'ɔʋei
 
-'de:'i:'ti:m
+dwɔɦɔ̥'ɔʋei
 
 
 original word : 
-dire
-'di:.re
+двір
+dʋir
 
-'de:'ri:
+rʋid
 
 
 original word : 
-discalceus
-dis'kal.ke.us
+де
+dɛ
 
-'de:s'ka:l'kɯ:'u:s
+dɛ
 
 
 original word : 
-disculceus
-dis'kal.ke.us
+дев&#039;яносто
+deʋja'nɔstɔ
 
-'de:s'ka:l'kɯ:'u:s
+deʋjæ'sɔn̥tɔ
 
 
 original word : 
-dismerdare
-dis.mer'da:.re
+дев&#039;яносто три
+deʋja'nɔstɔ.trɪ
 
-'re:s'mi:d'da:'re:
+neʋjæ'sɔttɔ.trɪ
 
 
 original word : 
-diurnus
-di'ur.nus
+дев&#039;ять
+'dɛʋjat
 
-'ri:'u:d'nu:s
+'dɛʋjæt
 
 
 original word : 
-dius
-'di:.us
+декларувати
+dekarʊ'ʋate
 
-'dɯ:'u:s
+dekærʊ'ʋæte
 
 
 original word : 
-Divana
-di:'wa:.na
+делірій
+de'lirii
 
-'di:'wa:'na:
+de'ɭ̟irii
 
 
 original word : 
-domna
-'dom.na
+демократ
+demɔ'krat
 
-'do:m'na:
+dem̥ɔ'kræt
 
 
 original word : 
-domnicella
-dom.ni'kel.la
+демонструвати
+demɔnstrʊ'ʋate
 
-'do:m'ne:'ki:lʰ'lʰa:
+dem̥ʊrtsn̥ɔ'ʋæte
 
 
 original word : 
-drectus
-'dre:k.tus
+дерево
+'dɛrewɔ
 
-'rde:k'su:t
+'dɛrewɔ
 
 
 original word : 
-dullia
-'dul.li.a
+десерт
+de'sɛrt
 
-'du:l'li:'a:
+se'r̥ɛdt
 
 
 original word : 
-ebrietas
-e:'bri.e.ta:s
+деталь
+de'tal
 
-'i:'bre:'e:'sa:t
+de'tæl
 
 
 original word : 
-eccere
-'ek.ke.re
+деякий
+'dɛjakei
 
-'e:k'ke:'re:
+'dɛjækei
 
 
 original word : 
-eccille
-ek'kil.le
+дзвіниця
+dzʋi'nɪtsa
 
-'i:k'ke:lʰ'lʰe:
+dzʋi'nɪstæ
 
 
 original word : 
-eccu hic
-'ek.ku.hi:k
+дзиґар
+dze'ɡar
 
-'i:k'ku:'he:k
+dre'ɡæz
 
 
 original word : 
-eo
-'e.o
+диверсія
+de'ʋɛrsija
 
-'e:'o:
+de'ʋɛrsijæ
 
 
 original word : 
-ephesius
-e'pʰe.si.us
+дизайн
+de'zain
 
-'i:'pʰe:'se:'u:s
+de'ʒæin
 
 
 original word : 
-epopta
-e'pop.ta
+дикунський
+de'kunskei
 
-'e:'po:p'ta:
+de'kunskei
 
 
 original word : 
-epoptes
-e'pop.te:s
+дипломат
+depɔ'mat
 
-'e:'po:p'se:t
+depɔ'mæt
 
 
 original word : 
-eremiticus
-e.re:'mi:.ti.kus
+дискредитувати
+deskredetʊ'ʋate
 
-'i:'re:'me:'si:'ku:t
+ser̥kdeɖ̟etʊ'ʋæte
 
 
 original word : 
-ergere
-'e:r.ɡe.re
+диспетчер
+de'spɛtʃ:er
 
-'e:r'ɡe:'re:
+se'r̥pɛ̥tʃ:eɖ̟
 
 
 original word : 
-ergo
-'e:r.ɡo:
+дитячий
+de'tatʃei
 
-'e:r'ɡø:
+de'tæ̥tʃei
 
 
 original word : 
-escarius
-e:s'ka:.ri.us
+добрий ранок
+'dɔbrei'ranɔk
 
-'a:s'ke:'rɯ:'u:s
+'dɔ̥brei'rænɔk
 
 
 original word : 
-exalbo
-ek'sal.bo:
+добросусідський
+dɔbrɔsʊ'sidzskei
 
-'a:k'sø:l'bø:
+dʊbsɔtɔ'sirzskei
 
 
 original word : 
-excadeo
-ek'ska.de.o:
+довгоніг
+dɔuɦo'niɦ
 
-'a:k'ske:'de:'ø:
+nu̥ɔɦo'ɖ̟iɦ
 
 
 original word : 
-excadere
-ek.ska'de:.re
+довкілля
+dɔu'kil:a
 
-'a:k'ske:'de:'re:
+luɔ'ki:dæ
 
 
 original word : 
-excadescere
-ek.ska'des.ke.re
+довірити
+dɔ'ʋirete
 
-'a:k'ske:'de:s'ke:'re:
+dɔ'ʋirete
 
 
 original word : 
-excadesco
-ek.ska'des.ko:
+додати
+dɔ'date
 
-'a:k'ske:'de:s'kø:
+dɔ'dæte
 
 
 original word : 
-excalceus
-ek'skal.ke.us
+дозволяти
+dɔzwɔ'late
 
-'a:k'ske:l'ke:'u:s
+zɔdwɔ'læte
 
 
 original word : 
-excambio
-ek'skam.bi.o:
+долар
+'dɔar
 
-'a:k'skø:m'bi:'o:
+'rɔæd
 
 
 original word : 
-excappo
-ek'skap.po:
+домен
+dɔ'mɛn
 
-'a:k'ske:p'po:
+dɔ'm̥ɛn̥
 
 
 original word : 
-excarmino
-ek'skar.mi.no:
+допустимість
+dɔpʊ'stɪmist
 
-'a:k'ske:n'mɯ:'ro:
+dʊpɔ'tsɪmist
 
 
 original word : 
-excorrigiata
-ek.skor.ri'ɡi.a.ta
+допізна
+do'pizna
 
-'i:k'tkø:r're:'ɡi:'a:'sa:
+do'piznæ
 
 
 original word : 
-exeligere
-ek.se:'li.ɡe.re
+дорого
+'dɔrɔɦɔ
 
-'i:k'sẽ:'le:'ɡe:'re:
+'dɔrɔɦɔ
 
 
 original word : 
-exeligo
-ek'se:.li.ɡo:
+досліджувати
+dos'lidʒʊʋate
 
-'i:k'sẽ:'le:'ɡo:
+sol̥'didʒʊʋæte
 
 
 original word : 
-exfortio
-eks'for.ti.o:
+достовірний
+dɔstɔ'ʋirnei
 
-'i:kt'fø:r'se:'ø:
+sɔttɔ'ʋi̥nrei
 
 
 original word : 
-exfrido
-'eks.fri.do:
+досі
+'dɔsi
 
-'i:ks'fde:'ro:
+'sɔti
 
 
 original word : 
-expaventare
-ek.spa.wen'ta:.re
+доторкатися
+dɔtɔr'katesa
 
-'a:k'tpe:'we:n'sa:'re:
+dɔsɔr'kætetæ
 
 
 original word : 
-expavento
-ek.spa'wen.to:
+дощ
+dɔʃtʃ
 
-'a:k'tpe:'we:n'sø:
+dɔʃtʃ
 
 
 original word : 
-experlavo
-ek'sper.la.wo:
+доїжджати
+dɔjiʒ'dʒate
 
-'a:k'spe:l're:'wo:
+dɔjiʒ'dʒæte
 
 
 original word : 
-extorcere
-ek'stor.ke.re
+другий
+'druɦei
 
-'e:k'tsø:r'ke:'re:
+'druɦei
 
 
 original word : 
-extorco
-ek'stor.ko:
+дріт
+drit
 
-'e:k'tsø:r'kø:
+drit
 
 
 original word : 
-extutare
-ek.stu:'ta:.re
+дупа
+'dupa
 
-'a:k'tsu:'te:'re:
+'dupæ
 
 
 original word : 
-extuto
-ek'stu:.to:
+дурний
+dʊr'nɪi
 
-'e:k'tsu:'to:
+dʊr'nɪi
 
 
 original word : 
-exvento
-ek'swen.to:
+дядько
+'dadkɔ
 
-'e:k'twe:n'sø:
+'dædkɔ
 
 
 original word : 
-exvolare
-ek.swo'la:.re
+діаметрально
+diame'tralnɔ
 
-'a:k'swø:'le:'re:
+di̥æme'trælnɔ
 
 
 original word : 
-exvolo
-'ek.swo.lo:
+дід
+did
 
-'e:k'swø:'lʰo:
+did
 
 
 original word : 
-fabellare
-fa:.bel'la:.re
+дійти
+dii'tɪ
 
-'fe:'ba:l'la:'re:
+dii'tɪ
 
 
 original word : 
-fabello
-fa:'bel.lo:
+дірка
+'dirka
 
-'fe:'ba:lʰ'lʰo:
+'dirkæ
 
 
 original word : 
-facia
-'fa.ki.a
+діуретичний
+diʊre'tɪtʃnei
 
-'fa:'ki:'a:
+di̥ʊre'tɪtʃnei
 
 
 original word : 
-fallescere
-fal'le:s.ke.re
+дієта
+di'jɛta
 
-'fe:l'la:s'ke:'re:
+di'jɛtæ
 
 
 original word : 
-fallesco
-fal'le:s.ko:
+еволюціонувати
+ewɔlʊtsiɔnʊ'ʋate
 
-'fe:l'la:s'kø:
+ewʊnɔstiɔlʊ'ʋæte
 
 
 original word : 
-Fata
-'fa:.ta
+екваторіальний
+ekʋatɔri'alnei
 
-'fa:'ta:
+ekʋætɔli'ærnei
 
 
 original word : 
-feminus
-'fe:.mi.nus
+ексгібіціонізм
+eɡzɦibitsio'nizm
 
-'fi:'me:'nu:s
+eɡsɦibitn̥io'ʒizm̥
 
 
 original word : 
-fendo
-'fen.do:
+експеримент
+ekspere'mɛnt
 
-'fe:n'dø:
+ekspeɽr̟e'mɛnt
 
 
 original word : 
-festizo
-fe:s'tiz.zo:
+експортувати
+ekspɔrtʊ'ʋate
 
-'fi:t'se:z'zø:
+ektpʊrsɔ'ʋæte
 
 
 original word : 
-festuca
-fes'tu:.ka
+електричний
+eek'trɪtʃnei
 
-'fe:t'su:'ka:
+eek'tnɪtʃrei
 
 
 original word : 
-fetiolus
-fe:'ti.o.lus
+елефант
+ee'fant
 
-'fi:'se:'ø:'l̟̟̟u:t
+ee'fænt
 
 
 original word : 
-fibella
-fi:'bel.la
+еліпс
+'ɛlips
 
-'fe:'bi:lʰ'lʰa:
+'ɛlips
 
 
 original word : 
-ficco
-'fi:k.ko:
+ембріональний
+embriɔ'nalnei
 
-'fi:k'ko:
+ebmniɔ'ræ̥lnei
 
 
 original word : 
-figico
-'fi:.ɡi.ko:
+ендокринологія
+endɔkrenɔ'ɔɦija
 
-'fɯ:'ɡɯ:'ko:
+eɽr̟dɔ̥kn̠en̠ɔ'ɔɦijæ
 
 
 original word : 
-finesco
-fi:'ne:s.ko:
+енциклопедія
+entsekɔ'pɛdija
 
-'fe:'ni:s'kø:
+eɖ̟stekɔ'pɛnijæ
 
 
 original word : 
-finire
-fi:'ni:.re
+епізодичний
+epizɔ'dɪtʃnei
 
-'fe:'nɯ:'rɯ:
+epidɔ'nɪtʃzei
 
 
 original word : 
-fio
-'fi.o:
+еротика
+e'rɔteka
 
-'fi:'o:
+e'ɽr̟ɔtekæ
 
 
 original word : 
-flasca
-'flas.ka
+етап
+e'tap
 
-'flɑ:s'kɑ:
+e'tæp
 
 
 original word : 
-fleccia
-'flek.ki.a
+етноґрафічний
+etnɔɡra'fitʃnei
 
-'fli:k'ke:'a:
+etnɔɡn̠æ'fitʃrei
 
 
 original word : 
-florire
-flo:'ri:.re
+ж
+ʒ
 
-'fro:'le:'ri:
+ʒ
 
 
 original word : 
-flotus
-'flo:.tus
+жалоба
+ʒa'ɔba
 
-'flo:'su:t
+ʒæ'ɔbæ
 
 
 original word : 
-focacia
-fo'ka:.ki.a
+жати
+'ʒate
 
-'fo:'ka:'ki:'a:
+'ʒæte
 
 
 original word : 
-fortia
-'for.ti.a
+жертва
+'ʒɛrtʋa
 
-'fo:r'ti:'a:
+'ʒɛrtʋæ
 
 
 original word : 
-fortiare
-for.ti'a:.re
+житіє
+ʒeti'jɛ
 
-'fo:r'te:'a:'ri:
+ʒeti'jɛ
 
 
 original word : 
-fortio
-'for.ti.o:
+жовтень
+'ʒɔuten
 
-'fo:r'ti:'ø:
+'ʒu̥ɔten̠
 
 
 original word : 
-frappo
-'frap.po:
+жорсткий
+ʒɔrst'kɪi
 
-'frɑ:p'po:
+ʒɔrts'kɪi
 
 
 original word : 
-frictura
-fri:k'tu:.ra
+журналіст
+ʒʊrna'list
 
-'fri:k'tu:'ra:
+ʒʊsræ'l̥in̥t
 
 
 original word : 
-friscus
-'fris.kus
+з&#039;їдати
+zji'date
 
-'fri:s'ku:s
+dji'zæte
 
 
 original word : 
-frocus
-'fro:.kus
+заблоковувати
+zabɔ'kɔwʊʋate
 
-'fro:'ku:s
+zæwʊ'kɔbɔʋæte
 
 
 original word : 
-garra
-'ɡar.ra
+забруднити
+zabrʊd'nɪte
 
-'ɡa:r'ra:
+dæbrʊn'zɪte
 
 
 original word : 
-gazophylacium
-ɡaz.zo.pʰy'la.ki.um
+заважати
+zaʋa'ʒate
 
-'ɡa:z'zø:'pʰy:'la:'kɯ:'u:m
+zæʋæ'ʒæte
 
 
 original word : 
-genethliacus
-ɡe.netʰ'li.a.kus
+завдяки
+zauda'kɪ
 
-'ɡi:'ne:tʰ'le:'a:'ku:s
+dæuzæ'kɪ
 
 
 original word : 
-genuclum
-ɡe'nu.klum
+завзяття
+zau'zat:a
 
-'ɡe:'nu:'kl̟̟̟u:m
+zæu'zæt:æ
 
 
 original word : 
-glacia
-'ɡla.ki.a
+завтрашній
+'zautraʃnii
 
-'ɡlɑ:'ki:'ɑ:
+'næutræʃzii
 
 
 original word : 
-glacialis
-ɡla.ki'a:.lis
+загибати
+zaɦe'bate
 
-'ɡlɑ:'ki:'ɑ̃:'li:s
+zæ̹ɦe'bæte
 
 
 original word : 
-glandarius
-ɡlan'da:.ri.us
+загроза
+za'ɦrɔza
 
-'ɡlɑ:n'dɑ:'rɯ:'u:s
+zæ̹'ɦrɔzæ
 
 
 original word : 
-grabo
-'ɡra.bo:
+зазвичай
+zazʋe'tʃai
 
-'ɡrɑ:'bo:
+zæ̥zʋe'tʃæi
 
 
 original word : 
-Graecia
-'ɡrae.ki.a
+зайвий
+'zajʋei
 
-'ɡre:a'ki:'a:
+'zæ̥jʋei
 
 
 original word : 
-Graecus
-'ɡrae.kus
+законодавство
+zakɔnɔ'daustwɔ
 
-'ɡre:a'ku:s
+dækuzɔ'næɔtswɔ
 
 
 original word : 
-guerra
-ɡu'er.ra
+закривавлений
+zakre'ʋauenei
 
-'ɡu:'e:r'ra:
+næ̥kre'ʋæueʒei
 
 
 original word : 
-habutus
-ha'bu:.tus
+закінчення
+za'kintʃen:a
 
-'ha:'bu:'su:t
+næ'kiztʃen̠:æ
 
 
 original word : 
-halenare
-ha.le'na:.re
+зал
+za
 
-'hẽ:'la:'na:'re:
+zæ
 
 
 original word : 
-haleno
-'ha.le.no:
+залежний
+za'ɛʒnei
 
-'hẽ:'la:'no:
+næ'ɛʒzei
 
 
 original word : 
-haliurunna
-ha.li.u'run.na
+залякати
+zala'kate
 
-'hã:'ri:'u:'lu:n'na:
+zælæ'kæte
 
 
 original word : 
-halsbergus
-hals'ber.ɡus
+замах
+'zamax
 
-'he:rs'ba:l'ɡu:s
+'zæm̥æx
 
 
 original word : 
-harpa
-'har.pa
+замок
+'zamɔk
 
-'ha:r'pa:
+'zæm̥ɔk
 
 
 original word : 
-haunio
-'hau.ni.o:
+занепокоєння
+zanepɔ'kɔjen:a
 
-'ha:u'ni:'ø:
+næzepɔ'kɔjen̠:æ
 
 
 original word : 
-Helene
-'he.le.ne:
+заощадити
+zaɔʃ'tʃadete
 
-'hẽ:'le:'ne:
+dæɔʃ'tʃæzete
 
 
 original word : 
-hemicrania
-he:.mi'kra:.ni.a
+запах
+'zapax
 
-'hi:'me:'kna:'ri:'a:
+'zæpæx
 
 
 original word : 
-hendo
-'hen.do:
+запитати
+zape'tate
 
-'he:n'dø:
+zæpe'tæte
 
 
 original word : 
-heu
-heu
+заповнити
+za'pɔunete
 
-'he:u
+næ'pu̥ɔzete
 
 
 original word : 
-Hispaniolus
-his.pa:'ni.o.lus
+започаткувати
+zapɔtʃatkʊ'ʋate
 
-'hi:s'pa:'ni:'ø:'l̟̟̟u:s
+zæpʊtʃætkɔ'ʋæte
 
 
 original word : 
-honta
-'ho:n.ta
+запрошувати
+za'prɔʃʊʋate
 
-'ho:n'ta:
+zæ'prʊʃɔʋæte
 
 
 original word : 
-horarium
-ho:'ra:.ri.um
+заробітний
+zaro'bitnei
 
-'ho:'ra:'rɯ:'u:m
+næro'bi̥tzei
 
 
 original word : 
-horripilo
-hor'ri.pi.lo:
+заручник
+za'rutʃnek
 
-'ho:r'rɯ:'pɯ:'lʰo:
+næ'rutʃzek
 
 
 original word : 
-hortatorius
-hor.ta:'to:.ri.us
+засвідчувати
+zas'ʋidʒtʃʊʋate
 
-'ho:r'sa:'to:'rɯ:'u:t
+sæt'ʋizʒtʃʊʋæte
 
 
 original word : 
-hydromantia
-hy.dro.man'ti:.a
+засновниця
+zas'nɔunetsa
 
-'hy:'rdø:'ma:n'ti:'a:
+sæn̥'zu̥ɔnetsæ
 
 
 original word : 
-hydromantis
-hy.dro'man.tis
+застосовувати
+zastɔ'sɔwʊʋate
 
-'hy:'rdø:'ma:n'si:t
+tæssʊ'sɔwɔʋæte
 
 
 original word : 
-hypaethrus
-hy'pae.tʰrus
+заступник
+za'stupnek
 
-'hy:'pe:a'tʰru:s
+sæ'n̥tu̥pzek
 
 
 original word : 
-i graeca
-i:'ɡrae.ka
+затор
+za'tɔr
 
-'e:'ɡraɯ:'ka:
+ræ'tɔz
 
 
 original word : 
-Iana
-'ja:.na
+захисниця
+zaxes'nɪtsa
 
-'ja:'na:
+næxet'zɪssæ
 
 
 original word : 
-ianuella
-ja:.nu'el.la
+захід
+'zaxid
 
-'je:'nu:'a:lʰ'lʰa:
+'dæxiz
 
 
 original word : 
--idiare
-i.di'a:.re
+зацікавлювати
+zatsi'kaulʊʋate
 
-'e:'dʷi:'a:'ri:
+zæsti'kæulʊʋæte
 
 
 original word : 
--idio
-'i.di.o
+збагачувати
+zba'ɦatʃʊʋate
 
-'i:'dʷi:'o:
+zbæ̹'ɦætʃʊʋæte
 
 
 original word : 
-ieniperus
-je:'ni.pe.rus
+збройні сили
+'zbrɔini'sɪe
 
-'ji:'ne:'pe:'ru:s
+'nbrɔisi̥'sɪe
 
 
 original word : 
-illu
-'il.lu
+збіг
+zbiɦ
 
-'i:l'l̟̟̟u:
+zbiɦ
 
 
 original word : 
-imbibito
-im'bi.bi.to:
+звернутися
+zʋer'nutesa
 
-'u:m'bɯ:'bɯ:'to:
+zʋen̠'rusetæ
 
 
 original word : 
-imboscare
-im.bos'ka:.re
+звичайний
+zʋe'tʃainei
 
-'ø:m'bo:s'ka:'ri:
+nʋe'tʃæ̥izei
 
 
 original word : 
-imbosco
-im'bos.ko:
+звужувати
+'zwuʒʊʋate
 
-'y:m'bo:s'kø:
+'zwuʒʊʋæte
 
 
 original word : 
-impenetrabilis
-im.pe.ne'tra:.bi.lis
+звідти
+'zʋidte
 
-'e:m'pi:'re:'sna:'bĩ:'li:t
+'dʋi̥zte
 
 
 original word : 
-implio
-'im.pli.o:
+звісно
+'zʋisnɔ
 
-'i:m'pli:'ø:
+'nʋiszɔ
 
 
 original word : 
-implire
-im'pli:.re
+згодний
+'zɦɔdnei
 
-'e:m'plɯ:'rɯ:
+'dɦɔ̥nzei
 
 
 original word : 
-impositum
-im'po:.si.tum
+здатність
+'zdatnist
 
-'i:m'po:'ti:'su:m
+'dnæstist
 
 
 original word : 
-imprehendere
-im.pre'hen.de.re
+здолати
+zdɔ'ate
 
-'e:m'pni:'he:r'de:'re:
+dzɔ̥'æte
 
 
 original word : 
-imprehendo
-im.pre'hen.do:
+зелений
+ze'ɛnei
 
-'e:m'pni:'he:r'dø:
+ne̥'ɛzei
 
 
 original word : 
-inalbo
-i'nal.bo:
+зерновий
+zernɔ'ʋɪi
 
-'i:'nɒ:l'bø:
+zen̠̥rɔ'ʋɪi
 
 
 original word : 
-inaltio
-i'nal.ti.o:
+зимувати
+zemʊ'ʋate
 
-'i:'nɑ:l'ti:'ø:
+zem̥ʊ'ʋæte
 
 
 original word : 
-inaltus
-i'nal.tus
+зловмисниця
+zɔu'mɪsnetsa
 
-'i:'nɑ:l'su:t
+nuɔ'mɪ̥tzessæ
 
 
 original word : 
-incaldesco
-in.kal'de:s.ko:
+злочинність
+zɔ'tʃɪn:ist
 
-'e:n'ka:l'di:s'kø:
+nɔ'sʃɪ:tist
 
 
 original word : 
-incaldire
-in.kal'di:.re
+зменшення
+'zmɛnʃen:a
 
-'e:n'ka:l'dɯ:'rɯ:
+'nmɛ̥zʃen̠:æ
 
 
 original word : 
-incarrico
-in'kar.ri.ko:
+змушувати
+'zmuʃʊʋate
 
-'ɯ:r'ka:n'rɯ:'ko:
+'zmuʃʊʋæte
 
 
 original word : 
-inclago
-'in.kla.ɡo:
+зміняти
+zmi'nate
 
-'i:n'kla:'ɡo:
+nmi'zæte
 
 
 original word : 
-incohativus
-in.ko.ha:'ti:.wus
+знак
+znak
 
-'i:n'kø:'ha:'si:'wu:t
+nzæk
 
 
 original word : 
-incoho
-'in.ko.ho:
+значити
+'znatʃete
 
-'i:n'kø:'ho:
+'nzæ̥tʃete
 
 
 original word : 
-indenso
-in'den.so:
+зненацька
+zne'natska
 
-'e:n'di:n'sø:
+nze'n̠æstkæ
 
 
 original word : 
-indigitamenta
-in.di.ɡi.ta:'men.ta
+знизити
+'znɪzete
 
-'e:n'di:'ɡi:'ta:'mi:n'ta:
+'nzɪzete
 
 
 original word : 
-indigito
-in'di.ɡi.to:
+зобов&#039;язувати
+zɔbɔ'ʋjazʊʋate
 
-'ɯ:n'dɯ:'ɡɯ:'to:
+zʊbɔ'ʋjæzɔʋæte
 
 
 original word : 
-indolens
-'in.do.lens
+зовсім
+'zɔusim
 
-'e:n'dø:'lɯ:ns
+'zuɔsim
 
 
 original word : 
-indulcesco
-in.dul'ke:s.ko:
+зорієнтувати
+zɔrijentʊ'ʋate
 
-'e:n'du:l'ki:s'kø:
+nʊrijeʒtɔ'ʋæte
 
 
 original word : 
-indulcire
-in.dul'ki:.re
+зрештою
+'zrɛʃtɔjʊ
 
-'e:n'du:l'kɯ:'rɯ:
+'zrɛʃtɔjʊ
 
 
 original word : 
-infacundus
-in.fa:'kun.dus
+зручність
+'zrutʃnist
 
-'i:n'fa:'ku:n'du:s
+'nrusʃtist
 
 
 original word : 
-inferus
-'in.fe.rus
+зрілість
+'zrilist
 
-'e:n'fi:'ru:s
+'zrisil̥t
 
 
 original word : 
-ingrevico
-in'ɡre.wi.ko:
+зубний
+zʊb'nɪi
 
-'e:r'ɡnɯ:'wɯ:'ko:
+nʊb'zɪi
 
 
 original word : 
-innubus
-'in.nu.bus
+зупиняти
+zʊpe'nate
 
-'i:n'nu:'bu:s
+nʊpe'ʒæte
 
 
 original word : 
-inodorus
-i.no'do:.rus
+зцілити
+ztsi'ɪte
 
-'i:'ro:'do:'nu:s
+zsti̥'ɪte
 
 
 original word : 
-interminabilis
-in.ter.mi'na:.bi.lis
+зібрати
+zi'brate
 
-'e:r'si:n'mi:'na:'bĩ:'li:t
+zi'bræte
 
 
 original word : 
-interro
-in'ter.ro:
+зіставляти
+zistau'late
 
-'e:r'ti:n'rø:
+tissæu'læte
 
 
 original word : 
-intorco
-in'tor.ko:
+ирод
+'ɪrɔd
 
-'i:r'tø:n'kø:
+'ɪrɔd
 
 
 original word : 
-inuxoro
-i'nuk.so.ro:
+йод
+jɔd
 
-'i:'ru:k'so:'no:
+jɔd
 
 
 original word : 
-invirdesco
-in.wir'de:s.ko:
+каблучка
+ka'butʃka
 
-'e:r'wi:n'di:s'kø:
+kæ'butʃkæ
 
 
 original word : 
-invitio
-in'wi.ti.o:
+казати
+ka'zate
 
-'i:n'wi:'ti:'ø:
+kæ'zæte
 
 
 original word : 
-iocare
-jo'ka:.re
+каліграфія
+kali'ɦrafija
 
-'jo:'ke:'ra:
+kæli'ɦræfijæ
 
 
 original word : 
-ioco
-'jo.ko:
+кам&#039;яний
+kamja'nɪi
 
-'jo:'ko:
+kæm̥jæ'n̥ɪi
 
 
 original word : 
-ipsimus
-'ip.si.mus
+канадець
+ka'nadets
 
-'i:p'si:'mu:s
+kæ'sædetn̥
 
 
 original word : 
-Iraquia
-i'ra:.kʷi.a
+канчук
+kan'tʃuk
 
-'i:'rɑ:'kʷi:'ɑ:
+kæn̥'tʃuk
 
 
 original word : 
--issimus
-'is.si.mus
+капуста
+ka'pusta
 
-'i:s'si:'mu:s
+kæ'putsæ
 
 
 original word : 
-iudaizo
-ju:.da'iz.zo:
+кардіологічний
+kardiɔo'ɦitʃnei
 
-'ju:'da:'i:z'zø:
+kædrioɔ'ɦitʃnei
 
 
 original word : 
-iugaster
-ju'ɡas.ter
+карта
+'karta
 
-'ju:'ɡe:t'sa:r
+'kærtæ
 
 
 original word : 
-iusum
-'ju:.sum
+касувати
+kasʊ'ʋate
 
-'ju:'su:m
+kætʊ'ʋæse
 
 
 original word : 
--izo
-'iz.zo
+католицький
+katɔ'ɪtskei
 
-'i:z'zø:
+kæsɔ'ɪttkei
 
 
 original word : 
-Jana
-'ja:.na
+качка
+'katʃka
 
-'ja:'na:
+'kætʃkæ
 
 
 original word : 
-Janae
-'ja:.nae
+квадрат
+kʋa'drat
 
-'je:'naa:
+kʋæ'dræt
 
 
 original word : 
-lacartus
-la'kar.tus
+келих
+'kɛex
 
-'ra:'ka:l'su:t
+'kɛex
 
 
 original word : 
-laitus
-'la.i.tus
+кипіти
+ke'pite
 
-'la:'i:'su:t
+ke'pite
 
 
 original word : 
-languio
-'lan.ɡʷi.o:
+кит
+kɪt
 
-'la:n'ɡʷi:'o:
+kɪt
 
 
 original word : 
-languire
-lan'ɡʷi:.re
+кишеньковий злодій
+keʃen'kɔʋei'zɔdii
 
-'le:n'ɡʷɯ:'ra:
+keʃeʒ'kɔʋei'dɔnii
 
 
 original word : 
-lapidesco
-la.pi'de:s.ko:
+класичний
+ka'sɪtʃnei
 
-'le:'pi:'da:s'kø:
+kæ'tɪsʃnei
 
 
 original word : 
-latens
-'la.tens
+клоччя
+'kɔtʃ:a
 
-'le:'sa:nt
+'kɔtʃ:æ
 
 
 original word : 
-latentior
-la'ten.ti.or
+клініка
+'klinika
 
-'re:'ta:n'tɯ:'ø:l
+'kn̠ilikæ
 
 
 original word : 
-latentissime
-la.ten'tis.si.me
+кнайпа
+'knaipa
 
-'le:'sa:n'tɯ:t'sɯ:'me:
+'kn̠æipæ
 
 
 original word : 
-latentissimus
-la.ten'tis.si.mus
+князь
+knaz
 
-'le:'sa:n'ti:t'si:'mu:s
+kn̠æz
 
 
 original word : 
-latentius
-la'ten.ti.us
+кобила
+kɔ'bɪa
 
-'le:'sa:n'tɯ:'u:t
+kɔ'bɪæ
 
 
 original word : 
-lateo
-'la.te.o:
+ковтун
+kɔu'tun
 
-'le:'ta:'ø:
+kuɔ'tun
 
 
 original word : 
-Latina
-la'ti:.na
+кожному своє
+'kɔʒnɔmʊ.swɔ'jɛ
 
-'la:'tɯ:'na:
+'kʊʒnɔmɔ.swɔ'jɛ
 
 
 original word : 
-latinae
-la'ti:.nae
+коктейль Молотова
+kɔk'tɛil'mɔɔtɔʋa
 
-'le:'ti:'na:a
+kɔk'tɛil'mɔɔtɔʋæ
 
 
 original word : 
-latini
-la'ti:.ni:
+колесо
+'kɔesɔ
 
-'la:'tɯ:'nɯ:
+'kɔesɔ
 
 
 original word : 
-latinum
-la'ti:.num
+колода
+kɔ'ɔda
 
-'la:'ti:'nu:m
+kɔ'ɔdæ
 
 
 original word : 
-Latinus
-la'ti:.nus
+комедія
+kɔ'mɛdija
 
-'la:'si:'nu:t
+kɔ'm̥ɛdijæ
 
 
 original word : 
-laubia
-'lau.bi.a
+комп&#039;ютеризація
+kɔmpjʊtere'zatsija
 
-'la:u'bi:'a:
+kʊm̥pjɔseʒe'ɽr̟ættijæ
 
 
 original word : 
-lausa
-'lau.sa
+компетенція
+kɔmpe'tɛntsija
 
-'la:u'sa:
+kɔ̥m̥pe'sɛn̥ttijæ
 
 
 original word : 
-leviarius
-le.wi'a:.ri.us
+комунікація
+kɔmʊni'katsija
 
-'lɯ:'we:'a:'rɯ:'u:s
+kʊm̥ɔsi'kætn̥ijæ
 
 
 original word : 
-limitrophus
-li:'mi.tro.pʰus
+комір
+'kɔmir
 
-'ri:'mi:'slø:'pʰu:t
+'kɔm̥ir
 
 
 original word : 
-linguaticum
-lin'ɡʷa:.ti.kum
+кондитер
+kɔn'dɪter
 
-'li:n'ɡʷa:'ti:'ku:m
+kɔn̥'rɪteɖ̟
 
 
 original word : 
-longitanus
-lon.ɡi'ta:.nus
+конкуренція
+kɔnkʊ'rɛntsija
 
-'lo:n'ɡi:'sa:'nu:t
+kʊnkɔ'rɛnstijæ
 
 
 original word : 
-longiturnus
-lon.ɡi'tur.nus
+консервація
+kɔnser'ʋatsija
 
-'ro:n'ɡi:'su:l'nu:t
+kɔ̥sn̥eɽr̟'ʋætsijæ
 
 
 original word : 
-lucio
-'lu:.ki.o:
+консультантка
+kɔnsʊl'tantka
 
-'l̟̟̟u:'ki:'o:
+kʊltɔn'sæntkæ
 
 
 original word : 
-lucire
-lu:'ki:.re
+контрастувати
+kɔntrastʊ'ʋate
 
-'l̟̟̟u:'ke:'ri:
+kʊrsn̥ættɔ'ʋæte
 
 
 original word : 
-machinare
-ma:.kʰi'na:.re
+конференція
+kɔnfe'rɛntsija
 
-'me:'kʰi:'na:'ra:
+kɔ̥sfe'ɽr̟ɛn̥tn̥ijæ
 
 
 original word : 
-machino
-'ma:.kʰi.no:
+концепт
+kɔn'tsɛpt
 
-'ma:'kʰɯ:'no:
+kɔs'tn̥ɛpt
 
 
 original word : 
-mador
-'ma.dor
+координувати
+kɔɔrdenʊ'ʋate
 
-'ma:'ro:d
+kʊɔdren̠ɔ'ʋæte
 
 
 original word : 
-mais
-majs
+кора
+kɔ'ra
 
-'ma:js
+kɔ'ræ
 
 
 original word : 
-malifatius
-ma.li'fa:.ti.us
+корзина
+kɔr'zɪna
 
-'ma:'lɯ:'fa:'sɯ:'u:t
+kɔz'rɪnæ
 
 
 original word : 
-mana
-'ma.na
+кориця
+kɔ'rɪtsa
 
-'ma:'na:
+kɔ'rɪstæ
 
 
 original word : 
-maneana
-ma:'ne.a.na
+королева
+kɔrɔ'ɛʋa
 
-'me:'na:'a:'na:
+kɔrɔ'ɛʋæ
 
 
 original word : 
-mania
-'ma.ni.a
+коротше кажучи
+kɔ'rɔtʃʃe'kaʒʊtʃe
 
-'ma:'ni:'a:
+kʊ'rɔtʃʃe'kæʒɔ̥tʃe
 
 
 original word : 
-manizare
-ma.niz'za:.re
+косметичний
+kɔsme'tɪtʃnei
 
-'me:'ni:z'za:'ra:
+kɔ̥tme'sɪtʃnei
 
 
 original word : 
-manizo
-ma'niz.zo:
+костел
+kɔ'stɛ
 
-'ma:'ni:z'zø:
+kɔ'tsɛ
 
 
 original word : 
-masticatio
-mas.ti'ka:.ti.o:
+коханець
+kɔ'xanets
 
-'ma:t'si:'ka:'ti:'ø:
+kɔ'xænest
 
 
 original word : 
-matrastra
-ma:'tras.tra
+коштовний
+kɔʃ'tɔunei
 
-'ma:'sra:t'tra:
+kuʃ'tɔ̥ɔnei
 
 
 original word : 
-matrina
-ma:'tri:.na
+красуня
+kra'suna
 
-'ma:'tnɯ:'ra:
+kn̠æ'suræ
 
 
 original word : 
-matrinae
-ma:'tri:.nae
+країна
+kra'jina
 
-'me:'tni:'raa:
+kn̠æ'jiræ
 
 
 original word : 
-melis
-'me.lis
+крейсер
+'krɛiser
 
-'mĩ:'le:s
+'krɛ̥iseɽr̟
 
 
 original word : 
-melum
-'me:.lum
+кречет
+'krɛtʃet
 
-'me:'l̟̟̟u:m
+'krɛ̥tʃet
 
 
 original word : 
-melus
-'me:.lus
+криза
+'krɪza
 
-'me:'l̟̟̟u:s
+'kzɪræ
 
 
 original word : 
-mentio
-'men.ti.o:
+критика
+'krɪteka
 
-'mi:n'te:'ø:
+'krɪtekæ
 
 
 original word : 
-metio
-'me:.ti.o:
+кровожерливий
+krɔwɔ'ʒɛreʋei
 
-'mi:'te:'ø:
+krɔwɔ'ʒɛreʋei
 
 
 original word : 
-metipse
-me'tip.se
+кросівка
+kro'siuka
 
-'mi:'se:p'te:
+ksɔ̞'r̥iukæ
 
 
 original word : 
-metire
-me:'ti:.re
+кудись
+kʊ'dɪs
 
-'mi:'te:'re:
+kʊ'sɪt
 
 
 original word : 
-minacia
-mi'na:.ki.a
+культ
+kult
 
-'mi:'na:'ki:'a:
+kult
 
 
 original word : 
-minaciare
-mi.na:.ki'a:.re
+купа
+'kupa
 
-'me:'na:'ki:'a:'ri:
+'kupæ
 
 
 original word : 
-minacio
-mi'na:.ki.o:
+кур&#039;єр
+kʊ'rjɛr
 
-'mi:'na:'ki:'o:
+kʊ'rjɛr
 
 
 original word : 
-minare
-mi'na:.re
+куртка
+'kurtka
 
-'me:'na:'ri:
+'kurtkæ
 
 
 original word : 
-minctio
-'mi:nk.ti.o:
+кухарка
+kʊ'xarka
 
-'mi:nk'ti:'ø:
+kʊ'xærkæ
 
 
 original word : 
-mino
-'mi.no:
+кібернетичний
+kiberne'tɪtʃnei
 
-'mɯ:'no:
+kibe̥ɽr̟ne'tɪtʃnei
 
 
 original word : 
-misculare
-mis.ku'la:.re
+кількість
+'kilkist
 
-'me:s'ku:'la:'ri:
+'kilkist
 
 
 original word : 
-misculo
-'mis.ku.lo:
+кімоно
+kimɔ'nɔ
 
-'mi:s'ku:'lʰo:
+kim̥ɔ'n̥ɔ
 
 
 original word : 
-montania
-mon'ta:.ni.a
+кір
+kir
 
-'mo:n'ta:'ni:'a:
+kir
 
 
 original word : 
-montare
-mon'ta:.re
+лаваш
+a'ʋaʃ
 
-'mo:n'te:'ra:
+æ'ʋæʃ
 
 
 original word : 
-mordere
-'mor.de.re
+ламати
+a'mate
 
-'mo:d're:'re:
+æ'mæte
 
 
 original word : 
-mordo
-'mor.do:
+ласкавий
+a'skaʋei
 
-'mo:d'rø:
+æ'skæʋei
 
 
 original word : 
-morio
-'mo.ri.o:
+лебідь
+'ɛbid
 
-'mo:'ri:'ø:
+'ɛbid
 
 
 original word : 
-morire
-mo'ri:.re
+легітимний
+eɦi'tɪmnei
 
-'mo:'re:'ri:
+eɦi'tɪ̥mnei
 
 
 original word : 
-moveo
-'mo.we.o:
+ледар
+'ɛdar
 
-'mo:'we:'o:
+'ɛræd
 
 
 original word : 
-movere
-'mo.we.re
+лижник
+'ɪʒnek
 
-'mo:'we:'re:
+'ɪʒn̥ek
 
 
 original word : 
-movo
-'mo.wo:
+лис
+ɪs
 
-'mo:'wo:
+ɪs
 
 
 original word : 
-muccare
-muk'ka:.re
+лицар
+'ɪtsar
 
-'mu:k'ke:'ra:
+'ɪstær
 
 
 original word : 
-mucco
-'muk.ko:
+логіка
+'ɔɦika
 
-'mu:k'ko:
+'ɔɦikæ
 
 
 original word : 
-mulgere
-'mul.ɡe.re
+локон
+'ɔkɔn
 
-'mu:l'ɡe:'re:
+'ɔkɔn
 
 
 original word : 
-mulgo
-'mul.ɡo:
+лось
+ɔs
 
-'mu:l'ɡø:
+ɔs
 
 
 original word : 
-mulier
-'mu.li.er
+любителька
+lʊ'bɪtelka
 
-'mu:'re:'i:l
+lʊ'bɪteɭ̟kæ
 
 
 original word : 
-muneratio
-mu:.ne'ra:.ti.o:
+людський
+lʊdz'skɪi
 
-'mu:'na:'re:'ti:'ø:
+dʊlz'skɪi
 
 
 original word : 
-murrum
-'mur.rum
+лялька
+'lalka
 
-'mu:r'ru:m
+'lælkæ
 
 
 original word : 
-musclus
-'mu:s.klus
+ліберал
+libe'ra
 
-'mu:s'kl̟̟̟u:s
+ribe'ɭ̟æ
 
 
 original word : 
-muso
-'mu.so:
+лігво
+'liɦwɔ
 
-'mu:'so:
+'liɦwɔ
 
 
 original word : 
-neapolitanus
-ne.a:.po.li:'ta:.nus
+ліки
+'like
 
-'na:'e:'po:'li:'sa:'nu:t
+'like
 
 
 original word : 
-ni
-ni:
+лінивий
+li'nɪʋei
 
-'ni:
+ni'lɪʋei
 
 
 original word : 
-niloticus
-ni:'lo:.ti.kus
+літак
+li'tak
 
-'ni:'lo:'si:'ku:t
+li'tæk
 
 
 original word : 
-nivare
-ni'wa:.re
+літр
+litr
 
-'ne:'wa:'ri:
+ritl
 
 
 original word : 
-nivicare
-ni.wi'ka:.re
+м&#039;ясо
+'mjasɔ
 
-'ne:'wi:'ka:'ri:
+'mjæsɔ
 
 
 original word : 
-nivico
-'ni.wi.ko:
+магнетизм
+maɦne'tɪzm
 
-'nɯ:'wɯ:'ko:
+mæ̹̥ɦze'tɪnm
 
 
 original word : 
-nivo
-'ni.wo:
+майно
+mai'nɔ
 
-'nɯ:'wo:
+mæi'nɔ
 
 
 original word : 
-noco
-'no.ko:
+макарони
+maka'rɔne
 
-'no:'ko:
+mækæ'nɔre
 
 
 original word : 
-noto
-'no.to:
+малярство
+ma'larstwɔ
 
-'no:'to:
+mæ'lærtswɔ
 
 
 original word : 
-novaginta
-no:.wa:'ɡin.ta:
+мандрувати
+mandrʊ'ʋate
 
-'no:'wa:'ɡi:n'ta:
+mædrnʊ'ʋæte
 
 
 original word : 
-novus
-'no.wus
+маргіналізація
+marɦinali'zatsija
 
-'no:'wu:s
+m̥æsɦilæri'zætn̥ijæ
 
 
 original word : 
-nuo
-'nu.o:
+мармур
+'marmʊr
 
-'nu:'ø:
+'mærmʊr
 
 
 original word : 
-oblitare
-ob.li:'ta:.re
+маршрут
+marʃ'rut
 
-'o:b'le:'ta:'ri:
+mærʃ'rut
 
 
 original word : 
-oblito
-ob'li:.to:
+масть
+mast
 
-'o:b'lɯ:'to:
+mæst
 
 
 original word : 
-octennis
-ok'ten.nis
+матрац
+ma'trats
 
-'o:k'si:n'ne:t
+mæ'srætt
 
 
 original word : 
-odiare
-o.di'a:.re
+мегаліт
+meɦa'lit
 
-'o:'dʷe:'a:'ri:
+meɦæ'lit
 
 
 original word : 
-odio
-'o.di.o:
+медовий місяць
+me'dɔʋei'misats
 
-'o:'dʷi:'o:
+me'ɖ̟ɔʋei'mitæss
 
 
 original word : 
-odoratus
-o.do:'ra:.tus
+мексиканка
+mekse'kanka
 
-'o:'dʷo:'ra:'su:t
+me̥kse'kænkæ
 
 
 original word : 
-odorifer
-o'do:.ri.fer
+мене звати
+me'nɛ'zʋate
 
-'o:'dʷo:'re:'fi:r
+me'ʒɛ'nʋæte
 
 
 original word : 
-odorus
-o'do:.rus
+менше
+'mɛnʃe
 
-'o:'dʷo:'ru:s
+'m̥ɛ̥n̥ʃe
 
 
 original word : 
-offerescere
-of.fe're:s.ke.re
+месіанський
+mesi'anskei
 
-'o:f'fe:'re:s'ke:'re:
+mesi'ænskei
 
 
 original word : 
-offeresco
-of.fe're:s.ko:
+металургійний
+metaʊr'ɦiinei
 
-'o:f'fe:'re:s'kø:
+metæʊn'ɦi̥irei
 
 
 original word : 
-offerio
-of'fe.ri.o:
+методичний
+metɔ'dɪtʃnei
 
-'o:f'fi:'re:'o:
+metɔ'dɪtʃnei
 
 
 original word : 
-offerire
-of.fe'ri:.re
+мешканець
+'mɛʃkanets
 
-'o:f'fi:'re:'re:
+'mɛʃkænest
 
 
 original word : 
-oleo
-'o.le.o:
+милосердий
+meɔ'sɛrdei
 
-'o:'le:'ø:
+meɔ'sɛ̥drei
 
 
 original word : 
-optimus
-'op.ti.mus
+мир
+mɪr
 
-'o:p'si:'mu:t
+mɪr
 
 
 original word : 
-ordio
-'o:r.di.o:
+мисливиця
+mes'ɪʋetsa
 
-'o:d'ri:'ø:
+met'ɪʋessæ
 
 
 original word : 
-ordire
-o:r'di:.re
+мить
+mɪt
 
-'o:d're:'ri:
+mɪt
 
 
 original word : 
-orgollio
-or'ɡo:l.li.o:
+мнякий
+mna'kɪi
 
-'o:l'ɡø:r'li:'ø:
+mnæ'kɪi
 
 
 original word : 
-oricla
-o:'rik.kla
+мова
+'mɔʋa
 
-'o:'ri:k'klʰa:
+'mɔʋæ
 
 
 original word : 
-orulare
-o:.ru'la:.re
+модрина
+mɔ'drɪna
 
-'o:'lu:'re:'ra:
+mɔ'drɪnæ
 
 
 original word : 
-orulo
-'o:.ru.lo:
+молодиця
+mɔɔ'dɪtsa
 
-'o:'ru:'lʰo:
+mɔɔ'dɪstæ
 
 
 original word : 
-oryza
-o'ry:z.za
+монохромний
+mɔnɔ'xrɔmnei
 
-'o:'zy:r'za:
+mɔnɔ'xn̠ɔ̥mrei
 
 
 original word : 
-otior
-'o:.ti.or
+морквяний
+mɔrk'ʋanei
 
-'o:'tɯ:'ø:r
+m̥ɔn̥k'ʋærei
 
 
 original word : 
-paeninsula
-pae'nin.su.la
+мотоцикл
+mɔtɔ'tsɪk
 
-'pe:ɑ'ni:n'su:'lʰɑ:
+mɔsɔ'ttɪk
 
 
 original word : 
-pannosus
-pan'no:.sus
+мужній
+'muʒnii
 
-'pa:n'nø:'su:s
+'muʒnii
 
 
 original word : 
-Panormitanus
-pa.nor.mi'ta:.nus
+муніципальний
+mʊnitse'palnei
 
-'pa:'ro:n'mi:'sa:'nu:t
+mʊli̥ste'pæ̥nnei
 
 
 original word : 
-papyrio
-pa'py:.ri.o:
+мусульманство
+mʊsʊl'manstwɔ
 
-'pa:'py:'ri:'ø:
+mɔtʊn'mælsswʊ
 
 
 original word : 
-papyrius
-pa'py:.ri.us
+мігрень
+mi'ɦrɛn
 
-'pa:'py:'rɯ:'u:s
+mi'ɦrɛn
 
 
 original word : 
-paresco
-pa:'res.ko:
+міжконфесійний
+miʒkɔnfe'siinei
 
-'pe:'ra:s'kø:
+miʒkɔ̥nfe'si̥inei
 
 
 original word : 
-Pasiphaa
-pa:'si.pʰa.a
+мізантропія
+mizan'trɔpija
 
-'pa:'si:'pʰa:'a:
+mizær'tnɔpijæ
 
 
 original word : 
-Pasiphae
-pa:'si.pʰa.e:
+мікрохвильовка
+mikrɔxʋe'lɔuka
 
-'pe:'si:'pʰa:'a:
+miklu̥xʋe'ɽr̟ɔɔkæ
 
 
 original word : 
-passare
-pas'sa:.re
+мільйонер
+miljɔ'nɛr
 
-'pe:s'sa:'ra:
+miljɔ'rɛn
 
 
 original word : 
-passarus
-'pas.sa.rus
+мінімальна заробітна плата
+mini'malna.zaro'bitna'pata
 
-'pa:s'sa:'ru:s
+m̥in̥i'm̥æzn̥æ.rælo'bitn̥æ'pætæ
 
 
 original word : 
-passo
-'pas.so:
+містобудування
+mistɔbʊdʊ'ʋan:a
 
-'pa:s'sø:
+bitsʊmɔdʊ'ʋæn:æ
 
 
 original word : 
-pater
-'pa.ter
+місіонер
+misiɔ'nɛr
 
-'pe:'ta:r
+misiɔ'rɛn
 
 
 original word : 
-patrini
-pa'tri:.ni:
+мітинг
+'mitenɦ
 
-'pa:'tnɯ:'rɯ:
+'miten̠ɦ
 
 
 original word : 
-patrinus
-pa'tri:.nus
+міхур
+mi'xur
 
-'pa:'sni:'ru:t
+mi'xur
 
 
 original word : 
-patta
-'pat.ta
+набій
+na'bii
 
-'pa:t'ta:
+næ'bii
 
 
 original word : 
-pedisequus
-pe'di.se.kʷus
+навколишнє середовище
+nau'kɔeʃne.sere'dɔʋeʃtʃe
 
-'pi:'de:'se:'kʷu:s
+ræɔ'kueʃse.n̥en̠e'ɖ̟ɔʋeʃtʃe
 
 
 original word : 
-peltrum
-'pel.trum
+навігаційний
+naʋiɦa'tsiinei
 
-'pe:r'tlu:m
+næʋiɦæ'sti̥inei
 
 
 original word : 
-pendicare
-pen.di'ka:.re
+нагляд
+'naɦlad
 
-'pi:n'de:'ka:'re:
+'dæ̹ɦnæl
 
 
 original word : 
-pendico
-'pen.di.ko:
+надворі
+nad'wɔri
 
-'pi:n'de:'ko:
+dær'wɔni
 
 
 original word : 
-penis
-'pe:.nis
+надлюдський
+nad'ludzskei
 
-'pi:'ne:s
+næd'ludzskei
 
 
 original word : 
-perdonare
-per.do:'na:.re
+надійність
+na'diinist
 
-'pa:d'rø:'ne:'re:
+næ'diisin̥t
 
 
 original word : 
-perdono
-per'do:.no:
+названий
+'nazʋanei
 
-'pe:d'rø:'no:
+'zæn̥ʋæn̥ei
 
 
 original word : 
-peresco
-pe're:s.ko:
+найменше
+nai'mɛnʃe
 
-'pe:'re:s'kø:
+næi'mɛ̥nʃe
 
 
 original word : 
-periturus
-pe.ri'tu:.rus
+належати
+na'ɛʒate
 
-'pi:'re:'su:'ru:t
+næ'ɛʒæte
 
 
 original word : 
-Persa
-'per.sa
+наочний
+na'ɔtʃnei
 
-'pe:r'sa:
+næ'ɔtʃnei
 
 
 original word : 
-Perses
-'per.se:s
+наполегливість
+napɔ'ɛɦeʋist
 
-'pe:r'se:s
+næpɔ̥'ɛɦeʋist
 
 
 original word : 
-petio
-'pe.ti.o:
+напружувати
+na'pruʒʊʋate
 
-'pi:'te:'ø:
+næ'pruʒʊʋæte
 
 
 original word : 
-petire
-pe'ti:.re
+нарешті
+na'rɛʃti
 
-'pi:'te:'re:
+ræ'n̥ɛʃti
 
 
 original word : 
-pharmaceuticus
-pʰar.ma'keu.ti.kus
+народжувати
+na'rɔdʒʊʋate
 
-'pʰe:r'ma:'ka:u'si:'ku:t
+dæ'n̥ʊrʒɔʋæte
 
 
 original word : 
-philtrum
-'pʰil.trum
+насміхатися
+nasmi'xatesa
 
-'pʰi:r'tlu:m
+sæn̥mi'xætesæ
 
 
 original word : 
-phrenesis
-pʰre'ne:.sis
+настроїти
+na'strɔjite
 
-'pʰni:'re:'se:s
+sæ'r̥tnɔjite
 
 
 original word : 
-picco
-'pi:k.ko:
+насіння
+na'sin:a
 
-'pi:k'ko:
+sæ'n̥in:æ
 
 
 original word : 
-piccus
-'pi:k.kus
+натомість
+na'tɔmist
 
-'pi:k'ku:s
+næ'sɔmitt
 
 
 original word : 
-picto
-'pik.to:
+нафта
+'nafta
 
-'pi:k'to:
+'næftæ
 
 
 original word : 
-pincio
-'pi:n.ki.o:
+начальство
+na'tʃalstwɔ
 
-'pi:n'ki:'o:
+læ'sʃænttwɔ
 
 
 original word : 
-piscare
-pis'ka:.re
+небо
+'nɛbɔ
 
-'pe:s'ka:'ri:
+'nɛbɔ
 
 
 original word : 
-pisco
-'pis.ko:
+невимовний
+neʋe'mɔunei
 
-'pi:s'kø:
+neʋe'mu̥ɔnei
 
 
 original word : 
-pissiare
-pi:s.si'a:.re
+неврологія
+neurɔ'ɔɦija
 
-'pe:s'si:'a:'ri:
+neɔru'ɔɦijæ
 
 
 original word : 
-pissio
-'pi:s.si.o:
+невіста
+ne'ʋista
 
-'pi:s'si:'ø:
+ne'ʋitsæ
 
 
 original word : 
-plattus
-'plat.tus
+недавній
+ne'daunii
 
-'plɑ:s'tu:t
+n̥e'n̠̥æudii
 
 
 original word : 
-ploppus
-'plo:p.pus
+недорозвинений
+nedɔrɔz'ʋɪnenei
 
-'plo:p'pu:s
+den̠̥ɔrɔz'ʋɪn̥en̠̥ei
 
 
 original word : 
-plovere
-'plo.we.re
+недоторканий
+nedɔ'tɔrkanei
 
-'plo:'we:'re:
+den̠̥ɔ'tɔrkæn̥ei
 
 
 original word : 
-plovo
-'plo.wo:
+незалежність
+neza'ɛʒnist
 
-'plo:'wo:
+zen̠̥æ'ɛʒsin̥t
 
 
 original word : 
-podio
-'po.di.o:
+нездоланний
+nezdɔ'an:ei
 
-'po:'di:'ø:
+den̠̥zɔ̥'æn̥:ei
 
 
 original word : 
-posso
-'pos.so:
+незрілість
+nez'rilist
 
-'po:s'sø:
+zen̠̥'risil̥t
 
 
 original word : 
-postius
-'pos.ti.us
+нейтральний
+nei'tralnei
 
-'po:t'sɯ:'u:s
+nei'træ̥lnei
 
 
 original word : 
-praetexo
-prae'tek.so:
+немалий
+nema'ɪi
 
-'pre:a'se:k'to:
+n̥em̥æ'ɪi
 
 
 original word : 
-praetextum
-prae'tek.stum
+ненаголошений
+nenaɦɔ'ɔʃenei
 
-'pre:a'se:k'ttu:m
+n̥en̠̥æ̹ɦɔ̥'ɔʃen̠̥ei
 
 
 original word : 
-precare
-pre'ka:.re
+необґрунтований
+ɔbɡrʊn'tɔʋanei
 
-'prɑ:'ke:'re:
+ʊbɡn̠ɔn'tɔʋærei
 
 
 original word : 
-preco
-'pre.ko:
+неофіційний
+neɔfi'tsiinei
 
-'pre:'ko:
+neɔfi'sti̥inei
 
 
 original word : 
-primavera
-pri:.ma'we:.ra
+непитущий
+nepe'tuʃtʃei
 
-'pre:'ma:'wɯ:'ra:
+nepe'tuʃtʃei
 
 
 original word : 
-profecticius
-pro.fek'ti:.ki.us
+непотрібний
+nepo'tribnei
 
-'pro:'fɯ:k'se:'kɯ:'u:t
+nepo'tri̥bnei
 
 
 original word : 
-profectitius
-pro.fek'ti:.ti.us
+непридатний
+nepre'datnei
 
-'pro:'fɯ:k'se:'tɯ:'u:t
+ne̥pre'ɖ̟æ̥tnei
 
 
 original word : 
-proscaenium
-pros'kae.ni.um
+нерегулярність
+nereɦʊ'larnist
 
-'pno:s'ke:a'rɯ:'u:m
+leɽr̟eɦʊ'rænsin̥t
 
 
 original word : 
-proscenium
-pros'ke:.ni.um
+нескінченність
+neskin'tʃɛn:ist
 
-'pno:s'ki:'re:'u:m
+sen̥kin'tʃɛn̥:ist
 
 
 original word : 
-pulica
-'pu:.li.ka
+несправедливий
+nespraʋed'ɪʋei
 
-'pu:'lɯ:'ka:
+ser̥pnæʋeɖ̟'ɪʋei
 
 
 original word : 
-pullarius
-pul'la:.ri.us
+несумісний
+nesʊ'misnei
 
-'pu:l'la:'rɯ:'u:s
+sen̥ʊ'mi̥snei
 
 
 original word : 
-pullastra
-pul'las.tra
+неформальний
+nefɔr'malnei
 
-'pu:r'la:t'sla:
+nefɔr'mæ̥lnei
 
 
 original word : 
-pullus
-'pul.lus
+нещодавній
+neʃtʃɔ'daunii
 
-'pu:l'l̟̟̟u:s
+neʃtʃu'dæɔnii
 
 
 original word : 
-punctio
-'pu:nk.ti.o:
+неіснування
+neisnʊ'ʋan:a
 
-'pu:nk'ti:'ø:
+neisnʊ'ʋæn:æ
 
 
 original word : 
-puppa
-'pup.pa
+нині
+'nɪni
 
-'pu:p'pa:
+'n̥ɪn̥i
 
 
 original word : 
-putiare
-pu.ti'a:.re
+новаторство
+nɔ'ʋatɔrstwɔ
 
-'pu:'te:'a:'ri:
+nɔ'ʋæsɔrttwɔ
 
 
 original word : 
-putio
-'pu:.ti.o:
+новорічний
+nɔwo'ritʃnei
 
-'pu:'ti:'ø:
+nowɔ'ɽr̟itʃnei
 
 
 original word : 
-putire
-pu'ti:.re
+номер
+'nɔmer
 
-'pu:'te:'ri:
+'rɔm̥en̠̥
 
 
 original word : 
-putrio
-'pu.tri.o:
+носій
+no'sii
 
-'pu:'tri:'ø:
+so'n̥ii
 
 
 original word : 
-putrire
-pu'tri:.re
+ноші
+'nɔʃi
 
-'pu:'tre:'ri:
+'nɔʃi
 
 
 original word : 
-quando
-'kʷan.do:
+нутрощі
+'nutrɔʃtʃi
 
-'kʷa:n'dø:
+'nɔtruʃtʃi
 
 
 original word : 
-quaresima
-kʷa.re:'si:.ma
+ніколи
+ni'kɔe
 
-'kʷe:'ra:'sɯ:'ma:
+ni̥'kɔe
 
 
 original word : 
-quassicare
-kʷas.si'ka:.re
+німка
+'nimka
 
-'kʷe:s'si:'ka:'ra:
+'n̥im̥kæ
 
 
 original word : 
-quassico
-'kʷas.si.ko:
+ніщо
+niʃ'tʃɔ
 
-'kʷa:s'sɯ:'ko:
+niʃ'tʃɒ
 
 
 original word : 
-quinquennis
-kʷi:n'kʷen.nis
+об&#039;єднати
+ɔbjed'nate
 
-'kʷe:n'kʷi:n'ni:s
+ɔbjen̠'dæte
 
 
 original word : 
-quomo
-'kʷo:.mo
+обговорити
+ɔbɦɔwɔ'rɪte
 
-'kʷo:'mo:
+ɔwɦɔbɔ'rɪte
 
 
 original word : 
-rabia
-'ra.bi.a
+обеззброювати
+ɔbez:'brɔjʊʋate
 
-'ra:'bi:'a:
+ʊ:beɽr̟'bzɔjɔʋæte
 
 
 original word : 
-ranceo
-'ran.ke.o:
+обласний
+ɔbas'nɪi
 
-'ne:r'ka:'o:
+ɔbæs'nɪi
 
 
 original word : 
-raspo
-'ras.po:
+обмежений
+ɔb'mɛʒenei
 
-'ra:s'pø:
+ɔb'm̥ɛʒen̠̥ei
 
 
 original word : 
-Reatini
-re.a:'ti:.ni:
+оборонити
+ɔbɔrɔ'nɪte
 
-'na:'e:'tɯ:'rɯ:
+ɔbɔnɔ'rɪte
 
 
 original word : 
-Reatinus
-re.a:'ti:.nus
+обрати
+ɔ'brate
 
-'na:'e:'si:'ru:t
+ɔ'bræte
 
 
 original word : 
-reexcaptare
-re.ek.skap'ta:.re
+обстріл
+'ɔbstri
 
-'ra:'e:k'tke:p'sa:'re:
+'ɔbtsri
 
 
 original word : 
-reexcapto
-re.ek'skap.to:
+обчислювати
+ɔb'tʃɪslʊʋate
 
-'ra:'e:k'tke:p'so:
+ʊb'sʃɪtlɔʋæte
 
 
 original word : 
-refusare
-re.fu:'sa:.re
+обідати
+o'bidate
 
-'ra:'fu:'se:'re:
+o'bidæte
 
 
 original word : 
-refuso
-re'fu:.so:
+овечка
+ɔ'ʋɛtʃka
 
-'re:'fu:'so:
+ɔ'ʋɛtʃkæ
 
 
 original word : 
-rencus
-'ren.kus
+огляд
+'ɔɦlad
 
-'ne:r'ku:s
+'ɔɦdæl
 
 
 original word : 
-rendere
-'ren.de.re
+оден
+ɔ'dɛn
 
-'ne:r'de:'re:
+ɔ'dɛn
 
 
 original word : 
-rendo
-'ren.do:
+одинадцять
+ɔde'nadztsat
 
-'ne:r'dø:
+ɔde'ɖ̟ænzstæt
 
 
 original word : 
-renio
-'re:.ni.o:
+однокласник
+ɔdnɔ'kasnek
 
-'ni:'re:'ø:
+ɔdsɔ'kæ̥n̥n̥ek
 
 
 original word : 
-repoenitio
-re.poe'ni.ti.o:
+однорідний
+ɔdno'ridnei
 
-'ni:'po:e're:'ti:'ø:
+odrɔ'n̠i̥dnei
 
 
 original word : 
-retina
-'re.ti.na
+одношлюбний
+ɔdnoʃ'lubnei
 
-'ni:'te:'ra:
+odn̥ɔʃ'lu̥bn̥ei
 
 
 original word : 
-ridio
-'ri:.di.o:
+ожина
+ɔ'ʒɪna
 
-'di:'ri:'ø:
+ɔ'ʒɪnæ
 
 
 original word : 
-rido
-'ri:.do:
+ознайомлення
+ɔzna'jɔmen:a
 
-'dɯ:'ro:
+ɔnzæ'jɔmen̠:æ
 
 
 original word : 
-rosicare
-ro:.si'ka:.re
+оксамит
+ɔksa'mɪt
 
-'ro:'se:'ka:'ri:
+ɔksæ'mɪt
 
 
 original word : 
-rosico
-'ro:.si.ko:
+олігархія
+ɔli'ɦarxija
 
-'ro:'sɯ:'ko:
+ɔli'ɦærxijæ
 
 
 original word : 
-rossa
-'ros.sa
+онколог
+ɔn'kɔɔɦ
 
-'ro:s'sa:
+ɔn'kɔɔɦ
 
 
 original word : 
-saeculum
-'sae.ku.lum
+опариш
+ɔ'pareʃ
 
-'se:ɑ'ku:'l̟̟̟u:m
+ɔ'pæreʃ
 
 
 original word : 
-sagia
-'sa.ɡi.a
+оплачувати
+ɔ'patʃʊʋate
 
-'sa:'ɡi:'a:
+ʊ'pætʃɔʋæte
 
 
 original word : 
-sambatum
-'sam.ba.tum
+опортуністка
+ɔpɔrtʊ'nistka
 
-'tɶ:m'ba:'su:m
+ʊpɔnsɔ'r̥ittkæ
 
 
 original word : 
-sanguinitas
-san'ɡʷi.ni.ta:s
+опублікувати
+ɔpʊblikʊ'ʋate
 
-'ta:n'ɡʷi:'ni:'sa:s
+ʊpɔblikʊ'ʋæte
 
 
 original word : 
-sanitosus
-sa:.ni'to:.sus
+організатор
+ɔrɦani'zatɔr
 
-'ta:'ni:'so:'su:s
+ɔnɦæri'zætɔr
 
 
 original word : 
-sapeo
-'sa.pe.o:
+органічна хімія
+ɔrɦa'nitʃna'ximija
 
-'se:'pa:'o:
+ɔnɦæ'ritʃnæ'ximijæ
 
 
 original word : 
-sapere
-sa'pe:.re
+орнітологічний
+ɔrnitɔo'ɦitʃnei
 
-'se:'pa:'re:
+onritɔɔ'ɦitʃnei
 
 
 original word : 
-saporo
-sa'po:.ro:
+освіта
+ɔs'ʋita
 
-'sa:'po:'ro:
+ɔt'ʋisæ
 
 
 original word : 
-sarclare
-sar'kla:.re
+осиротіти
+ɔsero'tite
 
-'se:l'kra:'ra:
+oteɽr̟ɔ'site
 
 
 original word : 
-sarclo
-'sar.klo:
+основоположний
+ɔsnɔwɔpɔ'ɔʒnei
 
-'sa:r'klʰo:
+ɔn̥sɔwɔpɔ'ɔʒn̥ei
 
 
 original word : 
-scaena
-'skae.na
+осоромлювати
+ɔsɔ'rɔmlʊʋate
 
-'ske:a'na:
+ʊtɔ'lɔmrɔʋæse
 
 
 original word : 
-scermio
-'sker.mi.o:
+отже
+'ɔdʒe
 
-'ski:r'me:'o:
+'ɔdʒe
 
 
 original word : 
-scopula
-'sko:.pu.la
+офігенний
+ɔfi'ɦɛn:ei
 
-'skø:'pu:'lʰa:
+ɔfi'ɦɛn:ei
 
 
 original word : 
-scribio
-'skri:.bi.o:
+охорона
+ɔxɔ'rɔna
 
-'skri:'bi:'o:
+ɔxɔ'nɔræ
 
 
 original word : 
-scrofulae
-'skro:.fu.lae
+оцет
+'ɔtset
 
-'sklo:'fu:'re:a
+'ɔstet
 
 
 original word : 
-secus
-'se.kus
+очиці
+ɔ'tʃɪtsi
 
-'se:'ku:s
+ɔ'sʃɪtti
 
 
 original word : 
-sedentare
-se.den'ta:.re
+п&#039;ятдесят один
+pjadde'sat.ɔ'dɪn
 
-'ta:'de:n'se:'re:
+pjæ̥dse'n̥æt.ɔ'dɪd
 
 
 original word : 
-sedento
-se'den.to:
+п&#039;ятнадцятий
+pjat'nadztsatei
 
-'te:'de:n'sø:
+pjæs'nædzttætei
 
 
 original word : 
-semitarius
-se:.mi'ta:.ri.us
+п&#039;єса
+'pjɛsa
 
-'tɯ:'me:'sa:'rɯ:'u:s
+'pjɛsæ
 
 
 original word : 
-sennus
-'sen.nus
+павза
+'pauza
 
-'se:n'nu:s
+'pæuzæ
 
 
 original word : 
-septembrius
-sep'tem.bri.us
+палестинець
+pae'stɪnets
 
-'ti:p'sø:m'bre:'u:s
+pæe'tsɪnets
 
 
 original word : 
-septennis
-sep'ten.nis
+палка
+'paka
 
-'ti:p'se:n'ne:s
+'pækæ
 
 
 original word : 
-septuennis
-sep.tu'en.nis
+паморозь
+'pamɔrɔz
 
-'ti:p'su:'e:n'ne:s
+'pæm̥ɔrɔz
 
 
 original word : 
-sequio
-'se.kʷi.o:
+пандемічний
+pande'mitʃnei
 
-'si:'kʷe:'o:
+pæ̥n̥de'm̥itʃn̥ei
 
 
 original word : 
-sequire
-se'kʷi:.re
+паразит
+para'zɪt
 
-'si:'kʷe:'re:
+pæzæ'rɪt
 
 
 original word : 
-sescuncia
-se:s'ku:n.ki.a
+парижанин
+pare'ʒanen
 
-'si:s'ku:n'ke:'a:
+pæn̥e'ʒæren̠̥
 
 
 original word : 
-sicilo
-si:'ki:.lo:
+парниковий ефект
+parne'kɔʋei.e'fɛkt
 
-'sɯ:'kɯ:'lʰo:
+pæ̥n̥re'kɔʋei.e'fɛkt
 
 
 original word : 
-smeralda
-sme'ral.da
+партнер
+part'nɛr
 
-'smɑ:'re:l'dɑ:
+pæn̥t'rɛr
 
 
 original word : 
-smeraldus
-sme'ral.dus
+пасажирка
+pasa'ʒɪrka
 
-'smɑ:'re:l'du:s
+pæsæ'ʒɪrkæ
 
 
 original word : 
-socra
-'so.kra
+патент
+pa'tɛnt
 
-'so:'kra:
+pæ'tɛnt
 
 
 original word : 
-solicli
-'so.li.kli:
+патріотизм
+patriɔ'tɪzm
 
-'so:'lʰi:'klʰi:
+pætziɔ'tɪrm
 
 
 original word : 
-soliclus
-'so.li.klus
+пацюк
+pa'tsuk
 
-'so:'li:'kl̟̟̟u:s
+pæ'stuk
 
 
 original word : 
-somnolentus
-som.no'len.tus
+пекарка
+'pɛkarka
 
-'to:m'no:'le:n'su:s
+'pɛkærkæ
 
 
 original word : 
-Sophoclae
-'so.pʰo.klae
+пенсіонерка
+pensiɔ'nɛrka
 
-'so:'pʰo:'kle:a
+pen̠̥n̥iɔ'sɛrkæ
 
 
 original word : 
-Sophocle
-'so.pʰo.kle:
+перебороти
+perebɔ'rɔte
 
-'so:'pʰo:'klʰe:
+peɽr̟ebɔ'rɔte
 
 
 original word : 
-Sophoclea
-so.pʰo'kle:.a
+переважати
+pereʋa'ʒate
 
-'so:'pʰo:'kle:'a:
+peɽr̟eʋæ'ʒæte
 
 
 original word : 
-Sophoclem
-'so.pʰo.klem
+перевантажувати
+pereʋan'taʒʊʋate
 
-'so:'pʰo:'kle:m
+peɽr̟eʋæn'tæʒʊʋæte
 
 
 original word : 
-Sophocles
-'so.pʰo.kle:s
+перевиховувати
+pereʋe'xɔwʊʋate
 
-'so:'pʰo:'kle:s
+peɽr̟eʋe'xʊwɔʋæte
 
 
 original word : 
-Sophocli
-'so.pʰo.kli:
+перед
+'pɛred
 
-'so:'pʰo:'klʰi:
+'pɛreɖ̟
 
 
 original word : 
-Sophoclis
-'so.pʰo.klis
+передвиборчий
+pered'ʋɪbɔrtʃei
 
-'so:'pʰo:'kli:s
+peɖ̟eɽr̟'ʋɪbɔrtʃei
 
 
 original word : 
-sorbio
-'sor.bi.o:
+передувати
+peredʊ'ʋate
 
-'so:r'bi:'o:
+peɖ̟eɽr̟ʊ'ʋæte
 
 
 original word : 
-sorbire
-sor'bi:.re
+перезаписувати
+pereza'pɪsʊʋate
 
-'so:r'be:'ri:
+peʒeɽr̟æ'pɪtʊʋæse
 
 
 original word : 
-sortiarius
-sor.ti'a:.ri.us
+перекотиполе
+perekɔ'tɪpɔe
 
-'to:r'sɯ:'a:'rɯ:'u:s
+peɽr̟ekɔ'tɪ̥pɔe
 
 
 original word : 
-spiare
-spi'a:.re
+перемога
+pere'mɔɦa
 
-'spe:'a:'ri:
+peɽr̟e'mɔɦæ
 
 
 original word : 
-spio
-'spi.o:
+переорієнтація
+pereɔrijen'tatsija
 
-'spi:'o:
+peɽr̟eɔnijeɽr̟'sættijæ
 
 
 original word : 
-stagno
-'sta:ɡ.no:
+перепросити
+pereprɔ'sɪte
 
-'tsɑ:ɡ'no:
+peɽr̟epsɔ'r̥ɪte
 
 
 original word : 
-strinctus
-'strink.tus
+переселенка
+perese'ɛnka
 
-'tsni:rk'tu:s
+peɽr̟ese'ɛnkæ
 
 
 original word : 
-stuno
-'stu.no:
+перетворити
+peretwɔ'rɪte
 
-'tsu:'no:
+peɽr̟etwɔ'rɪte
 
 
 original word : 
-subridere
-sub'ri:.de.re
+перечитувати
+pere'tʃɪtʊʋate
 
-'su:b'de:'rɯ:'re:
+peɽr̟e'tʃɪtʊʋæte
 
 
 original word : 
-subrido
-sub'ri:.do:
+перспективний
+perspek'tɪunei
 
-'su:b'dɯ:'ro:
+peɽr̟tpek'sɪ̥unei
 
 
 original word : 
-sufferio
-suf'fe.ri.o:
+першомучениця
+perʃo'mutʃenetsa
 
-'su:f'fi:'re:'o:
+pe̥ɽr̟ʃo'mu̥sʃen̠ettæ
 
 
 original word : 
-sufferire
-suf.fe'ri:.re
+періодично
+periɔ'dɪtʃnɔ
 
-'su:f'fi:'re:'re:
+peɽr̟iɔ'nɪtʃdɔ
 
 
 original word : 
-superanus
-su.pe'ra:.nus
+пизда
+pez'da
 
-'su:'pa:'re:'nu:s
+peʒ'dæ
 
 
 original word : 
-surrupo
-sur'ru:.po:
+письменність
+pes'mɛn:ist
 
-'su:r'ru:'po:
+pen̥'mɛ:sist
 
 
 original word : 
-Syracusae
-sy.ra:'ku:.sae
+пити
+'pɪte
 
-'sy:'re:'ku:'saa:
+'pɪte
 
 
 original word : 
-tam magnus
-tam'maɡ.nus
+плакат
+pa'kat
 
-'sa:m'ma:ɡ'nu:t
+pæ'kæt
 
 
 original word : 
-taranca
-ta'ran.ka
+платіж
+pa'tiʒ
 
-'ta:'ra:n'ka:
+pæ'tiʒ
 
 
 original word : 
-tardivus
-tar'di:.wus
+плем&#039;я
+'pɛmja
 
-'sa:d'ri:'wu:t
+'pɛm̥jæ
 
 
 original word : 
-tastare
-tas'ta:.re
+плоть
+pɔt
 
-'se:t'ta:'ra:
+pɔt
 
 
 original word : 
-tasto
-'tas.to:
+пляж
+plaʒ
 
-'sa:t'tø:
+plæʒ
 
 
 original word : 
-Teatinus
-te.a:'ti:.nus
+пов&#039;язувати
+pɔ'ʋjazʊʋate
 
-'sa:'e:'ti:'nu:t
+pʊ'ʋjæzɔʋæte
 
 
 original word : 
-tenio
-'te.ni.o:
+повезти
+pɔʋez'tɪ
 
-'ti:'ne:'ø:
+pɔʋeʒ'tɪ
 
 
 original word : 
-tenire
-te'ni:.re
+повноваження
+pɔunɔ'ʋaʒen:a
 
-'ti:'ne:'re:
+puɔnɔ'ʋæʒen̠:æ
 
 
 original word : 
-timo
-'ti:.mo:
+повстанець
+pɔu'stanets
 
-'tɯ:'mo:
+puɔ'tsænets
 
 
 original word : 
-tiro
-'ti:.ro:
+повх
+pɔux
 
-'tɯ:'ro:
+puɔx
 
 
 original word : 
-tocco
-'tok.ko:
+повісити
+pɔ'ʋisete
 
-'to:k'ko:
+pɔ'ʋitese
 
 
 original word : 
-toppus
-'top.pus
+поглинати
+pɔɦe'nate
 
-'so:p'pu:t
+pɔɦe'n̠æte
 
 
 original word : 
-torcere
-'tor.ke.re
+погроза
+pɔ'ɦrɔza
 
-'to:r'ke:'re:
+pɔ'ɦzɔræ
 
 
 original word : 
-torco
-'tor.ko:
+податок
+pɔ'datɔk
 
-'to:r'kø:
+pɔ'dætɔk
 
 
 original word : 
-tractio
-'trak.ti.o:
+подолання
+pɔdɔ'an:a
 
-'trɑ:k'ti:'ø:
+pɔdɔ'æn:æ
 
 
 original word : 
-traginare
-tra.ɡi'na:.re
+подякувати
+pɔ'dakʊʋate
 
-'tne:'ɡi:'ra:'ra:
+pʊ'dækɔʋæte
 
 
 original word : 
-tragino
-'tra.ɡi.no:
+позавчора
+pɔzau'tʃɔra
 
-'tnɑ:'ɡɯ:'ro:
+puzæɔ'tʃɔræ
 
 
 original word : 
-tragoedus
-tra'ɡoe.dus
+поздоровляти
+pɔzdɔrɔu'late
 
-'sde:'ɡø:a'ru:t
+pudrɔzɔɔ'læte
 
 
 original word : 
-tragula
-'tra:.ɡu.la
+познайомитися
+pɔzna'jɔmetesa
 
-'trɑ:'ɡu:'lʰɑ:
+pɔszæ'jɔm̥eten̥æ
 
 
 original word : 
-tremare
-tre'ma:.re
+показати
+pɔka'zate
 
-'trɑ:'me:'re:
+pɔkæ'zæte
 
 
 original word : 
-trespes
-'tre:s.pe:s
+покоління
+pɔko'lin:a
 
-'sre:t'pe:s
+pokɔ'n̠:ilæ
 
 
 original word : 
-trico
-'tri:.ko:
+поламати
+pɔa'mate
 
-'trɯ:'ko:
+pɔæ'mæte
 
 
 original word : 
-trifolum
-'tri.fo.lum
+полон
+pɔ'ɔn
 
-'tri:'fo:'l̟̟̟u:m
+pɔ'ɔn
 
 
 original word : 
-tripaliare
-tri.pa.li'a:.re
+польський
+'pɔlskei
 
-'tle:'pã:'ri:'a:'ri:
+'pɔlskei
 
 
 original word : 
-tripalio
-tri'pa.li.o:
+поліглот
+pɔli'ɦɔt
 
-'tli:'pã:'ri:'ø:
+pɔli'ɦɔt
 
 
 original word : 
-tripes
-'tri.pe:s
+політизація
+pɔlite'zatsija
 
-'sre:'pi:t
+pɔlise'ʒættijæ
 
 
 original word : 
-tropare
-tro'pa:.re
+помешкання
+pɔ'mɛʃkan:a
 
-'trø:'pe:'ra:
+pɔ'm̥ɛʃkæn̥:æ
 
 
 original word : 
-tropo
-'tro.po:
+помітити
+po'mitete
 
-'trø:'po:
+po'm̥itete
 
 
 original word : 
-trudico
-'tru:.di.ko:
+понеділковий
+pɔne'dikɔʋei
 
-'tdu:'rɯ:'ko:
+pɔde'n̠ikɔʋei
 
 
 original word : 
-turdela
-tur'de:.la
+попри
+'pɔpre
 
-'tu:d're:'lʰa:
+'pɔ̥pre
 
 
 original word : 
-Tuscia
-'tus.ki.a
+попільничка
+pɔpil'nɪtʃka
 
-'su:t'ki:'a:
+pɔpin'lɪtʃkæ
 
 
 original word : 
-tutare
-tu:'ta:.re
+порекомендувати
+pɔrekɔmendʊ'ʋate
 
-'tu:'te:'ra:
+pʊdekɔmen̠rɔ'ʋæte
 
 
 original word : 
-tutellus
-tu:'tel.lus
+пороховий
+pɔrɔxɔ'ʋɪi
 
-'su:'te:l'l̟̟̟u:t
+pɔrɔxɔ'ʋɪi
 
 
 original word : 
-tuto
-'tu:.to:
+порушення
+po'ruʃen:a
 
-'tu:'to:
+po'ɽr̟uʃen̠:æ
 
 
 original word : 
-Tyrrhenia
-tyr're:.ni.a:
+порівнювати
+po'riunʊʋate
 
-'ty:n'ri:'re:'a:
+po'ɽr̟iunʊʋæte
 
 
 original word : 
-undivagus
-un'di.wa.ɡus
+посада
+pɔ'sada
 
-'u:n'di:'wa:'ɡu:s
+pɔ'sædæ
 
 
 original word : 
-undizare
-un.diz'za:.re
+посередниця
+pɔse'rɛdnetsa
 
-'u:n'de:z'za:'ri:
+pɔte'ɽr̟ɛ̥ndessæ
 
 
 original word : 
-undizo
-un'diz.zo:
+поскаржитися
+pɔ'skarʒetesa
 
-'u:n'di:z'zø:
+pɔ'tkæ̥rʒesesæ
 
 
 original word : 
-usare
-u:'sa:.re
+посміхнутися
+pɔsmix'nutesa
 
-'u:'se:'ra:
+putmix'n̠ɔsesæ
 
 
 original word : 
-uso
-'u:.so:
+поспішний
+po'spiʃnei
 
-'u:'so:
+po'spi̥ʃnei
 
 
 original word : 
-vacantia
-wa'kan.ti.a
+поставити
+pɔ'staʋete
 
-'wa:'ka:n'ti:'a:
+pɔ'tsæʋete
 
 
 original word : 
-vacca
-'wak.ka
+постачити
+pɔ'statʃete
 
-'wa:k'ka:
+pɔ'tsæ̥tʃete
 
 
 original word : 
-veclus
-'we.klus
+посуха
+po'suxa
 
-'we:'kl̟̟̟u:s
+po'suxæ
 
 
 original word : 
-Vedius
-we:'di:.us
+поточний
+pɔ'tɔtʃnei
 
-'wi:'de:'u:s
+pɔ'tɔtʃnei
 
 
 original word : 
-Vejovis
-'we:.jo.wis
+потягнути
+pɔtaɦ'nute
 
-'wi:'jo:'we:s
+putæ̹ɦ'nɔte
 
 
 original word : 
-vera
-'we:.ra
+походження
+pɔ'xɔdʒen:a
 
-'we:'ra:
+pɔ'xɔ̥n:ʒeɖ̟æ
 
 
 original word : 
-veranum
-we:'ra:.num
+початківець
+pɔtʃat'kiʋets
 
-'wa:'re:'nu:m
+pɔsʃæt'kiʋett
 
 
 original word : 
-versura
-wer'su:.ra
+почувати
+pɔtʃʊ'ʋate
 
-'we:r'su:'ra:
+pʊtʃɔ'ʋæte
 
 
 original word : 
-vestitura
-wes.ti:'tu:.ra
+пошук
+'pɔʃʊk
 
-'wi:t'se:'tu:'ra:
+'pʊʃɒk
 
 
 original word : 
-vexica
-we:k'si:.ka
+поїзд
+'pɔjizd
 
-'wi:k'se:'ka:
+'pɔjidz
 
 
 original word : 
-via
-'wi.a
+прабаба
+pra'baba
 
-'wi:'ɑ:
+præ'bæbæ
 
 
 original word : 
-video
-'wi.de.o:
+право
+'prawɔ
 
-'we:'di:'ø:
+'præwɔ
 
 
 original word : 
-virdia
-'wir.di.a
+правоохоронний
+prawɔɔxɔ'rɔn:ei
 
-'wi:d'ri:'a:
+pnæwɔɔxɔ'rɔ:rei
 
 
 original word : 
-visaticum
-wi:'sa:.ti.kum
+прагнення
+'praɦnen:a
 
-'wi:'ta:'si:'ku:m
+'pnæ̹̥ɦren̠:æ
 
 
 original word : 
-vispellio
-wis'pel.li.o:
+практичний
+prak'tɪtʃnei
 
-'we:s'pi:l'li:'ø:
+pnæk'tɪtʃrei
 
 
 original word : 
-voltare
-wol'ta:.re
+праслов&#039;янський
+prasɔ'ʋjanskei
 
-'wo:l'te:'ra:
+psæn̥ɔ'ʋjærskei
 
 
 original word : 
-volto
-'wol.to:
+праця
+'pratsa
 
-'wo:l'tø:
+'præstæ
 
 
 original word : 
-vox populi
-wo:ks'po.pu.li:
+презентація
+prezen'tatsija
 
-'wo:ks'pø:'pu:'lʰi:
+preʒen̠'sættijæ
 
 
 original word : 
-vulnero
-'wul.ne.ro:
+прелюдія
+pre'ludija
 
-'wu:l'ne:'ro:
+pde'ɽr̟ulijæ
 
 
 original word : 
-wadanio
-wa'da.ni.o:
+прибуток
+pre'butɔk
 
-'wa:'da:'ni:'ø:
+pre'bɔtuk
 
 
 original word : 
-wardo
-'war.do:
+привабливість
+pre'ʋabeʋist
 
-'wa:d'rø:
+pre'ʋæbeʋist
 
 
 original word : 
-warnio
-'war.ni.o:
+приводити
+pre'wɔdete
 
-'wa:n'ri:'ø:
+pde'wɔrete
 
 
 original word : 
-werra
-'wer.ra
+приголомшливий
+preɦɔ'ɔmʃeʋei
 
-'we:r'ra:
+preɦɔ'ɔmʃeʋei
 
 
 original word : 
-werrizo
-wer'riz.zo:
+придумувати
+pre'dumʊʋate
 
-'wi:z're:r'zø:
+pde'ɽr̟umʊʋæte
 
 
 original word : 
-ypsilon
-y:p'si:.lon
+призма
+'prɪzma
 
-'y:p'si:'lo:n
+'pzɪrmæ
 
 
 original word : 
-zephyrus
-'ze.pʰy.rus
+прийнятність
+prei'natnist
 
-'re:'pʰy:'zu:s
+pnei'ræsn̥itt
 
 
 original word : 
-zeta
-'ze:.ta
+прикрасити
+pre'krasete
 
-'ze:'ta:
+pre'ksær̥ete
 
 
 original word : 
-zeugma
-'zeuɡ.ma
+приманити
+prema'nɪte
 
-'ze:uɡ'ma:
+pnemæ'rɪte
+
+
+original word : 
+принести
+prene'stɪ
+
+pren̠e'tsɪ
+
+
+original word : 
+принциповий
+prentse'pɔʋei
+
+pren̠ste'pɔʋei
+
+
+original word : 
+припускати
+prepʊ'skate
+
+prepʊ'tkæse
+
+
+original word : 
+приручати
+prerʊ'tʃate
+
+preɽr̟ʊ'tʃæte
+
+
+original word : 
+прислухатися
+presʊ'xatesa
+
+pser̥ʊ'xætesæ
+
+
+original word : 
+присудок
+'prɪsʊdɔk
+
+'psɪtɔrʊk
+
+
+original word : 
+притягти
+pretaɦ'tɪ
+
+pretæ̹ɦ'tɪ
+
+
+original word : 
+причинно-наслідковий
+pre'tʃɪn:ɔ.naslid'kɔʋei
+
+pde'sʃɪ:rɔ.n̥ætlin'kɔʋei
+
+
+original word : 
+приєднатися
+prejed'natesa
+
+pnejeɖ̟'ræsetæ
+
+
+original word : 
+приїхати
+pre'jixate
+
+pre'jixæte
+
+
+original word : 
+пробувати
+'prɔbʊʋate
+
+'prʊbɔʋæte
+
+
+original word : 
+провакцинувати
+prɔʋaktsenʊ'ʋate
+
+prʊʋæksten̠ɔ'ʋæte
+
+
+original word : 
+прогнозувати
+prɔɦnɔzʊ'ʋate
+
+pnʊɦrɔzɔ'ʋæte
+
+
+original word : 
+програш
+'prɔɦraʃ
+
+'prɔɦræʃ
+
+
+original word : 
+продовження
+prɔ'dɔuʒen:a
+
+pdu'rɔ̥ɔʒen̠:æ
+
+
+original word : 
+прожити
+prɔ'ʒɪte
+
+prɔ'ʒɪte
+
+
+original word : 
+прокремлівський
+prɔkrem'liuskei
+
+plu̥krem'riɔskei
+
+
+original word : 
+промисловість
+prɔmes'ɔʋist
+
+prɔmes'ɔʋist
+
+
+original word : 
+пропаганда
+prɔpa'ɦanda
+
+pdɔpæ̹'ɦærnæ
+
+
+original word : 
+пророк
+prɔ'rɔk
+
+prɔ'rɔk
+
+
+original word : 
+простежити
+prɔ'stɛʒete
+
+psɔ'r̥tɛʒete
+
+
+original word : 
+простота
+prɔstɔ'ta
+
+psɔr̥tɔ'tæ
+
+
+original word : 
+протидія
+prɔte'dija
+
+pdɔte'ɽr̟ijæ
+
+
+original word : 
+протиракетний
+prɔtera'kɛtnei
+
+prɔten̠æ'kɛ̥trei
+
+
+original word : 
+профіль
+'prɔfil
+
+'prɔfil
+
+
+original word : 
+процвітаючий
+prɔtsʋi'tajʊtʃei
+
+prʊstʋi'tæjɔ̥tʃei
+
+
+original word : 
+проявити
+prɔja'ʋɪte
+
+prɔjæ'ʋɪte
+
+
+original word : 
+проігнорувати
+prɔiɦnɔrʊ'ʋate
+
+pnʊiɦrɔrɔ'ʋæte
+
+
+original word : 
+психопатичний
+psexɔpa'tɪtʃnei
+
+ptexɔpæ'sɪtʃnei
+
+
+original word : 
+психіатричний
+psexia'trɪtʃnei
+
+ptexiæ'snɪtʃrei
+
+
+original word : 
+пугач
+'puɦatʃ
+
+'puɦætʃ
+
+
+original word : 
+пустиня
+pʊ'stɪna
+
+pʊ'tsɪnæ
+
+
+original word : 
+пюпітр
+pʊ'pitr
+
+pʊ'pitr
+
+
+original word : 
+південноамериканський
+piuden:ɔamere'kanskei
+
+pi̥ɔneɖ̟u̥æmen̠:e'kærskei
+
+
+original word : 
+північноатлантичний
+piunitʃnɔatan'tɪtʃnei
+
+piɔnitʃnuætæn'tɪtʃnei
+
+
+original word : 
+підвечірок
+pidʋe'tʃirɔk
+
+pi̥dʋe'tʃirɔk
+
+
+original word : 
+піддашшя
+pi'd:aʃa
+
+pi'd:æʃæ
+
+
+original word : 
+підкреслювати
+pid'krɛslʊʋate
+
+pil'ksɛtrʊʋæte
+
+
+original word : 
+підміняти
+pidmi'nate
+
+pidmi'næte
+
+
+original word : 
+підпис
+'pidpes
+
+'pi̥dpes
+
+
+original word : 
+підприємство
+pidpre'jɛmstwɔ
+
+pidpre'jɛmtswɔ
+
+
+original word : 
+підтверджувати
+pidt'ʋɛrdʒʊʋate
+
+pidt'ʋɛrdʒʊʋæte
+
+
+original word : 
+пізній
+'piznii
+
+'pin̥zii
+
+
+original word : 
+пінистий
+'pinestei
+
+'pise̥n̥tei
+
+
+original word : 
+після
+'pisla
+
+'pislæ
+
+
+original word : 
+піхота
+pi'xɔta
+
+pi'xɔtæ
+
+
+original word : 
+радикалізація
+radekali'zatsija
+
+dærekæli'zæstijæ
+
+
+original word : 
+радіоактивний
+radiɔak'tɪunei
+
+dæriuæk'tɪ̥ɔnei
+
+
+original word : 
+рало
+'raɔ
+
+'ræɔ
+
+
+original word : 
+раса
+'rasa
+
+'sær̥æ
+
+
+original word : 
+рація
+'ratsija
+
+'ræstijæ
+
+
+original word : 
+реабілітація
+reabili'tatsija
+
+leæbiri'sættijæ
+
+
+original word : 
+реанімація
+reani'matsija
+
+neæri'mæstijæ
+
+
+original word : 
+революція
+rewo'lutsija
+
+lewo'ɽr̟ustijæ
+
+
+original word : 
+редактор
+re'daktɔr
+
+re'ɽr̟æktɔd
+
+
+original word : 
+реконструювати
+rekɔnstrʊjʊ'ʋate
+
+nekʊrtsrɔjʊ'ʋæte
+
+
+original word : 
+ремісник
+remis'nɪk
+
+sem̥in̥'rɪk
+
+
+original word : 
+республіка
+re'spublika
+
+se'r̥publikæ
+
+
+original word : 
+рецесія
+re'tsɛsija
+
+re'stɛsijæ
+
+
+original word : 
+рибка
+'rɪbka
+
+'rɪbkæ
+
+
+original word : 
+ринок
+'rɪnɔk
+
+'nɪrɔk
+
+
+original word : 
+робітник
+rɔbit'nɪk
+
+nɔbit'rɪk
+
+
+original word : 
+родзинка
+rɔ'dzɪnka
+
+dɔ'rzɪnkæ
+
+
+original word : 
+родовище
+rɔ'dɔʋeʃtʃe
+
+dɔ'rɔʋeʃtʃe
+
+
+original word : 
+розбирати
+rɔzbe'rate
+
+zɔ̥rbe'ɽr̟æte
+
+
+original word : 
+розважальний
+rɔzʋa'ʒalnei
+
+zɔrʋæ'ʒæ̥lnei
+
+
+original word : 
+розгромити
+rɔzɦrɔ'mɪte
+
+zɔrɦrɔ'mɪte
+
+
+original word : 
+роздягти
+rɔzdaɦ'tɪ
+
+zɔrdæ̹ɦ'tɪ
+
+
+original word : 
+розлити
+rɔz'ɪte
+
+zɔr'ɪte
+
+
+original word : 
+розмішувати
+roz'miʃʊʋate
+
+zoɽr̟'miʃʊʋæte
+
+
+original word : 
+розповсюдження
+rɔzpɔu'sudʒen:a
+
+durpɔɔ'su̥zʒen̠:æ
+
+
+original word : 
+розпродавати
+rɔzprɔda'ʋate
+
+zɔrpdɔræ'ʋæte
+
+
+original word : 
+розпізнавання
+rɔzpizna'ʋan:a
+
+zɔrpiznæ'ʋæn:æ
+
+
+original word : 
+розслідувати
+rozs'lidʊʋate
+
+doɽr̟t'lizʊʋæse
+
+
+original word : 
+розумний дім
+ro'zumnei.dim
+
+do'ʒu̥mrei.nim
+
+
+original word : 
+розшифровувати
+rɔʒʃe'frɔwʊʋate
+
+rʊ̥ʒʃe'frɔwɔʋæte
+
+
+original word : 
+ростити
+rɔ'stɪte
+
+sɔ'r̥tɪte
+
+
+original word : 
+руйнівний
+rʊiniu'nɪi
+
+nʊiriu'nɪi
+
+
+original word : 
+русин
+'rusen
+
+'sur̥en̠
+
+
+original word : 
+рутинний
+rʊ'tɪn:ei
+
+nʊ'tɪ:rei
+
+
+original word : 
+рівномірний
+riuno'mirnei
+
+ni̥uro'mi̥rnei
+
+
+original word : 
+рідкий
+rid'kɪi
+
+dir'kɪi
+
+
+original word : 
+різкий
+riz'kɪi
+
+zir'kɪi
+
+
+original word : 
+різнорідний
+rizno'ridnei
+
+di̥rno'ɽr̟i̥znei
+
+
+original word : 
+рішення
+'riʃen:a
+
+'riʃen̠:æ
+
+
+original word : 
+с
+s
+
+s
+
+
+original word : 
+саботажник
+sabɔ'taʒnek
+
+tæbɔ'sæ̥ʒnek
+
+
+original word : 
+садистичний
+sade'stɪtʃnei
+
+tæse'stɪtʃnei
+
+
+original word : 
+салон
+sa'ɔn
+
+sæ'ɔn
+
+
+original word : 
+самовпевненість
+samɔu'pɛunenist
+
+n̥æm̥uɔ'pɛ̥usen̠̥ist
+
+
+original word : 
+самодостатній
+samɔdɔ'statnii
+
+tæm̥ɔsɔ'stætn̥ii
+
+
+original word : 
+самокат
+samɔ'kat
+
+sæm̥ɔ'kæt
+
+
+original word : 
+самостійність
+samo'stiinist
+
+tæm̥o'ssiin̥ist
+
+
+original word : 
+санітарний
+sani'tarnei
+
+tæni'sæ̥rnei
+
+
+original word : 
+сарна
+'sarna
+
+'n̥æsræ
+
+
+original word : 
+сват
+sʋat
+
+sʋæt
+
+
+original word : 
+своєрідний
+swɔje'ridnei
+
+swɔje'ɽr̟i̥ndei
+
+
+original word : 
+священик
+sʋaʃ'tʃɛnek
+
+tʋæʃ'sʃɛnek
+
+
+original word : 
+свідок
+'sʋidɔk
+
+'sʋidɔk
+
+
+original word : 
+світлина
+sʋit'ɪna
+
+tʋis'ɪnæ
+
+
+original word : 
+секрет
+se'krɛt
+
+se'krɛt
+
+
+original word : 
+сектор
+'sɛktɔr
+
+'tɛksɔr
+
+
+original word : 
+селянський
+se'lanskei
+
+se'n̠̥ælskei
+
+
+original word : 
+сербохорватський
+serbɔxɔr'ʋatskei
+
+teɽr̟bɔxɔr'ʋæsskei
+
+
+original word : 
+середа
+sere'da
+
+seɖ̟e'ɽr̟æ
+
+
+original word : 
+серп
+sɛrp
+
+sɛrp
+
+
+original word : 
+сестрин
+se'strɪn
+
+te'ssrɪn
+
+
+original word : 
+сидіти
+se'dite
+
+te'ɖ̟ise
+
+
+original word : 
+символічний
+semwo'litʃnei
+
+te̥m̥wo'n̠̥isʃlei
+
+
+original word : 
+синагога
+sena'ɦɔɦa
+
+sen̠̥æ̹'ɦɔɦæ
+
+
+original word : 
+синтетичний
+sente'tɪtʃnei
+
+te̥n̠̥se'tɪtʃn̥ei
+
+
+original word : 
+система
+se'stɛma
+
+te'ssɛmæ
+
+
+original word : 
+сказати
+ska'zate
+
+tkæ'zæse
+
+
+original word : 
+скасувати
+skasʊ'ʋate
+
+tkæsʊ'ʋæse
+
+
+original word : 
+склад
+skad
+
+skæd
+
+
+original word : 
+склянка
+'sklanka
+
+'n̥ksælkæ
+
+
+original word : 
+скоротити
+skɔrɔ'tɪte
+
+tkɔrɔ'sɪte
+
+
+original word : 
+скульптор
+'skulptɔr
+
+'tkɔrpsul
+
+
+original word : 
+слава Ісусу Христу
+'saʋa.i'susʊ.xre'stu
+
+'r̥æʋæ.i'susʊ̥.xse'stu
+
+
+original word : 
+слина
+'sɪna
+
+'n̥ɪsæ
+
+
+original word : 
+словенський
+sɔ'ʋɛnskei
+
+sɔ'ʋɛnskei
+
+
+original word : 
+службовий
+sʊʒ'bɔʋei
+
+sɔʒ'bʊʋei
+
+
+original word : 
+сльоза
+slɔ'za
+
+slɔ'zæ
+
+
+original word : 
+слідство
+'slidzstwɔ
+
+'tdilzsswɔ
+
+
+original word : 
+смарагдовий
+sma'raɦdɔʋei
+
+smæ'dæ̹ɦrɔʋei
+
+
+original word : 
+смертний
+'smɛrtnei
+
+'tmɛnsrei
+
+
+original word : 
+смутний
+smʊt'nɪi
+
+tmʊs'nɪi
+
+
+original word : 
+сміття
+smi't:a
+
+tmi'sæ:
+
+
+original word : 
+снодійний
+sno'diinei
+
+snɔ̞'n̠i̥idei
+
+
+original word : 
+сокіл
+'sɔki
+
+'sɔki
+
+
+original word : 
+соня
+'sɔna
+
+'n̥ɔsæ
+
+
+original word : 
+сорок
+'sɔrɔk
+
+'sɔrɔk
+
+
+original word : 
+сорок шість
+'sɔrɔk.ʃist
+
+'sɔrɔk.ʃist
+
+
+original word : 
+сосна
+sɔs'na
+
+sɔs'næ
+
+
+original word : 
+соціальний
+sɔtsi'alnei
+
+tɔssi'ænlei
+
+
+original word : 
+спам
+spam
+
+spæm
+
+
+original word : 
+сперечатися
+spere'tʃatesa
+
+tpeɽr̟e'sʃætesæ
+
+
+original word : 
+специфікувати
+spetsefikʊ'ʋate
+
+tpe̥ssefikʊ'ʋæte
+
+
+original word : 
+сплатити
+spa'tɪte
+
+tpæ'sɪte
+
+
+original word : 
+сподівання
+spɔdi'ʋan:a
+
+spɔdi'ʋæn:æ
+
+
+original word : 
+спойлер
+'spɔier
+
+'spɔieɽr̟
+
+
+original word : 
+сполучити
+spɔʊ'tʃɪte
+
+tpʊɔ'sʃɪte
+
+
+original word : 
+спортсмен
+spɔrts'mɛn
+
+tpɔrss'mɛn
+
+
+original word : 
+спостереження
+spɔste'rɛʒen:a
+
+tpɔ̥sse'ɽr̟ɛʒen̠:æ
+
+
+original word : 
+сприймати
+sprei'mate
+
+tprei'mæse
+
+
+original word : 
+спровокувати
+sprɔwɔkʊ'ʋate
+
+tprʊwɔkɔ'ʋæse
+
+
+original word : 
+спрямовувати
+spra'mɔwʊʋate
+
+tpræ'mʊwɔʋæse
+
+
+original word : 
+співвітчизник
+spiʋ:i'tʃ:ɪznek
+
+tpiʋ:i'sʃ:ɪ̥nzek
+
+
+original word : 
+співпереживати
+spiupereʒe'ʋate
+
+tpi̥upeɽr̟eʒe'ʋæse
+
+
+original word : 
+співчутливий
+spiutʃʊt'ɪʋei
+
+tpiusʃʊt'ɪʋei
+
+
+original word : 
+співіснувати
+spiʋisnʊ'ʋate
+
+tpiʋisnʊ'ʋæse
+
+
+original word : 
+спір
+spir
+
+spir
+
+
+original word : 
+срати
+'srate
+
+'træse
+
+
+original word : 
+ставити
+'staʋete
+
+'tsæʋete
+
+
+original word : 
+стандартизація
+standarte'zatsija
+
+tsædræ̥nte'ʒætsijæ
+
+
+original word : 
+старик
+sta'rɪk
+
+tsæ'rɪk
+
+
+original word : 
+статут
+sta'tut
+
+tsæ'tut
+
+
+original word : 
+стежити
+'stɛʒete
+
+'tsɛʒete
+
+
+original word : 
+сто
+stɔ
+
+tsɔ
+
+
+original word : 
+стомити
+stɔ'mɪte
+
+tsɔ'mɪte
+
+
+original word : 
+стояння
+stɔ'jan:a
+
+tsɔ'jæn:æ
+
+
+original word : 
+страйк
+straik
+
+tsræik
+
+
+original word : 
+страшенно
+stra'ʃɛn:ɔ
+
+tsn̥æ'ʃɛ:rɔ
+
+
+original word : 
+стримати
+'strɪmate
+
+'tsrɪmæte
+
+
+original word : 
+студентка
+stʊ'dɛntka
+
+tsʊ'dɛntkæ
+
+
+original word : 
+стільки
+'stilke
+
+'tsi̥lke
+
+
+original word : 
+субсидія
+sʊb'sɪdija
+
+sʊb'sɪdijæ
+
+
+original word : 
+судак
+sʊ'dak
+
+sʊ'dæk
+
+
+original word : 
+судовий
+sʊdɔ'ʋɪi
+
+sɔdʊ'ʋɪi
+
+
+original word : 
+сумарний
+sʊ'marnei
+
+n̥ʊ'm̥æ̥srei
+
+
+original word : 
+сумувати
+sʊmʊ'ʋate
+
+tʊm̥ʊ'ʋæse
+
+
+original word : 
+супроводжувати
+sʊprɔ'wɔdʒʊʋate
+
+tɔpdʊ'wɔrʒʊʋæse
+
+
+original word : 
+суспільство
+sʊ'spilstwɔ
+
+tɔ'spilsswʊ
+
+
+original word : 
+сусід
+sʊ'sid
+
+sʊ'sid
+
+
+original word : 
+суцвіття
+sʊts'ʋit:a
+
+tʊss'ʋit:æ
+
+
+original word : 
+сфера
+'sfɛra
+
+'sfɛræ
+
+
+original word : 
+схвальний
+'sxʋalnei
+
+'sxʋæ̥nlei
+
+
+original word : 
+сховище
+'sxɔʋeʃtʃe
+
+'txɔʋeʃsʃe
+
+
+original word : 
+сьогодення
+sɔɦɔ'dɛn:a
+
+sɔɦɔ'dɛn:æ
+
+
+original word : 
+сім&#039;я
+'simja
+
+'sim̥jæ
+
+
+original word : 
+сімдесят шість
+simde'sat.ʃist
+
+ti̥m̥se'sæt.ʃist
+
+
+original word : 
+сіни
+'sine
+
+'n̥ise
+
+
+original word : 
+т
+t
+
+t
+
+
+original word : 
+таблиця
+ta'bɪtsa
+
+sæ'bɪttæ
+
+
+original word : 
+таксі
+tak'si
+
+sæk'ti
+
+
+original word : 
+тамада
+tama'da
+
+tæm̥æ'dæ
+
+
+original word : 
+татко
+'tatkɔ
+
+'tætkɔ
+
+
+original word : 
+твердиня
+tʋer'dɪna
+
+tʋeɽr̟'nɪdæ
+
+
+original word : 
+текти
+tek'tɪ
+
+tek'tɪ
+
+
+original word : 
+телескоп
+tee'skɔp
+
+see'tkɔp
+
+
+original word : 
+темниця
+tem'nɪtsa
+
+sem̥'n̥ɪttæ
+
+
+original word : 
+теоретик
+teɔ'rɛtek
+
+teɔ'rɛtek
+
+
+original word : 
+терапевтичний
+terapeu'tɪtʃnei
+
+teɽr̟æpeu'tɪtʃnei
+
+
+original word : 
+термінологія
+terminɔ'ɔɦija
+
+teɽr̟minɔ'ɔɦijæ
+
+
+original word : 
+терор
+te'rɔr
+
+te'ɽr̟ɔr
+
+
+original word : 
+тестування
+testʊ'ʋan:a
+
+settʊ'ʋæn:æ
+
+
+original word : 
+технологія
+texnɔ'ɔɦija
+
+texn̠ɔ'ɔɦijæ
+
+
+original word : 
+тимчасово
+temtʃa'sɔwɔ
+
+sem̥tʃæ'tɔwɔ
+
+
+original word : 
+титар
+'tɪtar
+
+'tɪtær
+
+
+original word : 
+тлумач
+tʊ'matʃ
+
+tʊ'm̥ætʃ
+
+
+original word : 
+товаришка
+tɔ'ʋareʃka
+
+tɔ'ʋæreʃkæ
+
+
+original word : 
+токар
+'tɔkar
+
+'tɔkær
+
+
+original word : 
+топір
+to'pir
+
+to'pir
+
+
+original word : 
+торкати
+tɔr'kate
+
+tɔr'kæte
+
+
+original word : 
+точка зору
+'tɔtʃka'zɔrʊ
+
+'tɔtʃkæ'zɔrʊ
+
+
+original word : 
+трав&#039;яний
+traʋja'nɪi
+
+tnæʋjæ'rɪi
+
+
+original word : 
+традиційний
+trade'tsiinei
+
+sdære'tti̥inei
+
+
+original word : 
+трансплантація
+transpan'tatsija
+
+snærtpæn'tætsijæ
+
+
+original word : 
+треба
+'trɛba
+
+'trɛbæ
+
+
+original word : 
+три
+trɪ
+
+trɪ
+
+
+original word : 
+тридцятий
+tredz'tsatei
+
+szeɽr̟d'ttætei
+
+
+original word : 
+тридцять сім
+'trɪdztsat.sim
+
+'sdɪrzttæt.sim
+
+
+original word : 
+трирічний
+tre'ritʃnei
+
+tre'n̠itʃrei
+
+
+original word : 
+труп
+trup
+
+trup
+
+
+original word : 
+труїти
+trʊ'jite
+
+trʊ'jite
+
+
+original word : 
+туз
+tuz
+
+tuz
+
+
+original word : 
+туризм
+tʊ'rɪzm
+
+tʊ'zɪrm
+
+
+original word : 
+туфля
+'tufla
+
+'tuflæ
+
+
+original word : 
+тяжкий
+taʒ'kɪi
+
+tæʒ'kɪi
+
+
+original word : 
+тітка
+'titka
+
+'titkæ
+
+
+original word : 
+ув&#039;язнення
+ʊ'ʋjaznen:a
+
+ʊ'ʋjæ̥nzen̠:æ
+
+
+original word : 
+угода
+ʊ'ɦɔda
+
+ɔ'ɦʊdæ
+
+
+original word : 
+узаконювати
+ʊza'kɔnʊʋate
+
+ɔnæ'kʊzʊʋæte
+
+
+original word : 
+українець
+ʊkra'jinets
+
+ʊksæ'jiretn̥
+
+
+original word : 
+українською
+ʊkra'jinskɔjʊ
+
+ɔksæ'jirn̥kʊjʊ
+
+
+original word : 
+умерти
+ʊ'mɛrte
+
+ʊ'mɛ̥rte
+
+
+original word : 
+універсальний
+ʊniʋer'salnei
+
+ʊniʋeɽr̟'sæ̥lnei
+
+
+original word : 
+уособити
+ʊɔ'sɔbete
+
+ɔʊ'tɔbese
+
+
+original word : 
+упорядковувати
+ʊpɔrad'kɔwʊʋate
+
+ɔpʊdær'kɔwʊʋæte
+
+
+original word : 
+урбанізувати
+ʊrbanizʊ'ʋate
+
+ʊnbærizʊ'ʋæte
+
+
+original word : 
+усе
+'use
+
+'use
+
+
+original word : 
+уста
+ʊ'sta
+
+ʊ'tsæ
+
+
+original word : 
+утворення
+ʊt'wɔren:a
+
+ɔt'wʊren̠:æ
+
+
+original word : 
+ухвала
+ʊx'ʋaa
+
+ʊx'ʋææ
+
+
+original word : 
+учителька
+ʊ'tʃɪtelka
+
+ʊ'tʃɪteɭ̟kæ
+
+
+original word : 
+файний
+'fainei
+
+'fæ̥inei
+
+
+original word : 
+фанатизм
+fana'tɪzm
+
+fæzæ'tɪnm
+
+
+original word : 
+фарфор
+'farfɔr
+
+'færfɔr
+
+
+original word : 
+федерація
+fede'ratsija
+
+feɽr̟e'ɖ̟æstijæ
+
+
+original word : 
+ферзь
+fɛrz
+
+fɛrz
+
+
+original word : 
+фонд
+fɔnd
+
+fɔdn
+
+
+original word : 
+фортеця
+fɔr'tɛtsa
+
+fɔr'sɛttæ
+
+
+original word : 
+фрагмент
+fraɦ'mɛnt
+
+fnæ̹ɦ'mɛrt
+
+
+original word : 
+фруктовий сік
+frʊk'tɔʋei.sik
+
+frɔk'sʊʋei.tik
+
+
+original word : 
+фюзеляж
+fʊze'laʒ
+
+fʊze'ɭ̟æʒ
+
+
+original word : 
+фізіолог
+fizi'ɔɔɦ
+
+fizi'ɔɔɦ
+
+
+original word : 
+філологічний
+fiɔo'ɦitʃnei
+
+fiɔ̞ɔ'ɦitʃnei
+
+
+original word : 
+фінський ніж
+'finskei'niʒ
+
+'fisn̥kei'n̥iʒ
+
+
+original word : 
+фінік
+'finik
+
+'fin̥ik
+
+
+original word : 
+хабар
+xa'bar
+
+xæ'bær
+
+
+original word : 
+характерний
+xarak'tɛrnei
+
+xæn̥æk'tɛ̥rrei
+
+
+original word : 
+хворіти
+xwo'rite
+
+xwɔ̞'ɽr̟ite
+
+
+original word : 
+хвіст
+xʋist
+
+xʋist
+
+
+original word : 
+хліб
+xlib
+
+xlib
+
+
+original word : 
+холоднокровний
+xɔɔdnɔ'krɔunei
+
+xuɔdrɔ'kn̠ɔ̥ɔnei
+
+
+original word : 
+хотітися
+xo'titesa
+
+xo'sitetæ
+
+
+original word : 
+християнин
+xreste'janen
+
+xn̠e̥tse'jæren̠
+
+
+original word : 
+хтивий
+'xtɪʋei
+
+'xtɪʋei
+
+
+original word : 
+хуйло
+xʊi'ɔ
+
+xɔi'ʊ
+
+
+original word : 
+цвіль
+'tsʋil
+
+'stʋil
+
+
+original word : 
+целакант
+tsea'kant
+
+steæ'kænt
+
+
+original word : 
+церемоніальний
+tseremɔni'alnei
+
+steɽr̟emɔni'ælnei
+
+
+original word : 
+цигарка
+tse'ɦarka
+
+ste'ɦærkæ
+
+
+original word : 
+цифра
+'tsɪfra
+
+'stɪfræ
+
+
+original word : 
+цуценя
+tsʊtse'na
+
+stʊ̥tse'n̠æ
+
+
+original word : 
+цілісність
+'tsilisnist
+
+'stin̥isl̥ist
+
+
+original word : 
+цінність
+'tsin:ist
+
+'stin̥:ist
+
+
+original word : 
+чад
+tʃad
+
+tʃæd
+
+
+original word : 
+чародій
+tʃaro'dii
+
+tʃædo'ɽr̟ii
+
+
+original word : 
+часто
+'tʃastɔ
+
+'sʃættɔ
+
+
+original word : 
+чемний
+'tʃɛmnei
+
+'tʃɛ̥mnei
+
+
+original word : 
+червневий
+tʃerw'nɛʋei
+
+tʃeɽr̟w'nɛʋei
+
+
+original word : 
+черепаха
+tʃere'paxa
+
+tʃeɽr̟e'pæxæ
+
+
+original word : 
+чесний
+'tʃɛsnei
+
+'sʃɛ̥tnei
+
+
+original word : 
+чин
+tʃɪn
+
+tʃɪn
+
+
+original word : 
+численний
+tʃes'ɛn:ei
+
+sʃet'ɛn:ei
+
+
+original word : 
+член
+tʃɛn
+
+tʃɛn
+
+
+original word : 
+чоловічий рід
+tʃɔɔ'ʋitʃei'rid
+
+tʃɔɔ'ʋi̥tʃei'rid
+
+
+original word : 
+чорнобривий
+tʃɔrnɔ'brɪʋei
+
+tʃɔnrɔ'brɪʋei
+
+
+original word : 
+чорт забирай
+tʃɔrt.zabe'rai
+
+tʃɔzt.ræbe'ɽr̟æi
+
+
+original word : 
+чудій
+tʃʊ'dii
+
+tʃʊ'dii
+
+
+original word : 
+чума
+tʃʊ'ma
+
+tʃʊ'mæ
+
+
+original word : 
+шантаж
+ʃan'taʒ
+
+ʃæn̥'tæʒ
+
+
+original word : 
+шахівниця
+ʃaxiu'nɪtsa
+
+ʃæxiu'nɪstæ
+
+
+original word : 
+швейцарський
+ʃʋei'tsarskei
+
+ʃʋei'stærskei
+
+
+original word : 
+шено
+'ʃɛnɔ
+
+'ʃɛn̥ɔ
+
+
+original word : 
+шестиповерховий
+ʃestepɔʋer'xɔʋei
+
+ʃe̥tsepɔʋeɽr̟'xɔʋei
+
+
+original word : 
+широкосмуговий
+ʃerɔkɔsmʊɦɔ'ʋɪi
+
+ʃeɽr̟ʊkɔsmɔɦɔ'ʋɪi
+
+
+original word : 
+шкода
+'ʃkɔda
+
+'ʃkɔdæ
+
+
+original word : 
+шлях
+ʃlax
+
+ʃlæx
+
+
+original word : 
+шовковистий
+ʃɔukɔ'ʋɪstei
+
+ʃuɔkɔ'ʋɪ̥tsei
+
+
+original word : 
+шопінг
+'ʃɔpinɦ
+
+'ʃɔpinɦ
+
+
+original word : 
+штрафувати
+ʃtrafʊ'ʋate
+
+ʃtræfʊ'ʋæte
+
+
+original word : 
+шістдесят
+ʃizde'sat
+
+ʃi̥dse'sæt
+
+
+original word : 
+шістдесятий
+ʃizde'satei
+
+ʃi̥dte'sæsei
+
+
+original word : 
+щелепа
+'ʃtʃɛepa
+
+'ʃtʃɛepæ
+
+
+original word : 
+що
+ʃtʃɔ
+
+ʃtʃɒ
+
+
+original word : 
+щока
+ʃtʃɔ'ka
+
+ʃtʃɒ'kæ
+
+
+original word : 
+щука
+'ʃtʃuka
+
+'ʃtʃukæ
+
+
+original word : 
+щі
+ʃtʃi
+
+ʃtʃi
+
+
+original word : 
+юшка
+'juʃka
+
+'juʃkæ
+
+
+original word : 
+яблуко розбрату
+'jabʊkɔ'rɔzbratʊ
+
+'jæbɔkʊ'zɔrbrætʊ
+
+
+original word : 
+ядерна війна
+'jaderna.ʋii'na
+
+'jæden̠ræ.ʋii'næ
+
+
+original word : 
+як тільки
+jak'tilke
+
+jæk'ti̥lke
+
+
+original word : 
+якийсь
+ja'kɪis
+
+jæ'kɪis
+
+
+original word : 
+яничар
+jane'tʃar
+
+jære'tʃæn
+
+
+original word : 
+ярус
+'jarʊs
+
+'jæsʊr̥
+
+
+original word : 
+ящик
+'jaʃtʃek
+
+'jæʃtʃek
+
+
+original word : 
+є
+jɛ
+
+jɛ
+
+
+original word : 
+єврейка
+jeu'rɛika
+
+jeu'rɛikæ
+
+
+original word : 
+єдваб
+jed'ʋab
+
+jeɖ̟'ʋæb
+
+
+original word : 
+єр
+jɛr
+
+jɛr
+
+
+original word : 
+ігролад
+iɦrɔ'ad
+
+iɦrɔ'æd
+
+
+original word : 
+ідеалістичний
+ideali'stɪtʃnei
+
+ideæsi'l̥tɪtʃnei
+
+
+original word : 
+ізгинути
+iz'ɦɪnʊte
+
+in'ɦɪzʊte
+
+
+original word : 
+імбирний
+im'bɪrnei
+
+ib'mɪ̥nrei
+
+
+original word : 
+імператриця
+impera'trɪtsa
+
+impeɽr̟æ'srɪttæ
+
+
+original word : 
+імунізувати
+imʊnizʊ'ʋate
+
+imʊzinʊ'ʋæte
+
+
+original word : 
+інавгурація
+inauɦʊ'ratsija
+
+inæuɦʊ'ræstijæ
+
+
+original word : 
+індивідуально
+indeʋidʊ'alnɔ
+
+indeʋidɔ'ælnʊ
+
+
+original word : 
+індійка
+in'diika
+
+in'diikæ
+
+
+original word : 
+інженер
+inʒe'nɛr
+
+irʒe'n̠ɛn
+
+
+original word : 
+інновація
+in:ɔ'ʋatsija
+
+in:ɔ'ʋæstijæ
+
+
+original word : 
+інспекція
+in'spɛktsija
+
+in'tpɛkssijæ
+
+
+original word : 
+інтегрувати
+inteɦrʊ'ʋate
+
+inteɦrʊ'ʋæte
+
+
+original word : 
+інтенсивність
+inten'sɪunist
+
+insen̠'tɪun̥ist
+
+
+original word : 
+інтермецо
+inter'mɛtsɔ
+
+inseɽr̟'mɛttɔ
+
+
+original word : 
+інфекційний
+infek'tsiinei
+
+infek'sti̥inei
+
+
+original word : 
+інцидент
+intse'dɛnt
+
+inste'n̠ɛdt
+
+
+original word : 
+ірландець
+ir'andets
+
+id'æ̥rnest
+
+
+original word : 
+ісландець
+is'andets
+
+it'æ̥ndess
+
+
+original word : 
+істеричний
+iste'rɪtʃnei
+
+itse'ɽr̟ɪtʃnei
+
+
+original word : 
+італійка
+ita'liika
+
+itæ'liikæ
+
+
+original word : 
+їден
+ji'dɛn
+
+ji'dɛn
+
+
+original word : 
+їсти
+'jiste
+
+'ji̥tse
+
+
+original word : 
+ґвалт
+ɡʋat
+
+ɡʋæt
+
+
+original word : 
+ґерлиґа
+ɡer'ɪɡa
+
+ɡeɽr̟'ɪɡæ
+
+
+original word : 
+ґоґель-моґель
+'ɡɔɡel'mɔɡel
+
+'ɡɔɡeɭ̟'mɔɡeɭ̟
+
+
+original word : 
+ґудзик
+'ɡudzek
+
+'ɡu̥zdek
 
 

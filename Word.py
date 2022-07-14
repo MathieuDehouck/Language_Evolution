@@ -106,10 +106,10 @@ class Word :
         for syl in self.syllables :
             for phon in syl.phonemes :
                 if phon.is_Vowel() :
+                    s+= "V"
                     if syl.stress :
-                        s+= "v"
-                    else :
-                        s+= "V"
+                        s+= "'"
+                    
                     if syl.length :
                         s+= ":"
                 else :
